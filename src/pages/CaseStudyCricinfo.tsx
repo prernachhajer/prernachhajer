@@ -76,54 +76,51 @@ const CaseStudyCricinfo = () => {
       <section className="py-24 px-6 bg-foreground text-background">
         <div className="max-w-5xl mx-auto">
           <SectionLabel dark>The honest audit</SectionLabel>
-          <div className="rounded-xl overflow-hidden border border-background/10">
-            <div className="grid md:grid-cols-3 gap-px bg-background/5">
-              {[
-                {
-                  year: "2021", title: "Feed-first homepage", sub: "Reliable, but limited",
-                  items: ["Live score strip worked well", "Hero highlighted key story", "Rest of page = reverse chronological feed"],
-                  gaps: ["No structure across matches or themes", "Hard to rediscover content", "Over-indexed on articles", "Weak for casual users"],
-                },
-                {
-                  year: "2023", title: "Structured homepage", sub: "The biggest leap",
-                  items: ["Feed → modular system", "Introduced Top Stories, In-Depth, Playlists", "Added dark mode", "Introduced Storyteller (short-form)"],
-                  gaps: ["Too dense — too many items per section", "Structure without enough curation", "Same experience for all users"],
-                },
-                {
-                  year: "2026", title: "Simplified homepage", sub: "Cleaner, faster, more focused",
-                  items: ["Reduced density", "Removed low-performing sections", "Improved spacing and readability"],
-                  gaps: ["Structure largely unchanged from 2023", "Personalisation still missing"],
-                },
-              ].map((card, i) => (
-                <motion.div key={card.year} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                  className="bg-[hsl(220,18%,14%)] p-10">
-                  <p className="text-5xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-display)" }}>{card.year}</p>
-                  <p className="text-xs tracking-widest uppercase text-muted-foreground/60 mb-5">{card.title}</p>
-                  <p className="text-sm font-medium text-background/80 mb-5">{card.sub}</p>
-                  <ul className="space-y-2 mb-6">
-                    {card.items.map((item) => (
-                      <li key={item} className="text-sm text-background/60 flex items-start gap-2.5 pb-2 border-b border-background/10">
-                        <span className="text-primary text-xs mt-0.5 shrink-0">→</span>{item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="h-px bg-background/10 my-5" />
-                  <p className="text-xs tracking-widest uppercase text-background/30 mb-3">Gaps</p>
-                  {card.gaps.map((gap) => (
-                    <p key={gap} className="text-xs text-background/50 py-1">{gap}</p>
+          <div className="grid md:grid-cols-3 gap-3">
+            {[
+              {
+                year: "2021", title: "Feed-first homepage", sub: "Reliable, but limited",
+                items: ["Live score strip worked well", "Hero highlighted key story", "Rest of page = reverse chronological feed"],
+                gaps: ["No structure across matches or themes", "Hard to rediscover content", "Over-indexed on articles", "Weak for casual users"],
+              },
+              {
+                year: "2023", title: "Structured homepage", sub: "The biggest leap",
+                items: ["Feed → modular system", "Introduced Top Stories, In-Depth, Playlists", "Added dark mode", "Introduced Storyteller (short-form)"],
+                gaps: ["Too dense — too many items per section", "Structure without enough curation", "Same experience for all users"],
+              },
+              {
+                year: "2026", title: "Simplified homepage", sub: "Cleaner, faster, more focused",
+                items: ["Reduced density", "Removed low-performing sections", "Improved spacing and readability"],
+                gaps: ["Structure largely unchanged from 2023", "Personalisation still missing"],
+              },
+            ].map((card, i) => (
+              <motion.div key={card.year} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className="bg-[hsl(220,18%,14%)] rounded-xl p-10 border border-background/10">
+                <p className="text-5xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-display)" }}>{card.year}</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground/60 mb-5">{card.title}</p>
+                <p className="text-sm font-medium text-background/80 mb-5">{card.sub}</p>
+                <ul className="space-y-2 mb-6">
+                  {card.items.map((item) => (
+                    <li key={item} className="text-sm text-background/60 flex items-start gap-2.5 pb-2 border-b border-background/10">
+                      <span className="text-primary text-xs mt-0.5 shrink-0">→</span>{item}
+                    </li>
                   ))}
-                </motion.div>
-              ))}
-            </div>
-            <div className="bg-background/5" />
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="bg-[hsl(220,18%,14%)] border-t border-background/5 p-9 flex items-center gap-5">
-              <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
-              <p className="text-lg italic text-background/60 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-                Each version improved the experience — but none shifted it from <span className="text-primary/80 not-italic">utility</span> to <span className="text-primary/80 not-italic">habit</span>.
-              </p>
-            </motion.div>
+                </ul>
+                <div className="h-px bg-background/10 my-5" />
+                <p className="text-xs tracking-widest uppercase text-background/30 mb-3">Gaps</p>
+                {card.gaps.map((gap) => (
+                  <p key={gap} className="text-xs text-background/50 py-1">{gap}</p>
+                ))}
+              </motion.div>
+            ))}
           </div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="mt-3 bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-9 flex items-center gap-5">
+            <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
+            <p className="text-lg italic text-background/60 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
+              Each version improved the experience — but none shifted it from <span className="text-primary/80 not-italic">utility</span> to <span className="text-primary/80 not-italic">habit</span>.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -257,32 +254,30 @@ const CaseStudyCricinfo = () => {
             </motion.p>
           </div>
 
-          <div className="mt-12 rounded-xl overflow-hidden border border-background/10">
-            {/* Hero Stat */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-              className="bg-[hsl(220,18%,14%)] p-16 flex flex-col items-center text-center relative overflow-hidden">
-              <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
-              <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
-              <p className="text-sm text-background/50 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
-            </motion.div>
+          {/* Hero Stat */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
+            className="mt-12 bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-16 flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
+            <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
+            <p className="text-sm text-background/50 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
+          </motion.div>
 
-            {/* Outcome Cards */}
-            <div className="grid md:grid-cols-2 gap-px bg-background/5">
-              {[
-                { label: "Casual users", title: "Started engaging between matches", desc: "Previously, casual users landed, checked scores, left. After the structured redesign, repeat visits from this segment increased — the clearest signal that the homepage had become worth returning to." },
-                { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
-                { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
-                { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
-              ].map((card, i) => (
-                <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                  className="bg-[hsl(220,18%,14%)] p-10">
-                  <p className="text-xs tracking-widest uppercase text-background/30 mb-3">{card.label}</p>
-                  {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
-                  <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
-                  <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+          {/* Outcome Cards */}
+          <div className="mt-3 grid md:grid-cols-2 gap-3">
+            {[
+              { label: "Casual users", title: "Started engaging between matches", desc: "Previously, casual users landed, checked scores, left. After the structured redesign, repeat visits from this segment increased — the clearest signal that the homepage had become worth returning to." },
+              { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
+              { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
+              { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
+            ].map((card, i) => (
+              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className="bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-10">
+                <p className="text-xs tracking-widest uppercase text-background/30 mb-3">{card.label}</p>
+                {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
+                <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
+                <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -320,20 +315,18 @@ const CaseStudyCricinfo = () => {
             className="text-3xl md:text-4xl font-bold mb-12 tracking-tight text-background/90 max-w-3xl mx-auto" style={{ fontFamily: "var(--font-display)" }}>
             Five years on one surface teaches you things a project never could.
           </motion.h2>
-          <div className="rounded-xl overflow-hidden border border-background/10">
-            <div className="grid md:grid-cols-2 gap-px bg-background/5">
-              {[
-                "Make the case before making the design. The 2023 redesign almost didn't happen — not because the idea was wrong, but because the problem wasn't visible yet. Research gave it language. That's the work before the work.",
-                "Restraint is a design decision. Not redesigning the HSB across three versions was as deliberate as anything we shipped. Knowing what not to redesign is as important as knowing what to change.",
-                "Design at scale is the ongoing negotiation between what users need, what the business wants, and what the system can support. The layout is the last part of that — not the first.",
-                "A homepage is never finished — not because the work is incomplete, but because the users keep changing, the product keeps growing, and the habit you're trying to build takes longer than any single redesign.",
-              ].map((text, i) => (
-                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                  className="bg-[hsl(220,18%,14%)] p-12">
-                  <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid md:grid-cols-2 gap-3">
+            {[
+              "Make the case before making the design. The 2023 redesign almost didn't happen — not because the idea was wrong, but because the problem wasn't visible yet. Research gave it language. That's the work before the work.",
+              "Restraint is a design decision. Not redesigning the HSB across three versions was as deliberate as anything we shipped. Knowing what not to redesign is as important as knowing what to change.",
+              "Design at scale is the ongoing negotiation between what users need, what the business wants, and what the system can support. The layout is the last part of that — not the first.",
+              "A homepage is never finished — not because the work is incomplete, but because the users keep changing, the product keeps growing, and the habit you're trying to build takes longer than any single redesign.",
+            ].map((text, i) => (
+              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className="bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-12">
+                <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
