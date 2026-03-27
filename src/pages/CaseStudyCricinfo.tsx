@@ -156,15 +156,18 @@ const CaseStudyCricinfo = () => {
             { num: "02", title: "Complexity peaked at the worst moment", desc: "During live matches — peak traffic — users faced competing modules, weak hierarchy, and high density. The result was cognitive overload at exactly the moment speed mattered most.", tag: "UX critical" },
             { num: "03", title: "Three user types, one surface", desc: "Casual users wanted quick updates. Content consumers wanted stories & analysis. Power users wanted stats & data. Speed vs depth. Simplicity vs richness. This made personalisation critical — but hard to prioritise.", tag: "Strategic" },
             { num: "04", title: "Scalability was a system problem", desc: "Non-modular architecture made every new tournament or content type a high-effort rebuild. The problem wasn't content — it was system design. Slower design and development were the symptom.", tag: "Systems" },
-          ].map((insight, i) => (
-            <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-              className="bg-card p-10">
-              <p className="text-lg text-primary mb-4" style={{ fontFamily: "var(--font-display)" }}>{insight.num}</p>
-              <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
-              <Badge variant="secondary" className="mt-4 text-xs bg-primary/10 text-primary border-0">{insight.tag}</Badge>
-            </motion.div>
-          ))}
+          ].map((insight, i) => {
+            const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+            return (
+              <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className={`bg-card p-10 ${corners[i] || ""}`}>
+                <p className="text-lg text-primary mb-4" style={{ fontFamily: "var(--font-display)" }}>{insight.num}</p>
+                <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
+                <Badge variant="secondary" className="mt-4 text-xs bg-primary/10 text-primary border-0">{insight.tag}</Badge>
+              </motion.div>
+            );
+          })}
         </div>
       </Section>
 
