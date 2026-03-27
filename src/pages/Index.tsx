@@ -14,6 +14,7 @@ const fadeUp = {
 };
 
 const Index = () => {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
