@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -121,6 +122,7 @@ const CaseStudyCricinfo = () => {
               Each version improved the experience — but none shifted it from <span className="text-primary/80 not-italic">utility</span> to <span className="text-primary/80 not-italic">habit</span>.
             </p>
           </motion.div>
+          <HomepageEvolutionCarousel />
         </div>
       </section>
 
