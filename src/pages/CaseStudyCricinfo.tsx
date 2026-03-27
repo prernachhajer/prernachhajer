@@ -122,6 +122,7 @@ const CaseStudyCricinfo = () => {
               Each version improved the experience — but none shifted it from <span className="text-primary/80 not-italic">utility</span> to <span className="text-primary/80 not-italic">habit</span>.
             </p>
           </motion.div>
+          <HomepageEvolutionCarousel />
         </div>
       </section>
 
