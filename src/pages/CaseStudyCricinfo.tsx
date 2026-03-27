@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
 import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
 import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
+import hsbScreen2021 from "@/assets/hsb-screen-1.jpg";
+import hsbScreen2023 from "@/assets/hsb-screen-2.jpg";
+import hsbScreen2026 from "@/assets/hsb-screen-3.jpg";
+import nextPhone1 from "@/assets/next-direction-phone-1.jpg";
+import nextPhone2 from "@/assets/next-direction-phone-2.jpg";
+import nextPhone3 from "@/assets/next-direction-phone-3.jpg";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
