@@ -63,10 +63,10 @@ const CaseStudyCricinfo = () => {
           <p>It was still a chronological feed. Articles dominated, videos were underrepresented, and content had no structure or grouping. For power users it worked. For casual users it didn't invite exploration.</p>
         </Prose>
         <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 gap-0.5">
-          <ContextCard label="The problem">
+          <ContextCard label="The problem" className="md:rounded-l-xl">
             The homepage functioned as a match-time utility — not a daily destination. Users arrived for matches and left. No habit. No reason to return.
           </ContextCard>
-          <ContextCard label="The goal">
+          <ContextCard label="The goal" className="md:rounded-r-xl">
             Make the homepage more structured, more welcoming, and more engaging — so users don't just land, but <em className="text-primary not-italic font-medium">stay and explore</em>.
           </ContextCard>
         </div>
