@@ -181,14 +181,14 @@ const CaseStudyCricinfo = () => {
           <p>Stakeholders, product, editorial — none of them felt the homepage needed changing. Traffic was fine. Content was publishing. Nothing looked broken. The case I had to make wasn't "here's a better design." It was <em className="text-primary not-italic font-medium">"we're already hitting a ceiling you can't see yet."</em> Research made that argument. It landed. The redesign happened. That's the part I'm most proud of — not the layout, but getting the problem recognised in the first place.</p>
         </Prose>
 
-        <div className="max-w-3xl mx-auto mt-12">
+        <div className="max-w-5xl mx-auto mt-12 grid gap-0.5">
           {[
             { num: "01", title: "Shifted feed → structured system", desc: "The core strategic call. The homepage was a chronological feed with no hierarchy — content just accumulated. I defined a system with clear zones, modular components, and shared layout logic that could scale across formats, tournaments, and teams. The impact wasn't just visual. Faster builds, less design debt, consistent iterations across three years. The system did the work so the team didn't have to rebuild every time something changed." },
             { num: "02", title: "Held the line on what already worked", desc: "The live score strip (HSB) was the highest-utility surface on the page. The instinct in a redesign is to touch everything. We didn't touch this. We retained its position, improved clarity incrementally, and protected it from scope creep. That restraint paid off — it remained the strongest engagement anchor across all three versions. Knowing what not to redesign is as important as knowing what to change." },
             { num: "03", title: "Pushed for reduction — repeatedly", desc: "Every version needed less than it had. I pushed for removing low-value sections, reducing duplication, and creating breathing room. The 2026 version was the clearest win on this front. The honest constraint: content growth consistently outpaced removal. Editorial pressure, new tournaments, new formats — the homepage always had more competing for space than we could responsibly show. That tension never fully resolved." },
           ].map((item, i) => (
             <motion.div key={item.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-              className="py-10 border-b border-border grid grid-cols-[48px_1fr] gap-8 first:border-t">
+              className={`bg-card p-10 grid grid-cols-[48px_1fr] gap-8 ${i === 0 ? "rounded-t-xl" : ""} ${i === 2 ? "rounded-b-xl" : ""}`}>
               <p className="text-2xl text-primary" style={{ fontFamily: "var(--font-display)" }}>{item.num}</p>
               <div>
                 <h3 className="font-semibold text-base mb-3">{item.title}</h3>
