@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
+import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
+import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
