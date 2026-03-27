@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Linkedin, ExternalLink, Users, Zap, BarChart3, Layers, Code2, Target, TrendingUp, Sparkles, Vote, Star } from "lucide-react";
+import { ArrowDown, Mail, Linkedin, ExternalLink, Users, Zap, BarChart3, Layers, Code2, Target, TrendingUp, Sparkles, Vote, Star, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,6 +14,7 @@ const fadeUp = {
 };
 
 const Index = () => {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -172,6 +174,11 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={6} className="mt-10 text-center">
+            <Button onClick={() => navigate("/case-study/cricinfo")} size="lg" variant="outline">
+              Read Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </motion.div>
         </div>
       </section>
