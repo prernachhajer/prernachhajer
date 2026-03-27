@@ -324,12 +324,15 @@ const CaseStudyCricinfo = () => {
               "Restraint is a design decision. Not redesigning the HSB across three versions was as deliberate as anything we shipped. Knowing what not to redesign is as important as knowing what to change.",
               "Design at scale is the ongoing negotiation between what users need, what the business wants, and what the system can support. The layout is the last part of that — not the first.",
               "A homepage is never finished — not because the work is incomplete, but because the users keep changing, the product keeps growing, and the habit you're trying to build takes longer than any single redesign.",
-            ].map((text, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className="bg-foreground/90 p-12">
-                <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
-              </motion.div>
-            ))}
+            ].map((text, i) => {
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                  className={`bg-foreground/90 p-12 ${corners[i]}`}>
+                  <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
