@@ -256,7 +256,7 @@ const CaseStudyCricinfo = () => {
 
           {/* Hero Stat */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="mt-12 bg-foreground/90 rounded-xl p-16 flex flex-col items-center text-center relative overflow-hidden">
+            className="mt-12 bg-foreground/90 rounded-t-xl p-16 flex flex-col items-center text-center relative overflow-hidden">
             <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
             <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
             <p className="text-sm text-background/40 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
