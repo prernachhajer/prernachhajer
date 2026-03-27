@@ -175,6 +175,11 @@ const Index = () => {
               ))}
             </div>
           </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={6} className="mt-10 text-center">
+            <Button onClick={() => navigate("/case-study/cricinfo")} size="lg" variant="outline">
+              Read Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.div>
         </div>
       </section>
 
