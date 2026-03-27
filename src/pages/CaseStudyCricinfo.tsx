@@ -254,32 +254,30 @@ const CaseStudyCricinfo = () => {
             </motion.p>
           </div>
 
-          <div className="mt-12 rounded-xl overflow-hidden border border-background/10">
-            {/* Hero Stat */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-              className="bg-[hsl(220,18%,14%)] p-16 flex flex-col items-center text-center relative overflow-hidden">
-              <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
-              <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
-              <p className="text-sm text-background/50 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
-            </motion.div>
+          {/* Hero Stat */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
+            className="mt-12 bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-16 flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
+            <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
+            <p className="text-sm text-background/50 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
+          </motion.div>
 
-            {/* Outcome Cards */}
-            <div className="grid md:grid-cols-2 gap-px bg-background/5">
-              {[
-                { label: "Casual users", title: "Started engaging between matches", desc: "Previously, casual users landed, checked scores, left. After the structured redesign, repeat visits from this segment increased — the clearest signal that the homepage had become worth returning to." },
-                { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
-                { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
-                { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
-              ].map((card, i) => (
-                <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                  className="bg-[hsl(220,18%,14%)] p-10">
-                  <p className="text-xs tracking-widest uppercase text-background/30 mb-3">{card.label}</p>
-                  {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
-                  <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
-                  <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+          {/* Outcome Cards */}
+          <div className="mt-3 grid md:grid-cols-2 gap-3">
+            {[
+              { label: "Casual users", title: "Started engaging between matches", desc: "Previously, casual users landed, checked scores, left. After the structured redesign, repeat visits from this segment increased — the clearest signal that the homepage had become worth returning to." },
+              { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
+              { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
+              { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
+            ].map((card, i) => (
+              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className="bg-[hsl(220,18%,14%)] rounded-xl border border-background/10 p-10">
+                <p className="text-xs tracking-widest uppercase text-background/30 mb-3">{card.label}</p>
+                {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
+                <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
+                <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
