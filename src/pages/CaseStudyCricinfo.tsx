@@ -63,10 +63,10 @@ const CaseStudyCricinfo = () => {
           <p>It was still a chronological feed. Articles dominated, videos were underrepresented, and content had no structure or grouping. For power users it worked. For casual users it didn't invite exploration.</p>
         </Prose>
         <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 gap-0.5">
-          <ContextCard label="The problem">
+          <ContextCard label="The problem" className="md:rounded-l-xl">
             The homepage functioned as a match-time utility — not a daily destination. Users arrived for matches and left. No habit. No reason to return.
           </ContextCard>
-          <ContextCard label="The goal">
+          <ContextCard label="The goal" className="md:rounded-r-xl">
             Make the homepage more structured, more welcoming, and more engaging — so users don't just land, but <em className="text-primary not-italic font-medium">stay and explore</em>.
           </ContextCard>
         </div>
@@ -156,15 +156,18 @@ const CaseStudyCricinfo = () => {
             { num: "02", title: "Complexity peaked at the worst moment", desc: "During live matches — peak traffic — users faced competing modules, weak hierarchy, and high density. The result was cognitive overload at exactly the moment speed mattered most.", tag: "UX critical" },
             { num: "03", title: "Three user types, one surface", desc: "Casual users wanted quick updates. Content consumers wanted stories & analysis. Power users wanted stats & data. Speed vs depth. Simplicity vs richness. This made personalisation critical — but hard to prioritise.", tag: "Strategic" },
             { num: "04", title: "Scalability was a system problem", desc: "Non-modular architecture made every new tournament or content type a high-effort rebuild. The problem wasn't content — it was system design. Slower design and development were the symptom.", tag: "Systems" },
-          ].map((insight, i) => (
-            <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-              className="bg-card p-10">
-              <p className="text-lg text-primary mb-4" style={{ fontFamily: "var(--font-display)" }}>{insight.num}</p>
-              <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
-              <Badge variant="secondary" className="mt-4 text-xs bg-primary/10 text-primary border-0">{insight.tag}</Badge>
-            </motion.div>
-          ))}
+          ].map((insight, i) => {
+            const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+            return (
+              <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className={`bg-card p-10 ${corners[i] || ""}`}>
+                <p className="text-lg text-primary mb-4" style={{ fontFamily: "var(--font-display)" }}>{insight.num}</p>
+                <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
+                <Badge variant="secondary" className="mt-4 text-xs bg-primary/10 text-primary border-0">{insight.tag}</Badge>
+              </motion.div>
+            );
+          })}
         </div>
       </Section>
 
@@ -253,7 +256,7 @@ const CaseStudyCricinfo = () => {
 
           {/* Hero Stat */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="mt-12 bg-foreground/90 rounded-xl p-16 flex flex-col items-center text-center relative overflow-hidden">
+            className="mt-12 bg-foreground/90 rounded-t-xl p-16 flex flex-col items-center text-center relative overflow-hidden">
             <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,hsl(var(--primary)/0.12),transparent_70%)] pointer-events-none" />
             <p className="text-7xl md:text-8xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
             <p className="text-sm text-background/40 max-w-[280px] mt-4">Session duration during live matches — the strongest quantified signal</p>
@@ -266,15 +269,18 @@ const CaseStudyCricinfo = () => {
               { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
               { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
               { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className="bg-foreground/90 p-10">
-                <p className="text-xs tracking-widest uppercase text-background/25 mb-3">{card.label}</p>
-                {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
-                <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
-                <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
+            ].map((card, i) => {
+              const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                  className={`bg-foreground/90 p-10 ${corners[i]}`}>
+                  <p className="text-xs tracking-widest uppercase text-background/25 mb-3">{card.label}</p>
+                  {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
+                  <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
+                  <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -318,12 +324,15 @@ const CaseStudyCricinfo = () => {
               "Restraint is a design decision. Not redesigning the HSB across three versions was as deliberate as anything we shipped. Knowing what not to redesign is as important as knowing what to change.",
               "Design at scale is the ongoing negotiation between what users need, what the business wants, and what the system can support. The layout is the last part of that — not the first.",
               "A homepage is never finished — not because the work is incomplete, but because the users keep changing, the product keeps growing, and the habit you're trying to build takes longer than any single redesign.",
-            ].map((text, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className="bg-foreground/90 p-12">
-                <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
-              </motion.div>
-            ))}
+            ].map((text, i) => {
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                  className={`bg-foreground/90 p-12 ${corners[i]}`}>
+                  <p className="text-lg italic text-background/70 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>"{text}"</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -375,9 +384,9 @@ const Prose = ({ children }: { children: React.ReactNode }) => (
   </motion.div>
 );
 
-const ContextCard = ({ label, children }: { label: string; children: React.ReactNode }) => (
+const ContextCard = ({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className="bg-card p-10">
+    className={`bg-card p-10 ${className}`}>
     <p className="text-xs tracking-widest uppercase text-muted-foreground font-medium mb-4">{label}</p>
     <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
   </motion.div>
