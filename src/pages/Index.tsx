@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Linkedin, ExternalLink, Users, Zap, BarChart3, Layers, Code2, Target, TrendingUp, Sparkles, Vote, Star } from "lucide-react";
+import { ArrowDown, Mail, Linkedin, ExternalLink, Users, Zap, BarChart3, Layers, Code2, Target, TrendingUp, Sparkles, Vote, Star, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
