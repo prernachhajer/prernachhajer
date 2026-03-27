@@ -122,6 +122,12 @@ const CaseStudyCricinfo = () => {
               Each version improved the experience — but none shifted it from <span className="text-primary/80 not-italic">utility</span> to <span className="text-primary/80 not-italic">habit</span>.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* HOMEPAGE EVOLUTION CAROUSEL */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
           <HomepageEvolutionCarousel />
         </div>
       </section>
