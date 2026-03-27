@@ -370,8 +370,9 @@ const Section = ({ label, children }: { label: string; children: React.ReactNode
 
 const SectionLabel = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className={`flex items-center gap-3 text-xs tracking-[0.14em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/30" : "text-muted-foreground"}`}>
-    <span className={`w-5 h-px ${dark ? "bg-background/30" : "bg-muted-foreground"}`} />
+    className={`text-sm md:text-base font-semibold tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/70" : "text-foreground/70"}`}
+    style={{ fontFamily: "var(--font-display)" }}>
+    <span className={`inline-block w-6 h-[2px] mr-3 align-middle ${dark ? "bg-primary/70" : "bg-primary"}`} />
     {children}
   </motion.div>
 );
