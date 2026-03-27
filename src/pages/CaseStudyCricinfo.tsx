@@ -550,29 +550,120 @@ const CaseStudyCricinfo = () => {
         ))}
       </Section>
 
+      {/* HSB EVOLUTION — Don't redesign the live score strip */}
+      <section className="py-24 px-6 bg-foreground text-background">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-12">
+            <div>
+              <span className="inline-block text-[10px] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4">
+                The Decision &middot; 2021&ndash;2026
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-background/90 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+                Don&rsquo;t redesign the<br /><span className="text-primary italic">live score strip.</span>
+              </h2>
+            </div>
+            <span className="inline-flex items-center gap-2 text-[10.5px] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
+              ✓ Sustained 2021&ndash;2026
+            </span>
+          </motion.div>
+
+          {/* Stacked screens */}
+          <div className="flex flex-col gap-8 mb-12">
+            {[
+              { year: "2021", sub: "HSV", img: hsbScreen2021, caption: "The original score strip — highest engagement surface on the page. Retained as-is." },
+              { year: "2023", sub: "Refresh", img: hsbScreen2023, caption: "Structural redesign around the strip. Everything changed — except this." },
+              { year: "2026", sub: "Current", img: hsbScreen2026, caption: "Third iteration. Same strip. Still the strongest anchor." },
+            ].map((screen, i) => (
+              <motion.div key={screen.year} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className="grid grid-cols-[80px_1fr] gap-6 items-start">
+                {/* Year label + line */}
+                <div className="pt-4 flex flex-col items-center gap-2.5">
+                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">{screen.year}</span>
+                  <span className="text-[9px] font-mono tracking-[0.12em] uppercase text-background/20">{screen.sub}</span>
+                  {i < 2 && <div className="w-px flex-1 min-h-[40px] bg-gradient-to-b from-background/10 to-transparent" />}
+                </div>
+                {/* Browser card */}
+                <div className="rounded-xl overflow-hidden border border-background/[0.07] bg-[hsl(220,15%,11%)]" style={{ boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}>
+                  <div className="bg-[hsl(220,14%,13%)] border-b border-background/[0.07] px-3.5 py-2.5 flex items-center gap-3">
+                    <div className="flex gap-1.5">
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
+                    </div>
+                    <div className="flex-1 bg-[hsl(220,20%,8%)] border border-background/5 rounded-md px-3 py-1">
+                      <span className="text-[9.5px] font-mono tracking-wide text-background/20">espncricinfo.com</span>
+                    </div>
+                  </div>
+                  <img src={screen.img} alt={`Cricinfo ${screen.year} homepage`} className="w-full block" />
+                  <div className="px-4 py-3 border-t border-background/[0.07] bg-[hsl(220,18%,8%)]">
+                    <p className="text-xs text-background/40 font-medium leading-relaxed">{screen.caption}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Narrative */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <hr className="border-t border-background/[0.07] mb-8" />
+            <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
+              <p className="text-sm text-background/50 leading-[1.85]">
+                The live score strip was the <strong className="text-background/90 font-bold">highest-performing surface</strong> on the homepage. Across three redesigns, it was the one thing we chose not to rebuild. Not because we couldn&rsquo;t improve it — but because <strong className="text-background/90 font-bold">its familiarity was its strength</strong>. Users trusted it. It anchored every visit. Restraint, here, was a design decision.
+              </p>
+              <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
+                <p className="text-5xl font-extrabold tracking-tight leading-none text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+                  3<span className="text-primary">&times;</span>
+                </p>
+                <p className="text-[8.5px] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
+                  Versions<br />Same strip
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* WHAT COMES NEXT */}
       <Section label="What comes next">
         <Prose>
-          <h2>From match-driven visits to daily engagement</h2>
-          <p>Today, users come around live matches. The next phase is about changing that — and it depends on one unlock more than anything else.</p>
+          <h2>What comes next</h2>
+          <p>Three sequentially dependent phases that reimagine how fans discover, consume, and personalise cricket content.</p>
         </Prose>
-        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-3 gap-0.5">
+        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-3 gap-4">
           {[
-            { icon: "◎", title: "Short-form content", desc: "Quick updates, lightweight reads, bite-sized moments — a reason to return between matches. The foundation everything else depends on.", status: "In progress", active: true },
-            { icon: "⊞", title: "Hybrid homepage", desc: "Structure for depth, feed for speed. Viable once short-form has volume to sustain a feed. The two are sequentially dependent.", status: "Planned", active: false },
-            { icon: "◈", title: "Personalisation", desc: "On the roadmap since 2021. Infrastructure exists. User need is real. It hasn't shipped because it hasn't been the business priority — an organisational problem, not a design one.", status: "Sequencing", active: false },
+            { icon: "◎", title: "Short-form content", desc: "Quick updates, lightweight reads, bite-sized moments — a reason to return between matches. The foundation everything else depends on.", status: "In progress", active: true, phone: nextPhone1 },
+            { icon: "⊞", title: "Hybrid homepage", desc: "Structure for depth, feed for speed. Viable once short-form has volume to sustain a feed. The two are sequentially dependent.", status: "Planned", active: false, phone: nextPhone2 },
+            { icon: "◈", title: "Personalisation", desc: "On the roadmap since 2021. Infrastructure exists. User need is real. It hasn't shipped because it hasn't been the business priority — an organisational problem, not a design one.", status: "Sequencing", active: false, phone: nextPhone3 },
           ].map((card, i) => (
             <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-              className="bg-card p-10 first:rounded-l-xl last:rounded-r-xl">
-              <div className="w-11 h-11 rounded-full bg-secondary flex items-center justify-center text-lg mb-5">{card.icon}</div>
-              <h4 className="font-semibold mb-2">{card.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
-              <Badge variant="secondary" className={`mt-4 text-xs ${card.active ? "bg-[hsl(152,48%,20%)]/10 text-[hsl(152,48%,20%)]" : ""}`}>
+              className="bg-card border border-border/50 rounded-2xl p-7 flex flex-col">
+              <div className="w-10 h-10 rounded-[10px] bg-secondary flex items-center justify-center text-base mb-5">{card.icon}</div>
+              <h4 className="font-semibold text-base mb-2 tracking-tight">{card.title}</h4>
+              <p className="text-[13px] text-muted-foreground leading-relaxed mb-5">{card.desc}</p>
+              {/* Phone mockup */}
+              <div className="flex justify-center flex-1 items-end mb-5">
+                <div className="w-[74%] max-w-[210px] bg-[#0D0D0D] rounded-[32px] p-[7px] relative"
+                  style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.06) inset, 0 24px 56px rgba(0,0,0,0.22), 0 4px 10px rgba(0,0,0,0.14)" }}>
+                  <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-9 h-1.5 bg-[#1C1C1C] rounded-full z-[2]" />
+                  <div className="rounded-[26px] overflow-hidden bg-background" style={{ aspectRatio: "9/19.5" }}>
+                    <img src={card.phone} alt={`${card.title} concept`} className="w-full h-full object-cover object-top block" />
+                  </div>
+                </div>
+              </div>
+              <Badge variant="secondary" className={`text-xs w-fit ${card.active ? "bg-[hsl(152,48%,90%)] text-[hsl(152,48%,20%)] border-transparent" : "border border-border/50"}`}>
                 {card.status}
               </Badge>
             </motion.div>
           ))}
         </div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+          className="max-w-5xl mx-auto mt-6">
+          <p className="text-xs text-muted-foreground/60 leading-relaxed max-w-2xl">
+            <strong className="text-muted-foreground font-medium">Note:</strong> These three phases are sequentially dependent. Short-form content unlocks hybrid feed viability. Hybrid feed unlocks personalisation at scale. The order matters.
+          </p>
+        </motion.div>
       </Section>
 
       {/* LEARNINGS */}
