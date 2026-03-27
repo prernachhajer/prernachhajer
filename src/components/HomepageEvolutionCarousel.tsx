@@ -10,9 +10,9 @@ import desk2026 from "@/assets/cricinfo-desk-2026.jpg";
 import mobile2026 from "@/assets/cricinfo-mobile-2026.jpg";
 
 const slides = [
-  { year: "2021", era: "First era", desktop: desk2021, mobile: mobile2021 },
-  { year: "2023", era: "Refresh", desktop: desk2023, mobile: mobile2023 },
   { year: "2026", era: "Current", desktop: desk2026, mobile: mobile2026 },
+  { year: "2023", era: "Refresh", desktop: desk2023, mobile: mobile2023 },
+  { year: "2021", era: "First era", desktop: desk2021, mobile: mobile2021 },
 ];
 
 const HomepageEvolutionCarousel = () => {
