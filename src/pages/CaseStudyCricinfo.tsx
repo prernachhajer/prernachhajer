@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
+import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
+import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -56,7 +58,56 @@ const CaseStudyCricinfo = () => {
         </motion.div>
       </section>
 
-      {/* 01 — PROBLEM */}
+      {/* THE STARTING POINT — 2021 */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <p className="text-xs tracking-[0.14em] uppercase text-muted-foreground mb-4">The starting point</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3" style={{ fontFamily: "var(--font-display)" }}>
+              This is what we inherited.
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mb-12">
+              A feed-driven homepage built for volume, not clarity. Everything lived in a single scroll &mdash; scores, articles, promos &mdash; with no separation of intent.
+            </p>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="bg-muted/50 rounded-2xl p-5 md:p-8 pb-0 flex gap-6 overflow-hidden border border-border/50"
+            style={{ height: "540px" }}>
+            {/* Desktop */}
+            <div className="flex-1 min-w-0 flex flex-col h-full">
+              <div className="bg-card rounded-t-xl border border-border border-b-0 shrink-0">
+                <div className="flex items-center gap-3 px-4 py-3">
+                  <div className="flex gap-1.5">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
+                  </div>
+                  <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3 gap-2">
+                    <span className="text-[11px] text-muted-foreground/60 font-mono tracking-wide">espncricinfo.com</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 overflow-y-auto overflow-x-hidden border border-border border-t-0 rounded-b-xl bg-background min-h-0 scrollbar-thin scrollbar-thumb-border">
+                <img src={desk2021} alt="Cricinfo 2021 desktop homepage" className="w-full h-auto block" />
+              </div>
+            </div>
+            {/* Mobile */}
+            <div className="w-[150px] md:w-[170px] shrink-0 flex-col h-full hidden md:flex">
+              <div className="flex-1 min-h-0 bg-[#0a0a0a] rounded-[32px] p-[6px] flex flex-col relative"
+                style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.25)" }}>
+                <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-[52px] h-[16px] bg-[#0a0a0a] rounded-full z-[2]" />
+                <div className="flex-1 min-h-0 rounded-[26px] overflow-y-auto overflow-x-hidden bg-background mt-0 scrollbar-none">
+                  <img src={mobile2021} alt="Cricinfo 2021 mobile homepage" className="w-full h-auto block" />
+                </div>
+                <div className="h-[4px] bg-white/20 rounded-full w-[36%] mx-auto mt-[6px] mb-[4px]" />
+              </div>
+            </div>
+          </motion.div>
+          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Cricinfo Homepage &middot; 2021</p>
+        </div>
+      </section>
+
       <section className="py-24 px-6 bg-foreground text-background">
         <div className="max-w-5xl mx-auto">
           <SectionLabel dark>01 — Problem</SectionLabel>
