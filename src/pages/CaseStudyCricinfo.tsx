@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
