@@ -269,15 +269,18 @@ const CaseStudyCricinfo = () => {
               { label: "System efficiency", number: "3×", title: "Component reuse across the system", desc: "Faster builds, less design debt, consistent iterations across three years. This one is concrete and held across all versions." },
               { label: "App downloads", title: "Homepage became a conversion surface", desc: "Users who discovered depth — stats, analysis, historical data — followed through to the app. Interest in data-rich content drove this more than expected." },
               { label: "Findability", title: "Improved meaningfully for all users", desc: "The shift from feed to structured layout gave users a clear mental map of the product. They knew where things lived. Reduced friction, increased confidence — especially for casual users." },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className="bg-foreground/90 p-10">
-                <p className="text-xs tracking-widest uppercase text-background/25 mb-3">{card.label}</p>
-                {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
-                <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
-                <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
+            ].map((card, i) => {
+              const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                  className={`bg-foreground/90 p-10 ${corners[i]}`}>
+                  <p className="text-xs tracking-widest uppercase text-background/25 mb-3">{card.label}</p>
+                  {card.number && <p className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
+                  <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
+                  <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
