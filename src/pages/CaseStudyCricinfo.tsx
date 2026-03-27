@@ -384,9 +384,9 @@ const Prose = ({ children }: { children: React.ReactNode }) => (
   </motion.div>
 );
 
-const ContextCard = ({ label, children }: { label: string; children: React.ReactNode }) => (
+const ContextCard = ({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className="bg-card p-10">
+    className={`bg-card p-10 ${className}`}>
     <p className="text-xs tracking-widest uppercase text-muted-foreground font-medium mb-4">{label}</p>
     <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
   </motion.div>
