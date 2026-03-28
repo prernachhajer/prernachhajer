@@ -1,320 +1,336 @@
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+// ─────────────────────────────────────────────
+// CASE STUDY — Design System (Rebuilt)
+// Uses shared design system: @/lib/tokens + @/components/ds
+// Story arc mirrors CaseStudyCricinfo (reference page)
+// Images: placeholders — swap with real assets when ready
+// ─────────────────────────────────────────────
 
-const fade = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number = 0) => ({
-    opacity: 1, y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
-  }),
-};
+import { motion } from "framer-motion";
+import {
+  NavCaseStudy,
+  CaseStudyHero,
+  SectionLabel,
+  Section,
+  DarkSection,
+  Prose,
+  PullQuote,
+  LearningCard,
+  ClosingSection,
+  ImagePlaceholder,
+} from "@/components/ds";
+import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
+
+const fade = animation.fade;
 
 const CaseStudyDesignSystem = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-background text-foreground">
+
       {/* NAV */}
-      <nav className="fixed top-0 inset-x-0 z-50 h-[60px] flex items-center justify-between px-6 md:px-14 bg-background/90 backdrop-blur-xl border-b border-border">
-        <button onClick={() => navigate("/")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-          <ArrowLeft className="h-4 w-4" /> Back to Portfolio
-        </button>
-        <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">2021 — 2025</span>
-      </nav>
+      <NavCaseStudy period="2021 — 2025" />
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
-        <motion.div initial="hidden" animate="visible" variants={fade} className="flex items-center gap-3 mb-12">
-          <span className="w-7 h-px bg-muted-foreground" />
-          <span className="text-xs tracking-[0.14em] uppercase text-muted-foreground">Case Study</span>
-          <span className="w-7 h-px bg-muted-foreground" />
-        </motion.div>
-        <motion.h1 initial="hidden" animate="visible" variants={fade} custom={1}
-          className="text-4xl md:text-6xl lg:text-7xl font-normal tracking-[-0.03em] leading-[1.1] max-w-4xl"
-          style={{ fontFamily: "var(--font-display)" }}>
-          Building the backbone of a <span className="text-primary italic">global cricket platform</span>
-        </motion.h1>
-        <motion.p initial="hidden" animate="visible" variants={fade} custom={2}
-          className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          — and what five years of doing it actually felt like.
-        </motion.p>
-        <motion.div initial="hidden" animate="visible" variants={fade} custom={3}
-          className="mt-14 flex gap-8 flex-wrap justify-center font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
-          {["Design System", "Senior Designer → Lead", "Web, iOS, Android", "2021 – 2025"].map((item) => (
-            <span key={item} className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-              {item}
-            </span>
-          ))}
-        </motion.div>
-        <motion.div initial="hidden" animate="visible" variants={fade} custom={4}
-          className="mt-20 flex flex-col items-center gap-3 font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
-          <span>Scroll</span>
-          <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
-        </motion.div>
+      <CaseStudyHero
+        headline="Building the backbone of a"
+        headlineAccent="global cricket platform"
+        tags={["Design System", "Senior Designer → Lead", "Web, iOS, Android", "2021 – 2025"]}
+      />
+
+      {/* THE STARTING POINT */}
+      <section className={`${spacing.sectionGap} ${layout.px}`}>
+        <div className={`${layout.container} mx-auto`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
+            <h2 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3" style={{ fontFamily: t.displayFont }}>
+              This is what we inherited.
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mb-12">
+              In 2021, ESPN Cricinfo was scaling in every direction at once. We had a Figma component library — but it was inconsistent, undocumented, and not built for what was coming. Dark mode, native mobile, Tailwind migration. Incremental fixes wouldn't hold.
+            </p>
+          </motion.div>
+
+          {/* Before state — image placeholder */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+            <ImagePlaceholder label="Figma library · 2021 state" aspectRatio="16/6" />
+            <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Cricinfo Figma Library · 2021 — before the system</p>
+          </motion.div>
+        </div>
       </section>
 
-      {/* WHERE IT STARTED */}
-      <Section label="Where It Started">
-        <Prose>
-          <h2>From scattered patterns to shared infrastructure</h2>
-          <p>In 2021, ESPN Cricinfo was scaling in every direction at once. New platforms, new features, growing design and engineering teams. We had a Figma component library — but it was inconsistent, undocumented, and not built for what was coming.</p>
-          <p>Dark mode was on the roadmap. A dedicated native mobile app was being planned. Engineering was restructuring around Tailwind. And design was duplicating work across every platform with no shared foundation underneath it.</p>
-          <p>We knew incremental fixes wouldn't hold. We needed to build infrastructure.</p>
-        </Prose>
-        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 gap-0.5">
-          <ContextCard label="The situation" className="md:rounded-l-xl">
-            Inconsistent component library, no documentation, duplicated work across platforms. Figma files were growing but the system wasn't scaling with them.
-          </ContextCard>
-          <ContextCard label="The commitment" className="md:rounded-r-xl">
-            Five years of building, simplifying, documenting, maintaining, and eventually putting the whole system through a test it had to <em className="text-primary not-italic font-medium">pass</em>.
-          </ContextCard>
-        </div>
-      </Section>
-
-      {/* PHASE 1 */}
-      <section className="py-24 px-6 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel dark>Phase 1 — Convince, Align, Launch</SectionLabel>
-          <div className="max-w-3xl mx-auto">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
-              Before we designed anything, we had to have hard conversations.
-            </motion.h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-0.5 mt-12">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="bg-foreground/90 p-10 md:rounded-tl-xl">
-              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Product pushback</p>
-              <p className="text-sm text-background/60 leading-relaxed">
-                Product didn't immediately see the value. The recurring question was straightforward and fair: why are we spending time on a design system instead of shipping features? Making the case required demonstrating value in small, concrete increments — not promises about long-term payoff.
-              </p>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-              className="bg-foreground/90 p-10 md:rounded-tr-xl">
-              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Engineering alignment</p>
-              <p className="text-sm text-background/60 leading-relaxed">
-                When engineers pushed back on naming conventions, spacing logic, line heights — I found it frustrating at first. They weren't arguing about details. They were protecting the system's integrity. Naming conventions that don't scale break everything downstream. Those early arguments made the foundation stronger.
-              </p>
-            </motion.div>
-          </div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="mt-0.5 bg-foreground/90 md:rounded-b-xl p-10">
-            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">The outcome</p>
-            <p className="text-sm text-background/60 leading-relaxed mb-6">
-              Within a few months we had shipped the initial system — core tokens for color, typography, and spacing mapped directly to Tailwind variables, and the first set of components ready for product teams to use.
+      {/* 01 — PROBLEM */}
+      <DarkSection label="01 — Problem">
+        <div className="grid md:grid-cols-2 gap-0.5">
+          {/* State */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl">
+            <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
+            <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50" style={{ fontFamily: t.displayFont }}>
+              One library. Inconsistent patterns. No documentation. Teams duplicating work across every platform with no shared foundation underneath.
             </p>
-            <div className="p-4 bg-primary/5 border-l-2 border-primary rounded-r-md">
-              <p className="text-sm italic text-background/70 leading-relaxed">
-                "The hardest part of building a design system isn't the design. It's earning the trust of the people who have to live inside it every day."
-              </p>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {["Inconsistent components", "No documentation", "Work duplicated across platforms"].map((tag) => (
+                <span key={tag} className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30">{tag}</span>
+              ))}
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">System not scaling with the product</span>
+            </div>
+          </motion.div>
+          {/* Goal */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="bg-[hsl(220,18%,16%)] p-12 md:rounded-r-xl">
+            <p className={`${t.labelSm} text-primary mb-5`}>What success looks like</p>
+            <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90" style={{ fontFamily: t.displayFont }}>
+              Build <em className="text-primary italic">shared infrastructure</em> — not just a component library. A system that makes every team faster, every platform more consistent, and every new feature easier to ship.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {["Teams build independently", "Documentation as shared language", "Design velocity"].map((tag) => (
+                <span key={tag} className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30">{tag}</span>
+              ))}
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">Infrastructure, not decoration</span>
             </div>
           </motion.div>
         </div>
+      </DarkSection>
+
+      {/* 02 — IMPACT */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel dark>02 — Impact</SectionLabel>
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="text-sm text-background/40 leading-relaxed mb-8">
+            Five years of building. The outcomes were felt across the entire product organisation.
+          </motion.p>
+          <div className="grid md:grid-cols-3 gap-0.5">
+            {[
+              { label: "Design cycle speed", num: "50%", title: "Faster design after system adoption", desc: "Teams weren't rebuilding from scratch. They were assembling. The velocity shift was measurable within months of full adoption." },
+              { label: "Team independence", num: "170+", title: "Figma files powered by the system", desc: "From one inconsistent library to 170+ files across the product — all pulling from a single shared foundation." },
+              { label: "Component coverage", num: "100+", title: "Component variants documented and shipped", desc: "Dark mode, modular widgets, and native mobile app launch — all built on the system. A complete identity overhaul executed without disrupting shipping velocity." },
+            ].map((card, i) => (
+              <motion.div key={card.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}>
+                <div>
+                  <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mb-3">{card.label}</p>
+                  <p className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4" style={{ fontFamily: t.displayFont }}>{card.num}</p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-background/70 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5">
+            <p className="text-xs italic text-background/20 leading-relaxed">50% faster design cycles and 170+ files are the clearest signals. Team independence and onboarding speed are directional — consistent across feedback but not formally benchmarked.</p>
+          </motion.div>
+        </div>
       </section>
 
-      {/* PHASE 2 */}
-      <Section label="Phase 2 — Rebuild Smarter">
+      {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
+      <Section label="03 — Phase 1: Convince, Align, Launch">
         <Prose>
-          <h2>Component properties changed what a single component could do</h2>
-          <p>A year after launch, Figma released component properties. What previously required dozens of separate components to handle different states, sizes, and configurations could now live inside one well-structured component with properties exposed at the surface.</p>
-          <p>We made the decision to rebuild rather than patch.</p>
-          <p>We went through the entire library with fresh eyes. Simplified structures. Reduced variants that existed only because we didn't have a better option at the time. Rebuilt complex components from scratch using the new capabilities.</p>
+          <h2>Before we designed anything, we had to have hard conversations.</h2>
+          <p>Product didn't immediately see the value. Engineering pushed back on naming conventions. Making the case required demonstrating value in small, concrete increments — not promises about long-term payoff.</p>
         </Prose>
-        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-3 gap-0.5">
+
+        {/* Pushback vs Outcome */}
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center">
+            <p className={`${t.labelSm} text-muted-foreground mb-4`}>The pushback</p>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
+              "Why spend time on a <span className="text-primary italic">design system</span> instead of shipping features?"
+            </p>
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center">
+            <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The answer</p>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1] text-white" style={{ fontFamily: t.displayFont }}>
+              "Because every feature you ship <span className="text-primary italic">without it</span> costs more to change later."
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Findings from Phase 1 */}
+        <div className={`${layout.container} mx-auto mt-0.5 grid md:grid-cols-2 gap-0.5`}>
           {[
-            { title: "Leaner system", desc: "Fewer components doing more work. Complex multi-component structures collapsed into single well-configured components." },
-            { title: "Faster Figma", desc: "Performance improved significantly. Less file bloat, faster loading, smoother handoff workflows." },
-            { title: "Less cognitive load", desc: "Designers spent less time choosing where to start. The library was easier to maintain and easier to hand off." },
-          ].map((card, i) => {
-            const corners = ["md:rounded-l-xl", "", "md:rounded-r-xl"];
+            { num: "Finding 01", title: "Product alignment needed proof, not promises", desc: "We made the case through small, visible wins. Each increment of value built trust. Abstract arguments about long-term payoff didn't land — concrete demos did.", tag: "Stakeholder strategy" },
+            { num: "Finding 02", title: "Engineering pushback made the system stronger", desc: "When engineers challenged naming conventions and spacing logic, they weren't arguing about details. They were protecting downstream integrity. Those arguments improved the foundation.", tag: "Collaboration insight" },
+            { num: "Finding 03", title: "Token mapping to Tailwind was the unlock", desc: "Core tokens for color, typography, and spacing mapped directly to Tailwind variables. Once that was in place, design and engineering were speaking the same language.", tag: "Technical foundation" },
+            { num: "Finding 04", title: "The hardest part wasn't the design", desc: "It was earning the trust of the people who had to live inside it every day. The system was only as good as the people willing to adopt it — and that required ongoing relationship, not just good components.", tag: "Organisational insight" },
+          ].map((insight, i) => {
+            const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
             return (
-              <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className={`bg-card p-10 ${corners[i]}`}>
-                <h4 className="font-semibold mb-3">{card.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+              <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+                className={`bg-card p-10 ${corners[i] || ""}`}>
+                <p className={`${t.labelSm} text-primary mb-4`}>{insight.num}</p>
+                <h4 className="font-semibold text-base mb-3 tracking-tight">{insight.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{insight.desc}</p>
+                <span className={`${t.labelSm} px-3 py-1 rounded-full border border-primary/20 text-primary`}>{insight.tag}</span>
               </motion.div>
             );
           })}
         </div>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="max-w-5xl mx-auto mt-12 p-6 bg-card rounded-xl border-l-2 border-primary">
-          <p className="text-sm italic text-foreground leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-            "Rebuilding good work to make it better requires a specific discipline. Most teams patch and move on. Going back in means accepting that the first version was right for its time — and this version needs to be right for now."
-          </p>
-        </motion.div>
       </Section>
 
-      {/* PHASE 3 */}
-      <section className="py-24 px-6 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel dark>Phase 3 — Make It Self-Sufficient</SectionLabel>
-          <div className="max-w-3xl mx-auto">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
-              A system that requires a designer in the room to explain it hasn't fully worked yet.
-            </motion.h2>
-            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-              className="text-background/50 leading-relaxed mb-8">
-              After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component usage, token reference, interaction states, guidelines for product and engineering.
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-0.5 mt-12">
-            {[
-              { label: "Before", title: "Skepticism", desc: "\"Why are we doing this?\" — the question in planning sessions. Designers needed to be present to explain every component choice. Teams were dependent on institutional knowledge." },
-              { label: "After", title: "Dependency", desc: "\"Is there a component for this?\" — the new question. Product managers checking the library before writing briefs. Developers building screens independently. New team members contributing within days." },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"}`}>
-                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
-                <p className="text-2xl font-bold text-background/80 mb-3" style={{ fontFamily: "var(--font-display)" }}>{card.title}</p>
-                <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="mt-0.5 bg-foreground/90 md:rounded-b-xl p-9 flex items-center gap-5">
-            <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
-            <p className="text-lg italic text-background/50 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-              "Documentation isn't the end of the process. It's what turns a component library into a shared language."
-            </p>
-          </motion.div>
+      {/* 04 — REBUILD: PHASE 2 */}
+      <DarkSection label="04 — Phase 2: Rebuild Smarter">
+        <div className="max-w-3xl mx-auto mb-12">
+          <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
+            style={{ fontFamily: t.displayFont }}>
+            Component properties changed what a single component could do.
+          </motion.h2>
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="text-background/50 leading-relaxed">
+            A year after launch, Figma released component properties. Dozens of separate components could now live inside one well-structured component. We made the decision to rebuild rather than patch.
+          </motion.p>
         </div>
-      </section>
 
-      {/* PHASE 4 */}
-      <Section label="Phase 4 — Maintain, Reduce, Refine">
-        <Prose>
-          <h2>The quieter, more persistent discipline</h2>
-          <p>Once a system is in active use, the work doesn't stop. It changes character. Features shipped. Teams grew. Edge cases appeared. A component that worked perfectly for three use cases didn't quite work for a fourth. A variant that made sense at launch was never actually used.</p>
-        </Prose>
-        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 gap-0.5">
+        {/* What the rebuild produced */}
+        <div className="grid md:grid-cols-3 gap-0.5">
           {[
-            { title: "Removed unused variants", desc: "Variants that weren't earning their place were cut. The library stayed lean instead of accumulating debt." },
-            { title: "Simplified drifted components", desc: "Components that had grown complex over time — like the table component — were brought back to clarity." },
-            { title: "Adjusted spacing & sizing", desc: "Where the system had more options than it needed, we reduced. Fewer choices, more consistency." },
-            { title: "Treated it as a product", desc: "A system that isn't maintained becomes a system people work around. We gave it the same critical eye after launch as before." },
-          ].map((card, i) => {
-            const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
-            return (
-              <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className={`bg-card p-10 ${corners[i]}`}>
-                <h4 className="font-semibold mb-3">{card.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
-              </motion.div>
-            );
-          })}
+            { title: "Leaner system", desc: "Fewer components doing more work. Complex multi-component structures collapsed into single well-configured components.", corner: "md:rounded-l-xl" },
+            { title: "Faster Figma", desc: "Performance improved significantly. Less file bloat, faster loading, smoother handoff workflows.", corner: "" },
+            { title: "Less cognitive load", desc: "Designers spent less time choosing where to start. The library was easier to maintain and easier to hand off.", corner: "md:rounded-r-xl" },
+          ].map((card, i) => (
+            <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+              className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}>
+              <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
+              <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Image placeholder — before/after Figma */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={3}
+          className="mt-8">
+          <ImagePlaceholder label="Before / After · Component structure comparison" aspectRatio="16/5" />
+          <p className="text-center text-xs text-background/20 mt-4 tracking-wide">Component rebuild · 2022 — fewer files, more power</p>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={4} className="mt-8">
+          <PullQuote dark>
+            Rebuilding good work to make it better requires a specific discipline. Most teams patch and move on. Going back in means accepting that the first version was right for its time — and this version needs to be right for now.
+          </PullQuote>
+        </motion.div>
+      </DarkSection>
+
+      {/* 05 — DOCUMENTATION: PHASE 3 */}
+      <Section label="05 — Phase 3: Make It Self-Sufficient">
+        <Prose>
+          <h2>A system that requires a designer in the room to explain it hasn't fully worked yet.</h2>
+          <p>After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component usage, token reference, interaction states, guidelines for product and engineering.</p>
+        </Prose>
+
+        {/* Before / After adoption */}
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center">
+            <p className={`${t.labelSm} text-muted-foreground mb-4`}>Before documentation</p>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
+              "Why are we <span className="text-primary italic">doing this?</span>"
+            </p>
+            <p className="text-sm text-muted-foreground mt-4 leading-relaxed">Designers needed to be present to explain every component choice. Teams were dependent on institutional knowledge.</p>
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center">
+            <p className="text-xs tracking-widest uppercase text-white/50 mb-4">After documentation</p>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1] text-white" style={{ fontFamily: t.displayFont }}>
+              "Is there a component <span className="text-primary italic">for this?</span>"
+            </p>
+            <p className="text-sm text-white/50 mt-4 leading-relaxed">PMs checking the library before writing briefs. Developers building screens independently. New members contributing within days.</p>
+          </motion.div>
+        </div>
+
+        {/* Documentation screenshot placeholder */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="max-w-5xl mx-auto mt-12 p-6 bg-card rounded-xl border-l-2 border-primary">
-          <p className="text-sm italic text-foreground leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-            "Small decisions made consistently over time matter more than big decisions made occasionally."
-          </p>
+          className={`${layout.container} mx-auto mt-8`}>
+          <ImagePlaceholder label="ZeroHeight documentation · component reference" aspectRatio="16/6" />
+          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">ZeroHeight documentation · 2023</p>
         </motion.div>
       </Section>
 
-      {/* PHASE 5 — THE OVERHAUL */}
-      <section className="py-24 px-6 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel dark>Phase 5 — The Overhaul</SectionLabel>
-          <div className="max-w-3xl mx-auto">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
-              Three years later, we changed the visual identity of the entire system.
-            </motion.h2>
-            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-              className="text-background/50 leading-relaxed mb-4">
-              It started with a real user problem. Reading is central to what Cricinfo does — scores, commentary, articles, live match updates. The existing font wasn't serving that experience well enough. We also had a technical constraint: we needed to reduce overall app size, which meant we couldn't use a downloadable font family.
-            </motion.p>
-            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-              className="text-background/50 leading-relaxed">
-              We ran the process properly. Competitive analysis across major news and sports platforms. Five to six font families evaluated. Six to eight full explorations created across the key pages — homepage, match page live tab, match page score tab, match page commentary, and article.
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-0.5 mt-12">
-            {[
-              { label: "Typography", title: "Complete font overhaul", desc: "Landed on a system font that solved the reading experience, reduced app size, and didn't require a download. Updated every token it touched — line heights, character spacing, font sizes, typographic hierarchy throughout." },
-              { label: "Iconography", title: "Full icon library overhaul", desc: "Unified stroke weights, standardized grid alignment, every instance replaced across every component, every interactive state checked." },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-tl-xl" : "md:rounded-tr-xl"}`}>
-                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
-                <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
-                <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="mt-0.5 bg-foreground/90 md:rounded-b-xl p-9 flex items-center gap-5">
-            <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
-            <p className="text-lg italic text-background/50 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-              "The real test of a design system isn't launch day. It's whether it can absorb a complete identity change three years later and keep working. Ours did."
-            </p>
-          </motion.div>
+      {/* 06 — MAINTAIN: PHASE 4 */}
+      <DarkSection label="06 — Phase 4: Maintain, Reduce, Refine">
+        <div className="max-w-3xl mx-auto mb-12">
+          <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
+            style={{ fontFamily: t.displayFont }}>
+            The quieter, more persistent discipline.
+          </motion.h2>
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            className="text-background/50 leading-relaxed">
+            Once a system is in active use, the work changes character. Edge cases appear. Variants never used accumulate. A component that worked for three use cases doesn't quite work for a fourth.
+          </motion.p>
         </div>
-      </section>
 
-      {/* OUTCOMES */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel>What It Became</SectionLabel>
-          <div className="grid md:grid-cols-2 gap-0.5">
-            {[
-              { number: "50%", title: "Faster design cycles", desc: "After system adoption, design velocity increased dramatically. Teams weren't rebuilding — they were assembling." },
-              { title: "Independent teams", desc: "Product and engineering teams building independently with minimal design intervention. The system did the explaining." },
-              { title: "Days, not weeks", desc: "New team members contributing within days of onboarding. The documentation and component structure made ramp-up almost immediate." },
-              { title: "Foundation for everything", desc: "Dark mode, modular widgets, and mobile app launch all built on the system foundation. A complete visual identity overhaul executed without disrupting shipping velocity." },
-            ].map((card, i) => {
-              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
-              return (
-                <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                  className={`bg-card p-10 ${corners[i]}`}>
-                  {card.number && <p className="text-4xl font-bold text-primary mb-3" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
-                  <h4 className="font-semibold mb-3">{card.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
+        <div className="grid md:grid-cols-2 gap-0.5">
+          {[
+            { title: "Removed unused variants", desc: "Variants that weren't earning their place were cut. The library stayed lean instead of accumulating debt.", corner: "md:rounded-tl-xl" },
+            { title: "Simplified drifted components", desc: "Components that had grown complex over time — like the table component — were brought back to clarity.", corner: "md:rounded-tr-xl" },
+            { title: "Adjusted spacing & sizing", desc: "Where the system had more options than it needed, we reduced. Fewer choices, more consistency.", corner: "md:rounded-bl-xl" },
+            { title: "Treated it as a product", desc: "A system that isn't maintained becomes a system people work around. We gave it the same critical eye after launch as before.", corner: "md:rounded-br-xl" },
+          ].map((card, i) => (
+            <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+              className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}>
+              <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
+              <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
 
-      {/* LOOKING BACK */}
-      <section className="py-24 px-6 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel dark>Looking Back</SectionLabel>
-          <div className="max-w-3xl mx-auto mb-12">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
-              I joined this project as a Senior Product Designer. I left it as someone who thinks differently about what design actually is.
-            </motion.h2>
-            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-              className="text-background/50 leading-relaxed">
-              The components are the visible part. What's underneath — the alignment conversations, the decisions about what not to build, the willingness to rebuild what was already working, the engineers who pushed back and were right — that's what made it last.
-            </motion.p>
-          </div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="mt-8">
+          <PullQuote dark>
+            Small decisions made consistently over time matter more than big decisions made occasionally.
+          </PullQuote>
+        </motion.div>
+      </DarkSection>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
-            className="bg-foreground/90 rounded-xl p-12 flex items-center gap-5">
-            <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
-            <p className="text-xl italic text-background/60 leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
-              "A design system is infrastructure. And infrastructure is only proven under pressure."
-            </p>
-          </motion.div>
+      {/* 07 — OVERHAUL: PHASE 5 */}
+      <Section label="07 — Phase 5: The Overhaul">
+        <Prose>
+          <h2>Three years later, we changed the visual identity of the entire system.</h2>
+          <p>It started with a real user problem. Reading is central to what Cricinfo does. The existing font wasn't serving that experience well enough — and we had a technical constraint: reduce overall app size, which meant we couldn't use a downloadable font family.</p>
+          <p>We ran the process properly. Competitive analysis across major news and sports platforms. Five to six font families evaluated. Six to eight full explorations created across key pages — homepage, match page, commentary, and article.</p>
+        </Prose>
+
+        {/* Typography + Iconography side by side */}
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+          {[
+            { label: "Typography", title: "Complete font overhaul", desc: "Landed on a system font that solved the reading experience, reduced app size, and didn't require a download. Updated every token it touched — line heights, character spacing, font sizes, typographic hierarchy throughout." },
+            { label: "Iconography", title: "Full icon library overhaul", desc: "Unified stroke weights, standardized grid alignment, every instance replaced across every component, every interactive state checked." },
+          ].map((card, i) => (
+            <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
+              className={`bg-card p-10 ${i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"}`}>
+              <p className={`${t.labelSm} text-muted-foreground mb-4`}>{card.label}</p>
+              <h4 className="font-semibold mb-3">{card.title}</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
 
-      {/* TIMELINE */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel>Timeline</SectionLabel>
+        {/* Font exploration placeholder */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+          className={`${layout.container} mx-auto mt-4`}>
+          <ImagePlaceholder label="Typography exploration · font candidates" aspectRatio="16/5" />
+          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Font evaluation process · 2025</p>
+        </motion.div>
+
+        {/* The test this proved */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+          className={`${layout.container} mx-auto mt-8`}>
+          <div className="p-8 bg-card rounded-xl border-l-2 border-primary">
+            <PullQuote>
+              The real test of a design system isn't launch day. It's whether it can absorb a complete identity change three years later and keep working. Ours did.
+            </PullQuote>
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* 08 — TIMELINE */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel>08 — Timeline</SectionLabel>
           <div className="grid grid-cols-5 gap-0.5">
             {[
               { year: "2021", label: "Foundation" },
@@ -325,7 +341,7 @@ const CaseStudyDesignSystem = () => {
             ].map((item, i) => (
               <motion.div key={item.year} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-card p-6 text-center ${i === 0 ? "rounded-l-xl" : ""} ${i === 4 ? "rounded-r-xl" : ""}`}>
-                <p className="text-2xl md:text-3xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>{item.year}</p>
+                <p className="text-2xl md:text-3xl font-bold text-primary mb-2" style={{ fontFamily: t.displayFont }}>{item.year}</p>
                 <p className="text-xs text-muted-foreground">{item.label}</p>
               </motion.div>
             ))}
@@ -333,59 +349,34 @@ const CaseStudyDesignSystem = () => {
         </div>
       </section>
 
+      {/* LEARNINGS */}
+      <DarkSection label="What I learned">
+        <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
+          style={{ fontFamily: t.displayFont }}>
+          I joined this project as a Senior Product Designer. I left it thinking differently about what design actually is.
+        </motion.h2>
+        <div className="grid md:grid-cols-2 gap-3">
+          {[
+            "The components are the visible part. What's underneath — the alignment conversations, the decisions about <em>what not to build</em>, the willingness to rebuild what was already working — that's what made it last.",
+            "Making the case before making the design. Without that, the system doesn't happen — not because the idea was wrong, but because the <em>problem wasn't visible yet</em> to the people who needed to approve it.",
+            "Engineering pushback is a gift. Every time an engineer pushed back on naming or logic, they were protecting integrity downstream. <em>Those arguments made the foundation stronger</em>, not weaker.",
+            "A design system is infrastructure. And <em>infrastructure is only proven under pressure</em>. The 2025 overhaul — a complete identity change — was that pressure. The system held.",
+          ].map((text, i) => (
+            <LearningCard key={i} index={i}>{text}</LearningCard>
+          ))}
+        </div>
+      </DarkSection>
+
       {/* CLOSING */}
-      <section className="py-28 px-6 text-center">
-        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="text-2xl md:text-4xl font-normal tracking-[-0.025em] max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
-          The goal was never to ship a component library. It was to build <span className="text-primary italic">shared language</span> that made everyone faster.
-        </motion.p>
-        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-          className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
-          ESPN Cricinfo · Design System · 2021 — 2025
-        </motion.p>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2} className="mt-12">
-          <button onClick={() => navigate("/")} className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5">
-            <ArrowLeft className="h-3 w-3" /> Back to Portfolio
-          </button>
-        </motion.div>
-      </section>
+      <ClosingSection
+        quote="The goal was never to ship a component library. It was to build"
+        quoteAccent="shared language"
+        quoteEnd="that made everyone faster."
+        meta="ESPN Cricinfo · Design System · 2021 — 2025"
+      />
     </div>
   );
 };
-
-/* ─── Helper Components ─── */
-
-const Section = ({ label, children }: { label: string; children: React.ReactNode }) => (
-  <section className="py-24 px-6">
-    <div className="max-w-5xl mx-auto">
-      <SectionLabel>{label}</SectionLabel>
-    </div>
-    {children}
-  </section>
-);
-
-const SectionLabel = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => (
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className={`flex items-center gap-3 font-mono text-[11px] tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/30" : "text-primary"}`}>
-    <span className={`w-5 h-px ${dark ? "bg-background/30" : "bg-primary"}`} />
-    {children}
-  </motion.div>
-);
-
-const Prose = ({ children }: { children: React.ReactNode }) => (
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className="max-w-3xl mx-auto [&_h2]:text-[clamp(28px,3.5vw,44px)] [&_h2]:font-normal [&_h2]:tracking-[-0.025em] [&_h2]:mb-6 [&_h2]:leading-[1.1] [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0"
-    style={{ fontFamily: "var(--font-display)" }}>
-    {children}
-  </motion.div>
-);
-
-const ContextCard = ({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) => (
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className={`bg-card p-10 ${className}`}>
-    <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">{label}</p>
-    <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
-  </motion.div>
-);
 
 export default CaseStudyDesignSystem;
