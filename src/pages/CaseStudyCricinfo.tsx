@@ -25,13 +25,11 @@ const CaseStudyCricinfo = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <button onClick={() => navigate("/")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-4 w-4" /> Back to Portfolio
-          </button>
-          <span className="text-xs text-muted-foreground tracking-widest uppercase">2021 — 2026</span>
-        </div>
+      <nav className="fixed top-0 inset-x-0 z-50 h-[60px] flex items-center justify-between px-6 md:px-14 bg-background/90 backdrop-blur-xl border-b border-border">
+        <button onClick={() => navigate("/")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <ArrowLeft className="h-4 w-4" /> Back to Portfolio
+        </button>
+        <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">2021 — 2026</span>
       </nav>
 
       {/* HERO */}
