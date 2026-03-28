@@ -79,7 +79,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 1 — Convince, Align, Launch</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               Before we designed anything, we had to have hard conversations.
             </motion.h2>
           </div>
@@ -154,7 +154,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 3 — Make It Self-Sufficient</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               A system that requires a designer in the room to explain it hasn't fully worked yet.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -224,7 +224,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 5 — The Overhaul</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               Three years later, we changed the visual identity of the entire system.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -292,7 +292,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Looking Back</SectionLabel>
           <div className="max-w-3xl mx-auto mb-12">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               I joined this project as a Senior Product Designer. I left it as someone who thinks differently about what design actually is.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -336,7 +336,7 @@ const CaseStudyDesignSystem = () => {
       {/* CLOSING */}
       <section className="py-28 px-6 text-center">
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="text-2xl md:text-4xl font-bold tracking-tight max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+          className="text-2xl md:text-4xl font-normal tracking-[-0.025em] max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
           The goal was never to ship a component library. It was to build <span className="text-primary italic">shared language</span> that made everyone faster.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}

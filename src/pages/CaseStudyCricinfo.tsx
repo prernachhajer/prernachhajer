@@ -65,7 +65,7 @@ const CaseStudyCricinfo = () => {
         <div className="max-w-5xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className="text-xs tracking-[0.14em] uppercase text-muted-foreground mb-4">The starting point</p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3" style={{ fontFamily: "var(--font-display)" }}>
+            <h2 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3" style={{ fontFamily: "var(--font-display)" }}>
               This is what we inherited.
             </h2>
             <p className="text-muted-foreground max-w-2xl mb-12">
@@ -118,7 +118,7 @@ const CaseStudyCricinfo = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
               className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl">
               <p className="text-[10px] tracking-[0.16em] uppercase font-medium text-background/20 mb-5">The state we were in</p>
-              <p className="text-xl md:text-2xl font-bold leading-tight text-background/50" style={{ fontFamily: "var(--font-display)" }}>
+              <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50" style={{ fontFamily: "var(--font-display)" }}>
                 10M+ users. A homepage that worked as a feed. Users arrived for matches — and left. No habit. No reason to return.
               </p>
               <p className="text-sm text-background/40 mt-5 leading-relaxed">This meant high traffic, but low retention and weak long-term engagement.</p>
@@ -133,7 +133,7 @@ const CaseStudyCricinfo = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
               className="bg-[hsl(220,18%,16%)] p-12 md:rounded-r-xl">
               <p className="text-[10px] tracking-[0.16em] uppercase font-medium text-primary mb-5">What success looks like</p>
-              <p className="text-xl md:text-2xl font-bold leading-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
                 Turn the homepage from a <em className="text-primary italic">match-time utility</em> into a <em className="text-primary italic">daily destination</em> — structured, welcoming, and worth returning to.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
@@ -193,14 +193,14 @@ const CaseStudyCricinfo = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center">
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">The assumption</p>
-            <p className="text-2xl md:text-3xl font-bold leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
               Users come for <span className="text-primary italic">content</span>.
             </p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
             className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center">
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The reality</p>
-            <p className="text-2xl md:text-3xl font-bold leading-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1] text-white" style={{ fontFamily: "var(--font-display)" }}>
               Users come for <span className="text-primary italic">matches</span>. Everything else is secondary.
             </p>
           </motion.div>
@@ -556,7 +556,7 @@ const CaseStudyCricinfo = () => {
               <span className="inline-block text-[10px] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4">
                 The Decision &middot; 2021&ndash;2026
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-background/90 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+              <h2 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-background/90 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
                 Don&rsquo;t redesign the<br /><span className="text-primary italic">live score strip.</span>
               </h2>
             </div>
@@ -667,7 +667,7 @@ const CaseStudyCricinfo = () => {
         <div className="max-w-5xl mx-auto">
           <SectionLabel dark>What I learned</SectionLabel>
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-            className="text-3xl md:text-4xl font-bold mb-12 tracking-tight text-background/90 max-w-3xl mx-auto" style={{ fontFamily: "var(--font-display)" }}>
+            className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto" style={{ fontFamily: "var(--font-display)" }}>
             Five years on one surface teaches you things a project never could.
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-3">
@@ -690,7 +690,7 @@ const CaseStudyCricinfo = () => {
       {/* CLOSING */}
       <section className="py-28 px-6 text-center">
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="text-2xl md:text-4xl font-bold tracking-tight max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+          className="text-2xl md:text-4xl font-normal tracking-[-0.025em] max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
           The goal was never to ship a homepage. It was to change <span className="text-primary italic">what people do</span> when they open one.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
