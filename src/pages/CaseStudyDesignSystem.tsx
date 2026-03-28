@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const fade = {
@@ -18,13 +16,11 @@ const CaseStudyDesignSystem = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <button onClick={() => navigate("/")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-4 w-4" /> Back to Portfolio
-          </button>
-          <span className="text-xs text-muted-foreground tracking-widest uppercase">2021 — 2025</span>
-        </div>
+      <nav className="fixed top-0 inset-x-0 z-50 h-[60px] flex items-center justify-between px-6 md:px-14 bg-background/90 backdrop-blur-xl border-b border-border">
+        <button onClick={() => navigate("/")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <ArrowLeft className="h-4 w-4" /> Back to Portfolio
+        </button>
+        <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">2021 — 2025</span>
       </nav>
 
       {/* HERO */}
@@ -35,7 +31,7 @@ const CaseStudyDesignSystem = () => {
           <span className="w-7 h-px bg-muted-foreground" />
         </motion.div>
         <motion.h1 initial="hidden" animate="visible" variants={fade} custom={1}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] max-w-4xl"
+          className="text-4xl md:text-6xl lg:text-7xl font-normal tracking-[-0.03em] leading-[1.1] max-w-4xl"
           style={{ fontFamily: "var(--font-display)" }}>
           Building the backbone of a <span className="text-primary italic">global cricket platform</span>
         </motion.h1>
@@ -44,7 +40,7 @@ const CaseStudyDesignSystem = () => {
           — and what five years of doing it actually felt like.
         </motion.p>
         <motion.div initial="hidden" animate="visible" variants={fade} custom={3}
-          className="mt-14 flex gap-8 flex-wrap justify-center text-xs tracking-widest uppercase text-muted-foreground">
+          className="mt-14 flex gap-8 flex-wrap justify-center font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           {["Design System", "Senior Designer → Lead", "Web, iOS, Android", "2021 – 2025"].map((item) => (
             <span key={item} className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -53,7 +49,7 @@ const CaseStudyDesignSystem = () => {
           ))}
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={fade} custom={4}
-          className="mt-20 flex flex-col items-center gap-3 text-xs tracking-widest uppercase text-muted-foreground">
+          className="mt-20 flex flex-col items-center gap-3 font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           <span>Scroll</span>
           <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
         </motion.div>
@@ -83,7 +79,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 1 — Convince, Align, Launch</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               Before we designed anything, we had to have hard conversations.
             </motion.h2>
           </div>
@@ -91,14 +87,14 @@ const CaseStudyDesignSystem = () => {
           <div className="grid md:grid-cols-2 gap-0.5 mt-12">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
               className="bg-foreground/90 p-10 md:rounded-tl-xl">
-              <p className="text-xs tracking-widest uppercase text-background/30 mb-4">Product pushback</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Product pushback</p>
               <p className="text-sm text-background/60 leading-relaxed">
                 Product didn't immediately see the value. The recurring question was straightforward and fair: why are we spending time on a design system instead of shipping features? Making the case required demonstrating value in small, concrete increments — not promises about long-term payoff.
               </p>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
               className="bg-foreground/90 p-10 md:rounded-tr-xl">
-              <p className="text-xs tracking-widest uppercase text-background/30 mb-4">Engineering alignment</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Engineering alignment</p>
               <p className="text-sm text-background/60 leading-relaxed">
                 When engineers pushed back on naming conventions, spacing logic, line heights — I found it frustrating at first. They weren't arguing about details. They were protecting the system's integrity. Naming conventions that don't scale break everything downstream. Those early arguments made the foundation stronger.
               </p>
@@ -107,7 +103,7 @@ const CaseStudyDesignSystem = () => {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
             className="mt-0.5 bg-foreground/90 md:rounded-b-xl p-10">
-            <p className="text-xs tracking-widest uppercase text-background/30 mb-4">The outcome</p>
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">The outcome</p>
             <p className="text-sm text-background/60 leading-relaxed mb-6">
               Within a few months we had shipped the initial system — core tokens for color, typography, and spacing mapped directly to Tailwind variables, and the first set of components ready for product teams to use.
             </p>
@@ -158,7 +154,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 3 — Make It Self-Sufficient</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               A system that requires a designer in the room to explain it hasn't fully worked yet.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -174,7 +170,7 @@ const CaseStudyDesignSystem = () => {
             ].map((card, i) => (
               <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"}`}>
-                <p className="text-xs tracking-widest uppercase text-background/30 mb-4">{card.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
                 <p className="text-2xl font-bold text-background/80 mb-3" style={{ fontFamily: "var(--font-display)" }}>{card.title}</p>
                 <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
               </motion.div>
@@ -228,7 +224,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Phase 5 — The Overhaul</SectionLabel>
           <div className="max-w-3xl mx-auto">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               Three years later, we changed the visual identity of the entire system.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -248,7 +244,7 @@ const CaseStudyDesignSystem = () => {
             ].map((card, i) => (
               <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-tl-xl" : "md:rounded-tr-xl"}`}>
-                <p className="text-xs tracking-widest uppercase text-background/30 mb-4">{card.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
                 <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
                 <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
               </motion.div>
@@ -296,7 +292,7 @@ const CaseStudyDesignSystem = () => {
           <SectionLabel dark>Looking Back</SectionLabel>
           <div className="max-w-3xl mx-auto mb-12">
             <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-              className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-background/90" style={{ fontFamily: "var(--font-display)" }}>
+              className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
               I joined this project as a Senior Product Designer. I left it as someone who thinks differently about what design actually is.
             </motion.h2>
             <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
@@ -340,17 +336,17 @@ const CaseStudyDesignSystem = () => {
       {/* CLOSING */}
       <section className="py-28 px-6 text-center">
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className="text-2xl md:text-4xl font-bold tracking-tight max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+          className="text-2xl md:text-4xl font-normal tracking-[-0.025em] max-w-3xl mx-auto mb-12 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
           The goal was never to ship a component library. It was to build <span className="text-primary italic">shared language</span> that made everyone faster.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-          className="text-xs tracking-widest uppercase text-muted-foreground">
+          className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           ESPN Cricinfo · Design System · 2021 — 2025
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2} className="mt-12">
-          <Button onClick={() => navigate("/")} variant="outline" size="lg">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Portfolio
-          </Button>
+          <button onClick={() => navigate("/")} className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5">
+            <ArrowLeft className="h-3 w-3" /> Back to Portfolio
+          </button>
         </motion.div>
       </section>
     </div>
@@ -370,16 +366,15 @@ const Section = ({ label, children }: { label: string; children: React.ReactNode
 
 const SectionLabel = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className={`text-sm md:text-base font-semibold tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/70" : "text-foreground/70"}`}
-    style={{ fontFamily: "var(--font-display)" }}>
-    <span className={`inline-block w-6 h-[2px] mr-3 align-middle ${dark ? "bg-primary/70" : "bg-primary"}`} />
+    className={`flex items-center gap-3 font-mono text-[11px] tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/30" : "text-primary"}`}>
+    <span className={`w-5 h-px ${dark ? "bg-background/30" : "bg-primary"}`} />
     {children}
   </motion.div>
 );
 
 const Prose = ({ children }: { children: React.ReactNode }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className="max-w-3xl mx-auto [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-6 [&_h2]:leading-tight [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0"
+    className="max-w-3xl mx-auto [&_h2]:text-[clamp(28px,3.5vw,44px)] [&_h2]:font-normal [&_h2]:tracking-[-0.025em] [&_h2]:mb-6 [&_h2]:leading-[1.1] [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0"
     style={{ fontFamily: "var(--font-display)" }}>
     {children}
   </motion.div>
@@ -388,7 +383,7 @@ const Prose = ({ children }: { children: React.ReactNode }) => (
 const ContextCard = ({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
     className={`bg-card p-10 ${className}`}>
-    <p className="text-xs tracking-widest uppercase text-muted-foreground font-medium mb-4">{label}</p>
+    <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">{label}</p>
     <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
   </motion.div>
 );
