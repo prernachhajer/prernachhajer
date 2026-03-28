@@ -366,16 +366,15 @@ const Section = ({ label, children }: { label: string; children: React.ReactNode
 
 const SectionLabel = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className={`text-sm md:text-base font-semibold tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/70" : "text-foreground/70"}`}
-    style={{ fontFamily: "var(--font-display)" }}>
-    <span className={`inline-block w-6 h-[2px] mr-3 align-middle ${dark ? "bg-primary/70" : "bg-primary"}`} />
+    className={`flex items-center gap-3 font-mono text-[11px] tracking-[0.12em] uppercase mb-12 max-w-5xl mx-auto ${dark ? "text-background/30" : "text-primary"}`}>
+    <span className={`w-5 h-px ${dark ? "bg-background/30" : "bg-primary"}`} />
     {children}
   </motion.div>
 );
 
 const Prose = ({ children }: { children: React.ReactNode }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-    className="max-w-3xl mx-auto [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-6 [&_h2]:leading-tight [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0"
+    className="max-w-3xl mx-auto [&_h2]:text-[clamp(28px,3.5vw,44px)] [&_h2]:font-normal [&_h2]:tracking-[-0.025em] [&_h2]:mb-6 [&_h2]:leading-[1.1] [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0"
     style={{ fontFamily: "var(--font-display)" }}>
     {children}
   </motion.div>
@@ -384,7 +383,7 @@ const Prose = ({ children }: { children: React.ReactNode }) => (
 const ContextCard = ({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) => (
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
     className={`bg-card p-10 ${className}`}>
-    <p className="text-xs tracking-widest uppercase text-muted-foreground font-medium mb-4">{label}</p>
+    <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">{label}</p>
     <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
   </motion.div>
 );
