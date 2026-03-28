@@ -648,9 +648,9 @@ const CaseStudyCricinfo = () => {
                   </div>
                 </div>
               </div>
-              <Badge variant="secondary" className={`text-xs w-fit ${card.active ? "bg-[hsl(152,48%,90%)] text-[hsl(152,48%,20%)] border-transparent" : "border border-border/50"}`}>
+              <span className={`font-mono text-[11px] tracking-[0.04em] px-3.5 py-1.5 rounded-full w-fit ${card.active ? "bg-[hsl(152,48%,90%)] text-[hsl(152,48%,20%)]" : "border border-border text-muted-foreground"}`}>
                 {card.status}
-              </Badge>
+              </span>
             </motion.div>
           ))}
         </div>
