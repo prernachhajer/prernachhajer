@@ -698,9 +698,9 @@ const CaseStudyCricinfo = () => {
           Cricinfo · Homepage Redesign · 2021 — 2026
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2} className="mt-12">
-          <Button onClick={() => navigate("/")} variant="outline" size="lg">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Portfolio
-          </Button>
+          <button onClick={() => navigate("/")} className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5">
+            <ArrowLeft className="h-3 w-3" /> Back to Portfolio
+          </button>
         </motion.div>
       </section>
     </div>
