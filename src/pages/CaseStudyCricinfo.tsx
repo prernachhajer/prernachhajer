@@ -36,7 +36,7 @@ const CaseStudyCricinfo = () => {
       <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
         <motion.div initial="hidden" animate="visible" variants={fade} className="flex items-center gap-3 mb-12">
           <span className="w-7 h-px bg-muted-foreground" />
-          <span className="text-xs tracking-[0.14em] uppercase text-muted-foreground">Case Study</span>
+          <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">Case Study</span>
           <span className="w-7 h-px bg-muted-foreground" />
         </motion.div>
         <motion.h1 initial="hidden" animate="visible" variants={fade} custom={1}
@@ -64,7 +64,7 @@ const CaseStudyCricinfo = () => {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <p className="text-xs tracking-[0.14em] uppercase text-muted-foreground mb-4">The starting point</p>
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">The starting point</p>
             <h2 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3" style={{ fontFamily: "var(--font-display)" }}>
               This is what we inherited.
             </h2>
@@ -117,7 +117,7 @@ const CaseStudyCricinfo = () => {
             {/* State */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
               className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl">
-              <p className="text-[10px] tracking-[0.16em] uppercase font-medium text-background/20 mb-5">The state we were in</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/20 mb-5">The state we were in</p>
               <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50" style={{ fontFamily: "var(--font-display)" }}>
                 10M+ users. A homepage that worked as a feed. Users arrived for matches — and left. No habit. No reason to return.
               </p>
@@ -132,7 +132,7 @@ const CaseStudyCricinfo = () => {
             {/* Goal */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
               className="bg-[hsl(220,18%,16%)] p-12 md:rounded-r-xl">
-              <p className="text-[10px] tracking-[0.16em] uppercase font-medium text-primary mb-5">What success looks like</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-primary mb-5">What success looks like</p>
               <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90" style={{ fontFamily: "var(--font-display)" }}>
                 Turn the homepage from a <em className="text-primary italic">match-time utility</em> into a <em className="text-primary italic">daily destination</em> — structured, welcoming, and worth returning to.
               </p>
@@ -192,7 +192,7 @@ const CaseStudyCricinfo = () => {
         <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 gap-0.5">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center">
-            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">The assumption</p>
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">The assumption</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
               Users come for <span className="text-primary italic">content</span>.
             </p>
@@ -218,7 +218,7 @@ const CaseStudyCricinfo = () => {
             return (
               <motion.div key={insight.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-card p-10 ${corners[i] || ""}`}>
-                <p className="text-xs tracking-widest uppercase text-primary mb-4 font-medium">{insight.num}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-primary mb-4">{insight.num}</p>
                 <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
                 <span className="mt-4 inline-flex font-mono text-[11px] tracking-[0.04em] text-primary px-3.5 py-1.5 border border-primary/20 rounded-full">{insight.tag}</span>
@@ -432,7 +432,7 @@ const CaseStudyCricinfo = () => {
                 <div className="p-7 space-y-6">
                   {card.dimensions.map((dim) => (
                     <div key={dim.label}>
-                      <p className="text-[10px] tracking-widest uppercase text-background/20 font-medium mb-2">{dim.label}</p>
+                      <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/20 mb-2">{dim.label}</p>
                       <div className="h-1 bg-background/5 rounded-full overflow-hidden mb-2">
                         <motion.div
                           initial={{ width: 0 }}
@@ -472,7 +472,7 @@ const CaseStudyCricinfo = () => {
             </div>
             <div className="shrink-0 text-center">
               <p className="text-6xl md:text-7xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>+22%</p>
-              <p className="text-[10px] tracking-widest uppercase text-background/20 font-medium mt-2">Session duration · Live matches</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/20 mt-2">Session duration · Live matches</p>
             </div>
           </motion.div>
           {/* Outcome cards */}
@@ -485,7 +485,7 @@ const CaseStudyCricinfo = () => {
             ].map((card, i) => (
               <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-[hsl(220,18%,12%)] p-10 ${i === 2 ? "md:rounded-bl-xl" : ""} ${i === 3 ? "md:rounded-br-xl" : ""}`}>
-                <p className="text-[10px] tracking-widest uppercase text-background/20 font-medium mb-3">{card.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/20 mb-3">{card.label}</p>
                 {card.number && <p className="text-4xl font-bold text-primary mb-1" style={{ fontFamily: "var(--font-display)" }}>{card.number}</p>}
                 <h4 className="font-medium text-background/80 mb-2">{card.title}</h4>
                 <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
@@ -524,20 +524,20 @@ const CaseStudyCricinfo = () => {
             <div className="grid md:grid-cols-3 gap-0.5 rounded-xl overflow-hidden">
               {/* Constraint */}
               <div className="bg-card p-10">
-                <p className="text-[10px] tracking-widest uppercase text-muted-foreground font-medium mb-4">The constraint</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">The constraint</p>
                 <h4 className="font-semibold text-base mb-3">{block.constraint.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{block.constraint.desc}</p>
               </div>
               {/* Decision */}
               <div className="bg-secondary p-10">
-                <p className="text-[10px] tracking-widest uppercase text-muted-foreground font-medium mb-4">{block.decision.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground mb-4">{block.decision.label}</p>
                 <h4 className="font-semibold text-base mb-3">{block.decision.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{block.decision.desc}</p>
                 <p className="text-xs font-medium text-primary mt-4">{block.decision.badge}</p>
               </div>
               {/* Trade-off */}
               <div className="bg-foreground text-background p-10">
-                <p className="text-[10px] tracking-widest uppercase text-background/20 font-medium mb-4">{block.tradeoff.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/20 mb-4">{block.tradeoff.label}</p>
                 <h4 className="text-lg italic text-background/70 mb-3 leading-snug" style={{ fontFamily: "var(--font-display)" }}>{block.tradeoff.title}</h4>
                 <p className="text-xs text-background/40 leading-relaxed">{block.tradeoff.desc}</p>
               </div>

@@ -40,7 +40,7 @@ const CaseStudyDesignSystem = () => {
           — and what five years of doing it actually felt like.
         </motion.p>
         <motion.div initial="hidden" animate="visible" variants={fade} custom={3}
-          className="mt-14 flex gap-8 flex-wrap justify-center text-xs tracking-widest uppercase text-muted-foreground">
+          className="mt-14 flex gap-8 flex-wrap justify-center font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           {["Design System", "Senior Designer → Lead", "Web, iOS, Android", "2021 – 2025"].map((item) => (
             <span key={item} className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -49,7 +49,7 @@ const CaseStudyDesignSystem = () => {
           ))}
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={fade} custom={4}
-          className="mt-20 flex flex-col items-center gap-3 text-xs tracking-widest uppercase text-muted-foreground">
+          className="mt-20 flex flex-col items-center gap-3 font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           <span>Scroll</span>
           <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
         </motion.div>
@@ -87,14 +87,14 @@ const CaseStudyDesignSystem = () => {
           <div className="grid md:grid-cols-2 gap-0.5 mt-12">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
               className="bg-foreground/90 p-10 md:rounded-tl-xl">
-              <p className="text-xs tracking-widest uppercase text-background/30 mb-4">Product pushback</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Product pushback</p>
               <p className="text-sm text-background/60 leading-relaxed">
                 Product didn't immediately see the value. The recurring question was straightforward and fair: why are we spending time on a design system instead of shipping features? Making the case required demonstrating value in small, concrete increments — not promises about long-term payoff.
               </p>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
               className="bg-foreground/90 p-10 md:rounded-tr-xl">
-              <p className="text-xs tracking-widest uppercase text-background/30 mb-4">Engineering alignment</p>
+              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">Engineering alignment</p>
               <p className="text-sm text-background/60 leading-relaxed">
                 When engineers pushed back on naming conventions, spacing logic, line heights — I found it frustrating at first. They weren't arguing about details. They were protecting the system's integrity. Naming conventions that don't scale break everything downstream. Those early arguments made the foundation stronger.
               </p>
@@ -103,7 +103,7 @@ const CaseStudyDesignSystem = () => {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2}
             className="mt-0.5 bg-foreground/90 md:rounded-b-xl p-10">
-            <p className="text-xs tracking-widest uppercase text-background/30 mb-4">The outcome</p>
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">The outcome</p>
             <p className="text-sm text-background/60 leading-relaxed mb-6">
               Within a few months we had shipped the initial system — core tokens for color, typography, and spacing mapped directly to Tailwind variables, and the first set of components ready for product teams to use.
             </p>
@@ -170,7 +170,7 @@ const CaseStudyDesignSystem = () => {
             ].map((card, i) => (
               <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"}`}>
-                <p className="text-xs tracking-widest uppercase text-background/30 mb-4">{card.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
                 <p className="text-2xl font-bold text-background/80 mb-3" style={{ fontFamily: "var(--font-display)" }}>{card.title}</p>
                 <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
               </motion.div>
@@ -244,7 +244,7 @@ const CaseStudyDesignSystem = () => {
             ].map((card, i) => (
               <motion.div key={card.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
                 className={`bg-foreground/90 p-10 ${i === 0 ? "md:rounded-tl-xl" : "md:rounded-tr-xl"}`}>
-                <p className="text-xs tracking-widest uppercase text-background/30 mb-4">{card.label}</p>
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-background/30 mb-4">{card.label}</p>
                 <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
                 <p className="text-sm text-background/50 leading-relaxed">{card.desc}</p>
               </motion.div>
@@ -340,7 +340,7 @@ const CaseStudyDesignSystem = () => {
           The goal was never to ship a component library. It was to build <span className="text-primary italic">shared language</span> that made everyone faster.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
-          className="text-xs tracking-widest uppercase text-muted-foreground">
+          className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted-foreground">
           ESPN Cricinfo · Design System · 2021 — 2025
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={2} className="mt-12">
