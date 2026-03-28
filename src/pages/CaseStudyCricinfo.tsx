@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowDown } from "lucide-react";
+import { ArrowLeft, ArrowDown, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
 import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
