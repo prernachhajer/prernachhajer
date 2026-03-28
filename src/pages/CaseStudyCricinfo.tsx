@@ -238,7 +238,7 @@ const CaseStudyCricinfo = () => {
           {
             constraint: { title: "The live score strip (HSB) is untouchable", desc: "Highest-performing surface on the page. Any change risked breaking the one thing users universally trusted." },
             decision: { label: "The decision · 2021–2026", title: "Don't redesign the live score strip.", desc: "The HSB was retained and improved incrementally — never rebuilt from scratch. Across all three redesigns, it remained the strongest engagement anchor on the page. Knowing what not to redesign is as important as knowing what to change.", badge: "✓ Sustained 2021–2026" },
-            tradeoff: { label: "The trade-off", title: ""Restraint is a design decision."", desc: "Visual coherence between the HSB and the redesigned lower page was never fully resolved. What we kept was proven, trusted, and performing. That was worth more than consistency." },
+            tradeoff: { label: "The trade-off", title: "\u201CRestraint is a design decision.\u201D", desc: "Visual coherence between the HSB and the redesigned lower page was never fully resolved. What we kept was proven, trusted, and performing. That was worth more than consistency." },
           },
         ].map((block, idx) => (
           <motion.div key={idx} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={idx}
