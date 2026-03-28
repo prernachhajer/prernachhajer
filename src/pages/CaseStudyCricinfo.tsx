@@ -221,7 +221,7 @@ const CaseStudyCricinfo = () => {
                 <p className="text-xs tracking-widest uppercase text-primary mb-4 font-medium">{insight.num}</p>
                 <h4 className="font-semibold text-base mb-3">{insight.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
-                <Badge variant="secondary" className="mt-4 text-xs bg-primary/10 text-primary border-0">{insight.tag}</Badge>
+                <span className="mt-4 inline-flex font-mono text-[11px] tracking-[0.04em] text-primary px-3.5 py-1.5 border border-primary/20 rounded-full">{insight.tag}</span>
               </motion.div>
             );
           })}
