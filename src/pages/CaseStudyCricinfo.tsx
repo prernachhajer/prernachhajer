@@ -221,7 +221,7 @@ const CaseStudyCricinfo = () => {
         <div className={`${layout.container} mx-auto mt-12`}>
           <HomepageEvolutionCarousel />
         </div>
-      </Section>
+      </section>
 
       {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
       <Section label="05 — Design Decisions">
