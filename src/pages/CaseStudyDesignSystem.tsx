@@ -31,7 +31,7 @@ const CaseStudyDesignSystem = () => {
           <span className="w-7 h-px bg-muted-foreground" />
         </motion.div>
         <motion.h1 initial="hidden" animate="visible" variants={fade} custom={1}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] max-w-4xl"
+          className="text-4xl md:text-6xl lg:text-7xl font-normal tracking-[-0.03em] leading-[1.1] max-w-4xl"
           style={{ fontFamily: "var(--font-display)" }}>
           Building the backbone of a <span className="text-primary italic">global cricket platform</span>
         </motion.h1>
