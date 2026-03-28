@@ -233,7 +233,7 @@ const CaseStudyCricinfo = () => {
           {
             constraint: { title: "Existing user expectations", desc: "10M+ users had built habits around the existing layout. Radical redesign risked alienating the audience the product depended on." },
             decision: { label: "The decision · 2023 redesign", title: "Structure without disruption.", desc: "We introduced modular zones and stronger hierarchy without moving familiar touchpoints. New structure, familiar anchors — users adapted without noticing the shift.", badge: "✓ Validated by research" },
-            tradeoff: { label: "The trade-off", title: ""Incrementalism has a cost."", desc: "A more radical rethink might have unlocked faster habit-building. We'll never know. But the data supported the cautious call." },
+            tradeoff: { label: "The trade-off", title: "\u201CIncrementalism has a cost.\u201D", desc: "A more radical rethink might have unlocked faster habit-building. We'll never know. But the data supported the cautious call." },
           },
           {
             constraint: { title: "The live score strip (HSB) is untouchable", desc: "Highest-performing surface on the page. Any change risked breaking the one thing users universally trusted." },
