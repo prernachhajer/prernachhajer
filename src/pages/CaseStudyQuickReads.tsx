@@ -114,42 +114,8 @@ const CaseStudyQuickReads = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            custom={1}
-            className="bg-muted/50 rounded-2xl p-5 md:p-8 pb-6 flex flex-col md:flex-row gap-6 border border-border/50"
-          >
-            <div className="flex-1">
-              <BrowserPlaceholder label="Long-form article feed · before Quick Reads · placeholder" />
-            </div>
-            <div className="flex flex-col gap-4 justify-center md:w-[200px]">
-              <div className="bg-card border border-border/50 rounded-xl p-4">
-                <p className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground/50 mb-1">
-                  Article completion
-                </p>
-                <p
-                  className="text-4xl font-bold leading-none text-foreground"
-                  style={{ fontFamily: t.displayFont }}
-                >
-                  20–30%
-                </p>
-                <p className="text-[11px] text-muted-foreground mt-1 leading-relaxed">
-                  of users read full articles
-                </p>
-              </div>
-              <div className="bg-card border border-border/50 rounded-xl p-4">
-                <p className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground/50 mb-1">
-                  The gap
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  70–80% bounced before forming a reading habit
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          <QuickReadsProblemVisual />
+
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">
             ESPN Cricinfo App · News Feed · 2024
           </p>
