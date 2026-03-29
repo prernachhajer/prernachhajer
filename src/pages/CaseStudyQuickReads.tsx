@@ -16,65 +16,12 @@ import {
   ClosingSection,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
+import QuickReadsProblemVisual from "@/components/QuickReadsProblemVisual";
+import QuickReadsScreensVisual from "@/components/QuickReadsScreensVisual";
 
 const fade = animation.fade;
 
-// ─── Placeholder phone frame component ───────
-const PhonePlaceholder = ({ label }: { label: string }) => (
-  <div
-    className="w-full max-w-[210px] bg-[#0D0D0D] rounded-[32px] p-[7px] relative mx-auto"
-    style={{
-      boxShadow:
-        "0 0 0 1px rgba(255,255,255,0.06) inset, 0 24px 56px rgba(0,0,0,0.22), 0 4px 10px rgba(0,0,0,0.14)",
-    }}
-  >
-    <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-9 h-1.5 bg-[#1C1C1C] rounded-full z-[2]" />
-    <div
-      className="rounded-[26px] overflow-hidden bg-muted/30 flex items-center justify-center"
-      style={{ aspectRatio: "9/19.5" }}
-    >
-      <div className="flex flex-col items-center gap-2 px-4 text-center">
-        <div className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center">
-          <span className="text-muted-foreground/40 text-lg">◻</span>
-        </div>
-        <p className="text-[9px] font-mono tracking-wide text-muted-foreground/40 leading-relaxed">
-          {label}
-        </p>
-      </div>
-    </div>
-  </div>
-);
 
-// ─── Placeholder browser mockup ──────────────
-const BrowserPlaceholder = ({ label }: { label: string }) => (
-  <div
-    className="rounded-xl overflow-hidden border border-border/50 bg-card"
-    style={{ boxShadow: "0 4px 40px rgba(0,0,0,0.08)" }}
-  >
-    <div className="bg-muted/40 border-b border-border px-4 py-3 flex items-center gap-3">
-      <div className="flex gap-1.5">
-        <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
-        <div className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
-        <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
-      </div>
-      <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3">
-        <span className="text-[11px] text-muted-foreground/60 font-mono tracking-wide">
-          espncricinfo.com · app
-        </span>
-      </div>
-    </div>
-    <div className="bg-muted/20 flex items-center justify-center" style={{ height: "320px" }}>
-      <div className="flex flex-col items-center gap-3 text-center px-6">
-        <div className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center">
-          <span className="text-muted-foreground/40 text-xl">◻</span>
-        </div>
-        <p className="text-xs font-mono tracking-wide text-muted-foreground/40 leading-relaxed max-w-[200px]">
-          {label}
-        </p>
-      </div>
-    </div>
-  </div>
-);
 
 const CaseStudyQuickReads = () => {
   return (
@@ -112,42 +59,8 @@ const CaseStudyQuickReads = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            custom={1}
-            className="bg-muted/50 rounded-2xl p-5 md:p-8 pb-6 flex flex-col md:flex-row gap-6 border border-border/50"
-          >
-            <div className="flex-1">
-              <BrowserPlaceholder label="Long-form article feed · before Quick Reads · placeholder" />
-            </div>
-            <div className="flex flex-col gap-4 justify-center md:w-[200px]">
-              <div className="bg-card border border-border/50 rounded-xl p-4">
-                <p className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground/50 mb-1">
-                  Article completion
-                </p>
-                <p
-                  className="text-4xl font-bold leading-none text-foreground"
-                  style={{ fontFamily: t.displayFont }}
-                >
-                  20–30%
-                </p>
-                <p className="text-[11px] text-muted-foreground mt-1 leading-relaxed">
-                  of users read full articles
-                </p>
-              </div>
-              <div className="bg-card border border-border/50 rounded-xl p-4">
-                <p className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground/50 mb-1">
-                  The gap
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  70–80% bounced before forming a reading habit
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          <QuickReadsProblemVisual />
+
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">
             ESPN Cricinfo App · News Feed · 2024
           </p>
@@ -458,28 +371,7 @@ const CaseStudyQuickReads = () => {
         {/* Placeholder screens */}
         <div className={`${layout.container} mx-auto`}>
           <p className={`${t.labelSm} text-muted-foreground mb-6`}>Key screens</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { label: "Summary card · Feed view · placeholder" },
-              { label: "Summary → full article transition · placeholder" },
-              { label: '"Already read" state · placeholder' },
-            ].map((s, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="flex flex-col items-center gap-4"
-              >
-                <PhonePlaceholder label={s.label} />
-                <p className="text-xs text-muted-foreground/50 text-center font-mono tracking-wide">
-                  {s.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <QuickReadsScreensVisual />
         </div>
       </section>
 
