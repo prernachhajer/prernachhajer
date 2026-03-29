@@ -16,6 +16,8 @@ import {
   ClosingSection,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
+import QuickReadsProblemVisual from "@/components/QuickReadsProblemVisual";
+import QuickReadsScreensVisual from "@/components/QuickReadsScreensVisual";
 
 const fade = animation.fade;
 
