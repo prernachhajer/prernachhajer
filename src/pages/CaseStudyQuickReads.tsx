@@ -21,62 +21,7 @@ import QuickReadsScreensVisual from "@/components/QuickReadsScreensVisual";
 
 const fade = animation.fade;
 
-// ─── Placeholder phone frame component ───────
-const PhonePlaceholder = ({ label }: { label: string }) => (
-  <div
-    className="w-full max-w-[210px] bg-[#0D0D0D] rounded-[32px] p-[7px] relative mx-auto"
-    style={{
-      boxShadow:
-        "0 0 0 1px rgba(255,255,255,0.06) inset, 0 24px 56px rgba(0,0,0,0.22), 0 4px 10px rgba(0,0,0,0.14)",
-    }}
-  >
-    <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-9 h-1.5 bg-[#1C1C1C] rounded-full z-[2]" />
-    <div
-      className="rounded-[26px] overflow-hidden bg-muted/30 flex items-center justify-center"
-      style={{ aspectRatio: "9/19.5" }}
-    >
-      <div className="flex flex-col items-center gap-2 px-4 text-center">
-        <div className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center">
-          <span className="text-muted-foreground/40 text-lg">◻</span>
-        </div>
-        <p className="text-[9px] font-mono tracking-wide text-muted-foreground/40 leading-relaxed">
-          {label}
-        </p>
-      </div>
-    </div>
-  </div>
-);
 
-// ─── Placeholder browser mockup ──────────────
-const BrowserPlaceholder = ({ label }: { label: string }) => (
-  <div
-    className="rounded-xl overflow-hidden border border-border/50 bg-card"
-    style={{ boxShadow: "0 4px 40px rgba(0,0,0,0.08)" }}
-  >
-    <div className="bg-muted/40 border-b border-border px-4 py-3 flex items-center gap-3">
-      <div className="flex gap-1.5">
-        <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
-        <div className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
-        <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
-      </div>
-      <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3">
-        <span className="text-[11px] text-muted-foreground/60 font-mono tracking-wide">
-          espncricinfo.com · app
-        </span>
-      </div>
-    </div>
-    <div className="bg-muted/20 flex items-center justify-center" style={{ height: "320px" }}>
-      <div className="flex flex-col items-center gap-3 text-center px-6">
-        <div className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center">
-          <span className="text-muted-foreground/40 text-xl">◻</span>
-        </div>
-        <p className="text-xs font-mono tracking-wide text-muted-foreground/40 leading-relaxed max-w-[200px]">
-          {label}
-        </p>
-      </div>
-    </div>
-  </div>
-);
 
 const CaseStudyQuickReads = () => {
   return (
