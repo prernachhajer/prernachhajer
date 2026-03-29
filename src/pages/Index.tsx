@@ -58,7 +58,7 @@ const caseStudies = [
     badgeLabel: "Engagement",
     impactNum: "↑",
     impactLabel: "time on content",
-    link: "#",
+    link: "/case-study/quick-reads",
   },
   {
     num: "04 / 04",
