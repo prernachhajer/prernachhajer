@@ -426,28 +426,7 @@ const CaseStudyQuickReads = () => {
         {/* Placeholder screens */}
         <div className={`${layout.container} mx-auto`}>
           <p className={`${t.labelSm} text-muted-foreground mb-6`}>Key screens</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { label: "Summary card · Feed view · placeholder" },
-              { label: "Summary → full article transition · placeholder" },
-              { label: '"Already read" state · placeholder' },
-            ].map((s, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="flex flex-col items-center gap-4"
-              >
-                <PhonePlaceholder label={s.label} />
-                <p className="text-xs text-muted-foreground/50 text-center font-mono tracking-wide">
-                  {s.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <QuickReadsScreensVisual />
         </div>
       </section>
 
