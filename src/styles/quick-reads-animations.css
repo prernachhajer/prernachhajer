@@ -1,0 +1,62 @@
+/* ── Quick Reads Screen Animations ── */
+
+/* Animation 1: Crossfade dissolve */
+.qr-fade-screen-1 { z-index: 1; }
+.qr-fade-screen-2 {
+  z-index: 2;
+  opacity: 0;
+  animation: qr-dissolve 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes qr-dissolve {
+  0%    { opacity: 0; }
+  35%   { opacity: 0; }
+  55%   { opacity: 1; }
+  72%   { opacity: 1; }
+  92%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* Swipe hint */
+.qr-swipe-hint {
+  animation: qr-hint-anim 10s ease-in-out infinite;
+}
+
+@keyframes qr-hint-anim {
+  0%    { opacity: 0;   transform: translateX(-50%) translateY(6px);  }
+  10%   { opacity: 1;   transform: translateX(-50%) translateY(0px);  }
+  20%   { opacity: 1;   transform: translateX(-50%) translateY(-6px); }
+  28%   { opacity: 1;   transform: translateX(-50%) translateY(0px);  }
+  36%   { opacity: 0;   transform: translateX(-50%) translateY(-8px); }
+  100%  { opacity: 0;   transform: translateX(-50%) translateY(6px);  }
+}
+
+/* Animation 2: Swipe left */
+.qr-swipe-left-stack {
+  animation: qr-swipe-left 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes qr-swipe-left {
+  0%    { transform: translateX(0);    }
+  25%   { transform: translateX(0);    }
+  50%   { transform: translateX(-50%); }
+  65%   { transform: translateX(-50%); }
+  78%   { transform: translateX(0);    }
+  100%  { transform: translateX(0);    }
+}
+
+/* Animation 3: Scroll up/down */
+.qr-scroll-stack {
+  animation: qr-scroll-up-down 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes qr-scroll-up-down {
+  0%    { transform: translateY(0);    }
+  20%   { transform: translateY(0);    }
+  45%   { transform: translateY(-50%); }
+  62%   { transform: translateY(-50%); }
+  82%   { transform: translateY(0);    }
+  100%  { transform: translateY(0);    }
+}
