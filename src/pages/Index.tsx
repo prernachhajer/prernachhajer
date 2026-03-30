@@ -65,7 +65,7 @@ const caseStudies = [
     titleEm: "Optimisation",
     desc: "Untangling an overloaded page so that 10M+ fans could find what they came for. Simplifying without losing depth — the hardest kind of design problem.",
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
-    gradient: "linear-gradient(135deg,#e6e0d4,#d0c8b8,#bcb09c)",
+    gradient: "linear-gradient(135deg,#d8d2c6,#c8c0b0,#b8ae9c)",
     thumbWord: "Match",
     thumbWordLight: false,
     statNum: "10M+",
