@@ -353,7 +353,7 @@ const Index = () => {
                   onClick={() => setExpExpanded(!expExpanded)}
                   className="flex items-center justify-center gap-2 mx-auto mt-5 bg-[#1e1c1a] border border-background/[0.12] rounded-full px-6 py-[11px] text-[13px] font-medium text-background/65 hover:bg-[#2a2825] hover:text-background/90 hover:border-background/20 transition-all"
                 >
-                  {expExpanded ? "Show less" : "Show all"}
+                  {expExpanded ? "Show less" : "Show all companies"}
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-[400ms] ${expExpanded ? "rotate-180" : ""}`} style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }} />
                 </button>
               </div>
