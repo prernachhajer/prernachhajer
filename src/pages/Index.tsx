@@ -391,7 +391,7 @@ const Index = () => {
               <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
                 Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul taught me about building systems that actually hold — and why alignment will always matter more than components.
               </p>
-              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
+              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
                 Read article
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
               </button>
