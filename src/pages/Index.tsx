@@ -410,7 +410,7 @@ const Index = () => {
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
-            <span className="inline-block overflow-hidden align-bottom">
+            <span className="inline-block overflow-hidden align-bottom" style={{ minWidth: "clamp(120px,18vw,280px)", height: "1.1em", verticalAlign: "bottom" }}>
               <span
                 className={`inline-block text-primary italic transition-all duration-[400ms] ${cycling ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]" : ""}`}
               >
