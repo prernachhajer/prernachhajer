@@ -344,27 +344,45 @@ const Index = () => {
               </div>
 
               {/* Experience stack */}
-              <div className="mt-10">
-                <div className="flex flex-col">
+              <div className="mt-10 relative">
+                <div className="relative flex flex-col" style={{ perspective: "800px" }}>
                   {experience.map((exp, i) => {
-                    const isVisible = expExpanded || i < 1;
-                    const stackStyle = !expExpanded && i === 1
-                      ? { marginTop: "-62px", transform: "scale(0.97)", zIndex: 4, opacity: 0.6, pointerEvents: "none" as const }
-                      : !expExpanded && i === 2
-                      ? { marginTop: "-63px", transform: "scale(0.94)", zIndex: 3, opacity: 0.35, pointerEvents: "none" as const }
-                      : !expExpanded && i === 3
-                      ? { marginTop: "-64px", transform: "scale(0.91)", zIndex: 2, opacity: 0.15, pointerEvents: "none" as const }
-                      : !expExpanded && i >= 4
-                      ? { marginTop: "-65px", transform: "scale(0.88)", zIndex: 1, opacity: 0, pointerEvents: "none" as const }
-                      : expExpanded
-                      ? { marginTop: i === 0 ? 0 : "8px", opacity: 1 }
-                      : {};
+                    const getStackStyle = (): React.CSSProperties => {
+                      if (expExpanded) {
+                        return {
+                          position: "relative" as const,
+                          marginTop: i === 0 ? 0 : "6px",
+                          opacity: 1,
+                          transform: "scale(1) translateY(0)",
+                          zIndex: experience.length - i,
+                          pointerEvents: "auto" as const,
+                        };
+                      }
+                      if (i === 0) {
+                        return { position: "relative" as const, zIndex: 5, opacity: 1, transform: "scale(1)" };
+                      }
+                      if (i === 1) {
+                        return { position: "relative" as const, marginTop: "-56px", transform: "scale(0.96)", zIndex: 4, opacity: 0.55, pointerEvents: "none" as const };
+                      }
+                      if (i === 2) {
+                        return { position: "relative" as const, marginTop: "-58px", transform: "scale(0.92)", zIndex: 3, opacity: 0.3, pointerEvents: "none" as const };
+                      }
+                      return { position: "relative" as const, marginTop: "-60px", transform: "scale(0.88)", zIndex: 2, opacity: 0, pointerEvents: "none" as const };
+                    };
 
                     return (
                       <div
                         key={i}
-                        className="bg-foreground/[0.12] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
-                        style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)", ...stackStyle }}
+                        className="rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[500ms]"
+                        style={{
+                          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
+                          backgroundColor: i === 0 && !expExpanded
+                            ? "hsl(30 6% 22%)"
+                            : expExpanded
+                            ? "hsl(30 6% 22%)"
+                            : "hsl(30 5% 18%)",
+                          ...getStackStyle(),
+                        }}
                       >
                         <div className="flex flex-col gap-1 flex-1 min-w-0">
                           <span className="text-[17px] font-normal tracking-[-0.01em] text-background/[0.92] flex items-center gap-2" style={{ fontFamily: t.displayFont }}>
@@ -373,7 +391,7 @@ const Index = () => {
                           </span>
                           <span className="text-xs text-background/45">{exp.role}</span>
                         </div>
-                        <span className="text-[11px] tracking-[0.05em] uppercase text-background/35 shrink-0">{exp.years}</span>
+                        <span className="text-[11px] tracking-[0.05em] uppercase text-background/30 shrink-0">{exp.years}</span>
                       </div>
                     );
                   })}
@@ -381,9 +399,22 @@ const Index = () => {
 
                 <button
                   onClick={() => setExpExpanded(!expExpanded)}
-                  className="flex items-center justify-center gap-2 mx-auto mt-5 bg-[#1e1c1a] border border-background/[0.12] rounded-full px-6 py-[11px] text-[13px] font-medium text-background/65 hover:bg-[#2a2825] hover:text-background/90 hover:border-background/20 transition-all"
+                  className="flex items-center justify-center gap-2 mx-auto mt-6 rounded-full px-7 py-[11px] text-[13px] font-medium transition-all duration-300"
+                  style={{
+                    backgroundColor: "hsl(30 5% 15%)",
+                    color: "hsl(40 10% 65%)",
+                    border: "1px solid hsl(30 5% 22%)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "hsl(30 5% 20%)";
+                    e.currentTarget.style.color = "hsl(40 10% 80%)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "hsl(30 5% 15%)";
+                    e.currentTarget.style.color = "hsl(40 10% 65%)";
+                  }}
                 >
-                  {expExpanded ? "Show less" : "Show all companies"}
+                  {expExpanded ? "Show less" : "Show all"}
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-[400ms] ${expExpanded ? "rotate-180" : ""}`} style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }} />
                 </button>
               </div>
