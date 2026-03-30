@@ -17,8 +17,17 @@ const fade = animation.fade;
 // NAV — Portfolio Home variant
 // ─────────────────────────────────────────────
 export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
+  const navigate = useNavigate();
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const handleNavClick = (id: string) => {
+    if (id.startsWith("__navigate__")) {
+      navigate(id.replace("__navigate__", ""));
+    } else {
+      scrollTo(id);
+    }
+  };
 
   return (
     <nav className={`${nav.base} ${nav.px}`}>
@@ -34,10 +43,11 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
           { label: "Work", id: "work" },
           { label: "About", id: "about" },
           { label: "Writing", id: "writing" },
+          { label: "Resume", id: "__navigate__/resume" },
         ].map((link) => (
           <button
             key={link.id}
-            onClick={() => scrollTo(link.id)}
+            onClick={() => handleNavClick(link.id)}
             className={`${t.labelSm} text-muted-foreground hover:text-foreground transition-colors`}
           >
             {link.label}

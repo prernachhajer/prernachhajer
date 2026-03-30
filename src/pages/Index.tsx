@@ -65,7 +65,7 @@ const caseStudies = [
     titleEm: "Optimisation",
     desc: "Untangling an overloaded page so that 10M+ fans could find what they came for. Simplifying without losing depth — the hardest kind of design problem.",
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
-    gradient: "linear-gradient(135deg,#e6e0d4,#d0c8b8,#bcb09c)",
+    gradient: "linear-gradient(135deg,#d8d2c6,#c8c0b0,#b8ae9c)",
     thumbWord: "Match",
     thumbWordLight: false,
     statNum: "10M+",
@@ -80,12 +80,12 @@ const beliefs = [
   { num: "03", headline: "Familiarity beats", headlineEm: "novelty at scale.", body: "When 10 million people use your product daily, a clever pattern that confuses 5% of them isn't clever at all. I design for the person who just wants to get the thing done." },
 ];
 
-const experience = [
+  const experience = [
   { company: "Proximity Works · Bangalore/Remote", role: "Lead Product Designer · ESPNCricinfo", years: "2021 – Present", current: true },
-  { company: "Decimal · Gurgaon", role: "Lead Product Designer", years: "2019 – 2021", current: false },
   { company: "FabHotels · Gurgaon", role: "Product Designer", years: "2018 – 2019", current: false },
   { company: "Cognizant · Gurgaon", role: "UX/UI Designer", years: "2014 – 2018", current: false },
   { company: "DogSpot · Gurgaon", role: "UX/UI Designer", years: "2013 – 2014", current: false },
+  { company: "Decimal · Gurgaon", role: "Lead Product Designer", years: "2019 – 2021", current: false },
 ];
 
 // ── WORD CYCLE HOOK ───────────────────────────
@@ -125,7 +125,7 @@ const Index = () => {
       {/* ── HERO ─────────────────────────────────── */}
       <section id="hero" className="min-h-screen flex items-end pt-[60px]">
         <div className={`${wrapCls} pb-16 w-full`}>
-          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-11">
+          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
             <span className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}>
               <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
               Open to full-time roles
@@ -317,22 +317,24 @@ const Index = () => {
               <div className="mt-10">
                 <div className="flex flex-col">
                   {experience.map((exp, i) => {
-                    const isVisible = expExpanded || i < 3;
+                    const isVisible = expExpanded || i < 1;
                     const stackStyle = !expExpanded && i === 1
-                      ? { marginTop: "-62px", transform: "scale(0.97)", zIndex: 2, pointerEvents: "none" as const }
+                      ? { marginTop: "-62px", transform: "scale(0.97)", zIndex: 4, opacity: 0.6, pointerEvents: "none" as const }
                       : !expExpanded && i === 2
-                      ? { marginTop: "-63px", transform: "scale(0.94)", zIndex: 1, pointerEvents: "none" as const }
-                      : !expExpanded && i >= 3
-                      ? { height: 0, padding: 0, margin: 0, border: "none", overflow: "hidden" as const, opacity: 0, pointerEvents: "none" as const }
+                      ? { marginTop: "-63px", transform: "scale(0.94)", zIndex: 3, opacity: 0.35, pointerEvents: "none" as const }
+                      : !expExpanded && i === 3
+                      ? { marginTop: "-64px", transform: "scale(0.91)", zIndex: 2, opacity: 0.15, pointerEvents: "none" as const }
+                      : !expExpanded && i >= 4
+                      ? { marginTop: "-65px", transform: "scale(0.88)", zIndex: 1, opacity: 0, pointerEvents: "none" as const }
                       : expExpanded
-                      ? { marginTop: i === 0 ? 0 : "8px" }
+                      ? { marginTop: i === 0 ? 0 : "8px", opacity: 1 }
                       : {};
 
                     return (
                       <div
                         key={i}
-                        className="bg-[#1e1c1a] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[450ms]"
-                        style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)", ...stackStyle }}
+                        className="bg-[#1e1c1a] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
+                        style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)", ...stackStyle }}
                       >
                         <div className="flex flex-col gap-1 flex-1 min-w-0">
                           <span className="text-[17px] font-normal tracking-[-0.01em] text-background/[0.92] flex items-center gap-2" style={{ fontFamily: t.displayFont }}>
@@ -351,7 +353,7 @@ const Index = () => {
                   onClick={() => setExpExpanded(!expExpanded)}
                   className="flex items-center justify-center gap-2 mx-auto mt-5 bg-[#1e1c1a] border border-background/[0.12] rounded-full px-6 py-[11px] text-[13px] font-medium text-background/65 hover:bg-[#2a2825] hover:text-background/90 hover:border-background/20 transition-all"
                 >
-                  {expExpanded ? "Show less" : "Show all"}
+                  {expExpanded ? "Show less" : "Show all companies"}
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-[400ms] ${expExpanded ? "rotate-180" : ""}`} style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }} />
                 </button>
               </div>
@@ -389,10 +391,10 @@ const Index = () => {
               <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
                 Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul taught me about building systems that actually hold — and why alignment will always matter more than components.
               </p>
-              <span className="inline-flex items-center gap-2 text-[13px] font-medium text-muted-foreground border-b border-border pb-0.5 w-fit mt-1.5 group-hover:text-primary group-hover:border-primary group-hover:gap-3 transition-all">
+              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
                 Read article
-                <ArrowRight className="h-3 w-3" />
-              </span>
+                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
+              </button>
             </div>
           </motion.div>
         </div>
@@ -408,7 +410,7 @@ const Index = () => {
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
-            <span className="inline-block overflow-hidden align-bottom">
+            <span className="inline-block overflow-hidden align-bottom" style={{ minWidth: "clamp(120px,18vw,280px)", height: "1.1em", verticalAlign: "bottom" }}>
               <span
                 className={`inline-block text-primary italic transition-all duration-[400ms] ${cycling ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]" : ""}`}
               >
@@ -463,6 +465,7 @@ const Index = () => {
               { label: "Work", action: () => scrollTo("work") },
               { label: "About", action: () => scrollTo("about") },
               { label: "Writing", action: () => scrollTo("writing") },
+              { label: "Resume", action: () => navigate("/resume") },
               { label: "Email", action: () => window.location.href = "mailto:work.chhajer@gmail.com" },
             ].map((link) => (
               <button key={link.label} onClick={link.action}
