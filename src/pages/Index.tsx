@@ -126,7 +126,7 @@ const Index = () => {
       <section id="hero" className="min-h-screen flex items-end pt-[60px]">
         <div className={`${wrapCls} pb-16 w-full`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-11">
-            <span className={`inline-flex items-center gap-2 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}>
+            <span className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}>
               <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
               Open to full-time roles
             </span>
@@ -159,8 +159,11 @@ const Index = () => {
               >
                 View My Work →
               </button>
-              <button className="inline-flex items-center gap-2 text-muted-foreground border border-border px-9 py-4 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all">
-                Download CV
+              <button
+                onClick={() => navigate("/resume")}
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-9 py-4 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
+              >
+                View Resume
               </button>
             </div>
           </motion.div>
