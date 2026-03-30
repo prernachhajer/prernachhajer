@@ -13,9 +13,9 @@ import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
-import cricinfoDesk from "@/assets/cricinfo-desk-2026.jpg";
-import hsbScreen from "@/assets/hsb-screen-1.jpg";
-import qrScreen from "@/assets/quick-reads/screen-1.jpg";
+import thumbHomepage from "@/assets/thumb-homepage.png";
+import thumbDesignSystem from "@/assets/thumb-design-system.png";
+import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 
 const fade = animation.fade;
 
