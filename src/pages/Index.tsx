@@ -43,7 +43,7 @@ const caseStudies = [
     desc: "How a single Figma library grew into a 170-file design system powering a global cricket platform — five phases, one team, and a complete Figma overhaul.",
     tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "desktop" as const,
-    thumbImage: hsbScreen,
+    thumbImage: thumbDesignSystem,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
