@@ -81,7 +81,7 @@ const beliefs = [
 ];
 
   const experience = [
-  { company: "Proximity Works · Bangalore/Remote", role: "Lead Product Designer · ESPNCricinfo", years: "2021 – Present", current: true },
+  { company: "Proximity Works", role: "Lead Product Designer · ESPNCricinfo", years: "2021 – Present", current: true },
   { company: "FabHotels · Gurgaon", role: "Product Designer", years: "2018 – 2019", current: false },
   { company: "Cognizant · Gurgaon", role: "UX/UI Designer", years: "2014 – 2018", current: false },
   { company: "DogSpot · Gurgaon", role: "UX/UI Designer", years: "2013 – 2014", current: false },
@@ -333,7 +333,7 @@ const Index = () => {
                     return (
                       <div
                         key={i}
-                        className="bg-[#1e1c1a] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
+                        className="bg-foreground/[0.12] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
                         style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)", ...stackStyle }}
                       >
                         <div className="flex flex-col gap-1 flex-1 min-w-0">
@@ -391,7 +391,7 @@ const Index = () => {
               <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
                 Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul taught me about building systems that actually hold — and why alignment will always matter more than components.
               </p>
-              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
+              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
                 Read article
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
               </button>
@@ -410,12 +410,10 @@ const Index = () => {
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
-            <span className="inline-block overflow-hidden align-bottom" style={{ minWidth: "clamp(120px,18vw,280px)", height: "1.1em", verticalAlign: "bottom" }}>
-              <span
-                className={`inline-block text-primary italic transition-all duration-[400ms] ${cycling ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]" : ""}`}
-              >
-                {cycleWord}
-              </span>
+            <span
+              className={`inline-block text-primary italic transition-all duration-[400ms] ${cycling ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]" : ""}`}
+            >
+              {cycleWord}
             </span>
             <br />
             <em className="italic text-background/30">something worth using.</em>
