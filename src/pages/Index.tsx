@@ -10,6 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, ChevronDown, Linkedin } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
+import "@/styles/thumbnail-animations.css";
+
+// Thumbnail images
+import cricinfoDesk from "@/assets/cricinfo-desk-2026.jpg";
+import hsbScreen from "@/assets/hsb-screen-1.jpg";
+import qrScreen from "@/assets/quick-reads/screen-1.jpg";
 
 const fade = animation.fade;
 
