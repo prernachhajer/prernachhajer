@@ -81,7 +81,7 @@ const beliefs = [
 ];
 
   const experience = [
-  { company: "Proximity Works · Bangalore/Remote", role: "Lead Product Designer · ESPNCricinfo", years: "2021 – Present", current: true },
+  { company: "Proximity Works", role: "Lead Product Designer · ESPNCricinfo", years: "2021 – Present", current: true },
   { company: "FabHotels · Gurgaon", role: "Product Designer", years: "2018 – 2019", current: false },
   { company: "Cognizant · Gurgaon", role: "UX/UI Designer", years: "2014 – 2018", current: false },
   { company: "DogSpot · Gurgaon", role: "UX/UI Designer", years: "2013 – 2014", current: false },
