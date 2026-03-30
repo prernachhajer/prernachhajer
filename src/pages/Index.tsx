@@ -125,7 +125,7 @@ const Index = () => {
       {/* ── HERO ─────────────────────────────────── */}
       <section id="hero" className="min-h-screen flex items-end pt-[60px]">
         <div className={`${wrapCls} pb-16 w-full`}>
-          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-11">
+          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
             <span className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}>
               <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
               Open to full-time roles
