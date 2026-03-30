@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CaseStudyCricinfo from "./pages/CaseStudyCricinfo";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
+import BlogDesignSystem from "./pages/BlogDesignSystem";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
