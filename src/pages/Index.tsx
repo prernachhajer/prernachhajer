@@ -56,7 +56,7 @@ const caseStudies = [
     desc: "A new content format designed to pull users deeper into stories, faster. Increasing engagement through smart information architecture and editorial thinking.",
     tags: ["Feature Design", "Content Strategy", "Engagement"],
     thumbType: "mobile" as const,
-    thumbImage: qrScreen,
+    thumbImage: thumbQuickReads,
     statNum: "↑",
     statLabel: "engagement",
     link: "/case-study/quick-reads",
