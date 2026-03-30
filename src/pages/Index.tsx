@@ -10,6 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, ChevronDown, Linkedin } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
+import "@/styles/thumbnail-animations.css";
+
+// Thumbnail images
+import cricinfoDesk from "@/assets/cricinfo-desk-2026.jpg";
+import hsbScreen from "@/assets/hsb-screen-1.jpg";
+import qrScreen from "@/assets/quick-reads/screen-1.jpg";
 
 const fade = animation.fade;
 
@@ -23,9 +29,8 @@ const caseStudies = [
     titleEm: "2021–2026",
     desc: "Five years of redesigning the world's most visited cricket homepage — twice. A story of iteration, user research, and what it means to design for 10M+ fans.",
     tags: ["Information Architecture", "Navigation", "Redesign"],
-    gradient: "linear-gradient(135deg,#131110,#1e1a14,#291a0e)",
-    thumbWord: "Home",
-    thumbWordLight: true,
+    thumbType: "desktop" as const,
+    thumbImage: cricinfoDesk,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/cricinfo",
@@ -37,9 +42,8 @@ const caseStudies = [
     titleEm: "Backbone",
     desc: "How a single Figma library grew into a 170-file design system powering a global cricket platform — five phases, one team, and a complete Figma overhaul.",
     tags: ["Design System", "Systems Thinking", "Figma"],
-    gradient: "linear-gradient(135deg,#eae5dc,#d6cfc4,#c8bfb0)",
-    thumbWord: "System",
-    thumbWordLight: false,
+    thumbType: "desktop" as const,
+    thumbImage: hsbScreen,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
@@ -51,9 +55,8 @@ const caseStudies = [
     titleEm: "Bite-sized Cricket",
     desc: "A new content format designed to pull users deeper into stories, faster. Increasing engagement through smart information architecture and editorial thinking.",
     tags: ["Feature Design", "Content Strategy", "Engagement"],
-    gradient: "linear-gradient(135deg,#0e1118,#141d2a,#1a2638)",
-    thumbWord: "Quick",
-    thumbWordLight: true,
+    thumbType: "mobile" as const,
+    thumbImage: qrScreen,
     statNum: "↑",
     statLabel: "engagement",
     link: "/case-study/quick-reads",
@@ -65,9 +68,8 @@ const caseStudies = [
     titleEm: "Optimisation",
     desc: "Untangling an overloaded page so that 10M+ fans could find what they came for. Simplifying without losing depth — the hardest kind of design problem.",
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
-    gradient: "linear-gradient(135deg,#d8d2c6,#c8c0b0,#b8ae9c)",
-    thumbWord: "Match",
-    thumbWordLight: false,
+    thumbType: "desktop" as const,
+    thumbImage: null,
     statNum: "10M+",
     statLabel: "daily users",
     link: null, // coming soon
@@ -230,17 +232,45 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Visual side */}
-                  <div className="relative overflow-hidden min-h-[220px]">
-                    <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700" style={{ background: cs.gradient, transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }} />
-                    <span
-                      className={`absolute inset-0 flex items-center justify-center text-[clamp(56px,8vw,110px)] font-bold italic tracking-[-0.04em] select-none z-[2] group-hover:scale-[1.06] transition-transform duration-700 ${
-                        cs.thumbWordLight ? "text-white/[0.07]" : "text-foreground/[0.07]"
-                      }`}
-                      style={{ fontFamily: t.displayFont, transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}
-                    >
-                      {cs.thumbWord}
-                    </span>
+                  {/* Visual side — animated thumbnail */}
+                  <div className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
+                    style={{
+                      background: "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 80% 55% / 0.25) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 60% 65% / 0.2) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 60% 45% / 0.15) 0%, transparent 55%), linear-gradient(160deg, hsl(220 20% 8%) 0%, hsl(220 18% 14%) 50%, hsl(12 30% 20%) 100%)"
+                    }}
+                  >
+                    {/* Glow orbs */}
+                    <div className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[80px]"
+                      style={{ background: "radial-gradient(circle, hsl(12 80% 55% / 0.3) 0%, transparent 65%)" }} />
+                    <div className="absolute w-[220px] h-[220px] rounded-full -top-[50px] -right-[40px]"
+                      style={{ background: "radial-gradient(circle, hsl(220 60% 65% / 0.25) 0%, transparent 65%)" }} />
+
+                    {cs.thumbImage && cs.thumbType === "desktop" && (
+                      <div className="absolute top-[28px] left-[20px] md:left-[24px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
+                        style={{
+                          background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+                          boxShadow: "0 20px 60px rgba(0,0,0,0.45), 0 0 20px hsl(12 80% 55% / 0.2)"
+                        }}
+                      >
+                        <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
+                          <img src={cs.thumbImage} alt={`${cs.company} preview`}
+                            className="w-full block thumb-kenburns" />
+                        </div>
+                      </div>
+                    )}
+
+                    {cs.thumbImage && cs.thumbType === "mobile" && (
+                      <div className="relative z-[2] w-[160px] md:w-[180px] my-6 rounded-[22px] p-[2px]"
+                        style={{
+                          background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+                          boxShadow: "0 0 24px hsl(12 80% 55% / 0.25), 0 30px 60px rgba(0,0,0,0.5)"
+                        }}
+                      >
+                        <div className="w-full rounded-[20px] overflow-hidden bg-background">
+                          <img src={cs.thumbImage} alt={`${cs.company} preview`}
+                            className="w-full block thumb-kenburns-center" />
+                        </div>
+                      </div>
+                    )}
 
                     {isComingSoon && (
                       <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
