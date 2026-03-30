@@ -333,7 +333,7 @@ const Index = () => {
                     return (
                       <div
                         key={i}
-                        className="bg-[#1e1c1a] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
+                        className="bg-foreground/[0.12] border border-background/10 rounded-[14px] px-[22px] py-5 flex items-center justify-between gap-3 transition-all duration-[600ms]"
                         style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)", ...stackStyle }}
                       >
                         <div className="flex flex-col gap-1 flex-1 min-w-0">
