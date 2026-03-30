@@ -121,6 +121,7 @@ const blogPosts = [
     gradient: "bg-gradient-to-br from-[#0e1520] to-[#1e3a5a]",
     thumbWord: "AI",
     status: "In progress",
+    link: null,
   },
   {
     featured: false,
