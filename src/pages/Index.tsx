@@ -111,6 +111,7 @@ const blogPosts = [
     thumbWord: "System",
     status: null as string | null,
     link: "/blog/design-system" as string | null,
+  },
   {
     featured: false,
     meta: "Coming soon",
