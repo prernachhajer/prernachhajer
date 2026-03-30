@@ -245,10 +245,10 @@ const Index = () => {
                       style={{ background: "radial-gradient(circle, hsl(220 60% 65% / 0.25) 0%, transparent 65%)" }} />
 
                     {cs.thumbImage && cs.thumbType === "desktop" && (
-                      <div className="absolute top-[28px] left-[20px] md:left-[24px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
+                      <div className="absolute bottom-0 left-[32px] md:left-[40px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
                         style={{
                           background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
-                          boxShadow: "0 20px 60px rgba(0,0,0,0.45), 0 0 20px hsl(12 80% 55% / 0.2)"
+                          boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)"
                         }}
                       >
                         <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
