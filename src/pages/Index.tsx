@@ -7,7 +7,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, ChevronDown, Linkedin } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
