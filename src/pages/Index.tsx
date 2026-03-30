@@ -133,6 +133,7 @@ const blogPosts = [
     gradient: "bg-gradient-to-br from-[#1a1610] to-[#3d2e1a]",
     thumbWord: "Scale",
     status: "In progress",
+    link: null,
   },
 ];
 
