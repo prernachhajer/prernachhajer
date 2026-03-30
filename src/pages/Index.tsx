@@ -465,6 +465,7 @@ const Index = () => {
               { label: "Work", action: () => scrollTo("work") },
               { label: "About", action: () => scrollTo("about") },
               { label: "Writing", action: () => scrollTo("writing") },
+              { label: "Resume", action: () => navigate("/resume") },
               { label: "Email", action: () => window.location.href = "mailto:work.chhajer@gmail.com" },
             ].map((link) => (
               <button key={link.label} onClick={link.action}
