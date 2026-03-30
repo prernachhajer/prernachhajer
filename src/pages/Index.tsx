@@ -109,7 +109,8 @@ const blogPosts = [
     excerpt: "A personal account of growing ESPNCricinfo's design system from a single library to 170+ files — the phases, the pivots, and what systems thinking actually feels like when you're living inside it.",
     gradient: "bg-gradient-to-br from-[#1a1410] to-primary",
     thumbWord: "System",
-    status: null,
+    status: null as string | null,
+    link: "/blog/design-system" as string | null,
   },
   {
     featured: false,
@@ -121,6 +122,7 @@ const blogPosts = [
     gradient: "bg-gradient-to-br from-[#0e1520] to-[#1e3a5a]",
     thumbWord: "AI",
     status: "In progress",
+    link: null,
   },
   {
     featured: false,
@@ -132,6 +134,7 @@ const blogPosts = [
     gradient: "bg-gradient-to-br from-[#1a1610] to-[#3d2e1a]",
     thumbWord: "Scale",
     status: "In progress",
+    link: null,
   },
 ];
 
@@ -383,37 +386,41 @@ const Index = () => {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
             className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.map((post, i) => (
-              <div key={i}
-                className={`bg-secondary border border-border rounded-xl p-8 flex gap-6 hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all group overflow-hidden ${
-                  post.featured ? "md:col-span-2 flex-row items-start" : "flex-col"
-                }`}
-              >
-                <div className={`rounded-lg flex items-center justify-center shrink-0 select-none ${post.gradient} ${
-                  post.featured ? "w-full md:w-[220px] h-auto md:min-h-[180px] aspect-video md:aspect-auto" : "w-full aspect-video"
-                }`}>
-                  <span className="text-white/[0.07] text-[clamp(22px,2.5vw,36px)] font-bold italic" style={{ fontFamily: t.displayFont }}>
-                    {post.thumbWord}
-                  </span>
-                </div>
-                <div className="flex flex-col flex-1 gap-3">
-                  <span className={`${t.labelSm} text-[10px] text-primary`}>{post.meta}</span>
-                  <p className="text-[clamp(16px,1.8vw,22px)] font-normal leading-[1.25] tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>
-                    {post.title} <em className="italic text-muted-foreground">{post.titleEm}</em> {post.titleEnd}
-                  </p>
-                  <p className="text-[13px] leading-[1.7] text-muted-foreground font-light">{post.excerpt}</p>
-                  {post.status ? (
-                    <span className={`${t.labelSm} text-muted-foreground border border-border rounded-full px-3 py-1 w-fit mt-auto`}>
-                      {post.status}
+            {blogPosts.map((post, i) => {
+              const Wrapper = post.link ? "a" : "div";
+              const wrapperProps = post.link ? { href: post.link, onClick: (e: React.MouseEvent) => { e.preventDefault(); navigate(post.link!); } } : {};
+              return (
+                <Wrapper key={i} {...wrapperProps as any}
+                  className={`bg-secondary border border-border rounded-xl p-8 flex gap-6 hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all group overflow-hidden cursor-pointer ${
+                    post.featured ? "md:col-span-2 flex-row items-start" : "flex-col"
+                  }`}
+                >
+                  <div className={`rounded-lg flex items-center justify-center shrink-0 select-none ${post.gradient} ${
+                    post.featured ? "w-full md:w-[220px] h-auto md:min-h-[180px] aspect-video md:aspect-auto" : "w-full aspect-video"
+                  }`}>
+                    <span className="text-white/[0.07] text-[clamp(22px,2.5vw,36px)] font-bold italic" style={{ fontFamily: t.displayFont }}>
+                      {post.thumbWord}
                     </span>
-                  ) : (
-                    <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground border-b border-border pb-0.5 w-fit mt-2 group-hover:text-primary group-hover:gap-3 group-hover:border-primary transition-all">
-                      Read article <ArrowRight className="h-3 w-3" />
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
+                  </div>
+                  <div className="flex flex-col flex-1 gap-3">
+                    <span className={`${t.labelSm} text-[10px] text-primary`}>{post.meta}</span>
+                    <p className="text-[clamp(16px,1.8vw,22px)] font-normal leading-[1.25] tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>
+                      {post.title} <em className="italic text-muted-foreground">{post.titleEm}</em> {post.titleEnd}
+                    </p>
+                    <p className="text-[13px] leading-[1.7] text-muted-foreground font-light">{post.excerpt}</p>
+                    {post.status ? (
+                      <span className={`${t.labelSm} text-muted-foreground border border-border rounded-full px-3 py-1 w-fit mt-auto`}>
+                        {post.status}
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground border-b border-border pb-0.5 w-fit mt-2 group-hover:text-primary group-hover:gap-3 group-hover:border-primary transition-all">
+                        Read article <ArrowRight className="h-3 w-3" />
+                      </span>
+                    )}
+                  </div>
+                </Wrapper>
+              );
+            })}
           </motion.div>
         </div>
       </section>
