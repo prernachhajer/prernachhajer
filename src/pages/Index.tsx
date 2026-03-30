@@ -235,14 +235,14 @@ const Index = () => {
                   {/* Visual side — animated thumbnail */}
                   <div className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background: "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 80% 55% / 0.25) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 60% 65% / 0.2) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 60% 45% / 0.15) 0%, transparent 55%), linear-gradient(160deg, hsl(220 20% 8%) 0%, hsl(220 18% 14%) 50%, hsl(12 30% 20%) 100%)"
+                      background: "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)"
                     }}
                   >
                     {/* Glow orbs */}
                     <div className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[80px]"
-                      style={{ background: "radial-gradient(circle, hsl(12 80% 55% / 0.3) 0%, transparent 65%)" }} />
+                      style={{ background: "radial-gradient(circle, hsl(12 60% 70% / 0.18) 0%, transparent 65%)" }} />
                     <div className="absolute w-[220px] h-[220px] rounded-full -top-[50px] -right-[40px]"
-                      style={{ background: "radial-gradient(circle, hsl(220 60% 65% / 0.25) 0%, transparent 65%)" }} />
+                      style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }} />
 
                     {cs.thumbImage && cs.thumbType === "desktop" && (
                       <div className="absolute top-[60px] bottom-0 left-[60px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
