@@ -108,7 +108,7 @@ const Index = () => {
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
-  const [expExpanded, setExpExpanded] = useState(false);
+  
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
