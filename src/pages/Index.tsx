@@ -159,8 +159,11 @@ const Index = () => {
               >
                 View My Work →
               </button>
-              <button className="inline-flex items-center gap-2 text-muted-foreground border border-border px-9 py-4 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all">
-                Download CV
+              <button
+                onClick={() => navigate("/resume")}
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-9 py-4 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
+              >
+                View Resume
               </button>
             </div>
           </motion.div>
