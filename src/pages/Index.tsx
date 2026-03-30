@@ -317,15 +317,17 @@ const Index = () => {
               <div className="mt-10">
                 <div className="flex flex-col">
                   {experience.map((exp, i) => {
-                    const isVisible = expExpanded || i < 3;
+                    const isVisible = expExpanded || i < 1;
                     const stackStyle = !expExpanded && i === 1
-                      ? { marginTop: "-62px", transform: "scale(0.97)", zIndex: 2, pointerEvents: "none" as const }
+                      ? { marginTop: "-62px", transform: "scale(0.97)", zIndex: 4, opacity: 0.6, pointerEvents: "none" as const }
                       : !expExpanded && i === 2
-                      ? { marginTop: "-63px", transform: "scale(0.94)", zIndex: 1, pointerEvents: "none" as const }
-                      : !expExpanded && i >= 3
-                      ? { height: 0, padding: 0, margin: 0, border: "none", overflow: "hidden" as const, opacity: 0, pointerEvents: "none" as const }
+                      ? { marginTop: "-63px", transform: "scale(0.94)", zIndex: 3, opacity: 0.35, pointerEvents: "none" as const }
+                      : !expExpanded && i === 3
+                      ? { marginTop: "-64px", transform: "scale(0.91)", zIndex: 2, opacity: 0.15, pointerEvents: "none" as const }
+                      : !expExpanded && i >= 4
+                      ? { marginTop: "-65px", transform: "scale(0.88)", zIndex: 1, opacity: 0, pointerEvents: "none" as const }
                       : expExpanded
-                      ? { marginTop: i === 0 ? 0 : "8px" }
+                      ? { marginTop: i === 0 ? 0 : "8px", opacity: 1 }
                       : {};
 
                     return (
