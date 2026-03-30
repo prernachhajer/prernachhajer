@@ -13,9 +13,9 @@ import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
-import cricinfoDesk from "@/assets/cricinfo-desk-2026.jpg";
-import hsbScreen from "@/assets/hsb-screen-1.jpg";
-import qrScreen from "@/assets/quick-reads/screen-1.jpg";
+import thumbHomepage from "@/assets/thumb-homepage.png";
+import thumbDesignSystem from "@/assets/thumb-design-system.png";
+import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 
 const fade = animation.fade;
 
@@ -30,7 +30,7 @@ const caseStudies = [
     desc: "Five years of redesigning the world's most visited cricket homepage — twice. A story of iteration, user research, and what it means to design for 10M+ fans.",
     tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "desktop" as const,
-    thumbImage: cricinfoDesk,
+    thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/cricinfo",
@@ -43,7 +43,7 @@ const caseStudies = [
     desc: "How a single Figma library grew into a 170-file design system powering a global cricket platform — five phases, one team, and a complete Figma overhaul.",
     tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "desktop" as const,
-    thumbImage: hsbScreen,
+    thumbImage: thumbDesignSystem,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
@@ -56,7 +56,7 @@ const caseStudies = [
     desc: "A new content format designed to pull users deeper into stories, faster. Increasing engagement through smart information architecture and editorial thinking.",
     tags: ["Feature Design", "Content Strategy", "Engagement"],
     thumbType: "mobile" as const,
-    thumbImage: qrScreen,
+    thumbImage: thumbQuickReads,
     statNum: "↑",
     statLabel: "engagement",
     link: "/case-study/quick-reads",
