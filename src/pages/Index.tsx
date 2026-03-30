@@ -109,8 +109,8 @@ const blogPosts = [
     excerpt: "A personal account of growing ESPNCricinfo's design system from a single library to 170+ files — the phases, the pivots, and what systems thinking actually feels like when you're living inside it.",
     gradient: "bg-gradient-to-br from-[#1a1410] to-primary",
     thumbWord: "System",
-    status: null,
-  },
+    status: null as string | null,
+    link: "/blog/design-system" as string | null,
   {
     featured: false,
     meta: "Coming soon",
