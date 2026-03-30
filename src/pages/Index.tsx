@@ -259,13 +259,13 @@ const Index = () => {
                     )}
 
                     {cs.thumbImage && cs.thumbType === "mobile" && (
-                      <div className="relative z-[2] w-[160px] md:w-[180px] my-6 rounded-[22px] p-[2px]"
+                      <div className="absolute top-[28px] left-1/2 -translate-x-1/2 z-[2] w-[240px] md:w-[280px] rounded-[22px] rounded-b-none p-[2px] pb-0"
                         style={{
                           background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
                           boxShadow: "0 0 24px hsl(12 80% 55% / 0.25), 0 30px 60px rgba(0,0,0,0.5)"
                         }}
                       >
-                        <div className="w-full rounded-[20px] overflow-hidden bg-background">
+                        <div className="w-full rounded-[20px] rounded-b-none overflow-hidden bg-background">
                           <img src={cs.thumbImage} alt={`${cs.company} preview`}
                             className="w-full block thumb-kenburns-center" />
                         </div>
