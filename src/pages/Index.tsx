@@ -30,7 +30,7 @@ const caseStudies = [
     desc: "Five years of redesigning the world's most visited cricket homepage — twice. A story of iteration, user research, and what it means to design for 10M+ fans.",
     tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "desktop" as const,
-    thumbImage: cricinfoDesk,
+    thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/cricinfo",
