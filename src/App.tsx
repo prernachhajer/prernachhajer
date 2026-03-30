@@ -8,6 +8,7 @@ import CaseStudyCricinfo from "./pages/CaseStudyCricinfo";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
 import BlogDesignSystem from "./pages/BlogDesignSystem";
+import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
