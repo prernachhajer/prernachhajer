@@ -95,7 +95,7 @@ const BlogDesignSystem = () => {
         </motion.div>
       </header>
 
-      <div className={`${layout.container} mx-auto ${layout.px}`}>
+      <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         <hr className="border-t border-border/50" />
       </div>
 
