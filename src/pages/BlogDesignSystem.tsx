@@ -125,10 +125,10 @@ const BlogDesignSystem = () => {
               ))}
             </div>
 
-            <div className={`mt-10 ${surface.dark} rounded-xl p-8`}>
-              <p className={`${t.labelSm} text-background/25 mb-4`}>What I learned</p>
+            <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
+              <p className={`${t.labelSm} text-primary mb-4`}>Key Lesson</p>
               <p
-                className="text-base leading-[1.7] text-background/80"
+                className="text-lg leading-[1.7] text-foreground/80 italic"
                 style={{ fontFamily: t.displayFont }}
               >
                 {ch.learning}
