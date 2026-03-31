@@ -160,7 +160,7 @@ const BlogDesignSystem = () => {
 
       {/* ── WHAT I BELIEVE NOW ── */}
       <section className={`${surface.darkCardAlt} py-20 md:py-28`}>
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className={`${t.labelSm} text-background/20 mb-10`}
