@@ -100,7 +100,7 @@ const BlogDesignSystem = () => {
       </div>
 
       {/* ── CHAPTERS ── */}
-      <main className={`${layout.container} mx-auto ${layout.px}`}>
+      <main className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         {chapters.map((ch, i) => (
           <motion.section
             key={ch.num}
