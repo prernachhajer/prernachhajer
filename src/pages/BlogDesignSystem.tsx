@@ -76,7 +76,7 @@ const BlogDesignSystem = () => {
       <NavCaseStudy period="2019 — 2024" />
 
       {/* ── HERO ── */}
-      <header className={`${layout.container} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
+      <header className={`${layout.containerBlog} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Design Systems · 5 Years</p>
           <h1
