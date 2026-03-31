@@ -76,7 +76,7 @@ const BlogDesignSystem = () => {
       <NavCaseStudy period="2019 — 2024" />
 
       {/* ── HERO ── */}
-      <header className={`${layout.container} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
+      <header className={`${layout.containerBlog} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Design Systems · 5 Years</p>
           <h1
@@ -95,12 +95,12 @@ const BlogDesignSystem = () => {
         </motion.div>
       </header>
 
-      <div className={`${layout.container} mx-auto ${layout.px}`}>
+      <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         <hr className="border-t border-border/50" />
       </div>
 
       {/* ── CHAPTERS ── */}
-      <main className={`${layout.container} mx-auto ${layout.px}`}>
+      <main className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         {chapters.map((ch, i) => (
           <motion.section
             key={ch.num}
@@ -140,7 +140,7 @@ const BlogDesignSystem = () => {
 
       {/* ── LETTING GO ── */}
       <section className={`${surface.darkCard} py-20 md:py-28 mt-4`}>
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-background/20 mb-10`}>And then — letting go</p>
             <p
@@ -160,7 +160,7 @@ const BlogDesignSystem = () => {
 
       {/* ── WHAT I BELIEVE NOW ── */}
       <section className={`${surface.darkCardAlt} py-20 md:py-28`}>
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className={`${t.labelSm} text-background/20 mb-10`}
@@ -189,7 +189,7 @@ const BlogDesignSystem = () => {
 
       {/* ── CLOSING ── */}
       <section className="py-28 md:py-40 text-center">
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className={`${t.labelSm} text-muted-foreground mb-10`}
