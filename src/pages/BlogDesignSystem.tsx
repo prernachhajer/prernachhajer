@@ -140,7 +140,7 @@ const BlogDesignSystem = () => {
 
       {/* ── LETTING GO ── */}
       <section className={`${surface.darkCard} py-20 md:py-28 mt-4`}>
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-background/20 mb-10`}>And then — letting go</p>
             <p
