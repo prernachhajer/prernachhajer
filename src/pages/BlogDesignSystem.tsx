@@ -189,7 +189,7 @@ const BlogDesignSystem = () => {
 
       {/* ── CLOSING ── */}
       <section className="py-28 md:py-40 text-center">
-        <div className={`${layout.container} mx-auto ${layout.px}`}>
+        <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className={`${t.labelSm} text-muted-foreground mb-10`}
