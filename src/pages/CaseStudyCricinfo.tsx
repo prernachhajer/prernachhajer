@@ -157,7 +157,7 @@ const CaseStudyCricinfo = () => {
           </div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5 flex items-center gap-4">
-            <p className="text-xs italic text-background/20 leading-relaxed">Honest caveat: +22% and 3× are the strongest quantified signals. Repeat visit and conversion trends are directional — real, but not yet tightened for formal reporting.</p>
+            <p className="text-xs italic leading-relaxed text-muted-foreground">Honest caveat: +22% and 3× are the strongest quantified signals. Repeat visit and conversion trends are directional — real, but not yet tightened for formal reporting.</p>
           </motion.div>
         </div>
       </section>
