@@ -146,7 +146,8 @@ const Resume = () => {
                 Based in India · Remote-friendly
               </p>
               <a
-                href="#"
+                href="/prerna_chhajer_resume.pdf"
+                download
                 className="inline-flex items-center gap-[10px] bg-foreground text-background px-8 py-[15px] rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,98,45,0.25)] transition-all whitespace-nowrap"
               >
                 <Download className="w-[15px] h-[15px]" />
