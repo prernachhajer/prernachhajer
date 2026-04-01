@@ -249,7 +249,7 @@ const Resume = () => {
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 flex-wrap">
                 <div>
                   <div className="text-[22px] font-normal tracking-[-0.015em] mb-1.5" style={{ fontFamily: t.displayFont }}>
-                    B.E. in Computer Science
+                    B.Tech in Computer Science
                   </div>
                   <div className="text-[15px] text-muted-foreground">MAIET, Jaipur</div>
                 </div>
