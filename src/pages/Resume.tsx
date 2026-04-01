@@ -26,10 +26,18 @@ const contactItems = [
   { label: "Behance", value: "prerna_Chhajer", href: "https://www.behance.net/prerna_Chhajer" },
 ];
 
-const skills = [
-  "UX Research", "Interaction Design", "Design Systems", "Prototyping",
-  "Information Architecture", "Heuristic Evaluation", "Visual Design",
-  "Design Ops", "Mentorship", "Stakeholder Alignment",
+const skillCategories = [
+  { heading: "Execution", items: ["UX Research", "Design Systems", "Interaction Design", "Prototyping", "Information Architecture", "Heuristic Evaluation", "Visual Design", "Design Ops"] },
+  { heading: "Strategy", items: ["Product Strategy", "Design Vision", "Roadmap Planning"] },
+  { heading: "Leadership", items: ["Design Leadership", "Cross-functional Collaboration", "Design Critique", "Mentorship", "Stakeholder Alignment"] },
+  { heading: "Process", items: ["Agile / Scrum", "Design Thinking", "Workshop Facilitation"] },
+  { heading: "Research", items: ["User Interviews", "Usability Testing", "Journey Mapping", "Competitive Analysis"] },
+];
+
+const toolCategories = [
+  { heading: "Design", items: ["Figma", "Miro / FigJam", "ZeroHeight"] },
+  { heading: "Research & Analytics", items: ["Hotjar", "Google Analytics", "VWO", "UserTesting", "UX Pilot"] },
+  { heading: "AI", items: ["Claude", "ChatGPT", "Gemini", "Lovable", "Perplexity", "Pencil"] },
 ];
 
 const experienceData = [
