@@ -20,7 +20,7 @@ const stats = [
 ];
 
 const contactItems = [
-  { label: "Email", value: "prernachhajer@gmail.com", href: "mailto:prernachhajer@gmail.com" },
+  { label: "Email", value: "work.chhajer@gmail.com", href: "mailto:work.chhajer@gmail.com" },
   { label: "Location", value: "India · Remote-friendly" },
   { label: "LinkedIn", value: "prerna-chhajer", href: "https://www.linkedin.com/in/prerna-chhajer/" },
   { label: "Behance", value: "prerna_Chhajer", href: "https://www.behance.net/prerna_Chhajer" },
