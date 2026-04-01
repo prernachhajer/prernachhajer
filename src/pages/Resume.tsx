@@ -26,10 +26,18 @@ const contactItems = [
   { label: "Behance", value: "prerna_Chhajer", href: "https://www.behance.net/prerna_Chhajer" },
 ];
 
-const skills = [
-  "UX Research", "Interaction Design", "Design Systems", "Prototyping",
-  "Information Architecture", "Heuristic Evaluation", "Visual Design",
-  "Design Ops", "Mentorship", "Stakeholder Alignment",
+const skillCategories = [
+  { heading: "Execution", items: ["UX Research", "Design Systems", "Interaction Design", "Prototyping", "Information Architecture", "Heuristic Evaluation", "Visual Design", "Design Ops"] },
+  { heading: "Strategy", items: ["Product Strategy", "Design Vision", "Roadmap Planning"] },
+  { heading: "Leadership", items: ["Design Leadership", "Cross-functional Collaboration", "Design Critique", "Mentorship", "Stakeholder Alignment"] },
+  { heading: "Process", items: ["Agile / Scrum", "Design Thinking", "Workshop Facilitation"] },
+  { heading: "Research", items: ["User Interviews", "Usability Testing", "Journey Mapping", "Competitive Analysis"] },
+];
+
+const toolCategories = [
+  { heading: "Design", items: ["Figma", "Miro / FigJam", "ZeroHeight"] },
+  { heading: "Research & Analytics", items: ["Hotjar", "Google Analytics", "VWO", "UserTesting", "UX Pilot"] },
+  { heading: "AI", items: ["Claude", "ChatGPT", "Gemini", "Lovable", "Perplexity", "Pencil"] },
 ];
 
 const experienceData = [
@@ -201,13 +209,39 @@ const Resume = () => {
             </div>
 
             {/* Skills */}
-            <div>
+            <div className="mb-[52px]">
               <SidebarHeading>Skills</SidebarHeading>
-              <div className="flex flex-wrap gap-[7px]">
-                {skills.map((skill) => (
-                  <span key={skill} className="text-[13px] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
-                    {skill}
-                  </span>
+              <div className="flex flex-col gap-5">
+                {skillCategories.map((cat) => (
+                  <div key={cat.heading}>
+                    <span className="text-[10px] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <div className="flex flex-wrap gap-[7px]">
+                      {cat.items.map((skill) => (
+                        <span key={skill} className="text-[13px] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools */}
+            <div>
+              <SidebarHeading>Tools</SidebarHeading>
+              <div className="flex flex-col gap-5">
+                {toolCategories.map((cat) => (
+                  <div key={cat.heading}>
+                    <span className="text-[10px] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <div className="flex flex-wrap gap-[7px]">
+                      {cat.items.map((tool) => (
+                        <span key={tool} className="text-[13px] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
