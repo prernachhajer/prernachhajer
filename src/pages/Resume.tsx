@@ -94,7 +94,7 @@ const experienceData = [
     ],
   },
   {
-    company: "Pyrumas · Gurgaon",
+    company: "Pyrumas · Bangalore",
     role: "Web Designer",
     years: "2012 – 2013",
     current: false,
