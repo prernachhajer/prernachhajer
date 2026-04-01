@@ -20,7 +20,7 @@ const stats = [
 ];
 
 const contactItems = [
-  { label: "Email", value: "prernachhajer@gmail.com", href: "mailto:prernachhajer@gmail.com" },
+  { label: "Email", value: "work.chhajer@gmail.com", href: "mailto:work.chhajer@gmail.com" },
   { label: "Location", value: "India · Remote-friendly" },
   { label: "LinkedIn", value: "prerna-chhajer", href: "https://www.linkedin.com/in/prerna-chhajer/" },
   { label: "Behance", value: "prerna_Chhajer", href: "https://www.behance.net/prerna_Chhajer" },
@@ -268,7 +268,7 @@ const Resume = () => {
           <span className="text-[13px] text-muted-foreground">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-7">
             {["Work", "About", "Writing", "Résumé", "Email"].map((link) => (
-              <a key={link} href={link === "Email" ? "mailto:prernachhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
+              <a key={link} href={link === "Email" ? "mailto:work.chhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
                 className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">
                 {link}
               </a>
