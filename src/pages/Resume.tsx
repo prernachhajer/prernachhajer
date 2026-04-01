@@ -42,7 +42,7 @@ const toolCategories = [
 
 const experienceData = [
   {
-    company: "ProximityWorks (Employee) · Client: ESPNCricinfo",
+    company: "Proximity Works · Remote",
     role: "Lead Product Designer — ESPNCricinfo",
     years: "2021 – Present · 4.5+ yrs",
     current: true,
