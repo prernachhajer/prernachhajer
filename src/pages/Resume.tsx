@@ -268,7 +268,7 @@ const Resume = () => {
           <span className="text-[13px] text-muted-foreground">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-7">
             {["Work", "About", "Writing", "Résumé", "Email"].map((link) => (
-              <a key={link} href={link === "Email" ? "mailto:prernachhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
+              <a key={link} href={link === "Email" ? "mailto:work.chhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
                 className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">
                 {link}
               </a>
