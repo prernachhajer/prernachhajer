@@ -150,7 +150,7 @@ const Resume = () => {
             <div className="flex flex-col items-start md:items-end gap-6 shrink-0">
               <p className="text-base leading-[1.7] text-muted-foreground md:text-right">
                 <strong className="text-foreground font-semibold block mb-0.5">Open to full-time roles.</strong>
-                Based in Worldwide · Remote-friendly
+                Worldwide · Remote-friendly
               </p>
               <a
                 href="/prerna_chhajer_resume.pdf"
