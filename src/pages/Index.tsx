@@ -16,6 +16,8 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage.png";
 import thumbDesignSystem from "@/assets/thumb-design-system.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
+import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
+import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 
 const fade = animation.fade;
 
@@ -29,8 +31,10 @@ const caseStudies = [
     titleEm: "2021–2026",
     desc: "Five years of redesigning the world's most visited cricket homepage — twice. A story of iteration, user research, and what it means to design for 10M+ fans.",
     tags: ["Information Architecture", "Navigation", "Redesign"],
-    thumbType: "desktop" as const,
+    thumbType: "cross-platform" as const,
     thumbImage: thumbHomepage,
+    thumbDesktop: cricinfoDesktop,
+    thumbMobile: cricinfoMobile,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/cricinfo",
@@ -107,8 +111,6 @@ const Index = () => {
   const navigate = useNavigate();
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-
-  
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
@@ -263,6 +265,41 @@ const Index = () => {
                             className="w-full block thumb-kenburns-center" />
                         </div>
                       </div>
+                    )}
+
+                    {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
+                      <>
+                        {/* Desktop — background, slightly blurred for depth */}
+                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[1]"
+                          style={{
+                            background: "linear-gradient(135deg, hsl(40 20% 97% / 0.6) 0%, hsl(12 60% 70% / 0.4) 25%, hsl(220 50% 45% / 0.3) 75%, transparent 100%)",
+                            boxShadow: "0 -8px 30px rgba(0,0,0,0.35), 0 0 15px hsl(12 80% 55% / 0.15)",
+                            filter: "blur(1.5px)",
+                            transform: "scale(0.95)",
+                            transformOrigin: "center bottom",
+                          }}
+                        >
+                          <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
+                            <img src={cs.thumbDesktop} alt={`${cs.company} desktop preview`}
+                              className="w-full block thumb-kenburns opacity-85" />
+                          </div>
+                        </div>
+
+                        {/* Mobile — foreground, sharp and zoomed in */}
+                        <div className="absolute bottom-0 right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[18px] rounded-b-none p-[2px] pb-0"
+                          style={{
+                            background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+                            boxShadow: "0 0 30px hsl(12 80% 55% / 0.3), 0 -12px 50px rgba(0,0,0,0.5), -8px 0 20px rgba(0,0,0,0.2)",
+                            transform: "scale(1.05)",
+                            transformOrigin: "bottom right",
+                          }}
+                        >
+                          <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
+                            <img src={cs.thumbMobile} alt={`${cs.company} mobile preview`}
+                              className="w-full block thumb-kenburns-center" />
+                          </div>
+                        </div>
+                      </>
                     )}
 
                     {isComingSoon && (
