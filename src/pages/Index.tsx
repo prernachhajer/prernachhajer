@@ -281,7 +281,7 @@ const Index = () => {
                         >
                           <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
                             <img src={cs.thumbDesktop} alt={`${cs.company} desktop preview`}
-                              className="w-full block thumb-kenburns opacity-100" />
+                              className="w-full block thumb-kenburns opacity-100 rounded-sm" />
                           </div>
                         </div>
 
