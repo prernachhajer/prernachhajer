@@ -270,7 +270,7 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — background, slightly blurred for depth */}
-                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[1]"
+                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-b-none p-[2px] pb-0 z-[1] opacity-100 rounded-md"
                           style={{
                             background: "linear-gradient(135deg, hsl(40 20% 97% / 0.6) 0%, hsl(12 60% 70% / 0.4) 25%, hsl(220 50% 45% / 0.3) 75%, transparent 100%)",
                             boxShadow: "0 -8px 30px rgba(0,0,0,0.35), 0 0 15px hsl(12 80% 55% / 0.15)",
@@ -281,7 +281,7 @@ const Index = () => {
                         >
                           <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
                             <img src={cs.thumbDesktop} alt={`${cs.company} desktop preview`}
-                              className="w-full block thumb-kenburns opacity-85" />
+                              className="w-full block thumb-kenburns opacity-100" />
                           </div>
                         </div>
 
