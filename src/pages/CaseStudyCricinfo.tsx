@@ -14,6 +14,7 @@ import {
   PullQuote,
   LearningCard,
   ClosingSection,
+  ExploreMore,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
@@ -402,6 +403,9 @@ const CaseStudyCricinfo = () => {
         quoteEnd="when they open one."
         meta="Cricinfo · Homepage Redesign · 2021 — 2026"
       />
+
+      {/* EXPLORE MORE */}
+      <ExploreMore currentSlug="cricinfo" />
     </div>
   );
 };

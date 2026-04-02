@@ -495,3 +495,73 @@ export const Tag = ({
     </span>
   );
 };
+
+// ─────────────────────────────────────────────
+// EXPLORE MORE — Related case studies
+// ─────────────────────────────────────────────
+const allCaseStudies = [
+  {
+    slug: "cricinfo",
+    title: "Cricinfo Homepage",
+    description: "Redesigning the world's largest cricket platform homepage",
+    tags: ["Product Design", "Web"],
+    path: "/case-study/cricinfo",
+  },
+  {
+    slug: "design-system",
+    title: "Design System",
+    description: "Building a unified design language for ESPN Cricinfo",
+    tags: ["Systems", "Documentation"],
+    path: "/case-study/design-system",
+  },
+  {
+    slug: "quick-reads",
+    title: "Quick Reads",
+    description: "Optimizing content consumption for mobile-first users",
+    tags: ["Mobile", "iOS & Android"],
+    path: "/case-study/quick-reads",
+  },
+];
+
+export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
+  const navigate = useNavigate();
+  const others = allCaseStudies.filter((cs) => cs.slug !== currentSlug);
+
+  return (
+    <section className={`${spacing.sectionGap} ${layout.px}`}>
+      <div className={`${layout.container} mx-auto`}>
+        <SectionLabel>Explore More</SectionLabel>
+        <div className="grid md:grid-cols-2 gap-4">
+          {others.map((cs, i) => (
+            <motion.button
+              key={cs.slug}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              custom={i}
+              onClick={() => navigate(cs.path)}
+              className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad} text-left group hover:border-primary/30 transition-all hover:-translate-y-0.5`}
+            >
+              <p className={`${t.labelSm} text-muted-foreground/50 mb-4`}>
+                {cs.tags.join(" · ")}
+              </p>
+              <h3
+                className="text-xl font-normal tracking-tight mb-2 group-hover:text-primary transition-colors"
+                style={{ fontFamily: t.displayFont }}
+              >
+                {cs.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                {cs.description}
+              </p>
+              <span className={`${t.labelSm} text-primary flex items-center gap-2`}>
+                Read Case Study <ArrowRight className="h-3 w-3" />
+              </span>
+            </motion.button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

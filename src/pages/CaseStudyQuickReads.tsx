@@ -14,6 +14,7 @@ import {
   PullQuote,
   LearningCard,
   ClosingSection,
+  ExploreMore,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import QuickReadsProblemVisual from "@/components/QuickReadsProblemVisual";
@@ -627,6 +628,9 @@ const CaseStudyQuickReads = () => {
         quoteEnd=""
         meta="ESPN Cricinfo · Quick Reads · iOS & Android · 2024"
       />
+
+      {/* EXPLORE MORE */}
+      <ExploreMore currentSlug="quick-reads" />
     </div>
   );
 };
