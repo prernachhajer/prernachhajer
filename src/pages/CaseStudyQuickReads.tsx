@@ -628,6 +628,9 @@ const CaseStudyQuickReads = () => {
         quoteEnd=""
         meta="ESPN Cricinfo · Quick Reads · iOS & Android · 2024"
       />
+
+      {/* EXPLORE MORE */}
+      <ExploreMore currentSlug="quick-reads" />
     </div>
   );
 };

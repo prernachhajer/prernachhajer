@@ -403,6 +403,9 @@ const CaseStudyCricinfo = () => {
         quoteEnd="when they open one."
         meta="Cricinfo · Homepage Redesign · 2021 — 2026"
       />
+
+      {/* EXPLORE MORE */}
+      <ExploreMore currentSlug="cricinfo" />
     </div>
   );
 };

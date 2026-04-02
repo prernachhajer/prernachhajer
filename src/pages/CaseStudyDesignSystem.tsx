@@ -376,6 +376,9 @@ const CaseStudyDesignSystem = () => {
         quoteEnd="that made everyone faster."
         meta="ESPN Cricinfo · Design System · 2021 — 2025"
       />
+
+      {/* EXPLORE MORE */}
+      <ExploreMore currentSlug="design-system" />
     </div>
   );
 };
