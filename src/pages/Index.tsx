@@ -285,7 +285,7 @@ const Index = () => {
                         </div>
 
                         {/* Mobile — foreground, sharp and zoomed in */}
-                        <div className="absolute bottom-0 right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[18px] rounded-b-none p-[2px] pb-0"
+                        <div className="absolute bottom-[-100px] right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[18px] p-[2px] pb-0"
                           style={{
                             background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
                             boxShadow: "0 0 30px hsl(12 80% 55% / 0.3), 0 -12px 50px rgba(0,0,0,0.5), -8px 0 20px rgba(0,0,0,0.2)",
@@ -293,9 +293,9 @@ const Index = () => {
                             transformOrigin: "bottom right",
                           }}
                         >
-                          <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
+                          <div className="w-full rounded-[16px] overflow-hidden bg-background">
                             <img src={cs.thumbMobile} alt={`${cs.company} mobile preview`}
-                              className="w-full block thumb-kenburns-center" />
+                              className="w-full block thumb-kenburns-center rounded-[16px]" />
                           </div>
                         </div>
                       </>
