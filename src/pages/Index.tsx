@@ -270,23 +270,22 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — background, slightly blurred for depth */}
-                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-b-none p-[2px] pb-0 z-[1] opacity-100 rounded-md"
+                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[12px] p-[2px] pb-0 z-[1] opacity-100"
                           style={{
                             background: "linear-gradient(135deg, hsl(40 20% 97% / 0.6) 0%, hsl(12 60% 70% / 0.4) 25%, hsl(220 50% 45% / 0.3) 75%, transparent 100%)",
                             boxShadow: "0 -8px 30px rgba(0,0,0,0.35), 0 0 15px hsl(12 80% 55% / 0.15)",
-                            filter: "blur(1.5px)",
                             transform: "scale(0.95)",
                             transformOrigin: "center bottom",
                           }}
                         >
-                          <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
+                          <div className="w-full rounded-[12px] overflow-hidden bg-background">
                             <img src={cs.thumbDesktop} alt={`${cs.company} desktop preview`}
-                              className="w-full block thumb-kenburns opacity-100 rounded-sm" />
+                              className="w-full block thumb-kenburns opacity-100 rounded-[12px]" />
                           </div>
                         </div>
 
                         {/* Mobile — foreground, sharp and zoomed in */}
-                        <div className="absolute bottom-0 right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[18px] rounded-b-none p-[2px] pb-0"
+                        <div className="absolute bottom-[-100px] right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[18px] p-[2px] pb-0"
                           style={{
                             background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
                             boxShadow: "0 0 30px hsl(12 80% 55% / 0.3), 0 -12px 50px rgba(0,0,0,0.5), -8px 0 20px rgba(0,0,0,0.2)",
@@ -294,9 +293,9 @@ const Index = () => {
                             transformOrigin: "bottom right",
                           }}
                         >
-                          <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
+                          <div className="w-full rounded-[16px] overflow-hidden bg-background">
                             <img src={cs.thumbMobile} alt={`${cs.company} mobile preview`}
-                              className="w-full block thumb-kenburns-center" />
+                              className="w-full block thumb-kenburns-center rounded-[16px]" />
                           </div>
                         </div>
                       </>
