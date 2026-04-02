@@ -17,6 +17,7 @@ import {
   LearningCard,
   ClosingSection,
   ImagePlaceholder,
+  ExploreMore,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 
