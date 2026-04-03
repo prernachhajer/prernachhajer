@@ -24,6 +24,8 @@ import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import componentOld from "@/assets/component-old.jpg";
 import componentNew from "@/assets/component-new.jpg";
+import dsOld from "@/assets/ds-old.jpg";
+import dsNew from "@/assets/ds-new.jpg";
 import zeroheightDoc from "@/assets/zeroheight-accordion.png";
 
 const fade = animation.fade;
@@ -217,6 +219,18 @@ const CaseStudyDesignSystem = () => {
             afterLabel="After"
           />
           <p className="text-center text-xs text-background/20 mt-4 tracking-wide">Component rebuild · 2022 — fewer files, more power</p>
+        </motion.div>
+
+        {/* Cricinfo Figma Library before/after */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={3.5}
+          className="mt-8">
+          <BeforeAfterSlider
+            beforeImage={dsOld}
+            afterImage={dsNew}
+            beforeLabel="Before"
+            afterLabel="After"
+          />
+          <p className="text-center text-xs text-background/20 mt-4 tracking-wide">Cricinfo Figma Library · 2021</p>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={4} className="mt-8">
