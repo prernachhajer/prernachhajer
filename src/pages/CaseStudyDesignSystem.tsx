@@ -255,7 +255,7 @@ const CaseStudyDesignSystem = () => {
         {/* Documentation screenshot placeholder */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
           className={`${layout.container} mx-auto mt-8`}>
-          <div className="rounded-xl border border-border/30 overflow-hidden" style={{ minHeight: "680px", maxHeight: "680px", overflowY: "auto" }}>
+          <div className="rounded-xl border border-border/30 overflow-hidden" style={{ minHeight: "580px", maxHeight: "580px", overflowY: "auto" }}>
             <img src={zeroheightDoc} alt="ZeroHeight documentation · component reference" className="w-full" draggable={false} />
           </div>
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">ZeroHeight documentation · 2023</p>
