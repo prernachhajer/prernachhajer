@@ -357,7 +357,7 @@ const CaseStudyCricinfo = () => {
         {/* MY CONTRIBUTION */}
         <Section label="04 — Design Evolution">
           <div className={`${layout.container} mx-auto`}>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 px-[84px]">
               {[
                 {
                   num: "01",
