@@ -283,7 +283,7 @@ const Index = () => {
                         </div>
 
                         {/* Mobile — foreground, sharp and zoomed in */}
-                        <div className="absolute bottom-0 right-[8%] z-[3] w-[180px] md:w-[220px] rounded-[16px] rounded-b-none p-[2px] pb-0"
+                        <div className="absolute bottom-0 right-[8%] z-[3] w-[110px] md:w-[150px] rounded-[16px] rounded-b-none p-[2px] pb-0"
                           style={{
                             background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
                             boxShadow: "0 0 30px hsl(12 80% 55% / 0.3), 0 -12px 50px rgba(0,0,0,0.5), -8px 0 20px rgba(0,0,0,0.2)",
