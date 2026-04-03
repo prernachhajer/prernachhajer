@@ -6,6 +6,7 @@
 // ─────────────────────────────────────────────
 
 import { motion } from "framer-motion";
+import fontExploration from "@/assets/font-exploration.png";
 import {
   NavCaseStudy,
   CaseStudyHero,
@@ -324,7 +325,7 @@ const CaseStudyDesignSystem = () => {
         {/* Font exploration placeholder */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
           className={`${layout.container} mx-auto mt-4`}>
-          <ImagePlaceholder label="Typography exploration · font candidates" aspectRatio="16/5" />
+          <img src={fontExploration} alt="Typography exploration showing font candidates side by side" className="w-full rounded-xl" />
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Font evaluation process · 2025</p>
         </motion.div>
 
