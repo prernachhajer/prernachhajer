@@ -330,11 +330,13 @@ export const CaseStudyHero = ({
   headlineAccent,
   headlineEnd,
   tags,
+  teams,
 }: {
   headline: string;
   headlineAccent?: string;
   headlineEnd?: string;
   tags: string[];
+  teams?: string[];
 }) => (
   <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
     <motion.div
