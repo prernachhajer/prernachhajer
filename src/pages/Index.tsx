@@ -293,7 +293,7 @@ const Index = () => {
                         >
                           <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
                             <img src={cs.thumbMobile} alt={`${cs.company} mobile preview`}
-                              className="w-full block thumb-kenburns-center rounded-[16px] rounded-b-none" />
+                              className="w-full block thumb-kenburns-center rounded-[16px] rounded-b-none shadow-none" />
                           </div>
                         </div>
                       </>
