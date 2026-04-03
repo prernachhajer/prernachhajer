@@ -353,13 +353,6 @@ const CaseStudyCricinfo = () => {
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>04 — Design Evolution</SectionLabel>
         </div>
-        <Prose>
-          <h2>Three versions. Five years. One surface.</h2>
-          <p>
-            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
-            changed, what didn't, and why.
-          </p>
-        </Prose>
 
         {/* MY CONTRIBUTION */}
         <Section label="My contribution">
@@ -540,6 +533,14 @@ const CaseStudyCricinfo = () => {
             </div>
           </div>
         </section>
+
+        <Prose>
+          <h2>Three versions. Five years. One surface.</h2>
+          <p>
+            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
+            changed, what didn't, and why.
+          </p>
+        </Prose>
 
         <div className={`${layout.container} mx-auto mt-12`}>
           <HomepageEvolutionCarousel />
