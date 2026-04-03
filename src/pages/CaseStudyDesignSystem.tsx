@@ -6,6 +6,7 @@
 // ─────────────────────────────────────────────
 
 import { motion } from "framer-motion";
+import fontExploration from "@/assets/font-exploration.png";
 import {
   NavCaseStudy,
   CaseStudyHero,
