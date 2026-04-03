@@ -23,6 +23,7 @@ import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import componentOld from "@/assets/component-old.jpg";
 import componentNew from "@/assets/component-new.jpg";
+import zeroheightDoc from "@/assets/zeroheight-accordion.png";
 
 const fade = animation.fade;
 
