@@ -20,6 +20,9 @@ import {
   ExploreMore,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import componentOld from "@/assets/component-old.jpg";
+import componentNew from "@/assets/component-new.jpg";
 
 const fade = animation.fade;
 
