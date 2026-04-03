@@ -3,11 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { NavCaseStudy } from "@/components/ds";
 import { animation, layout, surface, type as t } from "@/lib/tokens";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-// ─────────────────────────────────────────────
-
-import { motion } from "framer-motion";
-import { NavCaseStudy } from "@/components/ds";
-import { animation, layout, surface, type as t } from "@/lib/tokens";
 
 const fade = animation.fade;
 
