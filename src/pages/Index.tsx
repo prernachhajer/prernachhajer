@@ -17,7 +17,7 @@ import thumbHomepage from "@/assets/thumb-homepage.png";
 import thumbDesignSystem from "@/assets/thumb-design-system.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
-import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
+import cricinfoMobile from "@/assets/cricinfo-mobile-home.jpg";
 
 const fade = animation.fade;
 
@@ -274,9 +274,8 @@ const Index = () => {
                   <div
                     className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background: cs.thumbType === "cross-platform"
-                        ? "linear-gradient(145deg, hsl(28 35% 78%) 0%, hsl(22 30% 72%) 50%, hsl(18 25% 68%) 100%)"
-                        : "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
+                      background:
+                        "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
                     }}
                   >
                     {/* Glow orbs */}
@@ -329,36 +328,39 @@ const Index = () => {
 
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
-                        {/* Desktop — large, main screenshot */}
+                        {/* Desktop — background, slightly blurred for depth */}
                         <div
-                          className="absolute top-[32px] bottom-[12px] left-[32px] right-[60px] z-[1]"
+                          className="absolute top-[60px] bottom-0 left-[30px] right-[-30%] rounded-[12px] pb-0 z-[1] opacity-100 px-[7px]"
+                          style={{
+                            transform: "scale(0.95)",
+                            transformOrigin: "center bottom",
+                          }}
                         >
-                          <div className="w-full h-full rounded-[10px] overflow-hidden"
-                            style={{
-                              boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
-                            }}
-                          >
+                          <div className="w-full rounded-[12px] overflow-hidden bg-background">
                             <img
                               src={cs.thumbDesktop}
                               alt={`${cs.company} desktop preview`}
-                              className="w-full h-full object-contain object-top block thumb-kenburns rounded-[10px]"
+                              className="w-full block thumb-kenburns opacity-100 rounded-[12px]"
                             />
                           </div>
                         </div>
 
-                        {/* Mobile — foreground, overlapping bottom-right */}
+                        {/* Mobile — foreground, sharp and zoomed in */}
                         <div
-                          className="absolute bottom-0 right-[16px] z-[3] w-[120px] md:w-[160px] rounded-[14px] rounded-b-none p-[3px] pb-0"
+                          className="absolute bottom-0 right-[8%] z-[3] w-[110px] md:w-[150px] rounded-[16px] rounded-b-none p-[2px] pb-0 shadow"
                           style={{
-                            background: "hsl(220 70% 50%)",
-                            boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
+                            background:
+                              "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+
+                            transform: "scale(1.25)",
+                            transformOrigin: "bottom right",
                           }}
                         >
-                          <div className="w-full rounded-[12px] rounded-b-none overflow-hidden">
+                          <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
                             <img
                               src={cs.thumbMobile}
                               alt={`${cs.company} mobile preview`}
-                              className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-none"
+                              className="w-full block thumb-kenburns-center rounded-[16px] rounded-b-none shadow-none"
                             />
                           </div>
                         </div>
