@@ -331,9 +331,9 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — large, main screenshot */}
-                        <div className="absolute top-[32px] bottom-[12px] left-[32px] right-[60px] z-[1]">
+                        <div className="absolute inset-0 z-[1] flex items-center justify-center">
                           <div
-                            className="w-full h-full rounded-[10px] overflow-hidden"
+                            className="inline-block rounded-[10px] overflow-hidden"
                             style={{
                               boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
                             }}
@@ -341,7 +341,7 @@ const Index = () => {
                             <img
                               src={cs.thumbDesktop}
                               alt={`${cs.company} desktop preview`}
-                              className="w-full h-full object-contain object-top block thumb-kenburns rounded-[10px]"
+                              className="max-w-full max-h-full block thumb-kenburns rounded-[10px]"
                             />
                           </div>
                         </div>
