@@ -352,7 +352,7 @@ const Index = () => {
                             background:
                               "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
 
-                            transform: "scale(1.55)",
+                            transform: "scale(1.25)",
                             transformOrigin: "bottom right",
                           }}
                         >
