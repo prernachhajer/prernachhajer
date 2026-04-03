@@ -1,6 +1,8 @@
-// ─────────────────────────────────────────────
-// BLOG — Building a Design System Over the Years
-// Uses shared design system: @/lib/tokens + @/components/ds
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { NavCaseStudy } from "@/components/ds";
+import { animation, layout, surface, type as t } from "@/lib/tokens";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 // ─────────────────────────────────────────────
 
 import { motion } from "framer-motion";
