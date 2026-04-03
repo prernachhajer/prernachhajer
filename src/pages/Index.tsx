@@ -490,86 +490,61 @@ const Index = () => {
             </h2>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            custom={1}
-            className="bg-secondary border border-border rounded-[14px] p-10 flex flex-col md:flex-row gap-9 items-start cursor-pointer group hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all"
-            onClick={() => navigate("/blog/design-system")}
-          >
-            <div
-              className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden"
-              style={{ background: "linear-gradient(135deg,#1a1410,var(--primary))" }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-border rounded-[14px] overflow-hidden">
+            {/* ── Design System article ── */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              custom={1}
+              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
+              onClick={() => navigate("/blog/design-system")}
             >
-              <span
-                className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic"
+              <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
+              <h3
+                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
-                System
-              </span>
-            </div>
-            <div className="flex flex-col gap-3.5 flex-1">
-              <span className="text-xs tracking-[0.05em] uppercase text-primary">Mar 2026 · Featured</span>
-              <p
-                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.2] tracking-[-0.02em]"
-                style={{ fontFamily: t.displayFont }}
-              >
-                What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
-                Taught Me
+                What Building a Design System Over{" "}
+                <em className="italic text-muted-foreground">Five Years</em> Really Taught Me
+              </h3>
+              <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
+                Five years. Five hard problems. Engineering gaps, tooling shifts, and a full identity overhaul — why alignment matters more than components.
               </p>
-              <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
-                Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul
-                taught me about building systems that actually hold — and why alignment will always matter more than
-                components.
-              </p>
-              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
+              <span className="inline-flex items-center gap-2 text-sm text-foreground group-hover:text-primary transition-colors">
                 Read article
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
-              </button>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            custom={2}
-            className="bg-secondary border border-border rounded-[14px] p-10 flex flex-col md:flex-row gap-9 items-start cursor-pointer group hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all mt-5"
-            onClick={() => navigate("/blog/ai-portfolio")}
-          >
-            <div
-              className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden"
-              style={{ background: "linear-gradient(135deg,#0d1117,#58a6ff)" }}
-            >
-              <span
-                className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic"
-                style={{ fontFamily: t.displayFont }}
-              >
-                AI
               </span>
-            </div>
-            <div className="flex flex-col gap-3.5 flex-1">
-              <span className="text-xs tracking-[0.05em] uppercase text-primary">Apr 2026 · Design with AI</span>
-              <p
-                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.2] tracking-[-0.02em]"
+            </motion.div>
+
+            {/* ── AI Portfolio article ── */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              custom={2}
+              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
+              onClick={() => navigate("/blog/ai-portfolio")}
+            >
+              <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
+              <h3
+                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 From Zero to Shipped: How I Built My Entire Portfolio{" "}
                 <em className="italic text-muted-foreground">with AI</em>
+              </h3>
+              <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
+                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The honest story of curiosity, tools, and what it changed.
               </p>
-              <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
-                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The
-                honest story of curiosity, tools, and what it changed about how I design.
-              </p>
-              <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
+              <span className="inline-flex items-center gap-2 text-sm text-foreground group-hover:text-primary transition-colors">
                 Read article
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
-              </button>
-            </div>
-          </motion.div>
+              </span>
+            </motion.div>
+          </div>
         </div>
       </section>
 
