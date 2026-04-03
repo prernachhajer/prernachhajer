@@ -1,11 +1,8 @@
-// ─────────────────────────────────────────────
-// BLOG — From Zero to Shipped: Building a Portfolio with AI
-// Uses shared design system: @/lib/tokens + @/components/ds
-// ─────────────────────────────────────────────
-
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { NavCaseStudy } from "@/components/ds";
 import { animation, layout, surface, type as t } from "@/lib/tokens";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const fade = animation.fade;
 
@@ -85,6 +82,7 @@ const sections = [
 ];
 
 const BlogAIPortfolio = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <NavCaseStudy period="2025" />
@@ -214,6 +212,38 @@ const BlogAIPortfolio = () => {
           >
             Written by a designer exploring what it means to build with AI — not just use it.
           </motion.p>
+        </div>
+      </section>
+
+      {/* ── READ MORE ── */}
+      <section className="border-t border-border/50">
+        <div className={`${layout.containerBlog} mx-auto ${layout.px} py-16 md:py-20`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Read More</p>
+            <div
+              onClick={() => navigate("/blog/design-system")}
+              className="group cursor-pointer p-6 rounded-2xl border border-border/50 hover:bg-secondary/60 transition-all"
+            >
+              <p className={`${t.labelSm} text-muted-foreground mb-2`}>2019 — 2024 · Design Systems</p>
+              <h3
+                className="text-xl md:text-2xl font-normal tracking-[-0.02em] leading-[1.2] mb-3"
+                style={{ fontFamily: t.displayFont }}
+              >
+                What building a design system over the years really taught me
+              </h3>
+              <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground group-hover:text-foreground transition-colors">
+                Read article <ArrowRight className="h-3 w-3" />
+              </span>
+            </div>
+            <div className="mt-10 flex justify-center">
+              <button
+                onClick={() => navigate("/")}
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
+              >
+                <ArrowLeft className="h-3 w-3" /> Back to Portfolio
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
