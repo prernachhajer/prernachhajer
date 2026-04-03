@@ -81,11 +81,25 @@ const caseStudies = [
 ];
 
 const beliefs = [
-  { num: "01", headline: "Good design", headlineEm: "reduces thinking.", body: "The best interface is the one users don't notice. If someone has to pause — even for a second — you've already lost them. I design to remove that pause." },
-  { num: "02", headline: "Speed is part", headlineEm: "of quality.", body: "Shipping a good thing late is still a failure. I move fast, learn from real users, and refine with data — not hypotheticals. Perfection is a process, not a prerequisite." },
-  { num: "03", headline: "Familiarity beats", headlineEm: "novelty at scale.", body: "When 10 million people use your product daily, a clever pattern that confuses 5% of them isn't clever at all. I design for the person who just wants to get the thing done." },
+  {
+    num: "01",
+    headline: "Good design",
+    headlineEm: "reduces thinking.",
+    body: "The best interface is the one users don't notice. If someone has to pause — even for a second — you've already lost them. I design to remove that pause.",
+  },
+  {
+    num: "02",
+    headline: "Speed is part",
+    headlineEm: "of quality.",
+    body: "Shipping a good thing late is still a failure. I move fast, learn from real users, and refine with data — not hypotheticals. Perfection is a process, not a prerequisite.",
+  },
+  {
+    num: "03",
+    headline: "Familiarity beats",
+    headlineEm: "novelty at scale.",
+    body: "When 10 million people use your product daily, a clever pattern that confuses 5% of them isn't clever at all. I design for the person who just wants to get the thing done.",
+  },
 ];
-
 
 // ── WORD CYCLE HOOK ───────────────────────────
 
@@ -109,8 +123,7 @@ const useWordCycle = (words: string[], interval = 2000) => {
 
 const Index = () => {
   const navigate = useNavigate();
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
@@ -123,31 +136,39 @@ const Index = () => {
       <section id="hero" className="min-h-screen flex flex-col pt-[60px]">
         <div className={`${wrapCls} pt-[clamp(80px,8vw,120px)] w-full`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
-            <span className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}>
+            <span
+              className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}
+            >
               <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
               Open to full-time roles
             </span>
           </motion.div>
 
           <motion.h1
-            initial="hidden" animate="visible" variants={fade} custom={1}
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
             className="text-[clamp(52px,8vw,120px)] font-normal leading-[0.96] tracking-[-0.032em]"
             style={{ fontFamily: t.displayFont }}
           >
-            Designing products<br />
-            that make <span className="italic text-primary">complexity</span><br />
+            Designing products
+            <br />
+            that make <span className="italic text-primary">complexity</span>
+            <br />
             <span className="text-muted-foreground">feel simple.</span>
           </motion.h1>
 
           <motion.div
-            initial="hidden" animate="visible" variants={fade} custom={2}
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={2}
             className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 border-t border-border mt-[52px]"
           >
             <p className="text-[15px] leading-[1.8] text-muted-foreground font-light max-w-[480px]">
-              12 years across startups and global platforms —
-              from building design systems to leading product design for{" "}
-              <span className="font-medium text-foreground">10M+ users.</span>{" "}
-              Now expanding into design with AI.
+              12 years across startups and global platforms — from building design systems to leading product design for{" "}
+              <span className="font-medium text-foreground">10M+ users.</span> Now expanding into design with AI.
             </p>
             <div className="flex gap-3 flex-wrap shrink-0">
               <button
@@ -175,7 +196,10 @@ const Index = () => {
               <span className="w-[22px] h-px bg-primary" />
               Selected Work
             </div>
-            <h2 className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]" style={{ fontFamily: t.displayFont }}>
+            <h2
+              className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]"
+              style={{ fontFamily: t.displayFont }}
+            >
               Case studies <em className="italic text-muted-foreground">worth reading</em>
             </h2>
           </motion.div>
@@ -187,9 +211,15 @@ const Index = () => {
             return (
               <motion.div
                 key={cs.num}
-                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={idx}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={idx}
                 className={`bg-secondary border border-border rounded-[20px] overflow-hidden relative group transition-all duration-300 ${
-                  isComingSoon ? "cursor-default" : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
+                  isComingSoon
+                    ? "cursor-default"
+                    : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
                 }`}
                 onClick={() => cs.link && navigate(cs.link)}
               >
@@ -201,12 +231,20 @@ const Index = () => {
                         <span className={`text-xs tracking-[0.06em] uppercase text-muted-foreground`}>{cs.num}</span>
                         <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                       </div>
-                      <h3 className="text-[clamp(26px,2.8vw,42px)] font-normal leading-[1.08] tracking-[-0.025em] mb-4" style={{ fontFamily: t.displayFont }}>
-                        {cs.title}<br /><em className="italic text-muted-foreground">{cs.titleEm}</em>
+                      <h3
+                        className="text-[clamp(26px,2.8vw,42px)] font-normal leading-[1.08] tracking-[-0.025em] mb-4"
+                        style={{ fontFamily: t.displayFont }}
+                      >
+                        {cs.title}
+                        <br />
+                        <em className="italic text-muted-foreground">{cs.titleEm}</em>
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {cs.tags.map((tag) => (
-                          <span key={tag} className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors">
+                          <span
+                            key={tag}
+                            className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
+                          >
                             {tag}
                           </span>
                         ))}
@@ -215,7 +253,12 @@ const Index = () => {
                     </div>
                     <div className="flex items-end justify-between gap-4 mt-8 pt-6 border-t border-border">
                       <div>
-                        <span className="text-[clamp(28px,3vw,40px)] font-bold tracking-[-0.04em] leading-none block" style={{ fontFamily: t.displayFont }}>{cs.statNum}</span>
+                        <span
+                          className="text-[clamp(28px,3vw,40px)] font-bold tracking-[-0.04em] leading-none block"
+                          style={{ fontFamily: t.displayFont }}
+                        >
+                          {cs.statNum}
+                        </span>
                         <span className="text-xs text-muted-foreground italic">{cs.statLabel}</span>
                       </div>
                       {!isComingSoon && (
@@ -228,41 +271,57 @@ const Index = () => {
                   </div>
 
                   {/* Visual side — animated thumbnail */}
-                  <div className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
+                  <div
+                    className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background: "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)"
+                      background:
+                        "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
                     }}
                   >
                     {/* Glow orbs */}
-                    <div className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[80px]"
-                      style={{ background: "radial-gradient(circle, hsl(12 60% 70% / 0.18) 0%, transparent 65%)" }} />
-                    <div className="absolute w-[220px] h-[220px] rounded-full -top-[50px] -right-[40px]"
-                      style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }} />
+                    <div
+                      className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[80px]"
+                      style={{ background: "radial-gradient(circle, hsl(12 60% 70% / 0.18) 0%, transparent 65%)" }}
+                    />
+                    <div
+                      className="absolute w-[220px] h-[220px] rounded-full -top-[50px] -right-[40px]"
+                      style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }}
+                    />
 
                     {cs.thumbImage && cs.thumbType === "desktop" && (
-                      <div className="absolute top-[60px] bottom-0 left-[60px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
+                      <div
+                        className="absolute top-[60px] bottom-0 left-[60px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
                         style={{
-                          background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
-                          boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)"
+                          background:
+                            "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+                          boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
                         }}
                       >
                         <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
-                          <img src={cs.thumbImage} alt={`${cs.company} preview`}
-                            className="w-full block thumb-kenburns" />
+                          <img
+                            src={cs.thumbImage}
+                            alt={`${cs.company} preview`}
+                            className="w-full block thumb-kenburns"
+                          />
                         </div>
                       </div>
                     )}
 
                     {cs.thumbImage && cs.thumbType === "mobile" && (
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2] w-[260px] md:w-[320px] rounded-[22px] rounded-b-none p-[2px] pb-0"
+                      <div
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2] w-[260px] md:w-[320px] rounded-[22px] rounded-b-none p-[2px] pb-0"
                         style={{
-                          background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
-                          boxShadow: "0 0 24px hsl(12 80% 55% / 0.25), 0 -10px 40px rgba(0,0,0,0.4)"
+                          background:
+                            "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+                          boxShadow: "0 0 24px hsl(12 80% 55% / 0.25), 0 -10px 40px rgba(0,0,0,0.4)",
                         }}
                       >
                         <div className="w-full rounded-[20px] rounded-b-none overflow-hidden bg-background">
-                          <img src={cs.thumbImage} alt={`${cs.company} preview`}
-                            className="w-full block thumb-kenburns-center" />
+                          <img
+                            src={cs.thumbImage}
+                            alt={`${cs.company} preview`}
+                            className="w-full block thumb-kenburns-center"
+                          />
                         </div>
                       </div>
                     )}
@@ -270,30 +329,39 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — background, slightly blurred for depth */}
-                        <div className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[12px] pb-0 z-[1] opacity-100 px-[7px]"
+                        <div
+                          className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[12px] pb-0 z-[1] opacity-100 px-[7px]"
                           style={{
                             transform: "scale(0.95)",
                             transformOrigin: "center bottom",
                           }}
                         >
                           <div className="w-full rounded-[12px] overflow-hidden bg-background">
-                            <img src={cs.thumbDesktop} alt={`${cs.company} desktop preview`}
-                              className="w-full block thumb-kenburns opacity-100 rounded-[12px]" />
+                            <img
+                              src={cs.thumbDesktop}
+                              alt={`${cs.company} desktop preview`}
+                              className="w-full block thumb-kenburns opacity-100 rounded-[12px]"
+                            />
                           </div>
                         </div>
 
                         {/* Mobile — foreground, sharp and zoomed in */}
-                        <div className="absolute bottom-0 right-[8%] z-[3] w-[110px] md:w-[150px] rounded-[16px] rounded-b-none p-[2px] pb-0"
+                        <div
+                          className="absolute bottom-0 right-[8%] z-[3] w-[110px] md:w-[150px] rounded-[16px] rounded-b-none p-[2px] pb-0"
                           style={{
-                            background: "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
-                            boxShadow: "0 0 30px hsl(12 80% 55% / 0.3), 0 -12px 50px rgba(0,0,0,0.5), -8px 0 20px rgba(0,0,0,0.2)",
+                            background:
+                              "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
+
                             transform: "scale(1.05)",
                             transformOrigin: "bottom right",
                           }}
                         >
                           <div className="w-full rounded-[16px] rounded-b-none overflow-hidden bg-background">
-                            <img src={cs.thumbMobile} alt={`${cs.company} mobile preview`}
-                              className="w-full block thumb-kenburns-center rounded-[16px] rounded-b-none shadow-none" />
+                            <img
+                              src={cs.thumbMobile}
+                              alt={`${cs.company} mobile preview`}
+                              className="w-full block thumb-kenburns-center rounded-[16px] rounded-b-none shadow-none"
+                            />
                           </div>
                         </div>
                       </>
@@ -301,8 +369,15 @@ const Index = () => {
 
                     {isComingSoon && (
                       <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
-                        <span className="text-[11px] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">Coming Soon</span>
-                        <span className="text-[clamp(22px,2.5vw,36px)] font-normal tracking-[-0.02em] italic" style={{ fontFamily: t.displayFont }}>In progress</span>
+                        <span className="text-[11px] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">
+                          Coming Soon
+                        </span>
+                        <span
+                          className="text-[clamp(22px,2.5vw,36px)] font-normal tracking-[-0.02em] italic"
+                          style={{ fontFamily: t.displayFont }}
+                        >
+                          In progress
+                        </span>
                       </div>
                     )}
                   </div>
@@ -324,8 +399,13 @@ const Index = () => {
         </span>
 
         <div className={`${wrapCls} relative z-[2]`}>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-            className={`flex items-center gap-3 ${t.label} text-background/30 mb-16`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`flex items-center gap-3 ${t.label} text-background/30 mb-16`}
+          >
             <span className="w-[22px] h-px bg-background/30" />
             About me
           </motion.div>
@@ -337,16 +417,28 @@ const Index = () => {
                 className="text-[clamp(32px,4vw,52px)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
-                Making sense of complexity,<br />
+                Making sense of complexity,
+                <br />
                 <em className="italic text-background/30">one system at a time.</em>
               </h2>
               <p className="text-[15px] leading-[1.85] text-background/50 mb-8">
-                For 12 years, I've been designing products that millions of people use without thinking about. That's the goal — design so clear it disappears. I've moved from execution to ownership to leadership across startups and global platforms, building systems that make design work faster, smarter, and more human.
+                For 12 years, I've been designing products that millions of people use without thinking about. That's
+                the goal — design so clear it disappears. I've moved from execution to ownership to leadership across
+                startups and global platforms, building systems that make design work faster, smarter, and more human.
               </p>
               <p className={`text-[10px] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
               <div className="flex flex-wrap gap-2">
-                {["Design Systems", "Product Strategy", "Usability Frameworks", "Competitive Analysis", "AI-assisted Design"].map((s) => (
-                  <span key={s} className="text-xs text-background/45 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default">
+                {[
+                  "Design Systems",
+                  "Product Strategy",
+                  "Usability Frameworks",
+                  "Competitive Analysis",
+                  "AI-assisted Design",
+                ].map((s) => (
+                  <span
+                    key={s}
+                    className="text-xs text-background/45 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
+                  >
                     {s}
                   </span>
                 ))}
@@ -358,10 +450,16 @@ const Index = () => {
               {/* Beliefs */}
               <div className="mb-10">
                 {beliefs.map((b, i) => (
-                  <div key={b.num} className={`grid grid-cols-[40px_1fr] gap-4 py-[22px] border-t border-background/[0.07] ${i === beliefs.length - 1 ? "border-b border-background/[0.07]" : ""}`}>
+                  <div
+                    key={b.num}
+                    className={`grid grid-cols-[40px_1fr] gap-4 py-[22px] border-t border-background/[0.07] ${i === beliefs.length - 1 ? "border-b border-background/[0.07]" : ""}`}
+                  >
                     <span className="text-[10px] tracking-[0.06em] uppercase text-background/20 pt-0.5">{b.num}</span>
                     <div>
-                      <p className="text-lg font-normal tracking-[-0.02em] text-background/90 leading-[1.2] mb-2" style={{ fontFamily: t.displayFont }}>
+                      <p
+                        className="text-lg font-normal tracking-[-0.02em] text-background/90 leading-[1.2] mb-2"
+                        style={{ fontFamily: t.displayFont }}
+                      >
                         {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
                       </p>
                       <p className="text-[13px] leading-[1.78] text-background/55">{b.body}</p>
@@ -369,7 +467,6 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-
             </motion.div>
           </div>
         </div>
@@ -378,31 +475,58 @@ const Index = () => {
       {/* ── WRITING ──────────────────────────────── */}
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="mb-14">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mb-14"
+          >
             <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
               Writing
             </div>
-            <h2 className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]" style={{ fontFamily: t.displayFont }}>
+            <h2
+              className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]"
+              style={{ fontFamily: t.displayFont }}
+            >
               Design <em className="italic text-muted-foreground">thinking</em>
             </h2>
           </motion.div>
 
           <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            custom={1}
             className="bg-secondary border border-border rounded-[14px] p-10 flex flex-col md:flex-row gap-9 items-start cursor-pointer group hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all"
             onClick={() => navigate("/blog/design-system")}
           >
-            <div className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden" style={{ background: "linear-gradient(135deg,#1a1410,var(--primary))" }}>
-              <span className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic" style={{ fontFamily: t.displayFont }}>System</span>
+            <div
+              className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden"
+              style={{ background: "linear-gradient(135deg,#1a1410,var(--primary))" }}
+            >
+              <span
+                className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic"
+                style={{ fontFamily: t.displayFont }}
+              >
+                System
+              </span>
             </div>
             <div className="flex flex-col gap-3.5 flex-1">
               <span className="text-xs tracking-[0.05em] uppercase text-primary">Mar 2026 · Featured</span>
-              <p className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.2] tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>
-                What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really Taught Me
+              <p
+                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.2] tracking-[-0.02em]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
+                Taught Me
               </p>
               <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
-                Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul taught me about building systems that actually hold — and why alignment will always matter more than components.
+                Five years. Five hard problems. What engineering gaps, tooling shifts, and a full identity overhaul
+                taught me about building systems that actually hold — and why alignment will always matter more than
+                components.
               </p>
               <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
                 Read article
@@ -418,7 +542,10 @@ const Index = () => {
         {/* Big headline */}
         <div className={`${wrapCls} mb-[clamp(48px,6vw,80px)]`}>
           <motion.h2
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
             className="text-[clamp(36px,5.5vw,80px)] font-normal leading-[0.96] tracking-[-0.035em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
@@ -434,19 +561,32 @@ const Index = () => {
         </div>
 
         {/* Three info columns */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-          className={`${wrapCls} grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-[clamp(48px,6vw,72px)]`}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fade}
+          className={`${wrapCls} grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-[clamp(48px,6vw,72px)]`}
+        >
           <div>
             <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Email</span>
-            <a href="mailto:work.chhajer@gmail.com"
+            <a
+              href="mailto:work.chhajer@gmail.com"
               className="text-[clamp(16px,1.8vw,22px)] font-normal tracking-[-0.02em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
-              style={{ fontFamily: t.displayFont }}>
+              style={{ fontFamily: t.displayFont }}
+            >
               work.chhajer@gmail.com
             </a>
           </div>
           <div>
-            <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Availability</span>
-            <span className="text-[13px] text-background/50 leading-[1.6]">Open to full-time roles<br />Based in India · Remote-friendly</span>
+            <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">
+              Availability
+            </span>
+            <span className="text-[13px] text-background/50 leading-[1.6]">
+              Open to full-time roles
+              <br />
+              Based in India · Remote-friendly
+            </span>
           </div>
           <div>
             <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Social</span>
@@ -456,8 +596,13 @@ const Index = () => {
                 { label: "Behance", href: "https://www.behance.net/prerna_Chhajer" },
                 { label: "Instagram", href: "https://www.instagram.com/_justatraveler/" },
               ].map((s) => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-[7px] px-4 py-[9px] rounded-full border border-background/15 text-xs text-background/60 tracking-[0.02em] hover:border-primary hover:text-primary hover:bg-primary/[0.06] transition-all">
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-[7px] px-4 py-[9px] rounded-full border border-background/15 text-xs text-background/60 tracking-[0.02em] hover:border-primary hover:text-primary hover:bg-primary/[0.06] transition-all"
+                >
                   {s.label}
                 </a>
               ))}
@@ -469,7 +614,9 @@ const Index = () => {
         <div className="w-full h-px bg-background/[0.08]" />
 
         {/* Bottom bar */}
-        <div className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}>
+        <div
+          className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}
+        >
           <span className="text-[11px] text-background/25 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-6">
             {[
@@ -477,10 +624,13 @@ const Index = () => {
               { label: "About", action: () => scrollTo("about") },
               { label: "Writing", action: () => scrollTo("writing") },
               { label: "Resume", action: () => navigate("/resume") },
-              { label: "Email", action: () => window.location.href = "mailto:work.chhajer@gmail.com" },
+              { label: "Email", action: () => (window.location.href = "mailto:work.chhajer@gmail.com") },
             ].map((link) => (
-              <button key={link.label} onClick={link.action}
-                className="text-[11px] text-background/25 tracking-[0.04em] hover:text-primary transition-colors">
+              <button
+                key={link.label}
+                onClick={link.action}
+                className="text-[11px] text-background/25 tracking-[0.04em] hover:text-primary transition-colors"
+              >
                 {link.label}
               </button>
             ))}
