@@ -205,7 +205,12 @@ const CaseStudyDesignSystem = () => {
         {/* Image placeholder — before/after Figma */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={3}
           className="mt-8">
-          <ImagePlaceholder label="Before / After · Component structure comparison" aspectRatio="16/5" />
+          <BeforeAfterSlider
+            beforeImage={componentOld}
+            afterImage={componentNew}
+            beforeLabel="Before"
+            afterLabel="After"
+          />
           <p className="text-center text-xs text-background/20 mt-4 tracking-wide">Component rebuild · 2022 — fewer files, more power</p>
         </motion.div>
 
