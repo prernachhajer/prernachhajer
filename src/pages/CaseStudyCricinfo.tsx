@@ -219,6 +219,118 @@ const CaseStudyCricinfo = () => {
           <h2>Three versions. Five years. One surface.</h2>
           <p>Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what changed, what didn't, and why.</p>
         </Prose>
+
+
+
+
+<div class="role-section-inner fade-in">
+    <div class="section-label">My contribution</div>
+    <div class="role-items">
+      <div class="role-item">
+        <div class="role-num">01</div>
+        <div>
+          <h3>Originated the feed → structured system shift</h3>
+          <p>The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.</p>
+        </div>
+      </div>
+      <div class="role-item">
+        <div class="role-num">02</div>
+        <div>
+          <h3>Made the case before making the design</h3>
+          <p>Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.</p>
+        </div>
+      </div>
+      <div class="role-item">
+        <div class="role-num">03</div>
+        <div>
+          <h3>Held the line on what already worked</h3>
+          <p>The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BEFORE vs AFTER -->
+<section class="bva-section" id="before-after">
+  <div class="section-label light fade-in">04 — Before vs After</div>
+  <div class="bva-grid fade-in" id="bva-bars">
+    <div class="bva-card">
+      <div class="bva-header">
+        <div class="bva-year">2021</div>
+        <div class="bva-title">Feed-first · Before</div>
+      </div>
+      <div class="bva-body">
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Ease of finding</div>
+          <div class="bva-bar-wrap"><div class="bva-bar muted" data-w="35"></div></div>
+          <div class="bva-dim-text"><strong>Works for power users.</strong> Casual users found no entry points, no hierarchy — overwhelming on first visit.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Speed of scanning content</div>
+          <div class="bva-bar-wrap"><div class="bva-bar muted" data-w="22"></div></div>
+          <div class="bva-dim-text"><strong>Chronological feed only.</strong> No thematic grouping. Hard to rediscover content. Articles dominated everything.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Scalability for new tournaments</div>
+          <div class="bva-bar-wrap"><div class="bva-bar muted" data-w="18"></div></div>
+          <div class="bva-dim-text"><strong>Non-modular.</strong> Every tournament = manual rebuild. High effort, inconsistent output, slow team velocity.</div>
+        </div>
+      </div>
+    </div>
+    <div class="bva-card">
+      <div class="bva-header">
+        <div class="bva-year">2023</div>
+        <div class="bva-title">Structured · The leap</div>
+      </div>
+      <div class="bva-body">
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Ease of finding</div>
+          <div class="bva-bar-wrap"><div class="bva-bar" data-w="62"></div></div>
+          <div class="bva-dim-text"><strong>Clear hierarchy introduced.</strong> Top Stories, In-Depth, Playlists. Better for casual users. Still too dense.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Speed of scanning content</div>
+          <div class="bva-bar-wrap"><div class="bva-bar" data-w="55"></div></div>
+          <div class="bva-dim-text"><strong>Structured zones.</strong> Better content discovery. Dark mode added. But too many items per section.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Scalability for new tournaments</div>
+          <div class="bva-bar-wrap"><div class="bva-bar good" data-w="82"></div></div>
+          <div class="bva-dim-text"><strong>Modular system.</strong> 3× component reuse. Faster builds, consistent iterations across the team.</div>
+        </div>
+      </div>
+    </div>
+    <div class="bva-card">
+      <div class="bva-header">
+        <div class="bva-year">2026</div>
+        <div class="bva-title">Simplified · After</div>
+      </div>
+      <div class="bva-body">
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Ease of finding</div>
+          <div class="bva-bar-wrap"><div class="bva-bar good" data-w="86"></div></div>
+          <div class="bva-dim-text"><strong>Cleaner mobile experience.</strong> Reduced density, shorter scroll, breathing room. Users find what they need faster.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Speed of scanning content</div>
+          <div class="bva-bar-wrap"><div class="bva-bar good" data-w="84"></div></div>
+          <div class="bva-dim-text"><strong>Mental map is clear.</strong> Users know where things live. Findability improved — especially for casual users.</div>
+        </div>
+        <div class="bva-dimension">
+          <div class="bva-dim-label">Scalability for new tournaments</div>
+          <div class="bva-bar-wrap"><div class="bva-bar good" data-w="82"></div></div>
+          <div class="bva-dim-text"><strong>Structure held.</strong> Low-performing sections removed. Same system, less noise. Personalisation still pending.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+        
         <div className={`${layout.container} mx-auto mt-12`}>
           <HomepageEvolutionCarousel />
         </div>
