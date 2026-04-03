@@ -23,6 +23,7 @@ import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import componentOld from "@/assets/component-old.jpg";
 import componentNew from "@/assets/component-new.jpg";
+import zeroheightDoc from "@/assets/zeroheight-accordion.png";
 
 const fade = animation.fade;
 
@@ -254,7 +255,9 @@ const CaseStudyDesignSystem = () => {
         {/* Documentation screenshot placeholder */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
           className={`${layout.container} mx-auto mt-8`}>
-          <ImagePlaceholder label="ZeroHeight documentation · component reference" aspectRatio="16/6" />
+          <div className="rounded-xl border border-border/30 overflow-hidden" style={{ minHeight: "680px", maxHeight: "680px", overflowY: "auto" }}>
+            <img src={zeroheightDoc} alt="ZeroHeight documentation · component reference" className="w-full" draggable={false} />
+          </div>
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">ZeroHeight documentation · 2023</p>
         </motion.div>
       </Section>
