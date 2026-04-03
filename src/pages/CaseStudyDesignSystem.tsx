@@ -78,10 +78,10 @@ const CaseStudyDesignSystem = () => {
             className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl">
             <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
             <p className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50" style={{ fontFamily: t.displayFont }}>
-              One library. Inconsistent patterns. No documentation. Teams duplicating work across every platform with no shared foundation underneath.
+              One component library. No documentation. No responsiveness. Two brands with competing philosophies and teams rebuilding the same patterns — over and over — with nothing shared underneath.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
-              {["Inconsistent components", "No documentation", "Work duplicated across platforms"].map((tag) => (
+              {["No Scalable components", "No documentation", "Work duplicated across platforms"].map((tag) => (
                 <span key={tag} className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30">{tag}</span>
               ))}
               <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">System not scaling with the product</span>
