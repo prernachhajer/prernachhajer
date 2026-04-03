@@ -539,10 +539,10 @@ const Index = () => {
             className="bg-secondary border border-border rounded-[14px] p-10 flex flex-col md:flex-row gap-9 items-start cursor-pointer group hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all mt-5"
             onClick={() => navigate("/blog/ai-portfolio")}
           >
-            <div
+    {/*        <div
               className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden"
               style={{ background: "linear-gradient(135deg,#0d1117,#58a6ff)" }}
-            >
+            > */} 
               <span
                 className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic"
                 style={{ fontFamily: t.displayFont }}
