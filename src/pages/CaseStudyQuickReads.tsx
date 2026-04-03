@@ -98,7 +98,7 @@ const CaseStudyQuickReads = () => {
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Losing to Inshorts & Instagram
               </span>
             </div>
@@ -130,7 +130,7 @@ const CaseStudyQuickReads = () => {
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Without compromising editorial integrity
               </span>
             </div>

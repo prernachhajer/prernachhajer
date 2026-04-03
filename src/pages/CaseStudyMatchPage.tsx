@@ -64,7 +64,7 @@ const CaseStudyMatchPage = () => {
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Core content buried
               </span>
             </div>
@@ -93,7 +93,7 @@ const CaseStudyMatchPage = () => {
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Less friction, same depth
               </span>
             </div>

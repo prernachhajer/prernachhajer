@@ -84,7 +84,7 @@ const CaseStudyDesignSystem = () => {
               {["No Scalable components", "No documentation", "Work duplicated across platforms"].map((tag) => (
                 <span key={tag} className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30">{tag}</span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">System not scaling with the product</span>
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">System not scaling with the product</span>
             </div>
           </motion.div>
           {/* Goal */}
@@ -98,7 +98,7 @@ const CaseStudyDesignSystem = () => {
               {["Teams build independently", "Documentation as shared language", "Design velocity"].map((tag) => (
                 <span key={tag} className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30">{tag}</span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary">Infrastructure, not decoration</span>
+              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">Infrastructure, not decoration</span>
             </div>
           </motion.div>
         </div>
