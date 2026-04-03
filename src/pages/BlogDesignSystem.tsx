@@ -206,6 +206,38 @@ const BlogDesignSystem = () => {
           </motion.h2>
         </div>
       </section>
+
+      {/* ── READ MORE ── */}
+      <section className="border-t border-border/50">
+        <div className={`${layout.containerBlog} mx-auto ${layout.px} py-16 md:py-20`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Read More</p>
+            <div
+              onClick={() => navigate("/blog/ai-portfolio")}
+              className="group cursor-pointer p-6 rounded-2xl border border-border/50 hover:bg-secondary/60 transition-all"
+            >
+              <p className={`${t.labelSm} text-muted-foreground mb-2`}>Apr 2026 · Design with AI</p>
+              <h3
+                className="text-xl md:text-2xl font-normal tracking-[-0.02em] leading-[1.2] mb-3"
+                style={{ fontFamily: t.displayFont }}
+              >
+                From zero to shipped: building a portfolio with AI
+              </h3>
+              <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground group-hover:text-foreground transition-colors">
+                Read article <ArrowRight className="h-3 w-3" />
+              </span>
+            </div>
+            <div className="mt-10 flex justify-center">
+              <button
+                onClick={() => navigate("/")}
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
+              >
+                <ArrowLeft className="h-3 w-3" /> Back to Portfolio
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
