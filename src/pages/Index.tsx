@@ -331,7 +331,7 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — large, main screenshot */}
-                        <div className="absolute inset-0 z-[1] flex items-center justify-center">
+                        <div className="absolute inset-[60px] z-[1] flex items-center justify-center">
                           <div
                             className="inline-block rounded-[10px] overflow-hidden"
                             style={{
