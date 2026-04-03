@@ -17,7 +17,7 @@ import thumbHomepage from "@/assets/thumb-homepage.png";
 import thumbDesignSystem from "@/assets/thumb-design-system.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
-import cricinfoMobile from "@/assets/cricinfo-mobile-home.jpg";
+import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 
 const fade = animation.fade;
 
