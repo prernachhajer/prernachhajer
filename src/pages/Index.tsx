@@ -341,7 +341,7 @@ const Index = () => {
                             <img
                               src={cs.thumbDesktop}
                               alt={`${cs.company} desktop preview`}
-                              className="w-full h-full object-cover object-top block thumb-kenburns rounded-[10px]"
+                              className="w-full h-full object-contain object-top block thumb-kenburns rounded-[10px]"
                             />
                           </div>
                         </div>
