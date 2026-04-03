@@ -64,7 +64,7 @@ const BeforeAfterSlider = ({
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-contain object-center"
           style={{ width: `${containerRef.current?.offsetWidth || 1000}px`, maxWidth: "none" }}
           draggable={false}
         />
