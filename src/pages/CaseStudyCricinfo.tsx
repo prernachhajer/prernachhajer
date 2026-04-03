@@ -41,6 +41,7 @@ const CaseStudyCricinfo = () => {
         headlineAccent="two chances"
         headlineEnd="to work on this page."
         tags={["Cricinfo", "Homepage Redesign", "Senior Designer → Lead", "10M+ Users", "2021 — 2026"]}
+        teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
       />
 
       {/* THE STARTING POINT — 2021 */}
