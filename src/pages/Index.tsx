@@ -551,7 +551,7 @@ const Index = () => {
               </span>
             </div>
             <div className="flex flex-col gap-3.5 flex-1">
-              <span className="text-xs tracking-[0.05em] uppercase text-primary">Apr 2025</span>
+              <span className="text-xs tracking-[0.05em] uppercase text-primary">Apr 2026 · Design with AI</span>
               <p
                 className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.2] tracking-[-0.02em]"
                 style={{ fontFamily: t.displayFont }}
