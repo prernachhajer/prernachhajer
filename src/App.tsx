@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CaseStudyCricinfo from "./pages/CaseStudyCricinfo";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
+import CaseStudyMatchPage from "./pages/CaseStudyMatchPage";
 import BlogDesignSystem from "./pages/BlogDesignSystem";
 import BlogAIPortfolio from "./pages/BlogAIPortfolio";
 import Resume from "./pages/Resume";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/case-study/cricinfo" element={<CaseStudyCricinfo />} />
           <Route path="/case-study/design-system" element={<CaseStudyDesignSystem />} />
           <Route path="/case-study/quick-reads" element={<CaseStudyQuickReads />} />
+          <Route path="/case-study/match-page" element={<CaseStudyMatchPage />} />
           <Route path="/blog/design-system" element={<BlogDesignSystem />} />
           <Route path="/blog/ai-portfolio" element={<BlogAIPortfolio />} />
           <Route path="/resume" element={<Resume />} />

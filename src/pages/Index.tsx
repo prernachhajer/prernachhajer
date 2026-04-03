@@ -76,7 +76,7 @@ const caseStudies = [
     thumbImage: null,
     statNum: "10M+",
     statLabel: "daily users",
-    link: null, // coming soon
+    link: "/case-study/match-page",
   },
 ];
 
