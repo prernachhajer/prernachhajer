@@ -274,9 +274,10 @@ const Index = () => {
                   <div
                     className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background: cs.thumbType === "cross-platform"
-                        ? "linear-gradient(145deg, hsl(28 35% 78%) 0%, hsl(22 30% 72%) 50%, hsl(18 25% 68%) 100%)"
-                        : "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
+                      background:
+                        cs.thumbType === "cross-platform"
+                          ? "linear-gradient(145deg, hsl(28 35% 78%) 0%, hsl(22 30% 72%) 50%, hsl(18 25% 68%) 100%)"
+                          : "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
                     }}
                   >
                     {/* Glow orbs */}
@@ -330,10 +331,9 @@ const Index = () => {
                     {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
                       <>
                         {/* Desktop — large, main screenshot */}
-                        <div
-                          className="absolute top-[32px] bottom-[12px] left-[32px] right-[60px] z-[1]"
-                        >
-                          <div className="w-full h-full rounded-[10px] overflow-hidden"
+                        <div className="absolute top-[32px] bottom-[12px] left-[32px] right-[60px] z-[1]">
+                          <div
+                            className="w-full h-full rounded-[10px] overflow-hidden"
                             style={{
                               boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
                             }}
@@ -350,7 +350,6 @@ const Index = () => {
                         <div
                           className="absolute bottom-0 right-[16px] z-[3] w-[120px] md:w-[160px] rounded-[14px] rounded-b-none p-[3px] pb-0"
                           style={{
-                            background: "hsl(220 70% 50%)",
                             boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
                           }}
                         >
