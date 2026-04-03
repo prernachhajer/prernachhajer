@@ -8,6 +8,7 @@ import CaseStudyCricinfo from "./pages/CaseStudyCricinfo";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
 import BlogDesignSystem from "./pages/BlogDesignSystem";
+import BlogAIPortfolio from "./pages/BlogAIPortfolio";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/case-study/design-system" element={<CaseStudyDesignSystem />} />
           <Route path="/case-study/quick-reads" element={<CaseStudyQuickReads />} />
           <Route path="/blog/design-system" element={<BlogDesignSystem />} />
+          <Route path="/blog/ai-portfolio" element={<BlogAIPortfolio />} />
           <Route path="/resume" element={<Resume />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
