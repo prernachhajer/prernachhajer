@@ -543,6 +543,13 @@ const allCaseStudies = [
     tags: ["Mobile", "iOS & Android"],
     path: "/case-study/quick-reads",
   },
+  {
+    slug: "match-page",
+    title: "Match Page Optimization",
+    description: "Untangling 15 tabs so users could find what they came for",
+    tags: ["UX Optimisation", "Android & iOS"],
+    path: "/case-study/match-page",
+  },
 ];
 
 export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
