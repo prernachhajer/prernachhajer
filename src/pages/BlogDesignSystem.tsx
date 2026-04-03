@@ -68,6 +68,7 @@ const beliefs = [
 ];
 
 const BlogDesignSystem = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <NavCaseStudy period="2019 — 2024" />
