@@ -212,7 +212,7 @@ const BlogAIPortfolio = () => {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             className="text-sm text-muted-foreground leading-relaxed"
           >
-            Written by a lead product designer exploring what it means to build with AI — not just use it.
+            Written by a designer exploring what it means to build with AI — not just use it.
           </motion.p>
         </div>
       </section>
