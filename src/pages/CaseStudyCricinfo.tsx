@@ -410,7 +410,7 @@ const CaseStudyCricinfo = () => {
       {/* BEFORE vs AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel className="text-muted-foreground">04 — Before vs After</SectionLabel>
+          <SectionLabel dark>04 — Before vs After</SectionLabel>
           <div className="grid md:grid-cols-3 gap-4 mt-12">
             {[
               {
