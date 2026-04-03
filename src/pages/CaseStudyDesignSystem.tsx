@@ -57,10 +57,15 @@ const CaseStudyDesignSystem = () => {
             </p>
           </motion.div>
 
-          {/* Before state — image placeholder */}
+          {/* Cricinfo Figma Library before/after */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-            <ImagePlaceholder label="Figma library · 2021 state" aspectRatio="16/6" />
-            <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Cricinfo Figma Library · 2021 — before the system</p>
+            <BeforeAfterSlider
+              beforeImage={dsOld}
+              afterImage={dsNew}
+              beforeLabel="Before"
+              afterLabel="After"
+            />
+            <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Cricinfo Figma Library · 2021</p>
           </motion.div>
         </div>
       </section>
