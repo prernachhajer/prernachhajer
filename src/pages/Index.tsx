@@ -348,7 +348,7 @@ const Index = () => {
 
                         {/* Mobile — foreground, overlapping bottom-right */}
                         <div
-                          className="absolute bottom-40 right-[16px] z-[3] w-[120px] md:w-[120px] rounded-[14px] rounded-b-none p-[3px] pb-0 px-0 py-0"
+                          className="absolute bottom-12 right-[16px] z-[3] w-[120px] md:w-[120px] rounded-[14px] rounded-b-none p-[3px] pb-0 px-0 py-0"
                           style={{
                             background: "hsl(220 70% 50%)",
                             boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
