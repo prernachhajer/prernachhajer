@@ -534,18 +534,19 @@ const CaseStudyCricinfo = () => {
           </div>
         </section>
 
-        <Prose>
-          <h2>Three versions. Five years. One surface.</h2>
-          <p>
-            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
-            changed, what didn't, and why.
-          </p>
-        </Prose>
+        <section className={`${spacing.sectionGap} ${layout.px}`}>
+          <Prose>
+            <h2>Three versions. Five years. One surface.</h2>
+            <p>
+              Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
+              changed, what didn't, and why.
+            </p>
+          </Prose>
 
-        <div className={`${layout.container} mx-auto mt-12`}>
-          <HomepageEvolutionCarousel />
-        </div>
-      </section>
+          <div className={`${layout.container} mx-auto mt-12`}>
+            <HomepageEvolutionCarousel />
+          </div>
+        </section>
 
       {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
       <Section label="05 — Design Decisions">
