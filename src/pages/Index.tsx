@@ -274,7 +274,8 @@ const Index = () => {
                   <div
                     className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background: "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
+                      background:
+                        "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
                     }}
                   >
                     {/* Glow orbs */}
@@ -539,10 +540,10 @@ const Index = () => {
             className="bg-secondary border border-border rounded-[14px] p-10 flex flex-col md:flex-row gap-9 items-start cursor-pointer group hover:bg-muted hover:-translate-y-1 hover:border-primary/20 transition-all mt-5"
             onClick={() => navigate("/blog/ai-portfolio")}
           >
-    {/*        <div
+            <div
               className="rounded-[10px] w-full md:w-[240px] shrink-0 aspect-[4/3] flex items-center justify-center overflow-hidden"
               style={{ background: "linear-gradient(135deg,#0d1117,#58a6ff)" }}
-            > */} 
+            >
               <span
                 className="text-white/[0.08] text-[clamp(22px,2.5vw,36px)] font-bold italic"
                 style={{ fontFamily: t.displayFont }}
@@ -560,8 +561,8 @@ const Index = () => {
                 <em className="italic text-muted-foreground">with AI</em>
               </p>
               <p className="text-[13px] leading-[1.78] text-muted-foreground max-w-[520px]">
-                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely
-                with AI. The honest story of curiosity, tools, and what it changed about how I design.
+                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The
+                honest story of curiosity, tools, and what it changed about how I design.
               </p>
               <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 w-fit group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all mt-2">
                 Read article
