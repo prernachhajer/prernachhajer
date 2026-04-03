@@ -325,7 +325,7 @@ const CaseStudyDesignSystem = () => {
         {/* Font exploration placeholder */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
           className={`${layout.container} mx-auto mt-4`}>
-          <img src={fontExploration} alt="Typography exploration showing font candidates side by side" className="w-full rounded-xl" />
+          <img src={fontExploration} alt="Typography exploration showing font candidates side by side" className="w-full my-0 mx-0 px-[20px] py-[20px] border border-solid rounded-lg" />
           <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Font evaluation process · 2025</p>
         </motion.div>
 
