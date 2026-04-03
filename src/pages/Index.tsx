@@ -354,7 +354,7 @@ const Index = () => {
                             boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
                           }}
                         >
-                          <div className="w-full rounded-[12px] rounded-b-none overflow-hidden">
+                          <div className="w-full rounded-[12px] rounded-b-12px overflow-hidden">
                             <img
                               src={cs.thumbMobile}
                               alt={`${cs.company} mobile preview`}
