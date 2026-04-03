@@ -75,7 +75,7 @@ export const NavCaseStudy = ({ period }: { period: string }) => {
         onClick={() => navigate("/")}
         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
       >
-        <ArrowLeft className="h-4 w-4" /> Back to Home
+        <ArrowLeft className="h-4 w-4" /> Back to Portfolio
       </button>
       <span className={`${t.labelSm} text-muted-foreground`}>{period}</span>
     </nav>
