@@ -332,7 +332,7 @@ const Index = () => {
                         <div
                           className="absolute top-[40px] bottom-0 left-[30px] right-[-30%] rounded-[12px] pb-0 z-[1] opacity-100 px-[7px]"
                           style={{
-                            transform: "scale(0.95)",
+                            transform: "scale(0.75)",
                             transformOrigin: "center bottom",
                           }}
                         >
