@@ -345,7 +345,7 @@ const CaseStudyMatchPage = () => {
               {
                 label: "Stats · MVP · Fantasy · Overs → one tab",
                 title: "Group by user intent, not content type",
-                desc: "A user asking "how did we get here?" wants the over breakdown, dismissal stats, player ratings, and match report. That's one person, one intent. Four tabs for one intent is four too many.",
+                desc: "A user asking \u201Chow did we get here?\u201D wants the over breakdown, dismissal stats, player ratings, and match report. That\u2019s one person, one intent. Four tabs for one intent is four too many.",
               },
               {
                 label: "Live blog + Commentary → one tab, two sub-tabs",
