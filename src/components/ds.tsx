@@ -378,11 +378,31 @@ export const CaseStudyHero = ({
       ))}
     </motion.div>
 
+    {teams && teams.length > 0 && (
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fade}
+        custom={3}
+        className="mt-7 flex items-center gap-2 justify-center flex-wrap"
+      >
+        <span className={`${t.labelSm} text-muted-foreground/50 mr-1`}>Team</span>
+        {teams.map((member) => (
+          <span
+            key={member}
+            className="text-[11px] text-muted-foreground bg-card px-3.5 py-1.5 rounded-full"
+          >
+            {member}
+          </span>
+        ))}
+      </motion.div>
+    )}
+
     <motion.div
       initial="hidden"
       animate="visible"
       variants={fade}
-      custom={3}
+      custom={teams && teams.length > 0 ? 4 : 3}
       className={`mt-20 flex flex-col items-center gap-3 ${t.labelSm} text-muted-foreground`}
     >
       <span>Scroll</span>
