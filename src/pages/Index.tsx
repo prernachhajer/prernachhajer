@@ -274,8 +274,9 @@ const Index = () => {
                   <div
                     className="relative overflow-hidden min-h-[220px] flex items-center justify-center"
                     style={{
-                      background:
-                        "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
+                      background: cs.thumbType === "cross-platform"
+                        ? "linear-gradient(145deg, hsl(28 35% 78%) 0%, hsl(22 30% 72%) 50%, hsl(18 25% 68%) 100%)"
+                        : "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
                     }}
                   >
                     {/* Glow orbs */}
