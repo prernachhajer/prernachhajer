@@ -43,7 +43,7 @@ const BeforeAfterSlider = ({
     <div
       ref={containerRef}
       className="relative w-full overflow-hidden rounded-xl border border-border/30 cursor-col-resize select-none"
-      style={{ aspectRatio: "16/5" }}
+      style={{ height: "733px" }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
