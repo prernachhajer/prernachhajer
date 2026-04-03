@@ -350,7 +350,7 @@ const Index = () => {
                         <div
                           className="absolute bottom-0 right-[16px] z-[3] w-[120px] md:w-[160px] rounded-[14px] rounded-b-none p-[3px] pb-0"
                           style={{
-                            background: "hsl(220 50% 30%)",
+                            background: "hsl(320 70% 20%)",
                             boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
                           }}
                         >
