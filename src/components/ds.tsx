@@ -200,7 +200,7 @@ export const Prose = ({ children }: { children: React.ReactNode }) => (
     whileInView="visible"
     viewport={{ once: true }}
     variants={fade}
-    className={`max-w-3xl mx-auto 
+    className={`max-w-3xl mx-auto my-[49px]
       [&_h2]:${t.h2} [&_h2]:mb-6 [&_h2]:leading-[1.1]
       [&_h3]:text-xs [&_h3]:tracking-widest [&_h3]:uppercase [&_h3]:text-muted-foreground [&_h3]:font-medium [&_h3]:mb-4 [&_h3]:mt-12
       [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-5 [&_p:last-child]:mb-0`}
