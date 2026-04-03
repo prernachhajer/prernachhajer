@@ -75,7 +75,7 @@ export const NavCaseStudy = ({ period }: { period: string }) => {
         onClick={() => navigate("/")}
         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
       >
-        <ArrowLeft className="h-4 w-4" /> Back to Home
+        <ArrowLeft className="h-4 w-4" /> Back to Portfolio
       </button>
       <span className={`${t.labelSm} text-muted-foreground`}>{period}</span>
     </nav>
@@ -487,7 +487,7 @@ export const ClosingSection = ({
           onClick={() => navigate("/")}
           className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
         >
-          <ArrowLeft className="h-3 w-3" /> Back to Home
+          <ArrowLeft className="h-3 w-3" /> Back to Portfolio
         </button>
       </motion.div>
     </section>
