@@ -469,7 +469,7 @@ const CaseStudyMatchPage = () => {
             },
             decision: {
               title: "Group by user intent, not content type.",
-              desc: "The user asking "how did we get here?" wants all four. That's one person, one intent. Four tabs for one intent is four too many.",
+              desc: "The user asking \u201Chow did we get here?\u201D wants all four. That\u2019s one person, one intent. Four tabs for one intent is four too many.",
             },
             tradeoff: {
               title: "\u201CThe tab name can no longer describe everything inside it.\u201D",
