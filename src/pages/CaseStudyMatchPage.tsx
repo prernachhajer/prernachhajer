@@ -32,6 +32,7 @@ const CaseStudyMatchPage = () => {
         headlineAccent="15 tabs."
         headlineEnd="Users couldn't find anything."
         tags={["Cricinfo", "Match Page Optimization", "Senior Designer", "Android & iOS"]}
+        teams={["Sr. Product Designer", "Product Manager"]}
       />
 
       {/* 01 — PROBLEM */}
