@@ -30,7 +30,7 @@ const CaseStudyMatchPage = () => {
       {/* HERO */}
       <CaseStudyHero
         headline="The match page had"
-        headlineAccent="15 tabs."
+        headlineAccent="14 tabs."
         headlineEnd="Users couldn't find anything."
         tags={["Cricinfo", "Match Page Optimization", "Senior Designer", "Android & iOS"]}
         teams={["Sr. Product Designer", "Product Manager"]}
