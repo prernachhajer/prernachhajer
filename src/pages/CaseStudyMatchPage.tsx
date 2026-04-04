@@ -6,6 +6,7 @@
 import { motion } from "framer-motion";
 import matchTabsImg from "@/assets/match-page-tabs.png";
 import matchSolutionImg from "@/assets/match-page-solution.png";
+import matchSolution2Img from "@/assets/match-page-solution2.png";
 import {
   NavCaseStudy,
   CaseStudyHero,
@@ -471,6 +472,16 @@ const CaseStudyMatchPage = () => {
               );
             })}
           </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mt-10 rounded-xl overflow-hidden"
+          >
+            <img src={matchSolution2Img} alt="Cross-tab content snacking — Summary, Live, Scorecard and Commentary views" className="w-full" loading="lazy" />
+          </motion.div>
         </div>
       </section>
 
