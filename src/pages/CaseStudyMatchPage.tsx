@@ -583,7 +583,7 @@ const CaseStudyMatchPage = () => {
                 className="text-6xl md:text-7xl font-normal text-primary leading-none"
                 style={{ fontFamily: t.displayFont }}
               >
-                15→7
+                14→7
               </p>
               <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mt-2">
                 Peak tab count
