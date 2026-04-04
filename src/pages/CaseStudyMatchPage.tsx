@@ -125,7 +125,7 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 label: "Peak tab count · Post-match",
-                num: "15→7",
+                num: "14→7",
                 title: "More than halved — no features removed",
                 desc: "Every tab that disappeared was merged into a logical group, not deleted.",
               },
