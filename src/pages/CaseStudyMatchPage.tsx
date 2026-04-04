@@ -402,9 +402,15 @@ const CaseStudyMatchPage = () => {
             })}
           </div>
 
-          <div className="mt-10">
-            <ImagePlaceholder label="Before vs after — same match state (post-match), old 15-tab list vs new 7-tab structure" />
-          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mt-10 rounded-xl overflow-hidden"
+          >
+            <img src={matchSolutionImg} alt="Four match states showing reduced tab counts — Pre-match 6 tabs, Live 6 tabs, Scorecard 6 tabs, Post-match 8 tabs" className="w-full" loading="lazy" />
+          </motion.div>
 
           {/* Solution 2 — Cross-tab content snacking */}
           <motion.p
