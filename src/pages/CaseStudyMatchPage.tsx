@@ -284,7 +284,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Live blog + Commentary", bold: true },
                   { text: "Fantasy + Stats", bold: true },
                   "Table",
-                  "Media",
+                  "News + Photos + Videos",
                   { text: "Playing XI", bold: true },
                 ],
               },
