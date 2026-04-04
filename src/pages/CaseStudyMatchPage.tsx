@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────
 
 import { motion } from "framer-motion";
+import matchTabsImg from "@/assets/match-page-tabs.png";
 import {
   NavCaseStudy,
   CaseStudyHero,
@@ -100,9 +101,20 @@ const CaseStudyMatchPage = () => {
           </motion.div>
         </div>
 
-        <div className="mt-10">
-          <ImagePlaceholder label="Old match page — post-match state showing all 15 tabs, annotated to show how far a user must scroll to reach Points table, Report, or Overs" />
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fade}
+          className="mt-10 rounded-xl overflow-hidden"
+        >
+          <img
+            src={matchTabsImg}
+            alt="Old match page showing 12 tabs during live match and 14 tabs post match"
+            className="w-full"
+            loading="lazy"
+          />
+        </motion.div>
       </DarkSection>
 
       {/* 02 — IMPACT */}
