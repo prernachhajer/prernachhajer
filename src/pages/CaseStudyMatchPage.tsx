@@ -309,7 +309,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Live blog + Commentary", bold: true },
                   { text: "MVP + Fantasy + Stats + Overs", bold: true },
                   "Table",
-                  "Media",
+                  "News + Photos + Videos",
                   { text: "Fan rating", bold: true },
                 ],
               },
