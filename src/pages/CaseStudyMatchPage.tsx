@@ -30,7 +30,7 @@ const CaseStudyMatchPage = () => {
       {/* HERO */}
       <CaseStudyHero
         headline="The match page had"
-        headlineAccent="15 tabs."
+        headlineAccent="14 tabs."
         headlineEnd="Users couldn't find anything."
         tags={["Cricinfo", "Match Page Optimization", "Senior Designer", "Android & iOS"]}
         teams={["Sr. Product Designer", "Product Manager"]}
@@ -125,7 +125,7 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 label: "Peak tab count · Post-match",
-                num: "15→7",
+                num: "14→7",
                 title: "More than halved — no features removed",
                 desc: "Every tab that disappeared was merged into a logical group, not deleted.",
               },
@@ -272,7 +272,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Fantasy + Stats", bold: true },
                   "Squad",
                   "Table",
-                  { text: "Media", bold: true },
+                  { text: "News + Photos + Videos", bold: true },
                 ],
               },
               {
@@ -284,7 +284,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Live blog + Commentary", bold: true },
                   { text: "Fantasy + Stats", bold: true },
                   "Table",
-                  "Media",
+                  "News + Photos + Videos",
                   { text: "Playing XI", bold: true },
                 ],
               },
@@ -297,7 +297,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Live blog + Commentary", bold: true },
                   { text: "Stats + Overs + Fantasy", bold: true },
                   "Table",
-                  "Media",
+                  "News + Photos + Videos",
                 ],
               },
               {
@@ -309,7 +309,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Live blog + Commentary", bold: true },
                   { text: "MVP + Fantasy + Stats + Overs", bold: true },
                   "Table",
-                  "Media",
+                  "News + Photos + Videos",
                   { text: "Fan rating", bold: true },
                 ],
               },
@@ -583,7 +583,7 @@ const CaseStudyMatchPage = () => {
                 className="text-6xl md:text-7xl font-normal text-primary leading-none"
                 style={{ fontFamily: t.displayFont }}
               >
-                15→7
+                14→7
               </p>
               <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mt-2">
                 Peak tab count
