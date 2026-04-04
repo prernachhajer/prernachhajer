@@ -272,7 +272,7 @@ const CaseStudyMatchPage = () => {
                   { text: "Fantasy + Stats", bold: true },
                   "Squad",
                   "Table",
-                  { text: "Media", bold: true },
+                  { text: "News + Photos + Videos", bold: true },
                 ],
               },
               {
