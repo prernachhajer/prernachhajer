@@ -5,6 +5,7 @@
 
 import { motion } from "framer-motion";
 import matchTabsImg from "@/assets/match-page-tabs.png";
+import matchSolutionImg from "@/assets/match-page-solution.png";
 import {
   NavCaseStudy,
   CaseStudyHero,
