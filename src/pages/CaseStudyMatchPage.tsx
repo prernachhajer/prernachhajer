@@ -472,6 +472,16 @@ const CaseStudyMatchPage = () => {
               );
             })}
           </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mt-10 rounded-xl overflow-hidden"
+          >
+            <img src={matchSolution2Img} alt="Cross-tab content snacking — Summary, Live, Scorecard and Commentary views" className="w-full" loading="lazy" />
+          </motion.div>
         </div>
       </section>
 
