@@ -242,14 +242,14 @@ const Index = () => {
                         <em className="italic text-muted-foreground">{cs.titleEm}</em>
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {cs.tags.map((tag) => (
-                          <span
+                        {cs.tags.map((tag) => ({
+                          /*  <span
                             key={tag}
                             className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
                           >
                             {tag}
-                          </span>
-                        ))}
+                          </span>  */
+                        }))}
                       </div>
                       <p className="text-sm leading-[1.85] text-muted-foreground">{cs.desc}</p>
                     </div>
