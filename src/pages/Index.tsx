@@ -290,20 +290,26 @@ const Index = () => {
                       style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }}
                     />
 
-                    {cs.thumbImage && cs.thumbType === "desktop" && (
+                    {cs.thumbImage && cs.thumbType === "desktop" && cs.thumbContain && (
+                      <img
+                        src={cs.thumbImage}
+                        alt={`${cs.company} preview`}
+                        className="absolute top-[60px] bottom-[40px] left-[60px] right-[60px] z-[2] object-contain thumb-kenburns"
+                      />
+                    )}
+
+                    {cs.thumbImage && cs.thumbType === "desktop" && !cs.thumbContain && (
                       <div
-                        className={`absolute z-[2] ${cs.thumbContain ? "top-[60px] bottom-[40px] left-[60px] right-[60px] rounded-[10px] p-0" : "top-[60px] bottom-0 left-[40px] right-[40px] rounded-[10px] rounded-b-none p-[2px] pb-0"}`}
+                        className="absolute z-[2] top-[60px] bottom-0 left-[40px] right-[40px] rounded-[10px] rounded-b-none p-[2px] pb-0"
                         style={{
                           boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
                         }}
                       >
-                        <div
-                          className={`w-full overflow-hidden ${cs.thumbContain ? "h-full rounded-[8px] bg-black" : "rounded-[8px] rounded-b-none bg-background"}`}
-                        >
+                        <div className="w-full overflow-hidden rounded-[8px] rounded-b-none bg-background">
                           <img
                             src={cs.thumbImage}
                             alt={`${cs.company} preview`}
-                            className={`w-full block thumb-kenburns ${cs.thumbContain ? "h-full object-contain" : ""}`}
+                            className="w-full block thumb-kenburns"
                           />
                         </div>
                       </div>
