@@ -291,7 +291,7 @@ const Index = () => {
 
                     {cs.thumbImage && cs.thumbType === "desktop" && (
                       <div
-                        className="absolute top-[60px] bottom-0 left-[60px] right-[60px] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
+                        className="absolute top-[60px] bottom-0 left-[60px] right-[60px] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2] py-0 px-0"
                         style={{
                           boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
                         }}
