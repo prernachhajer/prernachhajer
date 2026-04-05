@@ -293,8 +293,6 @@ const Index = () => {
                       <div
                         className="absolute top-[60px] bottom-0 left-[60px] right-[-60%] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2]"
                         style={{
-                          background:
-                            "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
                           boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
                         }}
                       >
@@ -507,11 +505,12 @@ const Index = () => {
                 className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
-                What Building a Design System Over{" "}
-                <em className="italic text-muted-foreground">Five Years</em> Really Taught Me
+                What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
+                Taught Me
               </h3>
               <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
-                Five years. Five hard problems. Engineering gaps, tooling shifts, and a full identity overhaul — why alignment matters more than components.
+                Five years. Five hard problems. Engineering gaps, tooling shifts, and a full identity overhaul — why
+                alignment matters more than components.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-foreground group-hover:text-primary transition-colors">
                 Read article
@@ -538,7 +537,8 @@ const Index = () => {
                 <em className="italic text-muted-foreground">with AI</em>
               </h3>
               <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
-                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The honest story of curiosity, tools, and what it changed.
+                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The
+                honest story of curiosity, tools, and what it changed.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-foreground group-hover:text-primary transition-colors">
                 Read article
