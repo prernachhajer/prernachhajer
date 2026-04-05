@@ -274,7 +274,7 @@ const Index = () => {
 
                   {/* Visual side — animated thumbnail */}
                   <div
-                    className="relative overflow-hidden min-h-[220px] flex items-center justify-center my-[0px] px-0"
+                    className="relative overflow-hidden min-h-[220px] my-[0px] px-0 gap-0 flex items-end justify-end"
                     style={{
                       background:
                         "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
