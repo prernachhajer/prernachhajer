@@ -298,7 +298,7 @@ const Index = () => {
                         }}
                       >
                         <div
-                          className={w-full rounded-[8px] rounded-b-none overflow-hidden ${cs.thumbContain ? "bg-black" : "bg-background"}}
+                          className={`w-full rounded-[8px] rounded-b-none overflow-hidden ${cs.thumbContain ? "bg-black" : "bg-background"}`}
                         >
                           <img
                             src={cs.thumbImage}
