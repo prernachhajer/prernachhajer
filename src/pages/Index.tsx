@@ -366,7 +366,7 @@ const Index = () => {
                           <img
                             src={cs.thumbMobile}
                             alt={`${cs.company} mobile preview`}
-                            className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-none"
+                            className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-12px"
                           />
                         </div>
                       </>
