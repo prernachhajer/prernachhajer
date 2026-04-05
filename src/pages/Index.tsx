@@ -74,7 +74,7 @@ const caseStudies = [
     desc: "Untangling an overloaded page so that 10M+ fans could find what they came for. Simplifying without losing depth — the hardest kind of design problem.",
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
     thumbType: "desktop" as const,
-    thumbImage: null,
+    thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
     link: "/case-study/match-page",
