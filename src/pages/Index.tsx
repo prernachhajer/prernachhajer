@@ -300,7 +300,7 @@ const Index = () => {
                           <img
                             src={cs.thumbImage}
                             alt={`${cs.company} preview`}
-                            className="w-full block thumb-kenburns"
+                            className="w-full block thumb-kenburns px-0 mx-0 py-0 bg-black"
                           />
                         </div>
                       </div>
