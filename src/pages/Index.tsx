@@ -16,6 +16,7 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage.png";
 import thumbDesignSystem from "@/assets/thumb-design-system.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
+import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
 import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 
