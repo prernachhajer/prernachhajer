@@ -295,7 +295,7 @@ const Index = () => {
                       <img
                         src={cs.thumbImage}
                         alt={`${cs.company} preview`}
-                        className="absolute inset-0 m-auto rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[80%] max-w-[85%]"
+                        className="absolute inset-0 m-auto rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[70%] max-w-[75%]"
                       />
                     )}
 
