@@ -282,7 +282,7 @@ const Index = () => {
                   >
                     {/* Glow orbs */}
                     <div
-                      className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[80px]"
+                      className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[40px]"
                       style={{ background: "radial-gradient(circle, hsl(12 60% 70% / 0.18) 0%, transparent 65%)" }}
                     />
                     <div
