@@ -14,7 +14,7 @@ import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
 import thumbHomepage from "@/assets/thumb-homepage.png";
-import thumbDesignSystem from "@/assets/thumb-design-system.png";
+import thumbDesignSystem from "@/assets/thumb-design-system-new.jpg";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
