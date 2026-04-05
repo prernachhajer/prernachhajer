@@ -292,16 +292,16 @@ const Index = () => {
 
                     {cs.thumbImage && cs.thumbType === "desktop" && (
                       <div
-                        className="absolute top-[60px] bottom-0 left-[60px] right-[60px] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2] py-0 px-0"
+                        className={`absolute top-[60px] bottom-0 left-[60px] right-[60px] rounded-[10px] rounded-b-none p-[2px] pb-0 z-[2] ${cs.thumbContain ? "py-0 px-0" : ""}`}
                         style={{
                           boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
                         }}
                       >
-                        <div className="w-full rounded-[8px] rounded-b-none overflow-hidden bg-background">
+                        <div className={`w-full rounded-[8px] rounded-b-none overflow-hidden ${cs.thumbContain ? "bg-black" : "bg-background"}`}>
                           <img
                             src={cs.thumbImage}
                             alt={`${cs.company} preview`}
-                            className="w-full h-full object-contain object-top block thumb-kenburns px-0 mx-0 py-0 bg-black"
+                            className={`w-full block thumb-kenburns ${cs.thumbContain ? "h-full object-contain object-top" : ""}`}
                           />
                         </div>
                       </div>
