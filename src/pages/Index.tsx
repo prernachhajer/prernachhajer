@@ -14,7 +14,7 @@ import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
 import thumbHomepage from "@/assets/thumb-homepage.png";
-import thumbDesignSystem from "@/assets/thumb-design-system.png";
+import thumbDesignSystem from "@/assets/thumb-design-system-new.jpg";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
@@ -47,10 +47,9 @@ const caseStudies = [
     titleEm: "Backbone",
     desc: "How a single Figma library grew into a 170-file design system powering a global cricket platform — five phases, one team, and a complete Figma overhaul.",
     tags: ["Design System", "Systems Thinking", "Figma"],
-    thumbType: "cross-platform" as const,
+    thumbType: "desktop" as const,
+    thumbContain: true,
     thumbImage: thumbDesignSystem,
-    thumbDesktop: cricinfoDesktop,
-    thumbMobile: cricinfoMobile,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
