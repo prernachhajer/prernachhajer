@@ -362,6 +362,12 @@ const Index = () => {
                           }}
                         >
                           <div className="w-full rounded-[12px] rounded-b-12px overflow-hidden"></div>
+
+                          <img
+                            src={cs.thumbMobile}
+                            alt={`${cs.company} mobile preview`}
+                            className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-none"
+                          />
                         </div>
                       </>
                     )}
