@@ -1,22 +1,33 @@
 
 
-## Plan: Place Match Page thumbnail directly on gradient
+## Plan: Change Design System thumbnail to cross-platform style
 
-**Goal**: Remove the intermediate black background container and place the PNG image directly on the card's gradient background, so the image floats naturally on the gradient.
+**Goal**: Update the Design System case study card (02/04) to use the same cross-platform thumbnail layout as the Homepage card — a desktop mockup centered with a mobile mockup overlapping at the bottom-right corner.
 
 **Changes in `src/pages/Index.tsx`**:
 
-1. **When `thumbContain` is true** (line 295-309): Remove the outer border/shadow container and the inner `bg-black` wrapper. Instead, render the image directly as an absolutely positioned element on the gradient card.
+1. **Update the case study data** (lines 43-55): Change `thumbType` from `"desktop"` to `"cross-platform"`, add `thumbDesktop` and `thumbMobile` properties pointing to `cricinfoDesktop` and `cricinfoMobile` (same images used by the Homepage card).
 
-2. **Updated markup for `thumbContain` case**:
+2. **Remove unused `thumbImage`** from this entry since the cross-platform type uses `thumbDesktop` and `thumbMobile` instead.
+
+**Updated data entry**:
 ```tsx
-// Replace the current container+wrapper+img with a single img
-<img
-  src={cs.thumbImage}
-  alt={`${cs.company} preview`}
-  className="absolute top-[60px] bottom-[40px] left-[60px] right-[60px] z-[2] object-contain thumb-kenburns"
-/>
+{
+  num: "02 / 04",
+  company: "ESPN Cricinfo",
+  title: "Building the",
+  titleEm: "Backbone",
+  desc: "...",
+  tags: ["Design System", "Systems Thinking", "Figma"],
+  thumbType: "cross-platform" as const,
+  thumbImage: thumbDesignSystem,
+  thumbDesktop: cricinfoDesktop,
+  thumbMobile: cricinfoMobile,
+  statNum: "170+",
+  statLabel: "files in system",
+  link: "/case-study/design-system",
+}
 ```
 
-This removes the `rounded-[10px]` border container, the `boxShadow`, and the `bg-black` inner div — the PNG sits directly on the gradient with glow orbs visible behind/around it. The non-`thumbContain` thumbnails remain unchanged.
+No rendering logic changes needed — the existing cross-platform rendering block (lines 337-372) handles the desktop + mobile layout already.
 
