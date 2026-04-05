@@ -295,7 +295,7 @@ const Index = () => {
                       <img
                         src={cs.thumbImage}
                         alt={`${cs.company} preview`}
-                        className="absolute top-[60px] bottom-[40px] left-[60px] right-[60px] rounded-[12px]  z-[2] object-contain thumb-kenburns py-[24px]"
+                        className="absolute bottom-0 right-0 rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[85%] max-w-[90%]"
                       />
                     )}
 
