@@ -1,26 +1,22 @@
 
 
-## Plan: Center Match Page thumbnail and unify border radius
+## Plan: Place Match Page thumbnail directly on gradient
 
-**What changed**: The Match Page thumbnail (which uses `thumbContain: true`) currently has `left-[40px] right-[40px]` positioning and mixed border radii (`rounded-b-none`). We need to center it horizontally and apply uniform border radius on all corners.
+**Goal**: Remove the intermediate black background container and place the PNG image directly on the card's gradient background, so the image floats naturally on the gradient.
 
 **Changes in `src/pages/Index.tsx`**:
 
-1. **Center the thumbnail container** (line 295): Replace `left-[40px] right-[40px]` with centered positioning using `left-1/2 -translate-x-1/2` and a fixed width, or use equal insets with `mx-auto`. Keep `top-[60px]` and remove `bottom-0` so it doesn't stretch to the bottom edge.
+1. **When `thumbContain` is true** (line 295-309): Remove the outer border/shadow container and the inner `bg-black` wrapper. Instead, render the image directly as an absolutely positioned element on the gradient card.
 
-2. **Uniform border radius**: Remove `rounded-b-none` from both the outer container (line 295) and inner div (line 301), keeping `rounded-[10px]` and `rounded-[8px]` respectively on all corners.
-
-3. **Scope changes to `thumbContain` only**: Use the existing `cs.thumbContain` conditional to apply these styles only to the Match Page card, leaving other desktop thumbnails unchanged.
-
-**Resulting markup** (for the `thumbContain` case):
+2. **Updated markup for `thumbContain` case**:
 ```tsx
-// Outer container: centered, uniform radius
-className="absolute top-[60px] bottom-[40px] left-[60px] right-[60px] rounded-[10px] p-[2px] z-[2] py-0 px-0"
-
-// Inner div: uniform radius
-className="w-full h-full rounded-[8px] overflow-hidden bg-black"
-
-// Image: object-contain centered
-className="w-full h-full object-contain block thumb-kenburns"
+// Replace the current container+wrapper+img with a single img
+<img
+  src={cs.thumbImage}
+  alt={`${cs.company} preview`}
+  className="absolute top-[60px] bottom-[40px] left-[60px] right-[60px] z-[2] object-contain thumb-kenburns"
+/>
 ```
+
+This removes the `rounded-[10px]` border container, the `boxShadow`, and the `bg-black` inner div — the PNG sits directly on the gradient with glow orbs visible behind/around it. The non-`thumbContain` thumbnails remain unchanged.
 
