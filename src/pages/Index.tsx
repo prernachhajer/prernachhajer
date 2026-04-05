@@ -303,7 +303,7 @@ const Index = () => {
                           <img
                             src={cs.thumbImage}
                             alt={`${cs.company} preview`}
-                            className={`w-full block thumb-kenburns ${cs.thumbContain ? "h-full object-contain object-top" : ""}`}
+                            className={`w-full block thumb-kenburns ${cs.thumbContain ? "h-full object-contain" : ""}`}
                           />
                         </div>
                       </div>
