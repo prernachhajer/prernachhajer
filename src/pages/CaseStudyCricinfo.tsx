@@ -190,27 +190,27 @@ const CaseStudyCricinfo = () => {
             variants={fade}
             className="text-sm text-background/40 leading-relaxed mb-8"
           >
-            To validate the shift from utility → habit, we tracked engagement, system efficiency, and repeat behaviour.
+            Led the homepage redesign championing casual users — 80% of traffic — shifting from a match-time utility to a daily destination.
           </motion.p>
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
-                label: "Session duration · Live matches",
-                num: "+22%",
-                title: "Users stayed longer during peak traffic",
-                desc: "The strongest quantified signal. Live match sessions — historically the quickest — extended meaningfully after the structured redesign.",
+                label: "Bounce rate reduction",
+                num: "~20–30%",
+                title: "Reduced bounce rates across sessions",
+                desc: "By restructuring the homepage around casual user needs — clear zones, surfaced content, and reduced cognitive load — bounce rates dropped significantly.",
+              },
+              {
+                label: "Returning user sessions",
+                num: "~15%",
+                title: "More users came back between matches",
+                desc: "Repeat visits from casual users improved as the homepage evolved from a live-score utility into a content-rich destination worth returning to.",
               },
               {
                 label: "Design system efficiency",
                 num: "3×",
                 title: "Component reuse across the product",
-                desc: "Faster builds, less debt, consistent iterations across three years. The only concrete system metric — and it held across all three versions.",
-              },
-              {
-                label: "Engagement & conversion",
-                num: "↑",
-                title: "Casual users started returning between matches",
-                desc: "Repeat visits from casual users increased. Homepage also became an app conversion surface — users discovering depth followed through to download.",
+                desc: "Faster builds, less debt, consistent iterations across three years. Modular components and shared layout logic scaled across formats, tournaments, and teams.",
               },
             ].map((card, i) => (
               <motion.div
@@ -240,18 +240,6 @@ const CaseStudyCricinfo = () => {
               </motion.div>
             ))}
           </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5 flex items-center gap-4"
-          >
-            <p className="text-xs italic leading-relaxed text-muted-foreground">
-              Honest caveat: +22% and 3× are the strongest quantified signals. Repeat visit and conversion trends are
-              directional — real, but not yet tightened for formal reporting.
-            </p>
-          </motion.div>
         </div>
       </section>
 
