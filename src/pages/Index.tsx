@@ -19,6 +19,7 @@ import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
 import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
+import aboutPhoto from "@/assets/about-prerna.png";
 
 const fade = animation.fade;
 
@@ -450,8 +451,11 @@ const Index = () => {
               </div>
             </motion.div>
 
-            {/* Right: beliefs + experience */}
+            {/* Right: photo + beliefs */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <div className="mb-10 rounded-xl overflow-hidden">
+                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
+              </div>
               {/* Beliefs */}
               <div className="mb-10">
                 {beliefs.map((b, i) => (
