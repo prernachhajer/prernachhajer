@@ -127,7 +127,7 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 label: "Peak tab count · Post-match",
-                num: "14→7",
+                num: "14→8",
                 title: "More than halved — no features removed",
                 desc: "Every tab that disappeared was merged into a logical group, not deleted.",
               },
@@ -601,7 +601,7 @@ const CaseStudyMatchPage = () => {
                 className="text-6xl md:text-7xl font-normal text-primary leading-none"
                 style={{ fontFamily: t.displayFont }}
               >
-                14→7
+                14→8
               </p>
               <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mt-2">
                 Peak tab count
