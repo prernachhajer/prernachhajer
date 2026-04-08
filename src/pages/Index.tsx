@@ -423,7 +423,7 @@ const Index = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="md:col-span-2"
+              className=""
             >
               <h2
                 className="text-[clamp(32px,4vw,52px)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
