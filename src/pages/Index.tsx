@@ -432,30 +432,7 @@ const Index = () => {
                 the goal — design so clear it disappears. I've moved from execution to ownership to leadership across
                 startups and global platforms, building systems that make design work faster, smarter, and more human.
               </p>
-              <p className={`text-[10px] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Design Systems",
-                  "Product Strategy",
-                  "Usability Frameworks",
-                  "Competitive Analysis",
-                  "AI-assisted Design",
-                ].map((s) => (
-                  <span
-                    key={s}
-                    className="text-xs text-background/45 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
 
-            {/* Right: photo + beliefs */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-              <div className="mb-10 rounded-xl overflow-hidden">
-                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
-              </div>
               {/* Beliefs */}
               <div className="mb-10">
                 {beliefs.map((b, i) => (
@@ -474,6 +451,31 @@ const Index = () => {
                       <p className="text-[13px] leading-[1.78] text-background/55">{b.body}</p>
                     </div>
                   </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right: photo + beliefs */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <div className="mb-10 rounded-xl overflow-hidden">
+                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
+              </div>
+
+              <p className={`text-[10px] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Design Systems",
+                  "Product Strategy",
+                  "Usability Frameworks",
+                  "Competitive Analysis",
+                  "AI-assisted Design",
+                ].map((s) => (
+                  <span
+                    key={s}
+                    className="text-xs text-background/45 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
+                  >
+                    {s}
+                  </span>
                 ))}
               </div>
             </motion.div>
