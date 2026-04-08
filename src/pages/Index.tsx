@@ -440,7 +440,7 @@ const Index = () => {
                     key={b.num}
                     className={`grid grid-cols-[40px_1fr] gap-4 py-[22px] border-t border-background/[0.07] ${i === beliefs.length - 1 ? "border-b border-background/[0.07]" : ""}`}
                   >
-                    <span className="text-[10px] tracking-[0.06em] uppercase text-background/20 pt-0.5">{b.num}</span>
+                    {/* <span className="text-[10px] tracking-[0.06em] uppercase text-background/20 pt-0.5">{b.num}</span> */}
                     <div>
                       <p
                         className="text-lg font-normal tracking-[-0.02em] text-background/90 leading-[1.2] mb-2"
