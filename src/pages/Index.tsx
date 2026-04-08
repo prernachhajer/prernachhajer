@@ -416,9 +416,9 @@ const Index = () => {
             About me
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(48px,8vw,96px)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-[clamp(32px,4vw,56px)]">
             {/* Left: headline + bio */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="md:col-span-2">
               <h2
                 className="text-[clamp(32px,4vw,52px)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
