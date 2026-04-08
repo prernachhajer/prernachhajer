@@ -416,7 +416,7 @@ const Index = () => {
             About me
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(32px,4vw,96px)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-[clamp(32px,4vw,96px)]">
             {/* Left: headline + bio */}
             <motion.div
               initial="hidden"
