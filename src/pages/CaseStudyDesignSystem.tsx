@@ -621,12 +621,10 @@ const CaseStudyDesignSystem = () => {
           variants={fade}
           className={`${layout.container} mx-auto mt-8`}
         >
-          <div className="p-8 bg-card rounded-xl border-l-2 border-primary">
-            <PullQuote>
-              The real test of a design system isn't launch day. It's whether it can absorb a complete identity change
-              three years later and keep working. Ours did.
-            </PullQuote>
-          </div>
+          <PullQuote>
+            The real test of a design system isn't launch day. It's whether it can absorb a complete identity change
+            three years later and keep working. Ours did.
+          </PullQuote>
         </motion.div>
       </Section>
 
