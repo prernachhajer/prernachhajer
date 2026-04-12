@@ -53,7 +53,7 @@ const CaseStudyMatchPage = () => {
               className="text-xl md:text-2xl font-normal leading-[1.35] text-background/50"
               style={{ fontFamily: t.displayFont }}
             >
-              12 tabs during a live match. 15 after it ended. Every new feature got its own tab. Nobody stepped back to look at the whole.
+              12 tabs during a live match. 14 after it ended. Every new feature got its own tab. Nobody stepped back to look at the whole.
             </p>
             <p className="text-sm text-background/40 mt-5 leading-relaxed">
               Analytics confirmed what users were saying on the App Store and Twitter — core content was invisible, buried under a list no one could scroll through.
