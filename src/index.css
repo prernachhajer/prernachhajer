@@ -90,6 +90,10 @@
 }
 
 @layer base {
+  html {
+    font-size: 103.125%; /* 16.5px root — 3.125% typography scale increase */
+  }
+
   * {
     @apply border-border;
   }
