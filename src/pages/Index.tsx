@@ -153,7 +153,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[clamp(52px,8vw,120px)] font-normal leading-[0.96] tracking-[-0.032em]"
+            className="text-[clamp(3.25rem,8vw,7.5rem)] font-normal leading-[0.96] tracking-[-0.032em]"
             style={{ fontFamily: t.displayFont }}
           >
             Designing products
@@ -170,7 +170,7 @@ const Index = () => {
             custom={2}
             className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 border-t border-border mt-[52px]"
           >
-            <p className="text-[15px] leading-[1.8] text-muted-foreground font-light max-w-[480px]">
+            <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[480px]">
               12 years across startups and global platforms — from building design systems to leading product design for{" "}
               <span className="font-medium text-foreground">10M+ users.</span> Now expanding into design with AI.
             </p>
@@ -201,7 +201,7 @@ const Index = () => {
               Selected Work
             </div>
             <h2
-              className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
               style={{ fontFamily: t.displayFont }}
             >
               Case studies <em className="italic text-muted-foreground">worth reading</em>
@@ -236,7 +236,7 @@ const Index = () => {
                         <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                       </div>
                       <h3
-                        className="text-[clamp(26px,2.8vw,42px)] font-normal leading-[1.08] tracking-[-0.025em] mb-4"
+                        className="text-[clamp(1.625rem,2.8vw,2.625rem)] font-normal leading-[1.08] tracking-[-0.025em] mb-4"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {cs.title}
@@ -258,7 +258,7 @@ const Index = () => {
                     <div className="flex items-end justify-between gap-4 mt-8 pt-6 border-t border-border">
                       <div>
                         <span
-                          className="text-[clamp(28px,3vw,40px)] font-bold tracking-[-0.04em] leading-none block"
+                          className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] leading-none block"
                           style={{ fontFamily: t.displayFont }}
                         >
                           {cs.statNum}
@@ -375,11 +375,11 @@ const Index = () => {
 
                     {isComingSoon && (
                       <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
-                        <span className="text-[11px] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">
+                        <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">
                           Coming Soon
                         </span>
                         <span
-                          className="text-[clamp(22px,2.5vw,36px)] font-normal tracking-[-0.02em] italic"
+                          className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-[-0.02em] italic"
                           style={{ fontFamily: t.displayFont }}
                         >
                           In progress
@@ -426,14 +426,14 @@ const Index = () => {
               className=""
             >
               <h2
-                className="text-[clamp(32px,4vw,52px)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
+                className="text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
                 Making sense of complexity,
                 <br />
                 <em className="italic text-background/30">one system at a time.</em>
               </h2>
-              <p className="text-[15px] leading-[1.85] text-background/50 mb-8">
+              <p className="text-[0.9375rem] leading-[1.85] text-background/50 mb-8">
                 For 12 years, I've been designing products that millions of people use without thinking about. That's
                 the goal — design so clear it disappears. I've moved from execution to ownership to leadership across
                 startups and global platforms, building systems that make design work faster, smarter, and more human.
@@ -453,7 +453,7 @@ const Index = () => {
                       >
                         {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
                       </p>
-                      <p className="text-[13px] leading-[1.78] text-background/55">{b.body}</p>
+                      <p className="text-[0.8125rem] leading-[1.78] text-background/55">{b.body}</p>
                     </div>
                   </div>
                 ))}
@@ -466,7 +466,7 @@ const Index = () => {
                 <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
               </div>
 
-              <p className={`text-[10px] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
+              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Design Systems",
@@ -503,7 +503,7 @@ const Index = () => {
               Writing
             </div>
             <h2
-              className="text-[clamp(34px,4.2vw,56px)] font-normal leading-[1.06] tracking-[-0.025em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
               style={{ fontFamily: t.displayFont }}
             >
               Design <em className="italic text-muted-foreground">thinking</em>
@@ -523,13 +523,13 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
               <h3
-                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
                 Taught Me
               </h3>
-              <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
+              <p className="text-[0.8125rem] leading-[1.78] text-muted-foreground mb-6">
                 Five years. Five hard problems. Engineering gaps, tooling shifts, and a full identity overhaul — why
                 alignment matters more than components.
               </p>
@@ -551,13 +551,13 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
               <h3
-                className="text-[clamp(20px,2.2vw,28px)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 From Zero to Shipped: How I Built My Entire Portfolio{" "}
                 <em className="italic text-muted-foreground">with AI</em>
               </h3>
-              <p className="text-[13px] leading-[1.78] text-muted-foreground mb-6">
+              <p className="text-[0.8125rem] leading-[1.78] text-muted-foreground mb-6">
                 No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The
                 honest story of curiosity, tools, and what it changed.
               </p>
@@ -579,7 +579,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[clamp(36px,5.5vw,80px)] font-normal leading-[0.96] tracking-[-0.035em] text-background/90"
+            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[-0.035em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
@@ -602,27 +602,27 @@ const Index = () => {
           className={`${wrapCls} grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-[clamp(48px,6vw,72px)]`}
         >
           <div>
-            <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Email</span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Email</span>
             <a
               href="mailto:work.chhajer@gmail.com"
-              className="text-[clamp(16px,1.8vw,22px)] font-normal tracking-[-0.02em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
+              className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-[-0.02em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
               style={{ fontFamily: t.displayFont }}
             >
               work.chhajer@gmail.com
             </a>
           </div>
           <div>
-            <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">
               Availability
             </span>
-            <span className="text-[13px] text-background/50 leading-[1.6]">
+            <span className="text-[0.8125rem] text-background/50 leading-[1.6]">
               Open to full-time roles
               <br />
               Based in India · Remote-friendly
             </span>
           </div>
           <div>
-            <span className="text-[11px] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Social</span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Social</span>
             <div className="flex gap-2.5 flex-wrap">
               {[
                 { label: "LinkedIn", href: "https://www.linkedin.com/in/prerna-chhajer/" },
@@ -650,7 +650,7 @@ const Index = () => {
         <div
           className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}
         >
-          <span className="text-[11px] text-background/25 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
+          <span className="text-[0.6875rem] text-background/25 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-6">
             {[
               { label: "Work", action: () => scrollTo("work") },
@@ -662,7 +662,7 @@ const Index = () => {
               <button
                 key={link.label}
                 onClick={link.action}
-                className="text-[11px] text-background/25 tracking-[0.04em] hover:text-primary transition-colors"
+                className="text-[0.6875rem] text-background/25 tracking-[0.04em] hover:text-primary transition-colors"
               >
                 {link.label}
               </button>

@@ -108,14 +108,14 @@ const experienceData = [
 // ── COMPONENTS ────────────────────────────────
 
 const SidebarHeading = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-center gap-[10px] text-[11px] tracking-[0.1em] uppercase text-primary font-semibold mb-5">
+  <div className="flex items-center gap-[10px] text-[0.6875rem] tracking-[0.1em] uppercase text-primary font-semibold mb-5">
     <span className="w-4 h-px bg-primary shrink-0" />
     {children}
   </div>
 );
 
 const SectionHeading = ({ children, id }: { children: React.ReactNode; id?: string }) => (
-  <div id={id} className="flex items-center gap-3 text-[11px] tracking-[0.1em] uppercase text-primary font-semibold pb-[18px] mb-11 border-b-[1.5px] border-border">
+  <div id={id} className="flex items-center gap-3 text-[0.6875rem] tracking-[0.1em] uppercase text-primary font-semibold pb-[18px] mb-11 border-b-[1.5px] border-border">
     <span className="w-[18px] h-[1.5px] bg-primary shrink-0" />
     {children}
   </div>
@@ -141,7 +141,7 @@ const Resume = () => {
                 Résumé
               </div>
               <h1
-                className="text-[clamp(40px,5.5vw,72px)] font-normal leading-[1] tracking-[-0.03em]"
+                className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal leading-[1] tracking-[-0.03em]"
                 style={{ fontFamily: t.displayFont }}
               >
                 12 years of <em className="italic text-muted-foreground">design,</em>
@@ -171,7 +171,7 @@ const Resume = () => {
               <React.Fragment key={s.label}>
                 {i > 0 && <div className="w-px h-10 bg-border mx-[clamp(32px,4.5vw,64px)] hidden sm:block shrink-0" />}
                 <div className="flex flex-col gap-1.5 pr-[clamp(32px,4.5vw,64px)] sm:pr-0">
-                  <span className="text-[clamp(28px,3.2vw,42px)] font-normal tracking-[-0.03em] leading-none" style={{ fontFamily: t.displayFont }}>
+                  <span className="text-[clamp(1.75rem,3.2vw,2.625rem)] font-normal tracking-[-0.03em] leading-none" style={{ fontFamily: t.displayFont }}>
                     {s.num}
                   </span>
                   <span className="text-xs tracking-[0.05em] uppercase text-muted-foreground font-medium">{s.label}</span>
@@ -195,7 +195,7 @@ const Resume = () => {
               <div className="flex flex-col">
                 {contactItems.map((item, i) => (
                   <div key={item.label} className={`flex flex-col gap-0.5 py-3.5 border-b border-border ${i === 0 ? "pt-0" : ""} ${i === contactItems.length - 1 ? "border-b-0 pb-0" : ""}`}>
-                    <span className="text-[10px] tracking-[0.08em] uppercase text-muted-foreground font-medium">{item.label}</span>
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium">{item.label}</span>
                     {item.href ? (
                       <a href={item.href} target={item.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer"
                         className="text-sm text-foreground hover:text-primary transition-colors leading-[1.4]">
@@ -215,10 +215,10 @@ const Resume = () => {
               <div className="flex flex-col gap-5">
                 {skillCategories.map((cat) => (
                   <div key={cat.heading}>
-                    <span className="text-[10px] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
                     <div className="flex flex-wrap gap-[7px]">
                       {cat.items.map((skill) => (
-                        <span key={skill} className="text-[13px] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                        <span key={skill} className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
                           {skill}
                         </span>
                       ))}
@@ -234,10 +234,10 @@ const Resume = () => {
               <div className="flex flex-col gap-5">
                 {toolCategories.map((cat) => (
                   <div key={cat.heading}>
-                    <span className="text-[10px] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
                     <div className="flex flex-wrap gap-[7px]">
                       {cat.items.map((tool) => (
-                        <span key={tool} className="text-[13px] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                        <span key={tool} className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
                           {tool}
                         </span>
                       ))}
@@ -257,7 +257,7 @@ const Resume = () => {
                 <div key={exp.company} className={`pb-[52px] mb-[52px] border-b border-border ${i === experienceData.length - 1 ? "border-b-0 pb-0 mb-0" : ""}`}>
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-5 flex-wrap">
                     <div className="flex-1 min-w-0">
-                      <div className="text-[clamp(20px,2.2vw,26px)] font-normal tracking-[-0.02em] leading-[1.1] flex items-center gap-[10px] mb-1.5" style={{ fontFamily: t.displayFont }}>
+                      <div className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-[-0.02em] leading-[1.1] flex items-center gap-[10px] mb-1.5" style={{ fontFamily: t.displayFont }}>
                         {exp.current && <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />}
                         {exp.company}
                       </div>
@@ -269,7 +269,7 @@ const Resume = () => {
                   </div>
                   <ul className="flex flex-col gap-3.5 list-none">
                     {exp.bullets.map((bullet, j) => (
-                      <li key={j} className="text-[15px] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary">
+                      <li key={j} className="text-[0.9375rem] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary">
                         {bullet}
                       </li>
                     ))}
@@ -283,10 +283,10 @@ const Resume = () => {
               <SectionHeading id="edu-h">Education</SectionHeading>
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 flex-wrap">
                 <div>
-                  <div className="text-[22px] font-normal tracking-[-0.015em] mb-1.5" style={{ fontFamily: t.displayFont }}>
+                  <div className="text-[1.375rem] font-normal tracking-[-0.015em] mb-1.5" style={{ fontFamily: t.displayFont }}>
                     B.Tech in Computer Science
                   </div>
-                  <div className="text-[15px] text-muted-foreground">MAIET, Jaipur</div>
+                  <div className="text-[0.9375rem] text-muted-foreground">MAIET, Jaipur</div>
                 </div>
                 <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground font-medium bg-secondary px-4 py-1.5 rounded-full shrink-0 self-start">
                   2008 – 2012
@@ -300,11 +300,11 @@ const Resume = () => {
       {/* ── FOOTER ─────────────────────────────── */}
       <footer className="border-t border-border">
         <div className={`${wrapCls} flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8`}>
-          <span className="text-[13px] text-muted-foreground">© 2026 Prerna Chhajer</span>
+          <span className="text-[0.8125rem] text-muted-foreground">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-7">
             {["Work", "About", "Writing", "Résumé", "Email"].map((link) => (
               <a key={link} href={link === "Email" ? "mailto:work.chhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
-                className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">
+                className="text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
                 {link}
               </a>
             ))}

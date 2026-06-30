@@ -117,7 +117,7 @@ const BlogDesignSystem = () => {
             >
               {ch.heading}
             </h2>
-            <div className="space-y-4 text-[15px] text-foreground/70 leading-[1.85]">
+            <div className="space-y-4 text-[0.9375rem] text-foreground/70 leading-[1.85]">
               {ch.body.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
@@ -148,7 +148,7 @@ const BlogDesignSystem = () => {
               Eventually, the system stabilises. You document it. You hand it over. You move from{" "}
               <span className="text-primary italic">builder to custodian</span>.
             </p>
-            <p className="text-[15px] text-background/40 leading-[1.85] max-w-xl">
+            <p className="text-[0.9375rem] text-background/40 leading-[1.85] max-w-xl">
               That transition is quiet but important. A design system is never finished. It just
               enters a new phase of ownership.
             </p>
@@ -223,14 +223,14 @@ const BlogDesignSystem = () => {
               >
                 From zero to shipped: building a portfolio with AI
               </h3>
-              <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground group-hover:text-foreground transition-colors">
+              <span className="inline-flex items-center gap-2 text-[0.8125rem] text-muted-foreground group-hover:text-foreground transition-colors">
                 Read article <ArrowRight className="h-3 w-3" />
               </span>
             </div>
             <div className="mt-10 flex justify-center">
               <button
                 onClick={() => navigate("/")}
-                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[0.8125rem] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
               >
                 <ArrowLeft className="h-3 w-3" /> Back to Portfolio
               </button>

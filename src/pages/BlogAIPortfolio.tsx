@@ -116,7 +116,7 @@ const BlogAIPortfolio = () => {
               <p className="text-2xl md:text-3xl font-normal" style={{ fontFamily: t.displayFont }}>
                 {s.num}
               </p>
-              <p className="text-[11px] text-muted-foreground mt-1">{s.label}</p>
+              <p className="text-[0.6875rem] text-muted-foreground mt-1">{s.label}</p>
             </div>
           ))}
         </motion.div>
@@ -142,7 +142,7 @@ const BlogAIPortfolio = () => {
               {sec.heading}
             </h2>
 
-            <div className="space-y-5 text-[15px] text-foreground/70 leading-[1.85]">
+            <div className="space-y-5 text-[0.9375rem] text-foreground/70 leading-[1.85]">
               {sec.paragraphs.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
@@ -160,7 +160,7 @@ const BlogAIPortfolio = () => {
                       key={tool.name}
                       className="bg-card border border-border/50 rounded-xl p-4"
                     >
-                      <p className="text-[13px] font-medium text-foreground mb-1">{tool.name}</p>
+                      <p className="text-[0.8125rem] font-medium text-foreground mb-1">{tool.name}</p>
                       <p className="text-xs text-muted-foreground leading-relaxed">{tool.role}</p>
                     </div>
                   ))}
@@ -172,7 +172,7 @@ const BlogAIPortfolio = () => {
             {sec.showShifts && (
               <ul className="mt-5 space-y-0 divide-y divide-border/50">
                 {shifts.map((item, j) => (
-                  <li key={j} className="text-[15px] text-foreground/70 leading-[1.85] py-3 pl-5 relative">
+                  <li key={j} className="text-[0.9375rem] text-foreground/70 leading-[1.85] py-3 pl-5 relative">
                     <span className="absolute left-0 text-muted-foreground">→</span>
                     {item}
                   </li>
@@ -184,7 +184,7 @@ const BlogAIPortfolio = () => {
             {sec.pullquote && (
               <div className={`mt-7 ${surface.accentLine} bg-card rounded-r-xl p-5`}>
                 <p
-                  className="text-[17px] italic text-foreground/80 leading-[1.7]"
+                  className="text-[1.0625rem] italic text-foreground/80 leading-[1.7]"
                   style={{ fontFamily: t.displayFont }}
                 >
                   "{sec.pullquote}"
@@ -194,7 +194,7 @@ const BlogAIPortfolio = () => {
 
             {/* Closing paragraph after quote */}
             {sec.closing && (
-              <p className="mt-5 text-[15px] text-foreground/70 leading-[1.85]">{sec.closing}</p>
+              <p className="mt-5 text-[0.9375rem] text-foreground/70 leading-[1.85]">{sec.closing}</p>
             )}
           </motion.section>
         ))}
@@ -231,14 +231,14 @@ const BlogAIPortfolio = () => {
               >
                 What building a design system over the years really taught me
               </h3>
-              <span className="inline-flex items-center gap-2 text-[13px] text-muted-foreground group-hover:text-foreground transition-colors">
+              <span className="inline-flex items-center gap-2 text-[0.8125rem] text-muted-foreground group-hover:text-foreground transition-colors">
                 Read article <ArrowRight className="h-3 w-3" />
               </span>
             </div>
             <div className="mt-10 flex justify-center">
               <button
                 onClick={() => navigate("/")}
-                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[13px] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3 rounded-full text-[0.8125rem] hover:border-foreground hover:text-foreground transition-all hover:-translate-y-0.5"
               >
                 <ArrowLeft className="h-3 w-3" /> Back to Portfolio
               </button>

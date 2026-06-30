@@ -70,7 +70,7 @@ const HomepageEvolutionCarousel = () => {
                       <rect x="2" y="5" width="8" height="5.5" rx="1.5" stroke="currentColor" strokeWidth="1"/>
                       <path d="M4 5V3.5a2 2 0 014 0V5" stroke="currentColor" strokeWidth="1"/>
                     </svg>
-                    <span className="text-[11px] text-muted-foreground/60 font-mono tracking-wide">espncricinfo.com</span>
+                    <span className="text-[0.6875rem] text-muted-foreground/60 font-mono tracking-wide">espncricinfo.com</span>
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const HomepageEvolutionCarousel = () => {
                 {s.year}
               </span>
               <span
-                className={`text-[9px] tracking-[0.14em] uppercase mt-1 font-mono transition-colors ${
+                className={`text-[0.5625rem] tracking-[0.14em] uppercase mt-1 font-mono transition-colors ${
                   i === active ? "text-muted-foreground" : "text-muted-foreground/30"
                 }`}
               >

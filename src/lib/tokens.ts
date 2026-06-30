@@ -34,15 +34,15 @@ export const spacing = {
 export const type = {
   // Display headings
   heroH1: "text-4xl md:text-6xl lg:text-7xl font-normal tracking-[-0.015em] leading-[1.1]",
-  h2: "text-[clamp(28px,3.5vw,44px)] font-normal tracking-[-0.01em] leading-[1.1]",
+  h2: "text-[clamp(1.75rem,3.5vw,2.75rem)] font-normal tracking-[-0.01em] leading-[1.1]",
   h2Lg: "text-3xl md:text-4xl font-normal tracking-[-0.01em]",
-  h2Hero: "text-[clamp(40px,5.5vw,76px)] font-normal leading-none tracking-[-0.015em]",
+  h2Hero: "text-[clamp(2.5rem,5.5vw,4.75rem)] font-normal leading-none tracking-[-0.015em]",
   // Labels
-  label: "font-mono text-[11px] tracking-[0.12em] uppercase",
-  labelSm: "font-mono text-[11px] tracking-[0.08em] uppercase",
+  label: "font-mono text-[0.6875rem] tracking-[0.12em] uppercase",
+  labelSm: "font-mono text-[0.6875rem] tracking-[0.08em] uppercase",
   // Body
   body: "text-sm leading-relaxed",
-  bodyMd: "text-[13px] leading-[1.75]",
+  bodyMd: "text-[0.8125rem] leading-[1.75]",
   bodyLg: "text-lg leading-relaxed",
   // Display font shorthand (apply via style prop)
   displayFont: "var(--font-display)",
