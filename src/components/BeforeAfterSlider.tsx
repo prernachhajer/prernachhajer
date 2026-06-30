@@ -88,10 +88,10 @@ const BeforeAfterSlider = ({
       </div>
 
       {/* Labels */}
-      <span className="absolute top-3 left-3 z-10 font-mono text-[10px] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
+      <span className="absolute top-3 left-3 z-10 font-mono text-[0.625rem] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
         {beforeLabel}
       </span>
-      <span className="absolute top-3 right-3 z-10 font-mono text-[10px] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
+      <span className="absolute top-3 right-3 z-10 font-mono text-[0.625rem] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
         {afterLabel}
       </span>
     </div>

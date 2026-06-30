@@ -28,7 +28,7 @@ const PhoneShell = ({ children }: { children: React.ReactNode }) => (
 const RowCaption = ({ title, desc }: { title: string; desc: string }) => (
   <div className="text-center max-w-[420px]">
     <h4
-      className="text-[22px] font-normal tracking-[-0.02em] text-foreground mb-2.5 leading-[1.2]"
+      className="text-[1.375rem] font-normal tracking-[-0.02em] text-foreground mb-2.5 leading-[1.2]"
       style={{ fontFamily: t.displayFont }}
     >
       {title}
@@ -58,7 +58,7 @@ const QuickReadsScreensVisual = () => (
               <polyline points="18 15 12 9 6 15" />
               <polyline points="18 20 12 14 6 20" />
             </svg>
-            <span className="text-[9px] font-medium text-foreground/50 tracking-[0.04em] whitespace-nowrap mt-[1px]">
+            <span className="text-[0.5625rem] font-medium text-foreground/50 tracking-[0.04em] whitespace-nowrap mt-[1px]">
               Swipe up for next story
             </span>
           </div>

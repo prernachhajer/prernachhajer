@@ -93,12 +93,12 @@ const CaseStudyQuickReads = () => {
               {["Low article completion", "Short attention windows", "Format mismatch"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Losing to Inshorts & Instagram
               </span>
             </div>
@@ -125,12 +125,12 @@ const CaseStudyQuickReads = () => {
               {["Higher content engagement", "Longer sessions", "Gateway to long-form"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Without compromising editorial integrity
               </span>
             </div>
@@ -186,7 +186,7 @@ const CaseStudyQuickReads = () => {
                 } ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -364,7 +364,7 @@ const CaseStudyQuickReads = () => {
                 {p.icon}
               </div>
               <h4 className="font-semibold text-sm mb-2 tracking-tight">{p.title}</h4>
-              <p className="text-[13px] text-muted-foreground leading-relaxed">{p.desc}</p>
+              <p className="text-[0.8125rem] text-muted-foreground leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -487,7 +487,7 @@ const CaseStudyQuickReads = () => {
           >
             <div>
               <span
-                className={`inline-block text-[10px] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4`}
+                className={`inline-block text-[0.625rem] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4`}
               >
                 Launch · 2024
               </span>
@@ -499,7 +499,7 @@ const CaseStudyQuickReads = () => {
                 <span className="text-primary italic">We watched it land.</span>
               </h2>
             </div>
-            <span className="inline-flex items-center gap-2 text-[10.5px] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
+            <span className="inline-flex items-center gap-2 text-[0.6562rem] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
               ✓ All targets met by full rollout
             </span>
           </motion.div>
@@ -539,7 +539,7 @@ const CaseStudyQuickReads = () => {
                   <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
                     {phase.pct}
                   </span>
-                  <span className="text-[9px] font-mono tracking-[0.12em] uppercase text-background/20">
+                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/20">
                     {phase.phase}
                   </span>
                   {i < 2 && (
@@ -586,7 +586,7 @@ const CaseStudyQuickReads = () => {
                 >
                   3<span className="text-primary">×</span>
                 </p>
-                <p className="text-[8.5px] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
+                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
                   Rollout<br />phases hit
                 </p>
               </div>

@@ -94,12 +94,12 @@ const CaseStudyDesignSystem = () => {
               {["No Scalable components", "No documentation", "Work duplicated across platforms"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 System not scaling with the product
               </span>
             </div>
@@ -125,12 +125,12 @@ const CaseStudyDesignSystem = () => {
               {["Teams build independently", "Documentation as shared language", "Design velocity"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Infrastructure, not decoration
               </span>
             </div>
@@ -182,7 +182,7 @@ const CaseStudyDesignSystem = () => {
                 className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
                     {card.label}
                   </p>
                   <p

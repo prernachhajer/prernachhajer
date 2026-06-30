@@ -80,7 +80,7 @@ const CaseStudyCricinfo = () => {
                     <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                   </div>
                   <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3 gap-2">
-                    <span className={`text-[11px] text-muted-foreground/60 font-mono tracking-wide`}>
+                    <span className={`text-[0.6875rem] text-muted-foreground/60 font-mono tracking-wide`}>
                       espncricinfo.com
                     </span>
                   </div>
@@ -134,12 +134,12 @@ const CaseStudyCricinfo = () => {
               {["Chronological feed", "No structure", "Articles dominated"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 High bounce between matches
               </span>
             </div>
@@ -166,12 +166,12 @@ const CaseStudyCricinfo = () => {
               {["Time on homepage", "Repeat visits", "Casual users engage"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
                 >
                   {tag}
                 </span>
               ))}
-              <span className="text-[11px] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
+              <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
                 Habit, not just utility
               </span>
             </div>
@@ -223,7 +223,7 @@ const CaseStudyCricinfo = () => {
                 className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[10px] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -493,7 +493,7 @@ const CaseStudyCricinfo = () => {
                   <div className="flex flex-col gap-5">
                     {card.dimensions.map((dim, di) => (
                       <div key={di}>
-                        <p className="text-[11px] font-mono tracking-[0.08em] uppercase text-background/40 mb-2">
+                        <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/40 mb-2">
                           {dim.label}
                         </p>
                         <div className="w-full h-2 rounded-full bg-background/10 mb-2 overflow-hidden">
@@ -630,7 +630,7 @@ const CaseStudyCricinfo = () => {
           >
             <div>
               <span
-                className={`inline-block text-[10px] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4`}
+                className={`inline-block text-[0.625rem] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4`}
               >
                 The Decision · 2021–2026
               </span>
@@ -643,7 +643,7 @@ const CaseStudyCricinfo = () => {
                 <span className="text-primary italic">live score strip.</span>
               </h2>
             </div>
-            <span className="inline-flex items-center gap-2 text-[10.5px] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
+            <span className="inline-flex items-center gap-2 text-[0.6562rem] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
               ✓ Sustained 2021–2026
             </span>
           </motion.div>
@@ -682,7 +682,7 @@ const CaseStudyCricinfo = () => {
                   <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
                     {screen.year}
                   </span>
-                  <span className="text-[9px] font-mono tracking-[0.12em] uppercase text-background/20">
+                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/20">
                     {screen.sub}
                   </span>
                   {i < 2 && (
@@ -700,7 +700,7 @@ const CaseStudyCricinfo = () => {
                       <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                     </div>
                     <div className="flex-1 bg-[hsl(220,20%,8%)] border border-background/5 rounded-md px-3 py-1">
-                      <span className="text-[9.5px] font-mono tracking-wide text-background/20">espncricinfo.com</span>
+                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/20">espncricinfo.com</span>
                     </div>
                   </div>
                   <img src={screen.img} alt={`Cricinfo ${screen.year} homepage`} className="w-full block" />
@@ -729,7 +729,7 @@ const CaseStudyCricinfo = () => {
                 >
                   3<span className="text-primary">×</span>
                 </p>
-                <p className="text-[8.5px] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
+                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
                   Versions
                   <br />
                   Same strip
@@ -789,7 +789,7 @@ const CaseStudyCricinfo = () => {
                 {card.icon}
               </div>
               <h4 className="font-semibold text-base mb-2 tracking-tight">{card.title}</h4>
-              <p className="text-[13px] text-muted-foreground leading-relaxed mb-5">{card.desc}</p>
+              <p className="text-[0.8125rem] text-muted-foreground leading-relaxed mb-5">{card.desc}</p>
               <div className="flex justify-center flex-1 items-end mb-5">
                 <div
                   className="w-[74%] max-w-[210px] bg-[#0D0D0D] rounded-[32px] p-[7px] relative"
