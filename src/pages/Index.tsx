@@ -137,7 +137,7 @@ const Index = () => {
       <NavHome />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section id="hero" className="min-h-screen flex flex-col pt-[60px]">
+      <section id="hero" className="flex flex-col pt-[60px]">
         <div className={`${wrapCls} pt-[clamp(80px,8vw,120px)] w-full`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
             <span
