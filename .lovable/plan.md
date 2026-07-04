@@ -1,33 +1,27 @@
+## Problem
 
+In the "This is what we inherited" section of the Cricinfo case study, the mobile phone mockup uses a fixed container height (540px matching desktop) and a width of 150–170px. This produces an aspect ratio of roughly 1 : 3.1, which is far taller and narrower than a real phone (iPhone 15 Pro is ~1 : 2.16).
 
-## Plan: Change Design System thumbnail to cross-platform style
+## Fix
 
-**Goal**: Update the Design System case study card (02/04) to use the same cross-platform thumbnail layout as the Homepage card — a desktop mockup centered with a mobile mockup overlapping at the bottom-right corner.
+Edit `src/pages/CaseStudyCricinfo.tsx` (lines ~94–105) so the mobile stencil uses a realistic phone aspect ratio instead of stretching to the parent's height:
 
-**Changes in `src/pages/Index.tsx`**:
+- Widen the phone frame slightly and drive its height from `aspect-[9/19.5]` (iPhone-accurate) instead of `h-full`.
+- Keep the outer flex container as-is (desktop still fills 540px); anchor the phone with `self-end` so it sits flush at the bottom edge like today.
+- Preserve notch, home indicator, padding, shadow, scroll behavior, and the scrollable screenshot inside.
+- No changes to the desktop browser mock, the 2021 caption, or any other section.
 
-1. **Update the case study data** (lines 43-55): Change `thumbType` from `"desktop"` to `"cross-platform"`, add `thumbDesktop` and `thumbMobile` properties pointing to `cricinfoDesktop` and `cricinfoMobile` (same images used by the Homepage card).
+## Technical details
 
-2. **Remove unused `thumbImage`** from this entry since the cross-platform type uses `thumbDesktop` and `thumbMobile` instead.
-
-**Updated data entry**:
-```tsx
-{
-  num: "02 / 04",
-  company: "ESPN Cricinfo",
-  title: "Building the",
-  titleEm: "Backbone",
-  desc: "...",
-  tags: ["Design System", "Systems Thinking", "Figma"],
-  thumbType: "cross-platform" as const,
-  thumbImage: thumbDesignSystem,
-  thumbDesktop: cricinfoDesktop,
-  thumbMobile: cricinfoMobile,
-  statNum: "170+",
-  statLabel: "files in system",
-  link: "/case-study/design-system",
-}
+```text
+Before: w-[150px] md:w-[170px] h-full  → ~1 : 3.1
+After:  w-[190px] md:w-[210px] aspect-[9/19.5] self-end  → ~1 : 2.17
 ```
 
-No rendering logic changes needed — the existing cross-platform rendering block (lines 337-372) handles the desktop + mobile layout already.
+The inner screen keeps `flex-1 min-h-0 overflow-y-auto` so the long 2021 mobile screenshot still scrolls inside the frame.
 
+## Out of scope
+
+- Desktop browser mockup dimensions
+- Section padding, background, or copy
+- Any other page or component
