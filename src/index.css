@@ -91,7 +91,7 @@
 
 @layer base {
   html {
-    font-size: 103.125%; /* 16.5px root — 3.125% typography scale increase */
+    font-size: 110%; /* 17.6px root — 10% typography scale increase */
   }
 
   * {
