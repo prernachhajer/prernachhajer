@@ -37,9 +37,9 @@ const CaseStudyCricinfo = () => {
 
       {/* HERO */}
       <CaseStudyHero
-        headline="In five years, we got"
-        headlineAccent="two chances"
-        headlineEnd="to work on this page."
+        headline="Why the Homepage"
+        headlineAccent="Needed to Change"
+        headlineEnd=""
         tags={["Cricinfo", "Homepage Redesign", "Senior Designer → Lead", "10M+ Users", "2021 — 2026"]}
         teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
       />
