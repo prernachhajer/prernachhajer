@@ -168,7 +168,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={2}
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 pb-12 border-t border-border mt-[52px]"
+            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 pb-[52px] border-t border-border mt-[52px]"
           >
             <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[480px]">
               12 years across startups and global platforms — from building design systems to leading product design for{" "}
