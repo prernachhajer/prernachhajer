@@ -81,7 +81,7 @@ const HomepageEvolutionCarousel = () => {
             </div>
 
             {/* Mobile Mockup */}
-            <div className="w-[150px] md:w-[170px] shrink-0 flex-col h-full hidden md:flex">
+            <div className="w-[180px] md:w-[200px] aspect-[9/19.5] self-end shrink-0 flex-col hidden md:flex">
               {/* Phone Shell — modern flat */}
               <div className="flex-1 min-h-0 bg-[#0a0a0a] rounded-[32px] p-[6px] flex flex-col relative"
                 style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.25)" }}>
