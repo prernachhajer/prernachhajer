@@ -138,7 +138,7 @@ const Index = () => {
 
       {/* ── HERO ─────────────────────────────────── */}
       <section id="hero" className="flex flex-col pt-[60px]">
-        <div className={`${wrapCls} pt-[clamp(80px,8vw,120px)] w-full`}>
+        <div className={`${wrapCls} pt-[clamp(40px,4vw,60px)] w-full`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
             <span
               className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}
