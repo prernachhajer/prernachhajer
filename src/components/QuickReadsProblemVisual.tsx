@@ -56,7 +56,7 @@ const QuickReadsProblemVisual = () => (
     <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] border-t border-border pt-9 gap-y-8">
       {/* Stat 1 */}
       <div className="px-0 md:px-9 md:first:pl-0">
-        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/60 mb-3">
+        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/85 mb-3">
           Article Completion
         </p>
         <p
@@ -75,7 +75,7 @@ const QuickReadsProblemVisual = () => (
 
       {/* Stat 2 */}
       <div className="px-0 md:px-9">
-        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/60 mb-3">
+        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/85 mb-3">
           Drop-off Rate
         </p>
         <p
@@ -95,7 +95,7 @@ const QuickReadsProblemVisual = () => (
       {/* Insight */}
       <div className="px-0 md:px-9 md:last:pr-0">
         <div className="bg-foreground rounded-[14px] p-6 md:p-7">
-          <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-background/25 mb-3">
+          <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-background/65 mb-3">
             The insight
           </p>
           <p

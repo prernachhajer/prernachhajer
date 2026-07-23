@@ -117,7 +117,7 @@ const BlogDesignSystem = () => {
             >
               {ch.heading}
             </h2>
-            <div className="space-y-4 text-[0.9375rem] text-foreground/70 leading-[1.85]">
+            <div className="space-y-4 text-[0.9375rem] text-foreground/85 leading-[1.85]">
               {ch.body.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
@@ -140,7 +140,7 @@ const BlogDesignSystem = () => {
       <section className={`${surface.darkCard} py-20 md:py-28 mt-4`}>
         <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <p className={`${t.labelSm} text-background/20 mb-10`}>And then — letting go</p>
+            <p className={`${t.labelSm} text-background/85 mb-10`}>And then — letting go</p>
             <p
               className="text-2xl md:text-3xl font-normal tracking-[-0.025em] leading-[1.2] text-background/80 mb-8"
               style={{ fontFamily: t.displayFont }}
@@ -148,7 +148,7 @@ const BlogDesignSystem = () => {
               Eventually, the system stabilises. You document it. You hand it over. You move from{" "}
               <span className="text-primary italic">builder to custodian</span>.
             </p>
-            <p className="text-[0.9375rem] text-background/40 leading-[1.85] max-w-xl">
+            <p className="text-[0.9375rem] text-background/75 leading-[1.85] max-w-xl">
               That transition is quiet but important. A design system is never finished. It just
               enters a new phase of ownership.
             </p>
@@ -161,7 +161,7 @@ const BlogDesignSystem = () => {
         <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-            className={`${t.labelSm} text-background/20 mb-10`}
+            className={`${t.labelSm} text-background/85 mb-10`}
           >
             What I believe now
           </motion.p>
@@ -174,7 +174,7 @@ const BlogDesignSystem = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-[-0.02em] text-background/25"
+                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-[-0.02em] text-background/65"
                 style={{ fontFamily: t.displayFont }}
               >
                 <span className="text-background/80">{line.accent}</span>

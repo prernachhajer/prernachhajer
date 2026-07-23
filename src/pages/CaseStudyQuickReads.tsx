@@ -62,7 +62,7 @@ const CaseStudyQuickReads = () => {
 
           <QuickReadsProblemVisual />
 
-          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">
+          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
             ESPN Cricinfo App · News Feed · 2024
           </p>
         </div>
@@ -79,21 +79,21 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl"
           >
-            <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
+            <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
-              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50"
+              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
               Younger, mobile-first users were leaving. Not because they disliked cricket — but because the format didn't fit the way they consumed information.
             </p>
-            <p className="text-sm text-background/40 mt-5 leading-relaxed">
+            <p className="text-sm text-background/75 mt-5 leading-relaxed">
               High traffic from loyal users masked a growing gap with casual and newer audiences.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Low article completion", "Short attention windows", "Format mismatch"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -125,7 +125,7 @@ const CaseStudyQuickReads = () => {
               {["Higher content engagement", "Longer sessions", "Gateway to long-form"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -149,7 +149,7 @@ const CaseStudyQuickReads = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-sm text-background/40 leading-relaxed mb-8"
+            className="text-sm text-background/75 leading-relaxed mb-8"
           >
             Rolled out 10% → 20% → 100%. We tracked adoption, scroll depth, and transition behaviour across every phase.
           </motion.p>
@@ -186,7 +186,7 @@ const CaseStudyQuickReads = () => {
                 } ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -197,8 +197,8 @@ const CaseStudyQuickReads = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/70 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -210,7 +210,7 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
           >
-            <p className="text-xs italic text-background/20 leading-relaxed">
+            <p className="text-xs italic text-background/85 leading-relaxed">
               Honest note: Scroll depth and transition targets are the strongest validated signals. Broader persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a revisit.
             </p>
           </motion.div>
@@ -461,14 +461,14 @@ const CaseStudyQuickReads = () => {
                 <p className="text-xs font-medium text-primary mt-4">{block.decision.badge}</p>
               </div>
               <div className="bg-foreground text-background p-10">
-                <p className={`${t.labelSm} text-background/20 mb-4`}>{block.tradeoff.label}</p>
+                <p className={`${t.labelSm} text-background/85 mb-4`}>{block.tradeoff.label}</p>
                 <h4
-                  className="text-lg italic text-background/70 mb-3 leading-snug"
+                  className="text-lg italic text-background/90 mb-3 leading-snug"
                   style={{ fontFamily: t.displayFont }}
                 >
                   {block.tradeoff.title}
                 </h4>
-                <p className="text-xs text-background/40 leading-relaxed">{block.tradeoff.desc}</p>
+                <p className="text-xs text-background/75 leading-relaxed">{block.tradeoff.desc}</p>
               </div>
             </div>
           </motion.div>
@@ -539,7 +539,7 @@ const CaseStudyQuickReads = () => {
                   <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
                     {phase.pct}
                   </span>
-                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/20">
+                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/85">
                     {phase.phase}
                   </span>
                   {i < 2 && (
@@ -554,7 +554,7 @@ const CaseStudyQuickReads = () => {
                     <h4 className="text-sm font-medium text-background/80">{phase.title}</h4>
                   </div>
                   <div className="px-5 py-4">
-                    <p className="text-sm text-background/40 leading-relaxed">{phase.desc}</p>
+                    <p className="text-sm text-background/75 leading-relaxed">{phase.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -569,7 +569,7 @@ const CaseStudyQuickReads = () => {
           >
             <hr className="border-t border-background/[0.07] mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
-              <p className="text-sm text-background/50 leading-[1.85]">
+              <p className="text-sm text-background/80 leading-[1.85]">
                 Quick Reads was the{" "}
                 <strong className="text-background/90 font-bold">
                   first time cricinfo's editorial team shipped a product feature they didn't resist
@@ -586,7 +586,7 @@ const CaseStudyQuickReads = () => {
                 >
                   3<span className="text-primary">×</span>
                 </p>
-                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
+                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/85 leading-relaxed mt-1.5">
                   Rollout<br />phases hit
                 </p>
               </div>

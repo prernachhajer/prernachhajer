@@ -48,21 +48,21 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className={`${surface.darkCard} ${spacing.cardPadLg} md:rounded-l-xl`}
           >
-            <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
+            <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
-              className="text-xl md:text-2xl font-normal leading-[1.35] text-background/50"
+              className="text-xl md:text-2xl font-normal leading-[1.35] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
               12 tabs during a live match. 14 after it ended. Every new feature got its own tab. Nobody stepped back to look at the whole.
             </p>
-            <p className="text-sm text-background/40 mt-5 leading-relaxed">
+            <p className="text-sm text-background/75 mt-5 leading-relaxed">
               Analytics confirmed what users were saying on the App Store and Twitter — core content was invisible, buried under a list no one could scroll through.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["12+ tabs live", "15 tabs post-match"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -91,7 +91,7 @@ const CaseStudyMatchPage = () => {
               {["Tab discoverability", "Content findability"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -154,7 +154,7 @@ const CaseStudyMatchPage = () => {
                 className={`${surface.darkCard} p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -165,8 +165,8 @@ const CaseStudyMatchPage = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/70 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -248,7 +248,7 @@ const CaseStudyMatchPage = () => {
             >
               Two solutions, one problem.
             </h2>
-            <p className="text-sm text-background/40 leading-relaxed">
+            <p className="text-sm text-background/75 leading-relaxed">
               First: redesign the tab structure around match states so users only see what's relevant. Second: bring content previews to where users already are, so they discover what they'd otherwise miss.
             </p>
           </motion.div>
@@ -259,7 +259,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/40 font-medium mb-4"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
           >
             Solution 1 — Match state-based tab structure
           </motion.p>
@@ -332,7 +332,7 @@ const CaseStudyMatchPage = () => {
                   >
                     {state.name}
                   </p>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85">
                     {state.count}
                   </p>
                 </div>
@@ -343,7 +343,7 @@ const CaseStudyMatchPage = () => {
                     return (
                       <div
                         key={ti}
-                        className={`text-xs py-2 border-b border-background/5 last:border-b-0 ${bold ? "text-background/60 font-medium" : "text-background/35"}`}
+                        className={`text-xs py-2 border-b border-background/5 last:border-b-0 ${bold ? "text-background/85 font-medium" : "text-background/90"}`}
                       >
                         {text}
                       </div>
@@ -394,11 +394,11 @@ const CaseStudyMatchPage = () => {
                   custom={i}
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {group.label}
                   </p>
-                  <h4 className="text-sm font-medium text-background/70 mb-2">{group.title}</h4>
-                  <p className="text-[0.8125rem] text-background/40 leading-relaxed">{group.desc}</p>
+                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
+                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{group.desc}</p>
                 </motion.div>
               );
             })}
@@ -420,7 +420,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/40 font-medium mb-4 mt-16"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
           >
             Solution 2 — Cross-tab content snacking
           </motion.p>
@@ -463,11 +463,11 @@ const CaseStudyMatchPage = () => {
                   custom={i}
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {snack.where}
                   </p>
-                  <h4 className="text-sm font-medium text-background/70 mb-2">{snack.title}</h4>
-                  <p className="text-[0.8125rem] text-background/40 leading-relaxed">{snack.desc}</p>
+                  <h4 className="text-sm font-medium text-background/90 mb-2">{snack.title}</h4>
+                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{snack.desc}</p>
                 </motion.div>
               );
             })}
@@ -558,14 +558,14 @@ const CaseStudyMatchPage = () => {
                 <p className="text-xs font-medium text-primary mt-4">✓ Shipped</p>
               </div>
               <div className="bg-foreground text-background p-10">
-                <p className={`${t.labelSm} text-background/20 mb-4`}>The trade-off</p>
+                <p className={`${t.labelSm} text-background/85 mb-4`}>The trade-off</p>
                 <h4
-                  className="text-lg italic text-background/70 mb-3 leading-snug"
+                  className="text-lg italic text-background/90 mb-3 leading-snug"
                   style={{ fontFamily: t.displayFont }}
                 >
                   {block.tradeoff.title}
                 </h4>
-                <p className="text-xs text-background/40 leading-relaxed">{block.tradeoff.desc}</p>
+                <p className="text-xs text-background/75 leading-relaxed">{block.tradeoff.desc}</p>
               </div>
             </div>
           </motion.div>
@@ -592,7 +592,7 @@ const CaseStudyMatchPage = () => {
               >
                 Fewer tabs. Better engagement. Same features.
               </h3>
-              <p className="text-[0.8125rem] text-background/40 leading-relaxed">
+              <p className="text-[0.8125rem] text-background/75 leading-relaxed">
                 The goal was never to remove features — it was to make them findable. Every feature that existed before the redesign still exists. The difference is that users can now reach them.
               </p>
             </div>
@@ -603,7 +603,7 @@ const CaseStudyMatchPage = () => {
               >
                 14→8
               </p>
-              <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mt-2">
+              <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-2">
                 Peak tab count
               </p>
             </div>
@@ -649,11 +649,11 @@ const CaseStudyMatchPage = () => {
                   custom={i}
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-2">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-2">
                     {card.label}
                   </p>
-                  <h4 className="text-sm font-medium text-background/70 mb-2">{card.title}</h4>
-                  <p className="text-[0.8125rem] text-background/40 leading-relaxed">{card.desc}</p>
+                  <h4 className="text-sm font-medium text-background/90 mb-2">{card.title}</h4>
+                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{card.desc}</p>
                 </motion.div>
               );
             })}
@@ -686,7 +686,7 @@ const CaseStudyMatchPage = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              className="text-sm text-background/40 leading-[1.75]"
+              className="text-sm text-background/75 leading-[1.75]"
             >
               {text}
             </motion.p>

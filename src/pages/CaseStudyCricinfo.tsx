@@ -80,7 +80,7 @@ const CaseStudyCricinfo = () => {
                     <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                   </div>
                   <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3 gap-2">
-                    <span className={`text-[0.6875rem] text-muted-foreground/60 font-mono tracking-wide`}>
+                    <span className={`text-[0.6875rem] text-muted-foreground/85 font-mono tracking-wide`}>
                       espncricinfo.com
                     </span>
                   </div>
@@ -104,7 +104,7 @@ const CaseStudyCricinfo = () => {
               </div>
             </div>
           </motion.div>
-          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Cricinfo Homepage · 2021</p>
+          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Cricinfo Homepage · 2021</p>
         </div>
       </section>
 
@@ -119,22 +119,22 @@ const CaseStudyCricinfo = () => {
             variants={fade}
             className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl"
           >
-            <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
+            <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
-              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50"
+              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
               10M+ users. A homepage that worked as a feed. Users arrived for matches — and left. No habit. No reason to
               return.
             </p>
-            <p className="text-sm text-background/40 mt-5 leading-relaxed">
+            <p className="text-sm text-background/75 mt-5 leading-relaxed">
               This meant high traffic, but low retention and weak long-term engagement.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Chronological feed", "No structure", "Articles dominated"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -166,7 +166,7 @@ const CaseStudyCricinfo = () => {
               {["Time on homepage", "Repeat visits", "Casual users engage"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -188,7 +188,7 @@ const CaseStudyCricinfo = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-sm text-background/40 leading-relaxed mb-8"
+            className="text-sm text-background/75 leading-relaxed mb-8"
           >
             Led the homepage redesign championing casual users — 80% of traffic — shifting from a match-time utility to a daily destination.
           </motion.p>
@@ -223,7 +223,7 @@ const CaseStudyCricinfo = () => {
                 className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -234,8 +234,8 @@ const CaseStudyCricinfo = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/70 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -493,7 +493,7 @@ const CaseStudyCricinfo = () => {
                   <div className="flex flex-col gap-5">
                     {card.dimensions.map((dim, di) => (
                       <div key={di}>
-                        <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/40 mb-2">
+                        <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75 mb-2">
                           {dim.label}
                         </p>
                         <div className="w-full h-2 rounded-full bg-background/10 mb-2 overflow-hidden">
@@ -511,7 +511,7 @@ const CaseStudyCricinfo = () => {
                             transition={{ duration: 0.8, delay: di * 0.1, ease: [0.16, 1, 0.3, 1] }}
                           />
                         </div>
-                        <p className="text-xs text-background/60 leading-relaxed">
+                        <p className="text-xs text-background/85 leading-relaxed">
                           <strong className="text-background/80">{dim.strong}</strong> {dim.desc}
                         </p>
                       </div>
@@ -604,14 +604,14 @@ const CaseStudyCricinfo = () => {
                 <p className="text-xs font-medium text-primary mt-4">{block.decision.badge}</p>
               </div>
               <div className="bg-foreground text-background p-10">
-                <p className={`${t.labelSm} text-background/20 mb-4`}>{block.tradeoff.label}</p>
+                <p className={`${t.labelSm} text-background/85 mb-4`}>{block.tradeoff.label}</p>
                 <h4
-                  className="text-lg italic text-background/70 mb-3 leading-snug"
+                  className="text-lg italic text-background/90 mb-3 leading-snug"
                   style={{ fontFamily: t.displayFont }}
                 >
                   {block.tradeoff.title}
                 </h4>
-                <p className="text-xs text-background/40 leading-relaxed">{block.tradeoff.desc}</p>
+                <p className="text-xs text-background/75 leading-relaxed">{block.tradeoff.desc}</p>
               </div>
             </div>
           </motion.div>
@@ -682,7 +682,7 @@ const CaseStudyCricinfo = () => {
                   <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
                     {screen.year}
                   </span>
-                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/20">
+                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/85">
                     {screen.sub}
                   </span>
                   {i < 2 && (
@@ -700,12 +700,12 @@ const CaseStudyCricinfo = () => {
                       <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                     </div>
                     <div className="flex-1 bg-[hsl(220,20%,8%)] border border-background/5 rounded-md px-3 py-1">
-                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/20">espncricinfo.com</span>
+                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/85">espncricinfo.com</span>
                     </div>
                   </div>
                   <img src={screen.img} alt={`Cricinfo ${screen.year} homepage`} className="w-full block" />
                   <div className="px-4 py-3 border-t border-background/[0.07] bg-[hsl(220,18%,8%)]">
-                    <p className="text-xs text-background/40 font-medium leading-relaxed">{screen.caption}</p>
+                    <p className="text-xs text-background/75 font-medium leading-relaxed">{screen.caption}</p>
                   </div>
                 </div>
               </motion.div>
@@ -715,7 +715,7 @@ const CaseStudyCricinfo = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <hr className="border-t border-background/[0.07] mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
-              <p className="text-sm text-background/50 leading-[1.85]">
+              <p className="text-sm text-background/80 leading-[1.85]">
                 The live score strip was the{" "}
                 <strong className="text-background/90 font-bold">highest-performing surface</strong> on the homepage.
                 Across three redesigns, it was the one thing we chose not to rebuild. Not because we couldn't improve it
@@ -729,7 +729,7 @@ const CaseStudyCricinfo = () => {
                 >
                   3<span className="text-primary">×</span>
                 </p>
-                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/20 leading-relaxed mt-1.5">
+                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/85 leading-relaxed mt-1.5">
                   Versions
                   <br />
                   Same strip
@@ -823,7 +823,7 @@ const CaseStudyCricinfo = () => {
           variants={fade}
           className={`${layout.container} mx-auto mt-6`}
         >
-          <p className="text-xs text-muted-foreground/60 leading-relaxed max-w-2xl">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed max-w-2xl">
             <strong className="text-muted-foreground font-medium">Note:</strong> These three phases are sequentially
             dependent. Short-form content unlocks hybrid feed viability. Hybrid feed unlocks personalisation at scale.
             The order matters.

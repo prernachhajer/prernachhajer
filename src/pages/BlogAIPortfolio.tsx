@@ -142,7 +142,7 @@ const BlogAIPortfolio = () => {
               {sec.heading}
             </h2>
 
-            <div className="space-y-5 text-[0.9375rem] text-foreground/70 leading-[1.85]">
+            <div className="space-y-5 text-[0.9375rem] text-foreground/85 leading-[1.85]">
               {sec.paragraphs.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
@@ -172,7 +172,7 @@ const BlogAIPortfolio = () => {
             {sec.showShifts && (
               <ul className="mt-5 space-y-0 divide-y divide-border/50">
                 {shifts.map((item, j) => (
-                  <li key={j} className="text-[0.9375rem] text-foreground/70 leading-[1.85] py-3 pl-5 relative">
+                  <li key={j} className="text-[0.9375rem] text-foreground/85 leading-[1.85] py-3 pl-5 relative">
                     <span className="absolute left-0 text-muted-foreground">→</span>
                     {item}
                   </li>
@@ -194,7 +194,7 @@ const BlogAIPortfolio = () => {
 
             {/* Closing paragraph after quote */}
             {sec.closing && (
-              <p className="mt-5 text-[0.9375rem] text-foreground/70 leading-[1.85]">{sec.closing}</p>
+              <p className="mt-5 text-[0.9375rem] text-foreground/85 leading-[1.85]">{sec.closing}</p>
             )}
           </motion.section>
         ))}

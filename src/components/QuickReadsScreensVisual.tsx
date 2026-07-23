@@ -58,7 +58,7 @@ const QuickReadsScreensVisual = () => (
               <polyline points="18 15 12 9 6 15" />
               <polyline points="18 20 12 14 6 20" />
             </svg>
-            <span className="text-[0.5625rem] font-medium text-foreground/50 tracking-[0.04em] whitespace-nowrap mt-[1px]">
+            <span className="text-[0.5625rem] font-medium text-foreground/75 tracking-[0.04em] whitespace-nowrap mt-[1px]">
               Swipe up for next story
             </span>
           </div>

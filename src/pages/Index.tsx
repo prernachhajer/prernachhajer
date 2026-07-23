@@ -410,7 +410,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className={`flex items-center gap-3 ${t.label} text-background/30 mb-16`}
+            className={`flex items-center gap-3 ${t.label} text-background/65 mb-16`}
           >
             <span className="w-[22px] h-px bg-background/30" />
             About me
@@ -431,9 +431,9 @@ const Index = () => {
               >
                 Making sense of complexity,
                 <br />
-                <em className="italic text-background/30">one system at a time.</em>
+                <em className="italic text-background/65">one system at a time.</em>
               </h2>
-              <p className="text-[0.9375rem] leading-[1.85] text-background/50 mb-8">
+              <p className="text-[0.9375rem] leading-[1.85] text-background/80 mb-8">
                 For 12 years, I've been designing products that millions of people use without thinking about. That's
                 the goal — design so clear it disappears. I've moved from execution to ownership to leadership across
                 startups and global platforms, building systems that make design work faster, smarter, and more human.
@@ -453,7 +453,7 @@ const Index = () => {
                       >
                         {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
                       </p>
-                      <p className="text-[0.8125rem] leading-[1.78] text-background/55">{b.body}</p>
+                      <p className="text-[0.8125rem] leading-[1.78] text-background/80">{b.body}</p>
                     </div>
                   </div>
                 ))}
@@ -466,7 +466,7 @@ const Index = () => {
                 <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
               </div>
 
-              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/25 mb-4`}>Specialties</p>
+              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>Specialties</p>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Design Systems",
@@ -477,7 +477,7 @@ const Index = () => {
                 ].map((s) => (
                   <span
                     key={s}
-                    className="text-xs text-background/45 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
+                    className="text-xs text-background/75 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
                   >
                     {s}
                   </span>
@@ -589,7 +589,7 @@ const Index = () => {
               {cycleWord}
             </span>
             <br />
-            <em className="italic text-background/30">something worth using.</em>
+            <em className="italic text-background/65">something worth using.</em>
           </motion.h2>
         </div>
 
@@ -602,7 +602,7 @@ const Index = () => {
           className={`${wrapCls} grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-[clamp(48px,6vw,72px)]`}
         >
           <div>
-            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Email</span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Email</span>
             <a
               href="mailto:work.chhajer@gmail.com"
               className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-[-0.02em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
@@ -612,17 +612,17 @@ const Index = () => {
             </a>
           </div>
           <div>
-            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">
               Availability
             </span>
-            <span className="text-[0.8125rem] text-background/50 leading-[1.6]">
+            <span className="text-[0.8125rem] text-background/80 leading-[1.6]">
               Open to full-time roles
               <br />
               Based in India · Remote-friendly
             </span>
           </div>
           <div>
-            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/30 block mb-3.5">Social</span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Social</span>
             <div className="flex gap-2.5 flex-wrap">
               {[
                 { label: "LinkedIn", href: "https://www.linkedin.com/in/prerna-chhajer/" },
@@ -634,7 +634,7 @@ const Index = () => {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-[7px] px-4 py-[9px] rounded-full border border-background/15 text-xs text-background/60 tracking-[0.02em] hover:border-primary hover:text-primary hover:bg-primary/[0.06] transition-all"
+                  className="inline-flex items-center gap-[7px] px-4 py-[9px] rounded-full border border-background/15 text-xs text-background/85 tracking-[0.02em] hover:border-primary hover:text-primary hover:bg-primary/[0.06] transition-all"
                 >
                   {s.label}
                 </a>
@@ -650,7 +650,7 @@ const Index = () => {
         <div
           className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}
         >
-          <span className="text-[0.6875rem] text-background/25 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
+          <span className="text-[0.6875rem] text-background/65 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-6">
             {[
               { label: "Work", action: () => scrollTo("work") },
@@ -662,7 +662,7 @@ const Index = () => {
               <button
                 key={link.label}
                 onClick={link.action}
-                className="text-[0.6875rem] text-background/25 tracking-[0.04em] hover:text-primary transition-colors"
+                className="text-[0.6875rem] text-background/65 tracking-[0.04em] hover:text-primary transition-colors"
               >
                 {link.label}
               </button>

@@ -64,7 +64,7 @@ const CaseStudyDesignSystem = () => {
           {/* Cricinfo Figma Library before/after */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
             <BeforeAfterSlider beforeImage={dsOld} afterImage={dsNew} beforeLabel="Before" afterLabel="After" />
-            <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">
+            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
               Cricinfo Figma Library · 2021
             </p>
           </motion.div>
@@ -82,9 +82,9 @@ const CaseStudyDesignSystem = () => {
             variants={fade}
             className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl"
           >
-            <p className={`${t.labelSm} text-background/20 mb-5`}>The state we were in</p>
+            <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
-              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/50"
+              className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
               One component library. No documentation. No responsiveness. Two brands with competing philosophies and
@@ -94,7 +94,7 @@ const CaseStudyDesignSystem = () => {
               {["No Scalable components", "No documentation", "Work duplicated across platforms"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -125,7 +125,7 @@ const CaseStudyDesignSystem = () => {
               {["Teams build independently", "Documentation as shared language", "Design velocity"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/30"
+                  className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
                 >
                   {tag}
                 </span>
@@ -147,7 +147,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-sm text-background/40 leading-relaxed mb-8"
+            className="text-sm text-background/75 leading-relaxed mb-8"
           >
             Five years of building. The outcomes were felt across the entire product organisation.
           </motion.p>
@@ -182,7 +182,7 @@ const CaseStudyDesignSystem = () => {
                 className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/20 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
                     {card.label}
                   </p>
                   <p
@@ -193,8 +193,8 @@ const CaseStudyDesignSystem = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/70 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/40 leading-relaxed">{card.desc}</p>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -206,7 +206,7 @@ const CaseStudyDesignSystem = () => {
             variants={fade}
             className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
           >
-            <p className="text-xs italic text-muted-foreground/60 leading-relaxed">
+            <p className="text-xs italic text-muted-foreground/85 leading-relaxed">
               50% faster design cycles and 170+ files are the clearest signals. Team independence and onboarding speed
               are directional — consistent across feedback but not formally benchmarked.
             </p>
@@ -328,7 +328,7 @@ const CaseStudyDesignSystem = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="text-background/50 leading-relaxed"
+            className="text-background/80 leading-relaxed"
           >
             A year after launch, Figma released component properties. Dozens of separate components could now live
             inside one well-structured component. We made the decision to rebuild rather than patch.
@@ -364,7 +364,7 @@ const CaseStudyDesignSystem = () => {
               className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}
             >
               <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
-              <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+              <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -384,7 +384,7 @@ const CaseStudyDesignSystem = () => {
             beforeLabel="Before"
             afterLabel="After"
           />
-          <p className="text-center text-xs text-background/20 mt-4 tracking-wide">
+          <p className="text-center text-xs text-background/85 mt-4 tracking-wide">
             Component rebuild · 2022 — fewer files, more power
           </p>
         </motion.div>
@@ -474,7 +474,7 @@ const CaseStudyDesignSystem = () => {
               draggable={false}
             />
           </div>
-          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">
+          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
             ZeroHeight documentation · 2023
           </p>
         </motion.div>
@@ -499,7 +499,7 @@ const CaseStudyDesignSystem = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="text-background/50 leading-relaxed"
+            className="text-background/80 leading-relaxed"
           >
             Once a system is in active use, the work changes character. Edge cases appear. Variants never used
             accumulate. A component that worked for three use cases doesn't quite work for a fourth.
@@ -539,7 +539,7 @@ const CaseStudyDesignSystem = () => {
               className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}
             >
               <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
-              <p className="text-sm text-background/40 leading-relaxed">{card.desc}</p>
+              <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -610,7 +610,7 @@ const CaseStudyDesignSystem = () => {
             alt="Typography exploration showing font candidates side by side"
             className="w-full my-0 mx-0 px-[20px] py-[20px] border border-solid rounded-lg bg-[#2b2b2b]/[0.91]"
           />
-          <p className="text-center text-xs text-muted-foreground/50 mt-4 tracking-wide">Font evaluation process</p>
+          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Font evaluation process</p>
         </motion.div>
 
         {/* The test this proved */}
