@@ -286,36 +286,57 @@ const CaseStudyCricinfo = () => {
           </motion.div>
         </div>
 
-        {/* Insights Grid */}
-        <div className={`${layout.container} mx-auto mt-0.5 grid md:grid-cols-2 gap-0.5`}>
-          {[
-            {
-              num: "Finding 01",
-              title: "Live matches are the true entry point",
-              desc: "Users arrived to check scores, understand context, and navigate quickly. If live context wasn't immediate, they dropped off. The homepage is a navigation layer for live sport — not a content destination.",
-              tag: "Reframed the brief",
-            },
-            {
-              num: "Finding 02",
-              title: "Complexity peaked at the worst moment",
-              desc: "During live matches — peak traffic — competing modules, weak hierarchy, and high density created cognitive overload exactly when speed mattered most.",
-              tag: "UX critical",
-            },
-            {
-              num: "Finding 03",
-              title: "Three user types, one surface",
-              desc: "Casual users wanted quick updates. Content consumers wanted stories. Power users wanted stats. Serving all three from one layout made personalisation critical — but hard to prioritise.",
-              tag: "Strategic tension",
-            },
-            {
-              num: "Finding 04",
-              title: "Scalability was a system problem",
-              desc: "Non-modular architecture made every new tournament or content type a high-effort rebuild. The problem wasn't content — it was system design bottlenecking every redesign before it started.",
-              tag: "Root cause",
-            },
-          ].map((insight, i) => {
-            const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
-            return (
+        {/* Findings — separate sub-section */}
+        <div className={`${layout.container} mx-auto mt-32`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+                <span className="w-5 h-px bg-primary" />
+                What we found
+              </p>
+              <h3
+                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                Four findings that reframed the homepage.
+              </h3>
+            </div>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
+          </motion.div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                num: "01",
+                title: "Live matches are the true entry point",
+                desc: "Users arrived to check scores, understand context, and navigate quickly. If live context wasn't immediate, they dropped off. The homepage is a navigation layer for live sport — not a content destination.",
+                tag: "Reframed the brief",
+              },
+              {
+                num: "02",
+                title: "Complexity peaked at the worst moment",
+                desc: "During live matches — peak traffic — competing modules, weak hierarchy, and high density created cognitive overload exactly when speed mattered most.",
+                tag: "UX critical",
+              },
+              {
+                num: "03",
+                title: "Three user types, one surface",
+                desc: "Casual users wanted quick updates. Content consumers wanted stories. Power users wanted stats. Serving all three from one layout made personalisation critical — but hard to prioritise.",
+                tag: "Strategic tension",
+              },
+              {
+                num: "04",
+                title: "Scalability was a system problem",
+                desc: "Non-modular architecture made every new tournament or content type a high-effort rebuild. The problem wasn't content — it was system design bottlenecking every redesign before it started.",
+                tag: "Root cause",
+              },
+            ].map((insight, i) => (
               <motion.div
                 key={insight.num}
                 initial="hidden"
@@ -323,17 +344,33 @@ const CaseStudyCricinfo = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-card p-10 ${corners[i] || ""}`}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
               >
-                <p className={`${t.labelSm} text-primary mb-4`}>{insight.num}</p>
-                <h4 className="font-semibold text-base mb-3 tracking-tight">{insight.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{insight.desc}</p>
-                <span className={`${t.labelSm} px-3 py-1 rounded-full border border-primary/20 text-primary`}>
-                  {insight.tag}
-                </span>
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                    {insight.desc}
+                  </p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                    {insight.tag}
+                  </span>
+                </div>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </Section>
 
