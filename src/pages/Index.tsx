@@ -204,7 +204,7 @@ const Index = () => {
               className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
               style={{ fontFamily: t.displayFont }}
             >
-              Case studies <em className="italic text-muted-foreground">worth reading</em>
+              Featured&nbsp;case studies
             </h2>
           </motion.div>
         </div>
