@@ -342,10 +342,11 @@ const CaseStudyQuickReads = () => {
                 <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
                   <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
                     {insight.tag}
-                </span>
+                  </span>
+                </div>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </Section>
 
