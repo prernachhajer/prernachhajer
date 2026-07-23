@@ -99,7 +99,7 @@ export const SectionLabel = ({
     viewport={{ once: true }}
     variants={fade}
     className={`flex items-center gap-3 ${t.label} ${spacing.labelBottom} ${layout.container} mx-auto ${
-      dark ? "text-background/30" : "text-primary"
+      dark ? "text-background/65" : "text-primary"
     }`}
   >
     <span className={`w-5 h-px ${dark ? "bg-background/30" : "bg-primary"}`} />
@@ -169,8 +169,8 @@ export const DarkTwoCol = ({
             i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"
           }`}
         >
-          <p className={`${t.labelSm} text-background/20 mb-5`}>{col.label}</p>
-          <div className="text-xl md:text-2xl font-normal leading-[1.15] text-background/50" style={{ fontFamily: t.displayFont }}>
+          <p className={`${t.labelSm} text-background/85 mb-5`}>{col.label}</p>
+          <div className="text-xl md:text-2xl font-normal leading-[1.15] text-background/80" style={{ fontFamily: t.displayFont }}>
             {col.content}
           </div>
         </motion.div>
@@ -288,7 +288,7 @@ export const PullQuote = ({
   >
     <div className="w-1 h-14 bg-primary/70 rounded-full shrink-0" />
     <p
-      className={`text-xl italic leading-relaxed ${dark ? "text-background/60" : "text-muted-foreground"}`}
+      className={`text-xl italic leading-relaxed ${dark ? "text-background/85" : "text-muted-foreground"}`}
       style={{ fontFamily: t.displayFont }}
     >
       {children}
@@ -315,7 +315,7 @@ export const LearningCard = ({
     className={`${surface.darkCardAlt} ${radius.cardSm} border border-background/10 ${spacing.cardPadLg}`}
   >
     <p
-      className="text-lg italic text-background/70 leading-relaxed"
+      className="text-lg italic text-background/90 leading-relaxed"
       style={{ fontFamily: t.displayFont }}
       dangerouslySetInnerHTML={{ __html: `"${children}"` }}
     />
@@ -388,7 +388,7 @@ export const CaseStudyHero = ({
         custom={3}
         className="mt-7 flex items-center gap-2 justify-center flex-wrap"
       >
-        <span className={`${t.labelSm} text-muted-foreground/50 mr-1`}>Team</span>
+        <span className={`${t.labelSm} text-muted-foreground/80 mr-1`}>Team</span>
         {teams.map((member) => (
           <span
             key={member}
@@ -430,9 +430,9 @@ export const ImagePlaceholder = ({
     style={{ aspectRatio: height ? undefined : aspectRatio, height }}
   >
     <div className="w-10 h-10 rounded-full border-2 border-dashed border-border flex items-center justify-center">
-      <span className="text-lg text-muted-foreground/40">+</span>
+      <span className="text-lg text-muted-foreground/75">+</span>
     </div>
-    <p className={`${t.labelSm} text-muted-foreground/40`}>{label}</p>
+    <p className={`${t.labelSm} text-muted-foreground/75`}>{label}</p>
   </div>
 );
 
@@ -507,7 +507,7 @@ export const Tag = ({
   const styles = {
     default: "border border-border text-muted-foreground",
     active: "bg-[hsl(152,48%,90%)] text-[hsl(152,48%,20%)]",
-    muted: "border border-border/50 text-muted-foreground/60",
+    muted: "border border-border/50 text-muted-foreground/85",
   };
   return (
     <span
@@ -572,7 +572,7 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
               onClick={() => navigate(cs.path)}
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad} text-left group hover:border-primary/30 transition-all hover:-translate-y-0.5`}
             >
-              <p className={`${t.labelSm} text-muted-foreground/50 mb-4`}>
+              <p className={`${t.labelSm} text-muted-foreground/80 mb-4`}>
                 {cs.tags.join(" · ")}
               </p>
               <h3

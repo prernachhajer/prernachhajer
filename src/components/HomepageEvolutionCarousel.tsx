@@ -66,11 +66,11 @@ const HomepageEvolutionCarousel = () => {
                     <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                   </div>
                   <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3 gap-2">
-                    <svg className="w-3 h-3 text-muted-foreground/40" viewBox="0 0 12 12" fill="none">
+                    <svg className="w-3 h-3 text-muted-foreground/75" viewBox="0 0 12 12" fill="none">
                       <rect x="2" y="5" width="8" height="5.5" rx="1.5" stroke="currentColor" strokeWidth="1"/>
                       <path d="M4 5V3.5a2 2 0 014 0V5" stroke="currentColor" strokeWidth="1"/>
                     </svg>
-                    <span className="text-[0.6875rem] text-muted-foreground/60 font-mono tracking-wide">espncricinfo.com</span>
+                    <span className="text-[0.6875rem] text-muted-foreground/85 font-mono tracking-wide">espncricinfo.com</span>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const HomepageEvolutionCarousel = () => {
                     ? "text-foreground text-xl font-semibold"
                     : i < active
                     ? "text-muted-foreground text-base"
-                    : "text-muted-foreground/50 text-base"
+                    : "text-muted-foreground/80 text-base"
                 }`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
@@ -137,7 +137,7 @@ const HomepageEvolutionCarousel = () => {
               </span>
               <span
                 className={`text-[0.5625rem] tracking-[0.14em] uppercase mt-1 font-mono transition-colors ${
-                  i === active ? "text-muted-foreground" : "text-muted-foreground/30"
+                  i === active ? "text-muted-foreground" : "text-muted-foreground/70"
                 }`}
               >
                 {s.era}
