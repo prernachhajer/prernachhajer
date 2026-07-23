@@ -262,36 +262,57 @@ const CaseStudyQuickReads = () => {
           </motion.div>
         </div>
 
-        {/* Findings Grid */}
-        <div className={`${layout.container} mx-auto mt-0.5 grid md:grid-cols-2 gap-0.5`}>
-          {[
-            {
-              num: "Finding 01",
-              title: "The summary is a decision layer, not a replacement",
-              desc: "Users weren't opposed to long-form — they wanted confidence before committing. A 100–120 word summary gave them enough context to choose, not enough to feel satisfied and leave.",
-              tag: "Reframed the brief",
-            },
-            {
-              num: "Finding 02",
-              title: "Three personas, one surface — with conflicting needs",
-              desc: "Casual users wanted speed. Content consumers wanted stories. Loyal readers wanted depth. Any solution had to serve all three without forcing a choice. Quick Reads needed to be a gateway, not a gate.",
-              tag: "Strategic tension",
-            },
-            {
-              num: "Finding 03",
-              title: "Competitors had speed. Cricinfo had credibility.",
-              desc: "Inshorts and Instagram already offered short-form news. Users who chose cricinfo did so for cricket-specific depth and trust. Summaries had to carry that credibility — not dilute it.",
-              tag: "Competitive edge",
-            },
-            {
-              num: "Finding 04",
-              title: "State management was a UX problem, not just an engineering one",
-              desc: "Users switching between summary and full article — or returning to the feed after reading — needed continuity. Losing context mid-flow was a real drop-off risk.",
-              tag: "UX critical",
-            },
-          ].map((insight, i) => {
-            const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
-            return (
+        {/* Findings — separate sub-section */}
+        <div className={`${layout.container} mx-auto mt-32`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+                <span className="w-5 h-px bg-primary" />
+                What we found
+              </p>
+              <h3
+                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                Four findings that reframed Quick Reads.
+              </h3>
+            </div>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
+          </motion.div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                num: "01",
+                title: "The summary is a decision layer, not a replacement",
+                desc: "Users weren't opposed to long-form — they wanted confidence before committing. A 100–120 word summary gave them enough context to choose, not enough to feel satisfied and leave.",
+                tag: "Reframed the brief",
+              },
+              {
+                num: "02",
+                title: "Three personas, one surface — with conflicting needs",
+                desc: "Casual users wanted speed. Content consumers wanted stories. Loyal readers wanted depth. Any solution had to serve all three without forcing a choice. Quick Reads needed to be a gateway, not a gate.",
+                tag: "Strategic tension",
+              },
+              {
+                num: "03",
+                title: "Competitors had speed. Cricinfo had credibility.",
+                desc: "Inshorts and Instagram already offered short-form news. Users who chose cricinfo did so for cricket-specific depth and trust. Summaries had to carry that credibility — not dilute it.",
+                tag: "Competitive edge",
+              },
+              {
+                num: "04",
+                title: "State management was a UX problem, not just an engineering one",
+                desc: "Users switching between summary and full article — or returning to the feed after reading — needed continuity. Losing context mid-flow was a real drop-off risk.",
+                tag: "UX critical",
+              },
+            ].map((insight, i) => (
               <motion.div
                 key={insight.num}
                 initial="hidden"
@@ -299,15 +320,28 @@ const CaseStudyQuickReads = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-card p-10 ${corners[i] || ""}`}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
               >
-                <p className={`${t.labelSm} text-primary mb-4`}>{insight.num}</p>
-                <h4 className="font-semibold text-base mb-3 tracking-tight">{insight.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{insight.desc}</p>
-                <span
-                  className={`${t.labelSm} px-3 py-1 rounded-full border border-primary/20 text-primary`}
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
                 >
-                  {insight.tag}
+                  {insight.num}
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                    {insight.desc}
+                  </p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                    {insight.tag}
                 </span>
               </motion.div>
             );
