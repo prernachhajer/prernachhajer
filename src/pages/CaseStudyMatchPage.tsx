@@ -191,26 +191,50 @@ const CaseStudyMatchPage = () => {
           <h2>Two gaps, not one.</h2>
           <p>Looking at the analytics and user feedback, two distinct problems emerged — and they needed separate solutions.</p>
         </Prose>
-        <div className={`${layout.container} mx-auto mt-10 grid md:grid-cols-3 gap-0.5`}>
-          {[
-            {
-              num: "Finding 01",
-              title: "Content needs change with match state",
-              desc: "What a user wants pre-match — squads, preview, fantasy — is completely different from what they need live or post-match. One static tab structure served none of these moments well.",
-            },
-            {
-              num: "Finding 02",
-              title: "Users couldn't see what other tabs held",
-              desc: "Even users on the right tab had no visibility into what other tabs contained. High-value content was being ignored not from lack of interest, but lack of discovery.",
-            },
-            {
-              num: "Finding 03",
-              title: "Peak complexity at the worst moment",
-              desc: "12 tabs during a live match — when users are most time-pressured — is when they need the least friction. The page was hardest to use when it mattered most.",
-            },
-          ].map((insight, i) => {
-            const corners = i === 0 ? "md:rounded-l-xl" : i === 2 ? "md:rounded-r-xl" : "";
-            return (
+        <div className={`${layout.container} mx-auto mt-16`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+                <span className="w-5 h-px bg-primary" />
+                What we found
+              </p>
+              <h3
+                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                Three findings that reframed the match page.
+              </h3>
+            </div>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>03 findings</span>
+          </motion.div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                num: "01",
+                title: "Content needs change with match state",
+                desc: "What a user wants pre-match — squads, preview, fantasy — is completely different from what they need live or post-match. One static tab structure served none of these moments well.",
+                tag: "Reframed the brief",
+              },
+              {
+                num: "02",
+                title: "Users couldn't see what other tabs held",
+                desc: "Even users on the right tab had no visibility into what other tabs contained. High-value content was being ignored not from lack of interest, but lack of discovery.",
+                tag: "Discovery gap",
+              },
+              {
+                num: "03",
+                title: "Peak complexity at the worst moment",
+                desc: "12 tabs during a live match — when users are most time-pressured — is when they need the least friction. The page was hardest to use when it mattered most.",
+                tag: "UX critical",
+              },
+            ].map((insight, i) => (
               <motion.div
                 key={insight.num}
                 initial="hidden"
@@ -218,14 +242,33 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-card p-10 ${corners}`}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
               >
-                <p className={`${t.labelSm} text-primary mb-4`}>{insight.num}</p>
-                <h4 className="font-semibold text-base mb-3 tracking-tight">{insight.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{insight.desc}</p>
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                    {insight.desc}
+                  </p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                    {insight.tag}
+                  </span>
+                </div>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </Section>
 
