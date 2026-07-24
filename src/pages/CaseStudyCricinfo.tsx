@@ -400,7 +400,7 @@ const CaseStudyCricinfo = () => {
                     pct: 29,
                     variant: "muted" as const,
                     pointers: [
-                      "Works for power users only"
+                      "Works for power users only",
                       "No entry point for casual users",
                       "Chronological feed, no hierarchy",
                       "Hard to rediscover content",
@@ -426,21 +426,13 @@ const CaseStudyCricinfo = () => {
                     label: "Findability",
                     pct: 59,
                     variant: "default" as const,
-                    pointers: [
-                      "Clear hierarchy introduced",
-                      "Better for casual users",
-                      "Still too dense",
-                    ],
+                    pointers: ["Clear hierarchy introduced", "Better for casual users", "Still too dense"],
                   },
                   {
                     label: "Scalability",
                     pct: 82,
                     variant: "good" as const,
-                    pointers: [
-                      "Modular system,3× component reuse",
-                      "Faster builds",
-                      "Consistent iterations",
-                    ],
+                    pointers: ["Modular system,3× component reuse", "Faster builds", "Consistent iterations"],
                   },
                 ],
               },
