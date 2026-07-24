@@ -527,6 +527,20 @@ const CaseStudyCricinfo = () => {
         </div>
       </section>
 
+      <section className={`${spacing.sectionGap} ${layout.px}`}>
+        <Prose>
+          <h2>Three versions. Five years. One surface.</h2>
+          <p>
+            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
+            changed, what didn't, and why.
+          </p>
+        </Prose>
+
+        <div className={`${layout.container} mx-auto mt-12`}>
+          <HomepageEvolutionCarousel />
+        </div>
+      </section>
+
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
@@ -794,20 +808,6 @@ const CaseStudyCricinfo = () => {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      <section className={`${spacing.sectionGap} ${layout.px}`}>
-        <Prose>
-          <h2>Three versions. Five years. One surface.</h2>
-          <p>
-            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
-            changed, what didn't, and why.
-          </p>
-        </Prose>
-
-        <div className={`${layout.container} mx-auto mt-12`}>
-          <HomepageEvolutionCarousel />
         </div>
       </section>
 
