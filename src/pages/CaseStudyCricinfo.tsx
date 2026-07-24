@@ -537,10 +537,10 @@ const CaseStudyCricinfo = () => {
                           <motion.div
                             className={`h-full rounded-full ${
                               dim.variant === "good"
-                                ? "bg-[hsl(152,48%,50%)]"
+                                ? "bg-[#00976A]"
                                 : dim.variant === "muted"
                                   ? "bg-background/25"
-                                  : "bg-primary"
+                                  : "bg-[#00976A]"
                             }`}
                             initial={{ width: 0 }}
                             whileInView={{ width: `${dim.pct}%` }}
