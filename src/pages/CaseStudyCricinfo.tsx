@@ -223,7 +223,7 @@ const CaseStudyCricinfo = () => {
         </div>
 
         {/* Findings — separate sub-section */}
-        <div className={ max-w-3xl mx-auto mt-16`}>
+        <div className={`${layout.container} max-w-3xl mx-auto mt-16`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
