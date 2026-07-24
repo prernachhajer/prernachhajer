@@ -193,8 +193,8 @@ const CaseStudyDesignSystem = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/80 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/65 leading-relaxed">{card.desc}</p>
+                  <p className="text-sm font-medium text-background/75 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/50 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
