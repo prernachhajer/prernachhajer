@@ -685,7 +685,7 @@ const CaseStudyCricinfo = () => {
       </Section>
 */}
       {/* HSB EVOLUTION */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
+      <section className={`${spacing.sectionGap} ${layout.px} bg-background`}>
         <div className={`${layout.container} mx-auto`}>
           <motion.div
             initial="hidden"
@@ -701,7 +701,7 @@ const CaseStudyCricinfo = () => {
                 The Decision · 2021–2026
               </span>
               <h2
-                className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-background/90 leading-tight"
+                className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-foreground leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
                 Don't redesign the
@@ -709,7 +709,7 @@ const CaseStudyCricinfo = () => {
                 <span className="text-primary italic">live score strip.</span>
               </h2>
             </div>
-            <span className="inline-flex items-center gap-2 text-[0.6562rem] font-mono tracking-[0.07em] text-[hsl(152,48%,50%)] bg-[hsl(152,48%,20%)]/10 border border-[hsl(152,48%,30%)]/20 rounded-full px-4 py-2 mt-1">
+            <span className="inline-flex items-center gap-2 text-[0.6562rem] font-mono tracking-[0.07em] text-[hsl(152,60%,32%)] bg-[hsl(152,60%,95%)] border border-[hsl(152,48%,80%)] rounded-full px-4 py-2 mt-1">
               ✓ Sustained 2021–2026
             </span>
           </motion.div>
@@ -745,35 +745,35 @@ const CaseStudyCricinfo = () => {
                 className="grid grid-cols-[80px_1fr] gap-6 items-start"
               >
                 <div className="pt-4 flex flex-col items-center gap-2.5">
-                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
+                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-foreground">
                     {screen.year}
                   </span>
-                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/85">
+                  <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-muted-foreground">
                     {screen.sub}
                   </span>
                   {i < 2 && (
-                    <div className="w-px flex-1 min-h-[40px] bg-gradient-to-b from-background/10 to-transparent" />
+                    <div className="w-px flex-1 min-h-[40px] bg-gradient-to-b from-border to-transparent" />
                   )}
                 </div>
                 <div
-                  className="rounded-xl overflow-hidden border border-background/[0.07] bg-[hsl(220,15%,11%)]"
-                  style={{ boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
+                  className="rounded-xl overflow-hidden border border-border/60 bg-card"
+                  style={{ boxShadow: "0 4px 40px rgba(0,0,0,0.08)" }}
                 >
-                  <div className="bg-[hsl(220,14%,13%)] border-b border-background/[0.07] px-3.5 py-2.5 flex items-center gap-3">
+                  <div className="bg-muted border-b border-border/60 px-3.5 py-2.5 flex items-center gap-3">
                     <div className="flex gap-1.5">
                       <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
                       <div className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
                       <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                     </div>
-                    <div className="flex-1 bg-[hsl(220,20%,8%)] border border-background/5 rounded-md px-3 py-1">
-                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/85">
+                    <div className="flex-1 bg-background border border-border/50 rounded-md px-3 py-1">
+                      <span className="text-[0.5938rem] font-mono tracking-wide text-muted-foreground">
                         espncricinfo.com
                       </span>
                     </div>
                   </div>
                   <img src={screen.img} alt={`Cricinfo ${screen.year} homepage`} className="w-full block" />
-                  <div className="px-4 py-3 border-t border-background/[0.07] bg-[hsl(220,18%,8%)]">
-                    <p className="text-xs text-background/75 font-medium leading-relaxed">{screen.caption}</p>
+                  <div className="px-4 py-3 border-t border-border/60 bg-muted/50">
+                    <p className="text-xs text-muted-foreground font-medium leading-relaxed">{screen.caption}</p>
                   </div>
                 </div>
               </motion.div>
@@ -781,23 +781,23 @@ const CaseStudyCricinfo = () => {
           </div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <hr className="border-t border-background/[0.07] mb-8" />
+            <hr className="border-t border-border/60 mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
-              <p className="text-sm text-background/80 leading-[1.85]">
+              <p className="text-sm text-muted-foreground leading-[1.85]">
                 The live score strip was the{" "}
-                <strong className="text-background/90 font-bold">highest-performing surface</strong> on the homepage.
+                <strong className="text-foreground font-bold">highest-performing surface</strong> on the homepage.
                 Across three redesigns, it was the one thing we chose not to rebuild. Not because we couldn't improve it
-                — but because <strong className="text-background/90 font-bold">its familiarity was its strength</strong>
+                — but because <strong className="text-foreground font-bold">its familiarity was its strength</strong>
                 . Users trusted it. It anchored every visit. Restraint, here, was a design decision.
               </p>
-              <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
+              <div className="text-center md:border-l md:border-border/60 md:pl-9">
                 <p
-                  className="text-5xl font-extrabold tracking-tight leading-none text-background/90"
+                  className="text-5xl font-extrabold tracking-tight leading-none text-foreground"
                   style={{ fontFamily: t.displayFont }}
                 >
                   3<span className="text-primary">×</span>
                 </p>
-                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/85 leading-relaxed mt-1.5">
+                <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-muted-foreground leading-relaxed mt-1.5">
                   Versions
                   <br />
                   Same strip
@@ -807,6 +807,7 @@ const CaseStudyCricinfo = () => {
           </motion.div>
         </div>
       </section>
+
 
       {/* WHAT COMES NEXT */}
       <Section label="What comes next">
