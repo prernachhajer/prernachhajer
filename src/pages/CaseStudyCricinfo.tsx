@@ -357,15 +357,6 @@ const CaseStudyCricinfo = () => {
         </div>
       </Section> */}
 
-      <div className="flex flex-col gap-10 px-[84px]">
-        {[
-          {
-            num: "01",
-            title: "Originated the feed → structured system shift",
-            desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
-          },
-        ]}
-      </div>
 
       {/* BEFORE vs AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
