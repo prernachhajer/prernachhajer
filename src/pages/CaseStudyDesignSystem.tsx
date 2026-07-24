@@ -160,7 +160,7 @@ const CaseStudyDesignSystem = () => {
                 desc: "Teams weren't rebuilding from scratch. They were assembling. The velocity shift was measurable within months of full adoption.",
               },
               {
-                label: "Team independence",
+                label: "FIGMA FILES COVERAGE",
                 num: "170+",
                 title: "Figma files powered by the system",
                 desc: "From one inconsistent library to 170+ files across the product — all pulling from a single shared foundation.",
