@@ -182,7 +182,7 @@ const CaseStudyDesignSystem = () => {
                 className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/80 mb-3">
                     {card.label}
                   </p>
                   <p
