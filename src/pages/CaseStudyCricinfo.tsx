@@ -911,10 +911,6 @@ const CaseStudyCricinfo = () => {
           {[
             "Make the case before making the design. Research gave the problem language. Without that, the 2023 redesign doesn't happen — not because the idea was wrong, but because the <em>problem wasn't visible yet</em>.",
             "Restraint is a design decision. Not redesigning the HSB across three versions was as deliberate as anything we shipped. <em>What not to redesign</em> matters as much as what to change.",
-            {
-              /*    "Design at scale is the <em>ongoing negotiation</em> between what users need, what the business wants, and what the system can support. The layout is the last part of that — not the first.",
-            "A homepage is never finished. Not because the work is incomplete, but because users keep changing, the product keeps growing, and the <em>habit you're trying to build</em> takes longer than any single redesign.", */
-            },
           ].map((text, i) => (
             <LearningCard key={i} index={i}>
               {text}
