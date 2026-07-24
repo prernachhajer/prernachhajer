@@ -367,7 +367,23 @@ const CaseStudyCricinfo = () => {
                 title: "Originated the feed → structured system shift",
                 desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
               },
-            ]}
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="flex gap-6 md:gap-8"
+              >
+                <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
+                <div>
+                  <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </Section>
