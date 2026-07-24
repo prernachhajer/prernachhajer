@@ -403,7 +403,6 @@ const CaseStudyCricinfo = () => {
                       "Works for power users only",
                       "No entry point for casual users",
                       "Chronological feed, no hierarchy",
-                      "Hard to rediscover content",
                     ],
                   },
                   {
