@@ -179,70 +179,6 @@ const CaseStudyCricinfo = () => {
         </div>
       </DarkSection>
 
-      {/* 02 — IMPACT */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>02 — Impact</SectionLabel>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8"
-          >
-            Led the homepage redesign championing casual users — 80% of traffic — shifting from a match-time utility to a daily destination.
-          </motion.p>
-          <div className="grid md:grid-cols-3 gap-0.5">
-            {[
-              {
-                label: "Bounce rate reduction",
-                num: "~20–30%",
-                title: "Reduced bounce rates across sessions",
-                desc: "By restructuring the homepage around casual user needs — clear zones, surfaced content, and reduced cognitive load — bounce rates dropped significantly.",
-              },
-              {
-                label: "Returning user sessions",
-                num: "~15%",
-                title: "More users came back between matches",
-                desc: "Repeat visits from casual users improved as the homepage evolved from a live-score utility into a content-rich destination worth returning to.",
-              },
-              {
-                label: "Design system efficiency",
-                num: "3×",
-                title: "Component reuse across the product",
-                desc: "Faster builds, less debt, consistent iterations across three years. Modular components and shared layout logic scaled across formats, tournaments, and teams.",
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={card.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
-              >
-                <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
-                    {card.label}
-                  </p>
-                  <p
-                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
-                    style={{ fontFamily: t.displayFont }}
-                  >
-                    {card.num}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 03 — PROCESS & RESEARCH */}
       <Section label="03 — Process & Research">
         <Prose>
@@ -359,12 +295,12 @@ const CaseStudyCricinfo = () => {
                   >
                     {insight.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                    {insight.desc}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
                 </div>
                 <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
-                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
                     {insight.tag}
                   </span>
                 </div>
@@ -380,199 +316,264 @@ const CaseStudyCricinfo = () => {
           <SectionLabel>04 — Design Evolution</SectionLabel>
         </div> Carousel */}
 
-        {/* MY CONTRIBUTION */}
-        <Section label="04 — Design Evolution">
-          <div className={`${layout.container} mx-auto`}>
-            <div className="flex flex-col gap-10 px-[84px]">
-              {[
-                {
-                  num: "01",
-                  title: "Originated the feed → structured system shift",
-                  desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
-                },
-                {
-                  num: "02",
-                  title: "Made the case before making the design",
-                  desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
-                },
-                {
-                  num: "03",
-                  title: "Held the line on what already worked",
-                  desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fade}
-                  custom={i}
-                  className="flex gap-6 md:gap-8"
-                >
-                  <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
-                  <div>
-                    <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+      {/* MY CONTRIBUTION */}
+      <Section label="04 — Design Evolution">
+        <div className={`${layout.container} mx-auto`}>
+          <div className="flex flex-col gap-10 px-[84px]">
+            {[
+              {
+                num: "01",
+                title: "Originated the feed → structured system shift",
+                desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
+              },
+              {
+                num: "02",
+                title: "Made the case before making the design",
+                desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
+              },
+              {
+                num: "03",
+                title: "Held the line on what already worked",
+                desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="flex gap-6 md:gap-8"
+              >
+                <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
+                <div>
+                  <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </Section>
+        </div>
+      </Section>
 
-        {/* BEFORE vs AFTER */}
-        <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
-          <div className={`${layout.container} mx-auto`}>
-            <SectionLabel dark> BEFORE VS AFTER</SectionLabel>
-            <div className="grid md:grid-cols-3 gap-4 mt-12">
-              {[
-                {
-                  year: "2021",
-                  title: "Feed-first · Before",
-                  dimensions: [
-                    {
-                      label: "Ease of finding",
-                      pct: 35,
-                      variant: "muted" as const,
-                      strong: "Works for power users.",
-                      desc: "Casual users found no entry points, no hierarchy — overwhelming on first visit.",
-                    },
-                    {
-                      label: "Speed of scanning content",
-                      pct: 22,
-                      variant: "muted" as const,
-                      strong: "Chronological feed only.",
-                      desc: "No thematic grouping. Hard to rediscover content. Articles dominated everything.",
-                    },
-                    {
-                      label: "Scalability for new tournaments",
-                      pct: 18,
-                      variant: "muted" as const,
-                      strong: "Non-modular.",
-                      desc: "Every tournament = manual rebuild. High effort, inconsistent output, slow team velocity.",
-                    },
-                  ],
-                },
-                {
-                  year: "2023",
-                  title: "Structured · The leap",
-                  dimensions: [
-                    {
-                      label: "Ease of finding",
-                      pct: 62,
-                      variant: "default" as const,
-                      strong: "Clear hierarchy introduced.",
-                      desc: "Top Stories, In-Depth, Playlists. Better for casual users. Still too dense.",
-                    },
-                    {
-                      label: "Speed of scanning content",
-                      pct: 55,
-                      variant: "default" as const,
-                      strong: "Structured zones.",
-                      desc: "Better content discovery. Dark mode added. But too many items per section.",
-                    },
-                    {
-                      label: "Scalability for new tournaments",
-                      pct: 82,
-                      variant: "good" as const,
-                      strong: "Modular system.",
-                      desc: "3× component reuse. Faster builds, consistent iterations across the team.",
-                    },
-                  ],
-                },
-                {
-                  year: "2026",
-                  title: "Simplified · After",
-                  dimensions: [
-                    {
-                      label: "Ease of finding",
-                      pct: 86,
-                      variant: "good" as const,
-                      strong: "Cleaner mobile experience.",
-                      desc: "Reduced density, shorter scroll, breathing room. Users find what they need faster.",
-                    },
-                    {
-                      label: "Speed of scanning content",
-                      pct: 84,
-                      variant: "good" as const,
-                      strong: "Mental map is clear.",
-                      desc: "Users know where things live. Findability improved — especially for casual users.",
-                    },
-                    {
-                      label: "Scalability for new tournaments",
-                      pct: 82,
-                      variant: "good" as const,
-                      strong: "Structure held.",
-                      desc: "Low-performing sections removed. Same system, less noise. Personalisation still pending.",
-                    },
-                  ],
-                },
-              ].map((card, ci) => (
-                <motion.div
-                  key={ci}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fade}
-                  custom={ci}
-                  className="bg-[hsl(220,18%,12%)] rounded-2xl p-8 flex flex-col"
-                >
-                  <div className="mb-6">
-                    <span
-                      className="text-2xl font-semibold text-background/90 tracking-tight"
-                      style={{ fontFamily: t.displayFont }}
-                    >
-                      {card.year}
-                    </span>
-                    <p className={`${t.labelSm} text-muted-foreground mt-1`}>{card.title}</p>
-                  </div>
-                  <div className="flex flex-col gap-5">
-                    {card.dimensions.map((dim, di) => (
-                      <div key={di}>
-                        <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75 mb-2">
-                          {dim.label}
-                        </p>
-                        <div className="w-full h-2 rounded-full bg-background/10 mb-2 overflow-hidden">
-                          <motion.div
-                            className={`h-full rounded-full ${
-                              dim.variant === "good"
-                                ? "bg-[#00976A]"
-                                : dim.variant === "muted"
-                                  ? "bg-background/25"
-                                  : "bg-[#00976A]"
-                            }`}
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${dim.pct}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: di * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                          />
-                        </div>
-                        <p className="text-xs text-background/85 leading-relaxed">
-                          <strong className="text-background/80">{dim.strong}</strong> {dim.desc}
-                        </p>
+      {/* BEFORE vs AFTER */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel dark> BEFORE VS AFTER</SectionLabel>
+          <div className="grid md:grid-cols-3 gap-4 mt-12">
+            {[
+              {
+                year: "2021",
+                title: "Feed-first · Before",
+                dimensions: [
+                  {
+                    label: "Ease of finding",
+                    pct: 35,
+                    variant: "muted" as const,
+                    strong: "Works for power users.",
+                    desc: "Casual users found no entry points, no hierarchy — overwhelming on first visit.",
+                  },
+                  {
+                    label: "Speed of scanning content",
+                    pct: 22,
+                    variant: "muted" as const,
+                    strong: "Chronological feed only.",
+                    desc: "No thematic grouping. Hard to rediscover content. Articles dominated everything.",
+                  },
+                  {
+                    label: "Scalability for new tournaments",
+                    pct: 18,
+                    variant: "muted" as const,
+                    strong: "Non-modular.",
+                    desc: "Every tournament = manual rebuild. High effort, inconsistent output, slow team velocity.",
+                  },
+                ],
+              },
+              {
+                year: "2023",
+                title: "Structured · The leap",
+                dimensions: [
+                  {
+                    label: "Ease of finding",
+                    pct: 62,
+                    variant: "default" as const,
+                    strong: "Clear hierarchy introduced.",
+                    desc: "Top Stories, In-Depth, Playlists. Better for casual users. Still too dense.",
+                  },
+                  {
+                    label: "Speed of scanning content",
+                    pct: 55,
+                    variant: "default" as const,
+                    strong: "Structured zones.",
+                    desc: "Better content discovery. Dark mode added. But too many items per section.",
+                  },
+                  {
+                    label: "Scalability for new tournaments",
+                    pct: 82,
+                    variant: "good" as const,
+                    strong: "Modular system.",
+                    desc: "3× component reuse. Faster builds, consistent iterations across the team.",
+                  },
+                ],
+              },
+              {
+                year: "2026",
+                title: "Simplified · After",
+                dimensions: [
+                  {
+                    label: "Ease of finding",
+                    pct: 86,
+                    variant: "good" as const,
+                    strong: "Cleaner mobile experience.",
+                    desc: "Reduced density, shorter scroll, breathing room. Users find what they need faster.",
+                  },
+                  {
+                    label: "Speed of scanning content",
+                    pct: 84,
+                    variant: "good" as const,
+                    strong: "Mental map is clear.",
+                    desc: "Users know where things live. Findability improved — especially for casual users.",
+                  },
+                  {
+                    label: "Scalability for new tournaments",
+                    pct: 82,
+                    variant: "good" as const,
+                    strong: "Structure held.",
+                    desc: "Low-performing sections removed. Same system, less noise. Personalisation still pending.",
+                  },
+                ],
+              },
+            ].map((card, ci) => (
+              <motion.div
+                key={ci}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={ci}
+                className="bg-[hsl(220,18%,12%)] rounded-2xl p-8 flex flex-col"
+              >
+                <div className="mb-6">
+                  <span
+                    className="text-2xl font-semibold text-background/90 tracking-tight"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {card.year}
+                  </span>
+                  <p className={`${t.labelSm} text-muted-foreground mt-1`}>{card.title}</p>
+                </div>
+                <div className="flex flex-col gap-5">
+                  {card.dimensions.map((dim, di) => (
+                    <div key={di}>
+                      <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75 mb-2">
+                        {dim.label}
+                      </p>
+                      <div className="w-full h-2 rounded-full bg-background/10 mb-2 overflow-hidden">
+                        <motion.div
+                          className={`h-full rounded-full ${
+                            dim.variant === "good"
+                              ? "bg-[#00976A]"
+                              : dim.variant === "muted"
+                                ? "bg-background/25"
+                                : "bg-[#00976A]"
+                          }`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${dim.pct}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: di * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                        />
                       </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                      <p className="text-xs text-background/85 leading-relaxed">
+                        <strong className="text-background/80">{dim.strong}</strong> {dim.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className={`${spacing.sectionGap} ${layout.px}`}>
-          <Prose>
-            <h2>Three versions. Five years. One surface.</h2>
-            <p>
-              Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
-              changed, what didn't, and why.
-            </p>
-          </Prose>
+      <section className={`${spacing.sectionGap} ${layout.px}`}>
+        <Prose>
+          <h2>Three versions. Five years. One surface.</h2>
+          <p>
+            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
+            changed, what didn't, and why.
+          </p>
+        </Prose>
 
-          <div className={`${layout.container} mx-auto mt-12`}>
-            <HomepageEvolutionCarousel />
+        <div className={`${layout.container} mx-auto mt-12`}>
+          <HomepageEvolutionCarousel />
+        </div>
+      </section>
+
+      {/* 02 — IMPACT */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel dark>02 — Impact</SectionLabel>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-sm text-background/75 leading-relaxed mb-8"
+          >
+            Led the homepage redesign championing casual users — 80% of traffic — shifting from a match-time utility to
+            a daily destination.
+          </motion.p>
+          <div className="grid md:grid-cols-3 gap-0.5">
+            {[
+              {
+                label: "Bounce rate reduction",
+                num: "~20–30%",
+                title: "Reduced bounce rates across sessions",
+                desc: "By restructuring the homepage around casual user needs — clear zones, surfaced content, and reduced cognitive load — bounce rates dropped significantly.",
+              },
+              {
+                label: "Returning user sessions",
+                num: "~15%",
+                title: "More users came back between matches",
+                desc: "Repeat visits from casual users improved as the homepage evolved from a live-score utility into a content-rich destination worth returning to.",
+              },
+              {
+                label: "Design system efficiency",
+                num: "3×",
+                title: "Component reuse across the product",
+                desc: "Faster builds, less debt, consistent iterations across three years. Modular components and shared layout logic scaled across formats, tournaments, and teams.",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+              >
+                <div>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
+                    {card.label}
+                  </p>
+                  <p
+                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {card.num}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
       <Section label="05 — Design Decisions">
@@ -737,7 +738,9 @@ const CaseStudyCricinfo = () => {
                       <div className="w-[10px] h-[10px] rounded-full bg-[#28C840]" />
                     </div>
                     <div className="flex-1 bg-[hsl(220,20%,8%)] border border-background/5 rounded-md px-3 py-1">
-                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/85">espncricinfo.com</span>
+                      <span className="text-[0.5938rem] font-mono tracking-wide text-background/85">
+                        espncricinfo.com
+                      </span>
                     </div>
                   </div>
                   <img src={screen.img} alt={`Cricinfo ${screen.year} homepage`} className="w-full block" />
