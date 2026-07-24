@@ -379,7 +379,7 @@ const CaseStudyCricinfo = () => {
                 custom={i}
                 className="flex gap-6 md:gap-8"
               >
-                <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
+                <span className={`${t.label} text-primary shrink-0 pt-1`}>{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
