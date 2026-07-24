@@ -413,6 +413,7 @@ const CaseStudyCricinfo = () => {
                       "Non-modular architecture",
                       "Every tournament = manual rebuild",
                       "High effort, inconsistent output",
+                      "Hard to rediscover content",
                     ],
                   },
                 ],
