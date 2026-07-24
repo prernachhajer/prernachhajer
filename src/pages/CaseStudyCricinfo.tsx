@@ -317,7 +317,7 @@ const CaseStudyCricinfo = () => {
         </div> Carousel */}
 
       {/* MY CONTRIBUTION */}
-      <Section label="04 — Design Evolution">
+      {/*   <Section label="04 — Design Evolution">
         <div className={`${layout.container} mx-auto`}>
           <div className="flex flex-col gap-10 px-[84px]">
             {[
@@ -355,7 +355,7 @@ const CaseStudyCricinfo = () => {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* BEFORE vs AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
