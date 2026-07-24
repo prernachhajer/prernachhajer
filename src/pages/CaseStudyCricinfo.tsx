@@ -232,10 +232,10 @@ const CaseStudyCricinfo = () => {
             className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
           >
             <div>
-              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+              {/*   <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
                 <span className="w-5 h-px bg-primary" />
                 What we found
-              </p>
+              </p> */}
               <h3
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
@@ -745,15 +745,11 @@ const CaseStudyCricinfo = () => {
                 className="grid grid-cols-[80px_1fr] gap-6 items-start"
               >
                 <div className="pt-4 flex flex-col items-center gap-2.5">
-                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-foreground">
-                    {screen.year}
-                  </span>
+                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-foreground">{screen.year}</span>
                   <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-muted-foreground">
                     {screen.sub}
                   </span>
-                  {i < 2 && (
-                    <div className="w-px flex-1 min-h-[40px] bg-gradient-to-b from-border to-transparent" />
-                  )}
+                  {i < 2 && <div className="w-px flex-1 min-h-[40px] bg-gradient-to-b from-border to-transparent" />}
                 </div>
                 <div
                   className="rounded-xl overflow-hidden border border-border/60 bg-card"
@@ -787,8 +783,8 @@ const CaseStudyCricinfo = () => {
                 The live score strip was the{" "}
                 <strong className="text-foreground font-bold">highest-performing surface</strong> on the homepage.
                 Across three redesigns, it was the one thing we chose not to rebuild. Not because we couldn't improve it
-                — but because <strong className="text-foreground font-bold">its familiarity was its strength</strong>
-                . Users trusted it. It anchored every visit. Restraint, here, was a design decision.
+                — but because <strong className="text-foreground font-bold">its familiarity was its strength</strong>.
+                Users trusted it. It anchored every visit. Restraint, here, was a design decision.
               </p>
               <div className="text-center md:border-l md:border-border/60 md:pl-9">
                 <p
@@ -807,7 +803,6 @@ const CaseStudyCricinfo = () => {
           </motion.div>
         </div>
       </section>
-
 
       {/* WHAT COMES NEXT */}
       <Section label="What comes next">
