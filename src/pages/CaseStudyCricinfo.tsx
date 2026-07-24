@@ -607,7 +607,7 @@ const CaseStudyCricinfo = () => {
       </section>
 
       {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
-      <Section label="05 — Design Decisions">
+      {/*   <Section label="05 — Design Decisions">
         <Prose>
           <h2>The decisions that defined the redesign</h2>
           <p>
@@ -686,7 +686,7 @@ const CaseStudyCricinfo = () => {
           </motion.div>
         ))}
       </Section>
-
+*/}
       {/* HSB EVOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
