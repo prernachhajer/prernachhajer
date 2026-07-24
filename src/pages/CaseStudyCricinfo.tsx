@@ -237,7 +237,7 @@ const CaseStudyCricinfo = () => {
                 What we found
               </p> */}
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                className="text-2xl md:text-2xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 Four findings that reframed the homepage.
