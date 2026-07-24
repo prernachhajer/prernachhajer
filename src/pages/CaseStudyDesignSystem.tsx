@@ -40,7 +40,7 @@ const CaseStudyDesignSystem = () => {
       <CaseStudyHero
         headline="Scaling a Design System for a"
         headlineAccent="global cricket platform"
-        tags={["Design System", "Senior Designer → Lead", "Web, iOS, Android", "2021 – 2025"]}
+        tags={["170 FIGMA FILES", "CROSS-FUNCTIONAL ADOPTION", "Web, iOS, Android", "2021 – 2025"]}
       />
 
       {/* THE STARTING POINT */}
