@@ -357,10 +357,13 @@ const CaseStudyCricinfo = () => {
         </div>
       </Section> */}
 
-      {/* MY CONTRIBUTION */}
-      <Section label="Design Evolution">
+      {/* DESIGN EVOLUTION — BEFORE VS AFTER */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <div className="flex flex-col gap-10 px-[84px]">
+          <SectionLabel dark>Design Evolution</SectionLabel>
+
+          {/* Strategic contribution */}
+          <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
             {[
               {
                 num: "01",
@@ -385,39 +388,33 @@ const CaseStudyCricinfo = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </Section>
 
-      {/* BEFORE vs AFTER */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark> BEFORE VS AFTER</SectionLabel>
-          <div className="grid md:grid-cols-3 gap-4 mt-12">
+          {/* Year columns */}
+          <div className="grid md:grid-cols-3 gap-4">
             {[
               {
                 year: "2021",
                 title: "Feed-first · Before",
                 dimensions: [
                   {
-                    label: "Ease of finding",
-                    pct: 35,
+                    label: "Findability",
+                    pct: 29,
                     variant: "muted" as const,
-                    strong: "Works for power users.",
-                    desc: "Casual users found no entry points, no hierarchy — overwhelming on first visit.",
+                    pointers: [
+                      "No clear entry points",
+                      "Chronological feed, no hierarchy",
+                      "Hard to rediscover content",
+                    ],
                   },
                   {
-                    label: "Speed of scanning content",
-                    pct: 22,
-                    variant: "muted" as const,
-                    strong: "Chronological feed only.",
-                    desc: "No thematic grouping. Hard to rediscover content. Articles dominated everything.",
-                  },
-                  {
-                    label: "Scalability for new tournaments",
+                    label: "Scalability",
                     pct: 18,
                     variant: "muted" as const,
-                    strong: "Non-modular.",
-                    desc: "Every tournament = manual rebuild. High effort, inconsistent output, slow team velocity.",
+                    pointers: [
+                      "Non-modular architecture",
+                      "Every tournament = manual rebuild",
+                      "High effort, inconsistent output",
+                    ],
                   },
                 ],
               },
@@ -426,25 +423,24 @@ const CaseStudyCricinfo = () => {
                 title: "Structured · The leap",
                 dimensions: [
                   {
-                    label: "Ease of finding",
-                    pct: 62,
+                    label: "Findability",
+                    pct: 59,
                     variant: "default" as const,
-                    strong: "Clear hierarchy introduced.",
-                    desc: "Top Stories, In-Depth, Playlists. Better for casual users. Still too dense.",
+                    pointers: [
+                      "Top Stories, In-Depth, Playlists",
+                      "Better for casual users",
+                      "Still too dense",
+                    ],
                   },
                   {
-                    label: "Speed of scanning content",
-                    pct: 55,
-                    variant: "default" as const,
-                    strong: "Structured zones.",
-                    desc: "Better content discovery. Dark mode added. But too many items per section.",
-                  },
-                  {
-                    label: "Scalability for new tournaments",
+                    label: "Scalability",
                     pct: 82,
                     variant: "good" as const,
-                    strong: "Modular system.",
-                    desc: "3× component reuse. Faster builds, consistent iterations across the team.",
+                    pointers: [
+                      "3× component reuse",
+                      "Faster builds",
+                      "Consistent iterations",
+                    ],
                   },
                 ],
               },
@@ -453,25 +449,24 @@ const CaseStudyCricinfo = () => {
                 title: "Simplified · After",
                 dimensions: [
                   {
-                    label: "Ease of finding",
-                    pct: 86,
+                    label: "Findability",
+                    pct: 85,
                     variant: "good" as const,
-                    strong: "Cleaner mobile experience.",
-                    desc: "Reduced density, shorter scroll, breathing room. Users find what they need faster.",
+                    pointers: [
+                      "Cleaner mobile experience",
+                      "Reduced density, shorter scroll",
+                      "Users know where things live",
+                    ],
                   },
                   {
-                    label: "Speed of scanning content",
-                    pct: 84,
-                    variant: "good" as const,
-                    strong: "Mental map is clear.",
-                    desc: "Users know where things live. Findability improved — especially for casual users.",
-                  },
-                  {
-                    label: "Scalability for new tournaments",
+                    label: "Scalability",
                     pct: 82,
                     variant: "good" as const,
-                    strong: "Structure held.",
-                    desc: "Low-performing sections removed. Same system, less noise. Personalisation still pending.",
+                    pointers: [
+                      "Low-performing sections removed",
+                      "Same modular system held",
+                      "Personalisation pending",
+                    ],
                   },
                 ],
               },
@@ -494,13 +489,18 @@ const CaseStudyCricinfo = () => {
                   </span>
                   <p className={`${t.labelSm} text-muted-foreground mt-1`}>{card.title}</p>
                 </div>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-6">
                   {card.dimensions.map((dim, di) => (
                     <div key={di}>
-                      <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75 mb-2">
-                        {dim.label}
-                      </p>
-                      <div className="w-full h-2 rounded-full bg-background/10 mb-2 overflow-hidden">
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75">
+                          {dim.label}
+                        </p>
+                        <span className="text-[0.6875rem] font-mono tracking-[0.08em] uppercase text-background/75">
+                          {dim.pct}%
+                        </span>
+                      </div>
+                      <div className="w-full h-2 rounded-full bg-background/10 mb-3 overflow-hidden">
                         <motion.div
                           className={`h-full rounded-full ${
                             dim.variant === "good"
@@ -515,9 +515,14 @@ const CaseStudyCricinfo = () => {
                           transition={{ duration: 0.8, delay: di * 0.1, ease: [0.16, 1, 0.3, 1] }}
                         />
                       </div>
-                      <p className="text-xs text-background/85 leading-relaxed">
-                        <strong className="text-background/80">{dim.strong}</strong> {dim.desc}
-                      </p>
+                      <ul className="flex flex-col gap-1.5">
+                        {dim.pointers.map((pointer, pi) => (
+                          <li key={pi} className="text-xs text-background/85 leading-relaxed flex items-start gap-2">
+                            <span className="w-1 h-1 rounded-full bg-background/50 mt-1.5 shrink-0" />
+                            <span>{pointer}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
