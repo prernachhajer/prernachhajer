@@ -109,7 +109,7 @@ const CaseStudyCricinfo = () => {
       </section>
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="01 — Problem">
+      <DarkSection label="Problem">
         <div className="grid md:grid-cols-2 gap-0.5">
           {/* State */}
           <motion.div
@@ -180,7 +180,7 @@ const CaseStudyCricinfo = () => {
       </DarkSection>
 
       {/* 03 — PROCESS & RESEARCH */}
-      <Section label="03 — Process & Research">
+      <Section label="Process & Research">
         <Prose>
           <h2>From assumptions to actual behaviour</h2>
           <p>
@@ -358,7 +358,7 @@ const CaseStudyCricinfo = () => {
       </Section> */}
 
       {/* MY CONTRIBUTION */}
-      <Section label="04 — Design Evolution">
+      <Section label="Design Evolution">
         <div className={`${layout.container} mx-auto`}>
           <div className="flex flex-col gap-10 px-[84px]">
             {[
@@ -544,7 +544,7 @@ const CaseStudyCricinfo = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>02 — Impact</SectionLabel>
+          <SectionLabel dark>Impact</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"
