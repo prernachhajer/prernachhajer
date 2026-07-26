@@ -44,8 +44,8 @@ const caseStudies = [
   {
     num: "02 / 04",
     company: "ESPN Cricinfo",
-    title: "Owning, Building & Scaling\u00a0\n",
-    titleEm: "the Design System",
+    title: "Scaling the\n",
+    titleEm: "Design System",
     desc: "How a single Figma library grew into a 170-file design system powering a global cricket platform — five phases, one team, and a complete Figma overhaul.",
     tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "desktop" as const,
