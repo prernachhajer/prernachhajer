@@ -618,17 +618,27 @@ const CaseStudyDesignSystem = () => {
         </div>
 
         {/* Typography + Iconography side by side */}
-        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-4`}>
           {[
             {
               label: "TYPOGRAPHY",
               title: "Complete font overhaul",
-              desc: "- Custom font files were adding weight the app didn't need\n- Switched to a system font — no font file to ship, smaller app size\n- Faster rendering on every device, no download required\n- Updated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
+              items: [
+                "Custom font files were adding weight the app didn't need",
+                "Switched to a system font — no font file to ship, smaller app size",
+                "Faster rendering on every device, no download required",
+                "Updated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
+              ],
             },
             {
               label: "ICONOGRAPHY",
               title: "Full icon library overhaul",
-              desc: "- Existing icons were heavier than they needed to be — thick strokes, visually loud at small sizes\n- Rebuilt lighter and more rounded, easier on the eye\n- Unified stroke weights and standardized grid alignment\n- Every instance replaced across every component, every interactive state checked",
+              items: [
+                "Existing icons were heavier than they needed to be — thick strokes, visually loud at small sizes",
+                "Rebuilt lighter and more rounded, easier on the eye",
+                "Unified stroke weights and standardized grid alignment",
+                "Every instance replaced across every component, every interactive state checked",
+              ],
             },
           ].map((card, i) => (
             <motion.div
@@ -638,14 +648,24 @@ const CaseStudyDesignSystem = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              className={`bg-card p-10 ${i === 0 ? "md:rounded-l-xl" : "md:rounded-r-xl"}`}
+              className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
             >
-              <p className={`${t.labelSm} text-muted-foreground mb-4`}>{card.label}</p>
-              <h4 className="font-semibold mb-3">{card.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{card.desc}</p>
+              <p className={`${t.label} text-primary mb-4`}>{card.label}</p>
+              <h4 className="text-2xl font-normal tracking-[-0.01em] mb-6">{card.title}</h4>
+              <ul className="divide-y divide-border/40">
+                {card.items.map((item, idx) => (
+                  <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
+                    <span className={`${t.labelSm} text-muted-foreground/70 pt-1 tabular-nums shrink-0`}>
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-muted-foreground leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
+
 
         {/* Font exploration placeholder */}
         <motion.div
