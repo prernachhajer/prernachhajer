@@ -38,7 +38,7 @@ const CaseStudyDesignSystem = () => {
 
       {/* HERO */}
       <CaseStudyHero
-        headline="Scaling a Design System for a"
+        headline="Owning, Building & Scaling a Design System for a"
         headlineAccent="global cricket platform"
         tags={["170 FIGMA FILES", "CROSS-FUNCTIONAL ADOPTION", "Web, iOS, Android", "2021 – 2025"]}
       />
