@@ -212,19 +212,19 @@ const CaseStudyDesignSystem = () => {
                 num: "01",
                 title: "Product alignment needed proof, not promises",
                 desc: "We made the case through small, visible wins. Each increment of value built trust. Abstract arguments about long-term payoff didn't land — concrete demos did.",
-                tag: "Stakeholder strategy",
+                tag: "CONVINCE",
               },
               {
                 num: "02",
                 title: "Engineering pushback made the system stronger",
                 desc: "When engineers challenged naming conventions and spacing logic, they weren't arguing about details. They were protecting downstream integrity. Those arguments improved the foundation.",
-                tag: "Collaboration insight",
+                tag: "ALIGN",
               },
               {
                 num: "03",
                 title: "Token mapping to Tailwind was the unlock",
                 desc: "Core tokens for color, typography, and spacing mapped directly to Tailwind variables. Once that was in place, design and engineering were speaking the same language.",
-                tag: "Technical foundation",
+                tag: "TECHNICAL UNLOCK",
               },
               {
                 num: "04",
