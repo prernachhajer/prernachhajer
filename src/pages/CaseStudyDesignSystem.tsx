@@ -629,12 +629,12 @@ const CaseStudyDesignSystem = () => {
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
           {[
             {
-              label: "Typography",
+              label: "THE TRIGGER",
               title: "Complete font overhaul",
               desc: "Custom font files were adding weight the app didn't need\nSwitched to a system font — no font file to ship, smaller app size\nFaster rendering on every device, no download required\nUpdated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
             },
             {
-              label: "Iconography",
+              label: "THE PROCESS",
               title: "Full icon library overhaul",
               desc: "Existing icons were heavier than they needed to be — thick strokes, visually loud at small sizes\nRebuilt lighter and more rounded, easier on the eye\nUnified stroke weights and standardized grid alignment\nEvery instance replaced across every component, every interactive state checked",
             },
