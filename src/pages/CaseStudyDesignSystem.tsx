@@ -443,8 +443,29 @@ const CaseStudyDesignSystem = () => {
 
       {/* 06 — MAINTAIN: PHASE 4 */}
       <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
+        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+                <span className="w-5 h-px bg-primary" />
+                What we found
+              </p>
+              <h3
+                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                The friction, and what it took to launch
+              </h3>
+            </div>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 LESSONS</span>
+          </motion.div>
 
-        
           <div className="flex flex-col">
             {[
               {
@@ -486,20 +507,28 @@ const CaseStudyDesignSystem = () => {
                   style={{ fontFamily: t.displayFont }}
                 >
                   {insight.num}
-                </p> }
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
+                    {insight.tag}
+                  </span>
+                </div>
               </motion.div>
-              </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            ))}
+          </div>
+        </div>
+
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
