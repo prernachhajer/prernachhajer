@@ -467,7 +467,7 @@ const CaseStudyDesignSystem = () => {
           </motion.p>
         </div>
 
-        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
+        <div className={`${layout.container} mx-auto mt-16 !max-w-3xl`}>
           <div className="flex flex-col">
             {[
               {
