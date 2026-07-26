@@ -107,11 +107,12 @@ const experienceData = [
     current: false,
     bullets: [
       <>
-        Redesigned the full website and app — homepage, hotel listings, and checkout — reducing booking funnel drop-offs
-        by <span className="text-primary font-medium">~15–20%</span>.
+        Redesigned the hotel listing page and full checkout funnel — made pricing, discount placement, and tax display
+        decisions to optimize for click-through and conversion; reduced booking funnel drop-offs{" "}
+        <span className="text-primary font-medium">~15–20%</span>.
       </>,
-      "Initiated FabHotels' first component library; used heatmaps and session recordings to drive iterative improvements.",
-      "Initiated FabHotels' first component library; used heatmaps and session recordings to drive iterative improvements.",
+      "Led usability testing and user research end-to-end, including on-road user interviews, heatmapping, and session recording analysis to pinpoint funnel breakdowns, synthesized into insight reports that shaped design decisions",
+      "Contributed to FabHotels' first design system, initiated by the design manager",
     ],
   },
   {
