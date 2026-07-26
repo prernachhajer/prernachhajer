@@ -230,7 +230,7 @@ const CaseStudyDesignSystem = () => {
                 num: "04",
                 title: "The hardest part wasn't the design",
                 desc: "It was earning the trust of the people who had to live inside it every day. The system was only as good as the people willing to adopt it — and that required ongoing relationship, not just good components.",
-                tag: "Organisational insight",
+                tag: "ORGANISATIONAL TRUTH",
               },
             ].map((insight, i) => (
               <motion.div
