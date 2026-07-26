@@ -82,6 +82,8 @@ const experienceData = [
     current: false,
     bullets: [
       "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
+      "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance."
+      "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
       "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
     ],
   },
