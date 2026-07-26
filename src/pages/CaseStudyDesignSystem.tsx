@@ -72,7 +72,7 @@ const CaseStudyDesignSystem = () => {
       </section>
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="01 — Problem">
+      <DarkSection label="PROBLEM">
         <div className="grid md:grid-cols-2 gap-0.5">
           {/* State */}
           <motion.div
@@ -139,7 +139,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="03 — Phase 1: Convince, Align, Launch">
+      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
@@ -271,7 +271,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 04 — REBUILD: PHASE 2 */}
-      <DarkSection label="04 — Phase 2: Rebuild Smarter">
+      <DarkSection label="PHASE 2: REBUILD SMARTER">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
@@ -367,7 +367,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 05 — DOCUMENTATION: PHASE 3 */}
-      <Section label="05 — Phase 3: Make It Self-Sufficient">
+      <Section label="PHASE 3: MAKE IT SELF-SUFFICIENT">
         <Prose>
           <h2>A system that requires a designer in the room to explain it hasn't fully worked yet.</h2>
           <p>
@@ -442,7 +442,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 06 — MAINTAIN: PHASE 4 */}
-      <DarkSection label="06 — Phase 4: Maintain, Reduce, Refine">
+      <DarkSection label="PHASE 4: MAINTAIN, REDUCE, REFINE">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
@@ -513,7 +513,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="07 — Phase 5: The Overhaul">
+      <Section label="PHASE 5: THE OVERHAUL">
         <Prose>
           <h2>Three years later, we changed the visual identity of the entire system.</h2>
           <p>
