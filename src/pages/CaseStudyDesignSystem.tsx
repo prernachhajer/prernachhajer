@@ -200,7 +200,7 @@ const CaseStudyDesignSystem = () => {
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                The friction, and what it built
+                The friction, and what it took to launch
               </h3>
             </div>
             <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 LESSONS</span>
