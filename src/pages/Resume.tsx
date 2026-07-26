@@ -28,9 +28,30 @@ const contactItems = [
 ];
 
 const skillCategories = [
-  { heading: "Execution", items: ["UX Research", "Design Systems", "Interaction Design", "Prototyping", "Information Architecture", "Heuristic Evaluation", "Visual Design", "Design Ops"] },
+  {
+    heading: "Execution",
+    items: [
+      "UX Research",
+      "Design Systems",
+      "Interaction Design",
+      "Prototyping",
+      "Information Architecture",
+      "Heuristic Evaluation",
+      "Visual Design",
+      "Design Ops",
+    ],
+  },
   { heading: "Strategy", items: ["Product Strategy", "Design Vision", "Roadmap Planning"] },
-  { heading: "Leadership", items: ["Design Leadership", "Cross-functional Collaboration", "Design Critique", "Mentorship", "Stakeholder Alignment"] },
+  {
+    heading: "Leadership",
+    items: [
+      "Design Leadership",
+      "Cross-functional Collaboration",
+      "Design Critique",
+      "Mentorship",
+      "Stakeholder Alignment",
+    ],
+  },
   { heading: "Process", items: ["Agile / Scrum", "Design Thinking", "Workshop Facilitation"] },
   { heading: "Research", items: ["User Interviews", "Usability Testing", "Journey Mapping", "Competitive Analysis"] },
 ];
@@ -48,8 +69,16 @@ const experienceData = [
     years: "2021 – Present · 4.5+ yrs",
     current: true,
     bullets: [
-      <>Built ESPNCricinfo's design system from scratch — scaling to <span className="text-primary font-medium">200+ Figma files, 50+ components</span> across web, iOS, Android, and dark mode.</>,
-      <>Led homepage redesign championing casual users (80% of traffic); reduced bounce rates <span className="text-primary font-medium">~20–30%</span> and improved returning user sessions <span className="text-primary font-medium">~15%</span>.</>,
+      <>
+        Built ESPNCricinfo's design system from scratch — scaling to{" "}
+        <span className="text-primary font-medium">200+ Figma files, 50+ components</span> across web, iOS, Android, and
+        dark mode.
+      </>,
+      <>
+        Led homepage redesign championing casual users (80% of traffic); reduced bounce rates{" "}
+        <span className="text-primary font-medium">~20–30%</span> and improved returning user sessions{" "}
+        <span className="text-primary font-medium">~15%</span>.
+      </>,
       "Drove native app transition (hybrid to native), including Dynamic Island on iOS and pinning features on Android.",
       "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
     ],
@@ -60,8 +89,14 @@ const experienceData = [
     years: "2019 – 2021",
     current: false,
     bullets: [
-      <>Led design across two products: <strong>Saarthi</strong> (fintech lending for field agents) and <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs).</>,
-      <>Built both design systems from scratch — reduced screen design and dev handoff time by <span className="text-primary font-medium">~40%</span>.</>,
+      <>
+        Led design across two products: <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
+        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs).
+      </>,
+      <>
+        Built both design systems from scratch — reduced screen design and dev handoff time by{" "}
+        <span className="text-primary font-medium">~40%</span>.
+      </>,
       "Delivered Vahana MVP in under 6 months, enabling early NBFC partnerships and product validation.",
     ],
   },
@@ -71,7 +106,10 @@ const experienceData = [
     years: "2018 – 2019",
     current: false,
     bullets: [
-      <>Redesigned the full website and app — homepage, hotel listings, and checkout — reducing booking funnel drop-offs by <span className="text-primary font-medium">~15–20%</span>.</>,
+      <>
+        Redesigned the full website and app — homepage, hotel listings, and checkout — reducing booking funnel drop-offs
+        by <span className="text-primary font-medium">~15–20%</span>.
+      </>,
       "Initiated FabHotels' first component library; used heatmaps and session recordings to drive iterative improvements.",
     ],
   },
@@ -82,7 +120,7 @@ const experienceData = [
     current: false,
     bullets: [
       "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
-      "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance."
+      "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
       "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
       "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
     ],
@@ -101,9 +139,7 @@ const experienceData = [
     role: "Web Designer",
     years: "2012 – 2013",
     current: false,
-    bullets: [
-      "Designed solutions for clients as per requirements in Education, Travel, and Transport domains.",
-    ],
+    bullets: ["Designed solutions for clients as per requirements in Education, Travel, and Transport domains."],
   },
 ];
 
@@ -117,7 +153,10 @@ const SidebarHeading = ({ children }: { children: React.ReactNode }) => (
 );
 
 const SectionHeading = ({ children, id }: { children: React.ReactNode; id?: string }) => (
-  <div id={id} className="flex items-center gap-3 text-[0.6875rem] tracking-[0.1em] uppercase text-primary font-semibold pb-[18px] mb-11 border-b-[1.5px] border-border">
+  <div
+    id={id}
+    className="flex items-center gap-3 text-[0.6875rem] tracking-[0.1em] uppercase text-primary font-semibold pb-[18px] mb-11 border-b-[1.5px] border-border"
+  >
     <span className="w-[18px] h-[1.5px] bg-primary shrink-0" />
     {children}
   </div>
@@ -135,8 +174,12 @@ const Resume = () => {
       {/* ── PAGE HEADER ────────────────────────── */}
       <header className="pt-[calc(60px+clamp(52px,8vw,96px))] pb-[clamp(52px,7vw,80px)] border-b border-border">
         <div className={wrapCls}>
-          <motion.div initial="hidden" animate="visible" variants={fade}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-[clamp(40px,5vw,60px)]">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-[clamp(40px,5vw,60px)]"
+          >
             <div>
               <div className="flex items-center gap-3 text-xs tracking-[0.08em] uppercase text-primary font-medium mb-5">
                 <span className="w-[22px] h-px bg-primary" />
@@ -147,7 +190,8 @@ const Resume = () => {
                 style={{ fontFamily: t.displayFont }}
               >
                 12 years of <em className="italic text-muted-foreground">design,</em>
-                <br />distilled.
+                <br />
+                distilled.
               </h1>
             </div>
             <div className="flex flex-col items-start md:items-end gap-6 shrink-0">
@@ -167,16 +211,26 @@ const Resume = () => {
           </motion.div>
 
           {/* Stat strip */}
-          <motion.div initial="hidden" animate="visible" variants={fade} custom={1}
-            className="flex items-center flex-wrap gap-y-6 pt-[clamp(28px,3.5vw,44px)] border-t border-border">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="flex items-center flex-wrap gap-y-6 pt-[clamp(28px,3.5vw,44px)] border-t border-border"
+          >
             {stats.map((s, i) => (
               <React.Fragment key={s.label}>
                 {i > 0 && <div className="w-px h-10 bg-border mx-[clamp(32px,4.5vw,64px)] hidden sm:block shrink-0" />}
                 <div className="flex flex-col gap-1.5 pr-[clamp(32px,4.5vw,64px)] sm:pr-0">
-                  <span className="text-[clamp(1.75rem,3.2vw,2.625rem)] font-normal tracking-[-0.03em] leading-none" style={{ fontFamily: t.displayFont }}>
+                  <span
+                    className="text-[clamp(1.75rem,3.2vw,2.625rem)] font-normal tracking-[-0.03em] leading-none"
+                    style={{ fontFamily: t.displayFont }}
+                  >
                     {s.num}
                   </span>
-                  <span className="text-xs tracking-[0.05em] uppercase text-muted-foreground font-medium">{s.label}</span>
+                  <span className="text-xs tracking-[0.05em] uppercase text-muted-foreground font-medium">
+                    {s.label}
+                  </span>
                 </div>
               </React.Fragment>
             ))}
@@ -186,9 +240,13 @@ const Resume = () => {
 
       {/* ── BODY ───────────────────────────────── */}
       <div className={wrapCls}>
-        <motion.div initial="hidden" animate="visible" variants={fade} custom={2}
-          className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-[clamp(48px,7vw,104px)] pt-[clamp(64px,8vw,100px)] pb-[clamp(80px,10vw,128px)] items-start">
-
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fade}
+          custom={2}
+          className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-[clamp(48px,7vw,104px)] pt-[clamp(64px,8vw,100px)] pb-[clamp(80px,10vw,128px)] items-start"
+        >
           {/* ── SIDEBAR ──────────────────────────── */}
           <aside className="md:sticky md:top-20">
             {/* Contact */}
@@ -196,11 +254,20 @@ const Resume = () => {
               <SidebarHeading>Contact</SidebarHeading>
               <div className="flex flex-col">
                 {contactItems.map((item, i) => (
-                  <div key={item.label} className={`flex flex-col gap-0.5 py-3.5 border-b border-border ${i === 0 ? "pt-0" : ""} ${i === contactItems.length - 1 ? "border-b-0 pb-0" : ""}`}>
-                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium">{item.label}</span>
+                  <div
+                    key={item.label}
+                    className={`flex flex-col gap-0.5 py-3.5 border-b border-border ${i === 0 ? "pt-0" : ""} ${i === contactItems.length - 1 ? "border-b-0 pb-0" : ""}`}
+                  >
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium">
+                      {item.label}
+                    </span>
                     {item.href ? (
-                      <a href={item.href} target={item.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer"
-                        className="text-sm text-foreground hover:text-primary transition-colors leading-[1.4]">
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith("mailto") ? undefined : "_blank"}
+                        rel="noopener noreferrer"
+                        className="text-sm text-foreground hover:text-primary transition-colors leading-[1.4]"
+                      >
                         {item.value}
                       </a>
                     ) : (
@@ -217,10 +284,15 @@ const Resume = () => {
               <div className="flex flex-col gap-5">
                 {skillCategories.map((cat) => (
                   <div key={cat.heading}>
-                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">
+                      {cat.heading}
+                    </span>
                     <div className="flex flex-wrap gap-[7px]">
                       {cat.items.map((skill) => (
-                        <span key={skill} className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                        <span
+                          key={skill}
+                          className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default"
+                        >
                           {skill}
                         </span>
                       ))}
@@ -236,10 +308,15 @@ const Resume = () => {
               <div className="flex flex-col gap-5">
                 {toolCategories.map((cat) => (
                   <div key={cat.heading}>
-                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">{cat.heading}</span>
+                    <span className="text-[0.625rem] tracking-[0.08em] uppercase text-muted-foreground font-medium mb-2 block">
+                      {cat.heading}
+                    </span>
                     <div className="flex flex-wrap gap-[7px]">
                       {cat.items.map((tool) => (
-                        <span key={tool} className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default">
+                        <span
+                          key={tool}
+                          className="text-[0.8125rem] text-muted-foreground px-3.5 py-1.5 border border-border rounded-full leading-none hover:text-primary hover:border-primary/35 hover:bg-primary/[0.04] transition-all cursor-default"
+                        >
                           {tool}
                         </span>
                       ))}
@@ -256,10 +333,16 @@ const Resume = () => {
             <section className="mb-[clamp(64px,8vw,96px)]">
               <SectionHeading id="exp-h">Experience</SectionHeading>
               {experienceData.map((exp, i) => (
-                <div key={exp.company} className={`pb-[52px] mb-[52px] border-b border-border ${i === experienceData.length - 1 ? "border-b-0 pb-0 mb-0" : ""}`}>
+                <div
+                  key={exp.company}
+                  className={`pb-[52px] mb-[52px] border-b border-border ${i === experienceData.length - 1 ? "border-b-0 pb-0 mb-0" : ""}`}
+                >
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-5 flex-wrap">
                     <div className="flex-1 min-w-0">
-                      <div className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-[-0.02em] leading-[1.1] flex items-center gap-[10px] mb-1.5" style={{ fontFamily: t.displayFont }}>
+                      <div
+                        className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-[-0.02em] leading-[1.1] flex items-center gap-[10px] mb-1.5"
+                        style={{ fontFamily: t.displayFont }}
+                      >
                         {exp.current && <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />}
                         {exp.company}
                       </div>
@@ -271,7 +354,10 @@ const Resume = () => {
                   </div>
                   <ul className="flex flex-col gap-3.5 list-none">
                     {exp.bullets.map((bullet, j) => (
-                      <li key={j} className="text-[0.9375rem] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary">
+                      <li
+                        key={j}
+                        className="text-[0.9375rem] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary"
+                      >
                         {bullet}
                       </li>
                     ))}
@@ -285,7 +371,10 @@ const Resume = () => {
               <SectionHeading id="edu-h">Education</SectionHeading>
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 flex-wrap">
                 <div>
-                  <div className="text-[1.375rem] font-normal tracking-[-0.015em] mb-1.5" style={{ fontFamily: t.displayFont }}>
+                  <div
+                    className="text-[1.375rem] font-normal tracking-[-0.015em] mb-1.5"
+                    style={{ fontFamily: t.displayFont }}
+                  >
                     B.Tech in Computer Science
                   </div>
                   <div className="text-[0.9375rem] text-muted-foreground">MAIET, Jaipur</div>
@@ -305,8 +394,17 @@ const Resume = () => {
           <span className="text-[0.8125rem] text-muted-foreground">© 2026 Prerna Chhajer</span>
           <nav className="flex gap-7">
             {["Work", "About", "Writing", "Résumé", "Email"].map((link) => (
-              <a key={link} href={link === "Email" ? "mailto:work.chhajer@gmail.com" : link === "Résumé" ? "/resume" : `/#${link.toLowerCase()}`}
-                className="text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
+              <a
+                key={link}
+                href={
+                  link === "Email"
+                    ? "mailto:work.chhajer@gmail.com"
+                    : link === "Résumé"
+                      ? "/resume"
+                      : `/#${link.toLowerCase()}`
+                }
+                className="text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors"
+              >
                 {link}
               </a>
             ))}
