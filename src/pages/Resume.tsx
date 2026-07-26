@@ -76,7 +76,7 @@ const experienceData = [
       </>,
       <>
         Led homepage redesign championing casual users (80% of traffic); reduced bounce rates{" "}
-        <span className="text-primary font-medium">~20–30%</span> and improved returning user sessions{" "}
+        <span className="text-primary font-medium">3.4–30%</span> and improved returning user sessions{" "}
         <span className="text-primary font-medium">~15%</span>.
       </>,
       <>
