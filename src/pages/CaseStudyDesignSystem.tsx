@@ -443,6 +443,62 @@ const CaseStudyDesignSystem = () => {
 
       {/* 06 — MAINTAIN: PHASE 4 */}
       <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
+
+        
+          <div className="flex flex-col">
+            {[
+              {
+                num: "01",
+                title: "Product alignment needed proof, not promises",
+                desc: "We made the case through small, visible wins. Each increment of value built trust. Abstract arguments about long-term payoff didn't land — concrete demos did.",
+                tag: "CONVINCE",
+              },
+              {
+                num: "02",
+                title: "Engineering pushback made the system stronger",
+                desc: "When engineers challenged naming conventions and spacing logic, they weren't arguing about details. They were protecting downstream integrity. Those arguments improved the foundation.",
+                tag: "ALIGN",
+              },
+              {
+                num: "03",
+                title: "Token mapping to Tailwind was the unlock",
+                desc: "Core tokens for color, typography, and spacing mapped directly to Tailwind variables. Once that was in place, design and engineering were speaking the same language.",
+                tag: "TECHNICAL UNLOCK",
+              },
+              {
+                num: "04",
+                title: "Launch meant walkthroughs, not a handoff",
+                desc: "We ran teams through the system directly — live walkthroughs, full documentation, hands-on sessions. Teams started building their own libraries on top of it and using it in real design work almost immediately.",
+                tag: "LAUNCH",
+              },
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+              >
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p>
+                <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
