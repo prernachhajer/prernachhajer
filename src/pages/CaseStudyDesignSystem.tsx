@@ -592,6 +592,39 @@ const CaseStudyDesignSystem = () => {
           </p>
         </Prose>
 
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center"
+          >
+            <p className={`${t.labelSm} text-muted-foreground mb-4`}>The pushback</p>
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
+              "Why spend time on a <span className="text-primary italic">design system</span> instead of shipping
+              features?"
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            custom={1}
+            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center"
+          >
+            <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The answer</p>
+            <p
+              className="text-2xl md:text-3xl font-normal leading-[1.1] text-white"
+              style={{ fontFamily: t.displayFont }}
+            >
+              "Because every feature you ship <span className="text-primary italic">without it</span> costs more to
+              change later."
+            </p>
+          </motion.div>
+        </div>
+
         {/* Typography + Iconography side by side */}
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
           {[
