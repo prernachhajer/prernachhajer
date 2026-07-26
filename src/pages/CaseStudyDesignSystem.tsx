@@ -598,12 +598,12 @@ const CaseStudyDesignSystem = () => {
             {
               label: "Typography",
               title: "Complete font overhaul",
-              desc: "Landed on a system font that solved the reading experience, reduced app size, and didn't require a download. Updated every token it touched — line heights, character spacing, font sizes, typographic hierarchy throughout.",
+              desc: "Custom font files were adding weight the app didn't need\nSwitched to a system font — no font file to ship, smaller app size\nFaster rendering on every device, no download required\nUpdated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
             },
             {
               label: "Iconography",
               title: "Full icon library overhaul",
-              desc: "Unified stroke weights, standardized grid alignment, every instance replaced across every component, every interactive state checked.",
+              desc: "Existing icons were heavier than they needed to be — thick strokes, visually loud at small sizes\nRebuilt lighter and more rounded, easier on the eye\nUnified stroke weights and standardized grid alignment\nEvery instance replaced across every component, every interactive state checked",
             },
           ].map((card, i) => (
             <motion.div
@@ -617,7 +617,7 @@ const CaseStudyDesignSystem = () => {
             >
               <p className={`${t.labelSm} text-muted-foreground mb-4`}>{card.label}</p>
               <h4 className="font-semibold mb-3">{card.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{card.desc}</p>
             </motion.div>
           ))}
         </div>
