@@ -6,6 +6,7 @@ interface BeforeAfterSliderProps {
   beforeLabel?: string;
   afterLabel?: string;
   aspectRatio?: number;
+  fit?: "cover" | "contain";
 }
 
 const BeforeAfterSlider = ({
@@ -14,6 +15,7 @@ const BeforeAfterSlider = ({
   beforeLabel = "Before",
   afterLabel = "After",
   aspectRatio = 1920 / 1372,
+  fit = "cover",
 }: BeforeAfterSliderProps) => {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,7 +56,7 @@ const BeforeAfterSlider = ({
       <img
         src={afterImage}
         alt={afterLabel}
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className={`absolute inset-0 w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} object-center`}
         draggable={false}
       />
 
@@ -66,11 +68,13 @@ const BeforeAfterSlider = ({
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="absolute inset-0 h-full object-cover object-left"
+          className={`absolute inset-0 h-full ${fit === "contain" ? "object-contain object-center" : "object-cover object-left"}`}
           style={{ width: containerRef.current?.offsetWidth ?? "100%", maxWidth: "none" }}
           draggable={false}
         />
+
       </div>
+
 
       {/* Divider line */}
       <div
