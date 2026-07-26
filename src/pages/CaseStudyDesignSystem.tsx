@@ -228,9 +228,9 @@ const CaseStudyDesignSystem = () => {
               },
               {
                 num: "04",
-                title: "The hardest part wasn't the design",
-                desc: "It was earning the trust of the people who had to live inside it every day. The system was only as good as the people willing to adopt it — and that required ongoing relationship, not just good components.",
-                tag: "ORGANISATIONAL TRUTH",
+                title: "Launch meant walkthroughs, not a handoff",
+                desc: "We ran teams through the system directly — live walkthroughs, full documentation, hands-on sessions. Teams started building their own libraries on top of it and using it in real design work almost immediately.",
+                tag: "LAUNCH",
               },
             ].map((insight, i) => (
               <motion.div
