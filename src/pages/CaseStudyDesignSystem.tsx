@@ -579,7 +579,7 @@ const CaseStudyDesignSystem = () => {
       {/* 07 — OVERHAUL: PHASE 5 */}
       <Section label="PHASE 5: THE OVERHAUL">
         <Prose>
-          <h2>Three years later, we changed the visual identity of the entire system.</h2>
+          <h1>Three years later, we changed the visual identity of the entire system.</h1>
 
           <h2>The trigger</h2>
 
