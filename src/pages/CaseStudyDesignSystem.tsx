@@ -581,7 +581,7 @@ const CaseStudyDesignSystem = () => {
         <Prose>
           <h1>Three years later, we changed the visual identity of the entire system.</h1>
 
-          <h2>The trigger</h2>
+          <h2 className="mt-8">The trigger</h2>
 
           <p>
             Reading is central to what Cricinfo does, and the existing font wasn't serving that experience well. A
