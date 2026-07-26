@@ -387,11 +387,11 @@ const CaseStudyDesignSystem = () => {
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>Before documentation</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
-              "Why are we <span className="text-primary italic">doing this?</span>"
+              "Where do I even&nbsp;<span className="text-primary italic">find that?</span>"
             </p>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
-              Designers needed to be present to explain every component choice. Teams were dependent on institutional
-              knowledge.
+              Variants, sizes, usage — it was documented, but locked inside Figma. Hard to find, hard to read, hard to
+              share, and useless to anyone who wasn't a designer opening the file.
             </p>
           </motion.div>
           <motion.div
