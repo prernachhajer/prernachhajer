@@ -651,7 +651,7 @@ const CaseStudyDesignSystem = () => {
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
             >
               <p className={`${t.label} text-primary mb-4`}>{card.label}</p>
-              <h4 className={`${t.h4} mb-6`}>{card.title}</h4>
+              <h4 className="text-2xl font-normal tracking-[-0.01em] mb-6">{card.title}</h4>
               <ul className="divide-y divide-border/40">
                 {card.items.map((item, idx) => (
                   <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
