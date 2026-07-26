@@ -121,8 +121,7 @@ const experienceData = [
     bullets: [
       "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
       "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
-      "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
-      "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
+      "Led heuristic evaluation and research-driven design for Papa John's, including a working-hours estimation and concept pitch; also designed employee and patient management tools and an in-house event app",
     ],
   },
   {
