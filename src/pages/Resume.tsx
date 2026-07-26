@@ -111,6 +111,7 @@ const experienceData = [
         by <span className="text-primary font-medium">~15–20%</span>.
       </>,
       "Initiated FabHotels' first component library; used heatmaps and session recordings to drive iterative improvements.",
+      "Initiated FabHotels' first component library; used heatmaps and session recordings to drive iterative improvements.",
     ],
   },
   {
