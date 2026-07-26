@@ -81,9 +81,9 @@ const experienceData = [
       </>,
       <>
         Drove native app launch on iOS and Android (hybrid to native transition), including Dynamic Island and pinning
-        features — contributed to app rating improving from{" "}
-        <span className="text-primary font-medium">3.4–4.5</span>
+        features — contributed to app rating improving from <span className="text-primary font-medium">3.4–4.5</span>
       </>,
+      "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
       "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
     ],
   },
