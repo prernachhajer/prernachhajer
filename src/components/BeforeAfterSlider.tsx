@@ -6,6 +6,7 @@ interface BeforeAfterSliderProps {
   beforeLabel?: string;
   afterLabel?: string;
   aspectRatio?: number;
+  fit?: "cover" | "contain";
 }
 
 const BeforeAfterSlider = ({
@@ -14,6 +15,7 @@ const BeforeAfterSlider = ({
   beforeLabel = "Before",
   afterLabel = "After",
   aspectRatio = 1920 / 1372,
+  fit = "cover",
 }: BeforeAfterSliderProps) => {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
