@@ -531,7 +531,7 @@ const CaseStudyDesignSystem = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-0.5">
+        {/*   <div className="grid md:grid-cols-2 gap-0.5">
           {[
             {
               title: "Removed unused variants",
@@ -567,7 +567,7 @@ const CaseStudyDesignSystem = () => {
               <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="mt-8">
           <PullQuote dark>
