@@ -344,6 +344,8 @@ const CaseStudyDesignSystem = () => {
             afterImage={componentNew}
             beforeLabel="Before"
             afterLabel="After"
+            aspectRatio={1920 / 1383}
+            fit="contain"
           />
           <p className="text-center text-xs text-background/85 mt-4 tracking-wide">
             Component rebuild · 2022 — fewer files, more power
