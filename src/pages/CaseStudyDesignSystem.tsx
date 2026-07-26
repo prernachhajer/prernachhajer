@@ -580,15 +580,19 @@ const CaseStudyDesignSystem = () => {
       <Section label="PHASE 5: THE OVERHAUL">
         <Prose>
           <h2>Three years later, we changed the visual identity of the entire system.</h2>
+
+          <h2>The trigger</h2>
+
           <p>
-            It started with a real user problem. Reading is central to what Cricinfo does. The existing font wasn't
-            serving that experience well enough — and we had a technical constraint: reduce overall app size, which
-            meant we couldn't use a downloadable font family.
+            Reading is central to what Cricinfo does, and the existing font wasn't serving that experience well. A
+            technical constraint made it harder: reducing app size meant no downloadable font family.
           </p>
+
+          <h2>The process</h2>
+
           <p>
-            We ran the process properly. Competitive analysis across major news and sports platforms. Five to six font
-            families evaluated. Six to eight full explorations created across key pages — homepage, match page,
-            commentary, and article.
+            Competitive analysis across major news and sports platforms. Every option tested across four real page types
+            — homepage, match page, commentary, article — not just previewed in isolation.
           </p>
         </Prose>
 
