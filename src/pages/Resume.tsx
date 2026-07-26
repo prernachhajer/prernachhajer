@@ -94,8 +94,8 @@ const experienceData = [
     current: false,
     bullets: [
       <>
-        Led design across two products: <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
-        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs).
+        Led design across two products — <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
+        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs) — leading a 2-person team across both
       </>,
       <>
         Built both design systems from scratch — reduced screen design and dev handoff time by{" "}
