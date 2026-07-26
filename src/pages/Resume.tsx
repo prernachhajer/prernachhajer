@@ -15,7 +15,7 @@ const fade = animation.fade;
 
 const stats = [
   { num: "12+", label: "Years experience" },
-  { num: "10M+", label: "Users impacted" },
+  { num: "100M+", label: "Users impacted" },
   { num: "200+", label: "Figma components built" },
 ];
 
