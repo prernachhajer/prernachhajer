@@ -578,23 +578,44 @@ const CaseStudyDesignSystem = () => {
 
       {/* 07 — OVERHAUL: PHASE 5 */}
       <Section label="PHASE 5: THE OVERHAUL">
-        <Prose>
-          <h1>Three years later, we changed the visual identity of the entire system.</h1>
+        <div className={`${layout.container} mx-auto`}>
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`${t.h2} max-w-3xl mb-12`}
+            style={{ fontFamily: t.displayFont }}
+          >
+            Three years later, we changed the visual identity of the entire system.
+          </motion.h2>
 
-          <h2 className="mt-8">The trigger</h2>
-
-          <p>
-            Reading is central to what Cricinfo does, and the existing font wasn't serving that experience well. A
-            technical constraint made it harder: reducing app size meant no downloadable font family.
-          </p>
-
-          <h2>The process</h2>
-
-          <p>
-            Competitive analysis across major news and sports platforms. Every option tested across four real page types
-            — homepage, match page, commentary, article — not just previewed in isolation.
-          </p>
-        </Prose>
+          <div className="grid md:grid-cols-2 gap-4 mb-12">
+            {[
+              {
+                label: "THE TRIGGER",
+                text: "Reading is central to what Cricinfo does, and the existing font wasn't serving that experience well. A technical constraint made it harder: reducing app size meant no downloadable font family.",
+              },
+              {
+                label: "THE PROCESS",
+                text: "Competitive analysis across major news and sports platforms. Every option tested across four real page types — homepage, match page, commentary, article — not just previewed in isolation.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
+              >
+                <h3 className={`${t.label} text-primary mb-4`}>{item.label}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         {/* Typography + Iconography side by side */}
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
