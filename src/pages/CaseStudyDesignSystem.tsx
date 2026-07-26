@@ -446,7 +446,7 @@ const CaseStudyDesignSystem = () => {
 
         
           <div className="flex flex-col">
-        
+            {[
               {
                 num: "01",
                 title: "Product alignment needed proof, not promises",
@@ -471,9 +471,24 @@ const CaseStudyDesignSystem = () => {
                 desc: "We ran teams through the system directly — live walkthroughs, full documentation, hands-on sessions. Teams started building their own libraries on top of it and using it in real design work almost immediately.",
                 tag: "LAUNCH",
               },
-          
-    
-                <div>
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+              >
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p> }
+              </motion.div>
+              </div>
         
         
         
