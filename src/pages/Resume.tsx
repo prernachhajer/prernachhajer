@@ -70,16 +70,20 @@ const experienceData = [
     current: true,
     bullets: [
       <>
-        Built ESPNCricinfo's design system from scratch — scaling to{" "}
+        Led designs for ESPNCricinfo's design system from scratch — scaling to{" "}
         <span className="text-primary font-medium">200+ Figma files, 50+ components</span> across web, iOS, Android, and
         dark mode.
       </>,
       <>
         Led homepage redesign championing casual users (80% of traffic); reduced bounce rates{" "}
-        <span className="text-primary font-medium">~20–30%</span> and improved returning user sessions{" "}
+        <span className="text-primary font-medium">3.4–30%</span> and improved returning user sessions{" "}
         <span className="text-primary font-medium">~15%</span>.
       </>,
-      "Drove native app transition (hybrid to native), including Dynamic Island on iOS and pinning features on Android.",
+      <>
+        Drove native app launch on iOS and Android (hybrid to native transition), including Dynamic Island and pinning
+        features — contributed to app rating improving from{" "}
+        <span className="text-primary font-medium">3.4–4.5</span>
+      </>,
       "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
     ],
   },
@@ -90,8 +94,8 @@ const experienceData = [
     current: false,
     bullets: [
       <>
-        Led design across two products: <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
-        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs).
+        Led design across two products — <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
+        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs) — leading a 2-person team across both
       </>,
       <>
         Built both design systems from scratch — reduced screen design and dev handoff time by{" "}
