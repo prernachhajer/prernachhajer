@@ -442,7 +442,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 06 — MAINTAIN: PHASE 4 */}
-      <DarkSection label="PHASE 4: MAINTAIN, REDUCE, REFINE">
+      <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
