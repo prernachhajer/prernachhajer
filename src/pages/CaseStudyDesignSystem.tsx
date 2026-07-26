@@ -666,7 +666,6 @@ const CaseStudyDesignSystem = () => {
           ))}
         </div>
 
-
         {/* Font exploration placeholder */}
         <motion.div
           initial="hidden"
@@ -811,8 +810,7 @@ const CaseStudyDesignSystem = () => {
         <div className="grid md:grid-cols-2 gap-3">
           {[
             "The components are the visible part. What's underneath — the alignment conversations, the decisions about <em>what not to build</em>, the willingness to rebuild what was already working — that's what made it last.",
-            "Making the case before making the design. Without that, the system doesn't happen — not because the idea was wrong, but because the <em>problem wasn't visible yet</em> to the people who needed to approve it.",
-            "Engineering pushback is a gift. Every time an engineer pushed back on naming or logic, they were protecting integrity downstream. <em>Those arguments made the foundation stronger</em>, not weaker.",
+
             "A design system is infrastructure. And <em>infrastructure is only proven under pressure</em>. The 2025 overhaul — a complete identity change — was that pressure. The system held.",
           ].map((text, i) => (
             <LearningCard key={i} index={i}>
