@@ -740,18 +740,6 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
-          >
-            <p className="text-xs italic text-muted-foreground/85 leading-relaxed">
-              50% faster design cycles and 170+ files are the clearest signals. Team independence and onboarding speed
-              are directional — consistent across feedback but not formally benchmarked.
-            </p>
-          </motion.div>
         </div>
       </section>
 
