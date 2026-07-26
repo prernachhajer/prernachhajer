@@ -84,7 +84,7 @@ const experienceData = [
         features — contributed to app rating improving from <span className="text-primary font-medium">3.4–4.5</span>
       </>,
       "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
-      "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
+      "Lead a 2-person design team across parallel workstreams (design system, homepage), mentoring on craft and growth.",
     ],
   },
   {
