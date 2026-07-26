@@ -5,6 +5,7 @@ interface BeforeAfterSliderProps {
   afterImage: string;
   beforeLabel?: string;
   afterLabel?: string;
+  aspectRatio?: number;
 }
 
 const BeforeAfterSlider = ({
@@ -12,6 +13,7 @@ const BeforeAfterSlider = ({
   afterImage,
   beforeLabel = "Before",
   afterLabel = "After",
+  aspectRatio = 1920 / 1372,
 }: BeforeAfterSliderProps) => {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
