@@ -56,7 +56,7 @@ const BeforeAfterSlider = ({
       <img
         src={afterImage}
         alt={afterLabel}
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className={`absolute inset-0 w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} object-center`}
         draggable={false}
       />
 
@@ -68,11 +68,12 @@ const BeforeAfterSlider = ({
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="absolute inset-0 h-full object-cover object-left"
-          style={{ width: containerRef.current?.offsetWidth ?? "100%", maxWidth: "none" }}
+          className={`absolute inset-0 h-full ${fit === "contain" ? "w-full object-contain object-center" : "object-cover object-left"}`}
+          style={fit === "contain" ? undefined : { width: containerRef.current?.offsetWidth ?? "100%", maxWidth: "none" }}
           draggable={false}
         />
       </div>
+
 
       {/* Divider line */}
       <div
