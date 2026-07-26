@@ -45,7 +45,7 @@ const BeforeAfterSlider = ({
     <div
       ref={containerRef}
       className="relative w-full overflow-hidden rounded-xl border border-border/30 cursor-col-resize select-none"
-      style={{ height: "733px", backgroundColor: "#f5f6f7" }}
+      style={{ aspectRatio, backgroundColor: "#f5f6f7" }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
@@ -54,7 +54,7 @@ const BeforeAfterSlider = ({
       <img
         src={afterImage}
         alt={afterLabel}
-        className="absolute inset-0 w-full h-full object-contain object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         draggable={false}
       />
 
@@ -66,8 +66,8 @@ const BeforeAfterSlider = ({
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="absolute inset-0 w-full h-full object-contain object-center"
-          style={{ width: `${containerRef.current?.offsetWidth || 1000}px`, maxWidth: "none" }}
+          className="absolute inset-0 h-full object-cover object-left"
+          style={{ width: containerRef.current?.offsetWidth ?? "100%", maxWidth: "none" }}
           draggable={false}
         />
       </div>
