@@ -138,82 +138,6 @@ const CaseStudyDesignSystem = () => {
         </div>
       </DarkSection>
 
-      {/* 02 — IMPACT */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>02 — Impact</SectionLabel>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8"
-          >
-            Five years of building. The outcomes were felt across the entire product organisation.
-          </motion.p>
-          <div className="grid md:grid-cols-3 gap-0.5">
-            {[
-              {
-                label: "Design cycle speed",
-                num: "50%",
-                title: "Faster design after system adoption",
-                desc: "Teams weren't rebuilding from scratch. They were assembling. The velocity shift was measurable within months of full adoption.",
-              },
-              {
-                label: "FIGMA FILES COVERAGE",
-                num: "170+",
-                title: "Figma files powered by the system",
-                desc: "From one inconsistent library to 170+ files across the product — all pulling from a single shared foundation.",
-              },
-              {
-                label: "Component coverage",
-                num: "100+",
-                title: "Component variants documented and shipped",
-                desc: "Dark mode, modular widgets, and native mobile app launch — all built on the system. A complete identity overhaul executed without disrupting shipping velocity.",
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={card.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
-              >
-                <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/70 mb-3">
-                    {card.label}
-                  </p>
-                  <p
-                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
-                    style={{ fontFamily: t.displayFont }}
-                  >
-                    {card.num}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-background/75 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/50 leading-relaxed">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
-          >
-            <p className="text-xs italic text-muted-foreground/85 leading-relaxed">
-              50% faster design cycles and 170+ files are the clearest signals. Team independence and onboarding speed
-              are directional — consistent across feedback but not formally benchmarked.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
       <Section label="03 — Phase 1: Convince, Align, Launch">
         <Prose>
@@ -686,6 +610,82 @@ const CaseStudyDesignSystem = () => {
           </div>
         </div>
       </section> */}
+
+      {/* 02 — IMPACT */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel dark>02 — Impact</SectionLabel>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-sm text-background/75 leading-relaxed mb-8"
+          >
+            Five years of building. The outcomes were felt across the entire product organisation.
+          </motion.p>
+          <div className="grid md:grid-cols-3 gap-0.5">
+            {[
+              {
+                label: "Design cycle speed",
+                num: "50%",
+                title: "Faster design after system adoption",
+                desc: "Teams weren't rebuilding from scratch. They were assembling. The velocity shift was measurable within months of full adoption.",
+              },
+              {
+                label: "FIGMA FILES COVERAGE",
+                num: "170+",
+                title: "Figma files powered by the system",
+                desc: "From one inconsistent library to 170+ files across the product — all pulling from a single shared foundation.",
+              },
+              {
+                label: "Component coverage",
+                num: "100+",
+                title: "Component variants documented and shipped",
+                desc: "Dark mode, modular widgets, and native mobile app launch — all built on the system. A complete identity overhaul executed without disrupting shipping velocity.",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+              >
+                <div>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/70 mb-3">
+                    {card.label}
+                  </p>
+                  <p
+                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {card.num}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-background/75 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/50 leading-relaxed">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
+          >
+            <p className="text-xs italic text-muted-foreground/85 leading-relaxed">
+              50% faster design cycles and 170+ files are the clearest signals. Team independence and onboarding speed
+              are directional — consistent across feedback but not formally benchmarked.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* LEARNINGS */}
       <DarkSection label="What I learned">
