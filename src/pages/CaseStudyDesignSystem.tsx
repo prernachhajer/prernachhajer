@@ -470,27 +470,27 @@ const CaseStudyDesignSystem = () => {
             {[
               {
                 num: "01",
-                title: "Product alignment needed proof, not promises",
-                desc: "We made the case through small, visible wins. Each increment of value built trust. Abstract arguments about long-term payoff didn't land — concrete demos did.",
-                tag: "CONVINCE",
+                title: "Unused variants were quietly piling up",
+                desc: "Variants that weren't earning their place were cut. The library stayed lean instead of accumulating debt.",
+                tag: "REMOVE",
               },
               {
                 num: "02",
-                title: "Engineering pushback made the system stronger",
-                desc: "When engineers challenged naming conventions and spacing logic, they weren't arguing about details. They were protecting downstream integrity. Those arguments improved the foundation.",
-                tag: "ALIGN",
+                title: "Simplified drifted components",
+                desc: "Components that had grown complex over time — like the table component — were brought back to clarity.",
+                tag: "SIMPLIFY",
               },
               {
                 num: "03",
-                title: "Token mapping to Tailwind was the unlock",
-                desc: "Core tokens for color, typography, and spacing mapped directly to Tailwind variables. Once that was in place, design and engineering were speaking the same language.",
-                tag: "TECHNICAL UNLOCK",
+                title: "Adjusted spacing & sizing\u00a0",
+                desc: "Where the system had more options than it needed, we reduced. Fewer choices, more consistency.",
+                tag: "REDUCE",
               },
               {
                 num: "04",
-                title: "Launch meant walkthroughs, not a handoff",
-                desc: "We ran teams through the system directly — live walkthroughs, full documentation, hands-on sessions. Teams started building their own libraries on top of it and using it in real design work almost immediately.",
-                tag: "LAUNCH",
+                title: "A system still needs attention after launch",
+                desc: "A system that isn't maintained becomes a system people work around. We gave it the same critical eye after launch as before.",
+                tag: "SUSTAIN",
               },
             ].map((insight, i) => (
               <motion.div
