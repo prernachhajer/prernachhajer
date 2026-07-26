@@ -687,6 +687,17 @@ const CaseStudyDesignSystem = () => {
         </div>
       </section>
 
+      {/* SEPARATOR */}
+      <div className={`${surface.dark} ${layout.px}`}>
+        <div className={`${layout.container} mx-auto`}>
+          <div className="flex items-center gap-4">
+            <div className="flex-1 h-px bg-background/10" />
+            <span className="text-[0.625rem] tracking-widest uppercase text-background/40">Impact · Learnings</span>
+            <div className="flex-1 h-px bg-background/10" />
+          </div>
+        </div>
+      </div>
+
       {/* LEARNINGS */}
       <DarkSection label="What I learned">
         <motion.h2
