@@ -486,7 +486,7 @@ const CaseStudyDesignSystem = () => {
                   style={{ fontFamily: t.displayFont }}
                 >
                   {insight.num}
-                </p>
+                </p> }
                 <div>
         
         
