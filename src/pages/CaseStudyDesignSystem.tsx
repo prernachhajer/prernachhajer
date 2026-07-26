@@ -443,29 +443,31 @@ const CaseStudyDesignSystem = () => {
 
       {/* 06 — MAINTAIN: PHASE 4 */}
       <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
-        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
-          <motion.div
+        <div className="max-w-3xl mx-auto mb-12">
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
+            style={{ fontFamily: t.displayFont }}
           >
-            <div>
-              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
-                <span className="w-5 h-px bg-primary" />
-                What we found
-              </p>
-              <h3
-                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
-                style={{ fontFamily: t.displayFont }}
-              >
-                The friction, and what it took to launch
-              </h3>
-            </div>
-            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 LESSONS</span>
-          </motion.div>
+            The quieter, more persistent discipline.
+          </motion.h2>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            custom={1}
+            className="text-background/80 leading-relaxed"
+          >
+            Once a system is in active use, the work changes character. Edge cases appear. Variants never used
+            accumulate. A component that worked for three use cases doesn't quite work for a fourth.
+          </motion.p>
+        </div>
 
+        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
           <div className="flex flex-col">
             {[
               {
@@ -527,30 +529,6 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mb-12">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
-            style={{ fontFamily: t.displayFont }}
-          >
-            The quieter, more persistent discipline.
-          </motion.h2>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            custom={1}
-            className="text-background/80 leading-relaxed"
-          >
-            Once a system is in active use, the work changes character. Edge cases appear. Variants never used
-            accumulate. A component that worked for three use cases doesn't quite work for a fourth.
-          </motion.p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-0.5">
