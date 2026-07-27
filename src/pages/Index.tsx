@@ -177,7 +177,7 @@ const Index = () => {
               </div>
               <div>
                 <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>100M+</p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1">users</p>
+                <p className="text-[0.75rem] text-muted-foreground mt-1">monthly visits</p>
               </div>
               <div>
                 <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>12</p>
