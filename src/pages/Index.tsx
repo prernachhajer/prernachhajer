@@ -176,7 +176,7 @@ const Index = () => {
                 <p className="text-[0.75rem] text-muted-foreground mt-1">app rating</p>
               </div>
               <div>
-                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>10M+</p>
+                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>100M+</p>
                 <p className="text-[0.75rem] text-muted-foreground mt-1">users</p>
               </div>
               <div>
@@ -194,7 +194,7 @@ const Index = () => {
             className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end pt-6 md:pt-8 border-t border-border"
           >
             <p className="text-[0.875rem] leading-[1.7] text-muted-foreground font-light max-w-[520px] whitespace-pre-line">
-              From 0-to-1 startups to a platform at 10M+ scale — I've built design systems, mentored teams, and shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
+              From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
             </p>
             <div className="flex gap-3 flex-wrap shrink-0">
               <button
