@@ -170,9 +170,9 @@ const Index = () => {
             custom={2}
             className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 pb-[52px] border-t border-border mt-[52px]"
           >
-            <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[480px]">
-              12 years across startups and global platforms — from building design systems to leading product design for{" "}
-              <span className="font-medium text-foreground">10M+ users.</span> Now expanding into design with AI.
+            <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[480px] whitespace-pre-line">
+              12 years building and leading product design — from 0-to-1 startups to platforms serving{" "}
+              <span className="font-medium text-foreground">10M+ users.</span> At ESPNCricinfo, I lead design for the mobile app (app rating 3.4 → 4.5), mentor designers, and own design ops and cross-team alignment end-to-end. Now leading my team's shift to AI-assisted workflows.
             </p>
             <div className="flex gap-3 flex-wrap shrink-0">
               <button
