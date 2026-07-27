@@ -156,7 +156,7 @@ const Index = () => {
             className="text-[clamp(3.25rem,8vw,7.5rem)] font-normal leading-[0.96] tracking-[-0.032em]"
             style={{ fontFamily: t.displayFont }}
           >
-            Designing products
+            Designing teams & products
             <br />
             that make <span className="italic text-primary">complexity</span>
             <br />
