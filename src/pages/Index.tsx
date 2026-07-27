@@ -137,10 +137,10 @@ const Index = () => {
       <NavHome />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section id="hero" className="pt-[60px] min-h-screen flex flex-col">
-        <div className={`${wrapCls} flex flex-col justify-between flex-1 py-[clamp(28px,3.5vw,44px)] w-full`}>
+      <section id="hero" className="pt-[60px] h-screen max-h-[1000px] flex flex-col">
+        <div className={`${wrapCls} flex flex-col justify-between h-full py-6 md:py-8 w-full`}>
           <div>
-            <motion.div initial="hidden" animate="visible" variants={fade} className="mb-6 md:mb-8">
+            <motion.div initial="hidden" animate="visible" variants={fade} className="mb-4 md:mb-6">
               <span
                 className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]"
               >
@@ -154,10 +154,13 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.75rem,6.5vw,6rem)] font-normal leading-[1.0] tracking-[-0.03em] max-w-[11ch]"
+              className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-normal leading-[1.02] tracking-[-0.03em]"
               style={{ fontFamily: t.displayFont }}
             >
-              Defining teams & products that make <span className="italic text-primary">complexity</span>{" "}
+              Defining teams & products
+              <br />
+              that make <span className="italic text-primary">complexity</span>
+              <br />
               <span className="text-muted-foreground">feel simple.</span>
             </motion.h1>
 
@@ -166,19 +169,19 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="flex flex-wrap gap-8 md:gap-12 pt-8 md:pt-10"
+              className="flex flex-wrap gap-8 md:gap-12 pt-6 md:pt-8"
             >
               <div>
-                <p className="text-[clamp(1.75rem,3vw,2.5rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>3.4 → 4.5</p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1.5">app rating</p>
+                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>3.4 → 4.5</p>
+                <p className="text-[0.75rem] text-muted-foreground mt-1">app rating</p>
               </div>
               <div>
-                <p className="text-[clamp(1.75rem,3vw,2.5rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>10M+</p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1.5">users</p>
+                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>10M+</p>
+                <p className="text-[0.75rem] text-muted-foreground mt-1">users</p>
               </div>
               <div>
-                <p className="text-[clamp(1.75rem,3vw,2.5rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>12</p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1.5">years</p>
+                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>12</p>
+                <p className="text-[0.75rem] text-muted-foreground mt-1">years</p>
               </div>
             </motion.div>
           </div>
@@ -188,7 +191,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={3}
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end pt-8 md:pt-10 border-t border-border"
+            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end pt-6 md:pt-8 border-t border-border"
           >
             <p className="text-[0.875rem] leading-[1.7] text-muted-foreground font-light max-w-[520px] whitespace-pre-line">
               From 0-to-1 startups to a platform at 10M+ scale — I've built design systems, mentored teams, and shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
