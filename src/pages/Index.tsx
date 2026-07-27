@@ -138,13 +138,13 @@ const Index = () => {
 
       {/* ── HERO ─────────────────────────────────── */}
       <section id="hero" className="flex flex-col pt-[60px]">
-        <div className={`${wrapCls} pt-[clamp(40px,4vw,60px)] w-full`}>
-          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-14 md:mb-16">
+        <div className={`${wrapCls} pt-[clamp(40px,4vw,60px)] pb-[52px] w-full`}>
+          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-10 md:mb-12">
             <span
-              className={`inline-flex items-center gap-3 ${t.labelSm} text-primary border border-primary/25 rounded-full px-4 py-[7px]`}
+              className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]"
             >
               <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
-              Open to full-time roles
+              open to design manager roles
             </span>
           </motion.div>
 
@@ -153,13 +153,12 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[clamp(3.25rem,8vw,7.5rem)] font-normal leading-[0.96] tracking-[-0.032em]"
+            className="text-[clamp(3rem,7.5vw,7rem)] font-normal leading-[0.98] tracking-[-0.03em]"
             style={{ fontFamily: t.displayFont }}
           >
-            Designing teams & products
+            Defining teams & products
             <br />
-            that make <span className="italic text-primary">complexity</span>
-            <br />
+            that make <span className="italic text-primary">complexity</span>{" "}
             <span className="text-muted-foreground">feel simple.</span>
           </motion.h1>
 
@@ -168,24 +167,44 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={2}
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 pb-[52px] border-t border-border mt-[52px]"
+            className="flex flex-wrap gap-8 md:gap-12 pt-10 md:pt-12"
           >
-            <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[480px] whitespace-pre-line">
-              12 years building and leading product design — from 0-to-1 startups to platforms serving{" "}
-              <span className="font-medium text-foreground">10M+ users.</span> At ESPNCricinfo, I lead design for the mobile app (app rating 3.4 → 4.5), mentor designers, and own design ops and cross-team alignment end-to-end. Now leading my team's shift to AI-assisted workflows.
+            <div>
+              <p className="text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>3.4 → 4.5</p>
+              <p className="text-[0.75rem] text-muted-foreground mt-2">app rating</p>
+            </div>
+            <div>
+              <p className="text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>10M+</p>
+              <p className="text-[0.75rem] text-muted-foreground mt-2">users</p>
+            </div>
+            <div>
+              <p className="text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>12</p>
+              <p className="text-[0.75rem] text-muted-foreground mt-2">years</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end pt-12 pb-[52px] border-t border-border mt-12"
+          >
+            <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground font-light max-w-[560px] whitespace-pre-line">
+              From 0-to-1 startups to a platform at 10M+ scale — I've built design systems, mentored teams, and shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
             </p>
             <div className="flex gap-3 flex-wrap shrink-0">
               <button
                 onClick={() => scrollTo("work")}
                 className="inline-flex items-center gap-2 bg-foreground text-background px-9 py-4 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
               >
-                View My Work →
+                View my work →
               </button>
               <button
                 onClick={() => navigate("/resume")}
                 className="inline-flex items-center gap-2 text-muted-foreground border border-border px-9 py-4 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
               >
-                View Resume
+                View resume
               </button>
             </div>
           </motion.div>
