@@ -548,7 +548,7 @@ const CaseStudyCricinfo = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>Impact</SectionLabel>
+          <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"
@@ -610,7 +610,7 @@ const CaseStudyCricinfo = () => {
         </div>
       </section>
 
-      {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
+      <Section label={cleanLabel("05 — Design Decisions")}>
       {/*   <Section label="05 — Design Decisions">
         <Prose>
           <h2>The decisions that defined the redesign</h2>
