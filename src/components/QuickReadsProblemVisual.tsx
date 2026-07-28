@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { animation, type as t } from "@/lib/tokens";
+import { animation } from "@/lib/tokens";
 import problem1 from "@/assets/quick-reads/problem-1.jpg";
 import problem2 from "@/assets/quick-reads/problem-2.jpg";
 import problem3 from "@/assets/quick-reads/problem-3.jpg";
@@ -30,7 +30,7 @@ const QuickReadsProblemVisual = () => (
     className="w-full"
   >
     {/* Phones row */}
-    <div className="grid grid-cols-3 gap-5 items-end mb-10">
+    <div className="grid grid-cols-3 gap-5 items-end">
       {[problem1, problem2, problem3].map((src, i) => (
         <motion.div
           key={i}
