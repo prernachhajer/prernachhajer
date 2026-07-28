@@ -39,34 +39,50 @@ const CaseStudyQuickReads = () => {
       {/* THE STARTING POINT */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
         <div className={`${layout.container} mx-auto`}>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
-            <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
-              style={{ fontFamily: t.displayFont }}
-            >
-              25 years of great writing. Most users never finishing it.
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mb-12">
-              Not because they didn't want depth — they wanted a reason to trust it before committing.
-            </p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="border-l-2 border-border pl-6 md:pl-8"
+          >
+            <p className={`${t.label} text-muted-foreground mb-8`}>The starting point</p>
 
-            <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
-              style={{ fontFamily: t.displayFont }}
-            >
-              Losing to Inshorts & Instagram.
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mb-12">
-              Younger, mobile-first users were getting their news in 60 words. We were giving them 1,200.
-            </p>
+            <div className="mb-12">
+              <h2
+                className="text-[clamp(1.625rem,3.5vw,2.5rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+                style={{ fontFamily: t.displayFont }}
+              >
+                25 years of great writing. Most users never finishing it.
+              </h2>
+              <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
+                Not because they didn't want depth — they wanted a reason to trust it before committing.
+              </p>
+            </div>
+
+            <div>
+              <h2
+                className="text-[clamp(1.625rem,3.5vw,2.5rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+                style={{ fontFamily: t.displayFont }}
+              >
+                Losing to Inshorts and Instagram.
+              </h2>
+              <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
+                While cricinfo held 25 years of editorial trust, mobile-first users were getting their
+                cricket news elsewhere —{" "}
+                <span className="text-foreground font-medium">20–30% completion</span>,{" "}
+                <span className="text-foreground font-medium">70–80% bounce</span> — before a reading
+                habit ever formed.
+              </p>
+            </div>
           </motion.div>
 
-          <QuickReadsProblemVisual />
-
-          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
-            ESPN Cricinfo App · News Feed · 2024
-          </p>
+          <div className="mt-16">
+            <QuickReadsProblemVisual />
+            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
+              ESPN Cricinfo App · News Feed · 2024
+            </p>
+          </div>
         </div>
       </section>
 
