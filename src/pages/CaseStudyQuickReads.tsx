@@ -364,11 +364,8 @@ const CaseStudyQuickReads = () => {
             </p>
 
             <Prose>
-              <h2>Speed-first. But never at the cost of credibility.</h2>
-              <p>
-                Four principles shaped every decision — from the word count cap to the transition behaviour. The goal
-                was to feel like cricinfo, just lighter.
-              </p>
+              <h2>Three tensions that shaped the feature</h2>
+              <p>Every meaningful design decision on Quick Reads came from a real constraint.</p>
             </Prose>
           </motion.div>
 
