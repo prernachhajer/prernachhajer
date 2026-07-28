@@ -30,15 +30,15 @@ const CaseStudyQuickReads = () => {
 
       {/* HERO */}
       <CaseStudyHero
-        headline="A"
-        headlineAccent="bite"
-        headline="before the meal — how Quick Reads got"
-        headlineAccent="80%."
-        headline=" of"
-        headlineAccent="casual users"
-        headline="into Cricinfo's long-form writing"
-        headlineAccent=""
-        headlineEnd=""
+        segments={[
+          { text: "A", accent: false },
+          { text: "bite", accent: true },
+          { text: "before the meal — how Quick Reads got", accent: false },
+          { text: "80%", accent: true },
+          { text: " of", accent: false },
+          { text: "casual users", accent: true },
+          { text: "into Cricinfo's long-form writing", accent: false },
+        ]}
         tags={["Cricinfo App", "Quick Reads", "Design Lead", "iOS & Android", "2024"]}
       />
 
