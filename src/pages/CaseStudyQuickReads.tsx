@@ -620,8 +620,7 @@ const CaseStudyQuickReads = () => {
         <div className="grid md:grid-cols-2 gap-3">
           {[
             "Make the case before asking for the effort. The editorial team resisted at first — reasonably. Showing them the data reframed the conversation. <em>Collaboration doesn't start with alignment. It starts with honesty.</em>",
-            "A small entry point can unlock a large behaviour change. Quick Reads wasn't a major redesign — it was a 100-word card. But it changed what users did next. <em>The hook matters more than the depth.</em>",
-            "Design and engineering decisions made late become UX problems at launch. State handling and transition continuity were only smooth because we resolved them early, together. <em>Async reviews aren't a shortcut — they're insurance.</em>",
+
             "Testing scope shapes confidence, not just data. We shipped with limited persona coverage and it worked. But I'd make different choices next time. <em>Knowing where your blind spots are is its own form of design thinking.</em>",
           ].map((text, i) => (
             <LearningCard key={i} index={i}>
