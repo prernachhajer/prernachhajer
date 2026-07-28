@@ -29,6 +29,11 @@ import nextPhone3 from "@/assets/next-direction-phone-3.jpg";
 
 const fade = animation.fade;
 
+// Helper to remove numbers and prefixes from labels
+const cleanLabel = (label: string) => {
+  return label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "");
+};
+
 const CaseStudyCricinfo = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">

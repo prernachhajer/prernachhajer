@@ -30,6 +30,11 @@ import zeroheightDoc from "@/assets/zeroheight-accordion.png";
 
 const fade = animation.fade;
 
+// Helper to remove numbers and prefixes from labels
+const cleanLabel = (label: string) => {
+  return label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "");
+};
+
 const CaseStudyDesignSystem = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -443,8 +448,8 @@ const CaseStudyDesignSystem = () => {
         </motion.div>
       </Section>
 
-      {/* 06 — MAINTAIN: PHASE 4 */}
-      <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
+      {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
+      <DarkSection label="REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"

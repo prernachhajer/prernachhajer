@@ -429,8 +429,8 @@ const CaseStudyQuickReads = () => {
         </div>
       </section>
 
-      {/* 05 — DESIGN DECISIONS */}
-      <Section label="05 — Design Decisions">
+      {/* DESIGN DECISIONS */}
+      <Section label="DESIGN DECISIONS">
         <Prose>
           <h2>Three tensions that shaped the feature</h2>
           <p>
