@@ -50,6 +50,16 @@ const CaseStudyQuickReads = () => {
             <p className="text-muted-foreground max-w-2xl mb-12">
               Not because they didn't want depth — they wanted a reason to trust it before committing.
             </p>
+
+            <h2
+              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
+              style={{ fontFamily: t.displayFont }}
+            >
+              25 years of great writing. Most users never finishing it.
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mb-12">
+              Not because they didn't want depth — they wanted a reason to trust it before committing.
+            </p>
           </motion.div>
 
           <QuickReadsProblemVisual />
