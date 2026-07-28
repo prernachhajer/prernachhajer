@@ -350,7 +350,7 @@ const CaseStudyQuickReads = () => {
 
       {/* DESIGN DECISIONS */}
       <Section label="DESIGN DECISIONS">
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`${layout.container} mx-auto !max-w-3xl`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -366,28 +366,21 @@ const CaseStudyQuickReads = () => {
 
           {[
             {
-              constraint:
-                "Summaries doubled editorial workload — and had to beat Inshorts, not just match its length.",
+              constraint: "Summaries doubled editorial workload — and had to beat Inshorts, not just match its length.",
               decision:
                 "Framed Quick Reads as a funnel, not a replacement. Editorial owned the summary voice by launch.",
               quote:
                 '"Depth carried the credibility" — a diluted voice would\'ve made cricinfo indistinguishable from competitors.',
             },
             {
-              constraint:
-                "Casual users wanted speed. Loyal readers wanted depth. Serving one risked the other.",
-              decision:
-                "Built it as a gateway, not a gate — full article always one tap away.",
-              quote:
-                '"Some loyal readers still resisted" — the depth-vs-speed tension is ongoing.',
+              constraint: "Casual users wanted speed. Loyal readers wanted depth. Serving one risked the other.",
+              decision: "Built it as a gateway, not a gate — full article always one tap away.",
+              quote: '"Some loyal readers still resisted" — the depth-vs-speed tension is ongoing.',
             },
             {
-              constraint:
-                "Losing context mid-flow was a real drop-off risk — and ads couldn't break it either.",
-              decision:
-                "Solved continuity with engineering early. Placed ads at predictable intervals, not mid-flow.",
-              quote:
-                '"Testing coverage was narrower than ideal" — didn\'t validate across all five personas.',
+              constraint: "Losing context mid-flow was a real drop-off risk — and ads couldn't break it either.",
+              decision: "Solved continuity with engineering early. Placed ads at predictable intervals, not mid-flow.",
+              quote: '"Testing coverage was narrower than ideal" — didn\'t validate across all five personas.',
             },
           ].map((block, idx) => (
             <motion.div
@@ -397,21 +390,15 @@ const CaseStudyQuickReads = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={idx}
-              className={`grid md:grid-cols-2 gap-10 lg:gap-16 py-12 ${
-                idx !== 0 ? "border-t border-border" : ""
-              }`}
+              className={`grid md:grid-cols-2 gap-10 lg:gap-16 py-12 ${idx !== 0 ? "border-t border-border" : ""}`}
             >
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE CONSTRAINT</p>
-                <p className="text-lg md:text-xl font-bold leading-snug text-foreground">
-                  {block.constraint}
-                </p>
+                <p className="text-lg md:text-xl font-bold leading-snug text-foreground">{block.constraint}</p>
               </div>
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE DECISION</p>
-                <p className="text-lg md:text-xl font-bold leading-snug text-foreground mb-6">
-                  {block.decision}
-                </p>
+                <p className="text-lg md:text-xl font-bold leading-snug text-foreground mb-6">{block.decision}</p>
                 <p
                   className="text-base italic text-muted-foreground leading-relaxed"
                   style={{ fontFamily: t.displayFont }}
