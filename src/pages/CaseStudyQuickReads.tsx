@@ -632,7 +632,7 @@ const CaseStudyQuickReads = () => {
 
       {/* CLOSING */}
       <ClosingSection
-        quote="The goal was never to make cricket faster. It was to make it"
+        quote="The goal was never to make reading faster. It was to make it"
         quoteAccent="easier to start."
         quoteEnd=""
         meta="ESPN Cricinfo · Quick Reads · iOS & Android · 2024"
