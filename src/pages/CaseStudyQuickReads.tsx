@@ -49,12 +49,12 @@ const CaseStudyQuickReads = () => {
             <p className={`${t.label} text-muted-foreground mb-8`}>The starting point</p>
 
             <div className="mb-12">
-              <h2
+              <h4
                 className="text-[clamp(1.625rem,3.5vw,2.5rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 25 years of great writing. Most users never finishing it.
-              </h2>
+              </h4>
               <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
                 Not because they didn't want depth — they wanted a reason to trust it before committing.
               </p>
@@ -68,11 +68,9 @@ const CaseStudyQuickReads = () => {
                 Losing to Inshorts and Instagram.
               </h2>
               <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
-                While cricinfo held 25 years of editorial trust, mobile-first users were getting their
-                cricket news elsewhere —{" "}
-                <span className="text-foreground font-medium">20–30% completion</span>,{" "}
-                <span className="text-foreground font-medium">70–80% bounce</span> — before a reading
-                habit ever formed.
+                While cricinfo held 25 years of editorial trust, mobile-first users were getting their cricket news
+                elsewhere — <span className="text-foreground font-medium">20–30% completion</span>,{" "}
+                <span className="text-foreground font-medium">70–80% bounce</span> — before a reading habit ever formed.
               </p>
             </div>
           </motion.div>
