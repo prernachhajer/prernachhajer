@@ -33,10 +33,10 @@ const CaseStudyQuickReads = () => {
         headline="A"
         headlineAccent="bite"
         headline="before the meal — how Quick Reads got"
-        headlineAccent="80%"
-        headline="of"
+        headlineAccent="80%."
+        headline=" of"
         headlineAccent="casual users"
-        headline="into cricinfo's long-form writing"
+        headline="into Cricinfo's long-form writing"
         headlineAccent=""
         headlineEnd=""
         tags={["Cricinfo App", "Quick Reads", "Design Lead", "iOS & Android", "2024"]}
