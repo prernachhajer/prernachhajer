@@ -156,7 +156,7 @@ const CaseStudyQuickReads = () => {
       {/* 03 — PROCESS & RESEARCH */}
       <Section label="PROCESS & RESEARCH">
         <Prose>
-          <h2>Users don't dislike reading. They dislike wasting time.</h2>
+          {/* <h2>Users don't dislike reading. They dislike wasting time.</h2> */}
           <p>
             User surveys, prototype testing with casual and mid-tier users, competitive analysis (Inshorts, social
             formats), and behavioral analytics. The goal was to understand why users were bouncing — not just that they
