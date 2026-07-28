@@ -49,12 +49,12 @@ const CaseStudyQuickReads = () => {
             <p className={`${t.label} text-muted-foreground mb-8`}>The starting point</p>
 
             <div className="mb-12">
-              <h4
-                className="text-[clamp(1.625rem,3.5vw,2.5rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+              <h2
+                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 25 years of great writing. Most users never finishing it.
-              </h4>
+              </h2>
               <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
                 Not because they didn't want depth — they wanted a reason to trust it before committing.
               </p>
