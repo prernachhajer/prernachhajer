@@ -52,62 +52,6 @@ const QuickReadsProblemVisual = () => (
       ))}
     </div>
 
-    {/* Stats row */}
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] border-t border-border pt-9 gap-y-8">
-      {/* Stat 1 */}
-      <div className="px-0 md:px-9 md:first:pl-0">
-        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/85 mb-3">
-          Article Completion
-        </p>
-        <p
-          className="text-[4rem] font-normal leading-[0.9] tracking-[-0.04em] text-primary mb-3.5"
-          style={{ fontFamily: t.displayFont }}
-        >
-          20<span className="text-[2rem] text-muted-foreground">–30%</span>
-        </p>
-        <p className="text-[0.8125rem] text-muted-foreground leading-[1.65]">
-          of users read a full article from start to finish.
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="hidden md:block bg-border self-stretch" />
-
-      {/* Stat 2 */}
-      <div className="px-0 md:px-9">
-        <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-muted-foreground/85 mb-3">
-          Drop-off Rate
-        </p>
-        <p
-          className="text-[4rem] font-normal leading-[0.9] tracking-[-0.04em] text-foreground mb-3.5"
-          style={{ fontFamily: t.displayFont }}
-        >
-          70<span className="text-[2rem] text-muted-foreground">–80%</span>
-        </p>
-        <p className="text-[0.8125rem] text-muted-foreground leading-[1.65]">
-          bounced before reaching the end — never forming a reading habit.
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="hidden md:block bg-border self-stretch" />
-
-      {/* Insight */}
-      <div className="px-0 md:px-9 md:last:pr-0">
-        <div className="bg-foreground rounded-[14px] p-6 md:p-7">
-          <p className="font-mono text-[0.5625rem] tracking-[0.22em] uppercase text-background/65 mb-3">
-            The insight
-          </p>
-          <p
-            className="text-lg font-normal leading-[1.45] text-background/85 italic"
-            style={{ fontFamily: t.displayFont }}
-          >
-            Users weren't rejecting the content — they dropped off before it could{" "}
-            <em className="not-italic text-primary/85">earn their attention.</em>
-          </p>
-        </div>
-      </div>
-    </div>
   </motion.div>
 );
 
