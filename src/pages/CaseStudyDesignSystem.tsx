@@ -32,7 +32,9 @@ const fade = animation.fade;
 
 // Helper to remove numbers and prefixes from labels
 const cleanLabel = (label: string) => {
-  return label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "");
+  return typeof label === 'string' 
+    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
+    : label;
 };
 
 const CaseStudyDesignSystem = () => {

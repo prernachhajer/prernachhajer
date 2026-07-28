@@ -23,6 +23,13 @@ import { animation, layout, spacing, type as t, surface, radius } from "@/lib/to
 
 const fade = animation.fade;
 
+// Helper to remove numbers and prefixes from labels
+const cleanLabel = (label: string) => {
+  return typeof label === 'string' 
+    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
+    : label;
+};
+
 const CaseStudyMatchPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -39,7 +46,7 @@ const CaseStudyMatchPage = () => {
       />
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="01 — Problem">
+      <DarkSection label={cleanLabel("01 — Problem")}>
         <div className="grid md:grid-cols-2 gap-0.5">
           <motion.div
             initial="hidden"
@@ -122,7 +129,7 @@ const CaseStudyMatchPage = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>02 — Impact</SectionLabel>
+          <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
@@ -186,7 +193,7 @@ const CaseStudyMatchPage = () => {
       </section>
 
       {/* 03 — INSIGHT */}
-      <Section label="03 — Insight">
+      <Section label={cleanLabel("03 — Insight")}>
         <Prose>
           <h2>Two gaps, not one.</h2>
           <p>Looking at the analytics and user feedback, two distinct problems emerged — and they needed separate solutions.</p>
@@ -275,7 +282,7 @@ const CaseStudyMatchPage = () => {
       {/* 04 — SOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>04 — Solution</SectionLabel>
+          <SectionLabel dark>{cleanLabel("04 — Solution")}</SectionLabel>
 
           {/* Intro */}
           <motion.div
