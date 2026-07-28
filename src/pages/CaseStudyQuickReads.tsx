@@ -100,11 +100,7 @@ const CaseStudyQuickReads = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              High traffic from loyal, long-time readers was masking a real problem: casual and newer users weren't sticking around long enough to become loyal ones.
-              <br /><br />
-              Article completion and returning-visit rates for this segment were falling — quietly, behind strong topline numbers.
-            </p>
-            <p className="text-sm text-background/75 mt-5 leading-relaxed">
+              High traffic from loyal, long-time readers was masking a real problem — casual and newer users weren't returning long enough to become loyal ones. Completion and return rates for this segment were quietly falling behind strong topline numbers.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["CASUAL-USER DROP-OFF", "FALLING RETURN RATE", "MASKED BY LOYAL-READER VOLUME"].map((tag) => (
