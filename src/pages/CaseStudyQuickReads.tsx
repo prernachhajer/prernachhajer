@@ -102,8 +102,6 @@ const CaseStudyQuickReads = () => {
             >
               High traffic from loyal, long-time readers was masking a real problem — casual and newer users weren't returning long enough to become loyal ones. Completion and return rates for this segment were quietly falling behind strong topline numbers.
             </p>
-            <p className="text-sm text-background/75 mt-5 leading-relaxed">
-            </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["CASUAL-USER DROP-OFF", "FALLING RETURN RATE", "MASKED BY LOYAL-READER VOLUME"].map((tag) => (
                 <span
