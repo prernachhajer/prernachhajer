@@ -359,10 +359,10 @@ export const CaseStudyHero = ({
       style={{ fontFamily: t.displayFont }}
     >
       {headline}
-      {headlineAccent && (
-        <span className="text-primary italic"> {headlineAccent}</span>
-      )}
-      {headlineEnd && <> {headlineEnd}</>}
+      {headlineAccent ? (
+        <> <span className="text-primary italic">{headlineAccent}</span></>
+      ) : null}
+      {headlineEnd ? <> {headlineEnd}</> : null}
     </motion.h1>
 
     <motion.div
