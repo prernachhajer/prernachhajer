@@ -201,7 +201,7 @@ const CaseStudyQuickReads = () => {
         </div>
 
         {/* Findings — separate sub-section */}
-        <div className={`${layout.container} mx-auto mt-32`}>
+        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
