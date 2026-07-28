@@ -33,9 +33,9 @@ const CaseStudyQuickReads = () => {
 
       {/* HERO */}
       <CaseStudyHero
-        headline="We gave users a reason"
-        headlineAccent="to care"
-        headlineEnd="before asking them to read."
+        headline="A bite before the meal — how Quick Reads got 80% of casual users into cricinfo's long-form writing"
+        headlineAccent=""
+        headlineEnd=""
         tags={["Cricinfo App", "Quick Reads", "Design Lead", "iOS & Android", "2024"]}
       />
 
