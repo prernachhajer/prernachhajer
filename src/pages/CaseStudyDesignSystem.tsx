@@ -30,6 +30,13 @@ import zeroheightDoc from "@/assets/zeroheight-accordion.png";
 
 const fade = animation.fade;
 
+// Helper to remove numbers and prefixes from labels
+const cleanLabel = (label: string) => {
+  return typeof label === 'string' 
+    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
+    : label;
+};
+
 const CaseStudyDesignSystem = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -139,7 +146,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
+      <Section label="CONVINCE, ALIGN, LAUNCH">
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
@@ -443,8 +450,8 @@ const CaseStudyDesignSystem = () => {
         </motion.div>
       </Section>
 
-      {/* 06 — MAINTAIN: PHASE 4 */}
-      <DarkSection label={"PHASE 4:\u00a0\nREMOVE\n,\n\nSIMPLIFY\n, REDUCE\n, SUSTAIN"}>
+      {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
+      <DarkSection label="REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
@@ -579,7 +586,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="PHASE 5: THE OVERHAUL">
+      <Section label="THE OVERHAUL">
         <div className={`${layout.container} mx-auto`}>
           <motion.h2
             initial="hidden"

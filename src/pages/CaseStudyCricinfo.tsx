@@ -29,6 +29,13 @@ import nextPhone3 from "@/assets/next-direction-phone-3.jpg";
 
 const fade = animation.fade;
 
+// Helper to remove numbers and prefixes from labels
+const cleanLabel = (label: string) => {
+  return typeof label === 'string' 
+    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
+    : label;
+};
+
 const CaseStudyCricinfo = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -180,7 +187,7 @@ const CaseStudyCricinfo = () => {
       </DarkSection>
 
       {/* 03 — PROCESS & RESEARCH */}
-      <Section label="Process & Research">
+      <Section label={cleanLabel("03 — Process & Research")}>
         <Prose>
           <h2>From assumptions to actual behaviour</h2>
           <p>
@@ -541,7 +548,7 @@ const CaseStudyCricinfo = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>Impact</SectionLabel>
+          <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"
@@ -603,7 +610,7 @@ const CaseStudyCricinfo = () => {
         </div>
       </section>
 
-      {/* 05 — DESIGN DECISIONS (Constraint / Decision / Tradeoff) */}
+      {/* DESIGN DECISIONS */}
       {/*   <Section label="05 — Design Decisions">
         <Prose>
           <h2>The decisions that defined the redesign</h2>
