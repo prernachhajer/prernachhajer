@@ -358,11 +358,11 @@ export const CaseStudyHero = ({
       className={`${t.heroH1} max-w-4xl`}
       style={{ fontFamily: t.displayFont }}
     >
-      {headline}{" "}
+      {headline}
       {headlineAccent && (
-        <span className="text-primary italic">{headlineAccent}</span>
-      )}{" "}
-      {headlineEnd}
+        <span className="text-primary italic"> {headlineAccent}</span>
+      )}
+      {headlineEnd && <> {headlineEnd}</>}
     </motion.h1>
 
     <motion.div
