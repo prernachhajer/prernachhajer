@@ -85,7 +85,7 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="01 — Problem">
+      <DarkSection label="PROBLEM">
         <div className="grid md:grid-cols-2 gap-0.5">
           {/* State */}
           <motion.div
@@ -158,7 +158,7 @@ const CaseStudyQuickReads = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>02 — Impact</SectionLabel>
+          <SectionLabel dark>IMPACT</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"
@@ -235,7 +235,7 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* 03 — PROCESS & RESEARCH */}
-      <Section label="03 — Process & Research">
+      <Section label="PROCESS & RESEARCH">
         <Prose>
           <h2>Users don't dislike reading. They dislike wasting time.</h2>
           <p>
@@ -370,7 +370,7 @@ const CaseStudyQuickReads = () => {
       {/* 04 — DESIGN STRATEGY */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>04 — Design Strategy</SectionLabel>
+          <SectionLabel>DESIGN STRATEGY</SectionLabel>
         </div>
         <Prose>
           <h2>Speed-first. But never at the cost of credibility.</h2>

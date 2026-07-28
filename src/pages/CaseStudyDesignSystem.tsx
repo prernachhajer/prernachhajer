@@ -139,7 +139,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
+      <Section label="CONVINCE, ALIGN, LAUNCH">
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
@@ -579,7 +579,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="PHASE 5: THE OVERHAUL">
+      <Section label="THE OVERHAUL">
         <div className={`${layout.container} mx-auto`}>
           <motion.h2
             initial="hidden"
