@@ -155,85 +155,6 @@ const CaseStudyQuickReads = () => {
         </div>
       </DarkSection>
 
-      {/* 02 — IMPACT */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>IMPACT</SectionLabel>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8"
-          >
-            Rolled out 10% → 20% → 100%. We tracked adoption, scroll depth, and transition behaviour across every phase.
-          </motion.p>
-          <div className="grid md:grid-cols-3 gap-0.5">
-            {[
-              {
-                label: "Scroll depth · News section",
-                num: "✓",
-                title: "Hit target benchmarks by full rollout",
-                desc: "Scroll depth and time spent in the news section both reached targets by end of the 100% rollout — the primary signal that Quick Reads was creating sustained engagement.",
-              },
-              {
-                label: "Summary → full article transition",
-                num: "↑",
-                title: "Gateway hypothesis validated",
-                desc: "The summary-to-full-article transition rate met our engagement goal. Users weren't just reading summaries and leaving — they were using them as a decision layer before going deeper.",
-              },
-              {
-                label: "Rollout adoption rate",
-                num: "3×",
-                title: "Tracked ahead of expectations",
-                desc: "Adoption tracked ahead of forecasts across all three rollout phases. Ad integration completed without a measurable drop in satisfaction signals.",
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={card.num + i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${
-                  i === 0 ? "md:rounded-l-xl" : ""
-                } ${i === 2 ? "md:rounded-r-xl" : ""}`}
-              >
-                <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
-                    {card.label}
-                  </p>
-                  <p
-                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
-                    style={{ fontFamily: t.displayFont }}
-                  >
-                    {card.num}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
-          >
-            <p className="text-xs italic text-background/85 leading-relaxed">
-              Honest note: Scroll depth and transition targets are the strongest validated signals. Broader
-              persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a
-              revisit.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* 03 — PROCESS & RESEARCH */}
       <Section label="PROCESS & RESEARCH">
         <Prose>
@@ -638,6 +559,85 @@ const CaseStudyQuickReads = () => {
                 </p>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 02 — IMPACT */}
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel dark>IMPACT</SectionLabel>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-sm text-background/75 leading-relaxed mb-8"
+          >
+            Rolled out 10% → 20% → 100%. We tracked adoption, scroll depth, and transition behaviour across every phase.
+          </motion.p>
+          <div className="grid md:grid-cols-3 gap-0.5">
+            {[
+              {
+                label: "Scroll depth · News section",
+                num: "✓",
+                title: "Hit target benchmarks by full rollout",
+                desc: "Scroll depth and time spent in the news section both reached targets by end of the 100% rollout — the primary signal that Quick Reads was creating sustained engagement.",
+              },
+              {
+                label: "Summary → full article transition",
+                num: "↑",
+                title: "Gateway hypothesis validated",
+                desc: "The summary-to-full-article transition rate met our engagement goal. Users weren't just reading summaries and leaving — they were using them as a decision layer before going deeper.",
+              },
+              {
+                label: "Rollout adoption rate",
+                num: "3×",
+                title: "Tracked ahead of expectations",
+                desc: "Adoption tracked ahead of forecasts across all three rollout phases. Ad integration completed without a measurable drop in satisfaction signals.",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.num + i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${
+                  i === 0 ? "md:rounded-l-xl" : ""
+                } ${i === 2 ? "md:rounded-r-xl" : ""}`}
+              >
+                <div>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
+                    {card.label}
+                  </p>
+                  <p
+                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {card.num}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
+                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
+          >
+            <p className="text-xs italic text-background/85 leading-relaxed">
+              Honest note: Scroll depth and transition targets are the strongest validated signals. Broader
+              persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a
+              revisit.
+            </p>
           </motion.div>
         </div>
       </section>
