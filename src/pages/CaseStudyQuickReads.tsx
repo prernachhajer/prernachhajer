@@ -350,100 +350,78 @@ const CaseStudyQuickReads = () => {
 
       {/* DESIGN DECISIONS */}
       <Section label="DESIGN DECISIONS">
-        <Prose>
-          <h2>Three tensions that shaped the feature</h2>
-          <p>
-            Every meaningful design decision on Quick Reads came from a real constraint. These are the three that
-            defined the outcome most.
-          </p>
-        </Prose>
-        {[
-          {
-            constraint: {
-              title: "Editorial workload vs. competitive positioning",
-              desc: "Writing 100–120 word summaries for every article doubled the editorial team's effort. At the same time, Inshorts already offered short-form cricket news — so the summaries had to be meaningfully different, not just shorter.",
-            },
-            decision: {
-              label: "The decision · Editorial collaboration",
-              title: "Make the case before asking for the effort.",
-              desc: "I showed the editorial team the behavioural data and framed Quick Reads as a funnel — not a replacement. Summaries would drive more users into the long-form writing they'd spent years building. By launch, they owned the summary voice and wrote the style guide.",
-              badge: "✓ Editorially owned by launch",
-            },
-            tradeoff: {
-              label: "The trade-off",
-              title: '"Depth carried the credibility."',
-              desc: "Cricket-specific editorial trust is what differentiates cricinfo from Inshorts. Summaries that didn't carry that voice would have been indistinguishable from competitors. That risk was real — and it's why editorial buy-in wasn't optional.",
-            },
-          },
-          {
-            constraint: {
-              title: "Multiple personas, one surface",
-              desc: "Casual users wanted quick updates. Loyal readers still preferred long-form. A feature that served one group at the expense of the other would damage retention more than it fixed it.",
-            },
-            decision: {
-              label: "The decision · Product framing",
-              title: "Frame it as a gateway, not a replacement.",
-              desc: "Quick Reads was designed as an entry point into long-form — not a standalone format. The summary card UI always made the full article one tap away. Editorial richness was never hidden; it was preceded.",
-              badge: "✓ Validated by transition rate",
-            },
-            tradeoff: {
-              label: "The trade-off",
-              title: '"Some loyal readers still resisted."',
-              desc: "A small segment of power users felt the feed felt 'lighter' after the rollout. We maintained long-form as the default for high-intent entry points — but the tension between depth and speed is ongoing.",
-            },
-          },
-          {
-            constraint: {
-              title: "State handling and ad placement",
-              desc: "Users switching between summary and full article — or returning to the feed — needed continuity. Separately, ads were a monetization requirement, but poorly placed they would break the very flow we were trying to build.",
-            },
-            decision: {
-              label: "The decision · Engineering & monetisation",
-              title: "Solve continuity early. Place ads predictably.",
-              desc: "Early shared prototypes with engineering kept state transitions from becoming late-stage blockers. Read states were tracked to avoid repetition. Ads were placed at predictable intervals — not injected into reading flow — so the hierarchy stayed intact.",
-              badge: "✓ No measurable satisfaction drop",
-            },
-            tradeoff: {
-              label: "The trade-off",
-              title: '"Testing coverage was narrower than ideal."',
-              desc: "Due to timeline constraints, we tested with a limited segment and didn't validate across all five user personas. In hindsight, broader early-stage testing would have surfaced edge cases in state handling sooner.",
-            },
-          },
-        ].map((block, idx) => (
+        <div className={`${layout.container} mx-auto`}>
           <motion.div
-            key={idx}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            custom={idx}
-            className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : "mt-0.5"}`}
+            className="mb-16"
           >
-            <div className="grid md:grid-cols-3 gap-0.5 rounded-xl overflow-hidden">
-              <div className="bg-card p-10">
-                <p className={`${t.labelSm} text-muted-foreground mb-4`}>The constraint</p>
-                <h4 className="font-semibold text-base mb-3">{block.constraint.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{block.constraint.desc}</p>
+            <h2 className={`${t.h2} mb-4`}>Three tensions that shaped the feature</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Every meaningful design decision on Quick Reads came from a real constraint.
+            </p>
+          </motion.div>
+
+          {[
+            {
+              constraint:
+                "Summaries doubled editorial workload — and had to beat Inshorts, not just match its length.",
+              decision:
+                "Framed Quick Reads as a funnel, not a replacement. Editorial owned the summary voice by launch.",
+              quote:
+                '"Depth carried the credibility" — a diluted voice would\'ve made cricinfo indistinguishable from competitors.',
+            },
+            {
+              constraint:
+                "Casual users wanted speed. Loyal readers wanted depth. Serving one risked the other.",
+              decision:
+                "Built it as a gateway, not a gate — full article always one tap away.",
+              quote:
+                '"Some loyal readers still resisted" — the depth-vs-speed tension is ongoing.',
+            },
+            {
+              constraint:
+                "Losing context mid-flow was a real drop-off risk — and ads couldn't break it either.",
+              decision:
+                "Solved continuity with engineering early. Placed ads at predictable intervals, not mid-flow.",
+              quote:
+                '"Testing coverage was narrower than ideal" — didn\'t validate across all five personas.',
+            },
+          ].map((block, idx) => (
+            <motion.div
+              key={idx}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              custom={idx}
+              className={`grid md:grid-cols-2 gap-10 lg:gap-16 py-12 ${
+                idx !== 0 ? "border-t border-border" : ""
+              }`}
+            >
+              <div>
+                <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE CONSTRAINT</p>
+                <p className="text-lg md:text-xl font-bold leading-snug text-foreground">
+                  {block.constraint}
+                </p>
               </div>
-              <div className="bg-secondary p-10">
-                <p className={`${t.labelSm} text-muted-foreground mb-4`}>{block.decision.label}</p>
-                <h4 className="font-semibold text-base mb-3">{block.decision.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{block.decision.desc}</p>
-                <p className="text-xs font-medium text-primary mt-4">{block.decision.badge}</p>
-              </div>
-              <div className="bg-foreground text-background p-10">
-                <p className={`${t.labelSm} text-background/85 mb-4`}>{block.tradeoff.label}</p>
-                <h4
-                  className="text-lg italic text-background/90 mb-3 leading-snug"
+              <div>
+                <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE DECISION</p>
+                <p className="text-lg md:text-xl font-bold leading-snug text-foreground mb-6">
+                  {block.decision}
+                </p>
+                <p
+                  className="text-base italic text-muted-foreground leading-relaxed"
                   style={{ fontFamily: t.displayFont }}
                 >
-                  {block.tradeoff.title}
-                </h4>
-                <p className="text-xs text-background/75 leading-relaxed">{block.tradeoff.desc}</p>
+                  {block.quote}
+                </p>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </Section>
 
       {/* ROLLOUT */}
