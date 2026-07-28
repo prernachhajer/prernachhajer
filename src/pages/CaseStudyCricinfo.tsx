@@ -187,7 +187,7 @@ const CaseStudyCricinfo = () => {
       </DarkSection>
 
       {/* 03 — PROCESS & RESEARCH */}
-      <Section label="Process & Research">
+      <Section label={cleanLabel("03 — Process & Research")}>
         <Prose>
           <h2>From assumptions to actual behaviour</h2>
           <p>
@@ -610,7 +610,7 @@ const CaseStudyCricinfo = () => {
         </div>
       </section>
 
-      <Section label={cleanLabel("05 — Design Decisions")}>
+      {/* DESIGN DECISIONS */}
       {/*   <Section label="05 — Design Decisions">
         <Prose>
           <h2>The decisions that defined the redesign</h2>
