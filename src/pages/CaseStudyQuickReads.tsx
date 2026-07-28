@@ -51,6 +51,17 @@ const CaseStudyQuickReads = () => {
               Cricinfo's editorial legacy is unmatched. But mobile-first users — especially younger ones — were getting
               their cricket news from Inshorts and Instagram. Only 20–30% of users engaged with full-length articles.
             </p>
+
+            <h2
+              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
+              style={{ fontFamily: t.displayFont }}
+            >
+              25 years of great writing. Most users never finishing it.
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mb-12">
+              Cricinfo's editorial legacy is unmatched. But mobile-first users — especially younger ones — were getting
+              their cricket news from Inshorts and Instagram. Only 20–30% of users engaged with full-length articles.
+            </p>
           </motion.div>
 
           <QuickReadsProblemVisual />
