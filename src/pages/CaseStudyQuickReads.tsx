@@ -62,7 +62,7 @@ const CaseStudyQuickReads = () => {
 
             <div>
               <h2
-                className="text-[clamp(1.625rem,3.5vw,2.5rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+                className="text-[clamp(1.25rem,2.5vw,1.875rem] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 Losing to Inshorts and Instagram.
