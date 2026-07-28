@@ -38,80 +38,70 @@ const RowCaption = ({ title, desc }: { title: string; desc: string }) => (
 );
 
 const QuickReadsScreensVisual = () => (
-  <div className="flex flex-col gap-20">
-    {/* ROW 1 — Crossfade */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-start justify-items-center">
+    {/* COL 1 — Crossfade */}
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fade}
-      className="flex flex-col items-center gap-7"
+      className="flex flex-col items-center gap-7 w-full max-w-[300px]"
     >
-      <div className="flex gap-10 items-end justify-center">
-        <PhoneShell>
-          <div className="absolute inset-0">
-            <img src={screen1} className="qr-fade-screen-1 absolute inset-0 w-full h-full object-cover object-top" alt="Quick Reads feed view" />
-            <img src={screen2} className="qr-fade-screen-2 absolute inset-0 w-full h-full object-cover object-top" alt="Quick Reads reading view" />
-          </div>
-          <div className="qr-swipe-hint absolute bottom-[50px] left-1/2 -translate-x-1/2 z-[6] flex flex-col items-center gap-[3px] pointer-events-none">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(26,26,24,0.55)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.2))" }}>
-              <polyline points="18 15 12 9 6 15" />
-              <polyline points="18 20 12 14 6 20" />
-            </svg>
-            <span className="text-[0.5625rem] font-medium text-foreground/75 tracking-[0.04em] whitespace-nowrap mt-[1px]">
-              Swipe up for next story
-            </span>
-          </div>
-        </PhoneShell>
-      </div>
+      <PhoneShell>
+        <div className="absolute inset-0">
+          <img src={screen1} className="qr-fade-screen-1 absolute inset-0 w-full h-full object-cover object-top" alt="Quick Reads feed view" />
+          <img src={screen2} className="qr-fade-screen-2 absolute inset-0 w-full h-full object-cover object-top" alt="Quick Reads reading view" />
+        </div>
+        <div className="qr-swipe-hint absolute bottom-[50px] left-1/2 -translate-x-1/2 z-[6] flex flex-col items-center gap-[3px] pointer-events-none">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(26,26,24,0.55)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.2))" }}>
+            <polyline points="18 15 12 9 6 15" />
+            <polyline points="18 20 12 14 6 20" />
+          </svg>
+          <span className="text-[0.5625rem] font-medium text-foreground/75 tracking-[0.04em] whitespace-nowrap mt-[1px]">
+            Swipe up for next story
+          </span>
+        </div>
+      </PhoneShell>
       <RowCaption
         title="Feels lighter as you read"
         desc="The app steps back so the story can step forward. Chrome fades, distractions dissolve — all that remains is the writing."
       />
     </motion.div>
 
-    <div className="w-full h-px bg-border/50" />
-
-    {/* ROW 2 — Swipe left */}
+    {/* COL 2 — Swipe left */}
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fade}
-      className="flex flex-col items-center gap-7"
+      className="flex flex-col items-center gap-7 w-full max-w-[300px]"
     >
-      <div className="flex gap-10 items-end justify-center">
-        <PhoneShell>
-          <div className="qr-swipe-left-stack absolute top-0 left-0 w-[200%] h-full flex">
-            <img src={screen3} className="w-1/2 h-full object-cover object-top flex-shrink-0" alt="Summary view" />
-            <img src={screen4} className="w-1/2 h-full object-cover object-top flex-shrink-0" alt="Full article view" />
-          </div>
-        </PhoneShell>
-      </div>
+      <PhoneShell>
+        <div className="qr-swipe-left-stack absolute top-0 left-0 w-[200%] h-full flex">
+          <img src={screen3} className="w-1/2 h-full object-cover object-top flex-shrink-0" alt="Summary view" />
+          <img src={screen4} className="w-1/2 h-full object-cover object-top flex-shrink-0" alt="Full article view" />
+        </div>
+      </PhoneShell>
       <RowCaption
         title="Curiosity, one swipe away"
         desc="When the summary earns it, the full story is right there. No new screen, no break in flow — just a gesture."
       />
     </motion.div>
 
-    <div className="w-full h-px bg-border/50" />
-
-    {/* ROW 3 — Scroll */}
+    {/* COL 3 — Scroll */}
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fade}
-      className="flex flex-col items-center gap-7"
+      className="flex flex-col items-center gap-7 w-full max-w-[300px]"
     >
-      <div className="flex gap-10 items-end justify-center">
-        <PhoneShell>
-          <div className="qr-scroll-stack absolute top-0 left-0 w-full h-[200%] flex flex-col">
-            <img src={screen5} className="w-full h-1/2 object-cover object-top flex-shrink-0" alt="Current story" />
-            <img src={screen6} className="w-full h-1/2 object-cover object-top flex-shrink-0" alt="Next story" />
-          </div>
-        </PhoneShell>
-      </div>
+      <PhoneShell>
+        <div className="qr-scroll-stack absolute top-0 left-0 w-full h-[200%] flex flex-col">
+          <img src={screen5} className="w-full h-1/2 object-cover object-top flex-shrink-0" alt="Current story" />
+          <img src={screen6} className="w-full h-1/2 object-cover object-top flex-shrink-0" alt="Next story" />
+        </div>
+      </PhoneShell>
       <RowCaption
         title="Always something next"
         desc="One gesture and you're on to the next story. No dead ends, no going back to a feed — just forward momentum."
