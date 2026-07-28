@@ -100,10 +100,12 @@ const CaseStudyQuickReads = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              High traffic from loyal, long-time readers was masking a real problem — casual and newer users weren't returning long enough to become loyal ones. Completion and return rates for this segment were quietly falling behind strong topline numbers.
+              High traffic from loyal, long-time readers was masking a real problem — casual and newer users weren't
+              returning long enough to become loyal ones. Completion and return rates for this segment were quietly
+              falling behind strong topline numbers.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
-              {["CASUAL-USER DROP-OFF", "FALLING RETURN RATE", "MASKED BY LOYAL-READER VOLUME"].map((tag) => (
+              {["CASUAL-USER DROP-OFF", "FALLING RETURN RATE"].map((tag) => (
                 <span
                   key={tag}
                   className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-background/5 text-background/65"
@@ -112,7 +114,7 @@ const CaseStudyQuickReads = () => {
                 </span>
               ))}
               <span className="text-[0.6875rem] tracking-wide uppercase font-medium px-3 py-1 rounded bg-primary/12 text-primary border border-primary/30">
-                Losing to Inshorts & Instagram
+                MASKED BY LOYAL-READER VOLUME
               </span>
             </div>
           </motion.div>
