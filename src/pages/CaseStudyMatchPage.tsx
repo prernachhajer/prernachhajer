@@ -535,8 +535,8 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
-      {/* 05 — KEY DECISIONS */}
-      <Section label="05 — Key Decisions">
+      {/* KEY DECISIONS */}
+      <Section label={cleanLabel("05 — Design Decisions")}>
         <Prose>
           <h2>The groupings that needed justification.</h2>
           <p>Not every merge was obvious. Each one required a clear reason — otherwise we were just moving tabs around, not solving anything.</p>
