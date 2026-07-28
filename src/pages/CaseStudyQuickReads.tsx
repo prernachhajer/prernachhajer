@@ -362,11 +362,6 @@ const CaseStudyQuickReads = () => {
             <p className="text-muted-foreground text-md leading-relaxed">
               Every meaningful design decision on Quick Reads came from a real constraint.
             </p>
-
-            <Prose>
-              <h2>Three tensions that shaped the feature</h2>
-              <p>Every meaningful design decision on Quick Reads came from a real constraint.</p>
-            </Prose>
           </motion.div>
 
           {[
