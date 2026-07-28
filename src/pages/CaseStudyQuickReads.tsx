@@ -22,18 +22,21 @@ import QuickReadsScreensVisual from "@/components/QuickReadsScreensVisual";
 
 const fade = animation.fade;
 
-
-
 const CaseStudyQuickReads = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-
       {/* NAV */}
       <NavCaseStudy period="2024" />
 
       {/* HERO */}
       <CaseStudyHero
-        headline="A bite before the meal — how Quick Reads got 80% of casual users into cricinfo's long-form writing"
+        headline="A"
+        headlineAccent="bite"
+        headline="before the meal — how Quick Reads got"
+        headlineAccent="80%"
+        headline="of"
+        headlineAccent="casual users"
+        headline="into cricinfo's long-form writing"
         headlineAccent=""
         headlineEnd=""
         tags={["Cricinfo App", "Quick Reads", "Design Lead", "iOS & Android", "2024"]}
@@ -42,12 +45,7 @@ const CaseStudyQuickReads = () => {
       {/* THE STARTING POINT */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
         <div className={`${layout.container} mx-auto`}>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
             <h2
               className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
@@ -56,7 +54,8 @@ const CaseStudyQuickReads = () => {
               25 years of great writing. Most users never finishing it.
             </h2>
             <p className="text-muted-foreground max-w-2xl mb-12">
-              Cricinfo's editorial legacy is unmatched. But mobile-first users — especially younger ones — were getting their cricket news from Inshorts and Instagram. Only 20–30% of users engaged with full-length articles.
+              Cricinfo's editorial legacy is unmatched. But mobile-first users — especially younger ones — were getting
+              their cricket news from Inshorts and Instagram. Only 20–30% of users engaged with full-length articles.
             </p>
           </motion.div>
 
@@ -84,7 +83,8 @@ const CaseStudyQuickReads = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              Younger, mobile-first users were leaving. Not because they disliked cricket — but because the format didn't fit the way they consumed information.
+              Younger, mobile-first users were leaving. Not because they disliked cricket — but because the format
+              didn't fit the way they consumed information.
             </p>
             <p className="text-sm text-background/75 mt-5 leading-relaxed">
               High traffic from loyal users masked a growing gap with casual and newer audiences.
@@ -118,8 +118,8 @@ const CaseStudyQuickReads = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90"
               style={{ fontFamily: t.displayFont }}
             >
-              Turn casual visitors into{" "}
-              <em className="text-primary italic">engaged readers</em> — by giving them a lighter entry point into the editorial depth cricinfo is known for.
+              Turn casual visitors into <em className="text-primary italic">engaged readers</em> — by giving them a
+              lighter entry point into the editorial depth cricinfo is known for.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Higher content engagement", "Longer sessions", "Gateway to long-form"].map((tag) => (
@@ -139,9 +139,7 @@ const CaseStudyQuickReads = () => {
       </DarkSection>
 
       {/* 02 — IMPACT */}
-      <section
-        className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}
-      >
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>02 — Impact</SectionLabel>
           <motion.p
@@ -211,7 +209,9 @@ const CaseStudyQuickReads = () => {
             className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
           >
             <p className="text-xs italic text-background/85 leading-relaxed">
-              Honest note: Scroll depth and transition targets are the strongest validated signals. Broader persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a revisit.
+              Honest note: Scroll depth and transition targets are the strongest validated signals. Broader
+              persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a
+              revisit.
             </p>
           </motion.div>
         </div>
@@ -222,7 +222,9 @@ const CaseStudyQuickReads = () => {
         <Prose>
           <h2>Users don't dislike reading. They dislike wasting time.</h2>
           <p>
-            User surveys, prototype testing with casual and mid-tier users, competitive analysis (Inshorts, social formats), and behavioral analytics. The goal was to understand why users were bouncing — not just that they were.
+            User surveys, prototype testing with casual and mid-tier users, competitive analysis (Inshorts, social
+            formats), and behavioral analytics. The goal was to understand why users were bouncing — not just that they
+            were.
           </p>
         </Prose>
 
@@ -236,10 +238,7 @@ const CaseStudyQuickReads = () => {
             className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center"
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The assumption</p>
-            <p
-              className="text-2xl md:text-3xl font-normal leading-[1.1]"
-              style={{ fontFamily: t.displayFont }}
-            >
+            <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
               Users don't want to <span className="text-primary italic">read long articles</span>.
             </p>
           </motion.div>
@@ -257,7 +256,8 @@ const CaseStudyQuickReads = () => {
               style={{ fontFamily: t.displayFont }}
             >
               Users don't want to{" "}
-              <span className="text-primary italic">waste time on something they're unsure about</span>. A summary helps them decide.
+              <span className="text-primary italic">waste time on something they're unsure about</span>. A summary helps
+              them decide.
             </p>
           </motion.div>
         </div>
@@ -335,12 +335,12 @@ const CaseStudyQuickReads = () => {
                   >
                     {insight.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                    {insight.desc}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
                 </div>
                 <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
-                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
                     {insight.tag}
                   </span>
                 </div>
@@ -358,7 +358,8 @@ const CaseStudyQuickReads = () => {
         <Prose>
           <h2>Speed-first. But never at the cost of credibility.</h2>
           <p>
-            Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to feel like cricinfo, just lighter.
+            Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
+            feel like cricinfo, just lighter.
           </p>
         </Prose>
 
@@ -416,7 +417,8 @@ const CaseStudyQuickReads = () => {
         <Prose>
           <h2>Three tensions that shaped the feature</h2>
           <p>
-            Every meaningful design decision on Quick Reads came from a real constraint. These are the three that defined the outcome most.
+            Every meaningful design decision on Quick Reads came from a real constraint. These are the three that
+            defined the outcome most.
           </p>
         </Prose>
         {[
@@ -485,9 +487,7 @@ const CaseStudyQuickReads = () => {
               <div className="bg-card p-10">
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The constraint</p>
                 <h4 className="font-semibold text-base mb-3">{block.constraint.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {block.constraint.desc}
-                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{block.constraint.desc}</p>
               </div>
               <div className="bg-secondary p-10">
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>{block.decision.label}</p>
@@ -530,7 +530,8 @@ const CaseStudyQuickReads = () => {
                 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-background/90 leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
-                We didn't flip a switch.<br />
+                We didn't flip a switch.
+                <br />
                 <span className="text-primary italic">We watched it land.</span>
               </h2>
             </div>
@@ -571,9 +572,7 @@ const CaseStudyQuickReads = () => {
                 className="grid grid-cols-[80px_1fr] gap-6 items-start"
               >
                 <div className="pt-4 flex flex-col items-center gap-2.5">
-                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">
-                    {phase.pct}
-                  </span>
+                  <span className="text-sm font-mono font-medium tracking-[0.1em] text-background/90">{phase.pct}</span>
                   <span className="text-[0.5625rem] font-mono tracking-[0.12em] uppercase text-background/85">
                     {phase.phase}
                   </span>
@@ -596,12 +595,7 @@ const CaseStudyQuickReads = () => {
             ))}
           </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <hr className="border-t border-background/[0.07] mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
               <p className="text-sm text-background/80 leading-[1.85]">
@@ -609,10 +603,9 @@ const CaseStudyQuickReads = () => {
                 <strong className="text-background/90 font-bold">
                   first time cricinfo's editorial team shipped a product feature they didn't resist
                 </strong>
-                . Not because we forced buy-in — but because we made the case first. The data showed them what design already knew: users weren't rejecting their writing.{" "}
-                <strong className="text-background/90 font-bold">
-                  They just needed a lighter door into it.
-                </strong>
+                . Not because we forced buy-in — but because we made the case first. The data showed them what design
+                already knew: users weren't rejecting their writing.{" "}
+                <strong className="text-background/90 font-bold">They just needed a lighter door into it.</strong>
               </p>
               <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
                 <p
@@ -622,7 +615,9 @@ const CaseStudyQuickReads = () => {
                   3<span className="text-primary">×</span>
                 </p>
                 <p className="text-[0.5312rem] font-mono tracking-[0.18em] uppercase text-background/85 leading-relaxed mt-1.5">
-                  Rollout<br />phases hit
+                  Rollout
+                  <br />
+                  phases hit
                 </p>
               </div>
             </div>
