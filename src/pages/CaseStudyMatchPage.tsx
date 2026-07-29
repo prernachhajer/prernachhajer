@@ -365,7 +365,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Solution 1 — Match state-based tab structure */}
-          <motion.p
+          {/* <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -373,7 +373,7 @@ const CaseStudyMatchPage = () => {
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
           >
             Solution 1 — Match state-based tab structure
-          </motion.p>
+          </motion.p> */}
           <div className="grid md:grid-cols-4 gap-0.5">
             {[
               {
