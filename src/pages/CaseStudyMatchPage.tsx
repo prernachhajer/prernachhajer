@@ -616,7 +616,7 @@ const CaseStudyMatchPage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={idx}
-            className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : ""}`}
+            className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : ""}   !max-w-3xl`}
           >
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 border-t border-border pt-8 pb-10">
               <div>
