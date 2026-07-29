@@ -416,22 +416,22 @@ const CaseStudyMatchPage = () => {
               {
                 label: "Stats · MVP · Fantasy · Overs → one tab",
                 title: "Group by user intent, not content type",
-                desc: "A user asking \u201Chow did we get here?\u201D wants the over breakdown, dismissal stats, player ratings, and match report. That\u2019s one person, one intent. Four tabs for one intent is four too many.",
+                desc: "One person, one intent — four tabs for one intent is four too many.",
               },
               {
                 label: "Live blog + Commentary → one tab, two sub-tabs",
                 title: "Same user, different depth",
-                desc: "Commentary is ball-by-ball and factual. Live blog is analytical. Different in form, identical in intent. A toggle inside the tab preserves both while eliminating one from the bar.",
+                desc: "Different in form, identical in intent — a toggle keeps both without cluttering the bar.",
               },
               {
                 label: "Squad → Playing XI → Scorecard",
                 title: "Progressive disclosure — the same data evolves",
-                desc: "Pre-match it's the full squad. Post-toss it's the confirmed Playing XI. Live it's the Playing XI plus the second team's innings beginning to fill in. One tab that evolves, not separate tabs for each moment.",
+                desc: "One tab that evolves with the match, not separate tabs for each moment.",
               },
               {
                 label: "News · Videos · Photos → Media",
                 title: "One intent, one tab",
-                desc: "All passive content consumption. Users in this mode are browsing, not looking for something specific. One grouped destination is cleaner than three separate ones.",
+                desc: "Passive browsing needs one grouped destination, not three.",
               },
             ].map((group, i) => {
               const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
