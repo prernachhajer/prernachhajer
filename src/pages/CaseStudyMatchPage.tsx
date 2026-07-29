@@ -323,24 +323,28 @@ const CaseStudyMatchPage = () => {
           <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
             {[
               {
-                label: "Stats · MVP · Fantasy · Overs → one tab",
                 title: "Group by user intent, not content type",
                 desc: "One person, one intent — four tabs for one intent is four too many.",
+
+                label: "Stats · MVP · Fantasy · Overs → one tab",
               },
               {
-                label: "Live blog + Commentary → one tab, two sub-tabs",
                 title: "Same user, different depth",
                 desc: "Different in form, identical in intent — a toggle keeps both without cluttering the bar.",
+
+                label: "Live blog + Commentary → one tab, two sub-tabs",
               },
               {
-                label: "Squad → Playing XI → Scorecard",
                 title: "Progressive disclosure — the same data evolves",
                 desc: "One tab that evolves with the match, not separate tabs for each moment.",
+
+                label: "Squad → Playing XI → Scorecard",
               },
               {
-                label: "News · Videos · Photos → Media",
                 title: "One intent, one tab",
                 desc: "Passive browsing needs one grouped destination, not three.",
+
+                label: "News · Videos · Photos → Media",
               },
             ].map((group, i) => {
               const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
