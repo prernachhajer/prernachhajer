@@ -721,6 +721,19 @@ const CaseStudyMatchPage = () => {
                 </motion.div>
               );
             })}
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
+            >
+              <p className="text-xs italic leading-relaxed text-muted-foreground">
+                Honest caveat: tab count reduction is precise. Engagement and task completion improvements are
+                directional — confirmed by the PM from analytics, but not tightened for formal reporting.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
