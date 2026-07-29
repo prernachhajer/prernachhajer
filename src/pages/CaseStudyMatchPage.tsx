@@ -568,43 +568,43 @@ const CaseStudyMatchPage = () => {
         {[
           {
             question: {
-              title: "Why combine Stats, MVP, Fantasy, and Overs?",
-              desc: "These are four distinct content types. A purist would keep them separate.",
+              title: "Why combine Stats, MVP, Fantasy, and Overs?\u00a0",
+              desc: "",
             },
             decision: {
               title: "Group by user intent, not content type.",
-              desc: "The user asking \u201Chow did we get here?\u201D wants all four. That\u2019s one person, one intent. Four tabs for one intent is four too many.",
+              desc: "That’s one person, one intent. Four tabs for one intent is four too many.",
             },
             tradeoff: {
-              title: "\u201CThe tab name can no longer describe everything inside it.\u201D",
+              title: "“The tab name can no longer describe everything inside it.”",
               desc: "We accepted that — discoverability inside the tab is a design problem, not a naming problem.",
             },
           },
           {
             question: {
-              title: "Why combine Live blog and Commentary into one tab?",
-              desc: "They feel similar but they're different. Merging them risks muddying the experience.",
+              title: "Why combine Live blog and Commentary into one tab?\u00a0",
+              desc: "",
             },
             decision: {
               title: "Same user, different depth. One tab, two sub-tabs.",
               desc: "A user who wants ball-by-ball updates is the same user who wants analytical context. One tab with a toggle preserves both, eliminating one from the bar.",
             },
             tradeoff: {
-              title: "\u201CAdding a sub-tab toggle adds interaction complexity.\u201D",
+              title: "“Adding a sub-tab toggle adds interaction complexity.”",
               desc: "Users now make two decisions — which tab, then which sub-tab. We accepted it — reducing the top-level bar was the bigger cognitive burden.",
             },
           },
           {
             question: {
-              title: "Why does Scorecard now contain Playing XI?",
-              desc: "Moving it inside Scorecard makes it harder to find — users looking for the lineup won't know where to go.",
+              title: "Why does Scorecard now contain Playing XI?\u00a0",
+              desc: "",
             },
             decision: {
               title: "Progressive disclosure — the same data evolves.",
               desc: "Playing XI and the full scorecard are the same data at different stages of completeness. In the first innings, the second team's XI is already there — waiting to fill in. One tab, evolving.",
             },
             tradeoff: {
-              title: "\u201CPlaying XI is no longer a first-class tab.\u201D",
+              title: "“Playing XI is no longer a first-class tab.”",
               desc: "Users who came for the lineup now need one more tap. Pre-match the tab bar has space; live and post-match, reducing noise matters more.",
             },
           },
