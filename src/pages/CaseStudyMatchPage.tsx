@@ -309,6 +309,16 @@ const CaseStudyMatchPage = () => {
             </p>
           </motion.div>
 
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
+          >
+            Solution 1 — Match state-based tab structure
+          </motion.p>
+
           {/* Groupings rationale */}
           <div className="grid md:grid-cols-2 gap-0.5 mt-10">
             {[
