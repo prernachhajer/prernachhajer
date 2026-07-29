@@ -21,6 +21,7 @@ import {
   ExploreMore,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
+import { ExternalLink } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import componentOld from "@/assets/component-old.jpg";
 import componentNew from "@/assets/component-new.jpg";
