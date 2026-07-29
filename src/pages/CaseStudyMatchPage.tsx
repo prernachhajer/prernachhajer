@@ -679,7 +679,7 @@ const CaseStudyMatchPage = () => {
           </motion.div>
 
           {/* Outcome grid */}
-          <div className="grid md:grid-cols-2 gap-0.5">
+          <div className="grid md:grid-cols-2 gap-0.5 mt-10">
             {[
               {
                 label: "Findability",
