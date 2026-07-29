@@ -382,7 +382,24 @@ const CaseStudyDesignSystem = () => {
             usage, token reference, interaction states, guidelines for product and engineering.
           </p>
 
-          <span>https://zeroheight.com/252be9de8/p/812fb5</span>
+          <span class="font-mono text-[0.6875rem] tracking-[0.08em] uppercase text-primary flex items-center gap-2">
+            Zeroheight Link
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right h-3 w-3"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
         </Prose>
 
         {/* Before / After adoption */}
