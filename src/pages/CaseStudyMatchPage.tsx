@@ -474,7 +474,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="mt-10 rounded-xl overflow-hidden"
+            className="mt-10 overflow-hidden"
           >
             <img
               src={matchSolutionImg}
