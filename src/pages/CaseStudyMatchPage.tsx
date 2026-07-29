@@ -320,7 +320,7 @@ const CaseStudyMatchPage = () => {
           </motion.p>
 
           {/* Groupings rationale */}
-          <div className="grid md:grid-cols-2 gap-0.5 mt-10">
+          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
             {[
               {
                 label: "Stats · MVP · Fantasy · Overs → one tab",
