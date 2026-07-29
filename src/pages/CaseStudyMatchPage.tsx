@@ -309,6 +309,51 @@ const CaseStudyMatchPage = () => {
             </p>
           </motion.div>
 
+          {/* Groupings rationale */}
+          <div className="grid md:grid-cols-2 gap-0.5 mt-10">
+            {[
+              {
+                label: "Stats · MVP · Fantasy · Overs → one tab",
+                title: "Group by user intent, not content type",
+                desc: "One person, one intent — four tabs for one intent is four too many.",
+              },
+              {
+                label: "Live blog + Commentary → one tab, two sub-tabs",
+                title: "Same user, different depth",
+                desc: "Different in form, identical in intent — a toggle keeps both without cluttering the bar.",
+              },
+              {
+                label: "Squad → Playing XI → Scorecard",
+                title: "Progressive disclosure — the same data evolves",
+                desc: "One tab that evolves with the match, not separate tabs for each moment.",
+              },
+              {
+                label: "News · Videos · Photos → Media",
+                title: "One intent, one tab",
+                desc: "Passive browsing needs one grouped destination, not three.",
+              },
+            ].map((group, i) => {
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div
+                  key={group.label}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                >
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
+                    {group.label}
+                  </p>
+                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
+                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{group.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+
           {/* Solution 1 — Match state-based tab structure */}
           <motion.p
             initial="hidden"
@@ -408,51 +453,6 @@ const CaseStudyMatchPage = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Groupings rationale */}
-          <div className="grid md:grid-cols-2 gap-0.5 mt-10">
-            {[
-              {
-                label: "Stats · MVP · Fantasy · Overs → one tab",
-                title: "Group by user intent, not content type",
-                desc: "One person, one intent — four tabs for one intent is four too many.",
-              },
-              {
-                label: "Live blog + Commentary → one tab, two sub-tabs",
-                title: "Same user, different depth",
-                desc: "Different in form, identical in intent — a toggle keeps both without cluttering the bar.",
-              },
-              {
-                label: "Squad → Playing XI → Scorecard",
-                title: "Progressive disclosure — the same data evolves",
-                desc: "One tab that evolves with the match, not separate tabs for each moment.",
-              },
-              {
-                label: "News · Videos · Photos → Media",
-                title: "One intent, one tab",
-                desc: "Passive browsing needs one grouped destination, not three.",
-              },
-            ].map((group, i) => {
-              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
-              return (
-                <motion.div
-                  key={group.label}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fade}
-                  custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
-                >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
-                    {group.label}
-                  </p>
-                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
-                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{group.desc}</p>
-                </motion.div>
-              );
-            })}
           </div>
 
           <motion.div
