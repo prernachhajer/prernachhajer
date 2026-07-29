@@ -616,33 +616,28 @@ const CaseStudyMatchPage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={idx}
-            className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : "mt-0.5"}`}
+            className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : ""}`}
           >
-            <div className="grid md:grid-cols-3 gap-0.5 rounded-xl overflow-hidden">
-              <div className="bg-card p-10">
+            <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 border-t border-border pt-8 pb-10">
+              <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The question</p>
-                <h4 className="font-semibold text-base mb-3">{block.question.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{block.question.desc}</p>
+                <p className="text-xl md:text-2xl leading-snug tracking-[-0.01em]">
+                  {block.question.title} {block.question.desc}
+                </p>
               </div>
-              <div className="bg-secondary p-10">
+              <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The decision</p>
-                <h4 className="font-semibold text-base mb-3">{block.decision.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{block.decision.desc}</p>
-                <p className="text-xs font-medium text-primary mt-4">✓ Shipped</p>
-              </div>
-              <div className="bg-foreground text-background p-10">
-                <p className={`${t.labelSm} text-background/85 mb-4`}>The trade-off</p>
-                <h4
-                  className="text-lg italic text-background/90 mb-3 leading-snug"
-                  style={{ fontFamily: t.displayFont }}
-                >
-                  {block.tradeoff.title}
-                </h4>
-                <p className="text-xs text-background/75 leading-relaxed">{block.tradeoff.desc}</p>
+                <p className="text-xl md:text-2xl leading-snug tracking-[-0.01em] mb-6">
+                  {block.decision.title} <span className="text-muted-foreground">{block.decision.desc}</span>
+                </p>
+                <p className="text-base italic text-muted-foreground leading-relaxed">
+                  {block.tradeoff.title} <span className="not-italic">—</span> {block.tradeoff.desc}
+                </p>
               </div>
             </div>
           </motion.div>
         ))}
+        <div className={`${layout.container} mx-auto border-t border-border`} />
       </Section>
 
       {/* 06 — OUTCOME */}
