@@ -25,9 +25,7 @@ const fade = animation.fade;
 
 // Helper to remove numbers and prefixes from labels
 const cleanLabel = (label: string) => {
-  return typeof label === 'string' 
-    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
-    : label;
+  return typeof label === "string" ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "") : label;
 };
 
 const CaseStudyMatchPage = () => {
@@ -60,10 +58,12 @@ const CaseStudyMatchPage = () => {
               className="text-xl md:text-2xl font-normal leading-[1.35] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              12 tabs during a live match. 14 after it ended. Every new feature got its own tab. Nobody stepped back to look at the whole.
+              12 tabs during a live match. 14 after it ended. Every new feature got its own tab. Nobody stepped back to
+              look at the whole.
             </p>
             <p className="text-sm text-background/75 mt-5 leading-relaxed">
-              Analytics confirmed what users were saying on the App Store and Twitter — core content was invisible, buried under a list no one could scroll through.
+              Analytics confirmed what users were saying on the App Store and Twitter — core content was invisible,
+              buried under a list no one could scroll through.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["12+ tabs live", "15 tabs post-match"].map((tag) => (
@@ -92,7 +92,8 @@ const CaseStudyMatchPage = () => {
               className="text-xl md:text-2xl font-normal leading-[1.35] text-background/90"
               style={{ fontFamily: t.displayFont }}
             >
-              Help users find what they came for — <em className="text-primary italic">faster</em>, at every stage of a match — without removing a single feature.
+              Help users find what they came for — <em className="text-primary italic">faster</em>, at every stage of a
+              match — without removing a single feature.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Tab discoverability", "Content findability"].map((tag) => (
@@ -186,7 +187,8 @@ const CaseStudyMatchPage = () => {
             className="mt-0.5 bg-[hsl(220,10%,6%)] rounded-b-xl p-5"
           >
             <p className="text-xs italic leading-relaxed text-muted-foreground">
-              Honest caveat: tab count reduction is precise. Engagement and task completion improvements are directional — confirmed by the PM from analytics, but not tightened for formal reporting.
+              Honest caveat: tab count reduction is precise. Engagement and task completion improvements are directional
+              — confirmed by the PM from analytics, but not tightened for formal reporting.
             </p>
           </motion.div>
         </div>
@@ -196,9 +198,12 @@ const CaseStudyMatchPage = () => {
       <Section label={cleanLabel("03 — Insight")}>
         <Prose>
           <h2>Two gaps, not one.</h2>
-          <p>Looking at the analytics and user feedback, two distinct problems emerged — and they needed separate solutions.</p>
+          <p>
+            Looking at the analytics and user feedback, two distinct problems emerged — and they needed separate
+            solutions.
+          </p>
         </Prose>
-        <div className={`${layout.container} mx-auto mt-16`}>
+        <div className={`${layout.container} mx-auto mt-16 !max-w-3xl`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -264,12 +269,12 @@ const CaseStudyMatchPage = () => {
                   >
                     {insight.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                    {insight.desc}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
                 </div>
                 <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
-                  <span className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}>
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
                     {insight.tag}
                   </span>
                 </div>
@@ -299,7 +304,8 @@ const CaseStudyMatchPage = () => {
               Two solutions, one problem.
             </h2>
             <p className="text-sm text-background/75 leading-relaxed">
-              First: redesign the tab structure around match states so users only see what's relevant. Second: bring content previews to where users already are, so they discover what they'd otherwise miss.
+              First: redesign the tab structure around match states so users only see what's relevant. Second: bring
+              content previews to where users already are, so they discover what they'd otherwise miss.
             </p>
           </motion.div>
 
@@ -428,12 +434,7 @@ const CaseStudyMatchPage = () => {
                 desc: "All passive content consumption. Users in this mode are browsing, not looking for something specific. One grouped destination is cleaner than three separate ones.",
               },
             ].map((group, i) => {
-              const corners = [
-                "md:rounded-tl-xl",
-                "md:rounded-tr-xl",
-                "md:rounded-bl-xl",
-                "md:rounded-br-xl",
-              ];
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
               return (
                 <motion.div
                   key={group.label}
@@ -461,7 +462,12 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="mt-10 rounded-xl overflow-hidden"
           >
-            <img src={matchSolutionImg} alt="Four match states showing reduced tab counts — Pre-match 6 tabs, Live 6 tabs, Scorecard 6 tabs, Post-match 8 tabs" className="w-full" loading="lazy" />
+            <img
+              src={matchSolutionImg}
+              alt="Four match states showing reduced tab counts — Pre-match 6 tabs, Live 6 tabs, Scorecard 6 tabs, Post-match 8 tabs"
+              className="w-full"
+              loading="lazy"
+            />
           </motion.div>
 
           {/* Solution 2 — Cross-tab content snacking */}
@@ -497,12 +503,7 @@ const CaseStudyMatchPage = () => {
                 desc: "For significant moments — a wicket, a six — media was embedded directly inside the ball-by-ball entry. The feed became richer without a separate tab visit.",
               },
             ].map((snack, i) => {
-              const corners = [
-                "md:rounded-tl-xl",
-                "md:rounded-tr-xl",
-                "md:rounded-bl-xl",
-                "md:rounded-br-xl",
-              ];
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
               return (
                 <motion.div
                   key={snack.where}
@@ -530,7 +531,12 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="mt-10 rounded-xl overflow-hidden"
           >
-            <img src={matchSolution2Img} alt="Cross-tab content snacking — Summary, Live, Scorecard and Commentary views" className="w-full" loading="lazy" />
+            <img
+              src={matchSolution2Img}
+              alt="Cross-tab content snacking — Summary, Live, Scorecard and Commentary views"
+              className="w-full"
+              loading="lazy"
+            />
           </motion.div>
         </div>
       </section>
@@ -539,7 +545,10 @@ const CaseStudyMatchPage = () => {
       <Section label={cleanLabel("05 — Design Decisions")}>
         <Prose>
           <h2>The groupings that needed justification.</h2>
-          <p>Not every merge was obvious. Each one required a clear reason — otherwise we were just moving tabs around, not solving anything.</p>
+          <p>
+            Not every merge was obvious. Each one required a clear reason — otherwise we were just moving tabs around,
+            not solving anything.
+          </p>
         </Prose>
 
         {[
@@ -643,7 +652,8 @@ const CaseStudyMatchPage = () => {
                 Fewer tabs. Better engagement. Same features.
               </h3>
               <p className="text-[0.8125rem] text-background/75 leading-relaxed">
-                The goal was never to remove features — it was to make them findable. Every feature that existed before the redesign still exists. The difference is that users can now reach them.
+                The goal was never to remove features — it was to make them findable. Every feature that existed before
+                the redesign still exists. The difference is that users can now reach them.
               </p>
             </div>
             <div className="shrink-0 text-center">
@@ -683,12 +693,7 @@ const CaseStudyMatchPage = () => {
                 desc: "Match states give the team a clear answer for every future tab request. The page can now absorb new features without collapsing.",
               },
             ].map((card, i) => {
-              const corners = [
-                "",
-                "",
-                "md:rounded-bl-xl",
-                "md:rounded-br-xl",
-              ];
+              const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
               return (
                 <motion.div
                   key={card.label}
