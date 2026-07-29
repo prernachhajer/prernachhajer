@@ -382,6 +382,14 @@ const CaseStudyDesignSystem = () => {
             After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component
             usage, token reference, interaction states, guidelines for product and engineering.
           </p>
+          <a
+            href="https://zeroheight.com/252be9de8/p/812fb5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-foreground text-background px-5 py-3 rounded-full text-sm font-medium hover:bg-primary transition-all mt-6"
+          >
+            Zeroheight Link <ExternalLink className="h-4 w-4" />
+          </a>
         </Prose>
 
         {/* Before / After adoption */}
