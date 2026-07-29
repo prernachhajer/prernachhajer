@@ -366,7 +366,8 @@ const CaseStudyQuickReads = () => {
 
           {[
             {
-              constraint: "Summaries increased editorial workload — and had to beat Inshorts, not just match its length.",
+              constraint:
+                "Summaries increased editorial workload — and had to beat Inshorts, not just match its length.",
               decision:
                 "Framed Quick Reads as a funnel, not a replacement. Editorial owned the summary voice by launch.",
               quote:
@@ -589,7 +590,7 @@ const CaseStudyQuickReads = () => {
               </motion.div>
             ))}
           </div>
-          <motion.div
+          {/*   <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -601,7 +602,7 @@ const CaseStudyQuickReads = () => {
               persona-level behavioural data was limited by the testing scope — something I'd invest in differently on a
               revisit.
             </p>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
