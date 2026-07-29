@@ -32,9 +32,7 @@ const fade = animation.fade;
 
 // Helper to remove numbers and prefixes from labels
 const cleanLabel = (label: string) => {
-  return typeof label === 'string' 
-    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
-    : label;
+  return typeof label === "string" ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "") : label;
 };
 
 const CaseStudyDesignSystem = () => {
@@ -383,6 +381,8 @@ const CaseStudyDesignSystem = () => {
             After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component
             usage, token reference, interaction states, guidelines for product and engineering.
           </p>
+
+          <span>https://zeroheight.com/252be9de8/p/812fb5</span>
         </Prose>
 
         {/* Before / After adoption */}
