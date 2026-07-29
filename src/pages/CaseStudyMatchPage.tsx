@@ -576,8 +576,8 @@ const CaseStudyMatchPage = () => {
               desc: "That’s one person, one intent. Four tabs for one intent is four too many.",
             },
             tradeoff: {
-              title: "“The tab name can no longer describe everything inside it.”",
-              desc: "We accepted that — discoverability inside the tab is a design problem, not a naming problem.",
+              title: "Trade-off:",
+              desc: "The tab name can no longer describe everything inside it.",
             },
           },
           {
@@ -590,8 +590,8 @@ const CaseStudyMatchPage = () => {
               desc: "A user who wants ball-by-ball updates is the same user who wants analytical context. One tab with a toggle preserves both, eliminating one from the bar.",
             },
             tradeoff: {
-              title: "“Adding a sub-tab toggle adds interaction complexity.”",
-              desc: "Users now make two decisions — which tab, then which sub-tab. We accepted it — reducing the top-level bar was the bigger cognitive burden.",
+              title: "Trade-off:",
+              desc: "Adding a sub-tab toggle adds interaction complexity.",
             },
           },
           {
@@ -604,8 +604,8 @@ const CaseStudyMatchPage = () => {
               desc: "Playing XI and the full scorecard are the same data at different stages of completeness. In the first innings, the second team's XI is already there — waiting to fill in. One tab, evolving.",
             },
             tradeoff: {
-              title: "“Playing XI is no longer a first-class tab.”",
-              desc: "Users who came for the lineup now need one more tap. Pre-match the tab bar has space; live and post-match, reducing noise matters more.",
+              title: "Trade-off:",
+              desc: "Playing XI is no longer a first-class tab.",
             },
           },
         ].map((block, idx) => (
