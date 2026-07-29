@@ -631,7 +631,7 @@ const CaseStudyMatchPage = () => {
                   {block.decision.title} <span className="text-muted-foreground">{block.decision.desc}</span>
                 </p>
                 <p className="text-base italic text-muted-foreground leading-relaxed">
-                  {block.tradeoff.title} <span className="not-italic">—</span> {block.tradeoff.desc}
+                  {block.tradeoff.title} {block.tradeoff.desc}
                 </p>
               </div>
             </div>
