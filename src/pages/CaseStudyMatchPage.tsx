@@ -587,7 +587,7 @@ const CaseStudyMatchPage = () => {
             },
             decision: {
               title: "Same user, different depth. One tab, two sub-tabs.",
-              desc: "A user who wants ball-by-ball updates is the same user who wants analytical context. One tab with a toggle preserves both, eliminating one from the bar.",
+              desc: "A user who wants ball-by-ball updates is the same user who wants analytical context.\u00a0",
             },
             tradeoff: {
               title: "Trade-off:",
