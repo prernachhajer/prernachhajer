@@ -381,15 +381,13 @@ const CaseStudyDesignSystem = () => {
             After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component
             usage, token reference, interaction states, guidelines for product and engineering.
           </p>
-
-          <span class="font-mono text-[0.6875rem] tracking-[0.08em] uppercase text-primary flex items-center gap-2">
-            Zeroheight Link
-        
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </span>
         </Prose>
+
+        <span class="font-mono text-[0.6875rem] tracking-[0.08em] uppercase text-primary flex items-center gap-2">
+          Zeroheight Link
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </span>
 
         {/* Before / After adoption */}
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
