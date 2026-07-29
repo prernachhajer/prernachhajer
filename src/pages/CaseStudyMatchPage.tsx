@@ -529,7 +529,7 @@ const CaseStudyMatchPage = () => {
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-background/90 mb-2">{snack.title}</h4>
-                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{snack.desc}</p>
+                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{snack.desc}</p>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
                     {snack.where}
                   </p>
