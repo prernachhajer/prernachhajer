@@ -640,7 +640,7 @@ const Index = () => {
             <span className="text-[0.8125rem] text-background/80 leading-[1.6]">
               Open to full-time roles
               <br />
-              Based in India · Remote-friendly
+              Worldwide · Remote-friendly
             </span>
           </div>
           <div>
