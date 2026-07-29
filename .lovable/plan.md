@@ -1,10 +1,18 @@
-## Fix — Component rebuild · 2022 slider
+# Plan: Move eyebrow labels to bottom of cards
 
-The two images used by this slider have different aspect ratios (`component-old.jpg` = 1920×1383, `component-new.jpg` = 1920×789), so `object-cover` crops one of them. To keep both fully visible and centered:
+## Scope
+Update the `src/pages/CaseStudyMatchPage.tsx` case study page only.
 
-1. In `src/components/BeforeAfterSlider.tsx`, add an optional `fit?: "cover" | "contain"` prop (default `"cover"`). When `fit` is `"contain"`:
-   - Use `object-contain object-center` on both images.
-   - Use `w-full` on the clipped "before" image (drop the pixel-width hack) so it scales to the container.
-2. In `src/pages/CaseStudyDesignSystem.tsx` at line 342, pass `fit="contain"` and set `aspectRatio={1920 / 1383}` on the Component rebuild slider so the taller image fits without cropping and the wider one is letterboxed and centered.
+## Changes
+1. **Groupings rationale grid** (4 cards, currently around line 323–369)
+   - Move the `label` eyebrow text from the top of each card to the bottom.
+   - Keep the title (`h4`) and description (`p`) at the top of the card.
+   - Adjust margin/spacing so the label reads as a footer-style tag without changing the design system styling.
 
-No change to the first (Cricinfo Figma Library) slider.
+2. **Outcome grid** under Cross-tab content snacking (4 cards, currently around line 687–729)
+   - Apply the same reorder: move the `label` eyebrow text from the top of each card to the bottom.
+   - Keep the title and description above the label.
+
+## Verification
+- Build the project and confirm no TypeScript errors.
+- Preview the Match Page case study to ensure the eyebrow labels appear at the bottom of all 8 cards and the visual hierarchy remains intact.

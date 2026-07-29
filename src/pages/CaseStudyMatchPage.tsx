@@ -358,11 +358,11 @@ const CaseStudyMatchPage = () => {
                   custom={i}
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
-                    {group.label}
-                  </p>
                   <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
                   <p className="text-[0.8125rem] text-background/75 leading-relaxed">{group.desc}</p>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
+                    {group.label}
+                  </p>
                 </motion.div>
               );
             })}
@@ -718,11 +718,11 @@ const CaseStudyMatchPage = () => {
                   custom={i}
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-2">
-                    {card.label}
-                  </p>
                   <h4 className="text-sm font-medium text-background/90 mb-2">{card.title}</h4>
                   <p className="text-[0.8125rem] text-background/75 leading-relaxed">{card.desc}</p>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
+                    {card.label}
+                  </p>
                 </motion.div>
               );
             })}
