@@ -366,7 +366,7 @@ const CaseStudyQuickReads = () => {
 
           {[
             {
-              constraint: "Summaries doubled editorial workload — and had to beat Inshorts, not just match its length.",
+              constraint: "Summaries increased editorial workload — and had to beat Inshorts, not just match its length.",
               decision:
                 "Framed Quick Reads as a funnel, not a replacement. Editorial owned the summary voice by launch.",
               quote:
