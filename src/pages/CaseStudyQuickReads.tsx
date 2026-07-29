@@ -528,7 +528,7 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* 02 — IMPACT */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-b border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>IMPACT</SectionLabel>
           <motion.p
