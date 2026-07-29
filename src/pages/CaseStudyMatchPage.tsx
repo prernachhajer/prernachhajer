@@ -127,7 +127,7 @@ const CaseStudyMatchPage = () => {
         </motion.div>
       </DarkSection>
 
-      {/* 02 — IMPACT */}
+      {/* 02 — IMPACT 
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
@@ -192,7 +192,7 @@ const CaseStudyMatchPage = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* 03 — INSIGHT */}
       <Section label={cleanLabel("03 — Insight")}>
@@ -714,7 +714,7 @@ const CaseStudyMatchPage = () => {
                   className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-background/90 mb-2">{card.title}</h4>
-                  <p className="text-[0.8125rem] text-background/75 leading-relaxed">{card.desc}</p>
+                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{card.desc}</p>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
                     {card.label}
                   </p>
