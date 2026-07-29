@@ -601,7 +601,7 @@ const CaseStudyMatchPage = () => {
             },
             decision: {
               title: "Progressive disclosure — the same data evolves.",
-              desc: "Playing XI and the full scorecard are the same data at different stages of completeness. In the first innings, the second team's XI is already there — waiting to fill in. One tab, evolving.",
+              desc: "Playing XI becomes the scorecard as the match fills in - one tab, not two.",
             },
             tradeoff: {
               title: "Trade-off:",
