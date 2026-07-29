@@ -684,22 +684,22 @@ const CaseStudyMatchPage = () => {
               {
                 label: "Findability",
                 title: "Points table and Report became discoverable",
-                desc: "Two of the most-sought pieces of content — consistently buried before — are now within reach.",
+                desc: "Two of the most-sought pieces of content, previously buried, now within reach.",
               },
               {
                 label: "Previously invisible content",
                 title: "Overs saw improved engagement",
-                desc: "The content hadn't changed. Its position had.",
+                desc: "Same content, better position.",
               },
               {
                 label: "Discovery",
                 title: "Summary became a genuine entry point",
-                desc: "With content snacking, users on Summary discovered videos, reports, and stats they would never have found by browsing tabs alone.",
+                desc: "Content snacking surfaced videos, reports, and stats users would've never found browsing tabs alone.",
               },
               {
                 label: "System",
                 title: "A framework for every future feature",
-                desc: "Match states give the team a clear answer for every future tab request. The page can now absorb new features without collapsing.",
+                desc: "Match states now answer every new tab request — the page can grow without collapsing again.",
               },
             ].map((card, i) => {
               const corners = ["", "", "md:rounded-bl-xl", "md:rounded-br-xl"];
