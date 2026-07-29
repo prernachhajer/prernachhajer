@@ -499,22 +499,22 @@ const CaseStudyMatchPage = () => {
               {
                 where: "Summary tab — discovery hub",
                 title: "Brought the best of every tab to one place",
-                desc: "Report snippet with tap-through. MVP top 5 preview. Points table snapshot. News and video thumbnails. Fan rating banner post-match. Users on Summary discovered content without ever going looking.",
+                desc: "Report, MVP, points table, news, video, fan rating — surfaced on Summary before users ever went looking.",
               },
               {
                 where: "Live tab — inline commentary preview",
                 title: "Last 20 balls surfaced where users already were",
-                desc: "Instead of requiring a tab switch, we showed the last 20 balls inline on the Live tab. Users experienced commentary without needing to find the tab first.",
+                desc: "Commentary shown inline on Live, no tab switch required.",
               },
               {
                 where: "Scorecard — contextual media",
                 title: "Wicket falls. Photo appears. Right there.",
-                desc: "When a dismissal happened, a relevant photo or video appeared inline against that entry. Content tied to the moment — not sitting passively in a media tab users may never visit.",
+                desc: "Media tied to the moment on Scorecard, not buried in a tab users may never visit.",
               },
               {
                 where: "Commentary — embedded key moments",
                 title: "Photos and videos inside the ball itself",
-                desc: "For significant moments — a wicket, a six — media was embedded directly inside the ball-by-ball entry. The feed became richer without a separate tab visit.",
+                desc: "Key moments — a wicket, a six — embedded directly in the commentary feed.",
               },
             ].map((snack, i) => {
               const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
