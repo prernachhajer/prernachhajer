@@ -626,6 +626,50 @@ const CaseStudyMatchPage = () => {
             })}
           </div>
         </div>
+
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fade}
+          className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+        >
+          Trade-offs we accepted
+        </motion.p>
+        <div className="grid md:grid-cols-3 gap-0.5">
+          {[
+            {
+              num: "01",
+              title: "Tab names can no longer describe everything inside them",
+            },
+            {
+              num: "02",
+              title: "The sub-tab toggle adds a step some users won't notice they need",
+            },
+            {
+              num: "03",
+              title: "Playing XI is no longer a destination of its own",
+            },
+          ].map((tradeoff, i) => {
+            const corners = ["md:rounded-l-xl", "", "md:rounded-r-xl"];
+            return (
+              <motion.div
+                key={tradeoff.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`${surface.darkCard} p-9 ${corners[i]}`}
+              >
+                <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/50 mb-4">
+                  {tradeoff.num}
+                </p>
+                <h4 className="text-sm font-medium text-background/90 leading-relaxed">{tradeoff.title}</h4>
+              </motion.div>
+            );
+          })}
+        </div>
       </section>
 
       {/* KEY DECISIONS */}
