@@ -301,7 +301,7 @@ const CaseStudyDesignSystem = () => {
           {[
             {
               title: "Leaner system",
-              desc: "Fewer components doing more work. Multi-component structures collapsed into single, well-configured components.",
+              desc: "Multi-component structures collapsed into single, well-configured components.",
               corner: "md:rounded-l-xl",
             },
             {
