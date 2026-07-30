@@ -219,7 +219,6 @@ const CaseStudyMatchPage = () => {
                 Three findings, two problems
               </h3>
             </div>
-            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>03 findings</span>
           </motion.div>
 
           <div className="flex flex-col">
@@ -474,6 +473,62 @@ const CaseStudyMatchPage = () => {
                 </motion.div>
               );
             })}
+          </div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                num: "01",
+                title: "Content needs change with match state",
+                desc: "What users want pre-match — squads, preview, fantasy — differs from what they need live or post-match. One static structure served none of these moments well.",
+                tag: "TAB OVERLOAD",
+              },
+              {
+                num: "02",
+                title: "Users couldn't see what other tabs held",
+                desc: "High-value content went ignored simply because it couldn't be seen.",
+                tag: "Discovery gap",
+              },
+              {
+                num: "03",
+                title: "Peak complexity at the worst moment",
+                desc: "12 tabs during a live match — exactly when users are most time-pressured and need the least friction.",
+                tag: "TAB OVERLOAD",
+              },
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+              >
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
+                    {insight.tag}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           <motion.p
