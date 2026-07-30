@@ -258,7 +258,7 @@ const CaseStudyCricinfo = () => {
               {
                 num: "01",
                 title: "The homepage was just the entry point to the match pages.",
-                desc: "Users landed on the homepage, glanced at the scorecard then moved to the match page. The homepage was just the entry point to get to the match.",
+                desc: "Users landed on the homepage, glanced at the scorecard, then moved straight to the match page. Nothing else on the homepage held their attention long enough to change that.",
                 tag: "ENTRY POINT",
               },
               {
