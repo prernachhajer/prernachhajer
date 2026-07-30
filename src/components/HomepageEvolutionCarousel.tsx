@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Maximize2 } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 
 import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
 import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
