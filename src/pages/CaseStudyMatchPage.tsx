@@ -280,9 +280,9 @@ const CaseStudyMatchPage = () => {
       </Section>
 
       {/* 04 — SOLUTION */}
-      <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
+      <section className={`${spacing.sectionGap} ${layout.px} ${surface.light}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>{cleanLabel("04 — Solution: Two gaps. Two fixes")}</SectionLabel>
+          <SectionLabel>{cleanLabel("04 — Solution: Two gaps. Two fixes")}</SectionLabel>
 
           {/* Intro */}
 
@@ -292,15 +292,15 @@ const CaseStudyMatchPage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-12"
+              className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 1. Match state-based tab structure
               </h2>
-              <p className="text-sm sentencecase text-background/75 leading-relaxed">
+              <p className="text-sm sentencecase text-foreground/75 leading-relaxed">
                 Too many tabs → restructured around match state, so users see only what's relevant now.
               </p>
             </motion.p>
@@ -312,7 +312,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium mb-4"
           >
             Solution 1 — Match state-based tab structure
           </motion.p> */}
@@ -377,16 +377,16 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.darkCard} overflow-hidden ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 3 ? "md:rounded-r-xl" : ""}`}
+                className={`${surface.card} overflow-hidden ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 3 ? "md:rounded-r-xl" : ""}`}
               >
-                <div className="px-7 pt-6 pb-4 border-b border-background/5">
+                <div className="px-7 pt-6 pb-4 border-b border-foreground/5">
                   <p
                     className="text-xl text-primary font-normal leading-none mb-1"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {state.name}
                   </p>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/85">
                     {state.count}
                   </p>
                 </div>
@@ -397,7 +397,7 @@ const CaseStudyMatchPage = () => {
                     return (
                       <div
                         key={ti}
-                        className={`text-xs py-2 border-b border-background/5 last:border-b-0 ${bold ? "text-background/85 font-medium" : "text-background/90"}`}
+                        className={`text-xs py-2 border-b border-foreground/5 last:border-b-0 ${bold ? "text-foreground/85 font-medium" : "text-foreground/90"}`}
                       >
                         {text}
                       </div>
@@ -429,7 +429,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-4"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium  mt-4"
           >
             Design Decisions
           </motion.p>
@@ -466,11 +466,11 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
-                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
-                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{group.desc}</p>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
+                  <h4 className="text-sm font-medium text-foreground/90 mb-2">{group.title}</h4>
+                  <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{group.desc}</p>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/85 mt-4 pt-4 border-t border-foreground/10">
                     {group.label}
                   </p>
                 </motion.div>
@@ -483,7 +483,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium mb-4 mt-16"
           >
             Trade-offs we accepted
           </motion.p>
@@ -512,12 +512,12 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/50 mb-4">
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
                   </p>
-                  <h4 className="text-sm font-medium text-background/90 leading-relaxed">{tradeoff.title}</h4>
+                  <h4 className="text-sm font-medium text-foreground/90 leading-relaxed">{tradeoff.title}</h4>
                 </motion.div>
               );
             })}
@@ -525,7 +525,7 @@ const CaseStudyMatchPage = () => {
 
 
           {/* Full separator between Solution 1 and Solution 2 */}
-          <hr className="border-t border-background/20 my-16" />
+          <hr className="border-t border-foreground/20 my-16" />
 
           {/* Solution 2 — Cross-tab content snacking */}
           {/* <motion.p
@@ -533,7 +533,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium mb-4 mt-16"
           >
             Solution 2 — Cross-tab content snacking
           </motion.p> */}
@@ -545,15 +545,15 @@ const CaseStudyMatchPage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mt-28 mb-12"
+              className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mt-28 mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 2. Cross-tab content snacking
               </h2>
-              <p className="text-sm sentencecase text-background/75 leading-relaxed">
+              <p className="text-sm sentencecase text-foreground/75 leading-relaxed">
                 Buried content → cross-tab previews, so users discover other tabs without leaving the one they're on.
               </p>
             </motion.p>
@@ -579,7 +579,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-14 mb-8"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium  mt-14 mb-8"
           >
             Design Decisions
           </motion.p>
@@ -616,11 +616,11 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
-                  <h4 className="text-sm font-medium text-background/90 mb-2">{snack.title}</h4>
-                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{snack.desc}</p>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
+                  <h4 className="text-sm font-medium text-foreground/90 mb-2">{snack.title}</h4>
+                  <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{snack.desc}</p>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/85 mt-4 pt-4 border-t border-foreground/10">
                     {snack.where}
                   </p>
                 </motion.div>
@@ -634,7 +634,7 @@ const CaseStudyMatchPage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+          className="text-[0.625rem] tracking-[0.14em] uppercase text-foreground/75 font-medium mb-4 mt-16"
         >
           Trade-offs we accepted
         </motion.p>
@@ -662,12 +662,12 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.darkCard} p-9 ${corners[i]}`}
+                className={`${surface.card} p-9 ${corners[i]}`}
               >
-                <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/50 mb-4">
+                <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                   {tradeoff.num}
                 </p>
-                <h4 className="text-sm font-medium text-background/90 leading-relaxed">{tradeoff.title}</h4>
+                <h4 className="text-sm font-medium text-foreground/90 leading-relaxed">{tradeoff.title}</h4>
               </motion.div>
             );
           })}
