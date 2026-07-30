@@ -476,9 +476,8 @@ const CaseStudyMatchPage = () => {
                 </motion.div>
               );
             })}
-          </div>
 
-          <motion.p
+            <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -521,6 +520,12 @@ const CaseStudyMatchPage = () => {
               );
             })}
           </div>
+
+            
+          </div>
+
+        </div>
+      </section>
 
           {/* Full separator between Solution 1 and Solution 2 */}
           <hr className="border-t border-background/20 my-16" />
