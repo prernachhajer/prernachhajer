@@ -313,7 +313,7 @@ const CaseStudyMatchPage = () => {
           >
             Solution 1
             <h2
-              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-4 text-background/80 leading-tight"
+              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-4 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
               Match state-based tab structure
