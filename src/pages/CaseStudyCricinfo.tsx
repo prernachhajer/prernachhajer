@@ -560,7 +560,7 @@ const CaseStudyCricinfo = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10`}
+                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
@@ -574,8 +574,7 @@ const CaseStudyCricinfo = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
-                  <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
+                  <p className="text-xs text-background/75 ">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
