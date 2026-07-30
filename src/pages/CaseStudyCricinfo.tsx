@@ -678,7 +678,7 @@ const CaseStudyCricinfo = () => {
               <span
                 className={`inline-block text-[0.625rem] font-mono tracking-[0.2em] uppercase text-primary bg-primary/10 border border-primary/20 rounded px-3 py-1.5 mb-4`}
               >
-                The Decision · 2021–2026
+                THE DECISION · 2022–2026
               </span>
               <h2
                 className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-foreground leading-tight"
@@ -690,15 +690,15 @@ const CaseStudyCricinfo = () => {
               </h2>
             </div>
             <span className="inline-flex items-center gap-2 text-[0.6562rem] font-mono tracking-[0.07em] text-[hsl(152,60%,32%)] bg-[hsl(152,60%,95%)] border border-[hsl(152,48%,80%)] rounded-full px-4 py-2 mt-1">
-              ✓ Sustained 2021–2026
+              ✓ Sustained 2022–2026
             </span>
           </motion.div>
 
           <div className="flex flex-col gap-8 mb-12">
             {[
               {
-                year: "2021",
-                sub: "HSV",
+                year: "2022",
+                sub: "HSB",
                 img: hsbScreen2021,
                 caption: "The original score strip — highest engagement surface on the page. Retained as-is.",
               },
