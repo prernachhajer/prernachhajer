@@ -429,12 +429,12 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-4"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-4"
           >
             What we did
           </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
+          <div className="grid md:grid-cols-2 gap-0.5 mt-4 mb-10">
             {[
               {
                 title: "Group by what users want, not what we call it",
