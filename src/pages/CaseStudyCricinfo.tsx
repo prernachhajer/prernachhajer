@@ -259,13 +259,13 @@ const CaseStudyCricinfo = () => {
                 num: "01",
                 title: "The homepage was just the entry point to the match pages.",
                 desc: "Users landed on the homepage, glanced at the scorecard then moved to the match page. The homepage was just the entry point to get to the match.",
-                tag: "Reframed the brief",
+                tag: "ENTRY POINT",
               },
               {
                 num: "02",
                 title: "Dense, oversized modules with no clear structure slowed users down",
                 desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights. Right when users needed speed, they had to wade through clutter to find what mattered.",
-                tag: "UX critical",
+                tag: "COMPLEXITY",
               },
               {
                 num: "03",
