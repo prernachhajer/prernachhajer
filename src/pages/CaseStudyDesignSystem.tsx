@@ -761,7 +761,7 @@ const CaseStudyDesignSystem = () => {
                 label: "Component coverage",
                 num: "100+",
                 title: "Component variants documented and shipped",
-                desc: "Dark mode, modular widgets, and native mobile app launch — all built on the system. A complete identity overhaul executed without disrupting shipping velocity.",
+                desc: "Dark mode, modular widgets, and the native mobile app launch — all built on the system, without slowing shipping velocity.",
               },
             ].map((card, i) => (
               <motion.div
