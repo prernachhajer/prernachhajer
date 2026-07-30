@@ -386,7 +386,7 @@ const CaseStudyCricinfo = () => {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
-                year: "2021",
+                year: "2022",
                 title: "Feed-first · Before",
                 dimensions: [
                   {
