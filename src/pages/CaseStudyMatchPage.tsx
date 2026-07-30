@@ -528,13 +528,13 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mt-20 mb-12"
+            className="text-[0.625rem] tracking-[0.14em] border Uppercase text-background/75 font-medium mt-20 mb-12"
           >
             <h2
               className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
-              1. Cross-tab content snacking
+              2. Cross-tab content snacking
             </h2>
             <p className="text-sm sentencecase text-background/75 leading-relaxed">
               Buried content → cross-tab previews, so users discover other tabs without leaving the one they're on.
