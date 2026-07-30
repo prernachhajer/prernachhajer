@@ -429,7 +429,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-4"
           >
             What we did
           </motion.p>
