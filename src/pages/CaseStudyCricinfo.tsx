@@ -574,7 +574,7 @@ const CaseStudyCricinfo = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs text-background/75 ">{card.desc}</p>
+                  <p className="text-xs text-background/75 leading-relaxed ">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
