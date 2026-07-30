@@ -371,8 +371,8 @@ const CaseStudyCricinfo = () => {
           <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
             {[
               {
-                title: "Originated the feed → structured system shift",
-                desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
+                title: "From feed to structured system",
+                desc: "I led the shift from a feed to a structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. It made builds faster, reduced technical debt, and kept iteration consistent over three years.",
               },
             ].map((item, i) => (
               <motion.div
