@@ -529,28 +529,28 @@ const CaseStudyCricinfo = () => {
             variants={fade}
             className="text-sm text-background/75 leading-relaxed mb-8"
           >
-            Led the homepage redesign championing casual users — 80% of traffic — shifting from a match-time utility to
-            a daily destination.
+            Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
+            only during matches into a page worth checking daily.
           </motion.p>
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
                 label: "Bounce rate reduction",
                 num: "~20–30%",
-                title: "Reduced bounce rates across sessions",
-                desc: "By restructuring the homepage around casual user needs — clear zones, surfaced content, and reduced cognitive load — bounce rates dropped significantly.",
+
+                desc: "Clear zones and surfaced content made the page easier to scan. That reduction in cognitive load brought bounce rates down significantly.",
               },
               {
                 label: "Returning user sessions",
                 num: "~15%",
-                title: "More users came back between matches",
-                desc: "Repeat visits from casual users improved as the homepage evolved from a live-score utility into a content-rich destination worth returning to.",
+
+                desc: "As the homepage added more to offer beyond live scores, casual users had more reason to come back — repeat visits increased.",
               },
               {
                 label: "Design system efficiency",
                 num: "3×",
-                title: "Component reuse across the product",
-                desc: "Faster builds, less debt, consistent iterations across three years. Modular components and shared layout logic scaled across formats, tournaments, and teams.",
+
+                desc: "Modular components and shared layout logic scaled across formats, tournaments, and teams — resulting in faster builds and less technical debt over three years.",
               },
             ].map((card, i) => (
               <motion.div
