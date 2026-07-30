@@ -92,7 +92,7 @@ const CaseStudyCricinfo = () => {
                 </div>
               </div>
               <div className="flex-1 overflow-y-auto overflow-x-hidden border border-border border-t-0 rounded-b-xl bg-background min-h-0 scrollbar-thin scrollbar-thumb-border">
-                <img src={desk2021} alt="Cricinfo 2021 desktop homepage" className="w-full h-auto block" />
+                <img src={desk2021} alt="Cricinfo 2022 desktop homepage" className="w-full h-auto block" />
               </div>
             </div>
             {/* Mobile */}
@@ -103,7 +103,7 @@ const CaseStudyCricinfo = () => {
               >
                 <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-[52px] h-[16px] bg-[#0a0a0a] rounded-full z-[2]" />
                 <div className="flex-1 min-h-0 rounded-[26px] overflow-y-auto overflow-x-hidden bg-background mt-0 scrollbar-none">
-                  <img src={mobile2021} alt="Cricinfo 2021 mobile homepage" className="w-full h-auto block" />
+                  <img src={mobile2021} alt="Cricinfo 2022 mobile homepage" className="w-full h-auto block" />
                 </div>
                 <div className="h-[4px] bg-white/20 rounded-full w-[36%] mx-auto mt-[6px] mb-[4px]" />
               </div>
