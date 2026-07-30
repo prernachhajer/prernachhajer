@@ -472,8 +472,8 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            Once a system is in active use, the work changes character. Edge cases appear. Variants never used
-            accumulate. A component that worked for three use cases doesn't quite work for a fourth.
+            Once a system is in active use, edge cases appear and unused variants accumulate. A component that worked
+            for three use cases doesn't quite work for a fourth.
           </motion.p>
         </div>
 
