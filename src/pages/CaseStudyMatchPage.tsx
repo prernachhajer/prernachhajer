@@ -314,7 +314,8 @@ const CaseStudyMatchPage = () => {
           >
             Solution 1 — Match state-based tab structure
           </motion.p> */}
-          <div className="grid md:grid-cols-4 gap-0.5 mt-12">
+
+          <div className="grid md:grid-cols-4 gap-0.5">
             {[
               {
                 name: "Pre-match",
@@ -410,7 +411,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="mt-10 overflow-hidden"
+            className="mt-20 overflow-hidden"
           >
             <img
               src={matchSolutionImg}
