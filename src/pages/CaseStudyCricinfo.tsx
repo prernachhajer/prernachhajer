@@ -395,7 +395,7 @@ const CaseStudyCricinfo = () => {
 
           {/* Timeline */}
 
-          <section>
+          <section className={`${layout.px}`}>
             {/*  <Prose>
           <h2>Three versions. Five years. One surface.</h2>
           <p>
