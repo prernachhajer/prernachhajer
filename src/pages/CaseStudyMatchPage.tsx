@@ -315,51 +315,6 @@ const CaseStudyMatchPage = () => {
             Solution 1 — Match state-based tab structure
           </motion.p>
 
-          {/* Groupings rationale */}
-          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
-            {[
-              {
-                title: "Group by what users want, not what we call it",
-                desc: 'Users just wanted stats — they didn\'t care if it was labeled "Fantasy," "MVP," or "Overs." So we merged them into one tab.',
-                label: "Stats · MVP · Fantasy · Overs → one tab",
-              },
-              {
-                title: "Same user, different depth",
-                desc: "Commentary and live blog readers are the same person wanting more or less detail. One toggle, not two tabs.",
-                label: "Live blog + Commentary → one tab, two sub-tabs",
-              },
-              {
-                title: "One tab that grows with the match",
-                desc: "Squad, playing XI, and scorecard are one tab that updates as the match moves forward.",
-                label: "Squad → Playing XI → Scorecard",
-              },
-              {
-                title: "One intent, one tab",
-                desc: "Browsing news, videos, and photos is one intent — so it's one destination.",
-                label: "News · Videos · Photos → Media",
-              },
-            ].map((group, i) => {
-              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
-              return (
-                <motion.div
-                  key={group.label}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fade}
-                  custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
-                >
-                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
-                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{group.desc}</p>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
-                    {group.label}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
           {/* Solution 1 — Match state-based tab structure */}
           {/* <motion.p
             initial="hidden"
@@ -475,6 +430,51 @@ const CaseStudyMatchPage = () => {
               loading="lazy"
             />
           </motion.div>
+
+          {/* Groupings rationale */}
+          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
+            {[
+              {
+                title: "Group by what users want, not what we call it",
+                desc: 'Users just wanted stats — they didn\'t care if it was labeled "Fantasy," "MVP," or "Overs." So we merged them into one tab.',
+                label: "Stats · MVP · Fantasy · Overs → one tab",
+              },
+              {
+                title: "Same user, different depth",
+                desc: "Commentary and live blog readers are the same person wanting more or less detail. One toggle, not two tabs.",
+                label: "Live blog + Commentary → one tab, two sub-tabs",
+              },
+              {
+                title: "One tab that grows with the match",
+                desc: "Squad, playing XI, and scorecard are one tab that updates as the match moves forward.",
+                label: "Squad → Playing XI → Scorecard",
+              },
+              {
+                title: "One intent, one tab",
+                desc: "Browsing news, videos, and photos is one intent — so it's one destination.",
+                label: "News · Videos · Photos → Media",
+              },
+            ].map((group, i) => {
+              const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
+              return (
+                <motion.div
+                  key={group.label}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                >
+                  <h4 className="text-sm font-medium text-background/90 mb-2">{group.title}</h4>
+                  <p className="text-[0.8125rem] text-background/55 leading-relaxed">{group.desc}</p>
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mt-4 pt-4 border-t border-background/10">
+                    {group.label}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
 
           {/* Solution 2 — Cross-tab content snacking */}
           <motion.p
