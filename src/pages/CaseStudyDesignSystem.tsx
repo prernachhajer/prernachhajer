@@ -748,19 +748,18 @@ const CaseStudyDesignSystem = () => {
               {
                 label: "Design cycle speed",
                 num: "50%",
-                title: "Faster design after system adoption",
+
                 desc: "Teams assembled instead of rebuilding from scratch — a shift measurable within months of adoption.",
               },
               {
                 label: "FIGMA FILES COVERAGE",
                 num: "170+",
-                title: "Figma files powered by the system",
-                desc: "170+ files across the product now pull from one shared foundation — up from one inconsistent library.\"",
+
+                desc: '170+ files across the product now pull from one shared foundation — up from one inconsistent library."',
               },
               {
                 label: "Component coverage",
                 num: "100+",
-                title: "Component variants documented and shipped",
                 desc: "Dark mode, modular widgets, and the native mobile app launch — all built on the system, without slowing shipping velocity.",
               },
             ].map((card, i) => (
