@@ -282,38 +282,20 @@ const CaseStudyMatchPage = () => {
       {/* 04 — SOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>{cleanLabel("04 — Solution")}</SectionLabel>
+          <SectionLabel dark>{cleanLabel("04 — Solution: Two gaps. Two fixes.")}</SectionLabel>
 
           {/* Intro */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="max-w-3xl mx-auto mb-20"
-          >
-            <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-4 text-background/90 leading-tight"
-              style={{ fontFamily: t.displayFont }}
-            >
-              Two gaps. Two fixes.
-            </h2>
-            <p className="text-sm text-background/75 leading-relaxed">
-              Too many tabs → restructured around match state, so users see only what's relevant now. Buried content →
-              cross-tab previews, so users discover other tabs without leaving the one they're on.
-            </p>
-          </motion.div>
 
           <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] text-background/75 font-medium mb-6"
+            className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-6"
           >
             Solution 1
             <h2
-              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-12 text-background/80 leading-relaxed"
+              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-12 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
               Match state-based tab structure
