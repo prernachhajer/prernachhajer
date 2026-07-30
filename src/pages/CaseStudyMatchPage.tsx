@@ -237,7 +237,7 @@ const CaseStudyMatchPage = () => {
               {
                 num: "02",
                 title: "Users couldn't see what other tabs held",
-                desc: "Users on the right tab had no visibility into the others. High-value content went ignored simply because it couldn't be seen.",
+                desc: "High-value content went ignored simply because it couldn't be seen.",
                 tag: "Discovery gap",
               },
               {
