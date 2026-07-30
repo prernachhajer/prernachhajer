@@ -31,9 +31,7 @@ const fade = animation.fade;
 
 // Helper to remove numbers and prefixes from labels
 const cleanLabel = (label: string) => {
-  return typeof label === 'string' 
-    ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "")
-    : label;
+  return typeof label === "string" ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "") : label;
 };
 
 const CaseStudyCricinfo = () => {
@@ -395,6 +393,22 @@ const CaseStudyCricinfo = () => {
             ))}
           </div>
 
+          {/* Timeline */}
+
+          <section className={`${spacing.sectionGap} ${layout.px}`}>
+            {/*  <Prose>
+          <h2>Three versions. Five years. One surface.</h2>
+          <p>
+            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
+            changed, what didn't, and why.
+          </p>
+        </Prose> */}
+
+            <div className={`${layout.container} mx-auto mt-12`}>
+              <HomepageEvolutionCarousel />
+            </div>
+          </section>
+
           {/* Year columns */}
           <div className="grid md:grid-cols-3 gap-4">
             {[
@@ -528,20 +542,6 @@ const CaseStudyCricinfo = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={`${spacing.sectionGap} ${layout.px}`}>
-        <Prose>
-          <h2>Three versions. Five years. One surface.</h2>
-          <p>
-            Each iteration was a response to real data — not a desire to redesign. The carousel below walks through what
-            changed, what didn't, and why.
-          </p>
-        </Prose>
-
-        <div className={`${layout.container} mx-auto mt-12`}>
-          <HomepageEvolutionCarousel />
         </div>
       </section>
 
