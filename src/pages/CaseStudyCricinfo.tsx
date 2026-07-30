@@ -38,14 +38,14 @@ const CaseStudyCricinfo = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
-      <NavCaseStudy period="2021 — 2026" />
+      <NavCaseStudy period="2022 — 2026" />
 
       {/* HERO */}
       <CaseStudyHero
         headline="Why the Homepage"
         headlineAccent="Needed to Change"
         headlineEnd=""
-        tags={["Cricinfo", "Homepage Redesign", "Senior Designer → Lead", "10M+ Users", "2021 — 2026"]}
+        tags={["Cricinfo", "Homepage Redesign", "Senior Designer → Lead", "10M+ Users", "2022 — 2026"]}
         teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
       />
 
@@ -109,7 +109,7 @@ const CaseStudyCricinfo = () => {
               </div>
             </div>
           </motion.div>
-          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Cricinfo Homepage · 2021</p>
+          <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Cricinfo Homepage · 2022</p>
         </div>
       </section>
 
@@ -814,7 +814,7 @@ const CaseStudyCricinfo = () => {
             {
               icon: "◈",
               title: "Personalisation",
-              desc: "On the roadmap since 2021. Infrastructure exists. User need is real. It hasn't shipped because it hasn't been the business priority — an organisational problem, not a design one.",
+              desc: "On the roadmap since 2022. Infrastructure exists. User need is real. It hasn't shipped because it hasn't been the business priority — an organisational problem, not a design one.",
               status: "Sequencing",
               active: false,
               phone: nextPhone3,
@@ -904,7 +904,7 @@ const CaseStudyCricinfo = () => {
         quote="The goal was never to ship a homepage. It was to change"
         quoteAccent="what people do"
         quoteEnd="when they open one."
-        meta="Cricinfo · Homepage Redesign · 2021 — 2026"
+        meta="CRICINFO · HOMEPAGE REDESIGN · 2022 — 2026"
       />
 
       {/* EXPLORE MORE */}
