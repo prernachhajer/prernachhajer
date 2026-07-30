@@ -377,7 +377,7 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.lightCard} overflow-hidden ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 3 ? "md:rounded-r-xl" : ""}`}
+                className={`${surface.card} overflow-hidden ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 3 ? "md:rounded-r-xl" : ""}`}
               >
                 <div className="px-7 pt-6 pb-4 border-b border-foreground/5">
                   <p
@@ -466,7 +466,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.lightCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{group.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{group.desc}</p>
@@ -512,7 +512,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.lightCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
@@ -616,7 +616,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.lightCard} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{snack.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{snack.desc}</p>
@@ -662,7 +662,7 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.lightCard} p-9 ${corners[i]}`}
+                className={`${surface.card} p-9 ${corners[i]}`}
               >
                 <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                   {tradeoff.num}
