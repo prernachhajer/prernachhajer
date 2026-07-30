@@ -292,8 +292,7 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            A year after launch, Figma released component properties. Dozens of separate components could now live
-            inside one well-structured component. We made the decision to rebuild rather than patch.
+            A year in, Figma's new component properties let dozens of separate components live inside one. We rebuilt rather than patched.
           </motion.p>
         </div>
 
@@ -302,17 +301,17 @@ const CaseStudyDesignSystem = () => {
           {[
             {
               title: "Leaner system",
-              desc: "Fewer components doing more work. Complex multi-component structures collapsed into single well-configured components.",
+              desc: "Fewer components doing more work. Multi-component structures collapsed into single, well-configured components.",
               corner: "md:rounded-l-xl",
             },
             {
               title: "Faster Figma",
-              desc: "Performance improved significantly. Less file bloat, faster loading, smoother handoff workflows.",
+              desc: "Better performance — less file bloat, faster loading, smoother handoffs.",
               corner: "",
             },
             {
               title: "Less cognitive load",
-              desc: "Designers spent less time choosing where to start. The library was easier to maintain and easier to hand off.",
+              desc: "Less time spent choosing where to start. Easier to maintain and hand off.",
               corner: "md:rounded-r-xl",
             },
           ].map((card, i) => (
