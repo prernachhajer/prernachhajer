@@ -160,8 +160,50 @@ const HomepageEvolutionCarousel = () => {
           ))}
         </div>
       </div>
+
+      {/* Full size viewer */}
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 gap-0 overflow-hidden flex flex-col">
+          {/* Year carousel on top */}
+          <div className="shrink-0 border-b border-border px-6 py-4 flex items-center justify-center gap-2">
+            {slides.map((s, i) => (
+              <button
+                key={s.year}
+                onClick={() => setActive(i)}
+                className={`px-4 py-2 rounded-full transition-colors text-sm ${
+                  i === active
+                    ? "bg-foreground text-background"
+                    : "bg-muted text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span style={{ fontFamily: "var(--font-display)" }}>{s.year}</span>
+                <span className="ml-2 font-mono text-[0.5625rem] uppercase tracking-[0.14em] opacity-80">
+                  {s.era}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Full images */}
+          <div className="flex-1 min-h-0 overflow-y-auto bg-muted/40 p-4 md:p-8">
+            <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
+              <img
+                src={slide.desktop}
+                alt={`Cricinfo ${slide.year} desktop full view`}
+                className="w-full lg:w-[70%] h-auto rounded-xl border border-border bg-background"
+              />
+              <img
+                src={slide.mobile}
+                alt={`Cricinfo ${slide.year} mobile full view`}
+                className="w-full max-w-[280px] mx-auto lg:mx-0 lg:w-[24%] h-auto rounded-xl border border-border bg-background"
+              />
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
+
 
 export default HomepageEvolutionCarousel;
