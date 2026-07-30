@@ -291,7 +291,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-6"
+            className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-12"
           >
             <h2
               className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
