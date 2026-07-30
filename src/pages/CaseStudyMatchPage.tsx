@@ -231,19 +231,19 @@ const CaseStudyMatchPage = () => {
               {
                 num: "01",
                 title: "Content needs change with match state",
-                desc: "What a user wants pre-match — squads, preview, fantasy — is completely different from what they need live or post-match. One static tab structure served none of these moments well.",
+                desc: "What users want pre-match — squads, preview, fantasy — differs from what they need live or post-match. One static structure served none of these moments well.",
                 tag: "TAB OVERLOAD",
               },
               {
                 num: "02",
                 title: "Users couldn't see what other tabs held",
-                desc: "Even users on the right tab had no visibility into what other tabs contained. High-value content was being ignored not from lack of interest, but lack of discovery.",
+                desc: "Users on the right tab had no visibility into the others. High-value content went ignored simply because it couldn't be seen.",
                 tag: "Discovery gap",
               },
               {
                 num: "03",
                 title: "Peak complexity at the worst moment",
-                desc: "12 tabs during a live match — when users are most time-pressured — is when they need the least friction. The page was hardest to use when it mattered most.",
+                desc: "12 tabs during a live match — exactly when users are most time-pressured and need the least friction.",
                 tag: "TAB OVERLOAD",
               },
             ].map((insight, i) => (
@@ -304,9 +304,8 @@ const CaseStudyMatchPage = () => {
               Two gaps. Two fixes.
             </h2>
             <p className="text-sm text-background/75 leading-relaxed">
-              Too many tabs meant redesigning the structure around match state, so users only see what's relevant to the
-              moment they're in. Buried content meant introducing cross-tab previews, so users can see what's in other
-              tabs without leaving the one they're on.
+              Too many tabs → restructured around match state, so users see only what's relevant now. Buried content →
+              cross-tab previews, so users discover other tabs without leaving the one they're on.
             </p>
           </motion.div>
 
