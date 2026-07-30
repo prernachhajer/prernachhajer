@@ -476,8 +476,9 @@ const CaseStudyMatchPage = () => {
                 </motion.div>
               );
             })}
+          </div>
 
-            <motion.p
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -486,6 +487,7 @@ const CaseStudyMatchPage = () => {
           >
             Trade-offs we accepted
           </motion.p>
+
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
