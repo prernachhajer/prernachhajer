@@ -282,7 +282,7 @@ const CaseStudyMatchPage = () => {
       {/* 04 — SOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>{cleanLabel("04 — Solution: Two gaps. Two fixes.")}</SectionLabel>
+          <SectionLabel dark>{cleanLabel("04 — Solution: Two gaps. Two fixes")}</SectionLabel>
 
           {/* Intro */}
 
@@ -295,12 +295,12 @@ const CaseStudyMatchPage = () => {
           >
             Solution 1
             <h2
-              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-12 text-background/80 leading-relaxed"
+              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-6 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
               Match state-based tab structure
             </h2>
-            <p className="text-sm text-background/75 leading-relaxed">
+            <p className="text-sm sentencecase text-background/75 leading-relaxed">
               Too many tabs → restructured around match state, so users see only what's relevant now.
             </p>
           </motion.p>
