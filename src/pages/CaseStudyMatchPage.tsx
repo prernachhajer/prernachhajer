@@ -286,23 +286,25 @@ const CaseStudyMatchPage = () => {
 
           {/* Intro */}
 
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-12"
-          >
-            <h2
-              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
-              style={{ fontFamily: t.displayFont }}
+          <div className={`${layout.container} mx-auto !max-w-3xl`}>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-12"
             >
-              1. Match state-based tab structure
-            </h2>
-            <p className="text-sm sentencecase text-background/75 leading-relaxed">
-              Too many tabs → restructured around match state, so users see only what's relevant now.
-            </p>
-          </motion.p>
+              <h2
+                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
+                style={{ fontFamily: t.displayFont }}
+              >
+                1. Match state-based tab structure
+              </h2>
+              <p className="text-sm sentencecase text-background/75 leading-relaxed">
+                Too many tabs → restructured around match state, so users see only what's relevant now.
+              </p>
+            </motion.p>
+          </div>
 
           {/* Solution 1 — Match state-based tab structure */}
           {/* <motion.p
