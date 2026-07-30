@@ -483,7 +483,7 @@ const CaseStudyDesignSystem = () => {
               {
                 num: "01",
                 title: "Unused variants were quietly piling up",
-                desc: "Variants that weren't earning their place were cut. The library stayed lean instead of accumulating debt.",
+                desc: "Variants that weren't earning their place were cut, keeping the library lean.",
                 tag: "REMOVE",
               },
               {
