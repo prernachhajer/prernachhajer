@@ -819,9 +819,8 @@ const CaseStudyDesignSystem = () => {
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-3">
           {[
-            "The components are the visible part. What's underneath — the alignment conversations, the decisions about <em>what not to build</em>, the willingness to rebuild what was already working — that's what made it last.",
-
-            "A design system is infrastructure. And <em>infrastructure is only proven under pressure</em>. The 2025 overhaul — a complete identity change — was that pressure. The system held.",
+            "The visible components were the easy part. The alignment conversations and decisions about what not to build mattered more to the system's longevity.",
+            "The 2025 identity overhaul put the system under real pressure for the first time — and it held.",
           ].map((text, i) => (
             <LearningCard key={i} index={i}>
               {text}
