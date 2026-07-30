@@ -241,7 +241,7 @@ const Index = () => {
               style={{ fontFamily: t.displayFont }}
             >
               Case studies
-            </h2> */}
+            </h2>
           </motion.div>
         </div>
 
