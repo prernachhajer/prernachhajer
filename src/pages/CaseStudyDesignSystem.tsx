@@ -371,10 +371,10 @@ const CaseStudyDesignSystem = () => {
       {/* 05 — DOCUMENTATION: PHASE 3 */}
       <Section label="PHASE 3: MAKE IT SELF-SUFFICIENT">
         <Prose>
-          <h2>A system that requires a designer in the room to explain it hasn't fully worked yet.</h2>
+          <h2>Documentation wasn't optional — the system needed to work without a designer in the room.</h2>
           <p>
-            After the rebuild, we invested seriously in documentation. Everything went into ZeroHeight — component
-            usage, token reference, interaction states, guidelines for product and engineering.
+            After the rebuild, we documented everything in ZeroHeight — usage, tokens, interaction states, and
+            guidelines for product and engineering.
           </p>
         </Prose>
 
@@ -392,8 +392,8 @@ const CaseStudyDesignSystem = () => {
               "Where do I even&nbsp;<span className="text-primary italic">find that?</span>"
             </p>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
-              Variants, sizes, usage — it was documented, but locked inside Figma. Hard to find, hard to read, hard to
-              share, and useless to anyone who wasn't a designer opening the file.
+              Variants, sizes, usage — documented, but locked inside Figma. Useless to anyone who wasn't a designer
+              opening the file.
             </p>
           </motion.div>
           <motion.div
