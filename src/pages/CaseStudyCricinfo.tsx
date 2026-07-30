@@ -258,7 +258,7 @@ const CaseStudyCricinfo = () => {
               {
                 num: "01",
                 title: "Live matches are the true entry point",
-                desc: "Users arrived to check scores, understand context, and navigate quickly. If live context wasn't immediate, they dropped off. The homepage is a navigation layer for live sport — not a content destination.",
+                desc: "Users landed on the homepage, glanced at the scorecard then moved to the match page. The homepage was just the entry point to get to the match.",
                 tag: "Reframed the brief",
               },
               {
