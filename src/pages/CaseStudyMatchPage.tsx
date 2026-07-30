@@ -475,8 +475,16 @@ const CaseStudyMatchPage = () => {
             })}
           </div>
 
-          <div className="flex flex-col">
-            <h2> Trade-offs we accepted</h2>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+          >
+            Trade-offs we accepted
+          </motion.p>
+          <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
                 num: "01",
@@ -490,48 +498,27 @@ const CaseStudyMatchPage = () => {
                 num: "03",
                 title: "Playing XI is no longer a destination of its own",
               },
-            ].map((insight, i) => (
-              <motion.div
-                key={insight.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
-              >
-                <p
-                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
-                  style={{ fontFamily: t.displayFont }}
+            ].map((tradeoff, i) => {
+              const corners = ["md:rounded-l-xl", "", "md:rounded-r-xl"];
+              return (
+                <motion.div
+                  key={tradeoff.num}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  className={`${surface.darkCard} p-9 ${corners[i]}`}
                 >
-                  {insight.num}
-                </p>
-                <div>
-                  <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
-                    style={{ fontFamily: t.displayFont }}
-                  >
-                    {insight.title}
-                  </h4>
-                </div>
-                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
-                  <span
-                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
-                  >
-                    {insight.tag}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/50 mb-4">
+                    {tradeoff.num}
+                  </p>
+                  <h4 className="text-sm font-medium text-background/90 leading-relaxed">{tradeoff.title}</h4>
+                </motion.div>
+              );
+            })}
           </div>
 
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
-          ></motion.p>
 
           {/* Solution 2 — Cross-tab content snacking */}
           <motion.p
