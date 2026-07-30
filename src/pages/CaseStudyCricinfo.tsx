@@ -404,7 +404,7 @@ const CaseStudyCricinfo = () => {
           </p>
         </Prose> */}
 
-            <div className={`${layout.container} mx-auto mt-12`}>
+            <div className={`${layout.container} mx-auto mt-2`}>
               <HomepageEvolutionCarousel />
             </div>
           </section>
