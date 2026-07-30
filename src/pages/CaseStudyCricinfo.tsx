@@ -333,7 +333,7 @@ const CaseStudyCricinfo = () => {
             <div className="flex flex-col gap-10 px-[84px]">
               {[
                 {
-                  num: "2021",
+                  num: "2022",
                   title: "Proposed and led the shift from feed to structured system",
                   desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
                 },
