@@ -35,7 +35,7 @@ const HomepageEvolutionCarousel = () => {
         {active > 0 && (
           <button
             onClick={prev}
-            className="absolute left-3 md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-foreground/90 backdrop-blur-sm text-background flex items-center justify-center hover:bg-foreground transition-colors shadow-xl"
+            className="absolute left-3 md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-background/95 backdrop-blur-sm text-foreground flex items-center justify-center hover:bg-background transition-colors shadow-xl"
           >
             <ArrowLeft className="h-4 w-4" />
           </button>
@@ -43,7 +43,7 @@ const HomepageEvolutionCarousel = () => {
         {active < slides.length - 1 && (
           <button
             onClick={next}
-            className="absolute right-3 md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-foreground/90 backdrop-blur-sm text-background flex items-center justify-center hover:bg-foreground transition-colors shadow-xl"
+            className="absolute right-3 md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-background/95 backdrop-blur-sm text-foreground flex items-center justify-center hover:bg-background transition-colors shadow-xl"
           >
             <ArrowRight className="h-4 w-4" />
           </button>
@@ -53,7 +53,7 @@ const HomepageEvolutionCarousel = () => {
         <button
           onClick={() => setOpen(true)}
           aria-label="View full size"
-          className="absolute right-3 top-3 z-20 h-9 px-3 gap-2 rounded-full bg-foreground/90 backdrop-blur-sm text-background flex items-center justify-center hover:bg-foreground transition-colors shadow-lg text-[0.6875rem] font-mono uppercase tracking-[0.1em]"
+          className="absolute right-3 top-3 z-20 h-9 px-3 gap-2 rounded-full bg-background/95 backdrop-blur-sm text-foreground flex items-center justify-center hover:bg-background transition-colors shadow-lg text-[0.6875rem] font-mono uppercase tracking-[0.1em]"
         >
           <Maximize2 className="h-3.5 w-3.5" /> Full size
         </button>
@@ -66,13 +66,13 @@ const HomepageEvolutionCarousel = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-muted/50 rounded-2xl p-5 md:p-8 pb-0 flex gap-6 overflow-hidden border border-border/50"
+            className="bg-background/[0.06] rounded-2xl p-5 md:p-8 pb-0 flex gap-6 overflow-hidden border border-background/15"
             style={{ height: "540px" }}
           >
             {/* Desktop Mockup */}
             <div className="flex-1 min-w-0 flex flex-col h-full">
               {/* Browser Chrome — modern minimal */}
-              <div className="bg-card rounded-t-xl border border-border border-b-0 shrink-0">
+              <div className="bg-background rounded-t-xl border border-background/20 border-b-0 shrink-0">
                 <div className="flex items-center gap-3 px-4 py-3">
                   <div className="flex gap-1.5">
                     <div className="w-[10px] h-[10px] rounded-full bg-[#FF5F57]" />
@@ -89,7 +89,7 @@ const HomepageEvolutionCarousel = () => {
                 </div>
               </div>
               {/* Screen */}
-              <div className="flex-1 overflow-y-auto overflow-x-hidden border border-border border-t-0 rounded-b-xl bg-background min-h-0 scrollbar-thin scrollbar-thumb-border">
+              <div className="flex-1 overflow-y-auto overflow-x-hidden border border-background/20 border-t-0 rounded-b-xl bg-background min-h-0 scrollbar-thin scrollbar-thumb-border">
                 <img src={slide.desktop} alt={`Cricinfo ${slide.year} desktop`} className="w-full h-auto block" />
               </div>
             </div>
@@ -117,9 +117,9 @@ const HomepageEvolutionCarousel = () => {
       <div className="mt-10">
         <div className="flex items-center relative">
           {/* Track */}
-          <div className="absolute top-[5px] left-0 right-0 h-px bg-border" />
+          <div className="absolute top-[5px] left-0 right-0 h-px bg-background/25" />
           <div
-            className="absolute top-[5px] left-0 h-px bg-foreground transition-all duration-500 ease-out"
+            className="absolute top-[5px] left-0 h-px bg-background transition-all duration-500 ease-out"
             style={{ width: `${(active / (slides.length - 1)) * 100}%` }}
           />
           {slides.map((s, i) => (
@@ -131,19 +131,19 @@ const HomepageEvolutionCarousel = () => {
               <div
                 className={`w-[10px] h-[10px] rounded-full border-2 mb-4 transition-all duration-300 ${
                   i === active
-                    ? "bg-foreground border-foreground scale-[1.6]"
+                    ? "bg-background border-background scale-[1.6]"
                     : i < active
-                    ? "bg-foreground border-foreground"
-                    : "bg-background border-border"
+                    ? "bg-background border-background"
+                    : "bg-transparent border-background/40"
                 }`}
               />
               <span
                 className={`transition-all duration-300 tracking-tight ${
                   i === active
-                    ? "text-foreground text-xl font-semibold"
+                    ? "text-background text-xl font-semibold"
                     : i < active
-                    ? "text-muted-foreground text-base"
-                    : "text-muted-foreground/80 text-base"
+                    ? "text-background/75 text-base"
+                    : "text-background/60 text-base"
                 }`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
@@ -151,7 +151,7 @@ const HomepageEvolutionCarousel = () => {
               </span>
               <span
                 className={`text-[0.5625rem] tracking-[0.14em] uppercase mt-1 font-mono transition-colors ${
-                  i === active ? "text-muted-foreground" : "text-muted-foreground/70"
+                  i === active ? "text-background/70" : "text-background/50"
                 }`}
               >
                 {s.era}
