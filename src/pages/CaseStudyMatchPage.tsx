@@ -431,7 +431,7 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-4"
           >
-            What we did
+            Design Decisions
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-0.5 mt-4 mb-10">
@@ -579,7 +579,7 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-14 mb-8"
           >
-            What we did
+            Design Decisions
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-0.5">
