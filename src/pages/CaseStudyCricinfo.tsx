@@ -329,47 +329,22 @@ const CaseStudyCricinfo = () => {
           <SectionLabel dark>Design Evolution</SectionLabel>
 
           {/* Strategic contribution */}
-          <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
-            {[
-              {
-                title: "From feed to structured system",
-                desc: "I led the shift from a feed to a structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. It made builds faster, reduced technical debt, and kept iteration consistent over three years.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="flex gap-6 md:gap-8"
-              >
-                {/*    <span className={`${t.label} text-primary shrink-0 pt-1`}>{String(i + 1).padStart(2, "0")}</span> */}
-                <div>
-                  <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className={`${layout.container} mx-auto`}>
+          <div className={`${layout.container} mx-auto mt-12 mb-16`}>
             <div className="flex flex-col gap-10 px-[84px]">
               {[
                 {
                   num: "01",
-                  title: "Originated the feed → structured system shift",
+                  title: "2021: Proposed and led the shift from feed to structured system",
                   desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
                 },
                 {
                   num: "02",
-                  title: "Made the case before making the design",
+                  title: "2023: Refined with editorial input from [Design Manager] and validation from Product",
                   desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
                 },
                 {
                   num: "03",
-                  title: "Held the line on what already worked",
+                  title: " 2026: Team-wide simplification in response to user feedback — led execution within the existing system",
                   desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
                 },
               ].map((item, i) => (
@@ -390,31 +365,6 @@ const CaseStudyCricinfo = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-
-          <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
-            {[
-              {
-                title: "From feed to structured system",
-                desc: "I led the shift from a feed to a structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. It made builds faster, reduced technical debt, and kept iteration consistent over three years.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="flex gap-6 md:gap-8"
-              >
-                <span className={`${t.label} text-primary shrink-0 pt-1`}>{String(i + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
           {/* Timeline */}
 
