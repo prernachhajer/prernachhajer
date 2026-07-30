@@ -335,17 +335,15 @@ const CaseStudyCricinfo = () => {
                 {
                   num: "2021",
                   title: "Proposed and led the shift from feed to structured system",
-                  desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
                 },
                 {
                   num: "2023",
                   title: "Refined with editorial input from [Design Manager] and validation from Product",
-                  desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
                 },
                 {
                   num: "2026",
-                  title: " Team-wide simplification in response to user feedback — led execution within the existing system",
-                  desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
+                  title:
+                    " Team-wide simplification in response to user feedback — led execution within the existing system",
                 },
               ].map((item, i) => (
                 <motion.div
