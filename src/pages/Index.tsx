@@ -55,21 +55,9 @@ const caseStudies = [
     statLabel: "files in system",
     link: "/case-study/design-system",
   },
+
   {
     num: "03 / 04",
-    company: "ESPN Cricinfo",
-    title: "Quick Reads —",
-    titleEm: "Bite-sized Cricket",
-    desc: "A new content format designed to pull users deeper into stories, faster. Increasing engagement through smart information architecture and editorial thinking.",
-    tags: ["Feature Design", "Content Strategy", "Engagement"],
-    thumbType: "mobile" as const,
-    thumbImage: thumbQuickReads,
-    statNum: "↑",
-    statLabel: "engagement",
-    link: "/case-study/quick-reads",
-  },
-  {
-    num: "04 / 04",
     company: "ESPN Cricinfo",
     title: "Match Page",
     titleEm: "Optimisation",
@@ -81,6 +69,20 @@ const caseStudies = [
     statNum: "10M+",
     statLabel: "daily users",
     link: "/case-study/match-page",
+  },
+
+  {
+    num: "04 / 04",
+    company: "ESPN Cricinfo",
+    title: "Quick Reads —",
+    titleEm: "Bite-sized Cricket",
+    desc: "A new content format designed to pull users deeper into stories, faster. Increasing engagement through smart information architecture and editorial thinking.",
+    tags: ["Feature Design", "Content Strategy", "Engagement"],
+    thumbType: "mobile" as const,
+    thumbImage: thumbQuickReads,
+    statNum: "↑",
+    statLabel: "engagement",
+    link: "/case-study/quick-reads",
   },
 ];
 
