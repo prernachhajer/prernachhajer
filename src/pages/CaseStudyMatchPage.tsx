@@ -232,7 +232,7 @@ const CaseStudyMatchPage = () => {
                 num: "01",
                 title: "Content needs change with match state",
                 desc: "What a user wants pre-match — squads, preview, fantasy — is completely different from what they need live or post-match. One static tab structure served none of these moments well.",
-                tag: "Reframed the brief",
+                tag: "TAB OVERLOAD",
               },
               {
                 num: "02",
@@ -244,7 +244,7 @@ const CaseStudyMatchPage = () => {
                 num: "03",
                 title: "Peak complexity at the worst moment",
                 desc: "12 tabs during a live match — when users are most time-pressured — is when they need the least friction. The page was hardest to use when it mattered most.",
-                tag: "UX critical",
+                tag: "TAB OVERLOAD",
               },
             ].map((insight, i) => (
               <motion.div
