@@ -49,7 +49,7 @@ const CaseStudyCricinfo = () => {
         teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
       />
 
-      {/* THE STARTING POINT — 2021 */}
+      {/* THE STARTING POINT — 2022 */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
         <div className={`${layout.container} mx-auto`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
