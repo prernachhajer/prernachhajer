@@ -572,6 +572,16 @@ const CaseStudyMatchPage = () => {
             />
           </motion.div>
 
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-14"
+          >
+            What we did
+          </motion.p>
+
           <div className="grid md:grid-cols-2 gap-0.5">
             {[
               {
