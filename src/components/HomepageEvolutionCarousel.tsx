@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Maximize2 } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 
 import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
 import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
@@ -10,18 +12,20 @@ import desk2026 from "@/assets/cricinfo-desk-2026.jpg";
 import mobile2026 from "@/assets/cricinfo-mobile-2026.jpg";
 
 const slides = [
-  { year: "2026", era: "Current", desktop: desk2026, mobile: mobile2026 },
-  { year: "2023", era: "Refresh", desktop: desk2023, mobile: mobile2023 },
   { year: "2021", era: "First era", desktop: desk2021, mobile: mobile2021 },
+  { year: "2023", era: "Refresh", desktop: desk2023, mobile: mobile2023 },
+  { year: "2026", era: "Current", desktop: desk2026, mobile: mobile2026 },
 ];
 
 const HomepageEvolutionCarousel = () => {
   const [active, setActive] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const prev = () => setActive((a) => Math.max(0, a - 1));
   const next = () => setActive((a) => Math.min(slides.length - 1, a + 1));
 
   const slide = slides[active];
+
 
   return (
     <div>
@@ -45,7 +49,17 @@ const HomepageEvolutionCarousel = () => {
           </button>
         )}
 
+        {/* Expand */}
+        <button
+          onClick={() => setOpen(true)}
+          aria-label="View full size"
+          className="absolute right-3 top-3 z-20 h-9 px-3 gap-2 rounded-full bg-foreground/90 backdrop-blur-sm text-background flex items-center justify-center hover:bg-foreground transition-colors shadow-lg text-[0.6875rem] font-mono uppercase tracking-[0.1em]"
+        >
+          <Maximize2 className="h-3.5 w-3.5" /> Full size
+        </button>
+
         <AnimatePresence mode="wait">
+
           <motion.div
             key={active}
             initial={{ opacity: 0, y: 12 }}
@@ -146,8 +160,50 @@ const HomepageEvolutionCarousel = () => {
           ))}
         </div>
       </div>
+
+      {/* Full size viewer */}
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 gap-0 overflow-hidden flex flex-col">
+          {/* Year carousel on top */}
+          <div className="shrink-0 border-b border-border px-6 py-4 flex items-center justify-center gap-2">
+            {slides.map((s, i) => (
+              <button
+                key={s.year}
+                onClick={() => setActive(i)}
+                className={`px-4 py-2 rounded-full transition-colors text-sm ${
+                  i === active
+                    ? "bg-foreground text-background"
+                    : "bg-muted text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span style={{ fontFamily: "var(--font-display)" }}>{s.year}</span>
+                <span className="ml-2 font-mono text-[0.5625rem] uppercase tracking-[0.14em] opacity-80">
+                  {s.era}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Full images */}
+          <div className="flex-1 min-h-0 overflow-y-auto bg-muted/40 p-4 md:p-8">
+            <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
+              <img
+                src={slide.desktop}
+                alt={`Cricinfo ${slide.year} desktop full view`}
+                className="w-full lg:w-[70%] h-auto rounded-xl border border-border bg-background"
+              />
+              <img
+                src={slide.mobile}
+                alt={`Cricinfo ${slide.year} mobile full view`}
+                className="w-full max-w-[280px] mx-auto lg:mx-0 lg:w-[24%] h-auto rounded-xl border border-border bg-background"
+              />
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
+
 
 export default HomepageEvolutionCarousel;
