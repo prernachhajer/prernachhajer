@@ -205,7 +205,6 @@ const CaseStudyDesignSystem = () => {
                 The friction, and what it took to launch
               </h3>
             </div>
-            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 LESSONS</span>
           </motion.div>
 
           <div className="flex flex-col">
