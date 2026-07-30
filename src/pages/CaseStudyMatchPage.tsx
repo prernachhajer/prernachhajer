@@ -293,12 +293,11 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] Uppercase text-background/75 font-medium mb-6"
           >
-            Solution 1
             <h2
-              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-6 text-background/80 leading-relaxed"
+              className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
-              Match state-based tab structure
+              1. Match state-based tab structure
             </h2>
             <p className="text-sm sentencecase text-background/75 leading-relaxed">
               Too many tabs → restructured around match state, so users see only what's relevant now.
