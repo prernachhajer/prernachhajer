@@ -339,12 +339,12 @@ const CaseStudyCricinfo = () => {
                 },
                 {
                   num: "2023",
-                  title: "Refined with editorial input from [Design Manager] and validation from Product",
+                  title: "Refined with editorial and validated with product",
                   desc: "Worked closely with the editorial team to define how different content types should surface — match coverage, tournament coverage, and in-depth stories each needed their own placement and hierarchy. Their input shaped how the structure was organized; each iteration was then validated with Product before shipping.",
                 },
                 {
                   num: "2026",
-                  title: " Team-wide simplification in response to user feedback — led execution within the existing system",
+                  title: "Team-wide simplification driven by user feedback",
                   desc: "Reviews were flagging the same issues repeatedly — too dense, cluttered, overwhelming, slow. That feedback drove a team-wide push to simplify: reducing density, adding whitespace, and clarifying typography within the system already in place.",
                 },
               ].map((item, i) => (
