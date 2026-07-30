@@ -322,8 +322,6 @@ const CaseStudyMatchPage = () => {
                 title: "Group by what users want, not what we call it",
                 desc: 'Users just wanted stats — they didn\'t care if it was labeled "Fantasy," "MVP," or "Overs." So we merged them into one tab.',
                 label: "Stats · MVP · Fantasy · Overs → one tab",
-
-                label: "Stats · MVP · Fantasy · Overs → one tab",
               },
               {
                 title: "Same user, different depth",
