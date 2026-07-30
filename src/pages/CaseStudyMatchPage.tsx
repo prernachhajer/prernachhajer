@@ -562,7 +562,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="mt-10 rounded-xl overflow-hidden"
+            className="mt-10 overflow-hidden"
           >
             <img
               src={matchSolution2Img}
@@ -577,7 +577,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-14"
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium  mt-14 mb-8"
           >
             What we did
           </motion.p>
