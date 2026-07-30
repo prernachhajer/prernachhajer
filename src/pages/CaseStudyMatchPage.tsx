@@ -538,8 +538,7 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
           >
-            Trade-offs we accepted Tab names can no longer describe everything inside them The sub-tab toggle adds a
-            step some users won't notice they need Playing XI is no longer a destination of its own
+            Trade-offs we accepted
           </motion.p>
 
           {/* Solution 2 — Cross-tab content snacking */}
