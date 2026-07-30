@@ -276,7 +276,7 @@ const CaseStudyCricinfo = () => {
               {
                 num: "04",
                 title: "Scalability was a system problem",
-                desc: "When something big was happening — a key moment during a live IPL match — the feed's lack of structure made it nearly impossible to surface what mattered most. The system itself was the bottleneck, not the content.",
+                desc: "When something big was happening — a key moment during a live IPL match — the feed's lack of structure made it nearly impossible to surface what mattered most.\u00a0",
                 tag: "Root cause",
               },
             ].map((insight, i) => (
