@@ -301,11 +301,12 @@ const CaseStudyMatchPage = () => {
               className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-4 text-background/90 leading-tight"
               style={{ fontFamily: t.displayFont }}
             >
-              Two solutions, one problem.
+              Two gaps. Two fixes.
             </h2>
             <p className="text-sm text-background/75 leading-relaxed">
-              First: redesign the tab structure around match states so users only see what's relevant. Second: bring
-              content previews to where users already are, so they discover what they'd otherwise miss.
+              Too many tabs meant redesigning the structure around match state, so users only see what's relevant to the
+              moment they're in. Buried content meant introducing cross-tab previews, so users can see what's in other
+              tabs without leaving the one they're on.
             </p>
           </motion.div>
 
