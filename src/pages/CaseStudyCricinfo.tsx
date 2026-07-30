@@ -395,7 +395,7 @@ const CaseStudyCricinfo = () => {
 
           {/* Timeline */}
 
-          <section className={`${layout.py}`}>
+          <section className={`${spacing.sectionGap}`}>
             {/*  <Prose>
           <h2>Three versions. Five years. One surface.</h2>
           <p>
