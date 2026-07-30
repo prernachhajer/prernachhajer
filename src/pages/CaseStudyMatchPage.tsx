@@ -491,22 +491,22 @@ const CaseStudyMatchPage = () => {
               {
                 where: "Summary tab — discovery hub",
                 title: "Brought the best of every tab to one place",
-                desc: "Report, MVP, points table, news, video, fan rating — surfaced on Summary before users ever went looking.",
+                desc: "Report, MVP, points table, news, video, fan rating — all shown on Summary before users had to go looking.",
               },
               {
                 where: "Live tab — inline commentary preview",
-                title: "Last 20 balls surfaced where users already were",
-                desc: "Commentary shown inline on Live, no tab switch required.",
+                title: "Commentary, right where users already are",
+                desc: "No need to switch tabs — the last 20 balls of commentary show up inline on Live tab.",
               },
               {
                 where: "Scorecard — contextual media",
                 title: "Wicket falls. Photo appears. Right there.",
-                desc: "Media tied to the moment on Scorecard, not buried in a tab users may never visit.",
+                desc: "Media appears on Scorecard tied to the moment — not buried in a tab users might never open.",
               },
               {
                 where: "Commentary — embedded key moments",
                 title: "Photos and videos inside the ball itself",
-                desc: "Key moments — a wicket, a six — embedded directly in the commentary feed.",
+                desc: "A wicket or a six — photos and videos show up directly inside the commentary, no extra tap.",
               },
             ].map((snack, i) => {
               const corners = ["md:rounded-tl-xl", "md:rounded-tr-xl", "md:rounded-bl-xl", "md:rounded-br-xl"];
