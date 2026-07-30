@@ -476,24 +476,19 @@ const CaseStudyMatchPage = () => {
           </div>
 
           <div className="flex flex-col">
+            <h2> Trade-offs we accepted</h2>
             {[
               {
                 num: "01",
                 title: "Tab names can no longer describe everything inside them",
-                desc: "What users want pre-match — squads, preview, fantasy — differs from what they need live or post-match. One static structure served none of these moments well.",
-                tag: "TAB OVERLOAD",
               },
               {
                 num: "02",
                 title: "The sub-tab toggle adds a step some users won't notice they need",
-                desc: "High-value content went ignored simply because it couldn't be seen.",
-                tag: "Discovery gap",
               },
               {
                 num: "03",
                 title: "Playing XI is no longer a destination of its own",
-                desc: "12 tabs during a live match — exactly when users are most time-pressured and need the least friction.",
-                tag: "TAB OVERLOAD",
               },
             ].map((insight, i) => (
               <motion.div
@@ -518,7 +513,6 @@ const CaseStudyMatchPage = () => {
                   >
                     {insight.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
                 </div>
                 <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
                   <span
@@ -537,9 +531,7 @@ const CaseStudyMatchPage = () => {
             viewport={{ once: true }}
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
-          >
-            Trade-offs we accepted
-          </motion.p>
+          ></motion.p>
 
           {/* Solution 2 — Cross-tab content snacking */}
           <motion.p
