@@ -815,8 +815,7 @@ const CaseStudyDesignSystem = () => {
           className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
-          I joined this project as a Senior Product Designer. I left it thinking differently about what design actually
-          is.
+          Five years on this project changed how I think about what design work actually involves
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-3">
           {[
