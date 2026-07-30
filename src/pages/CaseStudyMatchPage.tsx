@@ -220,7 +220,7 @@ const CaseStudyMatchPage = () => {
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                Three findings that reframed the match page.
+                Three findings, two problems
               </h3>
             </div>
             <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>03 findings</span>
