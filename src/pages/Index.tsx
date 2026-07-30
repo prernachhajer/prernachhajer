@@ -141,9 +141,7 @@ const Index = () => {
         <div className={`${wrapCls} flex flex-col justify-between h-full py-6 md:py-8 w-full`}>
           <div>
             <motion.div initial="hidden" animate="visible" variants={fade} className="mb-4 md:mb-6">
-              <span
-                className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]"
-              >
+              <span className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]">
                 <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
                 open to design manager roles
               </span>
@@ -172,15 +170,30 @@ const Index = () => {
               className="flex flex-wrap gap-8 md:gap-12 pt-6 md:pt-8"
             >
               <div>
-                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>3.4 → 4.5</p>
+                <p
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  3.4 → 4.5
+                </p>
                 <p className="text-[0.75rem] text-muted-foreground mt-1">app rating</p>
               </div>
               <div>
-                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>100M+</p>
+                <p
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  100M+
+                </p>
                 <p className="text-[0.75rem] text-muted-foreground mt-1">monthly traffic</p>
               </div>
               <div>
-                <p className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]" style={{ fontFamily: t.displayFont }}>12 years</p>
+                <p
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  12 years
+                </p>
                 <p className="text-[0.75rem] text-muted-foreground mt-1">building and leading design</p>
               </div>
             </motion.div>
@@ -194,7 +207,8 @@ const Index = () => {
             className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end pt-6 md:pt-8 border-t border-border"
           >
             <p className="text-[0.875rem] leading-[1.7] text-muted-foreground font-light max-w-[520px] whitespace-pre-line">
-              From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
+              From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped
+              work that moved real numbers. Now applying that same rigor to AI-assisted design.
             </p>
             <div className="flex gap-3 flex-wrap shrink-0">
               <button
@@ -218,10 +232,10 @@ const Index = () => {
       <section id="work" className="border-t border-border">
         <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
+            {/*    <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
               Selected Work
-            </div>
+            </div> */}
             <h2
               className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
               style={{ fontFamily: t.displayFont }}
@@ -440,13 +454,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(32px,4vw,96px)]">
             {/* Left: headline + bio */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              className=""
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               <h2
                 className="text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
