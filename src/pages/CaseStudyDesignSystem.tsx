@@ -392,8 +392,8 @@ const CaseStudyDesignSystem = () => {
               "Where do I even&nbsp;<span className="text-primary italic">find that?</span>"
             </p>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
-              Variants, sizes, usage — it was documented, but locked inside Figma. Hard to find, hard to read, hard to
-              share, and useless to anyone who wasn't a designer opening the file.
+              Variants, sizes, usage — documented, but locked inside Figma. Useless to anyone who wasn't a designer
+              opening the file.
             </p>
           </motion.div>
           <motion.div
