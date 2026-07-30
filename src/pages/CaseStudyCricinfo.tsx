@@ -263,20 +263,20 @@ const CaseStudyCricinfo = () => {
               },
               {
                 num: "02",
-                title: "Complexity peaked at the worst moment",
-                desc: "During live matches — peak traffic — competing modules, weak hierarchy, and high density created cognitive overload exactly when speed mattered most.",
+                title: "Dense, oversized modules with no clear structure slowed users down",
+                desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights into dense, oversized modules with no clear structure. Right when users needed speed, they had to wade through clutter just to find what mattered.",
                 tag: "UX critical",
               },
               {
                 num: "03",
                 title: "Three user types, one surface",
-                desc: "Casual users wanted quick updates. Content consumers wanted stories. Power users wanted stats. Serving all three from one layout made personalisation critical — but hard to prioritise.",
+                desc: "With no structure, prioritizing content per user was hard — casual users wanted quick updates, content consumers wanted stories, power users wanted stats.\u00a0",
                 tag: "Strategic tension",
               },
               {
                 num: "04",
                 title: "Scalability was a system problem",
-                desc: "Non-modular architecture made every new tournament or content type a high-effort rebuild. The problem wasn't content — it was system design bottlenecking every redesign before it started.",
+                desc: "When something big was happening — a key moment during a live IPL match — the feed's lack of structure made it nearly impossible to surface what mattered most. The system itself was the bottleneck, not the content.",
                 tag: "Root cause",
               },
             ].map((insight, i) => (
