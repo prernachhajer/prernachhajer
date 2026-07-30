@@ -197,7 +197,7 @@ const CaseStudyMatchPage = () => {
       {/* 03 — INSIGHT */}
       <Section label={cleanLabel("03 — Insight")}>
         <Prose>
-          <h2>Two gaps, not one.</h2>
+          {/*  <h2>Two gaps, not one.</h2> */}
           <p>
             Looking at the analytics and user feedback, two distinct problems emerged — and they needed separate
             solutions.
