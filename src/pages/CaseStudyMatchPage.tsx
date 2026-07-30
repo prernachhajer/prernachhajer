@@ -534,10 +534,10 @@ const CaseStudyMatchPage = () => {
               className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
-              1. Match state-based tab structure
+              1. Cross-tab content snacking
             </h2>
             <p className="text-sm sentencecase text-background/75 leading-relaxed">
-              Too many tabs → restructured around match state, so users see only what's relevant now.
+              Buried content → cross-tab previews, so users discover other tabs without leaving the one they're on.
             </p>
           </motion.p>
 
