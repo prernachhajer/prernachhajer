@@ -749,7 +749,7 @@ const CaseStudyDesignSystem = () => {
                 label: "Design cycle speed",
                 num: "50%",
                 title: "Faster design after system adoption",
-                desc: "Teams weren't rebuilding from scratch. They were assembling. The velocity shift was measurable within months of full adoption.",
+                desc: "Teams assembled instead of rebuilding from scratch — a shift measurable within months of adoption.",
               },
               {
                 label: "FIGMA FILES COVERAGE",
