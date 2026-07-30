@@ -315,11 +315,11 @@ const CaseStudyCricinfo = () => {
         </div>
       </Section>
 
-      {/* 04 — DESIGN EVOLUTION —
+      {/* 04 — DESIGN EVOLUTION — */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>04 — Design Evolution</SectionLabel>
-        </div> Carousel */}
+        </div> Carousel 
 
       {/* MY CONTRIBUTION */}
       {<Section label="04 — Design Evolution">
