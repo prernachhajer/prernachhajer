@@ -292,7 +292,7 @@ const CaseStudyQuickReads = () => {
           <SectionLabel>DESIGN STRATEGY</SectionLabel>
         </div>
         <Prose>
-          <h2>Speed-first. But never at the cost of credibility.</h2>
+          <h2 className="hidden">Speed-first. But never at the cost of credibility.</h2>
           <p>
             Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
             feel like cricinfo, just lighter.
