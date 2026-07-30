@@ -49,7 +49,17 @@ const HomepageEvolutionCarousel = () => {
           </button>
         )}
 
+        {/* Expand */}
+        <button
+          onClick={() => setOpen(true)}
+          aria-label="View full size"
+          className="absolute right-3 top-3 z-20 h-9 px-3 gap-2 rounded-full bg-foreground/90 backdrop-blur-sm text-background flex items-center justify-center hover:bg-foreground transition-colors shadow-lg text-[0.6875rem] font-mono uppercase tracking-[0.1em]"
+        >
+          <Maximize2 className="h-3.5 w-3.5" /> Full size
+        </button>
+
         <AnimatePresence mode="wait">
+
           <motion.div
             key={active}
             initial={{ opacity: 0, y: 12 }}
