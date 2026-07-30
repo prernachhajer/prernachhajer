@@ -361,9 +361,8 @@ const CaseStudyDesignSystem = () => {
           className="mt-8"
         >
           <PullQuote dark>
-            Rebuilding good work to make it better requires a specific discipline. Most teams patch and move on. Going
-            back in means accepting that the first version was right for its time — and this version needs to be right
-            for now.
+            The first version was right for its time. This one needed to be right for now — that's why we rebuilt
+            instead of patching.
           </PullQuote>
         </motion.div>
       </DarkSection>
