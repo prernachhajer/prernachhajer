@@ -309,7 +309,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-6"
+            className="text-[0.625rem] tracking-[0.14em] text-background/75 font-medium mb-6"
           >
             Solution 1
             <h2
@@ -318,9 +318,8 @@ const CaseStudyMatchPage = () => {
             >
               Match state-based tab structure
             </h2>
-            <p className="text-sm text-background/75 leading-relaxed mt-4">
-              Too many tabs → restructured around match state, so users see only what's relevant now. Buried content →
-              cross-tab previews, so users discover other tabs without leaving the one they're on.
+            <p className="text-sm text-background/75 leading-relaxed">
+              Too many tabs → restructured around match state, so users see only what's relevant now.
             </p>
           </motion.p>
 
