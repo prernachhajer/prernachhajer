@@ -312,6 +312,12 @@ const CaseStudyMatchPage = () => {
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
           >
             Solution 1 — Match state-based tab structure
+            <h2
+              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-4 text-background/90 leading-tight"
+              style={{ fontFamily: t.displayFont }}
+            >
+              Solution 1 — Match state-based tab structure
+            </h2>
           </motion.p>
 
           {/* Solution 1 — Match state-based tab structure */}
