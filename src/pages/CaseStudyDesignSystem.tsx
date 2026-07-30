@@ -604,7 +604,7 @@ const CaseStudyDesignSystem = () => {
             {[
               {
                 label: "THE TRIGGER",
-                text: "Reading is central to what Cricinfo does, and the existing font wasn't serving that experience well. A technical constraint made it harder: reducing app size meant no downloadable font family.",
+                text: "Reducing app size meant we could no longer ship a downloadable font family — so we needed a new typography approach that didn't rely on custom font files.",
               },
               {
                 label: "THE PROCESS",
