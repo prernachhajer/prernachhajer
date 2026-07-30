@@ -335,17 +335,17 @@ const CaseStudyCricinfo = () => {
                 {
                   num: "2022",
                   title: "Proposed and led the shift from feed to structured system",
-                  desc: "I led the shift from a feed to a structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. It made builds faster, reduced technical debt, and kept iteration consistent over three years.",
+                  desc: "I proposed moving away from the chronological feed and led the shift to a structured system — defining clear zones, modular components, and shared layout logic that could scale across formats and tournaments instead of being rebuilt each time.",
                 },
                 {
                   num: "2023",
                   title: "Refined with editorial input from [Design Manager] and validation from Product",
-                  desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
+                  desc: "Worked closely with the editorial team to define how different content types should surface — match coverage, tournament coverage, and in-depth stories each needed their own placement and hierarchy. Their input shaped how the structure was organized; each iteration was then validated with Product before shipping.",
                 },
                 {
                   num: "2026",
                   title: " Team-wide simplification in response to user feedback — led execution within the existing system",
-                  desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
+                  desc: "Reviews were flagging the same issues repeatedly — too dense, cluttered, overwhelming, slow. That feedback drove a team-wide push to simplify: reducing density, adding whitespace, and clarifying typography within the system already in place.",
                 },
               ].map((item, i) => (
                 <motion.div
