@@ -479,19 +479,19 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 num: "01",
-                title: "Content needs change with match state",
+                title: "Tab names can no longer describe everything inside them",
                 desc: "What users want pre-match — squads, preview, fantasy — differs from what they need live or post-match. One static structure served none of these moments well.",
                 tag: "TAB OVERLOAD",
               },
               {
                 num: "02",
-                title: "Users couldn't see what other tabs held",
+                title: "The sub-tab toggle adds a step some users won't notice they need",
                 desc: "High-value content went ignored simply because it couldn't be seen.",
                 tag: "Discovery gap",
               },
               {
                 num: "03",
-                title: "Peak complexity at the worst moment",
+                title: "Playing XI is no longer a destination of its own",
                 desc: "12 tabs during a live match — exactly when users are most time-pressured and need the least friction.",
                 tag: "TAB OVERLOAD",
               },
@@ -538,8 +538,7 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
           >
-            Trade-offs we accepted Tab names can no longer describe everything inside them The sub-tab toggle adds a
-            step some users won't notice they need Playing XI is no longer a destination of its own
+            Trade-offs we accepted
           </motion.p>
 
           {/* Solution 2 — Cross-tab content snacking */}
