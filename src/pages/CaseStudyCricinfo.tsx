@@ -322,7 +322,7 @@ const CaseStudyCricinfo = () => {
         </div> Carousel */}
 
       {/* MY CONTRIBUTION */}
-      {/*   <Section label="04 — Design Evolution">
+      {<Section label="04 — Design Evolution">
         <div className={`${layout.container} mx-auto`}>
           <div className="flex flex-col gap-10 px-[84px]">
             {[
@@ -360,7 +360,7 @@ const CaseStudyCricinfo = () => {
             ))}
           </div>
         </div>
-      </Section> */}
+      </Section> 
 
       {/* DESIGN EVOLUTION — BEFORE VS AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
@@ -396,7 +396,7 @@ const CaseStudyCricinfo = () => {
           <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
             {[
               {
-                title: "2021: \"Proposed and led the shift from feed to structured system\"",
+                title: "From feed to structured system",
                 desc: "I led the shift from a feed to a structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. It made builds faster, reduced technical debt, and kept iteration consistent over three years.",
               },
             ].map((item, i) => (
