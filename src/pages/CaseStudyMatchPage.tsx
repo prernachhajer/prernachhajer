@@ -314,7 +314,7 @@ const CaseStudyMatchPage = () => {
           >
             Solution 1 — Match state-based tab structure
           </motion.p> */}
-          <div className="grid md:grid-cols-4 gap-0.5 mt-4">
+          <div className="grid md:grid-cols-4 gap-0.5 mt-12">
             {[
               {
                 name: "Pre-match",
