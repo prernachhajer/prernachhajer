@@ -523,11 +523,6 @@ const CaseStudyMatchPage = () => {
             })}
           </div>
 
-            
-          </div>
-
-        </div>
-      </section>
 
           {/* Full separator between Solution 1 and Solution 2 */}
           <hr className="border-t border-background/20 my-16" />
