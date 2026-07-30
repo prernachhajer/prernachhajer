@@ -143,7 +143,7 @@ const Index = () => {
             <motion.div initial="hidden" animate="visible" variants={fade} className="mb-4 md:mb-6">
               <span className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]">
                 <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
-                open to design manager roles
+                open to design lead roles
               </span>
             </motion.div>
 
