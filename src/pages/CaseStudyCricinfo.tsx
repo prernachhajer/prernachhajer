@@ -315,52 +315,13 @@ const CaseStudyCricinfo = () => {
         </div>
       </Section>
 
-      {/* 04 — DESIGN EVOLUTION — */}
+      {/* 04 — DESIGN EVOLUTION —
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>04 — Design Evolution</SectionLabel>
-        </div> Carousel 
+        </div> Carousel */}
 
       {/* MY CONTRIBUTION */}
-      {<Section label="04 — Design Evolution">
-        <div className={`${layout.container} mx-auto`}>
-          <div className="flex flex-col gap-10 px-[84px]">
-            {[
-              {
-                num: "01",
-                title: "Originated the feed → structured system shift",
-                desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
-              },
-              {
-                num: "02",
-                title: "Made the case before making the design",
-                desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
-              },
-              {
-                num: "03",
-                title: "Held the line on what already worked",
-                desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className="flex gap-6 md:gap-8"
-              >
-                <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
-                <div>
-                  <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section> 
 
       {/* DESIGN EVOLUTION — BEFORE VS AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
@@ -391,6 +352,44 @@ const CaseStudyCricinfo = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className={`${layout.container} mx-auto`}>
+            <div className="flex flex-col gap-10 px-[84px]">
+              {[
+                {
+                  num: "01",
+                  title: "Originated the feed → structured system shift",
+                  desc: "The core strategic call. I led the shift from feed → structured system — defining clear zones, modular components, and shared layout logic that scaled across formats, tournaments, and teams. The impact wasn't just visual: faster builds, less debt, consistent iterations across three years.",
+                },
+                {
+                  num: "02",
+                  title: "Made the case before making the design",
+                  desc: "Stakeholders, product, editorial — none of them saw the problem. Traffic was fine. Nothing looked broken. I built the research argument for a ceiling we hadn't hit yet. It landed. That's the part I'm most proud of — not the layout, but getting the problem recognised.",
+                },
+                {
+                  num: "03",
+                  title: "Held the line on what already worked",
+                  desc: "The live score strip (HSB) was the highest-utility surface on the page. Across all three redesigns, we protected it from scope creep. It remained the strongest engagement anchor every time. Knowing what not to redesign is as important as knowing what to change.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  className="flex gap-6 md:gap-8"
+                >
+                  <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
+                  <div>
+                    <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-col gap-10 px-[84px] mt-12 mb-16">
