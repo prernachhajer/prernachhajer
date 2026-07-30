@@ -676,8 +676,9 @@ const CaseStudyMatchPage = () => {
           })}
         </div>
       </section>
+            
 
-      {/* KEY DECISIONS */}
+      {/* KEY DECISIONS 
       <Section label={cleanLabel("05 — Design Decisions")}>
         <Prose>
           <h2>The groupings that needed justification.</h2>
@@ -760,12 +761,12 @@ const CaseStudyMatchPage = () => {
           </motion.div>
         ))}
         <div className={`${layout.container} mx-auto border-t border-border`} />
-      </Section>
+      </Section> */}
 
       {/* 06 — OUTCOME */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>06 — Outcome</SectionLabel>
+          <SectionLabel dark>06 — Outcome</SectionLabel> 
 
           {/* Lead stat */}
           <motion.div
