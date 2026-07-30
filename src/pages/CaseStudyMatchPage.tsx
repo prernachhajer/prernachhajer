@@ -311,12 +311,12 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4"
           >
-            Solution 1 — Match state-based tab structure
+            Solution 1
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-4 text-background/90 leading-tight"
+              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-4 text-background/80 leading-tight"
               style={{ fontFamily: t.displayFont }}
             >
-              Solution 1 — Match state-based tab structure
+              Match state-based tab structure
             </h2>
           </motion.p>
 
