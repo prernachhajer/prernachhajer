@@ -424,17 +424,17 @@ const CaseStudyMatchPage = () => {
           </motion.div>
 
           {/* Groupings rationale */}
-          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
-            >
-              What we did
-            </motion.p>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="text-[0.625rem] tracking-[0.14em] uppercase text-background/75 font-medium mb-4 mt-16"
+          >
+            What we did
+          </motion.p>
 
+          <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
             {[
               {
                 title: "Group by what users want, not what we call it",
