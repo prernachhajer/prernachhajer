@@ -319,27 +319,23 @@ const CaseStudyMatchPage = () => {
           <div className="grid md:grid-cols-2 gap-0.5 mt-10 mb-10">
             {[
               {
-                title: "Group by user intent, not content type",
-                desc: "One person, one intent — four tabs for one intent is four too many.",
-
+                title: "Group by what users want, not what we call it",
+                desc: "Users just wanted stats — they didn't care if it was labeled \"Fantasy,\" \"MVP,\" or \"Overs.\" So we merged them into one tab.",
                 label: "Stats · MVP · Fantasy · Overs → one tab",
               },
               {
                 title: "Same user, different depth",
-                desc: "Different in form, identical in intent — a toggle keeps both without cluttering the bar.",
-
+                desc: "Commentary and live blog readers are the same person wanting more or less detail. One toggle, not two tabs.",
                 label: "Live blog + Commentary → one tab, two sub-tabs",
               },
               {
-                title: "Progressive disclosure — the same data evolves",
-                desc: "One tab that evolves with the match, not separate tabs for each moment.",
-
+                title: "One tab that grows with the match",
+                desc: "Squad, playing XI, and scorecard are one tab that updates as the match moves forward.",
                 label: "Squad → Playing XI → Scorecard",
               },
               {
                 title: "One intent, one tab",
-                desc: "Passive browsing needs one grouped destination, not three.",
-
+                desc: "Browsing news, videos, and photos is one intent — so it's one destination.",
                 label: "News · Videos · Photos → Media",
               },
             ].map((group, i) => {
