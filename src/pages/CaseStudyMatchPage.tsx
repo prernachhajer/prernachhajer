@@ -522,6 +522,9 @@ const CaseStudyMatchPage = () => {
             })}
           </div>
 
+          {/* Full separator between Solution 1 and Solution 2 */}
+          <hr className="border-t border-background/20 my-16" />
+
           {/* Solution 2 — Cross-tab content snacking */}
           {/* <motion.p
             initial="hidden"
