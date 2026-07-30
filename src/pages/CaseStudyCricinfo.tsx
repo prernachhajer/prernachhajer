@@ -49,7 +49,7 @@ const CaseStudyCricinfo = () => {
         teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
       />
 
-      {/* THE STARTING POINT — 2021 */}
+      {/* THE STARTING POINT — 2022 */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
         <div className={`${layout.container} mx-auto`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
@@ -386,7 +386,7 @@ const CaseStudyCricinfo = () => {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
-                year: "2021",
+                year: "2022",
                 title: "Feed-first · Before",
                 dimensions: [
                   {
@@ -616,10 +616,10 @@ const CaseStudyCricinfo = () => {
               desc: "Highest-performing surface on the page. Any change risked breaking the one thing users universally trusted.",
             },
             decision: {
-              label: "The decision · 2021–2026",
+              label: "The decision · 2022–2026",
               title: "Don't redesign the live score strip.",
               desc: "The HSB was retained and improved incrementally — never rebuilt from scratch. Across all three redesigns, it remained the strongest engagement anchor on the page. Knowing what not to redesign is as important as knowing what to change.",
-              badge: "✓ Sustained 2021–2026",
+              badge: "✓ Sustained 2022–2026",
             },
             tradeoff: {
               label: "The trade-off",
