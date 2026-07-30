@@ -290,7 +290,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="max-w-3xl mx-auto mb-14"
+            className="max-w-3xl mx-auto mb-20"
           >
             <h2
               className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-4 text-background/90 leading-tight"
@@ -313,7 +313,7 @@ const CaseStudyMatchPage = () => {
           >
             Solution 1
             <h2
-              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-4 text-background/80 leading-relaxed"
+              className="text-xl md:text-xl font-normal tracking-[-0.025em] mb-12 text-background/80 leading-relaxed"
               style={{ fontFamily: t.displayFont }}
             >
               Match state-based tab structure
