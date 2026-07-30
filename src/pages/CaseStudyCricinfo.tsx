@@ -264,7 +264,7 @@ const CaseStudyCricinfo = () => {
               {
                 num: "02",
                 title: "Dense, oversized modules with no clear structure slowed users down",
-                desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights into dense, oversized modules with no clear structure. Right when users needed speed, they had to wade through clutter just to find what mattered.",
+                desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights. Right when users needed speed, they had to wade through clutter to find what mattered.",
                 tag: "UX critical",
               },
               {
