@@ -616,10 +616,10 @@ const CaseStudyCricinfo = () => {
               desc: "Highest-performing surface on the page. Any change risked breaking the one thing users universally trusted.",
             },
             decision: {
-              label: "The decision · 2021–2026",
+              label: "The decision · 2022–2026",
               title: "Don't redesign the live score strip.",
               desc: "The HSB was retained and improved incrementally — never rebuilt from scratch. Across all three redesigns, it remained the strongest engagement anchor on the page. Knowing what not to redesign is as important as knowing what to change.",
-              badge: "✓ Sustained 2021–2026",
+              badge: "✓ Sustained 2022–2026",
             },
             tradeoff: {
               label: "The trade-off",
