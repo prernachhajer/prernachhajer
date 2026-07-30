@@ -292,7 +292,8 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            A year in, Figma's new component properties let dozens of separate components live inside one. We rebuilt rather than patched.
+            A year in, Figma's new component properties let dozens of separate components live inside one. We rebuilt
+            rather than patched.
           </motion.p>
         </div>
 
@@ -600,7 +601,7 @@ const CaseStudyDesignSystem = () => {
             Three years later, we changed the visual identity of the entire system.
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-12">
+          {/*    <div className="grid md:grid-cols-2 gap-4 mb-12">
             {[
               {
                 label: "THE TRIGGER",
@@ -624,7 +625,7 @@ const CaseStudyDesignSystem = () => {
                 <p className="text-muted-foreground leading-relaxed">{item.text}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Typography + Iconography side by side */}
