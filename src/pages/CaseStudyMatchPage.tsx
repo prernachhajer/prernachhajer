@@ -282,7 +282,7 @@ const CaseStudyMatchPage = () => {
       {/* 04 — SOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.light}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>{cleanLabel("04 — Solution: Two gaps. Two fixes")}</SectionLabel>
+          <SectionLabel>{cleanLabel("04 — Design Strategy & Solution")}</SectionLabel>
 
           {/* Intro */}
 
