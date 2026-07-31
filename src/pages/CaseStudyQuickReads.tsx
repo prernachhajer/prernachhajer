@@ -285,7 +285,7 @@ const CaseStudyQuickReads = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="mb-16 !max-w-3xl"
+          className="mb-16 {`${layout.container} mx-auto  !max-w-3xl`}"
         >
           <h2 className={`${t.h2} mb-4`}>Quick Reads: a 100–120 word summary</h2>
           <p className="text-muted-foreground text-md leading-relaxed">
