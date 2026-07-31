@@ -280,7 +280,7 @@ const CaseStudyQuickReads = () => {
           <SectionLabel>DESIGN SOLUTION</SectionLabel>
         </div>
         <Prose>
-          <h2 className="hidden">Quick Reads: a 100–120 word summary</h2>
+          <h2 className="">Quick Reads: a 100–120 word summary</h2>
           <p>
             Introduced as a decision layer, not a replacement — enough context for users to choose whether to go deeper,
             without feeling complete enough to skip the article entirely.
