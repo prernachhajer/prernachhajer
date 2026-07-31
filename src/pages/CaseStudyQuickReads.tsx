@@ -457,19 +457,19 @@ const CaseStudyQuickReads = () => {
                 phase: "Phase 01",
                 pct: "10%",
                 title: "Soft launch",
-                desc: "Narrow rollout to monitor adoption and scroll behaviour in a controlled cohort. Validated that summary cards were being read and tapped through — not ignored.",
+                desc: "A small test group to check whether summary cards were actually being read and tapped, not just scrolled past.",
               },
               {
                 phase: "Phase 02",
                 pct: "20%",
                 title: "Expanded rollout",
-                desc: "Broader cohort introduced. Transition rates confirmed the gateway pattern was holding. Ad performance monitored alongside engagement — no meaningful tension detected.",
+                desc: "A larger group confirmed the gateway pattern was working, with no drop in engagement from ads.",
               },
               {
                 phase: "Phase 03",
                 pct: "100%",
                 title: "Full rollout",
-                desc: "All targets hit. Scroll depth, time-on-section, and summary-to-article transition rate all met benchmarks. Adoption tracked ahead of forecast across every phase.",
+                desc: "All targets hit — scroll depth, time on section, and summary-to-article transitions all met benchmarks. Adoption stayed ahead of forecast throughout.",
               },
             ].map((phase, i) => (
               <motion.div
