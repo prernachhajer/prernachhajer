@@ -779,8 +779,7 @@ const CaseStudyMatchPage = () => {
                 Fewer tabs. Better engagement. Same features.
               </h3>
               <p className="text-[0.8125rem] text-background/75 leading-relaxed">
-                The goal was never to remove features — it was to make them findable. Every feature that existed before
-                the redesign still exists. The difference is that users can now reach them.
+                Every feature from before the redesign still exists — users can just find them now
               </p>
             </div>
             <div className="shrink-0 text-center">
@@ -802,7 +801,7 @@ const CaseStudyMatchPage = () => {
               {
                 label: "Findability",
                 title: "Points table and Report became discoverable",
-                desc: "Two of the most-sought pieces of content, previously buried, now within reach.",
+                desc: "Two of the most-sought pieces of content are no longer buried.",
               },
               {
                 label: "Previously invisible content",
@@ -812,7 +811,7 @@ const CaseStudyMatchPage = () => {
               {
                 label: "Discovery",
                 title: "Summary became a genuine entry point",
-                desc: "Content snacking surfaced videos, reports, and stats users would've never found browsing tabs alone.",
+                desc: "Content snacking surfaced videos, reports, and stats users wouldn't have found on their own.",
               },
               {
                 label: "System",
