@@ -285,7 +285,7 @@ const CaseStudyQuickReads = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="mb-16 max-w-3xl"
+          className="mb-16 !max-w-3xl"
         >
           <h2 className={`${t.h2} mb-4`}>Quick Reads: a 100–120 word summary</h2>
           <p className="text-muted-foreground text-md leading-relaxed">
@@ -298,13 +298,11 @@ const CaseStudyQuickReads = () => {
           </p>
         </motion.div>
 
-        <Prose>
-          <h2 className="">Design Strategy</h2>
-          <p>
-            Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
-            feel like cricinfo, just lighter.
-          </p>
-        </Prose>
+        <h2 className="">Design Strategy</h2>
+        <p>
+          Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
+          feel like cricinfo, just lighter.
+        </p>
 
         {/* Principles */}
         <div className={`${layout.container} mx-auto mt-10 grid md:grid-cols-4 gap-3 mb-12`}>
