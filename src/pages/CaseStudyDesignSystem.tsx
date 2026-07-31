@@ -588,7 +588,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="THE OVERHAUL">
+      <Section label="The Overhaul">
         <div className={`${layout.container} mx-auto`}>
           <motion.h2
             initial="hidden"
