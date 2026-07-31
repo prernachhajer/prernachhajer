@@ -219,7 +219,6 @@ const CaseStudyQuickReads = () => {
                 What we found
               </h3>
             </div>
-            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
           </motion.div>
 
           <div className="flex flex-col">
@@ -241,12 +240,6 @@ const CaseStudyQuickReads = () => {
                 title: "Speed was going to competitors, not Cricinfo",
                 desc: "Inshorts and Instagram already owned short-form news. Users who chose Cricinfo did so for cricket-specific depth and trust — but that same trust was at risk if Cricinfo didn't offer a faster option too.",
                 tag: "Competitive edge",
-              },
-              {
-                num: "04",
-                title: "State management was a UX problem, not just an engineering one",
-                desc: "Users switching between summary and full article — or returning to the feed after reading — needed continuity. Losing context mid-flow was a real drop-off risk.",
-                tag: "UX critical",
               },
             ].map((insight, i) => (
               <motion.div
