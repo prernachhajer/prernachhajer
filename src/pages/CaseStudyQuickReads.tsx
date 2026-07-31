@@ -282,20 +282,22 @@ const CaseStudyQuickReads = () => {
         <Prose>
           <h2 className="">Quick Reads: a 100–120 word summary</h2>
           <p>
-            Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form article, giving casual users a fast way in without touching the original writing underneath.
-            <br /><br />
-            It's built as a decision layer, not a replacement. A short summary gives users enough to decide whether a story is worth their time — not enough to feel like they've already read it and move on.
+            Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form
+            article, giving casual users a fast way in without touching the original writing underneath.
+            <br />
+            <br />
+            It's built as a decision layer, not a replacement. A short summary gives users enough to decide whether a
+            story is worth their time — not enough to feel like they've already read it and move on.
           </p>
         </Prose>
       </section>
 
       {/* 04 — DESIGN STRATEGY */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+      <section className={`${spacing.sectionGap} ${layout.px}`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>DESIGN STRATEGY & DECISION</SectionLabel>
         </div>
         <Prose>
-          <h2 className="hidden">Speed-first. But never at the cost of credibility.</h2>
           <p>
             Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
             feel like cricinfo, just lighter.
