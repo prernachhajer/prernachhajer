@@ -282,8 +282,9 @@ const CaseStudyQuickReads = () => {
         <Prose>
           <h2 className="">Quick Reads: a 100–120 word summary</h2>
           <p>
-            Introduced as a decision layer, not a replacement — enough context for users to choose whether to go deeper,
-            without feeling complete enough to skip the article entirely.
+            Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form article, giving casual users a fast way in without touching the original writing underneath.
+            <br /><br />
+            It's built as a decision layer, not a replacement. A short summary gives users enough to decide whether a story is worth their time — not enough to feel like they've already read it and move on.
           </p>
         </Prose>
       </section>
