@@ -205,13 +205,9 @@ const CaseStudyQuickReads = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+            className="flex items-end justify-between gap-8 mb-6 pb-6 border-b border-border"
           >
             <div>
-              <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
-                <span className="w-5 h-px bg-primary" />
-                Research Insights
-              </p>
               <h3
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
