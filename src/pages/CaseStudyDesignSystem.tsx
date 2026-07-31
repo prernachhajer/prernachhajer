@@ -578,13 +578,13 @@ const CaseStudyDesignSystem = () => {
               <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
-        </div> */}
+        </div> 
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="mt-8">
           <PullQuote dark>
             Small decisions made consistently over time matter more than big decisions made occasionally.
           </PullQuote>
-        </motion.div>
+        </motion.div> */}
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
