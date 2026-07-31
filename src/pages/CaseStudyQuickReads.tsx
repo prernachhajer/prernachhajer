@@ -619,13 +619,13 @@ const CaseStudyQuickReads = () => {
           className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
-          To get users to commit to something deep, first give them a reason to care.
+          Getting users to commit to something deep starts with giving them a reason to care
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-3">
           {[
-            "Make the case before asking for the effort. The editorial team resisted at first — reasonably. Showing them the data reframed the conversation. <em>Collaboration doesn't start with alignment. It starts with honesty.</em>",
+            "The editorial team's early resistance was reasonable. Showing them the data — not just asking for buy-in — was what actually got them on board.",
 
-            "Testing scope shapes confidence, not just data. We shipped with limited persona coverage and it worked. But I'd make different choices next time. <em>Knowing where your blind spots are is its own form of design thinking.</em>",
+            "We shipped with limited persona coverage, and it worked — but I'd test more broadly next time. Knowing where the blind spots were helped us plan better than pretending they weren't there.",
           ].map((text, i) => (
             <LearningCard key={i} index={i}>
               {text}
