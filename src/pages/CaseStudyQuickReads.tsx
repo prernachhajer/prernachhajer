@@ -226,20 +226,20 @@ const CaseStudyQuickReads = () => {
             {[
               {
                 num: "01",
-                title: "The summary is a decision layer, not a replacement",
-                desc: "Users weren't opposed to long-form — they wanted confidence before committing. A 100–120 word summary gave them enough context to choose, not enough to feel satisfied and leave.",
+                title: "\u00a0Casual users weren't reading long-form",
+                desc: "Only ~5% of casual users completed full articles. The length and depth built for loyal readers wasn't landing with everyone else.",
                 tag: "Reframed the brief",
               },
               {
                 num: "02",
-                title: "Three personas, one surface — with conflicting needs",
-                desc: "Casual users wanted speed. Content consumers wanted stories. Loyal readers wanted depth. Any solution had to serve all three without forcing a choice. Quick Reads needed to be a gateway, not a gate.",
+                title: "Three personas, one surface, conflicting needs",
+                desc: "Casual users wanted speed. Content consumers wanted stories. Loyal readers wanted depth. No single format could serve all three as-is.",
                 tag: "Strategic tension",
               },
               {
                 num: "03",
-                title: "Competitors had speed. Cricinfo had credibility.",
-                desc: "Inshorts and Instagram already offered short-form news. Users who chose cricinfo did so for cricket-specific depth and trust. Summaries had to carry that credibility — not dilute it.",
+                title: "Speed was going to competitors, not Cricinfo",
+                desc: "Inshorts and Instagram already owned short-form news. Users who chose Cricinfo did so for cricket-specific depth and trust — but that same trust was at risk if Cricinfo didn't offer a faster option too.",
                 tag: "Competitive edge",
               },
               {
