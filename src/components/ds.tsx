@@ -523,11 +523,11 @@ export const Tag = ({
 // ─────────────────────────────────────────────
 const allCaseStudies = [
   {
-    slug: "cricinfo",
-    title: "Cricinfo Homepage",
+    slug: "homepage",
+    title: "Homepage",
     description: "Redesigning the world's largest cricket platform homepage",
     tags: ["Product Design", "Web"],
-    path: "/case-study/cricinfo",
+    path: "/case-study/homepage",
   },
   {
     slug: "design-system",

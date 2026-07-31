@@ -39,7 +39,7 @@ const caseStudies = [
     thumbMobile: cricinfoMobile,
     statNum: "5 yrs",
     statLabel: "of evolution",
-    link: "/case-study/cricinfo",
+    link: "/case-study/homepage",
   },
   {
     num: "02 / 04",
