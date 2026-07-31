@@ -293,11 +293,9 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* 04 — DESIGN STRATEGY */}
-      <section className={`${spacing.sectionGap} ${layout.px}`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>DESIGN STRATEGY & DECISION</SectionLabel>
-        </div>
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <Prose>
+          <h2 className="">DESIGN STRATEGY</h2>
           <p>
             Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
             feel like cricinfo, just lighter.
