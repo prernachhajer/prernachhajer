@@ -367,20 +367,24 @@ const CaseStudyQuickReads = () => {
           {[
             {
               constraint:
-                "Summaries increased editorial workload — and had to beat Inshorts, not just match its length.",
+                "Editorial workload doubled. Writers weren't just shortening articles — a summary had to hook readers and represent the full story accurately, which took real editorial skill, not just fewer words.",
               decision:
-                "Framed Quick Reads as a funnel, not a replacement. Editorial owned the summary voice by launch.",
+                "Quick Reads became a funnel step, not a dead end. Users land on a summary first — one tap takes them into the full article whenever they want to go deeper.",
               quote:
                 '"Depth carried the credibility" — a diluted voice would\'ve made cricinfo indistinguishable from competitors.',
             },
             {
-              constraint: "Casual users wanted speed. Loyal readers wanted depth. Serving one risked the other.",
-              decision: "Built it as a gateway, not a gate — full article always one tap away.",
+              constraint:
+                "Casual users wanted speed. Loyal readers wanted depth. A single surface had to serve both without compromising either.",
+              decision:
+                "One swipe gesture, two outcomes. Casual users swipe up through summary after summary — ten or more articles in one sitting, no extra taps. Loyal readers swipe across into the full article whenever they want it.",
               quote: '"Some loyal readers still resisted" — the depth-vs-speed tension is ongoing.',
             },
             {
-              constraint: "Losing context mid-flow was a real drop-off risk — and ads couldn't break it either.",
-              decision: "Solved continuity with engineering early. Placed ads at predictable intervals, not mid-flow.",
+              constraint:
+                "Losing context mid-flow was a real drop-off risk, and ads were part of that risk too.",
+              decision:
+                "Set a fixed ad cadence — after a set number of articles, not mid-read — so the swipe-up flow stayed uninterrupted and predictable.",
               quote: '"Testing coverage was narrower than ideal" — didn\'t validate across all five personas.',
             },
           ].map((block, idx) => (
