@@ -145,7 +145,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="CONVINCE, ALIGN, LAUNCH">
+      <Section label="Convince, Align, Launch">
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
