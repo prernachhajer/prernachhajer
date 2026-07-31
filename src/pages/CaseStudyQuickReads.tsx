@@ -367,23 +367,23 @@ const CaseStudyQuickReads = () => {
           {[
             {
               constraint:
-                "Editorial workload doubled. Writers weren't just shortening articles — a summary had to hook readers and represent the full story accurately, which took real editorial skill, not just fewer words.",
+                "Writing a summary took real editorial skill — not just fewer words, but a hook and an accurate read of the story",
               decision:
-                "Quick Reads became a funnel step, not a dead end. Users land on a summary first — one tap takes them into the full article whenever they want to go deeper.",
+                "Quick Reads became a funnel step, not a dead end — one tap into the full article, whenever a reader wants it.",
               quote: '"If the summaries had felt generic, Cricinfo would\'ve felt like every other quick-news app"',
             },
             {
               constraint:
-                "Casual users wanted speed. Loyal readers wanted depth. A single surface had to serve both without compromising either.",
+                "Casual users wanted speed. Loyal readers wanted depth. One surface had to serve both.",
               decision:
-                "One swipe gesture, two outcomes. Casual users swipe up through summary after summary — ten or more articles in one sitting, no extra taps. Loyal readers swipe across into the full article whenever they want it.",
+                "One swipe, two paths: casual users swipe up through summaries; loyal readers swipe across into the full article.",
               quote:
                 '"Some loyal readers still skip the summaries entirely and go straight to the full article — that habit hasn\'t fully changed."',
             },
             {
-              constraint: "Losing context mid-flow was a real drop-off risk, and ads were part of that risk too.",
+              constraint: "Losing context mid-flow was a real risk — ads included.",
               decision:
-                "Set a fixed ad cadence — after a set number of articles, not mid-read — so the swipe-up flow stayed uninterrupted and predictable.",
+                "Ads appear at a fixed interval, never mid-read, so the swipe-up flow stays uninterrupted.",
               quote: '"We only tested this with two of the five user types, not all five."',
             },
           ].map((block, idx) => (
