@@ -288,7 +288,7 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="mb-16 "
           >
-            <h2 className={`${t.h4} mb-4`}>Quick Reads: a 100–120 word summary</h2>
+            <h2 className={`${t.h3} mb-4`}>Quick Reads: a 100–120 word summary</h2>
             <p className="text-muted-foreground text-md leading-relaxed">
               Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form
               article, giving casual users a fast way in without touching the original writing underneath.
@@ -365,7 +365,7 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="mb-16"
           >
-            <h2 className={`${t.h2} mb-4`}>Three tensions that shaped the feature</h2>
+            <h2 className={`${t.h3} mb-4`}>Three tensions that shaped the feature</h2>
             <p className="text-muted-foreground text-md leading-relaxed">
               Every meaningful design decision on Quick Reads came from a real constraint.
             </p>
