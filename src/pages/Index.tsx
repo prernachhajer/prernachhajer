@@ -169,7 +169,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="flex flex-wrap gap-8 md:gap-12 pt-6 md:pt-8"
+              className="flex flex-wrap gap-8 md:gap-12 pt-6 mt-12 md:pt-8"
             >
               <div>
                 <p
