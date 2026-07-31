@@ -195,7 +195,7 @@ const CaseStudyMatchPage = () => {
       </section> */}
 
       {/* 03 — INSIGHT */}
-      <Section label={cleanLabel("03 — Insight")}>
+      <Section label="Insight">
         <Prose>
           {/*  <h2>Two gaps, not one.</h2> */}
           <p>
