@@ -210,13 +210,13 @@ const CaseStudyQuickReads = () => {
             <div>
               <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
                 <span className="w-5 h-px bg-primary" />
-                What we found
+                Research Insights
               </p>
               <h3
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                Four findings that reframed Quick Reads.
+                What we found
               </h3>
             </div>
             <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
