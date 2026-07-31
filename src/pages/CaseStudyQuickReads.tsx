@@ -370,19 +370,18 @@ const CaseStudyQuickReads = () => {
                 "Editorial workload doubled. Writers weren't just shortening articles — a summary had to hook readers and represent the full story accurately, which took real editorial skill, not just fewer words.",
               decision:
                 "Quick Reads became a funnel step, not a dead end. Users land on a summary first — one tap takes them into the full article whenever they want to go deeper.",
-              quote:
-                '"If the summaries had felt generic, Cricinfo would\'ve felt like every other quick-news app"',
+              quote: '"If the summaries had felt generic, Cricinfo would\'ve felt like every other quick-news app"',
             },
             {
               constraint:
                 "Casual users wanted speed. Loyal readers wanted depth. A single surface had to serve both without compromising either.",
               decision:
                 "One swipe gesture, two outcomes. Casual users swipe up through summary after summary — ten or more articles in one sitting, no extra taps. Loyal readers swipe across into the full article whenever they want it.",
-              quote: '"Some loyal readers still skip the summaries entirely and go straight to the full article — that habit hasn\'t fully changed."',
+              quote:
+                '"Some loyal readers still skip the summaries entirely and go straight to the full article — that habit hasn\'t fully changed."',
             },
             {
-              constraint:
-                "Losing context mid-flow was a real drop-off risk, and ads were part of that risk too.",
+              constraint: "Losing context mid-flow was a real drop-off risk, and ads were part of that risk too.",
               decision:
                 "Set a fixed ad cadence — after a set number of articles, not mid-read — so the swipe-up flow stayed uninterrupted and predictable.",
               quote: '"We only tested this with two of the five user types, not all five."',
@@ -399,11 +398,11 @@ const CaseStudyQuickReads = () => {
             >
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE CONSTRAINT</p>
-                <p className="text-lg md:text-xl font-bold leading-snug text-foreground">{block.constraint}</p>
+                <p className="text-md md:text-xl font-bold leading-snug text-foreground">{block.constraint}</p>
               </div>
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE DECISION</p>
-                <p className="text-lg md:text-xl font-bold leading-snug text-foreground mb-6">{block.decision}</p>
+                <p className="text-md md:text-xl font-bold leading-snug text-foreground mb-6">{block.decision}</p>
                 <p
                   className="text-base italic text-muted-foreground leading-relaxed"
                   style={{ fontFamily: t.displayFont }}
