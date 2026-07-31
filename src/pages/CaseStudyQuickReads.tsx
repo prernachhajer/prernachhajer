@@ -289,7 +289,7 @@ const CaseStudyQuickReads = () => {
       {/* 04 — DESIGN STRATEGY */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>DESIGN STRATEGY</SectionLabel>
+          <SectionLabel>DESIGN STRATEGY & SOLUTION</SectionLabel>
         </div>
         <Prose>
           <h2 className="hidden">Speed-first. But never at the cost of credibility.</h2>
