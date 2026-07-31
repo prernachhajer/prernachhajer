@@ -292,7 +292,7 @@ const CaseStudyQuickReads = () => {
         </Prose>
 
         <Prose>
-          <h2 className="">DESIGN STRATEGY</h2>
+          <h2 className="">Design Strategy</h2>
           <p>
             Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was to
             feel like cricinfo, just lighter.
