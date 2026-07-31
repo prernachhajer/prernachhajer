@@ -755,7 +755,7 @@ const CaseStudyDesignSystem = () => {
                 label: "FIGMA FILES COVERAGE",
                 num: "170+",
                 title: "Files integrated",
-                desc: '170+ files across the product now pull from one shared foundation — up from one inconsistent library."',
+                desc: "170+ files across the product now pull from one shared foundation — up from one inconsistent library.",
               },
               {
                 label: "Component coverage",
