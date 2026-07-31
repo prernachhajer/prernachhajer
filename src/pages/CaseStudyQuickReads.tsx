@@ -154,7 +154,7 @@ const CaseStudyQuickReads = () => {
       </DarkSection>
 
       {/* 03 — PROCESS & RESEARCH */}
-      <Section label="PROCESS & RESEARCH">
+      <Section label="Process & Research">
         <Prose>
           {/* <h2>Users don't dislike reading. They dislike wasting time.</h2> */}
           <p>
