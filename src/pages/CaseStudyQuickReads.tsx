@@ -509,13 +509,7 @@ const CaseStudyQuickReads = () => {
             <hr className="border-t border-background/[0.07] mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
               <p className="text-sm text-background/80 leading-[1.85]">
-                Quick Reads was the{" "}
-                <strong className="text-background/90 font-bold">
-                  first time cricinfo's editorial team shipped a product feature they didn't resist
-                </strong>
-                . Not because we forced buy-in — but because we made the case first. The data showed them what design
-                already knew: users weren't rejecting their writing.{" "}
-                <strong className="text-background/90 font-bold">They just needed a lighter door into it.</strong>
+                Quick Reads was the first time cricinfo's editorial team shipped a product feature they didn't resist&nbsp;— because the data made the case before we did. Users weren't rejecting the writing. They just needed an easier way in.
               </p>
               <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
                 <p
