@@ -85,7 +85,7 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="PROBLEM">
+      <DarkSection label="Problem">
         <div className="grid md:grid-cols-2 gap-0.5">
           {/* State */}
           <motion.div
