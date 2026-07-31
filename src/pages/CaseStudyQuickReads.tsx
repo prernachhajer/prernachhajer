@@ -290,10 +290,7 @@ const CaseStudyQuickReads = () => {
             story is worth their time — not enough to feel like they've already read it and move on.
           </p>
         </Prose>
-      </section>
 
-      {/* 04 — DESIGN STRATEGY */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <Prose>
           <h2 className="">DESIGN STRATEGY</h2>
           <p>
@@ -301,7 +298,10 @@ const CaseStudyQuickReads = () => {
             feel like cricinfo, just lighter.
           </p>
         </Prose>
+      </section>
 
+      {/* 04 — DESIGN STRATEGY */}
+      <section className={`${spacing.sectionGap} ${layout.px} `}>
         {/* Principles */}
         <div className={`${layout.container} mx-auto mt-10 grid md:grid-cols-4 gap-3 mb-12`}>
           {[
