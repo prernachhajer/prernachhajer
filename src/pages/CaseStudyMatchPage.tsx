@@ -44,7 +44,7 @@ const CaseStudyMatchPage = () => {
       />
 
       {/* 01 — PROBLEM */}
-      <DarkSection label={cleanLabel("01 — Problem")}>
+      <DarkSection label="Problem">
         <div className="grid md:grid-cols-2 gap-0.5">
           <motion.div
             initial="hidden"
