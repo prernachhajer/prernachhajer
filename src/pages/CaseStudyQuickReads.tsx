@@ -509,7 +509,9 @@ const CaseStudyQuickReads = () => {
             <hr className="border-t border-background/[0.07] mb-8" />
             <div className="grid md:grid-cols-[1fr_140px] gap-10 items-center">
               <p className="text-sm text-background/80 leading-[1.85]">
-                Quick Reads was the first time cricinfo's editorial team shipped a product feature they didn't resist&nbsp;— because the data made the case before we did. Users weren't rejecting the writing. They just needed an easier way in.
+                Quick Reads was the first time cricinfo's editorial team shipped a product feature they didn't
+                resist&nbsp;— because the data made the case before we did. Users weren't rejecting the writing. They
+                just needed an easier way in.
               </p>
               <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
                 <p
@@ -547,20 +549,20 @@ const CaseStudyQuickReads = () => {
               {
                 label: "Scroll depth · News section",
                 num: "✓",
-                title: "Hit target benchmarks by full rollout",
+
                 desc: "Scroll depth and time on section both hit target by full rollout — a sign users were engaging, not just skimming.",
               },
               {
                 label: "Summary → full article transition",
                 num: "↑",
-                title: "Gateway hypothesis validated",
+
                 desc: "Transition rate met our engagement goal — users were using summaries to decide, not just reading and leaving.",
               },
               {
                 label: "Rollout adoption rate",
                 num: "3×",
-                title: "Tracked ahead of expectations",
-                desc: "Adoption stayed ahead of forecast across all three phases, with no drop in satisfaction from the ads.\"",
+
+                desc: 'Adoption stayed ahead of forecast across all three phases, with no drop in satisfaction from the ads."',
               },
             ].map((card, i) => (
               <motion.div
@@ -586,7 +588,6 @@ const CaseStudyQuickReads = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-background/90 mb-2">{card.title}</p>
                   <p className="text-xs text-background/75 leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
