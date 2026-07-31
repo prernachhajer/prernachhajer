@@ -280,7 +280,13 @@ const CaseStudyQuickReads = () => {
           <SectionLabel>DESIGN SOLUTION</SectionLabel>
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="mb-16">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fade}
+          className="mb-16 max-w-3xl"
+        >
           <h2 className={`${t.h2} mb-4`}>Quick Reads: a 100–120 word summary</h2>
           <p className="text-muted-foreground text-md leading-relaxed">
             Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form
@@ -291,18 +297,6 @@ const CaseStudyQuickReads = () => {
             story is worth their time — not enough to feel like they've already read it and move on.
           </p>
         </motion.div>
-
-        <Prose>
-          <h2 className="">Quick Reads: a 100–120 word summary</h2>
-          <p>
-            Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form
-            article, giving casual users a fast way in without touching the original writing underneath.
-            <br />
-            <br />
-            It's built as a decision layer, not a replacement. A short summary gives users enough to decide whether a
-            story is worth their time — not enough to feel like they've already read it and move on.
-          </p>
-        </Prose>
 
         <Prose>
           <h2 className="">Design Strategy</h2>
