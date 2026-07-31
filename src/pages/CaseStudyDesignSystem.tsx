@@ -369,7 +369,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 05 — DOCUMENTATION: PHASE 3 */}
-      <Section label="PHASE 3: MAKE IT SELF-SUFFICIENT">
+      <Section label="Phase 3: Make it Self-sufficient">
         <Prose>
           <h2>Documentation wasn't optional — the system needed to work without a designer in the room.</h2>
           <p>
