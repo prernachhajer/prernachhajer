@@ -733,7 +733,7 @@ const CaseStudyDesignSystem = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>IMPACT</SectionLabel>
+          <SectionLabel dark>IMPACT & SOLUTION</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"
