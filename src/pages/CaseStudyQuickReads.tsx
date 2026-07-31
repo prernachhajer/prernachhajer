@@ -280,12 +280,14 @@ const CaseStudyQuickReads = () => {
           <SectionLabel>DESIGN SOLUTION</SectionLabel>
         </div>
 
+        <div className={`${layout.container} mx-auto  !max-w-3xl`}>
+          
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="mb-16 {`${layout.container} mx-auto  !max-w-3xl`}"
+          className="mb-16 "
         >
           <h2 className={`${t.h2} mb-4`}>Quick Reads: a 100–120 word summary</h2>
           <p className="text-muted-foreground text-md leading-relaxed">
@@ -304,6 +306,8 @@ const CaseStudyQuickReads = () => {
           feel like cricinfo, just lighter.
         </p>
 
+        </div>
+      </
         {/* Principles */}
         <div className={`${layout.container} mx-auto mt-10 grid md:grid-cols-4 gap-3 mb-12`}>
           {[
