@@ -912,4 +912,4 @@ const CaseStudyHomepage = () => {
   );
 };
 
-export default CaseStudyCricinfo;
+export default CaseStudyHomepage;
