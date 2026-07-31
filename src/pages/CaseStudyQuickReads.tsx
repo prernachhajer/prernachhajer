@@ -616,7 +616,7 @@ const CaseStudyQuickReads = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
+          className="text-xl md:text-xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Getting users to commit to something deep starts with giving them a reason to care
