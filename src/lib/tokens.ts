@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // DESIGN SYSTEM TOKENS
 // Portfolio · Prerna Chhajer
-// Reference: CaseStudyCricinfo.tsx
+// Reference: CaseStudyHomepage.tsx
 // ─────────────────────────────────────────────
 // Usage: import { spacing, type, animation } from "@/lib/tokens"
 

@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // DESIGN SYSTEM COMPONENTS  (ds.tsx)
 // Portfolio · Prerna Chhajer
-// Reference: CaseStudyCricinfo.tsx
+// Reference: CaseStudyHomepage.tsx
 // ─────────────────────────────────────────────
 // Usage: import { Nav, SectionLabel, Section, ... } from "@/components/ds"
 
@@ -523,11 +523,11 @@ export const Tag = ({
 // ─────────────────────────────────────────────
 const allCaseStudies = [
   {
-    slug: "cricinfo",
-    title: "Cricinfo Homepage",
+    slug: "homepage",
+    title: "Homepage",
     description: "Redesigning the world's largest cricket platform homepage",
     tags: ["Product Design", "Web"],
-    path: "/case-study/cricinfo",
+    path: "/case-study/homepage",
   },
   {
     slug: "design-system",

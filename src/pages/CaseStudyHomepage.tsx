@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// CASE STUDY — Cricinfo Homepage (REFERENCE PAGE)
+// CASE STUDY — Homepage (REFERENCE PAGE)
 // Uses shared design system: @/lib/tokens + @/components/ds
 // ─────────────────────────────────────────────
 
@@ -34,7 +34,7 @@ const cleanLabel = (label: string) => {
   return typeof label === "string" ? label.replace(/^\d+\s*—\s*/, "").replace(/^PHASE\s*\d+:\s*/i, "") : label;
 };
 
-const CaseStudyCricinfo = () => {
+const CaseStudyHomepage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
@@ -907,9 +907,9 @@ const CaseStudyCricinfo = () => {
       />
 
       {/* EXPLORE MORE */}
-      <ExploreMore currentSlug="cricinfo" />
+      <ExploreMore currentSlug="homepage" />
     </div>
   );
 };
 
-export default CaseStudyCricinfo;
+export default CaseStudyHomepage;
