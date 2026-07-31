@@ -453,7 +453,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
-      <DarkSection label="REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
+      <DarkSection label="Remove, Simplify, Reduce, Sustain">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
