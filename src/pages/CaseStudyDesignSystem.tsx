@@ -78,7 +78,7 @@ const CaseStudyDesignSystem = () => {
       </section>
 
       {/* 01 — PROBLEM */}
-      <DarkSection label="PROBLEM">
+      <DarkSection label="Problem">
         <div className="grid md:grid-cols-2 gap-0.5">
           {/* State */}
           <motion.div
@@ -145,7 +145,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="CONVINCE, ALIGN, LAUNCH">
+      <Section label="Convince, Align, Launch">
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
@@ -272,7 +272,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 04 — REBUILD: PHASE 2 */}
-      <DarkSection label="PHASE 2: REBUILD SMARTER">
+      <DarkSection label="Phase 2: Rebuild Smarter">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
@@ -369,7 +369,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 05 — DOCUMENTATION: PHASE 3 */}
-      <Section label="PHASE 3: MAKE IT SELF-SUFFICIENT">
+      <Section label="Phase 3: Make it Self-sufficient">
         <Prose>
           <h2>Documentation wasn't optional — the system needed to work without a designer in the room.</h2>
           <p>
@@ -453,7 +453,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
-      <DarkSection label="REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
+      <DarkSection label="Remove, Simplify, Reduce, Sustain">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
@@ -588,7 +588,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="THE OVERHAUL">
+      <Section label="The Overhaul">
         <div className={`${layout.container} mx-auto`}>
           <motion.h2
             initial="hidden"
@@ -733,7 +733,7 @@ const CaseStudyDesignSystem = () => {
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>IMPACT</SectionLabel>
+          <SectionLabel dark>IMPACT & SOLUTION</SectionLabel>
           <motion.p
             initial="hidden"
             whileInView="visible"

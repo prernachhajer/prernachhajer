@@ -44,7 +44,7 @@ const CaseStudyMatchPage = () => {
       />
 
       {/* 01 — PROBLEM */}
-      <DarkSection label={cleanLabel("01 — Problem")}>
+      <DarkSection label="Problem">
         <div className="grid md:grid-cols-2 gap-0.5">
           <motion.div
             initial="hidden"
@@ -195,7 +195,7 @@ const CaseStudyMatchPage = () => {
       </section> */}
 
       {/* 03 — INSIGHT */}
-      <Section label={cleanLabel("03 — Insight")}>
+      <Section label="Insight">
         <Prose>
           {/*  <h2>Two gaps, not one.</h2> */}
           <p>
@@ -282,7 +282,7 @@ const CaseStudyMatchPage = () => {
       {/* 04 — SOLUTION */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.light}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>{cleanLabel("04 — Solution: Two gaps. Two fixes")}</SectionLabel>
+          <SectionLabel>{cleanLabel("04 — Design Strategy & Solution")}</SectionLabel>
 
           {/* Intro */}
 
@@ -761,7 +761,7 @@ const CaseStudyMatchPage = () => {
       {/* 06 — OUTCOME */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>06 — Outcome</SectionLabel>
+          <SectionLabel dark>Outcome</SectionLabel>
 
           {/* Lead stat */}
           <motion.div
