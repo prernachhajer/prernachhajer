@@ -42,7 +42,7 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
         {[
           { label: "Work", id: "work" },
           { label: "About", id: "about" },
-          { label: "Writing", id: "writing" },
+          { label: "BLOG", id: "writing" },
           { label: "Resume", id: "__navigate__/resume" },
         ].map((link) => (
           <button
