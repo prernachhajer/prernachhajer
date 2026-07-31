@@ -298,10 +298,7 @@ const CaseStudyQuickReads = () => {
             feel like cricinfo, just lighter.
           </p>
         </Prose>
-      </section>
 
-      {/* 04 — DESIGN STRATEGY */}
-      <section className={`${spacing.sectionGap} ${layout.px} `}>
         {/* Principles */}
         <div className={`${layout.container} mx-auto mt-10 grid md:grid-cols-4 gap-3 mb-12`}>
           {[
