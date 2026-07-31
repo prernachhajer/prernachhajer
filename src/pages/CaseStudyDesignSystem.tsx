@@ -272,7 +272,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 04 — REBUILD: PHASE 2 */}
-      <DarkSection label="PHASE 2: REBUILD SMARTER">
+      <DarkSection label="Phase 2: Rebuild Smarter">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
