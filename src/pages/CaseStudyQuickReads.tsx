@@ -288,7 +288,7 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="mb-16 "
           >
-            <h2 className={`${t.h2} mb-4`}>Quick Reads: a 100–120 word summary</h2>
+            <h2 className={`${t.h4} mb-4`}>Quick Reads: a 100–120 word summary</h2>
             <p className="text-muted-foreground text-md leading-relaxed">
               Quick Reads didn't exist before this — it's a new 100–120 word summary that sits above every long-form
               article, giving casual users a fast way in without touching the original writing underneath.
@@ -298,7 +298,7 @@ const CaseStudyQuickReads = () => {
               story is worth their time — not enough to feel like they've already read it and move on.
             </p>
 
-            <h2 className="mt-12">Design Strategy</h2>
+            <h2 className="mt-12 mb-2">Design Strategy</h2>
             <p>
               Four principles shaped every decision — from the word count cap to the transition behaviour. The goal was
               to feel like cricinfo, just lighter.
