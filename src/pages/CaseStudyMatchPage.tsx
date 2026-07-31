@@ -761,7 +761,7 @@ const CaseStudyMatchPage = () => {
       {/* 06 — OUTCOME */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>06 — Outcome</SectionLabel>
+          <SectionLabel dark>Outcome</SectionLabel>
 
           {/* Lead stat */}
           <motion.div
