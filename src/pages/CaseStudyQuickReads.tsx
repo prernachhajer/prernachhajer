@@ -548,19 +548,19 @@ const CaseStudyQuickReads = () => {
                 label: "Scroll depth · News section",
                 num: "✓",
                 title: "Hit target benchmarks by full rollout",
-                desc: "Scroll depth and time spent in the news section both reached targets by end of the 100% rollout — the primary signal that Quick Reads was creating sustained engagement.",
+                desc: "Scroll depth and time on section both hit target by full rollout — a sign users were engaging, not just skimming.",
               },
               {
                 label: "Summary → full article transition",
                 num: "↑",
                 title: "Gateway hypothesis validated",
-                desc: "The summary-to-full-article transition rate met our engagement goal. Users weren't just reading summaries and leaving — they were using them as a decision layer before going deeper.",
+                desc: "Transition rate met our engagement goal — users were using summaries to decide, not just reading and leaving.",
               },
               {
                 label: "Rollout adoption rate",
                 num: "3×",
                 title: "Tracked ahead of expectations",
-                desc: "Adoption tracked ahead of forecasts across all three rollout phases. Ad integration completed without a measurable drop in satisfaction signals.",
+                desc: "Adoption stayed ahead of forecast across all three phases, with no drop in satisfaction from the ads.\"",
               },
             ].map((card, i) => (
               <motion.div
