@@ -373,8 +373,7 @@ const CaseStudyQuickReads = () => {
               quote: '"If the summaries had felt generic, Cricinfo would\'ve felt like every other quick-news app"',
             },
             {
-              constraint:
-                "Casual users wanted speed. Loyal readers wanted depth. One surface had to serve both.",
+              constraint: "Casual users wanted speed. Loyal readers wanted depth. One surface had to serve both.",
               decision:
                 "One swipe, two paths: casual users swipe up through summaries; loyal readers swipe across into the full article.",
               quote:
@@ -382,8 +381,7 @@ const CaseStudyQuickReads = () => {
             },
             {
               constraint: "Losing context mid-flow was a real risk — ads included.",
-              decision:
-                "Ads appear at a fixed interval, never mid-read, so the swipe-up flow stays uninterrupted.",
+              decision: "Ads appear at a fixed interval, never mid-read, so the swipe-up flow stays uninterrupted.",
               quote: '"We only tested this with two of the five user types, not all five."',
             },
           ].map((block, idx) => (
@@ -398,11 +396,11 @@ const CaseStudyQuickReads = () => {
             >
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE CONSTRAINT</p>
-                <p className="text-md md:text-xl font-bold leading-snug text-foreground">{block.constraint}</p>
+                <p className="text-md md:text-md font-bold leading-snug text-foreground">{block.constraint}</p>
               </div>
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>THE DECISION</p>
-                <p className="text-md md:text-xl font-bold leading-snug text-foreground mb-6">{block.decision}</p>
+                <p className="text-md md:text-md font-bold leading-snug text-foreground mb-6">{block.decision}</p>
                 <p
                   className="text-base italic text-muted-foreground leading-relaxed"
                   style={{ fontFamily: t.displayFont }}
