@@ -349,7 +349,7 @@ const CaseStudyQuickReads = () => {
       </section>
 
       {/* DESIGN DECISIONS */}
-      <Section label="DESIGN DECISIONS">
+      <Section label="Design Decisions">
         <div className={`${layout.container} mx-auto !max-w-3xl`}>
           <motion.div
             initial="hidden"
