@@ -371,7 +371,7 @@ const CaseStudyQuickReads = () => {
               decision:
                 "Quick Reads became a funnel step, not a dead end. Users land on a summary first — one tap takes them into the full article whenever they want to go deeper.",
               quote:
-                '"Depth carried the credibility" — a diluted voice would\'ve made cricinfo indistinguishable from competitors.',
+                "If the summaries had felt generic, Cricinfo would've felt like every other quick-news app",
             },
             {
               constraint:
