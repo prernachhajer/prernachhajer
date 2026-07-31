@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // DESIGN SYSTEM COMPONENTS  (ds.tsx)
 // Portfolio · Prerna Chhajer
-// Reference: CaseStudyCricinfo.tsx
+// Reference: CaseStudyHomepage.tsx
 // ─────────────────────────────────────────────
 // Usage: import { Nav, SectionLabel, Section, ... } from "@/components/ds"
 

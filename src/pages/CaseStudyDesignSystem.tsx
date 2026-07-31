@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // CASE STUDY — Design System (Rebuilt)
 // Uses shared design system: @/lib/tokens + @/components/ds
-// Story arc mirrors CaseStudyCricinfo (reference page)
+// Story arc mirrors CaseStudyHomepage (reference page)
 // Images: placeholders — swap with real assets when ready
 // ─────────────────────────────────────────────
 
