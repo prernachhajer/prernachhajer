@@ -365,7 +365,7 @@ const CaseStudyQuickReads = () => {
             variants={fade}
             className="mb-16"
           >
-            <h2 className={`${t.h3} mb-4`}>Three tensions that shaped the feature</h2>
+            <h2 className={`${t.h3} mb-4`}>Three constraints that shaped the feature</h2>
             <p className="text-muted-foreground text-md leading-relaxed">
               Every meaningful design decision on Quick Reads came from a real constraint.
             </p>
