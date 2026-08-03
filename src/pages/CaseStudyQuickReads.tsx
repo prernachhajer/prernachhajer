@@ -377,19 +377,19 @@ const CaseStudyQuickReads = () => {
                 "Writing a summary took real editorial skill — not just fewer words, but a hook and an accurate read of the story",
               decision:
                 "Quick Reads became a funnel step, not a dead end — one tap into the full article, whenever a reader wants it.",
-              quote: '"If the summaries had felt generic, Cricinfo would\'ve felt like every other quick-news app"',
+              quote: "If the summaries had felt generic, Cricinfo would've felt like every other quick-news app",
             },
             {
               constraint: "Casual users wanted speed. Loyal readers wanted depth. One surface had to serve both.",
               decision:
                 "One swipe, two paths: casual users swipe up through summaries; loyal readers swipe across into the full article.",
               quote:
-                '"Some loyal readers still skip the summaries entirely and go straight to the full article — that habit hasn\'t fully changed."',
+                "Some loyal readers still skip the summaries entirely and go straight to the full article — that habit hasn't fully changed.",
             },
             {
               constraint: "Losing context mid-flow was a real risk — ads included.",
               decision: "Ads appear at a fixed interval, never mid-read, so the swipe-up flow stays uninterrupted.",
-              quote: '"We only tested this with two of the five user types, not all five."',
+              quote: "We only tested this with two of the five user types, not all five.",
             },
           ].map((block, idx) => (
             <motion.div
