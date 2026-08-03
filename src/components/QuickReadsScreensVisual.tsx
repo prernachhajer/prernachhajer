@@ -64,7 +64,7 @@ const QuickReadsScreensVisual = () => (
       </PhoneShell>
       <RowCaption
         title="Feels lighter as you read"
-        desc="The app steps back so the story can step forward. Chrome fades, distractions dissolve — all that remains is the writing."
+        desc="The app steps back so the story can step forward. Chrome elements fade, distractions dissolve — all that remains is the story."
       />
     </motion.div>
 
