@@ -282,7 +282,7 @@ const CaseStudyDesignSystem = () => {
             className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
-            Component properties changed what a single component could do.
+            Component properties changed what a single component could do. Fewer files, more power
           </motion.h2>
           <motion.p
             initial="hidden"
