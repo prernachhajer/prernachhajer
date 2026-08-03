@@ -277,7 +277,7 @@ const CaseStudyQuickReads = () => {
 
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>DESIGN SOLUTION</SectionLabel>
+          <SectionLabel>DESIGN STRATEGY, DECISION & SOLUTION</SectionLabel>
         </div>
 
         <div className={`${layout.container} mx-auto  !max-w-3xl`}>
