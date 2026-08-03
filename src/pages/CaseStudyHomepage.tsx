@@ -326,7 +326,7 @@ const CaseStudyHomepage = () => {
       {/* DESIGN EVOLUTION — BEFORE VS AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>DESIGN STRATEGY, DECISION & SOLUTION</SectionLabel>
+          <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
 
           {/* Strategic contribution */}
           <div className={`${layout.container} mx-auto mt-12 mb-16`}>
