@@ -93,7 +93,8 @@ const CaseStudyDesignSystem = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              One component library. No documentation. No responsiveness. Multiple platforms — web, app — with teams rebuilding the same patterns over and over, and nothing shared underneath.
+              One component library. No documentation. No responsiveness. Multiple platforms — web, app — with teams
+              rebuilding the same patterns over and over, and nothing shared underneath.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["No Scalable components", "No documentation", "Work duplicated across platforms"].map((tag) => (
@@ -359,12 +360,7 @@ const CaseStudyDesignSystem = () => {
           variants={fade}
           custom={4}
           className="mt-8"
-        >
-          <PullQuote dark>
-            The first version was right for its time. This one needed to be right for now — that's why we rebuilt
-            instead of patching.
-          </PullQuote>
-        </motion.div>
+        ></motion.div>
       </DarkSection>
 
       {/* 05 — DOCUMENTATION: PHASE 3 */}
