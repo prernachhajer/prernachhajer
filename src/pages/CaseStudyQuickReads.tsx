@@ -53,7 +53,7 @@ const CaseStudyQuickReads = () => {
                 className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
-                25 years of great writing. Most users never finishing it.
+                25 years of great writing. Most users never finish it.
               </h2>
               <p className="text-[0.9375rem] text-muted-foreground max-w-2xl leading-[1.65]">
                 Not because they didn't want depth — they wanted a reason to trust it before committing.
