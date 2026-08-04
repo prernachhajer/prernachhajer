@@ -248,7 +248,7 @@ const CaseStudyHomepage = () => {
                 What we found
               </h3>
             </div>
-            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}></span>
           </motion.div>
 
           <div className="flex flex-col">
