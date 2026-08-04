@@ -274,7 +274,7 @@ const Index = () => {
                         <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                       </div>
                       <h3
-                        className="text-[clamp(1.625rem,2.8vw,2.625rem)] font-normal leading-[1.08] tracking-[-0.005em] mb-4"
+                        className="text-[clamp(1.225rem,2.8vw,2.025rem)] font-normal leading-[1.08] tracking-[-0.005em] mb-4"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {cs.title}
