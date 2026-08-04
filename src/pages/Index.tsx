@@ -232,7 +232,7 @@ const Index = () => {
 
       {/* ── CASE STUDIES ─────────────────────────── */}
       <section id="work" className="border-t border-border">
-        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}>
+        {/*   <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             {/*    <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
@@ -245,7 +245,7 @@ const Index = () => {
               Case studies
             </h2>
           </motion.div>
-        </div>
+        </div>*/}
 
         <div className={`${wrapCls} flex flex-col gap-4 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
