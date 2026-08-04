@@ -28,7 +28,7 @@ const PhoneShell = ({ children }: { children: React.ReactNode }) => (
 const RowCaption = ({ title, desc }: { title: string; desc: string }) => (
   <div className="text-center max-w-[420px]">
     <h4
-      className="text-[1.375rem] font-normal tracking-[-0.02em] text-foreground mb-2.5 leading-[1.2]"
+      className="text-[1.375rem] font-normal tracking-normal text-foreground mb-2.5 leading-[1.2]"
       style={{ fontFamily: t.displayFont }}
     >
       {title}

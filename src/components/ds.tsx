@@ -458,7 +458,7 @@ export const ClosingSection = ({
         whileInView="visible"
         viewport={{ once: true }}
         variants={fade}
-        className="text-2xl md:text-4xl font-normal tracking-[-0.025em] max-w-3xl mx-auto mb-12 leading-tight"
+        className="text-2xl md:text-4xl font-normal tracking-[-0.005em] max-w-3xl mx-auto mb-12 leading-tight"
         style={{ fontFamily: t.displayFont }}
       >
         {quote}{" "}
