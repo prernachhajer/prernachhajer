@@ -458,7 +458,7 @@ const CaseStudyDesignSystem = () => {
             className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
-            The quieter, more persistent discipline.
+            Maintenance is part of the system
           </motion.h2>
           <motion.p
             initial="hidden"
