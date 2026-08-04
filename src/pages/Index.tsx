@@ -237,7 +237,7 @@ const Index = () => {
             {/*    <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
               Selected Work
-            </div> */}
+            </div> 
             <h2
               className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
               style={{ fontFamily: t.displayFont }}
