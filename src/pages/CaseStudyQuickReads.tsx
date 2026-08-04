@@ -376,7 +376,7 @@ const CaseStudyQuickReads = () => {
               constraint:
                 "Writing a summary took real editorial skill — not just fewer words, but a hook and an accurate read of the story",
               decision:
-                "Quick Reads became a funnel step, not a dead end — one tap into the full article, whenever a reader wants it.",
+                "We accepted the added editorial workload — quality summaries meant real writing time, not just trimming.",
               quote: "If the summaries had felt generic, Cricinfo would've felt like every other quick-news app",
             },
             {
