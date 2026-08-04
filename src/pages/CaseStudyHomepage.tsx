@@ -536,7 +536,7 @@ const CaseStudyHomepage = () => {
             {[
               {
                 label: "Bounce rate reduction",
-                num: "~20–30%",
+                num: "~30%",
 
                 desc: "Clear zones and surfaced content made the page easier to scan. That reduction in cognitive load brought bounce rates down significantly.",
               },
