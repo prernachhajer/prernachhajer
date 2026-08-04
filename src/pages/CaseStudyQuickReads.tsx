@@ -50,7 +50,7 @@ const CaseStudyQuickReads = () => {
 
             <div className="mb-12">
               <h2
-                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-normal leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 25 years of great writing. Most users never finish it.
@@ -62,7 +62,7 @@ const CaseStudyQuickReads = () => {
 
             <div>
               <h2
-                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[-0.02em] leading-[1.15] mb-3"
+                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-normal leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 Losing to Inshorts and Instagram.
@@ -209,7 +209,7 @@ const CaseStudyQuickReads = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -437,7 +437,7 @@ const CaseStudyQuickReads = () => {
                 Launch · 2024
               </span>
               <h2
-                className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-background/90 leading-tight"
+                className="text-2xl md:text-3xl font-normal tracking-[-0.005em] text-background/90 leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
                 We didn't flip a switch.
@@ -616,7 +616,7 @@ const CaseStudyQuickReads = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-xl md:text-xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
+          className="text-xl md:text-xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Getting users to commit to something deep starts with giving them a reason to care

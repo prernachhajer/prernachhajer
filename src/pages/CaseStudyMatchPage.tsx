@@ -213,7 +213,7 @@ const CaseStudyMatchPage = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -295,7 +295,7 @@ const CaseStudyMatchPage = () => {
               className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-foreground/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.005em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 1. Match state-based tab structure
@@ -547,7 +547,7 @@ const CaseStudyMatchPage = () => {
               className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mt-28 mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.025em] mb-2 text-foreground/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.005em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 2. Cross-tab content snacking
@@ -739,13 +739,13 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 border-t border-border pt-8 pb-10">
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The question</p>
-                <p className="text-xl md:text-1xl leading-snug tracking-[-0.01em]">
+                <p className="text-xl md:text-1xl leading-snug tracking-normal">
                   {block.question.title} {block.question.desc}
                 </p>
               </div>
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The decision</p>
-                <p className="text-xl md:text-1xl leading-snug tracking-[-0.01em] mb-6">
+                <p className="text-xl md:text-1xl leading-snug tracking-normal mb-6">
                   {block.decision.title} <span className="text-muted-foreground">{block.decision.desc}</span>
                 </p>
                 <p className="text-base italic text-muted-foreground leading-relaxed">
@@ -862,7 +862,7 @@ const CaseStudyMatchPage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-2xl md:text-3xl font-normal mb-8 tracking-[-0.025em] text-background/90 max-w-3xl"
+          className="text-2xl md:text-3xl font-normal mb-8 tracking-[-0.005em] text-background/90 max-w-3xl"
           style={{ fontFamily: t.displayFont }}
         >
           Design debt doesn't announce itself. It just gets heavier.

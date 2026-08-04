@@ -55,7 +55,7 @@ const CaseStudyDesignSystem = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
+              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] mb-3"
               style={{ fontFamily: t.displayFont }}
             >
               This is what we inherited.
@@ -199,7 +199,7 @@ const CaseStudyDesignSystem = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 The friction, and what it took to launch
@@ -279,7 +279,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.005em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Fewer variants, more power
@@ -455,7 +455,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.005em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Maintenance is part of the system
@@ -657,7 +657,7 @@ const CaseStudyDesignSystem = () => {
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
             >
               <p className={`${t.label} text-primary mb-4`}>{card.label}</p>
-              <h4 className="text-2xl font-normal tracking-[-0.01em] mb-6">{card.title}</h4>
+              <h4 className="text-2xl font-normal tracking-normal mb-6">{card.title}</h4>
               <ul className="divide-y divide-border/40">
                 {card.items.map((item, idx) => (
                   <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
@@ -806,7 +806,7 @@ const CaseStudyDesignSystem = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
+          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Five years on this project changed how I think about what design work actually involves

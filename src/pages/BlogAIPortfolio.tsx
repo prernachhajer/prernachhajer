@@ -136,7 +136,7 @@ const BlogAIPortfolio = () => {
             className={`py-14 md:py-18 ${i < sections.length - 1 ? "border-b border-border/50" : ""}`}
           >
             <h2
-              className="text-xl md:text-2xl font-normal tracking-[-0.02em] mb-6 leading-[1.2]"
+              className="text-xl md:text-2xl font-normal tracking-normal mb-6 leading-[1.2]"
               style={{ fontFamily: t.displayFont }}
             >
               {sec.heading}
@@ -226,7 +226,7 @@ const BlogAIPortfolio = () => {
             >
               <p className={`${t.labelSm} text-muted-foreground mb-2`}>2019 — 2024 · Design Systems</p>
               <h3
-                className="text-xl md:text-2xl font-normal tracking-[-0.02em] leading-[1.2] mb-3"
+                className="text-xl md:text-2xl font-normal tracking-normal leading-[1.2] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 What building a design system over the years really taught me

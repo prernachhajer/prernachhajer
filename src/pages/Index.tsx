@@ -154,7 +154,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-normal leading-[1.02] tracking-[-0.03em]"
+              className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-normal leading-[1.02] tracking-[-0.01em]"
               style={{ fontFamily: t.displayFont }}
             >
               Defining teams & products
@@ -173,7 +173,7 @@ const Index = () => {
             >
               <div>
                 <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
                   style={{ fontFamily: t.displayFont }}
                 >
                   3.4 → 4.5
@@ -182,7 +182,7 @@ const Index = () => {
               </div>
               <div>
                 <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
                   style={{ fontFamily: t.displayFont }}
                 >
                   100M+
@@ -191,7 +191,7 @@ const Index = () => {
               </div>
               <div>
                 <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.02em]"
+                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
                   style={{ fontFamily: t.displayFont }}
                 >
                   12 years
@@ -239,7 +239,7 @@ const Index = () => {
               Selected Work
             </div> */}
             <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
               style={{ fontFamily: t.displayFont }}
             >
               Case studies
@@ -274,7 +274,7 @@ const Index = () => {
                         <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                       </div>
                       <h3
-                        className="text-[clamp(1.625rem,2.8vw,2.625rem)] font-normal leading-[1.08] tracking-[-0.025em] mb-4"
+                        className="text-[clamp(1.625rem,2.8vw,2.625rem)] font-normal leading-[1.08] tracking-[-0.005em] mb-4"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {cs.title}
@@ -296,7 +296,7 @@ const Index = () => {
                     <div className="flex items-end justify-between gap-4 mt-8 pt-6 border-t border-border">
                       <div>
                         <span
-                          className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] leading-none block"
+                          className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.02em] leading-none block"
                           style={{ fontFamily: t.displayFont }}
                         >
                           {cs.statNum}
@@ -417,7 +417,7 @@ const Index = () => {
                           Coming Soon
                         </span>
                         <span
-                          className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-[-0.02em] italic"
+                          className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-normal italic"
                           style={{ fontFamily: t.displayFont }}
                         >
                           In progress
@@ -436,7 +436,7 @@ const Index = () => {
       <section id="about" className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)]`}>
         {/* Watermark */}
         <span
-          className="absolute -right-[4%] -bottom-[8%] text-[48vw] font-bold italic leading-[0.8] tracking-[-0.06em] select-none pointer-events-none"
+          className="absolute -right-[4%] -bottom-[8%] text-[48vw] font-bold italic leading-[0.8] tracking-[-0.04em] select-none pointer-events-none"
           style={{ fontFamily: t.displayFont, WebkitTextStroke: "1px rgba(250,249,247,0.015)", color: "transparent" }}
         >
           PC
@@ -458,7 +458,7 @@ const Index = () => {
             {/* Left: headline + bio */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               <h2
-                className="text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.1] tracking-[-0.025em] text-background mb-8"
+                className="text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
                 Making sense of complexity,
@@ -480,7 +480,7 @@ const Index = () => {
                   >
                     <div>
                       <p
-                        className="text-lg font-normal tracking-[-0.02em] text-background/90 leading-[1.2] mb-2"
+                        className="text-lg font-normal tracking-normal text-background/90 leading-[1.2] mb-2"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
@@ -535,7 +535,7 @@ const Index = () => {
               BLOG
             </div>
             <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.025em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
               style={{ fontFamily: t.displayFont }}
             >
               Design <em className="italic text-muted-foreground">thinking</em>
@@ -555,7 +555,7 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
               <h3
-                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-normal mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
@@ -583,7 +583,7 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
               <h3
-                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[-0.02em] mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-normal mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 From Zero to Shipped: How I Built My Entire Portfolio{" "}
@@ -611,7 +611,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[-0.035em] text-background/90"
+            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[-0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
@@ -637,7 +637,7 @@ const Index = () => {
             <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Email</span>
             <a
               href="mailto:work.chhajer@gmail.com"
-              className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-[-0.02em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
+              className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-normal text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
               style={{ fontFamily: t.displayFont }}
             >
               work.chhajer@gmail.com

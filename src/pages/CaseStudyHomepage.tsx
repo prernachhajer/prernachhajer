@@ -55,7 +55,7 @@ const CaseStudyHomepage = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.025em] mb-3"
+              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] mb-3"
               style={{ fontFamily: t.displayFont }}
             >
               This is what we inherited.
@@ -242,7 +242,7 @@ const CaseStudyHomepage = () => {
                 What we found
               </p> */}
               <h3
-                className="text-2xl md:text-2xl font-normal tracking-[-0.015em] leading-[1.15]"
+                className="text-2xl md:text-2xl font-normal tracking-normal leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -680,7 +680,7 @@ const CaseStudyHomepage = () => {
                 THE DECISION · 2022–2026
               </span>
               <h2
-                className="text-2xl md:text-3xl font-normal tracking-[-0.025em] text-foreground leading-tight"
+                className="text-2xl md:text-3xl font-normal tracking-[-0.005em] text-foreground leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
                 Don't redesign the
@@ -881,7 +881,7 @@ const CaseStudyHomepage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.025em] text-background/90 max-w-3xl mx-auto"
+          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Five years on one surface teaches you things a project never could.
