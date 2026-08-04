@@ -29,9 +29,9 @@ const caseStudies = [
   {
     num: "01 / 04",
     company: "ESPN Cricinfo",
-    title: "Redesigning cricket's most visited homepage",
+    title: "Redesigning Cricket's Most-Visited Homepage for 10M+ Fans",
     titleEm: "",
-    desc: "Five years of redesigning and evolving the homepage. A story of iteration, user research, and what it means to design for 10M+ fans.",
+
     tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "cross-platform" as const,
     thumbImage: thumbHomepage,
@@ -46,7 +46,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Scaling a Design System for a global cricket platform",
     titleEm: "",
-    desc: "How a single Figma library grew into a 170-file design system — five phases, one team, and a complete rethink of how components should work.",
+
     tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "desktop" as const,
     thumbContain: true,
@@ -61,7 +61,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Simplifying an Overloaded Page for 10M+ Fans",
     titleEm: "",
-    desc: "Untangling a match page so 10M+ fans could find what they came for — simplifying without losing depth, the hardest kind of design problem.",
+
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
     thumbType: "desktop" as const,
     thumbContain: true,
@@ -76,7 +76,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Bite-sized cricket content designed to increase reader engagement",
     titleEm: "",
-    desc: "A new content format built to pull users deeper into stories, faster — increasing engagement through information architecture and editorial thinking.",
+
     tags: ["Feature Design", "Content Strategy", "Engagement"],
     thumbType: "mobile" as const,
     thumbImage: thumbQuickReads,
