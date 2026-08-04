@@ -31,6 +31,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Redesigning Cricket's Most-Visited Homepage for 10M+ Fans",
     titleEm: "",
+    desc: "Five years of redesigning and evolving the world's most visited cricket homepage. A story of iteration, user research, and what it means to design for 10M+ fans.",
 
     tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "cross-platform" as const,
@@ -46,6 +47,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Scaling a Design System for a global cricket platform",
     titleEm: "",
+    desc: "Building shared infrastructure across web and app — 170+ files, one system, and teams shipping faster with less rework.",
 
     tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "desktop" as const,
@@ -61,6 +63,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Simplifying an Overloaded Page for 10M+ Fans",
     titleEm: "",
+    desc: "Untangling a page that grew 12 tabs deep — restructuring navigation so fans find what they need during a live match.",
 
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
     thumbType: "desktop" as const,
@@ -76,6 +79,7 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "Bite-sized cricket content designed to increase reader engagement",
     titleEm: "",
+    desc: "A new content format built to pull users deeper into stories, faster — increasing engagement through information architecture and editorial thinking.",
 
     tags: ["Feature Design", "Content Strategy", "Engagement"],
     thumbType: "mobile" as const,
