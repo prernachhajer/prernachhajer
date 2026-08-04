@@ -30,7 +30,7 @@ const caseStudies = [
     num: "01 / 04",
     company: "ESPN Cricinfo",
     title: "Redesigning cricket's most visited homepage",
-    titleEm: "2022–2026",
+    titleEm: "",
     desc: "Five years of redesigning and evolving the homepage. A story of iteration, user research, and what it means to design for 10M+ fans.",
     tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "cross-platform" as const,
