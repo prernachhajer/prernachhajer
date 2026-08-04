@@ -282,7 +282,7 @@ const CaseStudyDesignSystem = () => {
             className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.025em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
-            Component properties changed what a single component could do. Fewer files, more power
+            Fewer variants, more power
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -292,8 +292,8 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            A year in, Figma's new component properties let dozens of separate components live inside one. We rebuilt
-            rather than patched.
+            We used to have a different component for every use case. Now, because of figma properties, a few components
+            can handle all the use cases.
           </motion.p>
         </div>
 
