@@ -216,7 +216,7 @@ const CaseStudyMatchPage = () => {
                 className="text-2xl md:text-3xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                Three findings, two problems
+                What we found
               </h3>
             </div>
           </motion.div>
