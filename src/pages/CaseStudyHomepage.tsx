@@ -245,7 +245,7 @@ const CaseStudyHomepage = () => {
                 className="text-2xl md:text-2xl font-normal tracking-[-0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                Four findings that reframed the homepage.
+                What we found
               </h3>
             </div>
             <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}>04 findings</span>
