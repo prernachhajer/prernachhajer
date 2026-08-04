@@ -640,15 +640,15 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 num: "01",
-                title: "Tab names can no longer describe everything inside them",
+                title: "Content duplication — same media can end up on more than one tab.",
               },
               {
                 num: "02",
-                title: "The sub-tab toggle adds a step some users won't notice they need",
+                title: "Blurring content types — commentary and live blog risk feeling merged, not distinct.",
               },
               {
                 num: "03",
-                title: "Playing XI is no longer a destination of its own",
+                title: "Increased scope for errors — more moving pieces per tab (media, commentary, embeds) means more places to break.",
               },
             ].map((tradeoff, i) => {
               const corners = ["md:rounded-l-xl", "", "md:rounded-r-xl"];
