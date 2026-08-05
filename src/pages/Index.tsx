@@ -33,9 +33,9 @@ import decimalLogo from "@/assets/company-logos/decimal.png";
 
 // Tool logos (CDN asset pointers)
 import figmaLogo from "@/assets/tool-logos/figma.png.asset.json";
-import claudeLogo from "@/assets/tool-logos/claude.png.asset.json";
+import claudeLogo from "@/assets/tool-logos/claude2.png.asset.json";
 import lovableLogo from "@/assets/tool-logos/lovable.svg.asset.json";
-import granolaLogo from "@/assets/tool-logos/granola2.png.asset.json";
+import granolaLogo from "@/assets/tool-logos/granola.png.asset.json";
 import chatgptLogo from "@/assets/tool-logos/chatgpt.png.asset.json";
 import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
 import gaLogo from "@/assets/tool-logos/ga2.png.asset.json";
