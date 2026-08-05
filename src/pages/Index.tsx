@@ -563,7 +563,7 @@ const Index = () => {
                 startups and global platforms, building systems that make design work faster, smarter, and more human.
               </p>
 
-              {/* Beliefs */}
+              {/* Beliefs 
               <div className="mb-10">
                 {beliefs.map((b, i) => (
                   <div
@@ -581,14 +581,7 @@ const Index = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-
-            {/* Right: photo + beliefs */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-              <div className="mb-10 rounded-xl overflow-hidden">
-                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
-              </div>
+              </div> */}
 
               <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>Specialties</p>
               <div className="flex flex-wrap gap-2">
@@ -606,6 +599,13 @@ const Index = () => {
                     {s}
                   </span>
                 ))}
+              </div>
+            </motion.div>
+
+            {/* Right: photo + beliefs */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <div className="mb-10 rounded-xl overflow-hidden">
+                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
               </div>
             </motion.div>
           </div>
