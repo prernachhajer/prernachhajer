@@ -41,6 +41,10 @@ import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
 import gaLogo from "@/assets/tool-logos/google-analytics.png.asset.json";
 import slackLogo from "@/assets/tool-logos/slack.svg.asset.json";
 import jiraLogo from "@/assets/tool-logos/jira.png.asset.json";
+import mixpanelLogo from "@/assets/tool-logos/mixpanel.png.asset.json";
+import zoomLogo from "@/assets/tool-logos/zoom.png.asset.json";
+import miroLogo from "@/assets/tool-logos/miro.png.asset.json";
+import zeroheightLogo from "@/assets/tool-logos/zeroheight.png.asset.json";
 
 const fade = animation.fade;
 
@@ -54,10 +58,10 @@ const tools = [
   { name: "Google Analytics", logo: gaLogo.url },
   { name: "Slack", logo: slackLogo.url },
   { name: "Jira", logo: jiraLogo.url },
-  { name: "Mixpanel", logo: null },
-  { name: "Zoom", logo: null },
-  { name: "Miro", logo: null },
-  { name: "Zeroheight", logo: null },
+  { name: "Mixpanel", logo: mixpanelLogo.url },
+  { name: "Zoom", logo: zoomLogo.url },
+  { name: "Miro", logo: miroLogo.url },
+  { name: "Zeroheight", logo: zeroheightLogo.url },
 ];
 
 const strengths = [
