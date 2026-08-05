@@ -6,7 +6,6 @@
 import { motion } from "framer-motion";
 import {
   NavCaseStudy,
-  CaseStudyHero,
   SectionLabel,
   Section,
   DarkSection,
@@ -41,13 +40,85 @@ const CaseStudyHomepage = () => {
       <NavCaseStudy period="2022 — 2026" />
 
       {/* HERO */}
-      <CaseStudyHero
-        headline="Why the Homepage"
-        headlineAccent="Needed to Change"
-        headlineEnd=""
-        tags={["Cricinfo", "Homepage Redesign", "Senior Designer → Lead", "10M+ Users", "2022 — 2026"]}
-        teams={["Sr. Product Designer", "Design Manager", "Product Manager"]}
-      />
+      <section className="min-h-[calc(100svh-3.75rem)] pt-24 md:pt-28 pb-8 px-6 md:px-14 flex flex-col justify-center">
+        <div className={`${layout.containerWide} w-full mx-auto text-center`}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-10 md:mb-12`}
+          >
+            <span className="w-5 h-px bg-muted-foreground/70" />
+            <span>Case Study</span>
+            <span className="w-5 h-px bg-muted-foreground/70" />
+          </motion.div>
+
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            style={{ fontFamily: t.displayFont }}
+          >
+            <span className="block">Why the Homepage</span>
+            <span className="block text-primary italic font-medium mt-2">Needed to Change</span>
+          </motion.h1>
+
+          <motion.dl
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={2}
+            className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center"
+          >
+            {[
+              {
+                label: "Client / Scope",
+                value: (
+                  <>
+                    Cricinfo —<br />Homepage Redesign
+                  </>
+                ),
+              },
+              {
+                label: "Role / Worked With",
+                value: (
+                  <>
+                    Lead, with DM + PM<br />+ 2 Sr. PDs
+                  </>
+                ),
+              },
+              {
+                label: "Impact / Timeline",
+                value: (
+                  <>
+                    10M+ users, 2022–<br />2026
+                  </>
+                ),
+              },
+            ].map((item, index) => (
+              <div
+                key={item.label}
+                className={`px-5 py-7 md:py-8 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}
+              >
+                <dt className="text-xs md:text-sm font-medium uppercase text-muted-foreground mb-3">{item.label}</dt>
+                <dd className="text-lg md:text-xl leading-snug">{item.value}</dd>
+              </div>
+            ))}
+          </motion.dl>
+
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className={`${t.labelSm} text-muted-foreground mt-9 md:mt-11`}
+          >
+            Scroll
+          </motion.p>
+        </div>
+      </section>
 
       {/* THE STARTING POINT — 2022 */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
