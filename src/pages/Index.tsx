@@ -20,6 +20,15 @@ import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
 import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 import aboutPhoto from "@/assets/about-prerna.png";
+import proximityLogo from "@/assets/company-logos/proximity.svg";
+import americanExpressLogo from "@/assets/company-logos/american-express.png";
+import cognizantLogo from "@/assets/company-logos/cognizant.png";
+import espnCricinfoLogo from "@/assets/company-logos/espncricinfo.svg";
+import fabHotelsLogo from "@/assets/company-logos/fabhotels.png";
+import telstraLogo from "@/assets/company-logos/telstra.png";
+import prudentialLogo from "@/assets/company-logos/prudential.webp";
+import singtelOptusLogo from "@/assets/company-logos/singtel-optus.png";
+import decimalLogo from "@/assets/company-logos/decimal.png";
 
 const fade = animation.fade;
 
@@ -84,6 +93,18 @@ const caseStudies = [
     statLabel: "engagement",
     link: "/case-study/quick-reads",
   },
+];
+
+const companies = [
+  { name: "Proximity Works", logo: proximityLogo, className: "h-11 md:h-12" },
+  { name: "American Express", logo: americanExpressLogo, className: "h-10 md:h-11" },
+  { name: "Cognizant", logo: cognizantLogo, className: "h-9 md:h-10" },
+  { name: "ESPNcricinfo", logo: espnCricinfoLogo, className: "h-8 md:h-9" },
+  { name: "FabHotels", logo: fabHotelsLogo, className: "h-9 md:h-10" },
+  { name: "Telstra", logo: telstraLogo, className: "h-10 md:h-11" },
+  { name: "Prudential", logo: prudentialLogo, className: "h-10 md:h-11" },
+  { name: "Singtel Optus", logo: singtelOptusLogo, className: "h-9 md:h-10" },
+  { name: "Decimal", logo: decimalLogo, className: "h-8 md:h-9" },
 ];
 
 const beliefs = [
@@ -227,6 +248,28 @@ const Index = () => {
               </button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── COMPANIES ────────────────────────────── */}
+      <section aria-label="Companies I've worked with" className="border-y border-border py-9 md:py-11 overflow-hidden">
+        <p className={`${t.labelSm} text-muted-foreground text-center mb-8`}>Companies I've worked with</p>
+        <div className="company-marquee">
+          <div className="company-marquee-track">
+            {[0, 1].map((set) => (
+              <div key={set} className="company-marquee-set" aria-hidden={set === 1}>
+                {companies.map((company) => (
+                  <div key={`${set}-${company.name}`} className="company-logo-item">
+                    <img
+                      src={company.logo}
+                      alt={set === 0 ? company.name : ""}
+                      className={`${company.className} w-auto max-w-[11rem] md:max-w-[13rem] object-contain`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
