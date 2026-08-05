@@ -644,7 +644,7 @@ const Index = () => {
                         src={tool.logo}
                         alt={`${tool.name} logo`}
                         loading="lazy"
-                        className="h-8 w-8 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                        className="h-8 w-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                       />
                     ) : (
                       <span className="h-8 w-8 flex items-center justify-center rounded-md border border-border text-[0.625rem] text-muted-foreground">
