@@ -236,7 +236,7 @@ const Index = () => {
               <p className="text-[0.75rem] text-muted-foreground mt-2">{label}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* ── COMPANIES ────────────────────────────── */}
