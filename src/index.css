@@ -139,7 +139,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    opacity: 0.9;
+    opacity: 0.75;
     transition: opacity 200ms ease;
   }
 
@@ -147,9 +147,15 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 200ms ease, opacity 200ms ease;
   }
 
-  .company-logo-item:hover {
+  .company-marquee:hover .company-logo-image {
+    filter: grayscale(0%);
+  }
+
+  .company-marquee:hover .company-logo-item {
     opacity: 1;
   }
 
