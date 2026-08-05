@@ -566,10 +566,7 @@ const Index = () => {
               {/* Beliefs */}
               <div className="mb-10">
                 {beliefs.map((b, i) => (
-                  <div
-                    key={b.num}
-                    className={`py-[22px] border-t border-background/[0.07] ${i === beliefs.length - 1 ? "border-b border-background/[0.07]" : ""}`}
-                  >
+                  <div key={b.num} className={`py-[22px] border-b border-background/[0.07] `}>
                     <div>
                       <p
                         className="text-lg font-normal tracking-normal text-background/90 leading-[1.2] mb-2"
