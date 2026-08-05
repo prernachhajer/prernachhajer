@@ -151,11 +151,11 @@
     transition: filter 200ms ease, opacity 200ms ease;
   }
 
-  .company-marquee:hover .company-logo-image {
+  .companies-section:hover .company-logo-image {
     filter: grayscale(0%);
   }
 
-  .company-marquee:hover .company-logo-item {
+  .companies-section:hover .company-logo-item {
     opacity: 1;
   }
 
