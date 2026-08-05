@@ -108,15 +108,16 @@ const CaseStudyHomepage = () => {
             ))}
           </motion.dl>
 
-          <motion.p
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fade}
             custom={3}
-            className={`${t.labelSm} text-muted-foreground mt-9 md:mt-11`}
+            className={`flex flex-col items-center gap-3 ${t.labelSm} text-muted-foreground mt-9 md:mt-11`}
           >
-            Scroll
-          </motion.p>
+            <span>Scroll</span>
+            <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
+          </motion.div>
         </div>
       </section>
 
