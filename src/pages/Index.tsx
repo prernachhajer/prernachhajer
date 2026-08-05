@@ -31,7 +31,58 @@ import prudentialLogo from "@/assets/company-logos/prudential.webp";
 import singtelOptusLogo from "@/assets/company-logos/singtel-optus.png";
 import decimalLogo from "@/assets/company-logos/decimal.png";
 
+// Tool logos (CDN asset pointers)
+import figmaLogo from "@/assets/tool-logos/figma.svg.asset.json";
+import claudeLogo from "@/assets/tool-logos/claude.png.asset.json";
+import lovableLogo from "@/assets/tool-logos/lovable.svg.asset.json";
+import granolaLogo from "@/assets/tool-logos/granola.png.asset.json";
+import chatgptLogo from "@/assets/tool-logos/chatgpt.svg.asset.json";
+import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
+import gaLogo from "@/assets/tool-logos/google-analytics.png.asset.json";
+import slackLogo from "@/assets/tool-logos/slack.svg.asset.json";
+import jiraLogo from "@/assets/tool-logos/jira.png.asset.json";
+
 const fade = animation.fade;
+
+const tools = [
+  { name: "Figma", logo: figmaLogo.url },
+  { name: "Claude", logo: claudeLogo.url },
+  { name: "Lovable", logo: lovableLogo.url },
+  { name: "Granola", logo: granolaLogo.url },
+  { name: "ChatGPT", logo: chatgptLogo.url },
+  { name: "Notion", logo: notionLogo.url },
+  { name: "Google Analytics", logo: gaLogo.url },
+  { name: "Slack", logo: slackLogo.url },
+  { name: "Jira", logo: jiraLogo.url },
+  { name: "Mixpanel", logo: null },
+  { name: "Zoom", logo: null },
+  { name: "Miro", logo: null },
+  { name: "Zeroheight", logo: null },
+];
+
+const strengths = [
+  {
+    icon: Users,
+    title: "Mentoring designers",
+    desc: "Set the quality bar through hands-on critique",
+  },
+  {
+    icon: Target,
+    title: "Stakeholder alignment",
+    desc: "Turn ambiguity into decisions teams can rally behind",
+  },
+  {
+    icon: Rocket,
+    title: "0 to 1, then scaled",
+    desc: "Shipped early concepts through to 10M+ user systems",
+  },
+  {
+    icon: Wand2,
+    title: "AI-augmented workflows",
+    desc: "Design and prototype faster without losing craft",
+  },
+];
+
 
 // ── DATA ──────────────────────────────────────
 
