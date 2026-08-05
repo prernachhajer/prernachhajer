@@ -6,7 +6,6 @@
 import { motion } from "framer-motion";
 import {
   NavCaseStudy,
-  CaseStudyHero,
   SectionLabel,
   Section,
   DarkSection,
@@ -29,12 +28,62 @@ const CaseStudyQuickReads = () => {
       <NavCaseStudy period="2024" />
 
       {/* HERO */}
-      <CaseStudyHero
-        headline="Quick Reads: getting"
-        headlineAccent="80% of casual users"
-        headlineEnd="into cricinfo's long-form writing"
-        tags={["Cricinfo App", "Quick Reads", "Design Lead", "iOS & Android", "2024"]}
-      />
+      <section className="pt-24 md:pt-28 pb-8 px-6 md:px-14 flex flex-col justify-center">
+        <div className={`${layout.containerWide} w-full mx-auto text-center`}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-10 md:mb-12`}
+          >
+            <span className="w-5 h-px bg-muted-foreground/70" />
+            <span>Case Study</span>
+            <span className="w-5 h-px bg-muted-foreground/70" />
+          </motion.div>
+
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            style={{ fontFamily: t.displayFont }}
+          >
+            <span className="block">Getting 80% of Casual Users</span>
+            <span className="block text-primary italic font-medium mt-2">Into Long-form Writing</span>
+          </motion.h1>
+
+          <motion.dl
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={2}
+            className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center"
+          >
+            {[
+              { label: "Client / Scope", value: <>Cricinfo App —<br />Quick Reads</> },
+              { label: "Role / Platform", value: <>Design Lead<br />iOS + Android</> },
+              { label: "Audience / Timeline", value: <>80% casual users<br />2024</> },
+            ].map((item, index) => (
+              <div key={item.label} className={`px-5 py-7 md:py-8 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
+                <dt className="text-xs md:text-sm font-medium uppercase text-muted-foreground mb-3">{item.label}</dt>
+                <dd className="text-lg md:text-xl leading-snug">{item.value}</dd>
+              </div>
+            ))}
+          </motion.dl>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className={`flex flex-col items-center gap-3 ${t.labelSm} text-muted-foreground mt-9 md:mt-11`}
+          >
+            <span>Scroll</span>
+            <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
+          </motion.div>
+        </div>
+      </section>
 
       {/* THE STARTING POINT */}
       <section className={`${spacing.sectionGap} ${layout.px}`}>
