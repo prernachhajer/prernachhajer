@@ -64,16 +64,16 @@ const CaseStudyMatchPage = () => {
             animate="visible"
             variants={fade}
             custom={2}
-            className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center"
+            className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center max-w-5xl mx-auto"
           >
             {[
               { label: "Client / Scope", value: <>Cricinfo —<br />Match Page Optimization</> },
               { label: "Role / Worked With", value: <>Senior Designer, with Product<br />Designer + Product Manager</> },
               { label: "Platform / Timeline", value: <>Android + iOS<br />2024–2025</> },
             ].map((item, index) => (
-              <div key={item.label} className={`px-5 py-7 md:py-8 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
-                <dt className="text-xs md:text-sm font-medium uppercase text-muted-foreground mb-3">{item.label}</dt>
-                <dd className="text-lg md:text-xl leading-snug">{item.value}</dd>
+              <div key={item.label} className={`px-5 py-5 md:py-6 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
+                <dt className="text-[0.6875rem] md:text-xs font-medium uppercase text-muted-foreground mb-2.5">{item.label}</dt>
+                <dd className="text-base md:text-lg leading-snug">{item.value}</dd>
               </div>
             ))}
           </motion.dl>
