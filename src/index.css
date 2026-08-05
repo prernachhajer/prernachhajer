@@ -126,9 +126,8 @@
   }
 
   .company-logo-item {
-    width: 13.5rem;
-    height: 5rem;
-    padding-inline: 1.75rem;
+    width: 10rem;
+    height: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,16 +142,6 @@
     height: 100%;
     object-fit: contain;
   }
-
-  .company-logo-image--proximity { transform: scale(0.7); }
-  .company-logo-image--american-express { transform: scale(0.68); }
-  .company-logo-image--cognizant { transform: scale(0.86); }
-  .company-logo-image--espncricinfo { transform: scale(0.86); }
-  .company-logo-image--fabhotels { transform: scale(0.8); }
-  .company-logo-image--telstra { transform: scale(0.56); }
-  .company-logo-image--prudential { transform: scale(0.82); }
-  .company-logo-image--singtel-optus { transform: scale(0.74); }
-  .company-logo-image--decimal { transform: scale(0.82); }
 
   .company-logo-item:hover {
     filter: grayscale(0);
