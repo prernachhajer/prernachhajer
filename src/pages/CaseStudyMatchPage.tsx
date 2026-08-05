@@ -9,7 +9,6 @@ import matchSolutionImg from "@/assets/match-page-solution.png";
 import matchSolution2Img from "@/assets/match-page-solution2.png";
 import {
   NavCaseStudy,
-  CaseStudyHero,
   SectionLabel,
   Section,
   DarkSection,
@@ -35,13 +34,62 @@ const CaseStudyMatchPage = () => {
       <NavCaseStudy period="2024 — 2025" />
 
       {/* HERO */}
-      <CaseStudyHero
-        headline="The match page had"
-        headlineAccent="14 tabs."
-        headlineEnd="Users couldn't find anything."
-        tags={["Cricinfo", "Match Page Optimization", "Senior Designer", "Android & iOS"]}
-        teams={["Sr. Product Designer", "Product Manager"]}
-      />
+      <section className="pt-24 md:pt-28 pb-8 px-6 md:px-14 flex flex-col justify-center">
+        <div className={`${layout.containerWide} w-full mx-auto text-center`}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-10 md:mb-12`}
+          >
+            <span className="w-5 h-px bg-muted-foreground/70" />
+            <span>Case Study</span>
+            <span className="w-5 h-px bg-muted-foreground/70" />
+          </motion.div>
+
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            style={{ fontFamily: t.displayFont }}
+          >
+            <span className="block">The Match Page Had 14 Tabs.</span>
+            <span className="block text-primary italic font-medium mt-2">Users Couldn't Find Anything.</span>
+          </motion.h1>
+
+          <motion.dl
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={2}
+            className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center"
+          >
+            {[
+              { label: "Client / Scope", value: <>Cricinfo —<br />Match Page Optimization</> },
+              { label: "Role / Worked With", value: <>Senior Designer, with Product<br />Designer + Product Manager</> },
+              { label: "Platform / Timeline", value: <>Android + iOS<br />2024–2025</> },
+            ].map((item, index) => (
+              <div key={item.label} className={`px-5 py-7 md:py-8 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
+                <dt className="text-xs md:text-sm font-medium uppercase text-muted-foreground mb-3">{item.label}</dt>
+                <dd className="text-lg md:text-xl leading-snug">{item.value}</dd>
+              </div>
+            ))}
+          </motion.dl>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className={`flex flex-col items-center gap-3 ${t.labelSm} text-muted-foreground mt-9 md:mt-11`}
+          >
+            <span>Scroll</span>
+            <span className="w-px h-10 bg-muted-foreground/50 animate-bounce" />
+          </motion.div>
+        </div>
+      </section>
 
       {/* 01 — PROBLEM */}
       <DarkSection label="Problem">
