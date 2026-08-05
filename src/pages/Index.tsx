@@ -549,7 +549,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(32px,4vw,96px)]">
             {/* Left: headline + bio */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
-              <h2
+              {/*     <h2
                 className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
@@ -561,9 +561,9 @@ const Index = () => {
                 For 12 years, I've been designing products that millions of people use without thinking about. That's
                 the goal — design so clear it disappears. I've moved from execution to ownership to leadership across
                 startups and global platforms, building systems that make design work faster, smarter, and more human.
-              </p>
+              </p> */}
 
-              {/* Beliefs 
+              {/* Beliefs */}
               <div className="mb-10">
                 {beliefs.map((b, i) => (
                   <div
@@ -581,7 +581,7 @@ const Index = () => {
                     </div>
                   </div>
                 ))}
-              </div> */}
+              </div>
 
               <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>Specialties</p>
               <div className="flex flex-wrap gap-2">
