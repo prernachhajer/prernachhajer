@@ -543,7 +543,7 @@ const Index = () => {
             className={`flex items-center gap-3 ${t.label} text-background/65 mb-16`}
           >
             <span className="w-[22px] h-px bg-background/30" />
-            About me
+            HOW I THINK
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(32px,4vw,96px)]">
