@@ -634,7 +634,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-4 gap-y-10 gap-x-4">
                 {tools.map((tool) => (
-                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
+                  <div key={tool.name} className="flex flex-col items-start gap-3 group" title={tool.name}>
                     {tool.logo ? (
                       <img
                         src={tool.logo}
