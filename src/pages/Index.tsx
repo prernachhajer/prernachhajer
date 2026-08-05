@@ -164,10 +164,10 @@ const Index = () => {
       <section id="hero" className="pt-[60px] border-b border-border overflow-hidden">
         <div className={`${wrapCls} pt-16 pb-14 md:pt-24 md:pb-20 lg:pt-28 lg:pb-24 w-full text-center`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-9">
-              <span className="inline-flex items-center gap-2.5 text-[0.6875rem] tracking-[0.1em] uppercase text-primary border border-primary/25 rounded-full px-4 py-2">
-                <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
-                open to design lead roles
-              </span>
+            <span className="inline-flex items-center gap-2.5 text-[0.6875rem] tracking-[0.1em] uppercase text-primary border border-primary/25 rounded-full px-4 py-2">
+              <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
+              open to design lead roles
+            </span>
           </motion.div>
 
           <div className="mx-auto max-w-[980px]">
@@ -176,7 +176,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.75rem,6.2vw,5.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
+              className="text-[clamp(2.45rem,6.2vw,4.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
               style={{ fontFamily: t.displayFont }}
             >
               Defining teams & products that make <span className="text-primary">complexity</span> feel simple.
@@ -190,8 +190,8 @@ const Index = () => {
               className="mx-auto mt-8 max-w-[680px]"
             >
               <p className="text-[0.9375rem] md:text-[1.0625rem] leading-[1.65] text-muted-foreground font-normal">
-                From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped
-                work that moved real numbers. Now applying that same rigor to AI-assisted design.
+                From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and
+                shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
               </p>
               <div className="flex gap-3 flex-col sm:flex-row sm:justify-center mt-9">
                 <Button
@@ -228,18 +228,28 @@ const Index = () => {
               key={label}
               className={`py-8 md:py-11 text-center ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border" : ""}`}
             >
-              <p className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-normal" style={{ fontFamily: t.displayFont }}>
+              <p
+                className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-normal"
+                style={{ fontFamily: t.displayFont }}
+              >
                 {value}
               </p>
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">{label}</p>
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">
+                {label}
+              </p>
             </div>
           ))}
         </motion.div>
       </section>
 
       {/* ── COMPANIES ────────────────────────────── */}
-      <section aria-label="Companies I've worked with" className="border-b border-border bg-secondary/30 py-11 md:py-16 overflow-hidden">
-        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}>Companies I've worked with</p>
+      <section
+        aria-label="Companies I've worked with"
+        className="border-b border-border bg-secondary/30 py-11 md:py-16 overflow-hidden"
+      >
+        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}>
+          Companies I've worked with
+        </p>
         <div className="company-marquee">
           <div className="company-marquee-track">
             {[0, 1].map((set) => (
