@@ -160,22 +160,22 @@ const Index = () => {
       <NavHome />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section id="hero" className="pt-[60px] h-screen max-h-[1000px] flex flex-col">
-        <div className={`${wrapCls} flex flex-col justify-between h-full py-6 md:py-8 w-full`}>
-          <div>
-            <motion.div initial="hidden" animate="visible" variants={fade} className="mb-4 md:mb-6">
+      <section id="hero" className="pt-[60px] border-b border-border">
+        <div className={`${wrapCls} py-12 md:py-20 lg:py-24 w-full`}>
+          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-10">
               <span className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]">
                 <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
                 open to design lead roles
               </span>
-            </motion.div>
+          </motion.div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-normal leading-[1.02] tracking-[-0.01em]"
+              className="lg:col-span-8 text-[clamp(2.65rem,5.5vw,4.75rem)] font-normal leading-[1.02] tracking-[-0.01em]"
               style={{ fontFamily: t.displayFont }}
             >
               Defining teams & products
@@ -190,70 +190,58 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="flex flex-wrap gap-8 md:gap-12 pt-6 mt-12 md:pt-8"
+              className="lg:col-span-4 lg:pb-1"
             >
-              <div>
-                <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
-                  style={{ fontFamily: t.displayFont }}
+              <p className="text-[0.9375rem] md:text-base leading-[1.7] text-muted-foreground font-light max-w-[440px]">
+                From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped
+                work that moved real numbers. Now applying that same rigor to AI-assisted design.
+              </p>
+              <div className="flex gap-3 flex-wrap mt-8">
+                <button
+                  onClick={() => scrollTo("work")}
+                  className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
                 >
-                  3.4 → 4.5
-                </p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1">app rating</p>
-              </div>
-              <div>
-                <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
-                  style={{ fontFamily: t.displayFont }}
+                  View my work →
+                </button>
+                <button
+                  onClick={() => navigate("/resume")}
+                  className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
                 >
-                  100M+
-                </p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1">monthly traffic</p>
-              </div>
-              <div>
-                <p
-                  className="text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-normal"
-                  style={{ fontFamily: t.displayFont }}
-                >
-                  12 years
-                </p>
-                <p className="text-[0.75rem] text-muted-foreground mt-1">building and leading design</p>
+                  View resume
+                </button>
               </div>
             </motion.div>
           </div>
-
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={3}
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end pt-6 md:pt-8 border-t border-border"
-          >
-            <p className="text-[0.875rem] leading-[1.7] text-muted-foreground font-light max-w-[520px] whitespace-pre-line">
-              From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped
-              work that moved real numbers. Now applying that same rigor to AI-assisted design.
-            </p>
-            <div className="flex gap-3 flex-wrap shrink-0">
-              <button
-                onClick={() => scrollTo("work")}
-                className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
-              >
-                View my work →
-              </button>
-              <button
-                onClick={() => navigate("/resume")}
-                className="inline-flex items-center gap-2 text-muted-foreground border border-border px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
-              >
-                View resume
-              </button>
-            </div>
-          </motion.div>
         </div>
+
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fade}
+          custom={3}
+          className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3`}
+        >
+          {[
+            ["3.4 → 4.5", "app rating"],
+            ["100M+", "monthly traffic"],
+            ["12 years", "building and leading design"],
+          ].map(([value, label], index) => (
+            <div
+              key={label}
+              className={`py-7 md:py-10 ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border sm:pl-8 md:pl-12" : "sm:pr-8 md:pr-12"}`}
+            >
+              <p className="text-[clamp(1.6rem,2.5vw,2.15rem)] leading-none tracking-normal" style={{ fontFamily: t.displayFont }}>
+                {value}
+              </p>
+              <p className="text-[0.75rem] text-muted-foreground mt-2">{label}</p>
+            </div>
+          ))}
+        </motion.div>
       </section>
 
       {/* ── COMPANIES ────────────────────────────── */}
-      <section aria-label="Companies I've worked with" className="border-y border-border py-9 md:py-11 overflow-hidden">
-        <p className={`${t.labelSm} text-muted-foreground text-center mb-8`}>Companies I've worked with</p>
+      <section aria-label="Companies I've worked with" className="border-b border-border py-10 md:py-14 overflow-hidden">
+        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground mb-8 md:mb-10`}>Companies I've worked with</p>
         <div className="company-marquee">
           <div className="company-marquee-track">
             {[0, 1].map((set) => (
