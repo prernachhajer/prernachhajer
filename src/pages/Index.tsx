@@ -647,7 +647,7 @@ const Index = () => {
                         {tool.name.slice(0, 2)}
                       </span>
                     )}
-                    <span className="text-[0.6875rem] text-muted-foreground text-center leading-tight">
+                    <span className="text-[0.6875rem] text-muted-foreground text-left leading-tight">
                       {tool.name}
                     </span>
                   </div>
