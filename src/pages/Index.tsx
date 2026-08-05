@@ -170,18 +170,17 @@ const Index = () => {
               </span>
           </motion.div>
 
-          <div className="mx-auto max-w-[1100px]">
+          <div className="mx-auto max-w-[980px]">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.75rem,6.2vw,4.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
+              className="text-[clamp(2.75rem,6.2vw,5.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
               style={{ fontFamily: t.displayFont }}
             >
-              Defining teams & products<br className="hidden sm:block" /> that make<br className="hidden sm:block" /> complexity feel simple.
+              Defining teams & products that make <span className="text-primary">complexity</span> feel simple.
             </motion.h1>
-
 
             <motion.div
               initial="hidden"
