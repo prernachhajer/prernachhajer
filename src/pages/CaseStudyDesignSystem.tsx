@@ -75,12 +75,42 @@ const CaseStudyDesignSystem = () => {
             className="grid md:grid-cols-3 border-y border-border mt-14 md:mt-16 text-center max-w-5xl mx-auto"
           >
             {[
-              { label: "Client / Scope", value: <>Cricinfo —<br />Design System</> },
-              { label: "Role / Worked With", value: <>Design Lead, with Product<br />+ Engineering Teams</> },
-              { label: "Impact / Timeline", value: <>170 Figma files<br />2021–2025</> },
+              {
+                label: "Client / Scope",
+                value: (
+                  <>
+                    Cricinfo —<br />
+                    Design System
+                  </>
+                ),
+              },
+              {
+                label: "Role / Worked With",
+                value: (
+                  <>
+                    Design Lead, with Product
+                    <br />+ Engineering Teams
+                  </>
+                ),
+              },
+              {
+                label: "Impact / Timeline",
+                value: (
+                  <>
+                    170 Figma files
+                    <br />
+                    2021–2025
+                  </>
+                ),
+              },
             ].map((item, index) => (
-              <div key={item.label} className={`px-5 py-5 md:py-6 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
-                <dt className="text-[0.6875rem] md:text-xs font-medium uppercase text-muted-foreground mb-2.5">{item.label}</dt>
+              <div
+                key={item.label}
+                className={`px-5 py-5 md:py-6 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}
+              >
+                <dt className="text-[0.6875rem] md:text-xs font-medium uppercase text-muted-foreground mb-2.5">
+                  {item.label}
+                </dt>
                 <dd className="text-base md:text-lg leading-snug">{item.value}</dd>
               </div>
             ))}
@@ -487,14 +517,16 @@ const CaseStudyDesignSystem = () => {
           </p>
         </motion.div>
 
-        <a
-          href="https://zeroheight.com/252be9de8/p/812fb5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-muted-foreground border border-border px-5 py-3 rounded-full text-sm font-medium hover:bg-primary transition-all mt-6"
-        >
-          Zeroheight Link <ExternalLink className="h-4 w-4" />
-        </a>
+        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+          <a
+            href="https://zeroheight.com/252be9de8/p/812fb5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-muted-foreground border border-border px-5 py-3 rounded-full text-sm font-medium hover:bg-primary transition-all mt-6"
+          >
+            Zeroheight Link <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
       </Section>
 
       {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
