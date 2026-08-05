@@ -35,12 +35,12 @@ const cleanLabel = (label: string) => {
 
 const CaseStudyHomepage = () => {
   return (
-    <div className=" bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
       <NavCaseStudy period="2022 — 2026" />
 
       {/* HERO */}
-      <section className="min-h-[calc(100svh-3.75rem)] pt-24 md:pt-28 pb-8 px-6 md:px-14 flex flex-col justify-center">
+      <section className=" pt-24 md:pt-28 pb-8 px-6 md:px-14 flex flex-col justify-center">
         <div className={`${layout.containerWide} w-full mx-auto text-center`}>
           <motion.div
             initial="hidden"
