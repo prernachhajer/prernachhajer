@@ -54,10 +54,10 @@ const tools = [
   { name: "Google Analytics", logo: gaLogo.url },
   { name: "Slack", logo: slackLogo.url },
   { name: "Jira", logo: jiraLogo.url },
-  { name: "Mixpanel", logo: null },
-  { name: "Zoom", logo: null },
-  { name: "Miro", logo: null },
-  { name: "Zeroheight", logo: null },
+  { name: "Mixpanel", logo: mixpanelLogo.url },
+  { name: "Zoom", logo: zoomLogo.url },
+  { name: "Miro", logo: miroLogo.url },
+  { name: "Zeroheight", logo: zeroheightLogo.url },
 ];
 
 const strengths = [
