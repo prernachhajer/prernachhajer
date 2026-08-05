@@ -614,7 +614,7 @@ const Index = () => {
 
       {/* ── HOW I WORK ───────────────────────────── */}
       <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
-        <div className={wrapCls}>
+        <div className={`${layout.containerWide} px-6 md:px-14`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
