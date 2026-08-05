@@ -155,9 +155,8 @@
 
   @media (max-width: 767px) {
     .company-logo-item {
-      width: 10.5rem;
-      height: 4.25rem;
-      padding-inline: 1.5rem;
+      width: 7.5rem;
+      height: 2.25rem;
     }
   }
 
