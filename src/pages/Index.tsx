@@ -215,7 +215,7 @@ const Index = () => {
       <NavHome />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section id="hero" className="pt-[40px] border-b border-border overflow-hidden">
+      <section id="hero" className="pt-[20px] border-b border-border overflow-hidden">
         <div className={`${wrapCls} pt-08 pb-14 md:pt-12 mt-8 md:pb-20 lg:pt-12 lg:pb-24 w-full text-center`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-9">
             {/*    <span className="inline-flex items-center gap-2.5 text-[0.6875rem] tracking-[0.1em] uppercase text-primary border border-primary/25 rounded-full px-4 py-2">
