@@ -256,11 +256,22 @@ const Index = () => {
               <div key={set} className="company-marquee-set" aria-hidden={set === 1}>
                 {companies.map((company) => (
                   <div key={`${set}-${company.name}`} className="company-logo-item">
-                    <img
-                      src={company.logo}
-                      alt={set === 0 ? company.name : ""}
-                      className={`company-logo-image company-logo-image--${company.slug}`}
-                    />
+                    <div className="company-logo-frame">
+                      {company.slug === "proximity" ? (
+                        <div className="company-logo-proximity" role="img" aria-label={set === 0 ? company.name : undefined}>
+                          <span className="company-logo-proximity-icon" aria-hidden="true">
+                            <img src={company.logo} alt="" />
+                          </span>
+                          <span>Proximity Works</span>
+                        </div>
+                      ) : (
+                        <img
+                          src={company.logo}
+                          alt={set === 0 ? company.name : ""}
+                          className={`company-logo-image company-logo-image--${company.slug}`}
+                        />
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
