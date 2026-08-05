@@ -32,14 +32,14 @@ import singtelOptusLogo from "@/assets/company-logos/singtel-optus.png";
 import decimalLogo from "@/assets/company-logos/decimal.png";
 
 // Tool logos (CDN asset pointers)
-import figmaLogo from "@/assets/tool-logos/figma.svg.asset.json";
+import figmaLogo from "@/assets/tool-logos/figma.png.asset.json";
 import claudeLogo from "@/assets/tool-logos/claude.png.asset.json";
 import lovableLogo from "@/assets/tool-logos/lovable.svg.asset.json";
-import granolaLogo from "@/assets/tool-logos/granola.png.asset.json";
-import chatgptLogo from "@/assets/tool-logos/chatgpt.svg.asset.json";
+import granolaLogo from "@/assets/tool-logos/granola2.png.asset.json";
+import chatgptLogo from "@/assets/tool-logos/chatgpt.png.asset.json";
 import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
-import gaLogo from "@/assets/tool-logos/google-analytics.png.asset.json";
-import slackLogo from "@/assets/tool-logos/slack.svg.asset.json";
+import gaLogo from "@/assets/tool-logos/ga2.png.asset.json";
+import slackLogo from "@/assets/tool-logos/slack.png.asset.json";
 import jiraLogo from "@/assets/tool-logos/jira.png.asset.json";
 import mixpanelLogo from "@/assets/tool-logos/mixpanel.png.asset.json";
 import zoomLogo from "@/assets/tool-logos/zoom.png.asset.json";
@@ -634,7 +634,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-4 gap-y-10 gap-x-4">
                 {tools.map((tool) => (
-                  <div key={tool.name} className="flex flex-col items-start gap-3 group" title={tool.name}>
+                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
                     {tool.logo ? (
                       <img
                         src={tool.logo}
@@ -647,7 +647,7 @@ const Index = () => {
                         {tool.name.slice(0, 2)}
                       </span>
                     )}
-                    <span className="text-[0.6875rem] text-muted-foreground text-left leading-tight">
+                    <span className="text-[0.6875rem] text-muted-foreground text-center leading-tight">
                       {tool.name}
                     </span>
                   </div>
