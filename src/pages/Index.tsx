@@ -219,9 +219,9 @@ const Index = () => {
         <div className={`${wrapCls} pt-08 pb-14 md:pt-12 mt-8 md:pb-20 lg:pt-12 lg:pb-24 w-full text-center`}>
           <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-9">
             <span className="inline-flex items-center gap-2.5 text-[0.6875rem] tracking-[0.1em] uppercase text-primary border border-primary/25 rounded-full px-4 py-2">
-              <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
+            {/*  <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
               open to design lead roles
-            </span>
+            </span> */}
           </motion.div>
 
           <div className="mx-auto max-w-[980px]">
