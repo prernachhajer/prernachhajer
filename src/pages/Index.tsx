@@ -87,7 +87,6 @@ const strengths = [
   },
 ];
 
-
 // ── DATA ──────────────────────────────────────
 
 const caseStudies = [
@@ -630,11 +629,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-[clamp(32px,5vw,96px)]">
             {/* Tools */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-              <p
-                className="text-xl italic text-muted-foreground mb-10"
-                style={{ fontFamily: t.displayFont }}
-              >
-                tools I reach for
+              <p className="text-xl text-muted-foreground mb-10" style={{ fontFamily: t.displayFont }}>
+                Tools I reach for
               </p>
               <div className="grid grid-cols-4 gap-y-10 gap-x-4">
                 {tools.map((tool) => (
@@ -661,11 +657,8 @@ const Index = () => {
 
             {/* What I bring */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-              <p
-                className="text-xl italic text-muted-foreground mb-6"
-                style={{ fontFamily: t.displayFont }}
-              >
-                what I bring to a team
+              <p className="text-xl text-muted-foreground mb-6" style={{ fontFamily: t.displayFont }}>
+                What I bring to a team
               </p>
               <div>
                 {strengths.map((s, i) => (
@@ -687,8 +680,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* ── WRITING ──────────────────────────────── */}
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
