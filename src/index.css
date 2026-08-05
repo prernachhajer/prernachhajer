@@ -150,7 +150,6 @@
   }
 
   .company-logo-item:hover {
-    filter: grayscale(0);
     opacity: 1;
   }
 
