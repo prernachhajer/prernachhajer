@@ -86,8 +86,8 @@ const CaseStudyHomepage = () => {
                 label: "Role / Worked With",
                 value: (
                   <>
-                    Lead, with DM + PM
-                    <br />+ 2 Sr. PDs
+                    Lead, with Design Manager
+                    <br />+ Product Manager
                   </>
                 ),
               },
