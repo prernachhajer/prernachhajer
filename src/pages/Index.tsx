@@ -614,7 +614,7 @@ const Index = () => {
 
       {/* ── HOW I WORK ───────────────────────────── */}
       <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
-        <div className={wrapCls}>
+        <div className={`${layout.containerWide} px-6 md:px-14`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -634,7 +634,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-4 gap-y-10 gap-x-4">
                 {tools.map((tool) => (
-                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
+                  <div key={tool.name} className="flex flex-col items-start gap-3 group" title={tool.name}>
                     {tool.logo ? (
                       <img
                         src={tool.logo}
@@ -647,7 +647,7 @@ const Index = () => {
                         {tool.name.slice(0, 2)}
                       </span>
                     )}
-                    <span className="text-[0.6875rem] text-muted-foreground text-center leading-tight">
+                    <span className="text-[0.6875rem] text-muted-foreground text-left leading-tight">
                       {tool.name}
                     </span>
                   </div>
