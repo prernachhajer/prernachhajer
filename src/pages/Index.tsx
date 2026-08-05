@@ -496,7 +496,7 @@ const Index = () => {
             {/* Left: headline + bio */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               <h2
-                className="text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
+                className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
                 Making sense of complexity,
