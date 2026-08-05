@@ -7,7 +7,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, Linkedin, Users, Target, Rocket, Wand2 } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
@@ -31,7 +31,58 @@ import prudentialLogo from "@/assets/company-logos/prudential.webp";
 import singtelOptusLogo from "@/assets/company-logos/singtel-optus.png";
 import decimalLogo from "@/assets/company-logos/decimal.png";
 
+// Tool logos (CDN asset pointers)
+import figmaLogo from "@/assets/tool-logos/figma.svg.asset.json";
+import claudeLogo from "@/assets/tool-logos/claude.png.asset.json";
+import lovableLogo from "@/assets/tool-logos/lovable.svg.asset.json";
+import granolaLogo from "@/assets/tool-logos/granola.png.asset.json";
+import chatgptLogo from "@/assets/tool-logos/chatgpt.svg.asset.json";
+import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
+import gaLogo from "@/assets/tool-logos/google-analytics.png.asset.json";
+import slackLogo from "@/assets/tool-logos/slack.svg.asset.json";
+import jiraLogo from "@/assets/tool-logos/jira.png.asset.json";
+
 const fade = animation.fade;
+
+const tools = [
+  { name: "Figma", logo: figmaLogo.url },
+  { name: "Claude", logo: claudeLogo.url },
+  { name: "Lovable", logo: lovableLogo.url },
+  { name: "Granola", logo: granolaLogo.url },
+  { name: "ChatGPT", logo: chatgptLogo.url },
+  { name: "Notion", logo: notionLogo.url },
+  { name: "Google Analytics", logo: gaLogo.url },
+  { name: "Slack", logo: slackLogo.url },
+  { name: "Jira", logo: jiraLogo.url },
+  { name: "Mixpanel", logo: null },
+  { name: "Zoom", logo: null },
+  { name: "Miro", logo: null },
+  { name: "Zeroheight", logo: null },
+];
+
+const strengths = [
+  {
+    icon: Users,
+    title: "Mentoring designers",
+    desc: "Set the quality bar through hands-on critique",
+  },
+  {
+    icon: Target,
+    title: "Stakeholder alignment",
+    desc: "Turn ambiguity into decisions teams can rally behind",
+  },
+  {
+    icon: Rocket,
+    title: "0 to 1, then scaled",
+    desc: "Shipped early concepts through to 10M+ user systems",
+  },
+  {
+    icon: Wand2,
+    title: "AI-augmented workflows",
+    desc: "Design and prototype faster without losing craft",
+  },
+];
+
 
 // ── DATA ──────────────────────────────────────
 
@@ -557,6 +608,83 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ── HOW I WORK ───────────────────────────── */}
+      <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
+        <div className={wrapCls}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`flex items-center gap-3 ${t.label} text-primary mb-14`}
+          >
+            <span className="w-[22px] h-px bg-primary" />
+            How I work
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-[clamp(32px,5vw,96px)]">
+            {/* Tools */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+              <p
+                className="text-xl italic text-muted-foreground mb-10"
+                style={{ fontFamily: t.displayFont }}
+              >
+                tools I reach for
+              </p>
+              <div className="grid grid-cols-4 gap-y-10 gap-x-4">
+                {tools.map((tool) => (
+                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
+                    {tool.logo ? (
+                      <img
+                        src={tool.logo}
+                        alt={`${tool.name} logo`}
+                        loading="lazy"
+                        className="h-8 w-8 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      />
+                    ) : (
+                      <span className="h-8 w-8 flex items-center justify-center rounded-md border border-border text-[0.625rem] text-muted-foreground">
+                        {tool.name.slice(0, 2)}
+                      </span>
+                    )}
+                    <span className="text-[0.6875rem] text-muted-foreground text-center leading-tight">
+                      {tool.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* What I bring */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <p
+                className="text-xl italic text-muted-foreground mb-6"
+                style={{ fontFamily: t.displayFont }}
+              >
+                what I bring to a team
+              </p>
+              <div>
+                {strengths.map((s, i) => (
+                  <div
+                    key={s.title}
+                    className={`flex items-start gap-5 py-6 border-t border-border ${
+                      i === strengths.length - 1 ? "border-b" : ""
+                    }`}
+                  >
+                    <s.icon className="h-5 w-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.5} />
+                    <div>
+                      <p className="text-base font-medium tracking-normal mb-1">{s.title}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* ── WRITING ──────────────────────────────── */}
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
