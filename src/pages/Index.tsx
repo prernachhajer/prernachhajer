@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Linkedin } from "lucide-react";
 import { NavHome } from "@/components/ds";
+import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
@@ -96,15 +97,15 @@ const caseStudies = [
 ];
 
 const companies = [
-  { name: "Proximity Works", logo: proximityLogo },
-  { name: "American Express", logo: americanExpressLogo },
-  { name: "Cognizant", logo: cognizantLogo },
-  { name: "ESPNcricinfo", logo: espnCricinfoLogo },
-  { name: "FabHotels", logo: fabHotelsLogo },
-  { name: "Telstra", logo: telstraLogo },
-  { name: "Prudential", logo: prudentialLogo },
-  { name: "Singtel Optus", logo: singtelOptusLogo },
-  { name: "Decimal", logo: decimalLogo },
+  { name: "Proximity Works", logo: proximityLogo, slug: "proximity" },
+  { name: "American Express", logo: americanExpressLogo, slug: "american-express" },
+  { name: "Cognizant", logo: cognizantLogo, slug: "cognizant" },
+  { name: "ESPNcricinfo", logo: espnCricinfoLogo, slug: "espncricinfo" },
+  { name: "FabHotels", logo: fabHotelsLogo, slug: "fabhotels" },
+  { name: "Telstra", logo: telstraLogo, slug: "telstra" },
+  { name: "Prudential", logo: prudentialLogo, slug: "prudential" },
+  { name: "Singtel Optus", logo: singtelOptusLogo, slug: "singtel-optus" },
+  { name: "Decimal", logo: decimalLogo, slug: "decimal" },
 ];
 
 const beliefs = [
@@ -160,29 +161,25 @@ const Index = () => {
       <NavHome />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section id="hero" className="pt-[60px] border-b border-border">
-        <div className={`${wrapCls} py-12 md:py-20 lg:py-24 w-full`}>
-          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-10">
-              <span className="inline-flex items-center gap-2.5 text-[0.75rem] tracking-[0.04em] lowercase text-primary border border-primary/25 rounded-full px-4 py-[7px]">
+      <section id="hero" className="pt-[60px] border-b border-border overflow-hidden">
+        <div className={`${wrapCls} pt-16 pb-14 md:pt-24 md:pb-20 lg:pt-28 lg:pb-24 w-full text-center`}>
+          <motion.div initial="hidden" animate="visible" variants={fade} className="mb-7 md:mb-9">
+              <span className="inline-flex items-center gap-2.5 text-[0.6875rem] tracking-[0.1em] uppercase text-primary border border-primary/25 rounded-full px-4 py-2">
                 <span className="w-[6px] h-[6px] rounded-full bg-primary animate-pulse" />
                 open to design lead roles
               </span>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
+          <div className="mx-auto max-w-[980px]">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="lg:col-span-8 text-[clamp(2.65rem,5.5vw,4.75rem)] font-normal leading-[1.02] tracking-[-0.01em]"
+              className="text-[clamp(2.75rem,6.2vw,5.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
               style={{ fontFamily: t.displayFont }}
             >
-              Defining teams & products
-              <br />
-              that make <span className="italic text-primary">complexity</span>
-              <br />
-              <span className="text-muted-foreground">feel simple.</span>
+              Defining teams & products that make <span className="text-primary">complexity</span> feel simple.
             </motion.h1>
 
             <motion.div
@@ -190,25 +187,26 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="lg:col-span-4 lg:pb-1"
+              className="mx-auto mt-8 max-w-[680px]"
             >
-              <p className="text-[0.9375rem] md:text-base leading-[1.7] text-muted-foreground font-light max-w-[440px]">
+              <p className="text-[0.9375rem] md:text-[1.0625rem] leading-[1.65] text-muted-foreground font-normal">
                 From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and shipped
                 work that moved real numbers. Now applying that same rigor to AI-assisted design.
               </p>
-              <div className="flex gap-3 flex-wrap mt-8">
-                <button
+              <div className="flex gap-3 flex-col sm:flex-row sm:justify-center mt-9">
+                <Button
                   onClick={() => scrollTo("work")}
-                  className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
+                  className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
                 >
                   View my work →
-                </button>
-                <button
+                </Button>
+                <Button
+                  variant="outline"
                   onClick={() => navigate("/resume")}
-                  className="inline-flex items-center gap-2 text-muted-foreground border border-border px-7 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:-translate-y-0.5 transition-all"
+                  className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
                 >
                   View resume
-                </button>
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -219,7 +217,7 @@ const Index = () => {
           animate="visible"
           variants={fade}
           custom={3}
-          className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3`}
+          className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3 border-t border-border`}
         >
           {[
             ["3.4 → 4.5", "app rating"],
@@ -228,20 +226,20 @@ const Index = () => {
           ].map(([value, label], index) => (
             <div
               key={label}
-              className={`py-7 md:py-10 ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border sm:pl-8 md:pl-12" : "sm:pr-8 md:pr-12"}`}
+              className={`py-8 md:py-11 text-center ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border" : ""}`}
             >
-              <p className="text-[clamp(1.6rem,2.5vw,2.15rem)] leading-none tracking-normal" style={{ fontFamily: t.displayFont }}>
+              <p className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-normal" style={{ fontFamily: t.displayFont }}>
                 {value}
               </p>
-              <p className="text-[0.75rem] text-muted-foreground mt-2">{label}</p>
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">{label}</p>
             </div>
           ))}
         </motion.div>
       </section>
 
       {/* ── COMPANIES ────────────────────────────── */}
-      <section aria-label="Companies I've worked with" className="border-b border-border py-10 md:py-14 overflow-hidden">
-        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground mb-8 md:mb-10`}>Companies I've worked with</p>
+      <section aria-label="Companies I've worked with" className="border-b border-border bg-secondary/30 py-11 md:py-16 overflow-hidden">
+        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}>Companies I've worked with</p>
         <div className="company-marquee">
           <div className="company-marquee-track">
             {[0, 1].map((set) => (
@@ -251,7 +249,7 @@ const Index = () => {
                     <img
                       src={company.logo}
                       alt={set === 0 ? company.name : ""}
-                      className="company-logo-image"
+                      className={`company-logo-image company-logo-image--${company.slug}`}
                     />
                   </div>
                 ))}
