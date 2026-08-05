@@ -299,7 +299,7 @@ const Index = () => {
       {/* ── COMPANIES ────────────────────────────── */}
       <section
         aria-label="Companies I've worked with"
-        className="border-b border-border bg-secondary/30 py-11 md:py-16 overflow-hidden"
+        className="border-b border-border bg-secondary/30 py-11  overflow-hidden"
       >
         <p className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}>
           Companies I've worked with
