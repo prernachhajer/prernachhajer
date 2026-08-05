@@ -140,6 +140,12 @@
     transition: filter 200ms ease, opacity 200ms ease;
   }
 
+  .company-logo-image {
+    width: 10rem;
+    height: 2.75rem;
+    object-fit: contain;
+  }
+
   .company-logo-item:hover {
     filter: grayscale(0);
     opacity: 1;
@@ -154,6 +160,11 @@
     .company-logo-item {
       width: 11.5rem;
       padding-inline: 1.5rem;
+    }
+
+    .company-logo-image {
+      width: 8.5rem;
+      height: 2.5rem;
     }
   }
 
