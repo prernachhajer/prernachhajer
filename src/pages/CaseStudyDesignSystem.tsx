@@ -517,7 +517,7 @@ const CaseStudyDesignSystem = () => {
           </p>
         </motion.div>
 
-        <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-0.5`}>
+        <div className={`${layout.container} mx-auto mt-12 gap-0.5`}>
           <a
             href="https://zeroheight.com/252be9de8/p/812fb5"
             target="_blank"
