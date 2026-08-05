@@ -154,11 +154,11 @@
   }
 
   .company-logo-image--american-express { transform: scale(0.72); }
-  .company-logo-image--cognizant { transform: scale(0.94); }
+  .company-logo-image--cognizant { transform: scale(0.88); }
   .company-logo-image--espncricinfo { transform: scale(0.94); }
-  .company-logo-image--fabhotels { transform: scale(0.82); }
-  .company-logo-image--telstra { transform: scale(0.68); }
-  .company-logo-image--prudential { transform: scale(0.84); }
+  .company-logo-image--fabhotels { transform: scale(0.96); }
+  .company-logo-image--telstra { transform: scale(0.52); }
+  .company-logo-image--prudential { transform: scale(0.7); }
   .company-logo-image--singtel-optus { transform: scale(0.7); }
   .company-logo-image--decimal { transform: scale(0.96); }
 
