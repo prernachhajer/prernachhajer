@@ -558,6 +558,83 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── HOW I WORK ───────────────────────────── */}
+      <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
+        <div className={wrapCls}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`flex items-center gap-3 ${t.label} text-primary mb-14`}
+          >
+            <span className="w-[22px] h-px bg-primary" />
+            How I work
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-[clamp(32px,5vw,96px)]">
+            {/* Tools */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+              <p
+                className="text-xl italic text-muted-foreground mb-10"
+                style={{ fontFamily: t.displayFont }}
+              >
+                tools I reach for
+              </p>
+              <div className="grid grid-cols-4 gap-y-10 gap-x-4">
+                {tools.map((tool) => (
+                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
+                    {tool.logo ? (
+                      <img
+                        src={tool.logo}
+                        alt={`${tool.name} logo`}
+                        loading="lazy"
+                        className="h-8 w-8 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      />
+                    ) : (
+                      <span className="h-8 w-8 flex items-center justify-center rounded-md border border-border text-[0.625rem] text-muted-foreground">
+                        {tool.name.slice(0, 2)}
+                      </span>
+                    )}
+                    <span className="text-[0.6875rem] text-muted-foreground text-center leading-tight">
+                      {tool.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* What I bring */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <p
+                className="text-xl italic text-muted-foreground mb-6"
+                style={{ fontFamily: t.displayFont }}
+              >
+                what I bring to a team
+              </p>
+              <div>
+                {strengths.map((s, i) => (
+                  <div
+                    key={s.title}
+                    className={`flex items-start gap-5 py-6 border-t border-border ${
+                      i === strengths.length - 1 ? "border-b" : ""
+                    }`}
+                  >
+                    <s.icon className="h-5 w-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.5} />
+                    <div>
+                      <p className="text-base font-medium tracking-normal mb-1">{s.title}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ── WRITING ──────────────────────────────── */}
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
