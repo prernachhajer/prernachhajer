@@ -35,7 +35,7 @@ const cleanLabel = (label: string) => {
 
 const CaseStudyHomepage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className=" bg-background text-foreground">
       {/* NAV */}
       <NavCaseStudy period="2022 — 2026" />
 
@@ -77,7 +77,8 @@ const CaseStudyHomepage = () => {
                 label: "Client / Scope",
                 value: (
                   <>
-                    Cricinfo —<br />Homepage Redesign
+                    Cricinfo —<br />
+                    Homepage Redesign
                   </>
                 ),
               },
@@ -85,7 +86,8 @@ const CaseStudyHomepage = () => {
                 label: "Role / Worked With",
                 value: (
                   <>
-                    Lead, with DM + PM<br />+ 2 Sr. PDs
+                    Lead, with DM + PM
+                    <br />+ 2 Sr. PDs
                   </>
                 ),
               },
@@ -93,7 +95,9 @@ const CaseStudyHomepage = () => {
                 label: "Impact / Timeline",
                 value: (
                   <>
-                    10M+ users, 2022–<br />2026
+                    10M+ users, 2022–
+                    <br />
+                    2026
                   </>
                 ),
               },
