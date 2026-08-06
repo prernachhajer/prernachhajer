@@ -17,7 +17,7 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
 import thumbDesignSystem from "@/assets/thumb-ds-docs.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png.asset.json";
-import thumbMatchPage from "@/assets/match-page-thumb.png";
+import thumbMatchPage from "@/assets/match-page-thumb.png.asset.json";
 import aboutPhoto from "@/assets/about-prerna.png";
 import proximityLogo from "@/assets/company-logos/proximity.svg";
 import americanExpressLogo from "@/assets/company-logos/american-express.png";
@@ -122,9 +122,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
-    thumbType: "desktop" as const,
-    thumbContain: true,
-    thumbImage: thumbMatchPage,
+    thumbType: "photo" as const,
+    thumbImage: thumbMatchPage.url,
     statNum: "10M+",
     statLabel: "daily users",
     link: "/case-study/match-page",
