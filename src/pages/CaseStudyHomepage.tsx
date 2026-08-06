@@ -403,7 +403,7 @@ const CaseStudyHomepage = () => {
           <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
 
           {/* Findings — separate sub-section */}
-          <div className={`${layout.container} mx-auto mt-16 !max-w-3xl`}>
+          <div className={`${layout.container} mx-auto mt-16`}>
             <motion.div
               initial="hidden"
               whileInView="visible"
