@@ -18,8 +18,6 @@ import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
 import thumbDesignSystem from "@/assets/thumb-ds-cards.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
-import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
-import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 import aboutPhoto from "@/assets/about-prerna.png";
 import proximityLogo from "@/assets/company-logos/proximity.svg";
 import americanExpressLogo from "@/assets/company-logos/american-express.png";
