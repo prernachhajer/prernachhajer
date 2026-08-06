@@ -409,14 +409,14 @@ const CaseStudyHomepage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="flex items-end justify-between gap-8 mb-10 pb-6 "
+              className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
             >
               <div>
                 <h3
                   className="text-2xl md:text-2xl font-normal tracking-normal leading-[1.15]"
                   style={{ fontFamily: t.displayFont }}
                 >
-                  What we found
+                  Design Solution
                 </h3>
               </div>
               <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}></span>
