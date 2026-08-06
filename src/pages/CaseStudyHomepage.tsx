@@ -670,7 +670,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8  !max-w-3xl"
+            className="text-md text-background/75 leading-relaxed mb-8  !max-w-3xl"
           >
             Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
             only during matches into a page worth checking daily.
