@@ -402,7 +402,7 @@ const CaseStudyHomepage = () => {
         <div className={`${layout.container} mx-auto `}>
           <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
 
-          {/* Findings — separate sub-section */}
+          {/* Strategic contribution  */}
           <div className={`${layout.container} mx-auto mt-16  !max-w-3xl`}>
             <motion.div
               initial="hidden"
@@ -470,7 +470,7 @@ const CaseStudyHomepage = () => {
             </div>
           </div>
 
-          {/* Strategic contribution */}
+          {/* Strategic contribution 
           <div className={`${layout.container} mx-auto mt-12 mb-16`}>
             <div className="flex flex-col gap-10 px-[84px]">
               {[
@@ -507,7 +507,8 @@ const CaseStudyHomepage = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </div> */}
+
           {/* Timeline */}
 
           <section className="mt-12 mb-16">
