@@ -666,7 +666,7 @@ const CaseStudyHomepage = () => {
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <div className={`${layout.container} mx-auto !max-w-3xl`}>
-            <motion.p
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -687,7 +687,7 @@ Redesign turned occasional visitors into repeat visitors
 
               
         
-            </motion.p>
+            </motion.div>
           </div>
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
