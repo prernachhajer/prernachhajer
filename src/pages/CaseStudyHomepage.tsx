@@ -428,20 +428,16 @@ const CaseStudyHomepage = () => {
                   num: "2022",
                   title: "Proposed and led the shift from feed to structured system",
                   desc: "I proposed moving away from the chronological feed and led the shift to a structured system — defining clear zones, modular components, and shared layout logic that could scale across formats and tournaments instead of being rebuilt each time.",
-
-                  tag: "2021-23",
                 },
                 {
                   num: "2023",
                   title: "Refined with editorial and validated with product",
                   desc: "Worked closely with the editorial team to define how different content types should surface — match coverage, tournament coverage, and in-depth stories each needed their own placement and hierarchy. Their input shaped how the structure was organized; each iteration was then validated with Product before shipping.",
-                  tag: "2023-26",
                 },
                 {
                   num: "2026",
                   title: "Team-wide simplification driven by user feedback",
                   desc: "Reviews were flagging the same issues repeatedly — too dense, cluttered, overwhelming, slow. That feedback drove a team-wide push to simplify: reducing density, adding whitespace, and clarifying typography within the system already in place.\u00a0",
-                  tag: "2026-Now",
                 },
               ].map((insight, i) => (
                 <motion.div
@@ -468,13 +464,7 @@ const CaseStudyHomepage = () => {
                     </h4>
                     <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
                   </div>
-                  <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
-                    <span
-                      className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
-                    >
-                      {insight.tag}
-                    </span>
-                  </div>
+                  <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1"></div>
                 </motion.div>
               ))}
             </div>
