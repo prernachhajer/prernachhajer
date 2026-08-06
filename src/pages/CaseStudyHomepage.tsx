@@ -399,11 +399,11 @@ const CaseStudyHomepage = () => {
 
       {/* DESIGN EVOLUTION — BEFORE VS AFTER */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`${layout.container} mx-auto `}>
           <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
 
           {/* Findings — separate sub-section */}
-          <div className={`${layout.container} mx-auto mt-16`}>
+          <div className={`${layout.container} mx-auto mt-16  !max-w-3xl`}>
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -451,7 +451,7 @@ const CaseStudyHomepage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+                  className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr_180px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
                 >
                   <p
                     className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
