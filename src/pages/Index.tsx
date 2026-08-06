@@ -334,7 +334,7 @@ const Index = () => {
           </motion.div>
         </div>
 
-        <div className={`${wrapCls} flex flex-col gap-4 pb-[clamp(80px,10vw,140px)]`}>
+        <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-4 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
             return (
@@ -345,110 +345,78 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={idx}
-                className={`bg-secondary border border-border rounded-[20px] overflow-hidden relative group transition-all duration-300 ${
+                className={`bg-secondary border border-border rounded-[20px] overflow-hidden relative group transition-all duration-300 flex flex-col ${
                   isComingSoon
                     ? "cursor-default"
                     : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
                 }`}
                 onClick={() => cs.link && navigate(cs.link)}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
-                  {/* Info side */}
-                  <div className="p-10 md:p-[52px_56px] flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-3 mb-5">
-                        <span className={`text-xs tracking-[0.06em] uppercase text-muted-foreground`}>{cs.num}</span>
-                        <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
-                      </div>
-                      <h3
-                        className="text-[clamp(1.225rem,2.8vw,1.825rem)] font-normal leading-[1.08] tracking-[-0.005em] mb-4"
+                {/* Visual — top half */}
+                <div className="relative overflow-hidden aspect-[16/10] w-full bg-secondary">
+                  {cs.thumbImage && cs.thumbType === "photo" && (
+                    <img
+                      src={cs.thumbImage}
+                      alt={`${cs.company} preview`}
+                      className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
+                    />
+                  )}
+
+                  {isComingSoon && (
+                    <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
+                      <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">
+                        Coming Soon
+                      </span>
+                      <span
+                        className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-normal italic"
                         style={{ fontFamily: t.displayFont }}
                       >
-                        {cs.title}
-                        <br />
-                        <em className="italic text-muted-foreground">{cs.titleEm}</em>
-                      </h3>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {cs.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                        In progress
+                      </span>
                     </div>
-                    <div className="flex items-end justify-between gap-4 mt-8 pt-6 border-t border-border">
-                      <div>
+                  )}
+                </div>
+
+                {/* Info — bottom half */}
+                <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`text-xs tracking-[0.06em] uppercase text-muted-foreground`}>{cs.num}</span>
+                      <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
+                    </div>
+                    <h3
+                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[-0.005em] mb-3"
+                      style={{ fontFamily: t.displayFont }}
+                    >
+                      {cs.title}
+                      <em className="italic text-muted-foreground">{cs.titleEm}</em>
+                    </h3>
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {cs.tags.map((tag) => (
                         <span
-                          className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.02em] leading-none block"
-                          style={{ fontFamily: t.displayFont }}
+                          key={tag}
+                          className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
                         >
-                          {cs.statNum}
+                          {tag}
                         </span>
-                        <span className="text-xs text-muted-foreground italic">{cs.statLabel}</span>
-                      </div>
-                      {!isComingSoon && (
-                        <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-7 py-3.5 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all">
-                          Read case study
-                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
-                        </button>
-                      )}
+                      ))}
                     </div>
                   </div>
-
-                  {/* Visual side — animated thumbnail */}
-                  <div
-                    className={`relative overflow-hidden min-h-[220px] my-[0px] px-0 gap-0 flex items-end justify-end ${
-                      cs.thumbType !== "photo" ? "" : "bg-secondary"
-                    }`}
-                    style={
-                      cs.thumbType !== "photo"
-                        ? {
-                            background:
-                              "radial-gradient(ellipse 80% 80% at 10% 90%, hsl(12 60% 70% / 0.15) 0%, transparent 55%), radial-gradient(ellipse 60% 60% at 90% 10%, hsl(220 50% 75% / 0.15) 0%, transparent 50%), radial-gradient(ellipse 50% 40% at 80% 85%, hsl(12 40% 65% / 0.1) 0%, transparent 55%), linear-gradient(160deg, hsl(220 15% 14%) 0%, hsl(220 12% 20%) 50%, hsl(12 20% 25%) 100%)",
-                          }
-                        : undefined
-                    }
-                  >
-                    {/* Glow orbs (desktop mockups only) */}
-                    {cs.thumbType !== "photo" && (
-                      <>
-                        <div
-                          className="absolute w-[300px] h-[300px] rounded-full -bottom-[100px] -left-[40px]"
-                          style={{ background: "radial-gradient(circle, hsl(12 60% 70% / 0.18) 0%, transparent 65%)" }}
-                        />
-                        <div
-                          className="absolute w-[220px] h-[220px] rounded-full -top-[50px] -right-[40px]"
-                          style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }}
-                        />
-                      </>
-                    )}
-
-                    {cs.thumbImage && cs.thumbType === "photo" && (
-                      <img
-                        src={cs.thumbImage}
-                        alt={`${cs.company} preview`}
-                        className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
-                      />
-                    )}
-
-
-
-
-                    {isComingSoon && (
-                      <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
-                        <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2">
-                          Coming Soon
-                        </span>
-                        <span
-                          className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-normal italic"
-                          style={{ fontFamily: t.displayFont }}
-                        >
-                          In progress
-                        </span>
-                      </div>
+                  <div className="flex items-end justify-between gap-4 mt-4 pt-5 border-t border-border">
+                    <div>
+                      <span
+                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.02em] leading-none block"
+                        style={{ fontFamily: t.displayFont }}
+                      >
+                        {cs.statNum}
+                      </span>
+                      <span className="text-xs text-muted-foreground italic">{cs.statLabel}</span>
+                    </div>
+                    {!isComingSoon && (
+                      <button className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-6 py-3 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all">
+                        Read case study
+                        <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
+                      </button>
                     )}
                   </div>
                 </div>
