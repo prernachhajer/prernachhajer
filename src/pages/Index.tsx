@@ -137,7 +137,7 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Feature Design", "Content Strategy", "Engagement"],
-    thumbType: "mobile" as const,
+    thumbType: "photo" as const,
     thumbImage: thumbQuickReads.url,
     statNum: "↑",
     statLabel: "engagement",
