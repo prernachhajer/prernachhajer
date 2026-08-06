@@ -673,20 +673,13 @@ const CaseStudyHomepage = () => {
               variants={fade}
               className="text-md text-background/75 leading-relaxed mb-8  "
             >
-
-                   <Prose>
-          <h2>Outcome</h2>
-          <p>
-             80% of traffic is casual users
-          </br>
-Homepage went from a match-day habit → a daily habit
-                       </br>
-Redesign turned occasional visitors into repeat visitors
-          </p>
-        </Prose> 
-
-              
-        
+              <Prose>
+                <h2>Outcome</h2>
+                <p>
+                  80% of traffic is casual users Homepage went from a match-day habit → a daily habit Redesign turned
+                  occasional visitors into repeat visitors
+                </p>
+              </Prose>
             </motion.div>
           </div>
           <div className="grid md:grid-cols-3 gap-0.5">
