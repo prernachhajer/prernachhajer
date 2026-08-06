@@ -316,7 +316,7 @@ const CaseStudyHomepage = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-2xl font-normal tracking-normal border-b border-border leading-[1.15]"
+                className="text-2xl md:text-2xl font-normal tracking-normal  leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
