@@ -77,7 +77,7 @@ export const NavCaseStudy = ({ period }: { period: string }) => {
       >
         <ArrowLeft className="h-4 w-4" /> Back to Portfolio
       </button>
-      <span className={`${t.labelSm} text-muted-foreground`}>{period}</span>
+      <span className={`${t.labelSm} text-muted-foreground uppercase`}>{period}</span>
     </nav>
   );
 };
