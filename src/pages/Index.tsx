@@ -14,12 +14,10 @@ import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
-import thumbHomepage from "@/assets/thumb-homepage.png";
-import thumbDesignSystem from "@/assets/thumb-design-system-new.jpg";
+import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
+import thumbDesignSystem from "@/assets/thumb-ds-cards.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
-import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
-import cricinfoMobile from "@/assets/cricinfo-mobile.jpg";
 import aboutPhoto from "@/assets/about-prerna.png";
 import proximityLogo from "@/assets/company-logos/proximity.svg";
 import americanExpressLogo from "@/assets/company-logos/american-express.png";
@@ -97,10 +95,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Information Architecture", "Navigation", "Redesign"],
-    thumbType: "cross-platform" as const,
-    thumbImage: thumbHomepage,
-    thumbDesktop: cricinfoDesktop,
-    thumbMobile: cricinfoMobile,
+    thumbType: "photo" as const,
+    thumbImage: thumbHomepage.url,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/homepage",
@@ -112,9 +108,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Design System", "Systems Thinking", "Figma"],
-    thumbType: "desktop" as const,
-    thumbContain: true,
-    thumbImage: thumbDesignSystem,
+    thumbType: "photo" as const,
+    thumbImage: thumbDesignSystem.url,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
@@ -422,6 +417,14 @@ const Index = () => {
                       style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }}
                     />
 
+                    {cs.thumbImage && cs.thumbType === "photo" && (
+                      <img
+                        src={cs.thumbImage}
+                        alt={`${cs.company} preview`}
+                        className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
+                      />
+                    )}
+
                     {cs.thumbImage && cs.thumbType === "desktop" && cs.thumbContain && (
                       <img
                         src={cs.thumbImage}
@@ -429,6 +432,7 @@ const Index = () => {
                         className="absolute inset-0 m-auto rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[70%] max-w-[75%]"
                       />
                     )}
+
 
                     {cs.thumbImage && cs.thumbType === "desktop" && !cs.thumbContain && (
                       <div
@@ -466,42 +470,6 @@ const Index = () => {
                       </div>
                     )}
 
-                    {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
-                      <>
-                        {/* Desktop — large, main screenshot */}
-                        <div className="absolute inset-[60px] z-[1] flex items-center justify-center">
-                          <div
-                            className="inline-block rounded-[10px] overflow-hidden"
-                            style={{
-                              boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
-                            }}
-                          >
-                            <img
-                              src={cs.thumbDesktop}
-                              alt={`${cs.company} desktop preview`}
-                              className="max-w-full max-h-full block thumb-kenburns rounded-[10px]"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Mobile — foreground, overlapping bottom-right */}
-                        <div
-                          className="absolute bottom-16 right-[16px] z-[3] w-[120px] md:w-[120px] rounded-[14px] rounded-b-14px p-[3px] pb-0 px-0 py-0"
-                          style={{
-                            background: "hsl(220 70% 50%)",
-                            boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
-                          }}
-                        >
-                          <div className="w-full rounded-[12px] rounded-b-12px overflow-hidden"></div>
-
-                          <img
-                            src={cs.thumbMobile}
-                            alt={`${cs.company} mobile preview`}
-                            className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-12px"
-                          />
-                        </div>
-                      </>
-                    )}
 
                     {isComingSoon && (
                       <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
