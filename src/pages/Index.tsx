@@ -422,6 +422,14 @@ const Index = () => {
                       style={{ background: "radial-gradient(circle, hsl(220 50% 75% / 0.15) 0%, transparent 65%)" }}
                     />
 
+                    {cs.thumbImage && cs.thumbType === "photo" && (
+                      <img
+                        src={cs.thumbImage}
+                        alt={`${cs.company} preview`}
+                        className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
+                      />
+                    )}
+
                     {cs.thumbImage && cs.thumbType === "desktop" && cs.thumbContain && (
                       <img
                         src={cs.thumbImage}
@@ -429,6 +437,7 @@ const Index = () => {
                         className="absolute inset-0 m-auto rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[70%] max-w-[75%]"
                       />
                     )}
+
 
                     {cs.thumbImage && cs.thumbType === "desktop" && !cs.thumbContain && (
                       <div
