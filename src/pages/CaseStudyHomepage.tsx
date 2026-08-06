@@ -673,8 +673,20 @@ const CaseStudyHomepage = () => {
               variants={fade}
               className="text-md text-background/75 leading-relaxed mb-8  "
             >
-              Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
-              only during matches into a page worth checking daily.
+
+                   <Prose>
+          <h2>Outcome</h2>
+          <p>
+             80% of traffic is casual users
+          </br>
+Homepage went from a match-day habit → a daily habit
+                       </br>
+Redesign turned occasional visitors into repeat visitors
+          </p>
+        </Prose> 
+
+              
+        
             </motion.p>
           </div>
           <div className="grid md:grid-cols-3 gap-0.5">
