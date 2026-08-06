@@ -76,7 +76,7 @@ const BlogDesignSystem = () => {
       {/* ── HERO ── */}
       <header className={`${layout.containerBlog} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-          <p className={`${t.labelSm} text-muted-foreground mb-8`}>Design Systems · 5 Years</p>
+          <p className={`${t.labelSm} text-muted-foreground mb-8 uppercase`}>Design Systems · 5 Years</p>
           <h1
             className={`${t.h2} max-w-3xl mb-8`}
             style={{ fontFamily: t.displayFont }}
