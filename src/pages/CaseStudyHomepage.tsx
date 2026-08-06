@@ -447,7 +447,7 @@ const CaseStudyHomepage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+                  className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr] gap-x-8 gap-y-3 items-baseline py-8  group"
                 >
                   <p
                     className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
