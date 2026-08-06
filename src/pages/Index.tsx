@@ -16,7 +16,7 @@ import "@/styles/thumbnail-animations.css";
 // Thumbnail images
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
 import thumbDesignSystem from "@/assets/thumb-ds-cards.png.asset.json";
-import thumbQuickReads from "@/assets/thumb-quick-reads.png";
+import thumbQuickReads from "@/assets/thumb-quick-reads.png.asset.json";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
 import proximityLogo from "@/assets/company-logos/proximity.svg";
@@ -137,8 +137,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Feature Design", "Content Strategy", "Engagement"],
-    thumbType: "mobile" as const,
-    thumbImage: thumbQuickReads,
+    thumbType: "photo" as const,
+    thumbImage: thumbQuickReads.url,
     statNum: "↑",
     statLabel: "engagement",
     link: "/case-study/quick-reads",
@@ -451,24 +451,6 @@ const Index = () => {
                       </div>
                     )}
 
-                    {cs.thumbImage && cs.thumbType === "mobile" && (
-                      <div
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2] w-[260px] md:w-[320px] rounded-[22px] rounded-b-none p-[2px] pb-0"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, hsl(40 20% 97%) 0%, hsl(12 60% 70%) 25%, hsl(12 80% 55%) 50%, hsl(220 50% 45%) 75%, hsl(12 50% 65%) 100%)",
-                          boxShadow: "0 0 24px hsl(12 80% 55% / 0.25), 0 -10px 40px rgba(0,0,0,0.4)",
-                        }}
-                      >
-                        <div className="w-full rounded-[20px] rounded-b-none overflow-hidden bg-background">
-                          <img
-                            src={cs.thumbImage}
-                            alt={`${cs.company} preview`}
-                            className="w-full block thumb-kenburns-center"
-                          />
-                        </div>
-                      </div>
-                    )}
 
 
                     {isComingSoon && (
