@@ -484,6 +484,7 @@ const CaseStudyHomepage = () => {
               </motion.div>
               }
               </div>
+        </div>
               
         
           
