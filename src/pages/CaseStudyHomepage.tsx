@@ -661,7 +661,7 @@ const CaseStudyHomepage = () => {
         </div>
       </section>
 
-      {/* 02 — IMPACT */}
+      {/*  IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
@@ -670,7 +670,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8"
+            className="text-sm text-background/75 leading-relaxed mb-8  !max-w-3xl"
           >
             Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
             only during matches into a page worth checking daily.
