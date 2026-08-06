@@ -482,7 +482,7 @@ const CaseStudyHomepage = () => {
                   </span>
                 </div>
               </motion.div>
-              }
+               ))}
               </div>
         </div>
               
