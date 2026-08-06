@@ -665,16 +665,18 @@ const CaseStudyHomepage = () => {
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-md text-background/75 leading-relaxed mb-8  !max-w-3xl"
-          >
-            Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
-            only during matches into a page worth checking daily.
-          </motion.p>
+          <div className={`${layout.container} mx-auto !max-w-3xl`}>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="text-md text-background/75 leading-relaxed mb-8  "
+            >
+              Casual users make up 80% of traffic. The redesign focused on turning the homepage from something they used
+              only during matches into a page worth checking daily.
+            </motion.p>
+          </div>
           <div className="grid md:grid-cols-3 gap-0.5">
             {[
               {
