@@ -404,7 +404,7 @@ const CaseStudyHomepage = () => {
 
           {/* Strategic contribution  */}
           <div className={`${layout.container} mx-auto mt-16  !max-w-3xl`}>
-            <motion.div
+            {/*     <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -420,7 +420,7 @@ const CaseStudyHomepage = () => {
                 </h3>
               </div>
               <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}></span>
-            </motion.div>
+            </motion.div> */}
 
             <div className="flex flex-col">
               {[
