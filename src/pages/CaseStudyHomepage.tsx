@@ -315,12 +315,8 @@ const CaseStudyHomepage = () => {
             className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
           >
             <div>
-              {/*   <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
-                <span className="w-5 h-px bg-primary" />
-                What we found
-              </p> */}
               <h3
-                className="text-2xl md:text-2xl font-normal tracking-normal leading-[1.15]"
+                className="text-2xl md:text-2xl font-normal tracking-normal border-b border-border leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -363,7 +359,7 @@ const CaseStudyHomepage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/80 last:border-b-0 group"
               >
                 <p
                   className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
