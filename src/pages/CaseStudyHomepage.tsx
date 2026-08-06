@@ -409,7 +409,7 @@ const CaseStudyHomepage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+              className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border/90"
             >
               <div>
                 <h3
@@ -447,7 +447,7 @@ const CaseStudyHomepage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr_180px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+                  className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
                 >
                   <p
                     className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
