@@ -15,7 +15,7 @@ import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
-import thumbDesignSystem from "@/assets/thumb-ds-cards.png.asset.json";
+import thumbDesignSystem from "@/assets/thumb-ds-docs.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png.asset.json";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
