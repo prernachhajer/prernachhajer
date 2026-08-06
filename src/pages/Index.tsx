@@ -94,7 +94,6 @@ const caseStudies = [
     title: "Redesigning Cricket's Most-Visited Homepage for 10M+ Fans",
     titleEm: "",
 
-    tags: ["Information Architecture", "Navigation", "Redesign"],
     thumbType: "photo" as const,
     thumbImage: thumbHomepage.url,
     statNum: "5 yrs",
@@ -107,7 +106,6 @@ const caseStudies = [
     title: "Scaling a Design System for a global cricket platform",
     titleEm: "",
 
-    tags: ["Design System", "Systems Thinking", "Figma"],
     thumbType: "photo" as const,
     thumbImage: thumbDesignSystem.url,
     statNum: "170+",
@@ -121,7 +119,6 @@ const caseStudies = [
     title: "Simplifying an Overloaded Page for 10M+ Fans",
     titleEm: "",
 
-    tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
     thumbType: "photo" as const,
     thumbImage: thumbMatchPage.url,
     statNum: "10M+",
@@ -135,7 +132,6 @@ const caseStudies = [
     title: "Bite-sized cricket content designed to increase reader engagement",
     titleEm: "",
 
-    tags: ["Feature Design", "Content Strategy", "Engagement"],
     thumbType: "photo" as const,
     thumbImage: thumbQuickReads.url,
     statNum: "↑",
@@ -391,16 +387,6 @@ const Index = () => {
                       {cs.title}
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {cs.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                   <div className="flex items-end justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
