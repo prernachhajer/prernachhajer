@@ -71,7 +71,7 @@ const BlogDesignSystem = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <NavCaseStudy period="2019 — 2024" />
+      <NavCaseStudy period="2021 — 2026" />
 
       {/* ── HERO ── */}
       <header className={`${layout.containerBlog} mx-auto ${layout.px} pt-28 pb-16 md:pt-36 md:pb-20`}>
@@ -190,9 +190,9 @@ const BlogDesignSystem = () => {
         <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
-            className={`${t.labelSm} text-muted-foreground mb-10`}
+            className={`${t.labelSm} text-muted-foreground mb-10 uppercase`}
           >
-            Design Systems · 2019 — 2024
+            Design Systems · 2021 — 2026
           </motion.p>
           <motion.h2
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
