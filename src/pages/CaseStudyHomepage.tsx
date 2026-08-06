@@ -413,7 +413,7 @@ const CaseStudyHomepage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+              className="flex items-end justify-between gap-8 mb-10 pb-6 "
             >
               <div>
                 {/*   <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
