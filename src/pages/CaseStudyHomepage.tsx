@@ -403,8 +403,7 @@ const CaseStudyHomepage = () => {
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark}`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
-
- <motion.div
+<motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -422,6 +421,7 @@ const CaseStudyHomepage = () => {
             </div>
             <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}></span>
           </motion.div>
+ 
 
           <div className="flex flex-col">
             {[
@@ -482,7 +482,7 @@ const CaseStudyHomepage = () => {
                   </span>
                 </div>
               </motion.div>
-              
+              }
               </div>
               
         
