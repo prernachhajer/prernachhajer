@@ -14,8 +14,8 @@ import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
-import thumbHomepage from "@/assets/thumb-homepage.png";
-import thumbDesignSystem from "@/assets/thumb-design-system-new.jpg";
+import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
+import thumbDesignSystem from "@/assets/thumb-ds-cards.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import cricinfoDesktop from "@/assets/cricinfo-desktop.jpg";
@@ -97,10 +97,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Information Architecture", "Navigation", "Redesign"],
-    thumbType: "cross-platform" as const,
-    thumbImage: thumbHomepage,
-    thumbDesktop: cricinfoDesktop,
-    thumbMobile: cricinfoMobile,
+    thumbType: "photo" as const,
+    thumbImage: thumbHomepage.url,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/homepage",
@@ -112,9 +110,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Design System", "Systems Thinking", "Figma"],
-    thumbType: "desktop" as const,
-    thumbContain: true,
-    thumbImage: thumbDesignSystem,
+    thumbType: "photo" as const,
+    thumbImage: thumbDesignSystem.url,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
