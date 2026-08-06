@@ -17,7 +17,7 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
 import thumbDesignSystem from "@/assets/thumb-ds-docs.png.asset.json";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png.asset.json";
-import thumbMatchPage from "@/assets/match-page-thumb.png";
+import thumbMatchPage from "@/assets/match-page-thumb.png.asset.json";
 import aboutPhoto from "@/assets/about-prerna.png";
 import proximityLogo from "@/assets/company-logos/proximity.svg";
 import americanExpressLogo from "@/assets/company-logos/american-express.png";
@@ -122,9 +122,8 @@ const caseStudies = [
     titleEm: "",
 
     tags: ["Live Experience", "UX Optimisation", "Real-time UI"],
-    thumbType: "desktop" as const,
-    thumbContain: true,
-    thumbImage: thumbMatchPage,
+    thumbType: "photo" as const,
+    thumbImage: thumbMatchPage.url,
     statNum: "10M+",
     statLabel: "daily users",
     link: "/case-study/match-page",
@@ -435,31 +434,6 @@ const Index = () => {
                       />
                     )}
 
-                    {cs.thumbImage && cs.thumbType === "desktop" && cs.thumbContain && (
-                      <img
-                        src={cs.thumbImage}
-                        alt={`${cs.company} preview`}
-                        className="absolute inset-0 m-auto rounded-[12px] z-[2] object-contain thumb-kenburns max-h-[70%] max-w-[75%]"
-                      />
-                    )}
-
-
-                    {cs.thumbImage && cs.thumbType === "desktop" && !cs.thumbContain && (
-                      <div
-                        className="absolute z-[2] top-[60px] bottom-0 left-[40px] right-[40px] rounded-[10px] rounded-b-none p-[2px] pb-0 px-[2px]"
-                        style={{
-                          boxShadow: "0 -10px 40px rgba(0,0,0,0.4), 0 0 20px hsl(12 80% 55% / 0.2)",
-                        }}
-                      >
-                        <div className="w-full overflow-hidden rounded-[8px] rounded-b-none bg-background">
-                          <img
-                            src={cs.thumbImage}
-                            alt={`${cs.company} preview`}
-                            className="w-full block thumb-kenburns"
-                          />
-                        </div>
-                      </div>
-                    )}
 
 
 
