@@ -470,42 +470,6 @@ const Index = () => {
                       </div>
                     )}
 
-                    {cs.thumbType === "cross-platform" && cs.thumbDesktop && cs.thumbMobile && (
-                      <>
-                        {/* Desktop — large, main screenshot */}
-                        <div className="absolute inset-[60px] z-[1] flex items-center justify-center">
-                          <div
-                            className="inline-block rounded-[10px] overflow-hidden"
-                            style={{
-                              boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
-                            }}
-                          >
-                            <img
-                              src={cs.thumbDesktop}
-                              alt={`${cs.company} desktop preview`}
-                              className="max-w-full max-h-full block thumb-kenburns rounded-[10px]"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Mobile — foreground, overlapping bottom-right */}
-                        <div
-                          className="absolute bottom-16 right-[16px] z-[3] w-[120px] md:w-[120px] rounded-[14px] rounded-b-14px p-[3px] pb-0 px-0 py-0"
-                          style={{
-                            background: "hsl(220 70% 50%)",
-                            boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px hsl(220 70% 50% / 0.3)",
-                          }}
-                        >
-                          <div className="w-full rounded-[12px] rounded-b-12px overflow-hidden"></div>
-
-                          <img
-                            src={cs.thumbMobile}
-                            alt={`${cs.company} mobile preview`}
-                            className="w-full block thumb-kenburns-center rounded-[12px] rounded-b-12px"
-                          />
-                        </div>
-                      </>
-                    )}
 
                     {isComingSoon && (
                       <div className="absolute inset-0 bg-background/60 backdrop-blur-[6px] flex flex-col items-center justify-center gap-3 z-10">
