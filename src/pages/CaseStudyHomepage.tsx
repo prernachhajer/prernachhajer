@@ -433,28 +433,23 @@ const CaseStudyHomepage = () => {
             <div className="flex flex-col">
               {[
                 {
-                  num: "01",
-                  title: "The homepage was just the entry point to the match pages.",
-                  desc: "Users landed on the homepage, glanced at the scorecard, then moved straight to the match page. Nothing else on the homepage held their attention long enough to change that.",
-                  tag: "ENTRY POINT",
+                  num: "2022",
+                  title: "Proposed and led the shift from feed to structured system",
+                  desc: "I proposed moving away from the chronological feed and led the shift to a structured system — defining clear zones, modular components, and shared layout logic that could scale across formats and tournaments instead of being rebuilt each time.",
+
+                  tag: "2021-23",
                 },
                 {
-                  num: "02",
-                  title: "Dense, oversized modules with no clear structure slowed users down",
-                  desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights. Right when users needed speed, they had to wade through clutter to find what mattered.",
-                  tag: "COMPLEXITY",
+                  num: "2023",
+                  title: "Refined with editorial and validated with product",
+                  desc: "Worked closely with the editorial team to define how different content types should surface — match coverage, tournament coverage, and in-depth stories each needed their own placement and hierarchy. Their input shaped how the structure was organized; each iteration was then validated with Product before shipping.",
+                  tag: "2023-26",
                 },
                 {
-                  num: "03",
-                  title: "Three user types, one surface",
-                  desc: "With no structure, prioritizing content per user was hard — casual users wanted quick updates, content consumers wanted stories, power users wanted stats.\u00a0",
-                  tag: "Strategic tension",
-                },
-                {
-                  num: "04",
-                  title: "Scalability was a system problem",
-                  desc: "When something big was happening — a key moment during a live IPL match — the feed's lack of structure made it nearly impossible to surface what mattered most.\u00a0",
-                  tag: "Root cause",
+                  num: "2026",
+                  title: "Team-wide simplification driven by user feedback",
+                  desc: "Reviews were flagging the same issues repeatedly — too dense, cluttered, overwhelming, slow. That feedback drove a team-wide push to simplify: reducing density, adding whitespace, and clarifying typography within the system already in place.\u00a0",
+                  tag: "2026-Now",
                 },
               ].map((insight, i) => (
                 <motion.div
