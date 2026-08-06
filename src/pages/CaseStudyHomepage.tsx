@@ -404,6 +404,88 @@ const CaseStudyHomepage = () => {
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>DESIGN STRATEGY & SOLUTION</SectionLabel>
 
+ <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              {/*   <p className={`${t.labelSm} text-primary mb-3 flex items-center gap-3`}>
+                <span className="w-5 h-px bg-primary" />
+                What we found
+              </p> */}
+              <h3
+                className="text-2xl md:text-2xl font-normal tracking-normal leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                What we found
+              </h3>
+            </div>
+            <span className={`${t.labelSm} text-muted-foreground shrink-0 hidden md:block`}></span>
+          </motion.div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                num: "2022",
+                title: "The homepage was just the entry point to the match pages.",
+                desc: "Users landed on the homepage, glanced at the scorecard, then moved straight to the match page. Nothing else on the homepage held their attention long enough to change that.",
+                tag: "ENTRY POINT",
+              },
+              {
+                num: "2023",
+                title: "Dense, oversized modules with no clear structure slowed users down",
+                desc: "During live matches — peak traffic — the feed piled on previews, reports, stats, and highlights. Right when users needed speed, they had to wade through clutter to find what mattered.",
+                tag: "COMPLEXITY",
+              },
+              {
+                num: "2026",
+                title: "Three user types, one surface",
+                desc: "With no structure, prioritizing content per user was hard — casual users wanted quick updates, content consumers wanted stories, power users wanted stats.\u00a0",
+                tag: "Strategic tension",
+              },
+              {
+                num: "04",
+                title: "Scalability was a system problem",
+                desc: "When something big was happening — a key moment during a live IPL match — the feed's lack of structure made it nearly impossible to surface what mattered most.\u00a0",
+                tag: "Root cause",
+              },
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+              >
+                <p
+                  className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {insight.num}
+                </p>
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                </div>
+                <div className="col-span-2 md:col-span-1 md:justify-self-end md:pt-1">
+                  <span
+                    className={`${t.labelSm} px-3 py-1.5 rounded-full border border-primary/25 text-primary whitespace-nowrap`}
+                  >
+                    {insight.tag}
+                  </span>
+                </div>
+              </motion.div>
+          
           {/* Strategic contribution */}
           <div className={`${layout.container} mx-auto mt-12 mb-16`}>
             <div className="flex flex-col gap-10 px-[84px]">
