@@ -409,7 +409,7 @@ const CaseStudyHomepage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fade}
-              className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border/90"
+              className="flex items-end justify-between gap-8 mb-10 pb-6 "
             >
               <div>
                 <h3
