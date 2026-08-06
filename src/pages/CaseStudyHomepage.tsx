@@ -450,7 +450,7 @@ const CaseStudyHomepage = () => {
                   className="grid grid-cols-[auto_1fr] md:grid-cols-[120px_1fr] gap-x-8 gap-y-3 items-baseline py-4  group"
                 >
                   <p
-                    className="text-2xl md:text-3xl font-normal text-primary/70 tabular-nums"
+                    className="text-2xl md:text-2xl font-normal text-primary/70 tabular-nums"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.num}
