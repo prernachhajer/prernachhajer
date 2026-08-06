@@ -676,8 +676,9 @@ const CaseStudyHomepage = () => {
               <Prose>
                 <h2>Outcome</h2>
                 <p>
-                  80% of traffic is casual users Homepage went from a match-day habit → a daily habit Redesign turned
-                  occasional visitors into repeat visitors
+                  80% of traffic is casual users
+                  <br> Homepage went from a match-day habit → a daily habit </br>
+                  <br> Redesign turned occasional visitors into repeat visitors</br>
                 </p>
               </Prose>
             </motion.div>
