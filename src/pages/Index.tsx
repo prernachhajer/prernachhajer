@@ -485,6 +485,24 @@ const Index = () => {
                   </span>
                 ))}
               </div>
+
+              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>Specialties</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Design Systems",
+                  "Product Strategy",
+                  "Usability Frameworks",
+                  "Competitive Analysis",
+                  "AI-assisted Design",
+                ].map((s) => (
+                  <span
+                    key={s}
+                    className="text-xs text-background/75 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
             </motion.div>
 
             {/* Right: photo + beliefs */}
