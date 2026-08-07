@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Maximize2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 
-import desk2021 from "@/assets/cricinfo-desk-2021.jpg.asset.json";
+import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
 import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
 import desk2023 from "@/assets/cricinfo-desk-2023.jpg";
 import mobile2023 from "@/assets/cricinfo-mobile-2023.jpg";
@@ -12,7 +12,7 @@ import desk2026 from "@/assets/cricinfo-desk-2026.jpg";
 import mobile2026 from "@/assets/cricinfo-mobile-2026.jpg";
 
 const slides = [
-  { year: "2022", era: "First era", desktop: desk2021.url, mobile: mobile2021 },
+  { year: "2022", era: "First era", desktop: desk2021, mobile: mobile2021 },
   { year: "2023", era: "Refresh", desktop: desk2023, mobile: mobile2023 },
   { year: "2026", era: "Current", desktop: desk2026, mobile: mobile2026 },
 ];
