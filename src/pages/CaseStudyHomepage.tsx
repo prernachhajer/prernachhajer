@@ -17,7 +17,7 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
-import desk2021 from "@/assets/cricinfo-desk-2021.jpg";
+import desk2021 from "@/assets/cricinfo-desk-2021.jpg.asset.json";
 import mobile2021 from "@/assets/cricinfo-mobile-2021.jpg";
 import hsbScreen2021 from "@/assets/hsb-screen-1.jpg";
 import hsbScreen2023 from "@/assets/hsb-screen-2.jpg";
@@ -170,7 +170,7 @@ const CaseStudyHomepage = () => {
                 </div>
               </div>
               <div className="flex-1 overflow-y-auto overflow-x-hidden border border-border border-t-0 rounded-b-xl bg-background min-h-0 scrollbar-thin scrollbar-thumb-border">
-                <img src={desk2021} alt="Cricinfo 2022 desktop homepage" className="w-full h-auto block" />
+                <img src={desk2021.url} alt="Cricinfo 2022 desktop homepage" className="w-full h-auto block" />
               </div>
             </div>
             {/* Mobile */}
