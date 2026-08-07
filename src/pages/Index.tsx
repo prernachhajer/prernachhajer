@@ -486,14 +486,13 @@ const Index = () => {
                 ))}
               </div>
 
-              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>Specialties</p>
+              <p className={`text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4`}>AVAILIBILITY</p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Design Systems",
-                  "Product Strategy",
-                  "Usability Frameworks",
-                  "Competitive Analysis",
-                  "AI-assisted Design",
+                  "Full Time",
+                  "Contract",
+                  "Worldwide",
+                  "Remote-friendly",
                 ].map((s) => (
                   <span
                     key={s}
