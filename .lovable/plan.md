@@ -1,18 +1,12 @@
-# Plan: Move eyebrow labels to bottom of cards
+Update the Homepage case study's 2021 desktop image with the uploaded asset at full quality.
 
-## Scope
-Update the `src/pages/CaseStudyMatchPage.tsx` case study page only.
+What will change
+1. Replace the current local binary `src/assets/cricinfo-desk-2021.jpg` with a CDN-backed asset pointer created from the uploaded `2021-home-desktop-2.jpg`. The Lovable Assets CLI preserves the original file bytes, so no compression is applied.
+2. Update the image import in `src/components/HomepageEvolutionCarousel.tsx` and `src/pages/CaseStudyHomepage.tsx` to use the new asset pointer URL.
+3. Remove the old `src/assets/cricinfo-desk-2021.jpg` file from the repository.
+4. Run the build to confirm the image swap compiles and renders correctly.
 
-## Changes
-1. **Groupings rationale grid** (4 cards, currently around line 323–369)
-   - Move the `label` eyebrow text from the top of each card to the bottom.
-   - Keep the title (`h4`) and description (`p`) at the top of the card.
-   - Adjust margin/spacing so the label reads as a footer-style tag without changing the design system styling.
-
-2. **Outcome grid** under Cross-tab content snacking (4 cards, currently around line 687–729)
-   - Apply the same reorder: move the `label` eyebrow text from the top of each card to the bottom.
-   - Keep the title and description above the label.
-
-## Verification
-- Build the project and confirm no TypeScript errors.
-- Preview the Match Page case study to ensure the eyebrow labels appear at the bottom of all 8 cards and the visual hierarchy remains intact.
+Technical details
+- The new image will be uploaded via `lovable-assets create --file /mnt/user-uploads/2021-home-desktop-2.jpg` and the resulting JSON pointer will be saved to `src/assets/cricinfo-desk-2021.jpg.asset.json`.
+- Both existing imports are currently aliased as `desk2021`; they will be repointed to import the `.asset.json` and read its `.url` property.
+- No other timeline years, file names, or case study text will be changed.
