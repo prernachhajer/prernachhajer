@@ -169,11 +169,18 @@
   }
 
   @media (max-width: 767px) {
+    .company-marquee-item,
     .company-logo-item {
-      width: 7.5rem;
-      height: 2.25rem;
+      width: auto;
+      height: 1.5rem;
+    }
+
+    .company-marquee-set {
+      gap: 1.75rem;
+      padding-right: 1.75rem;
     }
   }
+
 
   @media (prefers-reduced-motion: reduce) {
     .company-marquee-track {
