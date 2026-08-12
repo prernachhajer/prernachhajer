@@ -610,7 +610,7 @@ const Index = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={1}
-              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
+              className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
               onClick={() => navigate("/blog/design-system")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
@@ -638,7 +638,7 @@ const Index = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={2}
-              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
+              className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
               onClick={() => navigate("/blog/ai-portfolio")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>

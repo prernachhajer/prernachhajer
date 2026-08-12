@@ -241,7 +241,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center"
+            className="bg-secondary p-7 sm:p-9 md:p-12 rounded-l-xl flex flex-col justify-center"
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The pushback</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
@@ -255,7 +255,7 @@ const CaseStudyDesignSystem = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center"
+            className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-r-xl flex flex-col justify-center"
           >
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The answer</p>
             <p
@@ -460,7 +460,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center"
+            className="bg-secondary p-7 sm:p-9 md:p-12 rounded-l-xl flex flex-col justify-center"
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>Before documentation</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
@@ -477,7 +477,7 @@ const CaseStudyDesignSystem = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center"
+            className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-r-xl flex flex-col justify-center"
           >
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">After documentation</p>
             <p

@@ -514,7 +514,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{group.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{group.desc}</p>
@@ -560,7 +560,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
@@ -663,7 +663,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{snack.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{snack.desc}</p>
@@ -708,7 +708,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
@@ -876,7 +876,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                  className={`${surface.darkCard} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-background/90 mb-2">{card.title}</h4>
                   <p className="text-[0.8125rem] text-background/55 leading-relaxed">{card.desc}</p>
