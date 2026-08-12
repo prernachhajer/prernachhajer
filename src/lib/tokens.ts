@@ -21,14 +21,15 @@ export const layout = {
 
 // ── Spacing ───────────────────────────────────
 export const spacing = {
-  sectionGap: "py-24",           // standard section top/bottom
-  sectionGapLg: "py-28",         // closing / hero sections
-  labelBottom: "mb-12",          // below every SectionLabel
-  headingBottom: "mb-6",         // below h2 in prose
-  bodyBottom: "mb-5",            // below body paragraphs
-  cardPad: "p-10",               // standard card internal padding
-  cardPadLg: "p-12",             // larger featured cards
+  sectionGap: "py-16 md:py-24",        // standard section top/bottom
+  sectionGapLg: "py-20 md:py-28",      // closing / hero sections
+  labelBottom: "mb-8 md:mb-12",        // below every SectionLabel
+  headingBottom: "mb-6",               // below h2 in prose
+  bodyBottom: "mb-5",                  // below body paragraphs
+  cardPad: "p-6 sm:p-8 md:p-10",       // standard card internal padding
+  cardPadLg: "p-7 sm:p-9 md:p-12",     // larger featured cards
 } as const;
+
 
 // ── Typography scale ──────────────────────────
 export const type = {
