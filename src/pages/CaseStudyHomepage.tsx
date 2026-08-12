@@ -200,7 +200,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl"
+            className="bg-[hsl(220,18%,12%)] p-7 sm:p-9 md:p-12 md:rounded-l-xl"
           >
             <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
@@ -234,7 +234,7 @@ const CaseStudyHomepage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(220,18%,16%)] p-12 md:rounded-r-xl"
+            className="bg-[hsl(220,18%,16%)] p-7 sm:p-9 md:p-12 md:rounded-r-xl"
           >
             <p className={`${t.labelSm} text-primary mb-5`}>What success looks like</p>
             <p
@@ -280,7 +280,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-secondary p-7 sm:p-9 md:p-12 rounded-l-xl flex flex-col justify-center"
+            className="bg-secondary p-7 sm:p-9 md:p-12 rounded-t-xl md:rounded-t-none md:rounded-l-xl flex flex-col justify-center"
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The assumption</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
@@ -293,7 +293,7 @@ const CaseStudyHomepage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-r-xl flex flex-col justify-center"
+            className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-b-xl md:rounded-b-none md:rounded-r-xl flex flex-col justify-center"
           >
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The reality</p>
             <p
@@ -713,7 +713,7 @@ const CaseStudyHomepage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`bg-[hsl(220,18%,12%)] p-6 sm:p-8 md:p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">

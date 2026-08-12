@@ -207,7 +207,7 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.darkCard} p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`${surface.darkCard} p-6 sm:p-8 md:p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
