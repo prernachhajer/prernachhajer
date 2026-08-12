@@ -388,7 +388,7 @@ const Index = () => {
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
                   </div>
-                  <div className="flex items-end justify-between gap-4 mt-4 pt-5 border-t border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
                       <span
                         className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.02em] leading-none block"
