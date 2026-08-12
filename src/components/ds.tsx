@@ -7,7 +7,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { animation, layout, nav, spacing, surface, type as t, radius } from "@/lib/tokens";
 
