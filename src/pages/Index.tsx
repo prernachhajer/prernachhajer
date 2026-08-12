@@ -388,7 +388,7 @@ const Index = () => {
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
                   </div>
-                  <div className="flex items-end justify-between gap-4 mt-4 pt-5 border-t border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
                       <span
                         className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.02em] leading-none block"
@@ -531,7 +531,7 @@ const Index = () => {
               <p className="text-xl text-muted-foreground mb-10" style={{ fontFamily: t.displayFont }}>
                 Tools I reach for
               </p>
-              <div className="grid grid-cols-4 gap-y-10 gap-x-4">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-9 gap-x-4">
                 {tools.map((tool) => (
                   <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
                     {tool.logo ? (
@@ -610,7 +610,7 @@ const Index = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={1}
-              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
+              className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
               onClick={() => navigate("/blog/design-system")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
@@ -638,7 +638,7 @@ const Index = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={2}
-              className="p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
+              className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
               onClick={() => navigate("/blog/ai-portfolio")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>

@@ -200,7 +200,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-[hsl(220,18%,12%)] p-12 md:rounded-l-xl"
+            className="bg-[hsl(220,18%,12%)] p-7 sm:p-9 md:p-12 md:rounded-l-xl"
           >
             <p className={`${t.labelSm} text-background/85 mb-5`}>The state we were in</p>
             <p
@@ -234,7 +234,7 @@ const CaseStudyHomepage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(220,18%,16%)] p-12 md:rounded-r-xl"
+            className="bg-[hsl(220,18%,16%)] p-7 sm:p-9 md:p-12 md:rounded-r-xl"
           >
             <p className={`${t.labelSm} text-primary mb-5`}>What success looks like</p>
             <p
@@ -280,7 +280,7 @@ const CaseStudyHomepage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-secondary p-12 rounded-l-xl flex flex-col justify-center"
+            className="bg-secondary p-7 sm:p-9 md:p-12 rounded-t-xl md:rounded-t-none md:rounded-l-xl flex flex-col justify-center"
           >
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The assumption</p>
             <p className="text-2xl md:text-3xl font-normal leading-[1.1]" style={{ fontFamily: t.displayFont }}>
@@ -293,7 +293,7 @@ const CaseStudyHomepage = () => {
             viewport={{ once: true }}
             variants={fade}
             custom={1}
-            className="bg-[hsl(152,48%,20%)] p-12 rounded-r-xl flex flex-col justify-center"
+            className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-b-xl md:rounded-b-none md:rounded-r-xl flex flex-col justify-center"
           >
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">The reality</p>
             <p
@@ -472,7 +472,7 @@ const CaseStudyHomepage = () => {
 
           {/* Strategic contribution 
           <div className={`${layout.container} mx-auto mt-12 mb-16`}>
-            <div className="flex flex-col gap-10 px-[84px]">
+            <div className="flex flex-col gap-8 md:gap-10 px-6 md:px-[84px]">
               {[
                 {
                   num: "2022",
@@ -713,7 +713,7 @@ const CaseStudyHomepage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`bg-[hsl(220,18%,12%)] p-6 sm:p-8 md:p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
@@ -790,18 +790,18 @@ const CaseStudyHomepage = () => {
             className={`${layout.container} mx-auto ${idx === 0 ? "mt-12" : "mt-0.5"}`}
           >
             <div className="grid md:grid-cols-3 gap-0.5 rounded-xl overflow-hidden">
-              <div className="bg-card p-10">
+              <div className="bg-card p-6 sm:p-8 md:p-10">
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The constraint</p>
                 <h4 className="font-semibold text-base mb-3">{block.constraint.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{block.constraint.desc}</p>
               </div>
-              <div className="bg-secondary p-10">
+              <div className="bg-secondary p-6 sm:p-8 md:p-10">
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>{block.decision.label}</p>
                 <h4 className="font-semibold text-base mb-3">{block.decision.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{block.decision.desc}</p>
                 <p className="text-xs font-medium text-primary mt-4">{block.decision.badge}</p>
               </div>
-              <div className="bg-foreground text-background p-10">
+              <div className="bg-foreground text-background p-6 sm:p-8 md:p-10">
                 <p className={`${t.labelSm} text-background/85 mb-4`}>{block.tradeoff.label}</p>
                 <h4
                   className="text-lg italic text-background/90 mb-3 leading-snug"

@@ -207,7 +207,7 @@ const CaseStudyMatchPage = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`${surface.darkCard} p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`${surface.darkCard} p-6 sm:p-8 md:p-10 flex flex-col justify-between ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
@@ -514,7 +514,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{group.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{group.desc}</p>
@@ -560,7 +560,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
@@ -663,7 +663,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-foreground/90 mb-2">{snack.title}</h4>
                   <p className="text-[0.8125rem] text-foreground/55 leading-relaxed">{snack.desc}</p>
@@ -708,7 +708,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.card} p-9 ${corners[i]}`}
+                  className={`${surface.card} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-foreground/50 mb-4">
                     {tradeoff.num}
@@ -817,7 +817,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-[hsl(220,10%,6%)] rounded-t-xl p-12 flex flex-col md:flex-row items-center gap-14 mb-0.5"
+            className="bg-[hsl(220,10%,6%)] rounded-t-xl p-7 sm:p-9 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-14 mb-0.5"
           >
             <div className="flex-1">
               <h3
@@ -876,7 +876,7 @@ const CaseStudyMatchPage = () => {
                   viewport={{ once: true }}
                   variants={fade}
                   custom={i}
-                  className={`${surface.darkCard} p-9 ${corners[i]}`}
+                  className={`${surface.darkCard} p-6 sm:p-8 md:p-9 ${corners[i]}`}
                 >
                   <h4 className="text-sm font-medium text-background/90 mb-2">{card.title}</h4>
                   <p className="text-[0.8125rem] text-background/55 leading-relaxed">{card.desc}</p>
