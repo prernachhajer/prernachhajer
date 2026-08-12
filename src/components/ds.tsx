@@ -18,10 +18,19 @@ const fade = animation.fade;
 // ─────────────────────────────────────────────
 export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
   const navigate = useNavigate();
+  const [open, setOpen] = React.useState(false);
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
+  const links = [
+    { label: "Work", id: "work" },
+    { label: "About", id: "about" },
+    { label: "BLOG", id: "writing" },
+    { label: "Resume", id: "__navigate__/resume" },
+  ];
+
   const handleNavClick = (id: string) => {
+    setOpen(false);
     if (id.startsWith("__navigate__")) {
       navigate(id.replace("__navigate__", ""));
     } else {
@@ -39,12 +48,7 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
         {name}
       </a>
       <div className="hidden md:flex items-center gap-8">
-        {[
-          { label: "Work", id: "work" },
-          { label: "About", id: "about" },
-          { label: "BLOG", id: "writing" },
-          { label: "Resume", id: "__navigate__/resume" },
-        ].map((link) => (
+        {links.map((link) => (
           <button
             key={link.id}
             onClick={() => handleNavClick(link.id)}
@@ -60,9 +64,45 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
           Let's Talk →
         </button>
       </div>
+
+      {/* Mobile menu */}
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+        className="md:hidden -mr-2 p-2 text-foreground"
+      >
+        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+      </button>
+
+      {open && (
+        <div className="md:hidden absolute left-0 right-0 top-full bg-background border-b border-border shadow-lg">
+          <div className="flex flex-col px-6 py-4">
+            {links.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleNavClick(link.id)}
+                className="py-3 text-left text-sm text-muted-foreground hover:text-foreground transition-colors border-b border-border last:border-b-0"
+              >
+                {link.label}
+              </button>
+            ))}
+            <button
+              onClick={() => {
+                setOpen(false);
+                scrollTo("contact");
+              }}
+              className="mt-4 inline-flex items-center justify-center bg-foreground text-background px-5 py-3 rounded-full text-xs font-medium"
+            >
+              Let's Talk →
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
+
 
 // ─────────────────────────────────────────────
 // NAV — Case Study variant (back button)
