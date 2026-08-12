@@ -817,7 +817,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="bg-[hsl(220,10%,6%)] rounded-t-xl p-12 flex flex-col md:flex-row items-center gap-14 mb-0.5"
+            className="bg-[hsl(220,10%,6%)] rounded-t-xl p-7 sm:p-9 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-14 mb-0.5"
           >
             <div className="flex-1">
               <h3

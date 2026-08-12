@@ -12,7 +12,7 @@ const fade = animation.fade;
 
 const PhoneShell = ({ children }: { children: React.ReactNode }) => (
   <div
-    className="w-[300px] flex-shrink-0 bg-[#0E0E0E] rounded-[44px] p-[8px] relative"
+    className="w-full max-w-[300px] flex-shrink-0 bg-[#0E0E0E] rounded-[44px] p-[8px] relative"
     style={{
       boxShadow:
         "0 0 0 1px rgba(255,255,255,0.07) inset, 0 2px 0 rgba(255,255,255,0.04) inset, 0 40px 80px rgba(0,0,0,0.20), 0 12px 28px rgba(0,0,0,0.14)",

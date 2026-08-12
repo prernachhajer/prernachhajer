@@ -30,7 +30,7 @@ const QuickReadsProblemVisual = () => (
     className="w-full"
   >
     {/* Phones row */}
-    <div className="grid grid-cols-3 gap-5 items-end">
+    <div className="grid grid-cols-3 gap-2 sm:gap-5 items-end">
       {[problem1, problem2, problem3].map((src, i) => (
         <motion.div
           key={i}

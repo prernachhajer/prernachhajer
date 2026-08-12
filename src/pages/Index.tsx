@@ -531,7 +531,7 @@ const Index = () => {
               <p className="text-xl text-muted-foreground mb-10" style={{ fontFamily: t.displayFont }}>
                 Tools I reach for
               </p>
-              <div className="grid grid-cols-4 gap-y-10 gap-x-4">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-9 gap-x-4">
                 {tools.map((tool) => (
                   <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
                     {tool.logo ? (
