@@ -403,7 +403,7 @@ const CaseStudyDesignSystem = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}
+              className={`bg-[hsl(220,18%,12%)] p-6 sm:p-8 md:p-10 ${card.corner}`}
             >
               <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
               <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
@@ -649,7 +649,7 @@ const CaseStudyDesignSystem = () => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              className={`bg-[hsl(220,18%,12%)] p-10 ${card.corner}`}
+              className={`bg-[hsl(220,18%,12%)] p-6 sm:p-8 md:p-10 ${card.corner}`}
             >
               <h4 className="font-semibold text-background/80 mb-3">{card.title}</h4>
               <p className="text-sm text-background/75 leading-relaxed">{card.desc}</p>
