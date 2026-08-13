@@ -25,31 +25,40 @@ const contactItems = [
   { label: "Location", value: "Worldwide · Remote-friendly" },
   { label: "LinkedIn", value: "prerna-chhajer", href: "https://www.linkedin.com/in/prerna-chhajer/" },
   { label: "Behance", value: "prerna_Chhajer", href: "https://www.behance.net/prerna_Chhajer" },
+  { label: "Instagram", value: "_justatraveler", href: "https://www.instagram.com/_justatraveler/" },
 ];
 
 const skillCategories = [
-  {
-    heading: "Execution",
-    items: [
-      "UX Research",
-      "Design Systems",
-      "Interaction Design",
-      "Prototyping",
-      "Information Architecture",
-      "Heuristic Evaluation",
-      "Visual Design",
-      "Design Ops",
-    ],
-  },
-  { heading: "Strategy", items: ["Product Strategy", "Design Vision", "Roadmap Planning"] },
   {
     heading: "Leadership",
     items: [
       "Design Leadership",
       "Cross-functional Collaboration",
-      "Design Critique",
+      "Team Building",
+      "Career Development",
+      "Performance Reviews",
+      "Design Reviews / Critique",
       "Mentorship",
       "Stakeholder Alignment",
+      "Design Governance",
+    ],
+  },
+  {
+    heading: "Execution & Strategy",
+    items: [
+      "UX Research",
+      "Design Systems",
+      "Prototyping",
+      "Information Architecture",
+      "Heuristic Evaluation",
+      "Design Ops",
+      "AI-Augmented Workflows",
+      "Design Tokens, Patterns & Documentation",
+      "Component Architecture",
+      "Design System Governance",
+      "Product Strategy",
+      "Design Vision",
+      "Roadmap Planning",
     ],
   },
   { heading: "Process", items: ["Agile / Scrum", "Design Thinking", "Workshop Facilitation"] },
@@ -59,32 +68,42 @@ const skillCategories = [
 const toolCategories = [
   { heading: "Design", items: ["Figma", "Miro / FigJam", "ZeroHeight"] },
   { heading: "Research & Analytics", items: ["Hotjar", "Google Analytics", "VWO", "UserTesting", "UX Pilot"] },
-  { heading: "AI", items: ["Claude", "ChatGPT", "Gemini", "Lovable", "Perplexity", "Pencil"] },
+  { heading: "AI", items: ["Claude", "ChatGPT", "Gemini", "Lovable", "Figma AI", "Figma Make", "Pencil"] },
 ];
 
 const experienceData = [
   {
     company: "Proximity Works · Remote",
     role: "Lead Product Designer — ESPNCricinfo",
-    years: "2021 – Present · 4.5+ yrs",
+    years: "2021 – Present · 5+ yrs",
     current: true,
     bullets: [
       <>
-        Led designs for ESPNCricinfo's design system from scratch — scaling to{" "}
-        <span className="text-primary font-medium">200+ Figma files, 50+ components</span> across web, iOS, Android, and
-        dark mode.
+        Built ESPNCricinfo's design system to{" "}
+        <span className="text-primary font-medium">200+ Figma files, 100+ components</span> (web, iOS, Android, dark
+        mode, multilingual) — reduced design-to-dev handoff by{" "}
+        <span className="text-primary font-medium">50%</span>, enabling the team to ship{" "}
+        <span className="text-primary font-medium">3x</span> more features per quarter and standardizing UI consistency
+        across 100M+ users.
       </>,
       <>
         Led homepage redesign championing casual users (80% of traffic); reduced bounce rates{" "}
-        <span className="text-primary font-medium">3.4–30%</span> and improved returning user sessions{" "}
+        <span className="text-primary font-medium">~30%</span> and improved returning sessions{" "}
         <span className="text-primary font-medium">~15%</span>.
       </>,
       <>
         Drove native app launch on iOS and Android (hybrid to native transition), including Dynamic Island and pinning
-        features — contributed to app rating improving from <span className="text-primary font-medium">3.4–4.5</span>
+        features — contributed to app rating improving from{" "}
+        <span className="text-primary font-medium">3.4 to 4.5</span>.
       </>,
-      "Owned design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment within the ESPN/Disney org.",
-      "Lead a 2-person design team across parallel workstreams (design system, homepage), mentoring on craft and growth.",
+      "Own design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment across the ESPN/Disney org.",
+      "Lead and grew a 2-person IC team; conducted bi-weekly 1:1s, defined career ladders, and delivered performance reviews.",
+      <>
+        Established AI-assisted workflows (Figma AI, Claude) for the design team; ran 4 workshops that reduced
+        concept-to-prototype time by <span className="text-primary font-medium">35%</span> and became the team's default
+        practice, freeing 10 hrs/week for strategic work.
+      </>,
+      "Set the product design vision and multi-quarter roadmap for ESPNcricinfo (100M+ MAU, 10M DAU), aligning product, engineering, editorial, and business teams on strategic priorities across the homepage, match experience, content, and platform design system.",
     ],
   },
   {
@@ -94,14 +113,10 @@ const experienceData = [
     current: false,
     bullets: [
       <>
-        Led design across two products — <strong>Saarthi</strong> (fintech lending for field agents) and{" "}
-        <strong>Vahana</strong> (no-code platform for UIs, workflows, and APIs) — leading a 2-person team across both
+        Led design for <strong>Saarthi</strong> (2-sided NBFC lending marketplace) and <strong>Vahana</strong> (no-code
+        platform adopted by internal teams); built 2 design systems, reducing screen production by{" "}
+        <span className="text-primary font-medium">40%</span> and enabling 6-month MVP delivery for Vahana.
       </>,
-      <>
-        Built both design systems from scratch — reduced screen design and dev handoff time by{" "}
-        <span className="text-primary font-medium">~40%</span>.
-      </>,
-      "Delivered Vahana MVP in under 6 months, enabling early NBFC partnerships and product validation.",
     ],
   },
   {
@@ -115,8 +130,8 @@ const experienceData = [
         decisions to optimize for click-through and conversion; reduced booking funnel drop-offs{" "}
         <span className="text-primary font-medium">~15–20%</span>.
       </>,
-      "Led usability testing and user research end-to-end, including on-road user interviews, heatmapping, and session recording analysis to pinpoint funnel breakdowns, synthesized into insight reports that shaped design decisions",
-      "Contributed to FabHotels' first design system, initiated by the design manager",
+      "Led usability testing and user research end-to-end, including on-road user interviews, heatmapping, and session recording analysis to pinpoint funnel breakdowns, synthesized into insight reports that shaped design decisions.",
+      "Contributed to FabHotels' first design system, initiated by the design manager.",
     ],
   },
   {
@@ -125,26 +140,20 @@ const experienceData = [
     years: "2014 – 2018",
     current: false,
     bullets: [
-      "Designed AI, AR, data science, and iBeacon-driven solutions for major brands including American Express, Telstra, Prudential, and Singtel Optus",
-      "Designed PocketDash — an analytical dashboard for Amex marketers to track credit card offers, conversions, and campaign performance.",
-      "Led heuristic evaluation and research-driven design for Papa John's, including a working-hours estimation and concept pitch; also designed employee and patient management tools and an in-house event app",
+      "Designed AI, AR, data science, and iBeacon-driven solutions for American Express, Telstra, Prudential, and Singtel Optus.",
+      "Built PocketDash, a campaign dashboard, and a chatbot for American Express — B2B tools for tracking offers, conversions, and performance.",
+      "Led research-driven design for Papa John's (heuristic evaluation, working-hours estimation, concept pitch), plus employee/patient management tools and an in-house event app.",
+      "Established core UX practice — research, wireframing, journey mapping, UI execution — marking the shift from front-end dev to product design.",
     ],
   },
   {
-    company: "DogSpot · Gurgaon",
+    company: "DogSpot · Pyrumas · Gurgaon",
     role: "Web Designer",
-    years: "2013 – 2014",
+    years: "2012 – 2014",
     current: false,
     bullets: [
-      "Designed UX and UI for an early-stage e-commerce platform; first product role after transitioning from front-end development.",
+      "Transitioned from front-end development into product design; redesigned e-commerce and service product experiences across education, travel, and transport domains.",
     ],
-  },
-  {
-    company: "Pyrumas · Bangalore",
-    role: "Web Designer",
-    years: "2012 – 2013",
-    current: false,
-    bullets: ["Designed solutions for clients as per requirements in Education, Travel, and Transport domains."],
   },
 ];
 
