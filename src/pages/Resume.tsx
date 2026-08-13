@@ -16,7 +16,7 @@ const fade = animation.fade;
 const stats = [
   { num: "12+", label: "Years experience" },
   { num: "100M+", label: "Users impacted" },
-  { num: "200+", label: "Figma components built" },
+  { num: "100+", label: "Design system components" },
 ];
 
 const contactItems = [
