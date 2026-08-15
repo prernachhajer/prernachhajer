@@ -32,7 +32,7 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
   const handleNavClick = (id: string) => {
     setOpen(false);
     if (id.startsWith("__navigate__")) {
-      navigate(id.replace("__navigate__", ""));
+      window.open(id.replace("__navigate__", ""), "_blank");
     } else {
       scrollTo(id);
     }
@@ -609,7 +609,7 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              onClick={() => navigate(cs.path)}
+              onClick={() => window.open(cs.path, "_blank")}
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad} text-left group hover:border-primary/30 transition-all hover:-translate-y-0.5`}
             >
               <p className={`${t.labelSm} text-muted-foreground/80 mb-4`}>
