@@ -246,7 +246,7 @@ const Index = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  onClick={() => navigate("/resume")}
+                  onClick={() => window.open("/resume", "_blank")}
                   className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
                 >
                   View resume
@@ -346,7 +346,7 @@ const Index = () => {
                     ? "cursor-default"
                     : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
                 }`}
-                onClick={() => cs.link && navigate(cs.link)}
+                onClick={() => cs.link && window.open(cs.link, "_blank")}
               >
                 {/* Visual — top half */}
                 <div className="relative overflow-hidden aspect-[16/10] w-full bg-secondary">
@@ -611,7 +611,7 @@ const Index = () => {
               variants={fade}
               custom={1}
               className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
-              onClick={() => navigate("/blog/design-system")}
+              onClick={() => window.open("/blog/design-system", "_blank")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
               <h3
@@ -639,7 +639,7 @@ const Index = () => {
               variants={fade}
               custom={2}
               className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
-              onClick={() => navigate("/blog/ai-portfolio")}
+              onClick={() => window.open("/blog/ai-portfolio", "_blank")}
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
               <h3
@@ -748,7 +748,7 @@ const Index = () => {
               { label: "Work", action: () => scrollTo("work") },
               { label: "About", action: () => scrollTo("about") },
               { label: "Writing", action: () => scrollTo("writing") },
-              { label: "Resume", action: () => navigate("/resume") },
+              { label: "Resume", action: () => window.open("/resume", "_blank") },
               { label: "Email", action: () => (window.location.href = "mailto:work.chhajer@gmail.com") },
             ].map((link) => (
               <button
