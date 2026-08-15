@@ -575,7 +575,8 @@ const CaseStudyHomepage = () => {
               },
               {
                 year: "2026",
-                title: "Simplified · After",
+                title: "Simplified · ",
+                afterTitle: true,
                 dimensions: [
                   {
                     label: "Findability",
