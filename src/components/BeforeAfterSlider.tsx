@@ -76,18 +76,18 @@ const BeforeAfterSlider = ({
       </div>
 
 
-      {/* Divider line */}
+      {/* Divider line — more visible */}
       <div
-        className="absolute top-0 bottom-0 w-[2px] bg-background z-10"
-        style={{ left: `${position}%`, transform: "translateX(-50%)" }}
+        className="absolute top-0 bottom-0 z-10 bg-background shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_0_20px_rgba(0,0,0,0.15)]"
+        style={{ left: `${position}%`, transform: "translateX(-50%)", width: "4px" }}
       />
 
-      {/* Handle */}
+      {/* Handle — more visible */}
       <div
-        className="absolute top-1/2 z-20 w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-background border-2 border-border shadow-lg flex items-center justify-center"
+        className="absolute top-1/2 z-20 w-11 h-11 -translate-x-1/2 -translate-y-1/2 rounded-full bg-background border-2 border-foreground/20 shadow-[0_0_0_2px_rgba(255,255,255,0.8),0_8px_24px_rgba(0,0,0,0.25)] flex items-center justify-center"
         style={{ left: `${position}%` }}
       >
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-muted-foreground">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-foreground">
           <path d="M5 3L2 8L5 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M11 3L14 8L11 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -97,7 +97,7 @@ const BeforeAfterSlider = ({
       <span className="absolute top-3 left-3 z-10 font-mono text-[0.625rem] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
         {beforeLabel}
       </span>
-      <span className="absolute top-3 right-3 z-10 font-mono text-[0.625rem] tracking-[0.1em] uppercase bg-background/80 backdrop-blur-sm text-foreground px-2.5 py-1 rounded-full">
+      <span className="absolute top-3 right-3 z-10 font-mono text-[0.625rem] tracking-[0.1em] uppercase bg-primary text-primary-foreground px-2.5 py-1 rounded-full shadow-sm">
         {afterLabel}
       </span>
     </div>
