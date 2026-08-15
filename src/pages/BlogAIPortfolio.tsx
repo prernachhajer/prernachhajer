@@ -221,7 +221,7 @@ const BlogAIPortfolio = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Read More</p>
             <div
-              onClick={() => navigate("/blog/design-system")}
+              onClick={() => window.open("/blog/design-system", "_blank")}
               className="group cursor-pointer p-6 rounded-2xl border border-border/50 hover:bg-secondary/60 transition-all"
             >
               <p className={`${t.labelSm} text-muted-foreground mb-2`}>2019 — 2024 · Design Systems</p>
