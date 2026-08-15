@@ -617,7 +617,10 @@ const CaseStudyHomepage = () => {
                   >
                     {card.year}
                   </span>
-                  <p className={`${t.labelSm} text-muted-foreground mt-1`}>{card.title}</p>
+                  <p className={`${t.labelSm} text-muted-foreground mt-1`}>
+                    {card.title}
+                    {card.afterTitle && <span className="text-primary font-medium">After</span>}
+                  </p>
                 </div>
                 <div className="flex flex-col gap-6">
                   {card.dimensions.map((dim, di) => (
