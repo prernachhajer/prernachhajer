@@ -13,8 +13,7 @@ import {
   PullQuote,
   LearningCard,
   ClosingSection,
-  ExploreMore,
-} from "@/components/ds";
+  ExploreMore, ImpactPanel, impactGrid, impactCell } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import QuickReadsProblemVisual from "@/components/QuickReadsProblemVisual";
 import QuickReadsScreensVisual from "@/components/QuickReadsScreensVisual";
@@ -584,6 +583,7 @@ const CaseStudyQuickReads = () => {
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-b border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>IMPACT</SectionLabel>
+          <ImpactPanel>
           <motion.p
             initial="hidden"
             whileInView="visible"
@@ -593,7 +593,7 @@ const CaseStudyQuickReads = () => {
           >
             Rolled out 10% → 20% → 100%. We tracked adoption, scroll depth, and transition behaviour across every phase.
           </motion.p>
-          <div className="grid md:grid-cols-3 gap-0.5">
+          <div className={impactGrid}>
             {[
               {
                 label: "Scroll depth · News section",
@@ -621,9 +621,7 @@ const CaseStudyQuickReads = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-6 sm:p-8 md:p-6 sm:p-8 md:p-10 flex flex-col justify-between ${
-                  i === 0 ? "md:rounded-l-xl" : ""
-                } ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`${impactCell} p-6 sm:p-8 md:p-10 flex flex-col justify-between`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/85 mb-3">
@@ -655,6 +653,7 @@ const CaseStudyQuickReads = () => {
               revisit.
             </p>
           </motion.div> */}
+          </ImpactPanel>
         </div>
       </section>
 
