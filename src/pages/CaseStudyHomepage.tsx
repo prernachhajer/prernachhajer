@@ -13,8 +13,7 @@ import {
   PullQuote,
   LearningCard,
   ClosingSection,
-  ExploreMore,
-} from "@/components/ds";
+  ExploreMore, ImpactPanel, impactGrid, impactCell } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface } from "@/lib/tokens";
 import HomepageEvolutionCarousel from "@/components/HomepageEvolutionCarousel";
 import desk2021 from "@/assets/cricinfo-desk-2021.jpg";

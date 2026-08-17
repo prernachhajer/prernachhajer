@@ -17,8 +17,7 @@ import {
   LearningCard,
   ClosingSection,
   ImagePlaceholder,
-  ExploreMore,
-} from "@/components/ds";
+  ExploreMore, ImpactPanel, impactGrid, impactCell } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import { ExternalLink } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
