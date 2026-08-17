@@ -377,7 +377,7 @@ const CaseStudyDesignSystem = () => {
         </div>
 
         {/* What the rebuild produced */}
-        <div className="grid md:grid-cols-3 gap-0.5">
+        <div className={impactGrid}>
           {[
             {
               title: "Leaner system",
@@ -810,6 +810,7 @@ const CaseStudyDesignSystem = () => {
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel dark>IMPACT & DECISION</SectionLabel>
+          <ImpactPanel>
           <motion.p
             initial="hidden"
             whileInView="visible"
@@ -847,7 +848,7 @@ const CaseStudyDesignSystem = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className={`bg-[hsl(220,18%,12%)] p-10 flex flex-col ${i === 0 ? "md:rounded-l-xl" : ""} ${i === 2 ? "md:rounded-r-xl" : ""}`}
+                className={`${impactCell} p-6 sm:p-8 md:p-10 flex flex-col`}
               >
                 <div>
                   <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/70 mb-3">
