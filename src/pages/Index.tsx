@@ -231,13 +231,13 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mx-auto mt-8 max-w-[680px]"
+              className="mx-auto mt-8 max-w-[980px]"
             >
               <p className="text-[0.9375rem] md:text-[1.0625rem] leading-[1.65] text-muted-foreground font-normal">
                 From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and
                 shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
               </p>
-              <div className="flex gap-3 flex-col sm:flex-row sm:justify-center mt-9">
+              <div className="flex gap-3 flex-col sm:flex-row  mt-9">
                 <Button
                   onClick={() => scrollTo("work")}
                   className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
