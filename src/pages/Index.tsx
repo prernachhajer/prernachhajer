@@ -261,28 +261,30 @@ const Index = () => {
           animate="visible"
           variants={fade}
           custom={3}
-          className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3 border-t border-border`}
+          className="border-t border-border"
         >
-          {[
-            ["3.4 → 4.5", "app rating"],
-            ["100M+", "monthly traffic"],
-            ["12 years", "building and leading design"],
-          ].map(([value, label], index) => (
-            <div
-              key={label}
-              className={`py-8 md:py-11 text-center ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border" : ""}`}
-            >
-              <p
-                className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-[0.015em]"
-                style={{ fontFamily: t.displayFont }}
+          <div className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3`}>
+            {[
+              ["3.4 → 4.5", "app rating"],
+              ["100M+", "monthly traffic"],
+              ["12 years", "building and leading design"],
+            ].map(([value, label], index) => (
+              <div
+                key={label}
+                className={`py-8 md:py-11 text-center ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border" : ""}`}
               >
-                {value}
-              </p>
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">
-                {label}
-              </p>
-            </div>
-          ))}
+                <p
+                  className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-[0.015em]"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {value}
+                </p>
+                <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </section>
 
