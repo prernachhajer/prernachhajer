@@ -303,7 +303,7 @@ const CaseStudyQuickReads = () => {
                 </p>
                 <div>
                   <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.title}
@@ -390,7 +390,7 @@ const CaseStudyQuickReads = () => {
               <div className="w-9 h-9 rounded-[9px] bg-secondary flex items-center justify-center text-sm mb-4">
                 {p.icon}
               </div>
-              <h4 className="font-semibold text-sm mb-2 tracking-tight">{p.title}</h4>
+              <h4 className="font-semibold text-sm mb-2 tracking-[0.01em]">{p.title}</h4>
               <p className="text-[0.8125rem] text-muted-foreground leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
@@ -485,7 +485,7 @@ const CaseStudyQuickReads = () => {
                 Launch · 2024
               </span>
               <h2
-                className="text-2xl md:text-3xl font-normal tracking-[-0.005em] text-background/90 leading-tight"
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] text-background/90 leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
                 We didn't flip a switch.
@@ -563,7 +563,7 @@ const CaseStudyQuickReads = () => {
               </p>
               <div className="text-center md:border-l md:border-background/[0.07] md:pl-9">
                 <p
-                  className="text-5xl font-extrabold tracking-tight leading-none text-background/90"
+                  className="text-5xl font-extrabold tracking-[0.01em] leading-none text-background/90"
                   style={{ fontFamily: t.displayFont }}
                 >
                   3<span className="text-primary">×</span>
@@ -664,7 +664,7 @@ const CaseStudyQuickReads = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-xl md:text-xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
+          className="text-xl md:text-xl font-normal mb-12 tracking-[0.015em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Getting users to commit to something deep starts with giving them a reason to care

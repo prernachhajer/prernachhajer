@@ -132,7 +132,7 @@ const CaseStudyHomepage = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] mb-3"
+              className="text-2xl md:text-3xl font-normal tracking-[0.015em] mb-3"
               style={{ fontFamily: t.displayFont }}
             >
               This is what we inherited.
@@ -368,7 +368,7 @@ const CaseStudyHomepage = () => {
                 </p>
                 <div>
                   <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.title}
@@ -456,7 +456,7 @@ const CaseStudyHomepage = () => {
                   </p>
                   <div>
                     <h4
-                      className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                      className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                       style={{ fontFamily: t.displayFont }}
                     >
                       {insight.title}
@@ -500,7 +500,7 @@ const CaseStudyHomepage = () => {
                 >
                   <span className={`${t.label} text-primary shrink-0 pt-1`}>{item.num}</span>
                   <div>
-                    <h3 className="font-semibold text-base mb-2 tracking-tight">{item.title}</h3>
+                    <h3 className="font-semibold text-base mb-2 tracking-[0.01em]">{item.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -611,7 +611,7 @@ const CaseStudyHomepage = () => {
               >
                 <div className="mb-6">
                   <span
-                    className="text-2xl font-semibold text-background/90 tracking-tight"
+                    className="text-2xl font-semibold text-background/90 tracking-[0.01em]"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {card.year}
@@ -838,7 +838,7 @@ const CaseStudyHomepage = () => {
                 THE DECISION · 2022–2026
               </span>
               <h2
-                className="text-2xl md:text-3xl font-normal tracking-[-0.005em] text-foreground leading-tight"
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] text-foreground leading-tight"
                 style={{ fontFamily: t.displayFont }}
               >
                 Don't redesign the
@@ -925,7 +925,7 @@ const CaseStudyHomepage = () => {
               </p>
               <div className="text-center md:border-l md:border-border/60 md:pl-9">
                 <p
-                  className="text-5xl font-extrabold tracking-tight leading-none text-foreground"
+                  className="text-5xl font-extrabold tracking-[0.01em] leading-none text-foreground"
                   style={{ fontFamily: t.displayFont }}
                 >
                   3<span className="text-primary">×</span>
@@ -989,7 +989,7 @@ const CaseStudyHomepage = () => {
               <div className="w-10 h-10 rounded-[10px] bg-secondary flex items-center justify-center text-base mb-5">
                 {card.icon}
               </div>
-              <h4 className="font-semibold text-base mb-2 tracking-tight">{card.title}</h4>
+              <h4 className="font-semibold text-base mb-2 tracking-[0.01em]">{card.title}</h4>
               <p className="text-[0.8125rem] text-muted-foreground leading-relaxed mb-5">{card.desc}</p>
               <div className="flex justify-center flex-1 items-end mb-5">
                 <div
@@ -1039,7 +1039,7 @@ const CaseStudyHomepage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
+          className="text-3xl md:text-4xl font-normal mb-12 tracking-[0.015em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Five years on one surface teaches you things a project never could.

@@ -307,7 +307,7 @@ const CaseStudyMatchPage = () => {
                 </p>
                 <div>
                   <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.title}
@@ -343,7 +343,7 @@ const CaseStudyMatchPage = () => {
               className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.005em] mb-2 text-foreground/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[0.015em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 1. Match state-based tab structure
@@ -595,7 +595,7 @@ const CaseStudyMatchPage = () => {
               className="text-[0.625rem] tracking-[0.14em] Uppercase text-foreground/75 font-medium mt-28 mb-12"
             >
               <h2
-                className="text-xl capitalcase md:text-xl font-normal tracking-[-0.005em] mb-2 text-foreground/80 leading-relaxed"
+                className="text-xl capitalcase md:text-xl font-normal tracking-[0.015em] mb-2 text-foreground/80 leading-relaxed"
                 style={{ fontFamily: t.displayFont }}
               >
                 2. Cross-tab content snacking
@@ -910,7 +910,7 @@ const CaseStudyMatchPage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-2xl md:text-3xl font-normal mb-8 tracking-[-0.005em] text-background/90 max-w-3xl"
+          className="text-2xl md:text-3xl font-normal mb-8 tracking-[0.015em] text-background/90 max-w-3xl"
           style={{ fontFamily: t.displayFont }}
         >
           Design debt doesn't announce itself. It just gets heavier.

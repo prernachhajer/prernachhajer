@@ -138,7 +138,7 @@ const HomepageEvolutionCarousel = () => {
                 }`}
               />
               <span
-                className={`transition-all duration-300 tracking-tight ${
+                className={`transition-all duration-300 tracking-[0.01em] ${
                   i === active
                     ? "text-background text-xl font-semibold"
                     : i < active

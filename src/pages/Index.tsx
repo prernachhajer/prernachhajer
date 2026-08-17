@@ -322,7 +322,7 @@ const Index = () => {
               Recent Case studies
             </div>
             {/*     <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
               Case studies
@@ -381,7 +381,7 @@ const Index = () => {
                       <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                     </div>
                     <h3
-                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[-0.005em] mb-3"
+                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[0.015em] mb-3"
                       style={{ fontFamily: t.displayFont }}
                     >
                       {cs.title}
@@ -391,7 +391,7 @@ const Index = () => {
                   <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
                       <span
-                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.02em] leading-none block"
+                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[0.015em] leading-none block"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {cs.statNum}
@@ -438,7 +438,7 @@ const Index = () => {
             {/* Left: headline + bio */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               {/*     <h2
-                className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
+                className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[0.015em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
                 Making sense of complexity,
@@ -595,7 +595,7 @@ const Index = () => {
               BLOG
             </div>
             <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
               Design <em className="italic text-muted-foreground">thinking</em>
@@ -671,7 +671,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[-0.015em] text-background/90"
+            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}

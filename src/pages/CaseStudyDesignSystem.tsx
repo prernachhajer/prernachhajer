@@ -134,7 +134,7 @@ const CaseStudyDesignSystem = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-muted-foreground mb-4`}>The starting point</p>
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] mb-3"
+              className="text-2xl md:text-3xl font-normal tracking-[0.015em] mb-3"
               style={{ fontFamily: t.displayFont }}
             >
               This is what we inherited.
@@ -330,7 +330,7 @@ const CaseStudyDesignSystem = () => {
                 </p>
                 <div>
                   <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.title}
@@ -358,7 +358,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.005em] text-background/90"
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Fewer variants, more power
@@ -536,7 +536,7 @@ const CaseStudyDesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-3xl md:text-4xl font-normal mb-6 tracking-[-0.005em] text-background/90"
+            className="text-3xl md:text-4xl font-normal mb-6 tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Maintenance is part of the system
@@ -599,7 +599,7 @@ const CaseStudyDesignSystem = () => {
                 </p>
                 <div>
                   <h4
-                    className="text-lg md:text-xl font-normal tracking-tight mb-2 leading-snug"
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {insight.title}
@@ -889,7 +889,7 @@ const CaseStudyDesignSystem = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fade}
-          className="text-3xl md:text-4xl font-normal mb-12 tracking-[-0.005em] text-background/90 max-w-3xl mx-auto"
+          className="text-3xl md:text-4xl font-normal mb-12 tracking-[0.015em] text-background/90 max-w-3xl mx-auto"
           style={{ fontFamily: t.displayFont }}
         >
           Five years on this project changed how I think about what design work actually involves
