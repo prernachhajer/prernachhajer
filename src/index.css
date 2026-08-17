@@ -43,8 +43,8 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --font-display: "Space Grotesk Variable", sans-serif;
-    --font-body: "DM Sans Variable", sans-serif;
+    --font-display: "DM Serif Display", Georgia, serif;
+    --font-body: "Inter Variable", system-ui, sans-serif;
   }
 
   .dark {
