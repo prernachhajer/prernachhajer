@@ -667,8 +667,8 @@ const CaseStudyHomepage = () => {
       {/*  IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <ImpactPanel>
+          <SectionLabel dark>{cleanLabel("02 — Impact")}</SectionLabel>
           <div className={`${layout.container} mx-auto !max-w-3xl`}>
             <motion.div
               initial="hidden"
