@@ -634,3 +634,24 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
     </section>
   );
 };
+
+// ─────────────────────────────────────────────
+// IMPACT PANEL — bounded, elevated container for Impact sections
+// ─────────────────────────────────────────────
+export const ImpactPanel = ({ children }: { children: React.ReactNode }) => (
+  <div
+    className="my-16 md:my-24 rounded-2xl p-6 sm:p-7 md:p-8"
+    style={{
+      background: "linear-gradient(180deg, #181b21 0%, #131519 100%)",
+      border: "0.5px solid #2a2d34",
+      boxShadow: "0 12px 32px rgba(0,0,0,0.35)",
+    }}
+  >
+    {children}
+  </div>
+);
+
+// Shared classes for the unified stat grid inside ImpactPanel
+export const impactGrid =
+  "grid md:grid-cols-3 gap-px bg-[#232630] rounded-xl overflow-hidden";
+export const impactCell = "bg-[#1a1d23]";
