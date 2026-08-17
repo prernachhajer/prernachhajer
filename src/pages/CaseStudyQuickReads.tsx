@@ -45,7 +45,7 @@ const CaseStudyQuickReads = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
             <span className="block">Getting 80% of Casual Users</span>
@@ -98,7 +98,7 @@ const CaseStudyQuickReads = () => {
 
             <div className="mb-12">
               <h2
-                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-normal leading-[1.15] mb-3"
+                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[0.015em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 25 years of great writing. Most users never finish it.
@@ -110,7 +110,7 @@ const CaseStudyQuickReads = () => {
 
             <div>
               <h2
-                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-normal leading-[1.15] mb-3"
+                className="text-[clamp(1.25rem,2.5vw,1.875rem)] font-normal tracking-[0.015em] leading-[1.15] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 Losing to Inshorts and Instagram.
@@ -257,7 +257,7 @@ const CaseStudyQuickReads = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found

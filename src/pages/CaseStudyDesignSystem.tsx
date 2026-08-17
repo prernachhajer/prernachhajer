@@ -59,7 +59,7 @@ const CaseStudyDesignSystem = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
             <span className="block">Scaling a Design System for a</span>
@@ -278,7 +278,7 @@ const CaseStudyDesignSystem = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 The friction, and what it took to launch
@@ -738,7 +738,7 @@ const CaseStudyDesignSystem = () => {
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
             >
               <p className={`${t.label} text-primary mb-4`}>{card.label}</p>
-              <h4 className="text-2xl font-normal tracking-normal mb-6">{card.title}</h4>
+              <h4 className="text-2xl font-normal tracking-[0.015em] mb-6">{card.title}</h4>
               <ul className="divide-y divide-border/40">
                 {card.items.map((item, idx) => (
                   <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">

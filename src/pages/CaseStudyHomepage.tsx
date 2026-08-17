@@ -57,7 +57,7 @@ const CaseStudyHomepage = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
             <span className="block">Why the Homepage</span>
@@ -315,7 +315,7 @@ const CaseStudyHomepage = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-2xl font-normal tracking-normal  leading-[1.15]"
+                className="text-2xl md:text-2xl font-normal tracking-[0.015em]  leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -412,7 +412,7 @@ const CaseStudyHomepage = () => {
             >
               <div>
                 <h3
-                  className="text-2xl md:text-2xl font-normal tracking-normal leading-[1.15]"
+                  className="text-2xl md:text-2xl font-normal tracking-[0.015em] leading-[1.15]"
                   style={{ fontFamily: t.displayFont }}
                 >
                   Design Solution

@@ -52,7 +52,7 @@ const CaseStudyMatchPage = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-normal"
+            className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
             <span className="block">The Match Page Had 14 Tabs.</span>
@@ -261,7 +261,7 @@ const CaseStudyMatchPage = () => {
           >
             <div>
               <h3
-                className="text-2xl md:text-3xl font-normal tracking-normal leading-[1.15]"
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
                 What we found
@@ -787,13 +787,13 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 border-t border-border pt-8 pb-10">
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The question</p>
-                <p className="text-xl md:text-1xl leading-snug tracking-normal">
+                <p className="text-xl md:text-1xl leading-snug tracking-[0.01em]">
                   {block.question.title} {block.question.desc}
                 </p>
               </div>
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-4`}>The decision</p>
-                <p className="text-xl md:text-1xl leading-snug tracking-normal mb-6">
+                <p className="text-xl md:text-1xl leading-snug tracking-[0.01em] mb-6">
                   {block.decision.title} <span className="text-muted-foreground">{block.decision.desc}</span>
                 </p>
                 <p className="text-base italic text-muted-foreground leading-relaxed">

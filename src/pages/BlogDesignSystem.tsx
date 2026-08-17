@@ -174,7 +174,7 @@ const BlogDesignSystem = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-normal text-background/65"
+                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-[0.015em] text-background/65"
                 style={{ fontFamily: t.displayFont }}
               >
                 <span className="text-background/80">{line.accent}</span>
@@ -218,7 +218,7 @@ const BlogDesignSystem = () => {
             >
               <p className={`${t.labelSm} text-muted-foreground mb-2`}>Apr 2026 · Design with AI</p>
               <h3
-                className="text-xl md:text-2xl font-normal tracking-normal leading-[1.2] mb-3"
+                className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.2] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 From zero to shipped: building a portfolio with AI

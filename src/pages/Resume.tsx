@@ -354,7 +354,7 @@ const Resume = () => {
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-5 flex-wrap">
                     <div className="flex-1 min-w-0">
                       <div
-                        className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-normal leading-[1.1] flex items-center gap-[10px] mb-1.5"
+                        className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-[0.015em] leading-[1.1] flex items-center gap-[10px] mb-1.5"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {exp.current && <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />}
@@ -386,7 +386,7 @@ const Resume = () => {
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 flex-wrap">
                 <div>
                   <div
-                    className="text-[1.375rem] font-normal tracking-normal mb-1.5"
+                    className="text-[1.375rem] font-normal tracking-[0.015em] mb-1.5"
                     style={{ fontFamily: t.displayFont }}
                   >
                     B.Tech in Computer Science
