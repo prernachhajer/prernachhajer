@@ -653,8 +653,8 @@ const CaseStudyQuickReads = () => {
               revisit.
             </p>
           </motion.div> */}
-        </div>
           </ImpactPanel>
+        </div>
       </section>
 
       {/* LEARNINGS */}
