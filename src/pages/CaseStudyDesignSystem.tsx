@@ -867,6 +867,7 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
+          </ImpactPanel>
         </div>
       </section>
 

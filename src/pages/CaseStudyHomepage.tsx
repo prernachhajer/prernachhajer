@@ -736,6 +736,7 @@ const CaseStudyHomepage = () => {
               </motion.div>
             ))}
           </div>
+          </ImpactPanel>
         </div>
       </section>
 

@@ -654,6 +654,7 @@ const CaseStudyQuickReads = () => {
             </p>
           </motion.div> */}
         </div>
+          </ImpactPanel>
       </section>
 
       {/* LEARNINGS */}
