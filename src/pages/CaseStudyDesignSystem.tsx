@@ -479,10 +479,6 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="bg-[hsl(152,48%,20%)] p-7 sm:p-9 md:p-12 rounded-b-xl md:rounded-b-none md:rounded-r-xl flex flex-col justify-center"
           >
-            <p className="inline-block text-xs tracking-widest uppercase text-white bg-primary/20 px-3 py-1.5 rounded-full mb-4">
-              After documentation
-            </p>
-
             <p className="text-xs tracking-widest uppercase text-white/50 mb-4">After documentation</p>
             <p
               className="text-2xl md:text-3xl font-normal leading-[1.1] text-white"
