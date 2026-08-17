@@ -220,7 +220,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="text-[clamp(2.45rem,6.2vw,4.5rem)] font-semibold leading-[0.98] tracking-normal text-balance"
+              className="text-[clamp(2.45rem,6.2vw,4.5rem)] font-semibold leading-[0.98] tracking-[0.015em] text-balance"
               style={{ fontFamily: t.displayFont }}
             >
               Defining teams & products that make <span className="text-primary">complexity</span> feel simple.
@@ -273,7 +273,7 @@ const Index = () => {
               className={`py-8 md:py-11 text-center ${index > 0 ? "border-t sm:border-t-0 sm:border-l border-border" : ""}`}
             >
               <p
-                className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-normal"
+                className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-[0.015em]"
                 style={{ fontFamily: t.displayFont }}
               >
                 {value}
@@ -322,7 +322,7 @@ const Index = () => {
               Recent Case studies
             </div>
             {/*     <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
               Case studies
@@ -364,7 +364,7 @@ const Index = () => {
                         Coming Soon
                       </span>
                       <span
-                        className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-normal italic"
+                        className="text-[clamp(1.375rem,2.5vw,2.25rem)] font-normal tracking-[0.015em] italic"
                         style={{ fontFamily: t.displayFont }}
                       >
                         In progress
@@ -381,7 +381,7 @@ const Index = () => {
                       <span className={`text-xs tracking-[0.06em] uppercase text-primary`}>{cs.company}</span>
                     </div>
                     <h3
-                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[-0.005em] mb-3"
+                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[0.015em] mb-3"
                       style={{ fontFamily: t.displayFont }}
                     >
                       {cs.title}
@@ -391,7 +391,7 @@ const Index = () => {
                   <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
                       <span
-                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.02em] leading-none block"
+                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[0.015em] leading-none block"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {cs.statNum}
@@ -438,7 +438,7 @@ const Index = () => {
             {/* Left: headline + bio */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               {/*     <h2
-                className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.005em] text-background mb-8"
+                className="text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-[0.015em] text-background mb-8"
                 style={{ fontFamily: t.displayFont }}
               >
                 Making sense of complexity,
@@ -457,7 +457,7 @@ const Index = () => {
                   <div key={b.num} className={`py-[22px] border-b border-background/[0.07] `}>
                     <div>
                       <p
-                        className="text-lg font-normal tracking-normal text-background/90 leading-[1.2] mb-2"
+                        className="text-lg font-normal tracking-[0.01em] text-background/90 leading-[1.2] mb-2"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
@@ -569,7 +569,7 @@ const Index = () => {
                   >
                     <s.icon className="h-5 w-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.5} />
                     <div>
-                      <p className="text-base font-medium tracking-normal mb-1">{s.title}</p>
+                      <p className="text-base font-medium tracking-[0.01em] mb-1">{s.title}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
@@ -595,7 +595,7 @@ const Index = () => {
               BLOG
             </div>
             <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.005em]"
+              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
               Design <em className="italic text-muted-foreground">thinking</em>
@@ -615,7 +615,7 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
               <h3
-                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-normal mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[0.015em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
@@ -643,7 +643,7 @@ const Index = () => {
             >
               <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
               <h3
-                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-normal mt-4 mb-4"
+                className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[0.015em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 From Zero to Shipped: How I Built My Entire Portfolio{" "}
@@ -671,7 +671,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[-0.015em] text-background/90"
+            className="text-[clamp(2.25rem,5.5vw,5rem)] font-normal leading-[0.96] tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
             Let's{" "}
@@ -697,7 +697,7 @@ const Index = () => {
             <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Email</span>
             <a
               href="mailto:work.chhajer@gmail.com"
-              className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-normal text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
+              className="text-[clamp(1rem,1.8vw,1.375rem)] font-normal tracking-[0.01em] text-background/90 border-b border-background/20 pb-0.5 hover:text-primary hover:border-primary transition-colors inline-block"
               style={{ fontFamily: t.displayFont }}
             >
               work.chhajer@gmail.com

@@ -42,7 +42,7 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
     <nav className={`${nav.base} ${nav.px}`}>
       <a
         href="#"
-        className="text-base font-normal tracking-tight"
+        className="text-base font-normal tracking-[0.01em]"
         style={{ fontFamily: t.displayFont }}
       >
         {name}
@@ -303,7 +303,7 @@ export const StatCard = ({
         {number}
       </p>
     )}
-    <h4 className="font-semibold mb-3 tracking-tight">{label}</h4>
+    <h4 className="font-semibold mb-3 tracking-[0.01em]">{label}</h4>
     <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
   </motion.div>
 );
@@ -498,7 +498,7 @@ export const ClosingSection = ({
         whileInView="visible"
         viewport={{ once: true }}
         variants={fade}
-        className="text-2xl md:text-4xl font-normal tracking-[-0.005em] max-w-3xl mx-auto mb-12 leading-tight"
+        className="text-2xl md:text-4xl font-normal tracking-[0.015em] max-w-3xl mx-auto mb-12 leading-tight"
         style={{ fontFamily: t.displayFont }}
       >
         {quote}{" "}
@@ -616,7 +616,7 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
                 {cs.tags.join(" · ")}
               </p>
               <h3
-                className="text-xl font-normal tracking-tight mb-2 group-hover:text-primary transition-colors"
+                className="text-xl font-normal tracking-[0.01em] mb-2 group-hover:text-primary transition-colors"
                 style={{ fontFamily: t.displayFont }}
               >
                 {cs.title}

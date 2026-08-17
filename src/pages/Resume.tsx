@@ -200,7 +200,7 @@ const Resume = () => {
                 Résumé
               </div>
               <h1
-                className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal leading-[1] tracking-[-0.01em]"
+                className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal leading-[1] tracking-[0.015em]"
                 style={{ fontFamily: t.displayFont }}
               >
                 12 years of <em className="italic text-muted-foreground">design,</em>
@@ -237,7 +237,7 @@ const Resume = () => {
                 {i > 0 && <div className="w-px h-10 bg-border mx-[clamp(32px,4.5vw,64px)] hidden sm:block shrink-0" />}
                 <div className="flex flex-col gap-1.5 pr-[clamp(32px,4.5vw,64px)] sm:pr-0">
                   <span
-                    className="text-[clamp(1.75rem,3.2vw,2.625rem)] font-normal tracking-[-0.01em] leading-none"
+                    className="text-[clamp(1.75rem,3.2vw,2.625rem)] font-normal tracking-[0.015em] leading-none"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {s.num}
@@ -354,7 +354,7 @@ const Resume = () => {
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-5 flex-wrap">
                     <div className="flex-1 min-w-0">
                       <div
-                        className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-normal leading-[1.1] flex items-center gap-[10px] mb-1.5"
+                        className="text-[clamp(1.25rem,2.2vw,1.625rem)] font-normal tracking-[0.015em] leading-[1.1] flex items-center gap-[10px] mb-1.5"
                         style={{ fontFamily: t.displayFont }}
                       >
                         {exp.current && <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />}
@@ -386,7 +386,7 @@ const Resume = () => {
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 flex-wrap">
                 <div>
                   <div
-                    className="text-[1.375rem] font-normal tracking-normal mb-1.5"
+                    className="text-[1.375rem] font-normal tracking-[0.015em] mb-1.5"
                     style={{ fontFamily: t.displayFont }}
                   >
                     B.Tech in Computer Science

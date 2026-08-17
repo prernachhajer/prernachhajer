@@ -112,7 +112,7 @@ const BlogDesignSystem = () => {
               {ch.num} — {ch.label}
             </p>
             <h2
-              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] mb-6 leading-[1.15]"
+              className="text-2xl md:text-3xl font-normal tracking-[0.015em] mb-6 leading-[1.15]"
               style={{ fontFamily: t.displayFont }}
             >
               {ch.heading}
@@ -142,7 +142,7 @@ const BlogDesignSystem = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <p className={`${t.labelSm} text-background/85 mb-10`}>And then — letting go</p>
             <p
-              className="text-2xl md:text-3xl font-normal tracking-[-0.005em] leading-[1.2] text-background/80 mb-8"
+              className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.2] text-background/80 mb-8"
               style={{ fontFamily: t.displayFont }}
             >
               Eventually, the system stabilises. You document it. You hand it over. You move from{" "}
@@ -174,7 +174,7 @@ const BlogDesignSystem = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-normal text-background/65"
+                className="text-xl md:text-2xl font-normal leading-[1.2] tracking-[0.015em] text-background/65"
                 style={{ fontFamily: t.displayFont }}
               >
                 <span className="text-background/80">{line.accent}</span>
@@ -197,7 +197,7 @@ const BlogDesignSystem = () => {
           <motion.h2
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
             custom={1}
-            className="text-3xl md:text-5xl font-normal tracking-[-0.01em] leading-[1.1]"
+            className="text-3xl md:text-5xl font-normal tracking-[0.015em] leading-[1.1]"
             style={{ fontFamily: t.displayFont }}
           >
             I stopped thinking like a UI designer —{" "}
@@ -218,7 +218,7 @@ const BlogDesignSystem = () => {
             >
               <p className={`${t.labelSm} text-muted-foreground mb-2`}>Apr 2026 · Design with AI</p>
               <h3
-                className="text-xl md:text-2xl font-normal tracking-normal leading-[1.2] mb-3"
+                className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.2] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
                 From zero to shipped: building a portfolio with AI
