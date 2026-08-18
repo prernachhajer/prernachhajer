@@ -214,7 +214,7 @@ const Index = () => {
             </span> */}
           </motion.div>
 
-          <div className="mx-auto max-w-[980px]">
+          <div className="mx-auto max-w-[980px] text-center">
             <motion.h1
               initial="hidden"
               animate="visible"
@@ -237,7 +237,7 @@ const Index = () => {
                 From 0-to-1 startups to a platform at 100M+ scale — I've built design systems, mentored teams, and
                 shipped work that moved real numbers. Now applying that same rigor to AI-assisted design.
               </p>
-              <div className="flex gap-3 flex-col sm:flex-row  mt-9">
+              <div className="flex gap-3 flex-col sm:flex-row justify-center items-center mt-9">
                 <Button
                   onClick={() => scrollTo("work")}
                   className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
