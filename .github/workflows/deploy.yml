@@ -32,6 +32,16 @@ jobs:
       - name: Build
         run: bun run build
 
+      
+      - name: Inspect build output
+        run: |
+          echo "=== DIST FILES ==="
+          find dist -maxdepth 2 -type f | sort
+          echo "=== DIST INDEX ==="
+          cat dist/index.html
+
+     
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
