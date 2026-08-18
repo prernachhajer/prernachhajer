@@ -348,7 +348,10 @@ const Index = () => {
                     ? "cursor-default"
                     : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
                 }`}
-                onClick={() => cs.link && window.open(cs.link, "_blank")}
+                onClick={() =>
+  cs.link &&
+  window.open(`/prernachhajer${cs.link}`, "_blank")
+}
               >
                 {/* Visual — top half */}
                 <div className="relative overflow-hidden aspect-[16/10] w-full bg-secondary">
