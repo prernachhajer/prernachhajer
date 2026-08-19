@@ -589,7 +589,6 @@ const allCaseStudies = [
 ];
 
 export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
-  const navigate = useNavigate();
   const others = allCaseStudies.filter((cs) => cs.slug !== currentSlug);
 
   return (
