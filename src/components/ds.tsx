@@ -26,7 +26,7 @@ export const NavHome = ({ name = "Prerna Chhajer" }: { name?: string }) => {
     { label: "Work", id: "work" },
     { label: "About", id: "about" },
     { label: "BLOG", id: "writing" },
-    { label: "Resume", id: "__navigate__/resume" },
+  { label: "Resume", id: "__navigate__/prernachhajer/#/resume" },
   ];
 
   const handleNavClick = (id: string) => {
