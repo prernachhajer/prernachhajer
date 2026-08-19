@@ -567,28 +567,24 @@ const allCaseStudies = [
     title: "Homepage",
     description: "Redesigning the world's largest cricket platform homepage",
     tags: ["Product Design", "Web"],
-    path: "/case-study/homepage",
   },
   {
     slug: "design-system",
     title: "Design System",
     description: "Building a unified design language for ESPN Cricinfo",
     tags: ["Systems", "Documentation"],
-    path: "/case-study/design-system",
   },
   {
     slug: "quick-reads",
     title: "Quick Reads",
     description: "Optimizing content consumption for mobile-first users",
     tags: ["Mobile", "iOS & Android"],
-    path: "/case-study/quick-reads",
   },
   {
     slug: "match-page",
     title: "Match Page Optimization",
     description: "Untangling 15 tabs so users could find what they came for",
     tags: ["UX Optimisation", "Android & iOS"],
-    path: "/case-study/match-page",
   },
 ];
 
