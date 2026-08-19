@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/prernachhajer/",
+ base: process.env.GITHUB_ACTIONS ? "/prernachhajer/" : "/",
 
   plugins: [
     react(),
