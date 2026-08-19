@@ -567,33 +567,28 @@ const allCaseStudies = [
     title: "Homepage",
     description: "Redesigning the world's largest cricket platform homepage",
     tags: ["Product Design", "Web"],
-    path: "/case-study/homepage",
   },
   {
     slug: "design-system",
     title: "Design System",
     description: "Building a unified design language for ESPN Cricinfo",
     tags: ["Systems", "Documentation"],
-    path: "/case-study/design-system",
   },
   {
     slug: "quick-reads",
     title: "Quick Reads",
     description: "Optimizing content consumption for mobile-first users",
     tags: ["Mobile", "iOS & Android"],
-    path: "/case-study/quick-reads",
   },
   {
     slug: "match-page",
     title: "Match Page Optimization",
     description: "Untangling 15 tabs so users could find what they came for",
     tags: ["UX Optimisation", "Android & iOS"],
-    path: "/case-study/match-page",
   },
 ];
 
 export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
-  const navigate = useNavigate();
   const others = allCaseStudies.filter((cs) => cs.slug !== currentSlug);
 
   return (
@@ -609,7 +604,7 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              onClick={() => window.open(cs.path, "_blank")}
+              onClick={() => window.open(`/prernachhajer/#/case-study/${cs.slug}`, "_blank")}
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad} text-left group hover:border-primary/30 transition-all hover:-translate-y-0.5`}
             >
               <p className={`${t.labelSm} text-muted-foreground/80 mb-4`}>
