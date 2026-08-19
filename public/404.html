@@ -1,16 +1,15 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <script>
       const path = window.location.pathname;
-
       const repo = "/prernachhajer";
 
       if (path.startsWith(repo)) {
-        const route = path.slice(repo.length);
+        const route = path.slice(repo.length) || "/";
         window.location.replace(
-          repo + "/?redirect=" + encodeURIComponent(route + window.location.search + window.location.hash)
+          repo + "/#" + route
         );
       } else {
         window.location.replace(repo + "/");
