@@ -1,37 +1,24 @@
-import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
 import CaseStudyHomepage from "./pages/CaseStudyHomepage";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
 import CaseStudyMatchPage from "./pages/CaseStudyMatchPage";
+
 import BlogDesignSystem from "./pages/BlogDesignSystem";
 import BlogAIPortfolio from "./pages/BlogAIPortfolio";
+
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
+
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
-
-const RedirectHandler = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const redirect = params.get("redirect");
-
-    if (redirect) {
-      navigate(redirect, { replace: true });
-    }
-  }, [navigate]);
-
-  return null;
-};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -39,14 +26,14 @@ const App = () => (
       <Toaster />
       <Sonner />
 
-      <BrowserRouter basename="/prernachhajer">
-        <RedirectHandler />
-
+      <HashRouter>
         <ScrollToTop />
 
         <Routes>
+          {/* Homepage */}
           <Route path="/" element={<Index />} />
 
+          {/* Case Studies */}
           <Route
             path="/case-study/homepage"
             element={<CaseStudyHomepage />}
@@ -67,6 +54,7 @@ const App = () => (
             element={<CaseStudyMatchPage />}
           />
 
+          {/* Blog */}
           <Route
             path="/blog/design-system"
             element={<BlogDesignSystem />}
@@ -77,17 +65,13 @@ const App = () => (
             element={<BlogAIPortfolio />}
           />
 
-          <Route
-            path="/resume"
-            element={<Resume />}
-          />
+          {/* Resume */}
+          <Route path="/resume" element={<Resume />} />
 
-          <Route
-            path="*"
-            element={<NotFound />}
-          />
+          {/* Anything else */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
