@@ -609,7 +609,7 @@ export const ExploreMore = ({ currentSlug }: { currentSlug: string }) => {
               viewport={{ once: true }}
               variants={fade}
               custom={i}
-              onClick={() => window.open(cs.path, "_blank")}
+              onClick={() => window.open(`/prernachhajer/#/case-study/${cs.slug}`, "_blank")}
               className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad} text-left group hover:border-primary/30 transition-all hover:-translate-y-0.5`}
             >
               <p className={`${t.labelSm} text-muted-foreground/80 mb-4`}>
