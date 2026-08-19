@@ -13,10 +13,10 @@ import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
 
 // Thumbnail images
-import thumbHomepage from "@/assets/thumb-homepage-laptop.png.asset.json";
-import thumbDesignSystem from "@/assets/thumb-ds-docs.png.asset.json";
-import thumbQuickReads from "@/assets/thumb-quick-reads.png.asset.json";
-import thumbMatchPage from "@/assets/match-page-thumb.png.asset.json";
+import thumbHomepage from "@/assets/thumb-homepage-laptop.png";
+import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
+import thumbQuickReads from "@/assets/thumb-quick-reads.png";
+import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
 
 // Company logos
@@ -31,19 +31,19 @@ import singtelOptusLogo from "@/assets/company-logos/singtel-optus.png";
 import decimalLogo from "@/assets/company-logos/decimal.png";
 
 // Tool logos
-import figmaLogo from "@/assets/tool-logos/figma.png.asset.json";
-import claudeLogo from "@/assets/tool-logos/claude2.png.asset.json";
-import lovableLogo from "@/assets/tool-logos/lovable.svg.asset.json";
-import granolaLogo from "@/assets/tool-logos/granola.png.asset.json";
-import chatgptLogo from "@/assets/tool-logos/chatgpt.png.asset.json";
-import notionLogo from "@/assets/tool-logos/notion.png.asset.json";
-import gaLogo from "@/assets/tool-logos/ga2.png.asset.json";
-import slackLogo from "@/assets/tool-logos/slack.png.asset.json";
-import jiraLogo from "@/assets/tool-logos/jira.png.asset.json";
-import mixpanelLogo from "@/assets/tool-logos/mixpanel.png.asset.json";
-import zoomLogo from "@/assets/tool-logos/zoom.png.asset.json";
-import miroLogo from "@/assets/tool-logos/miro.png.asset.json";
-import zeroheightLogo from "@/assets/tool-logos/zeroheight.png.asset.json";
+import figmaLogo from "@/assets/tool-logos/figma.png";
+import claudeLogo from "@/assets/tool-logos/claude2.png";
+import lovableLogo from "@/assets/tool-logos/lovable.svg";
+import granolaLogo from "@/assets/tool-logos/granola.png";
+import chatgptLogo from "@/assets/tool-logos/chatgpt.png";
+import notionLogo from "@/assets/tool-logos/notion.png";
+import gaLogo from "@/assets/tool-logos/ga2.png";
+import slackLogo from "@/assets/tool-logos/slack.png";
+import jiraLogo from "@/assets/tool-logos/jira.png";
+import mixpanelLogo from "@/assets/tool-logos/mixpanel.png";
+import zoomLogo from "@/assets/tool-logos/zoom.png";
+import miroLogo from "@/assets/tool-logos/miro.png";
+import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 
 const fade = animation.fade;
 
@@ -52,19 +52,19 @@ const fade = animation.fade;
 // ─────────────────────────────────────────────
 
 const tools = [
-  { name: "Figma", logo: figmaLogo.url },
-  { name: "Claude", logo: claudeLogo.url },
-  { name: "Lovable", logo: lovableLogo.url },
-  { name: "Granola", logo: granolaLogo.url },
-  { name: "ChatGPT", logo: chatgptLogo.url },
-  { name: "Notion", logo: notionLogo.url },
-  { name: "Google Analytics", logo: gaLogo.url },
-  { name: "Slack", logo: slackLogo.url },
-  { name: "Jira", logo: jiraLogo.url },
-  { name: "Mixpanel", logo: mixpanelLogo.url },
-  { name: "Zoom", logo: zoomLogo.url },
-  { name: "Miro", logo: miroLogo.url },
-  { name: "Zeroheight", logo: zeroheightLogo.url },
+  { name: "Figma", logo: figmaLogo },
+  { name: "Claude", logo: claudeLogo },
+  { name: "Lovable", logo: lovableLogo },
+  { name: "Granola", logo: granolaLogo },
+  { name: "ChatGPT", logo: chatgptLogo },
+  { name: "Notion", logo: notionLogo },
+  { name: "Google Analytics", logo: gaLogo },
+  { name: "Slack", logo: slackLogo },
+  { name: "Jira", logo: jiraLogo },
+  { name: "Mixpanel", logo: mixpanelLogo },
+  { name: "Zoom", logo: zoomLogo },
+  { name: "Miro", logo: miroLogo },
+  { name: "Zeroheight", logo: zeroheightLogo },
 ];
 
 // ─────────────────────────────────────────────
@@ -105,7 +105,7 @@ const caseStudies = [
     title: "Redesigning Cricket's Most-Visited Homepage for 10M+ Fans",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbHomepage.url,
+    thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
     link: "/case-study/homepage",
@@ -116,7 +116,7 @@ const caseStudies = [
     title: "Scaling a Design System for a global cricket platform",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbDesignSystem.url,
+    thumbImage: thumbDesignSystem,
     statNum: "170+",
     statLabel: "files in system",
     link: "/case-study/design-system",
@@ -127,7 +127,7 @@ const caseStudies = [
     title: "Simplifying an Overloaded Page for 10M+ Fans",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbMatchPage.url,
+    thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
     link: "/case-study/match-page",
@@ -138,7 +138,7 @@ const caseStudies = [
     title: "Bite-sized cricket content designed to increase reader engagement",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbQuickReads.url,
+    thumbImage: thumbQuickReads,
     statNum: "↑",
     statLabel: "engagement",
     link: "/case-study/quick-reads",
