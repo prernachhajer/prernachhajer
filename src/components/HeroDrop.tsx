@@ -64,10 +64,11 @@ type Props = {
   /** how far above the final position it starts (px) */
   from?: number;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
 };
 
-export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from = 320, className, children }: Props) => {
+export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from = 320, className, style, children }: Props) => {
   const reduce = useReducedMotion();
   const fallback = useMemo<DropVariation>(
     () => pick(DROP_VARIATIONS[variant] ?? [{ x: 0, y: 0, rotate: 0 }]),
@@ -80,7 +81,7 @@ export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from =
     return (
       <div
         className={className}
-        style={{ transform: `translate(${target.x}px, ${target.y}px) rotate(${target.rotate}deg)` }}
+        style={{ ...style, transform: `translate(${target.x}px, ${target.y}px) rotate(${target.rotate}deg)` }}
       >
         {children}
       </div>
@@ -90,7 +91,7 @@ export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from =
   return (
     <motion.div
       className={className}
-      style={{ willChange: "transform" }}
+      style={{ ...style, willChange: "transform" }}
       initial={{ y: -from, x: target.x + drift, rotate: target.rotate - drift * 0.4, opacity: 0 }}
       animate={{ y: target.y, x: target.x, rotate: target.rotate, opacity: 1 }}
       transition={{
