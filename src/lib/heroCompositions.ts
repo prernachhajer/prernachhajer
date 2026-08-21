@@ -564,7 +564,6 @@ export type PhotoComposition = {
 
 const PHOTO_SIZE = 60;
 
-];
 
 const GAP_PX = 4;
 
