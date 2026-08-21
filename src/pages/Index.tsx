@@ -380,7 +380,9 @@ const Index = () => {
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={`${heroPill} text-[clamp(1.125rem,2.2vw,1.8rem)]`}>product designer</span>
+                  <span className={`${heroPill} rounded-full text-[clamp(1.125rem,2.2vw,1.8rem)]`}>
+                    product designer
+                  </span>
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
@@ -435,7 +437,7 @@ const Index = () => {
                 </div>
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} text-[clamp(1.125rem,2.2vw,1.8rem)]`}>adventurer</span>
+                  <span className={`${heroPill} rounded-full text-[clamp(1.125rem,2.2vw,1.8rem)]`}>adventurer</span>
                 </HeroDrop>
               </div>
             </div>
