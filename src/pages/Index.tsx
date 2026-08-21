@@ -292,7 +292,7 @@ const Index = () => {
       ───────────────────────────────────────── */}
 
       <section id="hero" className="pt-[20px] border-b border-border overflow-hidden">
-        <div className={` pt-8 md:pt-10 pb-12 md:pb-16 w-full`}>
+        <div className={`${wrapCls} pt-8 md:pt-10 pb-12 md:pb-16 w-full`}>
           {/* Eyebrow + photo stack + pills */}
           <div className="relative">
             <motion.div
