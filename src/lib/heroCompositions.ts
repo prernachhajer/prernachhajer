@@ -567,7 +567,7 @@ export type PhotoComposition = {
 // The photos remain horizontally aligned.
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 68;
+const PHOTO_SIZE = 30;
 
 const GAP_PX = 4;
 
