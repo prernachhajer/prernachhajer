@@ -1,30 +1,42 @@
 // ─────────────────────────────────────────────
-// HERO COMPOSITIONS (curated, easy to edit)
+// HERO COMPOSITIONS
+// ─────────────────────────────────────────────
 // One hero composition + one photo composition are
-// picked at random on every page load. Only landing
-// offsets / rotations / left-center-right ordering
-// change — the layout & assets stay identical.
+// picked at random on every page load.
 //
-// NOTE ON OVERFLOW/OVERLAP: the x offsets below are
-// still fixed, hand-tuned numbers — they do NOT know
-// your container's real width or the photo/tag sizes.
-// That's why the far-left compositions overflowed
-// past the container edge on your actual page. The
-// durable fix is the runtime guard in
-// useHeroLayoutGuard.ts, which clamps these desired
-// x values to the real container bounds and pushes
-// tag clusters apart from the photo stack if they'd
-// overlap — do not rely on these numbers alone.
+// IMPORTANT:
+// The large-scale layout position of photos / cluster A /
+// cluster B is now controlled by the main hero layout.
+// These values are only used for subtle landing offsets
+// and rotation.
+//
+// This prevents the random composition from moving entire
+// groups across the page and accidentally causing overlaps.
+//
+// The actual animation / landing correction is handled by
+// HeroDrop + useHeroLayoutGuard.
 // ─────────────────────────────────────────────
 
-export type Offset = { x: number; y: number; rotate: number };
+export type Offset = {
+  x: number;
+  y: number;
+  rotate: number;
+};
 
 export type HeroComposition = {
   id: string;
-  /** flex order of the 3 hero groups (photos, tag cluster 1, tag cluster 2) */
-  order: { photos: number; clusterA: number; clusterB: number };
-  /** landing offsets per element (px / deg) — treated as DESIRED
-   *  values; useHeroLayoutGuard clamps/corrects them at runtime */
+
+  /**
+   * Small landing offsets per element.
+   *
+   * These are NOT responsible for deciding whether an
+   * element belongs on the left / center / right.
+   *
+   * The main hero layout now controls that.
+   *
+   * x / y = subtle positional variation
+   * rotate = playful final rotation
+   */
   photos: Offset;
   tag1: Offset;
   tag2: Offset;
@@ -33,197 +45,618 @@ export type HeroComposition = {
   icon: Offset;
 };
 
-// order.photos is fixed at 2 for every composition below.
-// Horizontal placement (left/center/right) is controlled ONLY by
-// photos.x (translateX) — mixing it with flex `order` caused
-// compositions to fight each other. Locking order removes that
-// interaction so x alone decides the position.
+// ─────────────────────────────────────────────
+// HERO COMPOSITIONS
+// ─────────────────────────────────────────────
+//
+// Keep the variation relatively small.
+//
+// The previous values such as x: -220 / +260 were
+// effectively moving entire groups across the page.
+// That made collisions much more likely because the
+// flex layout still reserved the original space.
+//
+// Now the main layout establishes:
+//
+//   cluster A → left
+//   photos    → center
+//   cluster B → right
+//
+// These values simply add personality to the landing.
+//
+// ─────────────────────────────────────────────
+
 export const heroCompositions: HeroComposition[] = [
   {
-    // A — photos left, tags split, icon lower left
+    // A — subtle variation
     id: "A",
-    order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -220, y: 0, rotate: 0 },
-    tag1: { x: -18, y: -8, rotate: -3 },
-    tag2: { x: 14, y: 10, rotate: 2 },
-    tag3: { x: -10, y: 4, rotate: 3 },
-    tag4: { x: 22, y: 14, rotate: -2 },
-    icon: { x: -14, y: 18, rotate: 6 },
+
+    photos: {
+      x: -12,
+      y: 0,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -8,
+      y: -8,
+      rotate: -3,
+    },
+
+    tag2: {
+      x: 8,
+      y: 10,
+      rotate: 2,
+    },
+
+    tag3: {
+      x: -8,
+      y: 4,
+      rotate: 3,
+    },
+
+    tag4: {
+      x: 10,
+      y: 14,
+      rotate: -2,
+    },
+
+    icon: {
+      x: -8,
+      y: 18,
+      rotate: 6,
+    },
   },
+
   {
-    // B — photos left-ish, tags split, icon lower right
+    // B — subtle variation
     id: "B",
-    order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -140, y: 0, rotate: 0 },
-    tag1: { x: 20, y: -10, rotate: 2.5 },
-    tag2: { x: -16, y: 12, rotate: -4 },
-    tag3: { x: 24, y: 6, rotate: -2 },
-    tag4: { x: -8, y: 18, rotate: 4 },
-    icon: { x: 18, y: 20, rotate: -6 },
+
+    photos: {
+      x: -8,
+      y: 0,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 10,
+      y: -10,
+      rotate: 2.5,
+    },
+
+    tag2: {
+      x: -8,
+      y: 12,
+      rotate: -4,
+    },
+
+    tag3: {
+      x: 10,
+      y: 6,
+      rotate: -2,
+    },
+
+    tag4: {
+      x: -6,
+      y: 18,
+      rotate: 4,
+    },
+
+    icon: {
+      x: 8,
+      y: 20,
+      rotate: -6,
+    },
   },
+
   {
-    // C — photos center, tags pushed to outer edges
+    // C — slightly more centered
     id: "C",
-    order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: 0, y: 6, rotate: 0 },
-    tag1: { x: -28, y: 0, rotate: -5 },
-    tag2: { x: -20, y: 16, rotate: 3 },
-    tag3: { x: 28, y: -6, rotate: 4 },
-    tag4: { x: 20, y: 12, rotate: -3 },
-    icon: { x: 10, y: 22, rotate: 5 },
+
+    photos: {
+      x: 0,
+      y: 6,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -12,
+      y: 0,
+      rotate: -5,
+    },
+
+    tag2: {
+      x: -8,
+      y: 16,
+      rotate: 3,
+    },
+
+    tag3: {
+      x: 12,
+      y: -6,
+      rotate: 4,
+    },
+
+    tag4: {
+      x: 10,
+      y: 12,
+      rotate: -3,
+    },
+
+    icon: {
+      x: 6,
+      y: 22,
+      rotate: 5,
+    },
   },
+
   {
-    // D — photos center, tags hugging them, icon low
+    // D — tags slightly closer to their landing zones
     id: "D",
-    order: { photos: 2, clusterA: 3, clusterB: 1 },
-    photos: { x: 0, y: -4, rotate: 0 },
-    tag1: { x: 12, y: 14, rotate: 4 },
-    tag2: { x: -14, y: -6, rotate: -2 },
-    tag3: { x: -22, y: 10, rotate: 2 },
-    tag4: { x: 16, y: -8, rotate: -5 },
-    icon: { x: -6, y: 24, rotate: 3 },
+
+    photos: {
+      x: 0,
+      y: -4,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 8,
+      y: 14,
+      rotate: 4,
+    },
+
+    tag2: {
+      x: -8,
+      y: -6,
+      rotate: -2,
+    },
+
+    tag3: {
+      x: -10,
+      y: 10,
+      rotate: 2,
+    },
+
+    tag4: {
+      x: 10,
+      y: -8,
+      rotate: -5,
+    },
+
+    icon: {
+      x: -6,
+      y: 24,
+      rotate: 3,
+    },
   },
+
   {
-    // E — tags left, photos right, icon centred low
+    // E — slightly more horizontal variation
     id: "E",
-    order: { photos: 2, clusterA: 3, clusterB: 1 },
-    photos: { x: 160, y: 4, rotate: 0 },
-    tag1: { x: -24, y: 6, rotate: 3 },
-    tag2: { x: -12, y: 20, rotate: -3 },
-    tag3: { x: 8, y: -10, rotate: -4 },
-    tag4: { x: 18, y: 8, rotate: 5 },
-    icon: { x: 0, y: 26, rotate: -6 },
+
+    photos: {
+      x: 10,
+      y: 4,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -10,
+      y: 6,
+      rotate: 3,
+    },
+
+    tag2: {
+      x: -6,
+      y: 20,
+      rotate: -3,
+    },
+
+    tag3: {
+      x: 6,
+      y: -10,
+      rotate: -4,
+    },
+
+    tag4: {
+      x: 10,
+      y: 8,
+      rotate: 5,
+    },
+
+    icon: {
+      x: 0,
+      y: 26,
+      rotate: -6,
+    },
   },
+
   {
-    // F — tags right, photos far right, icon lower
+    // F — stronger personality without moving groups
+    // outside their assigned zones
     id: "F",
-    order: { photos: 2, clusterA: 3, clusterB: 1 },
-    photos: { x: 260, y: -2, rotate: 0 },
-    tag1: { x: 26, y: -4, rotate: -2 },
-    tag2: { x: 14, y: 16, rotate: 4 },
-    tag3: { x: 30, y: 8, rotate: 3 },
-    tag4: { x: 10, y: 22, rotate: -4 },
-    icon: { x: 22, y: 14, rotate: 6 },
+
+    photos: {
+      x: 14,
+      y: -2,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 12,
+      y: -4,
+      rotate: -2,
+    },
+
+    tag2: {
+      x: 8,
+      y: 16,
+      rotate: 4,
+    },
+
+    tag3: {
+      x: 14,
+      y: 8,
+      rotate: 3,
+    },
+
+    tag4: {
+      x: 6,
+      y: 22,
+      rotate: -4,
+    },
+
+    icon: {
+      x: 10,
+      y: 14,
+      rotate: 6,
+    },
   },
+
   {
-    // G — photos left, tags split
+    // G — left-biased subtle variation
     id: "G",
-    order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -220, y: 8, rotate: 0 },
-    tag1: { x: -8, y: -12, rotate: 5 },
-    tag2: { x: -4, y: 8, rotate: -5 },
-    tag3: { x: 12, y: 18, rotate: 2 },
-    tag4: { x: -18, y: 24, rotate: -2 },
-    icon: { x: 26, y: 6, rotate: 4 },
+
+    photos: {
+      x: -12,
+      y: 8,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -6,
+      y: -12,
+      rotate: 5,
+    },
+
+    tag2: {
+      x: -4,
+      y: 8,
+      rotate: -5,
+    },
+
+    tag3: {
+      x: 8,
+      y: 18,
+      rotate: 2,
+    },
+
+    tag4: {
+      x: -10,
+      y: 24,
+      rotate: -2,
+    },
+
+    icon: {
+      x: 12,
+      y: 6,
+      rotate: 4,
+    },
   },
+
   {
-    // H — photos far right, tags split
+    // H — right-biased subtle variation
     id: "H",
-    order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: 260, y: 2, rotate: 0 },
-    tag1: { x: 16, y: 10, rotate: -6 },
-    tag2: { x: 28, y: -6, rotate: 2 },
-    tag3: { x: -10, y: 16, rotate: 5 },
-    tag4: { x: 22, y: 20, rotate: -3 },
-    icon: { x: -16, y: 10, rotate: -5 },
+
+    photos: {
+      x: 14,
+      y: 2,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 8,
+      y: 10,
+      rotate: -6,
+    },
+
+    tag2: {
+      x: 12,
+      y: -6,
+      rotate: 2,
+    },
+
+    tag3: {
+      x: -8,
+      y: 16,
+      rotate: 5,
+    },
+
+    tag4: {
+      x: 10,
+      y: 20,
+      rotate: -3,
+    },
+
+    icon: {
+      x: -8,
+      y: 10,
+      rotate: -5,
+    },
   },
+
   {
-    // I — tags TRUE-grouped left (both order 1), photos far right
+    // I — grouped-left feeling
     id: "I",
-    order: { photos: 2, clusterA: 1, clusterB: 1 },
-    photos: { x: 220, y: 0, rotate: 0 },
-    tag1: { x: -14, y: -6, rotate: -3 },
-    tag2: { x: -22, y: 8, rotate: 2 },
-    tag3: { x: -18, y: 20, rotate: -2 },
-    tag4: { x: -10, y: -14, rotate: 4 },
-    icon: { x: -20, y: 14, rotate: -5 },
+
+    photos: {
+      x: 10,
+      y: 0,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -8,
+      y: -6,
+      rotate: -3,
+    },
+
+    tag2: {
+      x: -12,
+      y: 8,
+      rotate: 2,
+    },
+
+    tag3: {
+      x: -10,
+      y: 20,
+      rotate: -2,
+    },
+
+    tag4: {
+      x: -6,
+      y: -14,
+      rotate: 4,
+    },
+
+    icon: {
+      x: -10,
+      y: 14,
+      rotate: -5,
+    },
   },
+
   {
-    // J — tags TRUE-grouped right (both order 3), photos left
+    // J — grouped-right feeling
     id: "J",
-    order: { photos: 2, clusterA: 3, clusterB: 3 },
-    photos: { x: -220, y: 4, rotate: 0 },
-    tag1: { x: 16, y: -8, rotate: 4 },
-    tag2: { x: 24, y: 10, rotate: -3 },
-    tag3: { x: 20, y: -18, rotate: 2 },
-    tag4: { x: 12, y: 16, rotate: -5 },
-    icon: { x: 22, y: 18, rotate: 6 },
+
+    photos: {
+      x: -12,
+      y: 4,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 8,
+      y: -8,
+      rotate: 4,
+    },
+
+    tag2: {
+      x: 12,
+      y: 10,
+      rotate: -3,
+    },
+
+    tag3: {
+      x: 10,
+      y: -18,
+      rotate: 2,
+    },
+
+    tag4: {
+      x: 6,
+      y: 16,
+      rotate: -5,
+    },
+
+    icon: {
+      x: 10,
+      y: 18,
+      rotate: 6,
+    },
   },
+
   {
-    // K — tags TRUE-grouped left, photos centered
+    // K — grouped-left + centered photos
     id: "K",
-    order: { photos: 2, clusterA: 1, clusterB: 1 },
-    photos: { x: 0, y: -6, rotate: 0 },
-    tag1: { x: -16, y: 10, rotate: -4 },
-    tag2: { x: -24, y: -8, rotate: 3 },
-    tag3: { x: -12, y: 18, rotate: -2 },
-    tag4: { x: -20, y: -16, rotate: 5 },
-    icon: { x: -8, y: 22, rotate: -4 },
+
+    photos: {
+      x: 0,
+      y: -6,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: -8,
+      y: 10,
+      rotate: -4,
+    },
+
+    tag2: {
+      x: -12,
+      y: -8,
+      rotate: 3,
+    },
+
+    tag3: {
+      x: -6,
+      y: 18,
+      rotate: -2,
+    },
+
+    tag4: {
+      x: -10,
+      y: -16,
+      rotate: 5,
+    },
+
+    icon: {
+      x: -6,
+      y: 22,
+      rotate: -4,
+    },
   },
+
   {
-    // L — tags TRUE-grouped right, photos centered
+    // L — grouped-right + centered photos
     id: "L",
-    order: { photos: 2, clusterA: 3, clusterB: 3 },
-    photos: { x: 0, y: 6, rotate: 0 },
-    tag1: { x: 18, y: -10, rotate: 5 },
-    tag2: { x: 26, y: 6, rotate: -3 },
-    tag3: { x: 14, y: -20, rotate: 2 },
-    tag4: { x: 22, y: 14, rotate: -6 },
-    icon: { x: 10, y: 20, rotate: 5 },
+
+    photos: {
+      x: 0,
+      y: 6,
+      rotate: 0,
+    },
+
+    tag1: {
+      x: 10,
+      y: -10,
+      rotate: 5,
+    },
+
+    tag2: {
+      x: 12,
+      y: 6,
+      rotate: -3,
+    },
+
+    tag3: {
+      x: 8,
+      y: -20,
+      rotate: 2,
+    },
+
+    tag4: {
+      x: 10,
+      y: 14,
+      rotate: -6,
+    },
+
+    icon: {
+      x: 6,
+      y: 20,
+      rotate: 5,
+    },
   },
 ];
 
-// ── Photo collage ────────────────────────────
-// Photos are stacked as a clean, perfectly aligned
-// vertical filmstrip: identical left/width, ZERO
-// rotation on every photo, with a fixed 4px gap
-// between each. Only a single vertical "window
-// offset" shifts per composition, so on each page
-// load a different portion of the strip sits in
-// view — all 3 photos are always at least partly
-// visible, some fully, some clipped top/bottom by
-// the overflow-hidden stack box.
+// ─────────────────────────────────────────────
+// PHOTO COLLAGE
+// ─────────────────────────────────────────────
+//
+// Photos remain a clean, aligned vertical filmstrip.
+//
+// Each photo:
+// - has identical width
+// - has identical height
+// - has zero rotation
+// - has a fixed 4px gap
+//
+// Only the vertical window position changes randomly.
+//
+// ─────────────────────────────────────────────
 
 export type PhotoPlacement = {
-  /** which source photo (0,1,2) */
+  /** Which source photo (0, 1, 2) */
   photo: 0 | 1 | 2;
+
   top: string;
   left: string;
   width: string;
   height: string;
+
   rotate: number;
   z: number;
 };
 
-export type PhotoComposition = { id: string; items: PhotoPlacement[] };
+export type PhotoComposition = {
+  id: string;
+  items: PhotoPlacement[];
+};
 
-// Fixed per-photo values — identical across every composition.
-const PHOTO_H = 40; // each photo's height, as % of the stack box height
-const GAP_PX = 4; // fixed vertical gap between photos
-const PHOTO_ROTATE = 0; // no tilt — photos stay perfectly aligned
-const PHOTO_Z: Record<0 | 1 | 2, number> = { 0: 1, 1: 2, 2: 3 };
+// ─────────────────────────────────────────────
+// PHOTO SETTINGS
+// ─────────────────────────────────────────────
 
-// Total stack content height = 3 * PHOTO_H + 2 * GAP_PX ≈ 120% + 8px,
-// against a 100%-tall box — so there's a small overflow range to
-// slide within. Every offset here keeps all 3 photos at least
-// partly visible; only how much of each is cropped changes.
+const PHOTO_H = 40;
+
+const GAP_PX = 4;
+
+const PHOTO_ROTATE = 0;
+
+const PHOTO_Z: Record<0 | 1 | 2, number> = {
+  0: 1,
+  1: 2,
+  2: 3,
+};
+
+// ─────────────────────────────────────────────
+// PHOTO WINDOW POSITIONS
+// ─────────────────────────────────────────────
+//
+// The collage is slightly taller than its visible
+// container, allowing us to move the filmstrip vertically
+// while keeping all three photos at least partially visible.
+//
+// ─────────────────────────────────────────────
+
 const WINDOW_OFFSETS = [0, -6, -12, -18, -24];
+
+// ─────────────────────────────────────────────
+// BUILD PHOTO COMPOSITION
+// ─────────────────────────────────────────────
 
 const buildPhotoComposition = (id: string, windowOffset: number): PhotoComposition => ({
   id,
+
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
+
     top: `calc(${photo * PHOTO_H + windowOffset}% + ${photo * GAP_PX}px)`,
+
     left: "0%",
+
     width: "100%",
+
     height: `${PHOTO_H}%`,
+
     rotate: PHOTO_ROTATE,
+
     z: PHOTO_Z[photo],
   })),
 });
 
+// ─────────────────────────────────────────────
+// PHOTO COMPOSITIONS
+// ─────────────────────────────────────────────
+
 export const photoCompositions: PhotoComposition[] = WINDOW_OFFSETS.map((offset, i) =>
   buildPhotoComposition(`p${i + 1}`, offset),
 );
+
+// ─────────────────────────────────────────────
+// RANDOM PICKER
+// ─────────────────────────────────────────────
 
 export const pickOne = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
