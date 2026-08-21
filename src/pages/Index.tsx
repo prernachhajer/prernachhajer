@@ -629,7 +629,7 @@ const Index = () => {
     </h3>
 
     <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">
-      {cs.year || "2021–26"}
+      2021–26
     </span>
   </div>
 
@@ -684,7 +684,7 @@ const Index = () => {
                       </button>
                     )}
                   </div> */}
-                </div>
+
               </motion.div>
             );
           })}
