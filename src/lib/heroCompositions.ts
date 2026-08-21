@@ -88,7 +88,7 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: -16, y: 10, rotate: -5 },
   },
   {
-    // I — NEW: tags TRUE-grouped left (both order 1), photos far right
+    // I — tags TRUE-grouped left (both order 1), photos far right
     id: "I",
     order: { photos: 2, clusterA: 1, clusterB: 1 },
     photos: { x: 220, y: 0, rotate: 0 },
@@ -99,7 +99,7 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: -20, y: 14, rotate: -5 },
   },
   {
-    // J — NEW: tags TRUE-grouped right (both order 3), photos far left
+    // J — tags TRUE-grouped right (both order 3), photos far left
     id: "J",
     order: { photos: 2, clusterA: 3, clusterB: 3 },
     photos: { x: -220, y: 4, rotate: 0 },
@@ -110,7 +110,7 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: 22, y: 18, rotate: 6 },
   },
   {
-    // K — NEW: tags TRUE-grouped left, photos centered
+    // K — tags TRUE-grouped left, photos centered
     id: "K",
     order: { photos: 2, clusterA: 1, clusterB: 1 },
     photos: { x: 0, y: -6, rotate: 0 },
@@ -121,7 +121,7 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: -8, y: 22, rotate: -4 },
   },
   {
-    // L — NEW: tags TRUE-grouped right, photos centered
+    // L — tags TRUE-grouped right, photos centered
     id: "L",
     order: { photos: 2, clusterA: 3, clusterB: 3 },
     photos: { x: 0, y: 6, rotate: 0 },
