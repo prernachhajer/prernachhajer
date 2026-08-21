@@ -548,7 +548,7 @@ const Index = () => {
       ───────────────────────────────────────── */}
 
       <section id="work" className="border-t border-border">
-        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(50px,6vw,80px)]`}>
+        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] `}>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -560,7 +560,7 @@ const Index = () => {
               className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
-              Selected <em className="italic text-muted-foreground">works</em>
+              Selected <em className="italic text-muted-foreground">work</em>
             </h2>
           </motion.div>
         </div>
