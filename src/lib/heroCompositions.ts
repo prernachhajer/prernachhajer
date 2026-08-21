@@ -562,7 +562,7 @@ export type PhotoComposition = {
 // keeping the stack compact and allowing overlap.
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 42;
+const PHOTO_SIZE = 48;
 
 const GAP_PX = 4;
 
@@ -595,7 +595,7 @@ const buildPhotoComposition = (id: string, windowOffset: number): PhotoCompositi
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
 
-    top: `calc(${photo * 28 + windowOffset}% + ${photo * GAP_PX}px)`,
+    top: `calc(${photo * 25 + windowOffset}% + ${photo * GAP_PX}px)`,
 
     left: "29%",
 
