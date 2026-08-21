@@ -348,7 +348,7 @@ const Index = () => {
               className="flex flex-col md:flex-row md:items-end md:justify-end gap-6 md:gap-6 md:pr-0"
             >
               {/* Photo stack */}
-              <div className="w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
+              <div className="w-full max-w-[240px] md:max-w-none md:w-[clamp(120px,14vh,160px)] border-[0.5px] border-border overflow-hidden">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
                   { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
