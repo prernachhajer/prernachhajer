@@ -327,11 +327,11 @@ const Index = () => {
               {/* Left pills */}
               <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
                 <span className={heroPill}>Traveler</span>
-                <span className={`${heroPill} md:translate-x-4`}>Adventurer</span>
+                <span className={heroPill}>Adventurer</span>
               </div>
 
               {/* Photo stack */}
-              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
+              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[200px] lg:w-[220px] border-[0.5px] border-border overflow-hidden">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
                   { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
@@ -359,7 +359,7 @@ const Index = () => {
                     <ArrowUpRight className="h-5 w-5" />
                   </button>
                 </div>
-                <span className={`${heroPill} md:translate-x-4`}>Lead, 12 yrs</span>
+                <span className={heroPill}>Lead, 12 yrs</span>
               </div>
             </motion.div>
           </div>
