@@ -335,8 +335,8 @@ const Index = () => {
               custom={2}
               className="mt-8 md:mt-0 md:absolute md:left-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
-              <span className={heroPill}>product designer</span>
-              <span className={`${heroPill} md:ml-20`}>lead, 12 yrs</span>
+              <span className={`${heroPill} text-[clamp(1.375rem,2.5vw,2.25rem)]`}>product designer</span>
+              <span className={`${heroPill} md:ml-20 text-[clamp(1.375rem,2.5vw,2.25rem)]`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
@@ -348,7 +348,7 @@ const Index = () => {
               className="mt-3 md:mt-0 md:absolute md:right-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
               <div className="flex items-center gap-3">
-                <span className={heroPill}>traveler</span>
+                <span className={`${heroPill}  text-[clamp(1.375rem,2.5vw,2.25rem)]`}>traveler</span>
                 <button
                   onClick={() => scrollTo("work")}
                   aria-label="View my work"
