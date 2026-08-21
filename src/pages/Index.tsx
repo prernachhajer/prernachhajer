@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
+import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
@@ -270,6 +271,15 @@ const Index = () => {
   };
 
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
+
+  // Curated hero + photo-collage composition, chosen once per page load
+  const comp = useMemo(() => pickOne(heroCompositions), []);
+  const photoComp = useMemo(() => pickOne(photoCompositions), []);
+  const heroPhotos = [
+    { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
+    { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
+    { src: heroPhoto3, alt: "Geothermal landscape at sunrise" },
+  ];
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
 
