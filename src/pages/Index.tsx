@@ -349,7 +349,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-3 md:mt-0 md:absolute md:right-0 md:bottom-4 flex flex-col items-start gap-3"
+              className="mt-3 md:mt-0 md:absolute md:right-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
               <div className="flex items-center gap-3">
                 <span className={heroPill}>traveler</span>
@@ -361,7 +361,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:ml-10`}>adventurer</span>
+              <span className={`${heroPill} md:ml-20`}>adventurer</span>
             </motion.div>
           </div>
         </div>
