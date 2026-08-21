@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
+import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight, Download } from "lucide-react";
 //import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
 import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
