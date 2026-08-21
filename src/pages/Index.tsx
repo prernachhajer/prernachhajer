@@ -375,13 +375,13 @@ const Index = () => {
         </div>
 
         {/* Giant wordmark — aligned with content */}
-        <div className={`${wrapCls} overflow-visible`}>
+        <div className={` overflow-visible`}>
           <motion.h1
             initial="hidden"
             animate="visible"
             variants={fade}
             custom={3}
-            className="mt-6 md:mt-10 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
+            className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
             style={{
               fontFamily: t.displayFont,
               fontSize: "calc(14.5vw - 16px)",
