@@ -414,7 +414,7 @@ const Index = () => {
               >
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
+                    <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>traveler</span>
                   </HeroDrop>
 
                   <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
@@ -441,7 +441,7 @@ const Index = () => {
                 </div>
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>adventurer</span>
                 </HeroDrop>
               </div>
             </div>
