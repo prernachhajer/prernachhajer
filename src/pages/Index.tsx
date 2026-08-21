@@ -448,7 +448,7 @@ const Index = () => {
 
             {/* Giant wordmark — aligned with content */}
 
-            <div className={`justify-centre overflow-visible`}>
+            <div className={`justify-center overflow-visible`}>
               <motion.h1
                 initial="hidden"
                 animate="visible"
