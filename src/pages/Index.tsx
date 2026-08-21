@@ -368,7 +368,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={3}
-            className="mt-9 md:mt-11 flex flex-col sm:flex-row gap-3 items-start"
+            className="mt-14 md:mt-20 flex flex-col sm:flex-row gap-3 items-start"
           >
             <Button
               onClick={() => scrollTo("work")}
