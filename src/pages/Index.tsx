@@ -346,7 +346,6 @@ const Index = () => {
                 </div>
               </HeroDrop>
 
-
               {/* Pills — cluster A */}
               <div className="flex flex-col items-start gap-3" style={{ order: 2 }}>
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
@@ -951,7 +950,7 @@ const Index = () => {
           </div>
         </motion.div>
 
-        <div className="w-full h-px bg-background/[0.08]" />
+        <div className=" h-px bg-background/[0.08]" />
 
         <div
           className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}
