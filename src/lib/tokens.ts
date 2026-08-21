@@ -9,7 +9,8 @@
 export const layout = {
   // Unified container used on ALL pages
   container: "max-w-5xl mx-auto",
-  containerWide: "max-w-[1200px] mx-auto",
+  containerWide: "max-w-[1360px] mx-auto",
+
   // Narrow container for long-form blog reading
   containerBlog: "max-w-[840px] mx-auto",
   // Horizontal padding — same on every page

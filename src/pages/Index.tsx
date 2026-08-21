@@ -51,7 +51,8 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center bg-background border border-border rounded-full px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap";
+  "inline-flex items-center bg-background border border-border rounded-xl px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap";
+
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -295,7 +296,7 @@ const Index = () => {
               initial="hidden"
               animate="visible"
               variants={fade}
-              className="flex items-start gap-3 pt-3 md:pl-6"
+              className="flex items-start gap-3 pt-3 md:pl-6 xl:pl-[80px]"
             >
               <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
               <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
@@ -336,10 +337,10 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-8 md:mt-0 md:absolute md:left-[6%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
+              className="mt-8 md:mt-0 md:absolute md:left-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
               <span className={heroPill}>product designer</span>
-              <span className={`${heroPill} md:mt-4 md:ml-14`}>lead, 12 yrs</span>
+              <span className={`${heroPill} md:ml-20`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
@@ -348,7 +349,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-3 md:mt-0 md:absolute md:right-[8%] md:bottom-6 flex flex-wrap items-center gap-3 md:block"
+              className="mt-3 md:mt-0 md:absolute md:right-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
               <div className="flex items-center gap-3">
                 <span className={heroPill}>traveler</span>
@@ -360,7 +361,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:mt-3 md:ml-4`}>adventurer</span>
+              <span className={`${heroPill} md:ml-20`}>adventurer</span>
             </motion.div>
           </div>
         </div>
