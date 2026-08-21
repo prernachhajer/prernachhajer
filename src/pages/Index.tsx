@@ -684,7 +684,7 @@ const Index = () => {
                       </button>
                     )}
                   </div> */}
-                </div>
+
               </motion.div>
             );
           })}
