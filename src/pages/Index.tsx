@@ -298,15 +298,15 @@ const Index = () => {
               </p>
             </motion.div>
 
-            {/* Photo stack — centered */}
+            {/* Photo stack + pills */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="mt-8 md:-mt-14 flex xl:pl-[634px]"
+              className="mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16"
             >
-              <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] mx-634px">
+              <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
                   {
@@ -325,39 +325,29 @@ const Index = () => {
                   />
                 ))}
               </div>
-            </motion.div>
 
-            {/* Pills — left cluster */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={2}
-              className="mt-8 md:mt-0 md:absolute md:left-[80px] md:bottom-4 flex flex-col items-start gap-3"
-            >
-              <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
-              <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
-            </motion.div>
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                {/* Pills — left cluster */}
+                <div className="flex flex-col items-start gap-3">
+                  <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
+                  <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
+                </div>
 
-            {/* Pills — right cluster */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={2}
-              className="mt-3 md:mt-0 md:absolute md:right-[80px] md:bottom-4 flex flex-col items-start gap-3"
-            >
-              <div className="flex items-center gap-3">
-                <span className={`${heroPill}  text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
-                <button
-                  onClick={() => scrollTo("work")}
-                  aria-label="View my work"
-                  className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center  justify-center hover:opacity-90 transition-opacity"
-                >
-                  <ArrowRight className="h-5 w-5 rotate-90" />
-                </button>
+                {/* Pills — right cluster */}
+                <div className="flex flex-col items-start gap-3">
+                  <div className="flex items-center gap-3">
+                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
+                    <button
+                      onClick={() => scrollTo("work")}
+                      aria-label="View my work"
+                      className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+                    >
+                      <ArrowRight className="h-5 w-5 rotate-90" />
+                    </button>
+                  </div>
+                  <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
+                </div>
               </div>
-              <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
             </motion.div>
           </div>
         </div>
