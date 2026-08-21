@@ -4,6 +4,17 @@
 // picked at random on every page load. Only landing
 // offsets / rotations / left-center-right ordering
 // change — the layout & assets stay identical.
+//
+// NOTE ON OVERFLOW/OVERLAP: the x offsets below are
+// still fixed, hand-tuned numbers — they do NOT know
+// your container's real width or the photo/tag sizes.
+// That's why the far-left compositions overflowed
+// past the container edge on your actual page. The
+// durable fix is the runtime guard in
+// useHeroLayoutGuard.ts, which clamps these desired
+// x values to the real container bounds and pushes
+// tag clusters apart from the photo stack if they'd
+// overlap — do not rely on these numbers alone.
 // ─────────────────────────────────────────────
 
 export type Offset = { x: number; y: number; rotate: number };
@@ -12,7 +23,8 @@ export type HeroComposition = {
   id: string;
   /** flex order of the 3 hero groups (photos, tag cluster 1, tag cluster 2) */
   order: { photos: number; clusterA: number; clusterB: number };
-  /** landing offsets per element (px / deg) */
+  /** landing offsets per element (px / deg) — treated as DESIRED
+   *  values; useHeroLayoutGuard clamps/corrects them at runtime */
   photos: Offset;
   tag1: Offset;
   tag2: Offset;
@@ -21,19 +33,17 @@ export type HeroComposition = {
   icon: Offset;
 };
 
-// Note: order.photos is fixed at 2 for every composition below.
+// order.photos is fixed at 2 for every composition below.
 // Horizontal placement (left/center/right) is controlled ONLY by
 // photos.x (translateX) — mixing it with flex `order` caused
-// compositions to fight each other (a photo with order 1 sitting
-// at the flex-left could never reach a true right position even
-// with a positive x, since it started from the far left). Locking
-// order removes that interaction so x alone decides the position.
+// compositions to fight each other. Locking order removes that
+// interaction so x alone decides the position.
 export const heroCompositions: HeroComposition[] = [
   {
-    // A — photos far left, tags split, icon lower left
+    // A — photos left, tags split, icon lower left
     id: "A",
     order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -260, y: 0, rotate: 0 },
+    photos: { x: -220, y: 0, rotate: 0 },
     tag1: { x: -18, y: -8, rotate: -3 },
     tag2: { x: 14, y: 10, rotate: 2 },
     tag3: { x: -10, y: 4, rotate: 3 },
@@ -44,7 +54,7 @@ export const heroCompositions: HeroComposition[] = [
     // B — photos left-ish, tags split, icon lower right
     id: "B",
     order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -160, y: 0, rotate: 0 },
+    photos: { x: -140, y: 0, rotate: 0 },
     tag1: { x: 20, y: -10, rotate: 2.5 },
     tag2: { x: -16, y: 12, rotate: -4 },
     tag3: { x: 24, y: 6, rotate: -2 },
@@ -96,10 +106,10 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: 22, y: 14, rotate: 6 },
   },
   {
-    // G — photos far left, tags split
+    // G — photos left, tags split
     id: "G",
     order: { photos: 2, clusterA: 1, clusterB: 3 },
-    photos: { x: -260, y: 8, rotate: 0 },
+    photos: { x: -220, y: 8, rotate: 0 },
     tag1: { x: -8, y: -12, rotate: 5 },
     tag2: { x: -4, y: 8, rotate: -5 },
     tag3: { x: 12, y: 18, rotate: 2 },
@@ -129,7 +139,7 @@ export const heroCompositions: HeroComposition[] = [
     icon: { x: -20, y: 14, rotate: -5 },
   },
   {
-    // J — tags TRUE-grouped right (both order 3), photos far left
+    // J — tags TRUE-grouped right (both order 3), photos left
     id: "J",
     order: { photos: 2, clusterA: 3, clusterB: 3 },
     photos: { x: -220, y: 4, rotate: 0 },
