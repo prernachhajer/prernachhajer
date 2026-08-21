@@ -55,6 +55,10 @@ const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 type Props = {
   /** key into DROP_VARIATIONS */
   variant: keyof typeof DROP_VARIATIONS | string;
+  /** explicit landing offset — overrides the random variation (from heroCompositions) */
+  target?: DropVariation;
+  /** heavier objects (photos) land with a slower, denser spring */
+  heavy?: boolean;
   /** stagger delay in seconds (keep total sequence <= ~2s) */
   delay?: number;
   /** how far above the final position it starts (px) */
@@ -63,15 +67,25 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const HeroDrop = ({ variant, delay = 0, from = 320, className, children }: Props) => {
+export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from = 320, className, children }: Props) => {
   const reduce = useReducedMotion();
-  const target = useMemo<DropVariation>(
+  const fallback = useMemo<DropVariation>(
     () => pick(DROP_VARIATIONS[variant] ?? [{ x: 0, y: 0, rotate: 0 }]),
     [variant],
   );
+  const target = targetProp ?? fallback;
   const drift = useMemo(() => (Math.random() > 0.5 ? 1 : -1) * (10 + Math.random() * 20), []);
 
-  if (reduce) return <div className={className}>{children}</div>;
+  if (reduce)
+    return (
+      <div
+        className={className}
+        style={{ transform: `translate(${target.x}px, ${target.y}px) rotate(${target.rotate}deg)` }}
+      >
+        {children}
+      </div>
+    );
+
 
   return (
     <motion.div
