@@ -560,7 +560,7 @@ const Index = () => {
               className="font-normal tracking-[-0.035em] leading-none text-[clamp(3rem,5.5vw,5rem)]"
               style={{ fontFamily: t.displayFont }}
             >
-              Selected Work
+              Selected work
             </h2>
 
             <span className="text-[clamp(0.9rem,1.2vw,1.15rem)] text-muted-foreground tracking-[0.02em]">
