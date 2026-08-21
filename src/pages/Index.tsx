@@ -458,7 +458,7 @@ const Index = () => {
               </motion.h1>
             </div>
 
-            <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
+            <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
               <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
                 <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
