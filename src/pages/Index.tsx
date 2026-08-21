@@ -7,7 +7,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
-import { NavHome } from "@/components/ds";
+//import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
 import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
@@ -285,9 +285,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <NavHome />
+      {/*    <NavHome />
 
-      {/* ─────────────────────────────────────────
+      ─────────────────────────────────────────
           HERO
       ───────────────────────────────────────── */}
 
