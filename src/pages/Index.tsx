@@ -321,7 +321,7 @@ const Index = () => {
             </motion.div>
 
             {/* Photo collage + pills — composition chosen at random on each load */}
-            <div className=" flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
+            <div className=" flex flex-col md:flex-row items-start md:items-end gap-8  md:pt-4  md:gap-16">
               <HeroDrop
                 variant="photos"
                 target={comp.photos}
