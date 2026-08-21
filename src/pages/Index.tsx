@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
-import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
+import { heroCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
@@ -274,7 +274,6 @@ const Index = () => {
 
   // Curated hero + photo-collage composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
-  const photoComp = useMemo(() => pickOne(photoCompositions), []);
   const heroPhotos = [
     { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
     { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
@@ -313,35 +312,43 @@ const Index = () => {
             <div className=" flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
               <HeroDrop
                 variant="photos"
-                target={comp.photos}
+                target={{ x: 0, y: 0, rotate: 0 }}
                 heavy
                 delay={0}
                 from={380}
                 className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0"
-                style={{ order: comp.order.photos }}
+                style={{ order: 1 }}
               >
+                {/* Fixed vertical photo reel — 1 → 2 → 3 → repeat */}
                 <div className="relative w-full aspect-[1/1.45] overflow-hidden">
-                  {photoComp.items.map((it, i) => (
-                    <img
-                      key={`${it.photo}-${i}`}
-                      src={heroPhotos[it.photo].src}
-                      alt={heroPhotos[it.photo].alt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      className="absolute block object-cover"
-                      style={{
-                        top: it.top,
-                        left: it.left,
-                        width: it.width,
-                        zIndex: it.z,
-                        transform: `rotate(${it.rotate}deg)`,
-                      }}
-                    />
-                  ))}
+                  <motion.div
+                    className="absolute inset-x-0 top-0 flex flex-col"
+                    animate={{ y: ["0%", "0%", "-100%", "-100%", "-200%", "-200%", "-300%"] }}
+                    transition={{
+                      duration: 12,
+                      times: [0, 0.24, 0.32, 0.57, 0.65, 0.9, 1],
+                      ease: [0.65, 0, 0.35, 1],
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                  >
+                    {[0, 1, 2, 0].map((p, i) => (
+                      <div key={i} className="w-full aspect-[1/1.45] shrink-0">
+                        <img
+                          src={heroPhotos[p].src}
+                          alt={heroPhotos[p].alt}
+                          loading={i === 0 ? "eager" : "lazy"}
+                          className="block w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </motion.div>
                 </div>
               </HeroDrop>
 
+
               {/* Pills — cluster A */}
-              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterA }}>
+              <div className="flex flex-col items-start gap-3" style={{ order: 2 }}>
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
                   <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
                 </HeroDrop>
@@ -351,7 +358,7 @@ const Index = () => {
               </div>
 
               {/* Pills — cluster B */}
-              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterB }}>
+              <div className="flex flex-col items-start gap-3" style={{ order: 3 }}>
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
                     <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
