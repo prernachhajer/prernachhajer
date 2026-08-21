@@ -310,7 +310,7 @@ const Index = () => {
             </motion.div>
 
             {/* Photo collage + pills — composition chosen at random on each load */}
-            <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
+            <div className="mt-8 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
               <HeroDrop
                 variant="photos"
                 target={comp.photos}
@@ -341,10 +341,7 @@ const Index = () => {
               </HeroDrop>
 
               {/* Pills — cluster A */}
-              <div
-                className="flex flex-col items-start gap-3"
-                style={{ order: comp.order.clusterA }}
-              >
+              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterA }}>
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
                   <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
                 </HeroDrop>
@@ -354,10 +351,7 @@ const Index = () => {
               </div>
 
               {/* Pills — cluster B */}
-              <div
-                className="flex flex-col items-start gap-3"
-                style={{ order: comp.order.clusterB }}
-              >
+              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterB }}>
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
                     <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
@@ -377,7 +371,6 @@ const Index = () => {
                 </HeroDrop>
               </div>
             </div>
-
           </div>
         </div>
 
