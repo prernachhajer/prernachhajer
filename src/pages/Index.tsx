@@ -323,51 +323,51 @@ const Index = () => {
             {/* Photo collage + pills — collision-safe composition */}
 
             <div className="relative w-full min-h-[540px] md:min-h-[480px]">
-  <HeroDrop
-  variant="photos"
-  target={comp.photos}
-  heavy
-  delay={0}
-  from={380}
-  className="
+              <HeroDrop
+                variant="photos"
+                target={comp.photos}
+                heavy
+                delay={0}
+                from={380}
+                className="
     absolute
     left-1/2
     top-0
     -translate-x-1/2
-    w-[160px]
-    h-[500px]
+    w-[150px]
+    h-[480px]
     shrink-0
     z-10
   "
->
-  <div className="relative w-full h-full overflow-visible">
-    {photoComp.items.map((it, i) => (
-      <img
-        key={`${it.photo}-${i}`}
-        src={heroPhotos[it.photo].src}
-        alt={heroPhotos[it.photo].alt}
-        loading={i === 0 ? "eager" : "lazy"}
-        className="absolute block object-cover"
-        style={{
-          top: it.top,
-          left: it.left,
-          width: it.width,
-          height: it.height,
-          zIndex: it.z,
-          transform: `rotate(${it.rotate}deg)`,
-        }}
-      />
-    ))}
-  </div>
-</HeroDrop>
+              >
+                <div className="relative w-full h-full overflow-visible">
+                  {photoComp.items.map((it, i) => (
+                    <img
+                      key={`${it.photo}-${i}`}
+                      src={heroPhotos[it.photo].src}
+                      alt={heroPhotos[it.photo].alt}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      className="absolute block object-cover"
+                      style={{
+                        top: it.top,
+                        left: it.left,
+                        width: it.width,
+                        height: it.height,
+                        zIndex: it.z,
+                        transform: `rotate(${it.rotate}deg)`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </HeroDrop>
 
-{/* ─────────────────────────────────────────
+              {/* ─────────────────────────────────────────
     CLUSTER A
     Product designer + Lead
     Dedicated left landing zone
 ────────────────────────────────────────── */}
-<div
-  className="
+              <div
+                className="
     absolute
     left-0
     top-[250px]
@@ -378,36 +378,23 @@ const Index = () => {
     items-start
     gap-3
   "
->
-  <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-    <span
-      className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}
-    >
-      product designer
-    </span>
-  </HeroDrop>
+              >
+                <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>product designer</span>
+                </HeroDrop>
 
-  <HeroDrop
-    variant="pillB"
-    target={comp.tag2}
-    delay={0.34}
-    className="ml-12 md:ml-20"
-  >
-    <span
-      className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}
-    >
-      lead, 12 yrs
-    </span>
-  </HeroDrop>
-</div>
+                <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>lead, 12 yrs</span>
+                </HeroDrop>
+              </div>
 
-{/* ─────────────────────────────────────────
+              {/* ─────────────────────────────────────────
     CLUSTER B
     Traveler + Arrow + Adventurer
     Dedicated right landing zone
 ────────────────────────────────────────── */}
-<div
-  className="
+              <div
+                className="
     absolute
     right-0
     top-[280px]
@@ -418,30 +405,17 @@ const Index = () => {
     items-start
     gap-3
   "
->
-  <div className="flex items-center gap-3">
-    <HeroDrop
-      variant="pillC"
-      target={comp.tag3}
-      delay={0.5}
-    >
-      <span
-        className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}
-      >
-        traveler
-      </span>
-    </HeroDrop>
+              >
+                <div className="flex items-center gap-3">
+                  <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
+                    <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>traveler</span>
+                  </HeroDrop>
 
-    <HeroDrop
-      variant="arrow"
-      target={comp.icon}
-      delay={0.62}
-      from={240}
-    >
-      <button
-        onClick={() => scrollTo("work")}
-        aria-label="View my work"
-        className="
+                  <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
+                    <button
+                      onClick={() => scrollTo("work")}
+                      aria-label="View my work"
+                      className="
           h-12
           w-12
           shrink-0
@@ -454,25 +428,16 @@ const Index = () => {
           hover:opacity-90
           transition-opacity
         "
-      >
-        <ArrowRight className="h-5 w-5 rotate-90" />
-      </button>
-    </HeroDrop>
-  </div>
+                    >
+                      <ArrowRight className="h-5 w-5 rotate-90" />
+                    </button>
+                  </HeroDrop>
+                </div>
 
-  <HeroDrop
-    variant="pillD"
-    target={comp.tag4}
-    delay={0.74}
-    className="ml-12 md:ml-20"
-  >
-    <span
-      className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}
-    >
-      adventurer
-    </span>
-  </HeroDrop>
-</div>
+                <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>adventurer</span>
+                </HeroDrop>
+              </div>
             </div>
 
             {/* Giant wordmark — aligned with content */}

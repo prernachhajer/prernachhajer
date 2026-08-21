@@ -585,9 +585,9 @@ export type PhotoComposition = {
 // PHOTO SETTINGS
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 160;
+const PHOTO_SIZE = 140;
 
-const GAP_PX = 10;
+const GAP_PX = 8;
 
 const PHOTO_ROTATE = 0;
 
