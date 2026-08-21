@@ -43,8 +43,8 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --font-display: "Sora", system-ui, sans-serif;
-    --font-body: "Inter Variable", system-ui, sans-serif;
+    --font-display: "Source Serif 4 Variable", Georgia, serif;
+    --font-body: "Geist Variable", system-ui, sans-serif;
   }
 
   .dark {
