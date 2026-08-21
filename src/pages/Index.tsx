@@ -51,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center bg-background border border-border rounded-full px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap shadow-[0_2px_10px_-4px_hsl(var(--foreground)/0.18)]";
+  "inline-flex items-center bg-background border border-border rounded-full px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -295,7 +295,7 @@ const Index = () => {
               initial="hidden"
               animate="visible"
               variants={fade}
-              className="flex items-start gap-3"
+              className="flex items-start gap-3 pt-3 md:pl-6"
             >
               <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
               <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
