@@ -467,8 +467,7 @@ const Index = () => {
               <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 w-full max-w-[1024px] mx-auto">
                 <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
                   <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
-                    I do my best work when nothing's organized yet. 12 years of turning ambiguity into products people
-                    actually use.
+                    Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive, user-centered experiences through design, systems, and cross-functional leadership.
                   </p>
 
                   <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
