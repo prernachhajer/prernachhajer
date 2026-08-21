@@ -6,7 +6,7 @@
 //
 // IMPORTANT:
 // The large-scale layout position of photos / cluster A /
-// cluster B is now controlled by the main hero layout.
+// cluster B is controlled by the main hero layout.
 // These values are only used for subtle landing offsets
 // and rotation.
 //
@@ -26,17 +26,6 @@ export type Offset = {
 export type HeroComposition = {
   id: string;
 
-  /**
-   * Small landing offsets per element.
-   *
-   * These are NOT responsible for deciding whether an
-   * element belongs on the left / center / right.
-   *
-   * The main hero layout now controls that.
-   *
-   * x / y = subtle positional variation
-   * rotate = playful final rotation
-   */
   photos: Offset;
   tag1: Offset;
   tag2: Offset;
@@ -48,27 +37,9 @@ export type HeroComposition = {
 // ─────────────────────────────────────────────
 // HERO COMPOSITIONS
 // ─────────────────────────────────────────────
-//
-// Keep the variation relatively small.
-//
-// The previous values such as x: -220 / +260 were
-// effectively moving entire groups across the page.
-// That made collisions much more likely because the
-// flex layout still reserved the original space.
-//
-// Now the main layout establishes:
-//
-//   cluster A → left
-//   photos    → center
-//   cluster B → right
-//
-// These values simply add personality to the landing.
-//
-// ─────────────────────────────────────────────
 
 export const heroCompositions: HeroComposition[] = [
   {
-    // A — subtle variation
     id: "A",
 
     photos: {
@@ -109,7 +80,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // B — subtle variation
     id: "B",
 
     photos: {
@@ -150,7 +120,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // C — slightly more centered
     id: "C",
 
     photos: {
@@ -191,7 +160,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // D — tags slightly closer to their landing zones
     id: "D",
 
     photos: {
@@ -232,7 +200,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // E — slightly more horizontal variation
     id: "E",
 
     photos: {
@@ -273,8 +240,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // F — stronger personality without moving groups
-    // outside their assigned zones
     id: "F",
 
     photos: {
@@ -315,7 +280,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // G — left-biased subtle variation
     id: "G",
 
     photos: {
@@ -356,7 +320,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // H — right-biased subtle variation
     id: "H",
 
     photos: {
@@ -397,7 +360,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // I — grouped-left feeling
     id: "I",
 
     photos: {
@@ -438,7 +400,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // J — grouped-right feeling
     id: "J",
 
     photos: {
@@ -479,7 +440,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // K — grouped-left + centered photos
     id: "K",
 
     photos: {
@@ -520,7 +480,6 @@ export const heroCompositions: HeroComposition[] = [
   },
 
   {
-    // L — grouped-right + centered photos
     id: "L",
 
     photos: {
@@ -565,15 +524,13 @@ export const heroCompositions: HeroComposition[] = [
 // PHOTO COLLAGE
 // ─────────────────────────────────────────────
 //
-// Photos remain a clean, aligned vertical filmstrip.
+// Three photos are now square (1:1).
 //
-// Each photo:
-// - has identical width
-// - has identical height
-// - has zero rotation
-// - has a fixed 4px gap
+// The photos remain vertically stacked, but overlap
+// enough to keep the overall hero composition compact.
 //
-// Only the vertical window position changes randomly.
+// The actual size of the collage is controlled by the
+// HeroDrop width in index.tsx.
 //
 // ─────────────────────────────────────────────
 
@@ -598,8 +555,14 @@ export type PhotoComposition = {
 // ─────────────────────────────────────────────
 // PHOTO SETTINGS
 // ─────────────────────────────────────────────
+//
+// Each photo is 1:1.
+//
+// 42% gives enough room for three square photos while
+// keeping the stack compact and allowing overlap.
+// ─────────────────────────────────────────────
 
-const PHOTO_H = 40;
+const PHOTO_SIZE = 42;
 
 const GAP_PX = 4;
 
@@ -615,13 +578,12 @@ const PHOTO_Z: Record<0 | 1 | 2, number> = {
 // PHOTO WINDOW POSITIONS
 // ─────────────────────────────────────────────
 //
-// The collage is slightly taller than its visible
-// container, allowing us to move the filmstrip vertically
-// while keeping all three photos at least partially visible.
-//
+// The window offsets create subtle random vertical
+// variation without changing the overall position of
+// the photo group.
 // ─────────────────────────────────────────────
 
-const WINDOW_OFFSETS = [0, -6, -12, -18, -24];
+const WINDOW_OFFSETS = [0, -4, -8, -12, -16];
 
 // ─────────────────────────────────────────────
 // BUILD PHOTO COMPOSITION
@@ -633,13 +595,13 @@ const buildPhotoComposition = (id: string, windowOffset: number): PhotoCompositi
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
 
-    top: `calc(${photo * PHOTO_H + windowOffset}% + ${photo * GAP_PX}px)`,
+    top: `calc(${photo * 28 + windowOffset}% + ${photo * GAP_PX}px)`,
 
-    left: "0%",
+    left: "29%",
 
-    width: "100%",
+    width: `${PHOTO_SIZE}%`,
 
-    height: `${PHOTO_H}%`,
+    height: `${PHOTO_SIZE}%`,
 
     rotate: PHOTO_ROTATE,
 
