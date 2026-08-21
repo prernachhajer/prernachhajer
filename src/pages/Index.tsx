@@ -304,7 +304,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="mt-8 md:-mt-14 flex pl-628px"
+              className="mt-8 md:-mt-14 flex xl:pl-[600px]"
             >
               <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] ml-600px">
                 {[
