@@ -37,6 +37,14 @@ export type HeroComposition = {
 // ─────────────────────────────────────────────
 // HERO COMPOSITIONS
 // ─────────────────────────────────────────────
+//
+// Keep the variation relatively small.
+//
+// These values do NOT control the main left / center / right
+// layout. The main hero layout handles that.
+//
+// They only provide subtle landing variation and rotation.
+// ─────────────────────────────────────────────
 
 export const heroCompositions: HeroComposition[] = [
   {
@@ -524,16 +532,34 @@ export const heroCompositions: HeroComposition[] = [
 // PHOTO COLLAGE
 // ─────────────────────────────────────────────
 //
-// Three photos are square (1:1).
+// Three photos.
 //
-// The photos remain vertically stacked and
-// horizontally aligned.
+// IMPORTANT:
+// - Each photo is exactly 1:1.
+// - Each photo is exactly 160px × 160px.
+// - Photos never overlap.
+// - Photos are vertically stacked.
+// - There is a fixed 10px gap.
+// - The complete photo stack is exactly 500px tall.
 //
-// The photo group keeps the same horizontal position.
-// Only the size and vertical spacing are controlled here.
+// Layout:
 //
-// The actual overall size of the collage is also
-// influenced by the HeroDrop width in index.tsx.
+//   ┌───────────────┐
+//   │    PHOTO 1    │ 160px
+//   └───────────────┘
+//         10px
+//   ┌───────────────┐
+//   │    PHOTO 2    │ 160px
+//   └───────────────┘
+//         10px
+//   ┌───────────────┐
+//   │    PHOTO 3    │ 160px
+//   └───────────────┘
+//
+// Total: 160 + 10 + 160 + 10 + 160 = 500px
+//
+// The main HeroDrop container is responsible for
+// providing the 500px × 160px space.
 //
 // ─────────────────────────────────────────────
 
@@ -558,18 +584,10 @@ export type PhotoComposition = {
 // ─────────────────────────────────────────────
 // PHOTO SETTINGS
 // ─────────────────────────────────────────────
-//
-// Each photo is 1:1.
-//
-// 68% makes the photos noticeably larger while
-// keeping the overall collage compact.
-//
-// The photos remain horizontally aligned.
-// ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 40;
+const PHOTO_SIZE = 160;
 
-const GAP_PX = 4;
+const GAP_PX = 10;
 
 const PHOTO_ROTATE = 0;
 
@@ -580,42 +598,34 @@ const PHOTO_Z: Record<0 | 1 | 2, number> = {
 };
 
 // ─────────────────────────────────────────────
-// PHOTO WINDOW POSITIONS
+// PHOTO COMPOSITION BUILDER
 // ─────────────────────────────────────────────
 //
-// These offsets only change the vertical window
-// position of the stacked photo group.
+// No percentage positioning here.
 //
-// They do not move the group left or right.
+// Each image gets an explicit pixel position:
+//
+// Photo 1 → 0px
+// Photo 2 → 170px
+// Photo 3 → 340px
+//
+// This guarantees that the images cannot overlap.
+//
 // ─────────────────────────────────────────────
 
-const WINDOW_OFFSETS = [0, -4, -8, -12, -16];
-
-// ─────────────────────────────────────────────
-// BUILD PHOTO COMPOSITION
-// ─────────────────────────────────────────────
-
-const buildPhotoComposition = (id: string, windowOffset: number): PhotoComposition => ({
+const buildPhotoComposition = (id: string): PhotoComposition => ({
   id,
 
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
 
-    // Keep every photo vertically stacked.
-    //
-    // Each image starts 30% below the previous one.
-    // This gives a controlled overlap while keeping
-    // the three square images visually connected.
-    top: `calc(${photo * 30 + windowOffset}% + ${photo * GAP_PX}px)`,
+    top: `${photo * (PHOTO_SIZE + GAP_PX)}px`,
 
-    // Keep every photo on exactly the same horizontal line.
-    left: "29%",
+    left: "0px",
 
-    // Larger square photos.
-    width: `${PHOTO_SIZE}%`,
+    width: `${PHOTO_SIZE}px`,
 
-    // 1:1 aspect ratio.
-    height: `${PHOTO_SIZE}%`,
+    height: `${PHOTO_SIZE}px`,
 
     rotate: PHOTO_ROTATE,
 
@@ -626,10 +636,29 @@ const buildPhotoComposition = (id: string, windowOffset: number): PhotoCompositi
 // ─────────────────────────────────────────────
 // PHOTO COMPOSITIONS
 // ─────────────────────────────────────────────
+//
+// We are intentionally NOT changing the vertical
+// position randomly anymore.
+//
+// The three photos must always remain:
+//
+// 1 → 2 → 3
+//
+// vertically aligned and non-overlapping.
+//
+// We still keep multiple composition IDs so the
+// existing random-picking architecture continues
+// to work without changing the rest of the app.
+//
+// ─────────────────────────────────────────────
 
-export const photoCompositions: PhotoComposition[] = WINDOW_OFFSETS.map((offset, i) =>
-  buildPhotoComposition(`p${i + 1}`, offset),
-);
+export const photoCompositions: PhotoComposition[] = [
+  buildPhotoComposition("p1"),
+  buildPhotoComposition("p2"),
+  buildPhotoComposition("p3"),
+  buildPhotoComposition("p4"),
+  buildPhotoComposition("p5"),
+];
 
 // ─────────────────────────────────────────────
 // RANDOM PICKER
