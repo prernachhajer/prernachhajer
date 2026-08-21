@@ -322,7 +322,7 @@ const Index = () => {
 
             {/* Photo collage + pills — collision-safe composition */}
 
-            <div className="relative w-full min-h-[5400px] md:min-h-[440px]">
+            <div className="relative w-full min-h-[540px] md:min-h-[440px]">
               {/* ─────────────────────────────────────────
       PHOTO COLLAGE
       Fixed central landing zone
