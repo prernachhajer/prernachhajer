@@ -621,7 +621,7 @@ const buildPhotoComposition = (id: string): PhotoComposition => ({
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
 
-    top: `${photo * (PHOTO_SIZE + GAP_PX)}px`,
+    top: `${photo * (PHOTO_SIZE1 + GAP_PX)}px`,
 
     left: "0px",
 
