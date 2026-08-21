@@ -548,15 +548,6 @@ const Index = () => {
       ───────────────────────────────────────── */}
 
       <section id="work" className="border-t border-border">
-        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
-              <span className="w-[22px] h-px bg-primary" />
-              Recent Case studies
-            </div>
-          </motion.div>
-        </div>
-
         <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(50px,6vw,80px)]`}>
           <motion.div
             initial="hidden"
@@ -590,11 +581,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={idx}
-                className={`bg-secondary border border-border rounded-[20px] overflow-hidden relative group transition-all duration-300 flex flex-col ${
-                  isComingSoon
-                    ? "cursor-default"
-                    : "cursor-pointer hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,14,13,0.1)]"
-                }`}
+                className={`group relative flex flex-col ${isComingSoon ? "cursor-default" : "cursor-pointer"}`}
                 onClick={() => {
                   if (cs.link) {
                     navigate(cs.link);
