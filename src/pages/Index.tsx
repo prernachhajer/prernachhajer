@@ -51,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center border-[0.5px] border-foreground/30 rounded-full px-4 py-2 text-[0.8125rem] text-foreground whitespace-nowrap";
+  "inline-flex items-center bg-background border border-border rounded-full px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap shadow-[0_2px_10px_-4px_hsl(var(--foreground)/0.18)]";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -288,147 +288,159 @@ const Index = () => {
         id="hero"
         className="pt-[20px] border-b border-border overflow-hidden"
       >
-        <div className={`${wrapCls} pt-10 md:pt-14 pb-10 md:pb-14 w-full`}>
-          {/* Eyebrow */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            className="flex items-start gap-3"
-          >
-            <CornerDownRight className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
-            <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.5] text-foreground">
-              Lead Product Designer
-              <br />
-              Based in India, working globally
-            </p>
-          </motion.div>
-
-          {/* Pills floating above the wordmark */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={1}
-            className="mt-6 md:mt-8 flex flex-wrap gap-3 mb-4"
-          >
-            <span className={heroPill}>Traveler</span>
-            <span className={heroPill}>Adventurer</span>
-            <div className="flex items-center gap-3">
-              <span className={heroPill}>Product designer</span>
-              <button
-                onClick={() => scrollTo("work")}
-                aria-label="View my work"
-                className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <ArrowUpRight className="h-5 w-5" />
-              </button>
-            </div>
-            <span className={heroPill}>Lead, 12 yrs</span>
-          </motion.div>
-
-          {/* Giant wordmark + photo stack */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-8">
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={2}
-              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,12vw,14rem)]"
-              style={{ fontFamily: t.displayFont }}
-            >
-              prerna
-            </motion.h1>
-
+        <div className={`${wrapCls} pt-8 md:pt-10 pb-12 md:pb-16 w-full`}>
+          {/* Eyebrow + photo stack + pills */}
+          <div className="relative">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fade}
-              custom={3}
-              className="flex flex-col md:flex-row md:items-end md:justify-end gap-6 md:gap-6 md:pr-0"
+              className="flex items-start gap-3"
             >
-              {/* Photo stack */}
-              <div className="w-full max-w-[240px] md:max-w-none md:w-[clamp(120px,14vh,160px)] border-[0.5px] border-border overflow-hidden">
+              <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
+                Lead Product Designer
+                <br />
+                Based in India, working globally
+              </p>
+            </motion.div>
+
+            {/* Photo stack — centered */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={1}
+              className="mt-8 md:-mt-14 flex justify-center"
+            >
+              <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px]">
                 {[
-                  { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
-                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
-                  { src: heroPhoto3, alt: "On the road — design workshop with the team" },
+                  { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
+                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck", ratio: "aspect-[16/10.5]" },
+                  { src: heroPhoto3, alt: "Geothermal landscape at sunrise", ratio: "aspect-[16/8.8]" },
                 ].map((p, i) => (
                   <img
                     key={p.alt}
                     src={p.src}
                     alt={p.alt}
                     loading={i === 0 ? "eager" : "lazy"}
-                    className={`block w-full aspect-square object-cover ${i > 0 ? "border-t-[0.5px] border-border" : ""}`}
+                    className={`block w-full object-cover ${p.ratio} ${i > 0 ? "mt-1" : ""}`}
                   />
                 ))}
               </div>
             </motion.div>
-          </div>
 
-          {/* CTAs */}
-          <motion.div
+            {/* Pills — left cluster */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={2}
+              className="mt-8 md:mt-0 md:absolute md:left-[6%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
+            >
+              <span className={heroPill}>product designer</span>
+              <span className={`${heroPill} md:mt-4 md:ml-14`}>lead, 12 yrs</span>
+            </motion.div>
+
+            {/* Pills — right cluster */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={2}
+              className="mt-3 md:mt-0 md:absolute md:right-[8%] md:bottom-6 flex flex-wrap items-center gap-3 md:block"
+            >
+              <div className="flex items-center gap-3">
+                <span className={heroPill}>traveler</span>
+                <button
+                  onClick={() => scrollTo("work")}
+                  aria-label="View my work"
+                  className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+                >
+                  <ArrowRight className="h-5 w-5 rotate-90" />
+                </button>
+              </div>
+              <span className={`${heroPill} md:mt-3 md:ml-4`}>adventurer</span>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Giant wordmark — edge to edge */}
+        <div className={`${layout.px} w-full overflow-hidden`}>
+          <motion.h1
             initial="hidden"
             animate="visible"
             variants={fade}
             custom={3}
-            className="mt-14 md:mt-20 flex flex-col sm:flex-row gap-3 items-start"
+            className="mt-6 md:mt-10 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap"
+            style={{
+              fontFamily: t.displayFont,
+              fontSize: "calc(14.5vw - 16px)",
+            }}
           >
-            <Button
-              onClick={() => scrollTo("work")}
-              className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
-            >
-              View my work →
-            </Button>
-
-            <Button
-              variant="outline"
-              onClick={() => navigate("/resume")}
-              className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
-            >
-              View resume
-            </Button>
-          </motion.div>
+            prerna chhajer
+          </motion.h1>
         </div>
 
+        <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fade}
-          custom={3}
-          className="border-t border-border"
-        >
-          <div
-            className={`${wrapCls} grid grid-cols-1 sm:grid-cols-3`}
-          >
-            {[
-              ["3.4 → 4.5", "app rating"],
-              ["100M+", "monthly traffic"],
-              ["12 years", "building and leading design"],
-            ].map(([value, label], index) => (
-              <div
-                key={label}
-                className={`py-8 md:py-11 text-center ${
-                  index > 0
-                    ? "border-t sm:border-t-0 sm:border-l border-border"
-                    : ""
-                }`}
-              >
-                <p
-                  className="text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-none tracking-[0.015em]"
-                  style={{ fontFamily: t.displayFont }}
+          {/* Two-column intro */}
+          <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={4}
+            >
+              <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
+                I do my best work when nothing's organized yet. 12 years of
+                turning ambiguity into products people actually use.
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+                <Button
+                  onClick={() => scrollTo("work")}
+                  className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
                 >
-                  {value}
-                </p>
+                  View my work →
+                </Button>
 
-                <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-muted-foreground mt-2">
-                  {label}
-                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => navigate("/resume")}
+                  className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
+                >
+                  View resume
+                </Button>
               </div>
-            ))}
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={5}
+              className="relative"
+            >
+              <span
+                aria-hidden
+                className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
+                style={{ fontFamily: t.displayFont }}
+              >
+                “
+              </span>
+              <p
+                className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
+                style={{ fontFamily: t.displayFont }}
+              >
+                From 0-to-1 startups to platforms at 100M+ scale — I've built
+                design systems from scratch, mentored designers into leads, and
+                shipped work that moved app ratings from 3.4 to 4.5. Now
+                applying that same rigor to AI-assisted design.
+              </p>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* ─────────────────────────────────────────
