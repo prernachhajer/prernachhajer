@@ -554,35 +554,20 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="mb-14"
-          >
-            <h2
-              className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
-              style={{ fontFamily: t.displayFont }}
-            >
-              Selected <em className="italic text-muted-foreground">work</em>
-            </h2>
-          </motion.div>
-        </div>
-
-        {/*     <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
             className="flex items-baseline gap-5"
           >
             <h2
               className="font-normal tracking-[-0.035em] leading-none text-[clamp(3rem,5.5vw,5rem)]"
               style={{ fontFamily: t.displayFont }}
             >
-              Selected Works
+              Selected <em className="italic text-muted-foreground">Work</em>
             </h2>
 
             <span className="text-[clamp(0.9rem,1.2vw,1.15rem)] text-muted-foreground tracking-[0.02em]">
               2021 – 2026
             </span>
-          </motion.div>  */}
+          </motion.div>
+        </div>
 
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
