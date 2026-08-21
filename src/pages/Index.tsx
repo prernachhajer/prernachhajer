@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
-import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
+import { heroCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
@@ -274,7 +274,6 @@ const Index = () => {
 
   // Curated hero + photo-collage composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
-  const photoComp = useMemo(() => pickOne(photoCompositions), []);
   const heroPhotos = [
     { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
     { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
@@ -349,7 +348,7 @@ const Index = () => {
 
 
               {/* Pills — cluster A */}
-              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterA }}>
+              <div className="flex flex-col items-start gap-3" style={{ order: 2 }}>
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
                   <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
                 </HeroDrop>
@@ -359,7 +358,7 @@ const Index = () => {
               </div>
 
               {/* Pills — cluster B */}
-              <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterB }}>
+              <div className="flex flex-col items-start gap-3" style={{ order: 3 }}>
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
                     <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
