@@ -639,7 +639,7 @@ const Index = () => {
 </div>
 
                 
-                {/*   <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+                  <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">{cs.num}</span>
@@ -683,7 +683,7 @@ const Index = () => {
                         <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
                       </button>
                     )}
-                  </div> */}
+                  </div> 
 
               </motion.div>
             );
