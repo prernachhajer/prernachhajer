@@ -384,7 +384,7 @@ const Index = () => {
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>lead, 12 yrs</span>
+                  <span className={`${heroPill} text-[clamp(1.125rem,2.2vw,1.8rem)]`}>lead, 12 yrs</span>
                 </HeroDrop>
               </div>
 
