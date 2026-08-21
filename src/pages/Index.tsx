@@ -473,7 +473,7 @@ const Index = () => {
               </motion.h1>
             </div>
 
-            <div className={`justify-centre overflow-visible`}>
+            {/*       <div className={`justify-centre overflow-visible`}>
               <motion.h1
                 initial="hidden"
                 animate="visible"
@@ -487,7 +487,7 @@ const Index = () => {
               >
                 prerna chhajer
               </motion.h1>
-            </div>
+            </div> */}
 
             <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
