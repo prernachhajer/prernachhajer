@@ -332,6 +332,7 @@ const Index = () => {
                         top: it.top,
                         left: it.left,
                         width: it.width,
+                        height: it.height,
                         zIndex: it.z,
                         transform: `rotate(${it.rotate}deg)`,
                       }}
@@ -339,7 +340,6 @@ const Index = () => {
                   ))}
                 </div>
               </HeroDrop>
-
               {/* Pills — cluster A */}
               <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterA }}>
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
@@ -349,7 +349,6 @@ const Index = () => {
                   <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
                 </HeroDrop>
               </div>
-
               {/* Pills — cluster B */}
               <div className="flex flex-col items-start gap-3" style={{ order: comp.order.clusterB }}>
                 <div className="flex items-center gap-3">
