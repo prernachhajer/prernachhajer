@@ -338,15 +338,15 @@ const Index = () => {
       left-1/2
       top-0
       -translate-x-1/2
-      w-[190px]
-      sm:w-[230px]
-      md:w-[270px]
-      lg:w-[300px]
+      w-[170px]
+    sm:w-[200px]
+    md:w-[230px]
+    lg:w-[250px]
       shrink-0
       z-10
     "
               >
-                <div className="relative w-full aspect-[1/1.45] overflow-hidden">
+                <div className="relative w-full aspect-square overflow-hidden">
                   {photoComp.items.map((it, i) => (
                     <img
                       key={`${it.photo}-${i}`}
