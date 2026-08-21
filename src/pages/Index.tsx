@@ -453,7 +453,7 @@ const Index = () => {
                 animate="visible"
                 variants={fade}
                 custom={3}
-                className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
+                className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-center"
                 style={{
                   fontFamily: t.displayFont,
                   fontSize: "calc(14.5vw - 16px)",
