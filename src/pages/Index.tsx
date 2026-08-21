@@ -288,7 +288,7 @@ const Index = () => {
               initial="hidden"
               animate="visible"
               variants={fade}
-              className="flex items-start gap-3 pt-3 md:pl-0 xl:pl-[80px]"
+              className="flex items-start gap-3 pt-3 md:pl-6 xl:pl-[0px]"
             >
               <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
               <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
