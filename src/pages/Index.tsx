@@ -617,29 +617,27 @@ const Index = () => {
 
                 {/* Info */}
 
-
                 <div className="pt-6">
-  <div className="flex items-start justify-between gap-6">
-    <h3
-      className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
-      style={{ fontFamily: t.displayFont }}
-    >
-      {cs.title}
-      <em className="italic text-muted-foreground">{cs.titleEm}</em>
-    </h3>
+                  <div className="flex items-start justify-between gap-6">
+                    <h3
+                      className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
+                      style={{ fontFamily: t.displayFont }}
+                    >
+                      {cs.title}
+                      <em className="italic text-muted-foreground">{cs.titleEm}</em>
+                    </h3>
 
-    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">
-      2021–26
-    </span>
-  </div>
+                    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">2021–26</span>
+                  </div>
 
-  <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
-    {cs.statLabel}
-  </div>
-</div>
+                  <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
+                    {cs.statNum}
 
-                
-                  <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+                    {cs.statLabel}
+                  </div>
+                </div>
+
+                {/*   <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">{cs.num}</span>
@@ -683,8 +681,7 @@ const Index = () => {
                         <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
                       </button>
                     )}
-                  </div> 
-
+                  </div>   */}
               </motion.div>
             );
           })}
