@@ -310,7 +310,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={1}
-            className="mt-10 md:mt-12 flex flex-wrap gap-3 mb-6"
+            className="mt-6 md:mt-8 flex flex-wrap gap-3 mb-4"
           >
             <span className={heroPill}>Traveler</span>
             <span className={heroPill}>Adventurer</span>
