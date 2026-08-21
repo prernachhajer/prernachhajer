@@ -97,12 +97,13 @@ export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from =
         opacity: { duration: 0.12, delay },
         default: {
           type: "spring",
-          stiffness: 320,
-          damping: 16,
-          mass: 0.9,
+          stiffness: heavy ? 240 : 320,
+          damping: heavy ? 19 : 16,
+          mass: heavy ? 1.4 : 0.9,
           restDelta: 0.2,
           delay,
         },
+
       }}
     >
       {children}
