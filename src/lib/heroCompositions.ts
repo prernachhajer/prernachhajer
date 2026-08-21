@@ -113,13 +113,15 @@ export const heroCompositions: HeroComposition[] = [
 ];
 
 // ── Photo collage ────────────────────────────
-// Photos are stacked as a continuous vertical
-// filmstrip: identical left/width, fixed rotation
-// per photo (never changes). Only a single vertical
-// "window offset" shifts per composition, so on each
-// page load a different set of photos land fully in
-// view while the ones at the top/bottom edges of the
-// stack box are partially clipped by overflow-hidden.
+// Photos are stacked as a clean, perfectly aligned
+// vertical filmstrip: identical left/width, ZERO
+// rotation on every photo, with a fixed 4px gap
+// between each. Only a single vertical "window
+// offset" shifts per composition, so on each page
+// load a different portion of the strip sits in
+// view — all 3 photos are always at least partly
+// visible, some fully, some clipped top/bottom by
+// the overflow-hidden stack box.
 
 export type PhotoPlacement = {
   /** which source photo (0,1,2) */
@@ -127,6 +129,7 @@ export type PhotoPlacement = {
   top: string;
   left: string;
   width: string;
+  height: string;
   rotate: number;
   z: number;
 };
@@ -134,23 +137,31 @@ export type PhotoPlacement = {
 export type PhotoComposition = { id: string; items: PhotoPlacement[] };
 
 // Fixed per-photo values — identical across every composition.
-const PHOTO_H = 68; // each photo's height, as % of the stack box height
-const PHOTO_ROTATE: Record<0 | 1 | 2, number> = { 0: -2, 1: 1.5, 2: -3 };
+const PHOTO_H = 40; // each photo's height, as % of the stack box height
+const GAP_PX = 4; // fixed vertical gap between photos
+const PHOTO_ROTATE = 0; // no tilt — photos stay perfectly aligned
 const PHOTO_Z: Record<0 | 1 | 2, number> = { 0: 1, 1: 2, 2: 3 };
 
-// Only this value shifts between compositions — it moves the whole
-// filmstrip up so different photos sit fully in view vs. clipped
-// at the top/bottom edges of the overflow-hidden stack box.
-const WINDOW_OFFSETS = [0, -34, -68, -102, -136];
+// Total stack content height = 3 * PHOTO_H + 2 * GAP_PX ≈ 120% + 8px,
+// against a 100%-tall box — so there's a small overflow range to
+// slide within. Every offset here keeps all 3 photos at least
+// partly visible; only how much of each is cropped changes.
+const WINDOW_OFFSETS = [0, -6, -12, -18, -24];
 
 const buildPhotoComposition = (id: string, windowOffset: number): PhotoComposition => ({
   id,
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
-    top: `${photo * PHOTO_H + windowOffset}%`,
+    top: `calc(${photo * PHOTO_H + windowOffset}% + ${photo * GAP_PX}px)`,
     left: "0%",
     width: "100%",
-    rotate: PHOTO_ROTATE[photo],
+    // Explicit height is what actually stops one tall photo from
+    // physically overlapping/covering the ones below it — without
+    // this, height is just "whatever the image's own aspect ratio
+    // scales to at 100% width", which can be much taller than its
+    // slot and hide lower z-index photos entirely.
+    height: `${PHOTO_H}%`,
+    rotate: PHOTO_ROTATE,
     z: PHOTO_Z[photo],
   })),
 });
