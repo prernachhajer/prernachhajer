@@ -548,7 +548,7 @@ const Index = () => {
       ───────────────────────────────────────── */}
 
       <section id="work" className="border-t border-border">
-        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] `}>
+        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-50px`}>
           <motion.div
             initial="hidden"
             whileInView="visible"
