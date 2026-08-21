@@ -569,7 +569,7 @@ const Index = () => {
           </motion.div>
         </div>
 
-        <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-4 pb-[clamp(80px,10vw,140px)]`}>
+        <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
 
@@ -590,7 +590,7 @@ const Index = () => {
               >
                 {/* Visual */}
 
-                <div className="relative overflow-hidden aspect-[16/10] w-full bg-secondary">
+                <div className="relative overflow-hidden aspect-[16/10] w-full rounded-[14px] bg-secondary">
                   {cs.thumbImage && cs.thumbType === "photo" && (
                     <img
                       src={cs.thumbImage}
@@ -617,7 +617,29 @@ const Index = () => {
 
                 {/* Info */}
 
-                <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+
+                <div className="pt-6">
+  <div className="flex items-start justify-between gap-6">
+    <h3
+      className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
+      style={{ fontFamily: t.displayFont }}
+    >
+      {cs.title}
+      <em className="italic text-muted-foreground">{cs.titleEm}</em>
+    </h3>
+
+    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">
+      {cs.year || "2021–26"}
+    </span>
+  </div>
+
+  <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
+    {cs.statLabel}
+  </div>
+</div>
+
+                
+                {/*   <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">{cs.num}</span>
@@ -634,6 +656,8 @@ const Index = () => {
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
                   </div>
+
+                  
 
                   <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
                     <div>
@@ -659,7 +683,7 @@ const Index = () => {
                         <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
                       </button>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             );
