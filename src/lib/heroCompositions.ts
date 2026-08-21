@@ -562,7 +562,9 @@ export type PhotoComposition = {
 // keeping the stack compact and allowing overlap.
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 48;
+const PHOTO_SIZE = 60;
+
+];
 
 const GAP_PX = 4;
 
