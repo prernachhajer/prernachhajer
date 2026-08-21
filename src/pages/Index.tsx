@@ -464,7 +464,7 @@ const Index = () => {
 
             <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
-              <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+              <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1">
                 <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
                   <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
                     I do my best work when nothing's organized yet. 12 years of turning ambiguity into products people
