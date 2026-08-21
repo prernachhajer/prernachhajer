@@ -585,7 +585,9 @@ export type PhotoComposition = {
 // PHOTO SETTINGS
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 140;
+const PHOTO_SIZE = 200;
+
+const PHOTO_SIZE1 = 140;
 
 const GAP_PX = 8;
 
@@ -625,7 +627,7 @@ const buildPhotoComposition = (id: string): PhotoComposition => ({
 
     width: `${PHOTO_SIZE}px`,
 
-    height: `${PHOTO_SIZE}px`,
+    height: `${PHOTO_SIZE1}px`,
 
     rotate: PHOTO_ROTATE,
 
