@@ -562,13 +562,10 @@ const Index = () => {
             >
               Selected <em className="italic text-muted-foreground">works</em>
             </h2>
-
-            <span className="text-[clamp(0.9rem,1.2vw,1.15rem)] text-muted-foreground tracking-[0.02em]">
-              2021 – 2026
-            </span>
           </motion.div>
+        </div>
 
-          <motion.div
+        {/*     <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -585,8 +582,7 @@ const Index = () => {
             <span className="text-[clamp(0.9rem,1.2vw,1.15rem)] text-muted-foreground tracking-[0.02em]">
               2021 – 2026
             </span>
-          </motion.div>
-        </div>
+          </motion.div>  */}
 
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
