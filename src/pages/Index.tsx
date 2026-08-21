@@ -337,10 +337,10 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-8 md:mt-0 md:absolute md:left-[6%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
+              className="mt-8 md:mt-0 md:absolute md:left-0 md:bottom-4 flex flex-col items-start gap-3"
             >
               <span className={heroPill}>product designer</span>
-              <span className={`${heroPill} md:mt-4 md:ml-14`}>lead, 12 yrs</span>
+              <span className={`${heroPill} md:ml-16`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
@@ -349,7 +349,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-3 md:mt-0 md:absolute md:right-[8%] md:bottom-6 flex flex-wrap items-center gap-3 md:block"
+              className="mt-3 md:mt-0 md:absolute md:right-0 md:bottom-4 flex flex-col items-start gap-3"
             >
               <div className="flex items-center gap-3">
                 <span className={heroPill}>traveler</span>
@@ -361,7 +361,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:mt-3 md:ml-4`}>adventurer</span>
+              <span className={`${heroPill} md:ml-10`}>adventurer</span>
             </motion.div>
           </div>
         </div>
