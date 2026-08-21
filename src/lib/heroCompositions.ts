@@ -524,13 +524,16 @@ export const heroCompositions: HeroComposition[] = [
 // PHOTO COLLAGE
 // ─────────────────────────────────────────────
 //
-// Three photos are now square (1:1).
+// Three photos are square (1:1).
 //
-// The photos remain vertically stacked, but overlap
-// enough to keep the overall hero composition compact.
+// The photos remain vertically stacked and
+// horizontally aligned.
 //
-// The actual size of the collage is controlled by the
-// HeroDrop width in index.tsx.
+// The photo group keeps the same horizontal position.
+// Only the size and vertical spacing are controlled here.
+//
+// The actual overall size of the collage is also
+// influenced by the HeroDrop width in index.tsx.
 //
 // ─────────────────────────────────────────────
 
@@ -558,12 +561,13 @@ export type PhotoComposition = {
 //
 // Each photo is 1:1.
 //
-// 42% gives enough room for three square photos while
-// keeping the stack compact and allowing overlap.
+// 68% makes the photos noticeably larger while
+// keeping the overall collage compact.
+//
+// The photos remain horizontally aligned.
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 60;
-
+const PHOTO_SIZE = 68;
 
 const GAP_PX = 4;
 
@@ -579,9 +583,10 @@ const PHOTO_Z: Record<0 | 1 | 2, number> = {
 // PHOTO WINDOW POSITIONS
 // ─────────────────────────────────────────────
 //
-// The window offsets create subtle random vertical
-// variation without changing the overall position of
-// the photo group.
+// These offsets only change the vertical window
+// position of the stacked photo group.
+//
+// They do not move the group left or right.
 // ─────────────────────────────────────────────
 
 const WINDOW_OFFSETS = [0, -4, -8, -12, -16];
@@ -596,12 +601,20 @@ const buildPhotoComposition = (id: string, windowOffset: number): PhotoCompositi
   items: ([0, 1, 2] as const).map((photo) => ({
     photo,
 
-    top: `calc(${photo * 25 + windowOffset}% + ${photo * GAP_PX}px)`,
+    // Keep every photo vertically stacked.
+    //
+    // Each image starts 30% below the previous one.
+    // This gives a controlled overlap while keeping
+    // the three square images visually connected.
+    top: `calc(${photo * 30 + windowOffset}% + ${photo * GAP_PX}px)`,
 
+    // Keep every photo on exactly the same horizontal line.
     left: "29%",
 
+    // Larger square photos.
     width: `${PHOTO_SIZE}%`,
 
+    // 1:1 aspect ratio.
     height: `${PHOTO_SIZE}%`,
 
     rotate: PHOTO_ROTATE,
