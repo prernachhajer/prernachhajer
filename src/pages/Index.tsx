@@ -304,13 +304,36 @@ const Index = () => {
             </p>
           </motion.div>
 
-          {/* Giant wordmark + photo cluster */}
-          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-8">
+          {/* Pills floating above the wordmark */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="mt-10 md:mt-12 flex flex-wrap gap-3 mb-6"
+          >
+            <span className={heroPill}>Traveler</span>
+            <span className={heroPill}>Adventurer</span>
+            <div className="flex items-center gap-3">
+              <span className={heroPill}>Product designer</span>
+              <button
+                onClick={() => scrollTo("work")}
+                aria-label="View my work"
+                className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <ArrowUpRight className="h-5 w-5" />
+              </button>
+            </div>
+            <span className={heroPill}>Lead, 12 yrs</span>
+          </motion.div>
+
+          {/* Giant wordmark + photo stack */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-8">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
-              custom={1}
+              custom={2}
               className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,12vw,14rem)]"
               style={{ fontFamily: t.displayFont }}
             >
@@ -321,17 +344,11 @@ const Index = () => {
               initial="hidden"
               animate="visible"
               variants={fade}
-              custom={2}
+              custom={3}
               className="flex flex-col md:flex-row md:items-end md:justify-end gap-6 md:gap-6 md:pr-0"
             >
-              {/* Left pills */}
-              <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
-                <span className={heroPill}>Traveler</span>
-                <span className={heroPill}>Adventurer</span>
-              </div>
-
               {/* Photo stack */}
-              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[200px] lg:w-[220px] border-[0.5px] border-border overflow-hidden">
+              <div className="w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
                   { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
@@ -345,21 +362,6 @@ const Index = () => {
                     className={`block w-full aspect-square object-cover ${i > 0 ? "border-t-[0.5px] border-border" : ""}`}
                   />
                 ))}
-              </div>
-
-              {/* Right pills */}
-              <div className="flex md:flex-col gap-3 md:items-start flex-wrap md:order-3">
-                <div className="flex items-center gap-3">
-                  <span className={heroPill}>Product designer</span>
-                  <button
-                    onClick={() => scrollTo("work")}
-                    aria-label="View my work"
-                    className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
-                  >
-                    <ArrowUpRight className="h-5 w-5" />
-                  </button>
-                </div>
-                <span className={heroPill}>Lead, 12 yrs</span>
               </div>
             </motion.div>
           </div>
