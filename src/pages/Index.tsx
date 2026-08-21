@@ -311,7 +311,7 @@ const Index = () => {
   </div>
 
   
-    href="/resume.pdf"
+      href="/prerna_chhajer_resume.pdf"
     download
     className="flex items-center gap-1.5 text-[0.75rem] md:text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors shrink-0"
   >
