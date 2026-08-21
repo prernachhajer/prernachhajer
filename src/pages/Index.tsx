@@ -320,21 +320,20 @@ const Index = () => {
               </a>
             </motion.div>
 
-         {/* Photo collage + pills — collision-safe composition */}
+            {/* Photo collage + pills — collision-safe composition */}
 
-<div className="relative w-full min-h-[620px] md:min-h-[560px]">
-
-  {/* ─────────────────────────────────────────
+            <div className="relative w-full min-h-[620px] md:min-h-[560px]">
+              {/* ─────────────────────────────────────────
       PHOTO COLLAGE
       Fixed central landing zone
   ────────────────────────────────────────── */}
-  <HeroDrop
-    variant="photos"
-    target={comp.photos}
-    heavy
-    delay={0}
-    from={380}
-    className="
+              <HeroDrop
+                variant="photos"
+                target={comp.photos}
+                heavy
+                delay={0}
+                from={380}
+                className="
       absolute
       left-1/2
       top-0
@@ -346,36 +345,35 @@ const Index = () => {
       shrink-0
       z-10
     "
-  >
-    <div className="relative w-full aspect-[1/1.45] overflow-hidden">
-      {photoComp.items.map((it, i) => (
-        <img
-          key={`${it.photo}-${i}`}
-          src={heroPhotos[it.photo].src}
-          alt={heroPhotos[it.photo].alt}
-          loading={i === 0 ? "eager" : "lazy"}
-          className="absolute block object-cover"
-          style={{
-            top: it.top,
-            left: it.left,
-            width: it.width,
-            height: it.height,
-            zIndex: it.z,
-            transform: `rotate(${it.rotate}deg)`,
-          }}
-        />
-      ))}
-    </div>
-  </HeroDrop>
+              >
+                <div className="relative w-full aspect-[1/1.45] overflow-hidden">
+                  {photoComp.items.map((it, i) => (
+                    <img
+                      key={`${it.photo}-${i}`}
+                      src={heroPhotos[it.photo].src}
+                      alt={heroPhotos[it.photo].alt}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      className="absolute block object-cover"
+                      style={{
+                        top: it.top,
+                        left: it.left,
+                        width: it.width,
+                        height: it.height,
+                        zIndex: it.z,
+                        transform: `rotate(${it.rotate}deg)`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </HeroDrop>
 
-
-  {/* ─────────────────────────────────────────
+              {/* ─────────────────────────────────────────
       CLUSTER A
       Product designer + Lead
       Dedicated left landing zone
   ────────────────────────────────────────── */}
-  <div
-    className="
+              <div
+                className="
       absolute
       left-0
       top-[250px]
@@ -386,41 +384,23 @@ const Index = () => {
       items-start
       gap-3
     "
-  >
-    <HeroDrop
-      variant="pillA"
-      target={comp.tag1}
-      delay={0.18}
-    >
-      <span
-        className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}
-      >
-        product designer
-      </span>
-    </HeroDrop>
+              >
+                <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>product designer</span>
+                </HeroDrop>
 
-    <HeroDrop
-      variant="pillB"
-      target={comp.tag2}
-      delay={0.34}
-      className="ml-12 md:ml-20"
-    >
-      <span
-        className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}
-      >
-        lead, 12 yrs
-      </span>
-    </HeroDrop>
-  </div>
+                <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
+                  <span className={`${heroPill} text-[clamp(1.125rem,1.9vw,1.5rem)]`}>lead, 12 yrs</span>
+                </HeroDrop>
+              </div>
 
-
-  {/* ─────────────────────────────────────────
+              {/* ─────────────────────────────────────────
       CLUSTER B
       Traveler + Arrow + Adventurer
       Dedicated right landing zone
   ────────────────────────────────────────── */}
-  <div
-    className="
+              <div
+                className="
       absolute
       right-0
       top-[280px]
@@ -431,31 +411,17 @@ const Index = () => {
       items-start
       gap-3
     "
-  >
-    <div className="flex items-center gap-3">
+              >
+                <div className="flex items-center gap-3">
+                  <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
+                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
+                  </HeroDrop>
 
-      <HeroDrop
-        variant="pillC"
-        target={comp.tag3}
-        delay={0.5}
-      >
-        <span
-          className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}
-        >
-          traveler
-        </span>
-      </HeroDrop>
-
-      <HeroDrop
-        variant="arrow"
-        target={comp.icon}
-        delay={0.62}
-        from={240}
-      >
-        <button
-          onClick={() => scrollTo("work")}
-          aria-label="View my work"
-          className="
+                  <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
+                    <button
+                      onClick={() => scrollTo("work")}
+                      aria-label="View my work"
+                      className="
             h-12
             w-12
             shrink-0
@@ -468,92 +434,81 @@ const Index = () => {
             hover:opacity-90
             transition-opacity
           "
-        >
-          <ArrowRight className="h-5 w-5 rotate-90" />
-        </button>
-      </HeroDrop>
+                    >
+                      <ArrowRight className="h-5 w-5 rotate-90" />
+                    </button>
+                  </HeroDrop>
+                </div>
 
-    </div>
-
-    <HeroDrop
-      variant="pillD"
-      target={comp.tag4}
-      delay={0.74}
-      className="ml-12 md:ml-20"
-    >
-      <span
-        className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}
-      >
-        adventurer
-      </span>
-    </HeroDrop>
-  </div>
-
-</div>
-
-        {/* Giant wordmark — aligned with content */}
-        <div className={` overflow-visible`}>
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={3}
-            className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
-            style={{
-              fontFamily: t.displayFont,
-              fontSize: "calc(14.5vw - 16px)",
-            }}
-          >
-            prerna chhajer
-          </motion.h1>
-        </div>
-
-        <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
-          {/* Two-column intro */}
-          <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-            <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
-              <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
-                I do my best work when nothing's organized yet. 12 years of turning ambiguity into products people
-                actually use.
-              </p>
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
-                <Button
-                  onClick={() => scrollTo("work")}
-                  className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
-                >
-                  View my work →
-                </Button>
-
-                <Button
-                  variant="outline"
-                  onClick={() => navigate("/resume")}
-                  className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
-                >
-                  View resume
-                </Button>
+                <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
+                  <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
+                </HeroDrop>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div initial="hidden" animate="visible" variants={fade} custom={5} className="relative">
-              <span
-                aria-hidden
-                className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
-                style={{ fontFamily: t.displayFont }}
+            {/* Giant wordmark — aligned with content */}
+            <div className={` overflow-visible`}>
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                variants={fade}
+                custom={3}
+                className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
+                style={{
+                  fontFamily: t.displayFont,
+                  fontSize: "calc(14.5vw - 16px)",
+                }}
               >
-                “
-              </span>
-              <p
-                className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
-                style={{ fontFamily: t.displayFont }}
-              >
-                From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
-                designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that same
-                rigor to AI-assisted design.
-              </p>
-            </motion.div>
-          </div>
-        </div>
+                prerna chhajer
+              </motion.h1>
+            </div>
+
+            <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
+              {/* Two-column intro */}
+              <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+                <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
+                  <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
+                    I do my best work when nothing's organized yet. 12 years of turning ambiguity into products people
+                    actually use.
+                  </p>
+
+                  <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+                    <Button
+                      onClick={() => scrollTo("work")}
+                      className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
+                    >
+                      View my work →
+                    </Button>
+
+                    <Button
+                      variant="outline"
+                      onClick={() => navigate("/resume")}
+                      className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
+                    >
+                      View resume
+                    </Button>
+                  </div>
+                </motion.div>
+
+                <motion.div initial="hidden" animate="visible" variants={fade} custom={5} className="relative">
+                  <span
+                    aria-hidden
+                    className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    “
+                  </span>
+                  <p
+                    className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
+                    designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that
+                    same rigor to AI-assisted design.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
