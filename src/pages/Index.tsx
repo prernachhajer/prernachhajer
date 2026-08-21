@@ -336,10 +336,10 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-8 md:mt-0 md:absolute md:left-[10%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
+              className="mt-8 md:mt-0 md:absolute md:left-[6%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
             >
               <span className={heroPill}>product designer</span>
-              <span className={`${heroPill} md:mt-4 md:ml-20`}>lead, 12 yrs</span>
+              <span className={`${heroPill} md:mt-4 md:ml-14`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
