@@ -401,11 +401,11 @@ const Index = () => {
     right-0
     top-[280px]
     md:right-[3%]
-    md:top-[300px]
+    md:top-[240px]
     z-20
     flex flex-col
     items-start
-    gap-3 pb-12
+    gap-3 
   "
               >
                 <div className="flex items-center gap-3">
