@@ -357,7 +357,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:ml-20 text-[clamp(1.75rem,3.5vw,2.75rem)]`}>adventurer</span>
+              <span className={`${heroPill} md:ml-20 text-[clamp(1.375rem,2.5vw,2.25rem)]`}>adventurer</span>
             </motion.div>
           </div>
         </div>
