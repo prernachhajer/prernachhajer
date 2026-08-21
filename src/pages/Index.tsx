@@ -20,9 +20,9 @@ import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
-import heroPhoto1 from "@/assets/hero/hero-1.jpg";
-import heroPhoto2 from "@/assets/hero/hero-2.jpg";
-import heroPhoto3 from "@/assets/hero/hero-3.jpg";
+import heroPhoto1 from "@/assets/hero/hero-1.png";
+import heroPhoto2 from "@/assets/hero/hero-2.png";
+import heroPhoto3 from "@/assets/hero/hero-3.png";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
