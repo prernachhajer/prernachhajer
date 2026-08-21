@@ -447,6 +447,32 @@ const Index = () => {
             </div>
 
             {/* Giant wordmark — aligned with content */}
+            <div className="relative w-full overflow-visible">
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                variants={fade}
+                custom={3}
+                className="
+      absolute
+      left-1/2
+      -translate-x-1/2
+      px-8
+      lowercase
+      font-normal
+      leading-[0.9]
+      tracking-[-0.01em]
+      whitespace-nowrap
+    "
+                style={{
+                  fontFamily: t.displayFont,
+                  fontSize: "calc(14.5vw - 16px)",
+                }}
+              >
+                prerna chhajer
+              </motion.h1>
+            </div>
+
             <div className={`justify-centre overflow-visible`}>
               <motion.h1
                 initial="hidden"
