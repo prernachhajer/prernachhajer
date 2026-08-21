@@ -347,7 +347,7 @@ const Index = () => {
                       src={heroPhotos[it.photo].src}
                       alt={heroPhotos[it.photo].alt}
                       loading={i === 0 ? "eager" : "lazy"}
-                      className="absolute block object-cover rounded-[4px]"
+                      className="absolute block object-cover rounded-[8px]"
                       style={{
                         top: it.top,
                         left: it.left,
