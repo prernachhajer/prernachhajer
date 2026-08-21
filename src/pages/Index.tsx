@@ -346,7 +346,7 @@ lg:w-[300px]
       z-10
     "
               >
-                <div className="relative w-full aspect-[1/3] overflow-hidden">
+                <div className="relative w-full aspect-square overflow-hidden">
                   {photoComp.items.map((it, i) => (
                     <img
                       key={`${it.photo}-${i}`}
