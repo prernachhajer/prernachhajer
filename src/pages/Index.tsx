@@ -304,65 +304,67 @@ const Index = () => {
             </p>
           </motion.div>
 
-          {/* Photo + tags cluster */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={1}
-            className="mt-10 md:mt-12 flex flex-col md:flex-row md:items-center md:justify-end gap-8 md:gap-10 md:pr-[4%]"
-          >
-            {/* Left pills */}
-            <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
-              <span className={heroPill}>Traveler</span>
-              <span className={`${heroPill} md:translate-x-4`}>Adventurer</span>
-            </div>
+          {/* Giant wordmark + photo cluster */}
+          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-12">
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={1}
+              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,16vw,14rem)]"
+              style={{ fontFamily: t.displayFont }}
+            >
+              prerna
+            </motion.h1>
 
-            {/* Photo stack */}
-            <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
-              {[
-                { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
-                { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
-                { src: heroPhoto3, alt: "On the road — design workshop with the team" },
-              ].map((p, i) => (
-                <img
-                  key={p.alt}
-                  src={p.src}
-                  alt={p.alt}
-                  loading={i === 0 ? "eager" : "lazy"}
-                  className={`block w-full aspect-square object-cover ${i > 0 ? "border-t-[0.5px] border-border" : ""}`}
-                />
-              ))}
-            </div>
-
-            {/* Right pills */}
-            <div className="flex md:flex-col gap-3 md:items-start flex-wrap md:order-3">
-              <div className="flex items-center gap-3">
-                <span className={heroPill}>Product designer</span>
-                <button
-                  onClick={() => scrollTo("work")}
-                  aria-label="View my work"
-                  className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
-                >
-                  <ArrowUpRight className="h-5 w-5" />
-                </button>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={2}
+              className="flex flex-col md:flex-row md:items-end md:justify-end gap-8 md:gap-10 md:pr-0"
+            >
+              {/* Left pills */}
+              <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
+                <span className={heroPill}>Traveler</span>
+                <span className={`${heroPill} md:translate-x-4`}>Adventurer</span>
               </div>
-              <span className={`${heroPill} md:translate-x-4`}>Lead, 12 yrs</span>
-            </div>
-          </motion.div>
 
-          {/* Giant wordmark */}
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={2}
-            className="mt-10 md:mt-14 font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,20vw,17rem)]"
-            style={{ fontFamily: t.displayFont }}
-          >
-            prerna
-          </motion.h1>
+              {/* Photo stack */}
+              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
+                {[
+                  { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
+                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
+                  { src: heroPhoto3, alt: "On the road — design workshop with the team" },
+                ].map((p, i) => (
+                  <img
+                    key={p.alt}
+                    src={p.src}
+                    alt={p.alt}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className={`block w-full aspect-square object-cover ${i > 0 ? "border-t-[0.5px] border-border" : ""}`}
+                  />
+                ))}
+              </div>
 
+              {/* Right pills */}
+              <div className="flex md:flex-col gap-3 md:items-start flex-wrap md:order-3">
+                <div className="flex items-center gap-3">
+                  <span className={heroPill}>Product designer</span>
+                  <button
+                    onClick={() => scrollTo("work")}
+                    aria-label="View my work"
+                    className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
+                  >
+                    <ArrowUpRight className="h-5 w-5" />
+                  </button>
+                </div>
+                <span className={`${heroPill} md:translate-x-4`}>Lead, 12 yrs</span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* CTAs */}
           <motion.div
             initial="hidden"
             animate="visible"
