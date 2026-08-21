@@ -352,8 +352,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Giant wordmark — edge to edge */}
-        <div className={`${layout.px} w-full overflow-hidden`}>
+        {/* Giant wordmark — aligned with content */}
+        <div className={`${wrapCls} overflow-visible`}>
           <motion.h1
             initial="hidden"
             animate="visible"
