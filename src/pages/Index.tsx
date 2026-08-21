@@ -557,6 +557,27 @@ const Index = () => {
           </motion.div>
         </div>
 
+        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(50px,6vw,80px)]`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-baseline gap-5"
+          >
+            <h2
+              className="font-normal tracking-[-0.035em] leading-none text-[clamp(3rem,5.5vw,5rem)]"
+              style={{ fontFamily: t.displayFont }}
+            >
+              Selected Works
+            </h2>
+
+            <span className="text-[clamp(0.9rem,1.2vw,1.15rem)] text-muted-foreground tracking-[0.02em]">
+              2021 – 2026
+            </span>
+          </motion.div>
+        </div>
+
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-4 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
