@@ -633,7 +633,7 @@ const Index = () => {
                   <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
                     <span>{cs.statNum}</span>
 
-                    <span className="gap-5 px-3.5">{cs.statLabel}</span>
+                    <span className="gap-5 px-1.5">{cs.statLabel}</span>
                   </div>
                 </div>
 
