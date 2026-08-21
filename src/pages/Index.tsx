@@ -301,7 +301,11 @@ const Index = () => {
 
             {/* Photo stack + pills */}
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
-              <HeroDrop variant="photos" delay={0} className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0">
+              <HeroDrop
+                variant="photos"
+                delay={0}
+                className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0"
+              >
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
                   {
@@ -354,7 +358,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -365,7 +368,7 @@ const Index = () => {
             animate="visible"
             variants={fade}
             custom={3}
-            className="mt-6 md:mt-10 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap"
+            className="mt-6 md:mt-10 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-centre"
             style={{
               fontFamily: t.displayFont,
               fontSize: "calc(14.5vw - 16px)",
