@@ -338,10 +338,10 @@ const Index = () => {
       left-1/2
       top-0
       -translate-x-1/2
-      w-[170px]
-    sm:w-[200px]
-    md:w-[230px]
-    lg:w-[250px]
+   w-[200px]
+  sm:w-[240px]
+  md:w-[280px]
+  lg:w-[320px]
       shrink-0
       z-10
     "
