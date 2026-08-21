@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
+import HeroDrop from "@/components/HeroDrop";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
@@ -299,14 +300,8 @@ const Index = () => {
             </motion.div>
 
             {/* Photo stack + pills */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={1}
-              className="mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16"
-            >
-              <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0">
+            <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
+              <HeroDrop variant="photos" delay={0} className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px] shrink-0">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
                   {
@@ -324,31 +319,42 @@ const Index = () => {
                     className={`block w-full object-cover ${p.ratio} ${i > 0 ? "mt-1" : ""}`}
                   />
                 ))}
-              </div>
+              </HeroDrop>
 
               <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                 {/* Pills — left cluster */}
                 <div className="flex flex-col items-start gap-3">
-                  <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
-                  <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
+                  <HeroDrop variant="pillA" delay={0.18}>
+                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
+                  </HeroDrop>
+                  <HeroDrop variant="pillB" delay={0.34} className="md:ml-20">
+                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
+                  </HeroDrop>
                 </div>
 
                 {/* Pills — right cluster */}
                 <div className="flex flex-col items-start gap-3">
                   <div className="flex items-center gap-3">
-                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
-                    <button
-                      onClick={() => scrollTo("work")}
-                      aria-label="View my work"
-                      className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
-                    >
-                      <ArrowRight className="h-5 w-5 rotate-90" />
-                    </button>
+                    <HeroDrop variant="pillC" delay={0.5}>
+                      <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>traveler</span>
+                    </HeroDrop>
+                    <HeroDrop variant="arrow" delay={0.62} from={240}>
+                      <button
+                        onClick={() => scrollTo("work")}
+                        aria-label="View my work"
+                        className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+                      >
+                        <ArrowRight className="h-5 w-5 rotate-90" />
+                      </button>
+                    </HeroDrop>
                   </div>
-                  <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
+                  <HeroDrop variant="pillD" delay={0.74} className="md:ml-20">
+                    <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>adventurer</span>
+                  </HeroDrop>
                 </div>
               </div>
-            </motion.div>
+            </div>
+
           </div>
         </div>
 
