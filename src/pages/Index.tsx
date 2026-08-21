@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Users, Target, Rocket, Wand2 } from "lucide-react";
+import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
@@ -18,6 +18,9 @@ import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
+import heroPhoto1 from "@/assets/hero/hero-1.jpg";
+import heroPhoto2 from "@/assets/hero/hero-2.jpg";
+import heroPhoto3 from "@/assets/hero/hero-3.jpg";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
@@ -46,6 +49,9 @@ import miroLogo from "@/assets/tool-logos/miro.png";
 import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 
 const fade = animation.fade;
+
+const heroPill =
+  "inline-flex items-center border-[0.5px] border-foreground/30 rounded-full px-5 py-2.5 text-[0.8125rem] text-foreground whitespace-nowrap";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -282,62 +288,105 @@ const Index = () => {
         id="hero"
         className="pt-[20px] border-b border-border overflow-hidden"
       >
-        <div
-          className={`${wrapCls} pt-16 pb-14 md:pt-12 md:mt-8 md:pb-20 lg:pt-12 lg:pb-24 w-full`}
-        >
+        <div className={`${wrapCls} pt-10 md:pt-14 pb-10 md:pb-14 w-full`}>
+          {/* Eyebrow */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fade}
-            className="mb-7 md:mb-9"
-          />
+            className="flex items-start gap-3"
+          >
+            <CornerDownRight className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
+            <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.5] text-foreground">
+              Lead Product Designer
+              <br />
+              Based in India, working globally
+            </p>
+          </motion.div>
 
-          <div className="mx-auto max-w-[980px] text-center">
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={1}
-              className="text-[clamp(2.45rem,6.2vw,4.5rem)] font-semibold leading-[0.98] tracking-[0.015em] text-balance"
-              style={{ fontFamily: t.displayFont }}
-            >
-              Defining teams & products that make{" "}
-              <span className="text-primary">complexity</span> feel simple.
-            </motion.h1>
+          {/* Photo + tags cluster */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={1}
+            className="mt-10 md:mt-12 flex flex-col md:flex-row md:items-center md:justify-end gap-8 md:gap-10 md:pr-[4%]"
+          >
+            {/* Left pills */}
+            <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
+              <span className={heroPill}>Traveler</span>
+              <span className={`${heroPill} md:translate-x-4`}>Adventurer</span>
+            </div>
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={2}
-              className="mx-auto mt-8 max-w-[980px]"
-            >
-              <p className="text-[0.9375rem] md:text-[1.0625rem] leading-[1.65] text-muted-foreground font-normal">
-                From 0-to-1 startups to a platform at 100M+ scale — I've built
-                design systems, mentored teams, and shipped work that moved
-                real numbers. Now applying that same rigor to AI-assisted
-                design.
-              </p>
+            {/* Photo stack */}
+            <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
+              {[
+                { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
+                { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
+                { src: heroPhoto3, alt: "On the road — design workshop with the team" },
+              ].map((p, i) => (
+                <img
+                  key={p.alt}
+                  src={p.src}
+                  alt={p.alt}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className={`block w-full aspect-square object-cover ${i > 0 ? "border-t-[0.5px] border-border" : ""}`}
+                />
+              ))}
+            </div>
 
-              <div className="flex gap-3 flex-col sm:flex-row justify-center items-center mt-9">
-                <Button
+            {/* Right pills */}
+            <div className="flex md:flex-col gap-3 md:items-start flex-wrap md:order-3">
+              <div className="flex items-center gap-3">
+                <span className={heroPill}>Product designer</span>
+                <button
                   onClick={() => scrollTo("work")}
-                  className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
+                  aria-label="View my work"
+                  className="h-11 w-11 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
                 >
-                  View my work →
-                </Button>
-
-                <Button
-                  variant="outline"
-                  onClick={() => navigate("/resume")}
-                  className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
-                >
-                  View resume
-                </Button>
+                  <ArrowUpRight className="h-5 w-5" />
+                </button>
               </div>
-            </motion.div>
-          </div>
+              <span className={`${heroPill} md:translate-x-4`}>Lead, 12 yrs</span>
+            </div>
+          </motion.div>
+
+          {/* Giant wordmark */}
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={2}
+            className="mt-10 md:mt-14 font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,20vw,17rem)]"
+            style={{ fontFamily: t.displayFont }}
+          >
+            prerna
+          </motion.h1>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className="mt-14 md:mt-20 flex flex-col sm:flex-row gap-3 items-start"
+          >
+            <Button
+              onClick={() => scrollTo("work")}
+              className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
+            >
+              View my work →
+            </Button>
+
+            <Button
+              variant="outline"
+              onClick={() => navigate("/resume")}
+              className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
+            >
+              View resume
+            </Button>
+          </motion.div>
         </div>
+
 
         <motion.div
           initial="hidden"
