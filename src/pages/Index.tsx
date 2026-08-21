@@ -53,7 +53,6 @@ const fade = animation.fade;
 const heroPill =
   "inline-flex items-center bg-background border border-border rounded-xl px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap";
 
-
 // ─────────────────────────────────────────────
 // TOOLS
 // ─────────────────────────────────────────────
@@ -269,11 +268,7 @@ const Index = () => {
     });
   };
 
-  const { word: cycleWord, cycling } = useWordCycle([
-    "build",
-    "create",
-    "design",
-  ]);
+  const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
 
@@ -285,10 +280,7 @@ const Index = () => {
           HERO
       ───────────────────────────────────────── */}
 
-      <section
-        id="hero"
-        className="pt-[20px] border-b border-border overflow-hidden"
-      >
+      <section id="hero" className="pt-[20px] border-b border-border overflow-hidden">
         <div className={`${wrapCls} pt-8 md:pt-10 pb-12 md:pb-16 w-full`}>
           {/* Eyebrow + photo stack + pills */}
           <div className="relative">
@@ -296,7 +288,7 @@ const Index = () => {
               initial="hidden"
               animate="visible"
               variants={fade}
-              className="flex items-start gap-3 pt-3 md:pl-6 xl:pl-[80px]"
+              className="flex items-start gap-3 pt-3 md:pl-0 xl:pl-[80px]"
             >
               <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
               <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
@@ -317,7 +309,11 @@ const Index = () => {
               <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px]">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
-                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck", ratio: "aspect-[16/10.5]" },
+                  {
+                    src: heroPhoto2,
+                    alt: "Working remotely on a laptop from a wooden deck",
+                    ratio: "aspect-[16/10.5]",
+                  },
                   { src: heroPhoto3, alt: "Geothermal landscape at sunrise", ratio: "aspect-[16/8.8]" },
                 ].map((p, i) => (
                   <img
@@ -384,18 +380,12 @@ const Index = () => {
         </div>
 
         <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
-
           {/* Two-column intro */}
           <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={4}
-            >
+            <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
               <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
-                I do my best work when nothing's organized yet. 12 years of
-                turning ambiguity into products people actually use.
+                I do my best work when nothing's organized yet. 12 years of turning ambiguity into products people
+                actually use.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
@@ -416,13 +406,7 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fade}
-              custom={5}
-              className="relative"
-            >
+            <motion.div initial="hidden" animate="visible" variants={fade} custom={5} className="relative">
               <span
                 aria-hidden
                 className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
@@ -434,10 +418,9 @@ const Index = () => {
                 className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
                 style={{ fontFamily: t.displayFont }}
               >
-                From 0-to-1 startups to platforms at 100M+ scale — I've built
-                design systems from scratch, mentored designers into leads, and
-                shipped work that moved app ratings from 3.4 to 4.5. Now
-                applying that same rigor to AI-assisted design.
+                From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
+                designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that same
+                rigor to AI-assisted design.
               </p>
             </motion.div>
           </div>
@@ -452,25 +435,16 @@ const Index = () => {
         aria-label="Companies I've worked with"
         className="companies-section border-b border-border bg-secondary/30 py-11 overflow-hidden"
       >
-        <p
-          className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}
-        >
+        <p className={`${wrapCls} ${t.labelSm} text-muted-foreground text-center mb-8 md:mb-10`}>
           Companies I've worked with
         </p>
 
         <div className="company-marquee">
           <div className="company-marquee-track">
             {[0, 1].map((set) => (
-              <div
-                key={set}
-                className="company-marquee-set"
-                aria-hidden={set === 1}
-              >
+              <div key={set} className="company-marquee-set" aria-hidden={set === 1}>
                 {companies.map((company) => (
-                  <div
-                    key={`${set}-${company.name}`}
-                    className="company-logo-item"
-                  >
+                  <div key={`${set}-${company.name}`} className="company-logo-item">
                     <img
                       src={company.logo}
                       alt={set === 0 ? company.name : ""}
@@ -489,27 +463,16 @@ const Index = () => {
       ───────────────────────────────────────── */}
 
       <section id="work" className="border-t border-border">
-        <div
-          className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}
-        >
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-          >
-            <div
-              className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}
-            >
+        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-12`}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
               Recent Case studies
             </div>
           </motion.div>
         </div>
 
-        <div
-          className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-4 pb-[clamp(80px,10vw,140px)]`}
-        >
+        <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-4 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
 
@@ -564,13 +527,9 @@ const Index = () => {
                 <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">
-                        {cs.num}
-                      </span>
+                      <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">{cs.num}</span>
 
-                      <span className="text-xs tracking-[0.06em] uppercase text-primary">
-                        {cs.company}
-                      </span>
+                      <span className="text-xs tracking-[0.06em] uppercase text-primary">{cs.company}</span>
                     </div>
 
                     <h3
@@ -579,9 +538,7 @@ const Index = () => {
                     >
                       {cs.title}
 
-                      <em className="italic text-muted-foreground">
-                        {cs.titleEm}
-                      </em>
+                      <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
                   </div>
 
@@ -594,9 +551,7 @@ const Index = () => {
                         {cs.statNum}
                       </span>
 
-                      <span className="text-xs text-muted-foreground italic">
-                        {cs.statLabel}
-                      </span>
+                      <span className="text-xs text-muted-foreground italic">{cs.statLabel}</span>
                     </div>
 
                     {!isComingSoon && (
@@ -608,7 +563,6 @@ const Index = () => {
                         }}
                       >
                         Read case study
-
                         <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
                       </button>
                     )}
@@ -624,16 +578,12 @@ const Index = () => {
           ABOUT
       ───────────────────────────────────────── */}
 
-      <section
-        id="about"
-        className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)]`}
-      >
+      <section id="about" className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)]`}>
         <span
           className="absolute -right-[4%] -bottom-[8%] text-[48vw] font-bold italic leading-[0.8] tracking-[-0.04em] select-none pointer-events-none"
           style={{
             fontFamily: t.displayFont,
-            WebkitTextStroke:
-              "1px rgba(250,249,247,0.015)",
+            WebkitTextStroke: "1px rgba(250,249,247,0.015)",
             color: "transparent",
           }}
         >
@@ -653,40 +603,25 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[clamp(32px,4vw,96px)]">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
               <div className="mb-10">
                 {beliefs.map((b) => (
-                  <div
-                    key={b.num}
-                    className="py-[22px] border-b border-background/[0.07]"
-                  >
+                  <div key={b.num} className="py-[22px] border-b border-background/[0.07]">
                     <div>
                       <p
                         className="text-lg font-normal tracking-[0.01em] text-background/90 leading-[1.2] mb-2"
                         style={{ fontFamily: t.displayFont }}
                       >
-                        {b.headline}{" "}
-                        <em className="italic text-primary/80">
-                          {b.headlineEm}
-                        </em>
+                        {b.headline} <em className="italic text-primary/80">{b.headlineEm}</em>
                       </p>
 
-                      <p className="text-[0.8125rem] leading-[1.78] text-background/80">
-                        {b.body}
-                      </p>
+                      <p className="text-[0.8125rem] leading-[1.78] text-background/80">{b.body}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4">
-                Specialties
-              </p>
+              <p className="text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4">Specialties</p>
 
               <div className="flex flex-wrap gap-2">
                 {[
@@ -705,17 +640,10 @@ const Index = () => {
                 ))}
               </div>
 
-              <p className="text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4 mt-10">
-                AVAILIBILITY
-              </p>
+              <p className="text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4 mt-10">AVAILIBILITY</p>
 
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Full Time",
-                  "Contract",
-                  "Worldwide",
-                  "Remote-friendly",
-                ].map((s) => (
+                {["Full Time", "Contract", "Worldwide", "Remote-friendly"].map((s) => (
                   <span
                     key={s}
                     className="text-xs text-background/75 px-4 py-2 border border-background/10 rounded-full hover:text-primary hover:border-primary/40 transition-colors cursor-default"
@@ -726,19 +654,9 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              custom={1}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
               <div className="mb-10 rounded-xl overflow-hidden">
-                <img
-                  src={aboutPhoto}
-                  alt="Prerna Chhajer"
-                  className="w-full h-auto object-cover rounded-xl"
-                />
+                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
               </div>
             </motion.div>
           </div>
@@ -749,10 +667,7 @@ const Index = () => {
           HOW I WORK
       ───────────────────────────────────────── */}
 
-      <section
-        id="how-i-work"
-        className="border-t border-border py-[clamp(96px,11vw,160px)]"
-      >
+      <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={`${layout.containerWide} px-6 md:px-14`}>
           <motion.div
             initial="hidden"
@@ -768,26 +683,14 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-[clamp(32px,5vw,96px)]">
             {/* Tools */}
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-            >
-              <p
-                className="text-xl text-muted-foreground mb-10"
-                style={{ fontFamily: t.displayFont }}
-              >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+              <p className="text-xl text-muted-foreground mb-10" style={{ fontFamily: t.displayFont }}>
                 Tools I reach for
               </p>
 
               <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-9 gap-x-4">
                 {tools.map((tool) => (
-                  <div
-                    key={tool.name}
-                    className="flex flex-col items-center gap-3 group"
-                    title={tool.name}
-                  >
+                  <div key={tool.name} className="flex flex-col items-center gap-3 group" title={tool.name}>
                     {tool.logo ? (
                       <img
                         src={tool.logo}
@@ -811,17 +714,8 @@ const Index = () => {
 
             {/* What I bring */}
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              custom={1}
-            >
-              <p
-                className="text-xl text-muted-foreground mb-6"
-                style={{ fontFamily: t.displayFont }}
-              >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <p className="text-xl text-muted-foreground mb-6" style={{ fontFamily: t.displayFont }}>
                 What I bring to a team
               </p>
 
@@ -833,19 +727,12 @@ const Index = () => {
                       i === strengths.length - 1 ? "border-b" : ""
                     }`}
                   >
-                    <s.icon
-                      className="h-5 w-5 text-muted-foreground shrink-0 mt-1"
-                      strokeWidth={1.5}
-                    />
+                    <s.icon className="h-5 w-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.5} />
 
                     <div>
-                      <p className="text-base font-medium tracking-[0.01em] mb-1">
-                        {s.title}
-                      </p>
+                      <p className="text-base font-medium tracking-[0.01em] mb-1">{s.title}</p>
 
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {s.desc}
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -859,10 +746,7 @@ const Index = () => {
           WRITING
       ───────────────────────────────────────── */}
 
-      <section
-        id="writing"
-        className="border-t border-border py-[clamp(96px,11vw,160px)]"
-      >
+      <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
           <motion.div
             initial="hidden"
@@ -871,9 +755,7 @@ const Index = () => {
             variants={fade}
             className="mb-14"
           >
-            <div
-              className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}
-            >
+            <div className={`flex items-center gap-3 ${t.label} text-primary mb-[18px]`}>
               <span className="w-[22px] h-px bg-primary" />
               BLOG
             </div>
@@ -882,10 +764,7 @@ const Index = () => {
               className="text-[clamp(2.125rem,4.2vw,3.5rem)] font-normal leading-[1.06] tracking-[0.015em]"
               style={{ fontFamily: t.displayFont }}
             >
-              Design{" "}
-              <em className="italic text-muted-foreground">
-                thinking
-              </em>
+              Design <em className="italic text-muted-foreground">thinking</em>
             </h2>
           </motion.div>
 
@@ -901,24 +780,18 @@ const Index = () => {
               className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors border-b md:border-b-0 md:border-r border-border"
               onClick={() => navigate("/blog/design-system")}
             >
-              <span className={`${t.labelSm} text-muted-foreground`}>
-                Mar 2026
-              </span>
+              <span className={`${t.labelSm} text-muted-foreground`}>Mar 2026</span>
 
               <h3
                 className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[0.015em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
-                What Building a Design System Over{" "}
-                <em className="italic text-muted-foreground">
-                  Five Years
-                </em>{" "}
-                Really Taught Me
+                What Building a Design System Over <em className="italic text-muted-foreground">Five Years</em> Really
+                Taught Me
               </h3>
 
               <p className="text-[0.8125rem] leading-[1.78] text-muted-foreground mb-6">
-                Five years. Five hard problems. Engineering gaps,
-                tooling shifts, and a full identity overhaul — why
+                Five years. Five hard problems. Engineering gaps, tooling shifts, and a full identity overhaul — why
                 alignment matters more than components.
               </p>
 
@@ -939,24 +812,19 @@ const Index = () => {
               className="p-7 md:p-10 cursor-pointer group hover:bg-secondary/60 transition-colors"
               onClick={() => navigate("/blog/ai-portfolio")}
             >
-              <span className={`${t.labelSm} text-muted-foreground`}>
-                Apr 2026
-              </span>
+              <span className={`${t.labelSm} text-muted-foreground`}>Apr 2026</span>
 
               <h3
                 className="text-[clamp(1.25rem,2.2vw,1.75rem)] font-normal leading-[1.18] tracking-[0.015em] mt-4 mb-4"
                 style={{ fontFamily: t.displayFont }}
               >
                 From Zero to Shipped: How I Built My Entire Portfolio{" "}
-                <em className="italic text-muted-foreground">
-                  with AI
-                </em>
+                <em className="italic text-muted-foreground">with AI</em>
               </h3>
 
               <p className="text-[0.8125rem] leading-[1.78] text-muted-foreground mb-6">
-                No portfolio, no Framer skills, no plan. Two weeks
-                later it was live — built entirely with AI. The honest
-                story of curiosity, tools, and what it changed.
+                No portfolio, no Framer skills, no plan. Two weeks later it was live — built entirely with AI. The
+                honest story of curiosity, tools, and what it changed.
               </p>
 
               <span className="inline-flex items-center gap-2 text-sm text-foreground group-hover:text-primary transition-colors">
@@ -972,10 +840,7 @@ const Index = () => {
           CONTACT + FOOTER
       ───────────────────────────────────────── */}
 
-      <section
-        id="contact"
-        className={`${surface.dark} relative overflow-hidden pt-[clamp(80px,10vw,140px)]`}
-      >
+      <section id="contact" className={`${surface.dark} relative overflow-hidden pt-[clamp(80px,10vw,140px)]`}>
         <div className={`${wrapCls} mb-[clamp(48px,6vw,80px)]`}>
           <motion.h2
             initial="hidden"
@@ -988,19 +853,13 @@ const Index = () => {
             Let's{" "}
             <span
               className={`inline-block text-primary italic transition-all duration-[400ms] ${
-                cycling
-                  ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]"
-                  : ""
+                cycling ? "animate-[wordFlip_0.4s_cubic-bezier(0.16,1,0.3,1)]" : ""
               }`}
             >
               {cycleWord}
             </span>
-
             <br />
-
-            <em className="italic text-background/65">
-              something worth using.
-            </em>
+            <em className="italic text-background/65">something worth using.</em>
           </motion.h2>
         </div>
 
@@ -1014,9 +873,7 @@ const Index = () => {
           {/* Email */}
 
           <div>
-            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">
-              Email
-            </span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Email</span>
 
             <a
               href="mailto:work.chhajer@gmail.com"
@@ -1044,9 +901,7 @@ const Index = () => {
           {/* Social */}
 
           <div>
-            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">
-              Social
-            </span>
+            <span className="text-[0.6875rem] tracking-[0.07em] uppercase text-background/65 block mb-3.5">Social</span>
 
             <div className="flex gap-2.5 flex-wrap">
               {[
@@ -1082,9 +937,7 @@ const Index = () => {
         <div
           className={`${wrapCls} flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-[clamp(32px,4vw,48px)]`}
         >
-          <span className="text-[0.6875rem] text-background/65 tracking-[0.05em]">
-            © 2026 Prerna Chhajer
-          </span>
+          <span className="text-[0.6875rem] text-background/65 tracking-[0.05em]">© 2026 Prerna Chhajer</span>
 
           <nav className="flex gap-6">
             {[
@@ -1106,9 +959,7 @@ const Index = () => {
               },
               {
                 label: "Email",
-                action: () =>
-                  (window.location.href =
-                    "mailto:work.chhajer@gmail.com"),
+                action: () => (window.location.href = "mailto:work.chhajer@gmail.com"),
               },
             ].map((link) => (
               <button
