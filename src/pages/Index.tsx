@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Users, Target, Rocket, Wand2 } from "lucide-react";
+import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight } from "lucide-react";
 import { NavHome } from "@/components/ds";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
@@ -18,6 +18,9 @@ import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
+import heroPhoto1 from "@/assets/hero/hero-1.jpg";
+import heroPhoto2 from "@/assets/hero/hero-2.jpg";
+import heroPhoto3 from "@/assets/hero/hero-3.jpg";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
@@ -46,6 +49,9 @@ import miroLogo from "@/assets/tool-logos/miro.png";
 import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 
 const fade = animation.fade;
+
+const heroPill =
+  "inline-flex items-center border-[0.5px] border-foreground/30 rounded-full px-5 py-2.5 text-[0.8125rem] text-foreground whitespace-nowrap";
 
 // ─────────────────────────────────────────────
 // TOOLS
