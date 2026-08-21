@@ -51,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center border-[0.5px] border-foreground/30 rounded-full px-5 py-2.5 text-[0.8125rem] text-foreground whitespace-nowrap";
+  "inline-flex items-center border-[0.5px] border-foreground/30 rounded-full px-4 py-2 text-[0.8125rem] text-foreground whitespace-nowrap";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -305,13 +305,13 @@ const Index = () => {
           </motion.div>
 
           {/* Giant wordmark + photo cluster */}
-          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-12">
+          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-8">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,16vw,14rem)]"
+              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,12vw,14rem)]"
               style={{ fontFamily: t.displayFont }}
             >
               prerna
@@ -322,16 +322,16 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="flex flex-col md:flex-row md:items-end md:justify-end gap-8 md:gap-10 md:pr-0"
+              className="flex flex-col md:flex-row md:items-end md:justify-end gap-6 md:gap-6 md:pr-0"
             >
               {/* Left pills */}
               <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
                 <span className={heroPill}>Traveler</span>
-                <span className={`${heroPill} md:translate-x-4`}>Adventurer</span>
+                <span className={heroPill}>Adventurer</span>
               </div>
 
               {/* Photo stack */}
-              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[220px] lg:w-[248px] border-[0.5px] border-border overflow-hidden">
+              <div className="md:order-2 w-full max-w-[240px] md:max-w-none md:w-[200px] lg:w-[220px] border-[0.5px] border-border overflow-hidden">
                 {[
                   { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
                   { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
@@ -359,7 +359,7 @@ const Index = () => {
                     <ArrowUpRight className="h-5 w-5" />
                   </button>
                 </div>
-                <span className={`${heroPill} md:translate-x-4`}>Lead, 12 yrs</span>
+                <span className={heroPill}>Lead, 12 yrs</span>
               </div>
             </motion.div>
           </div>
