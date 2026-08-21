@@ -352,12 +352,12 @@ const Index = () => {
                 <button
                   onClick={() => scrollTo("work")}
                   aria-label="View my work"
-                  className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center text-[clamp(1.75rem,3.5vw,2.75rem)] justify-center hover:opacity-90 transition-opacity"
+                  className="h-12 w-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center  justify-center hover:opacity-90 transition-opacity"
                 >
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:ml-20`}>adventurer</span>
+              <span className={`${heroPill} md:ml-20 text-[clamp(1.75rem,3.5vw,2.75rem)]`}>adventurer</span>
             </motion.div>
           </div>
         </div>
