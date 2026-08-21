@@ -372,7 +372,7 @@ const Index = () => {
     left-0
     top-[250px]
     md:left-[3%]
-    md:top-[280px]
+    md:top-[240px]
     z-20
     flex flex-col
     items-start
