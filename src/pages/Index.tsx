@@ -305,13 +305,13 @@ const Index = () => {
           </motion.div>
 
           {/* Giant wordmark + photo cluster */}
-          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-12">
+          <div className="mt-10 md:mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-8">
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fade}
               custom={1}
-              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,16vw,14rem)]"
+              className="font-bold lowercase leading-[0.8] tracking-[-0.03em] text-[clamp(4.5rem,12vw,14rem)]"
               style={{ fontFamily: t.displayFont }}
             >
               prerna
@@ -322,7 +322,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="flex flex-col md:flex-row md:items-end md:justify-end gap-8 md:gap-10 md:pr-0"
+              className="flex flex-col md:flex-row md:items-end md:justify-end gap-6 md:gap-6 md:pr-0"
             >
               {/* Left pills */}
               <div className="flex md:flex-col gap-3 md:items-end flex-wrap md:order-1">
