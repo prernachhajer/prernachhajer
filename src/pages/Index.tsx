@@ -372,11 +372,11 @@ const Index = () => {
     left-0
     top-[250px]
     md:left-[3%]
-    md:top-[240px]
+    md:top-[200px]
     z-20
     flex flex-col
     items-start
-    gap-3 pb-12
+    gap-3 
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
