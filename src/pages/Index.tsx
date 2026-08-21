@@ -311,20 +311,20 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={1}
-              className="mt-8 md:-mt-12 flex justify-center"
+              className="mt-8 md:-mt-14 flex justify-center"
             >
-              <div className="w-[200px] sm:w-[240px] md:w-[300px] lg:w-[340px]">
+              <div className="w-[190px] sm:w-[230px] md:w-[270px] lg:w-[300px]">
                 {[
-                  { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/7]" },
-                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck", ratio: "aspect-[16/13]" },
-                  { src: heroPhoto3, alt: "Geothermal landscape at sunrise", ratio: "aspect-[16/13]" },
+                  { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia", ratio: "aspect-[16/4.5]" },
+                  { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck", ratio: "aspect-[16/10.5]" },
+                  { src: heroPhoto3, alt: "Geothermal landscape at sunrise", ratio: "aspect-[16/8.8]" },
                 ].map((p, i) => (
                   <img
                     key={p.alt}
                     src={p.src}
                     alt={p.alt}
                     loading={i === 0 ? "eager" : "lazy"}
-                    className={`block w-full object-cover ${p.ratio} ${i > 0 ? "mt-1.5" : ""}`}
+                    className={`block w-full object-cover ${p.ratio} ${i > 0 ? "mt-1" : ""}`}
                   />
                 ))}
               </div>
@@ -336,10 +336,10 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-8 md:mt-0 md:absolute md:left-0 md:bottom-2 flex flex-wrap items-start gap-3 md:block"
+              className="mt-8 md:mt-0 md:absolute md:left-[10%] md:bottom-4 flex flex-wrap items-start gap-3 md:block"
             >
               <span className={heroPill}>product designer</span>
-              <span className={`${heroPill} md:mt-4 md:ml-16`}>lead, 12 yrs</span>
+              <span className={`${heroPill} md:mt-4 md:ml-20`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
@@ -348,7 +348,7 @@ const Index = () => {
               animate="visible"
               variants={fade}
               custom={2}
-              className="mt-3 md:mt-0 md:absolute md:right-0 md:bottom-6 flex flex-wrap items-center gap-3 md:block"
+              className="mt-3 md:mt-0 md:absolute md:right-[8%] md:bottom-6 flex flex-wrap items-center gap-3 md:block"
             >
               <div className="flex items-center gap-3">
                 <span className={heroPill}>traveler</span>
@@ -360,21 +360,29 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5 rotate-90" />
                 </button>
               </div>
-              <span className={`${heroPill} md:mt-3 md:ml-3`}>adventurer</span>
+              <span className={`${heroPill} md:mt-3 md:ml-4`}>adventurer</span>
             </motion.div>
           </div>
+        </div>
 
-          {/* Giant wordmark */}
+        {/* Giant wordmark — edge to edge */}
+        <div className={`${layout.px} w-full overflow-hidden`}>
           <motion.h1
             initial="hidden"
             animate="visible"
             variants={fade}
             custom={3}
-            className="mt-10 md:mt-14 lowercase font-normal leading-[0.85] tracking-[-0.02em] text-[clamp(3.5rem,15.5vw,18rem)] whitespace-nowrap"
-            style={{ fontFamily: t.displayFont }}
+            className="mt-6 md:mt-10 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap"
+            style={{
+              fontFamily: t.displayFont,
+              fontSize: "calc(14.5vw - 16px)",
+            }}
           >
             prerna chhajer
           </motion.h1>
+        </div>
+
+        <div className={`${wrapCls} pb-12 md:pb-16 w-full`}>
 
           {/* Two-column intro */}
           <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
