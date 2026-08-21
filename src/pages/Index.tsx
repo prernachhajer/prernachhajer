@@ -335,8 +335,8 @@ const Index = () => {
               custom={2}
               className="mt-8 md:mt-0 md:absolute md:left-[80px] md:bottom-4 flex flex-col items-start gap-3"
             >
-              <span className={`${heroPill} text-[clamp(1.25rem,2.5vw,1.875rem)]`}>product designer</span>
-              <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.5vw,1.875rem)]`}>lead, 12 yrs</span>
+              <span className={`${heroPill} text-[clamp(1.25rem,2.2vw,1.625rem)]`}>product designer</span>
+              <span className={`${heroPill} md:ml-20 text-[clamp(1.25rem,2.2vw,1.625rem)]`}>lead, 12 yrs</span>
             </motion.div>
 
             {/* Pills — right cluster */}
