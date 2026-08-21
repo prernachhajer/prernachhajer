@@ -295,30 +295,30 @@ const Index = () => {
         <div className={`${wrapCls} pt-8 md:pt-10 pb-12 md:pb-16 w-full`}>
           {/* Eyebrow + photo stack + pills */}
           <div className="relative">
-    <motion.div
-  initial="hidden"
-  animate="visible"
-  variants={fade}
-  className="flex items-start justify-between gap-3 pt-3 md:pl-6 xl:pl-[0px]"
->
-  <div className="flex items-start gap-3">
-    <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-    <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
-      Lead Product Designer
-      <br />
-      Based in India, working globally
-    </p>
-  </div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              className="flex items-start justify-between gap-3 pt-3 md:pl-6 xl:pl-[0px]"
+            >
+              <div className="flex items-start gap-3">
+                <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <p className="text-[0.75rem] md:text-[0.8125rem] uppercase tracking-[0.09em] leading-[1.6] text-foreground">
+                  Lead Product Designer
+                  <br />
+                  Based in India, working globally
+                </p>
+              </div>
 
-  
-      href="/prerna_chhajer_resume.pdf"
-    download
-    className="flex items-center gap-1.5 text-[0.75rem] md:text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors shrink-0"
-  >
-    <Download className="h-3.5 w-3.5" />
-    Download Resume
-  </a>
-</motion.div>
+              <a
+                href="/prerna_chhajer_resume.pdf"
+                download
+                className="flex items-center gap-1.5 text-[0.75rem] md:text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors shrink-0"
+              >
+                <Download className="h-3.5 w-3.5" />
+                Download Resume
+              </a>
+            </motion.div>
 
             {/* Photo collage + pills — composition chosen at random on each load */}
             <div className=" flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-16">
