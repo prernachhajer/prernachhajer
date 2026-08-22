@@ -281,8 +281,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/*   <NavHome /> */}
-      ───────────────────────────────────────── HERO ─────────────────────────────────────────
+      {/*   <NavHome /> 
+      ───────────────────────────────────────── HERO ───────────────────────────────────────── */}
       <section id="hero" className=" border-b border-border overflow-hidden">
         <div className={`${wrapCls}  md:pt-4 pb-4 md:pb-8 w-full`}>
           {/* Eyebrow + photo stack + pills */}
