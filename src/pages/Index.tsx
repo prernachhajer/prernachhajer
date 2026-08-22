@@ -270,9 +270,8 @@ const Index = () => {
 
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
-  // Curated hero + photo-collage composition, chosen once per page load
+  // Curated hero composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
-  const photoComp = useMemo(() => pickOne(photoCompositions), []);
   const heroPhotos = {
     src: heroStack.url,
     alt: "Prerna — product designer, traveler, adventurer",
