@@ -362,11 +362,11 @@ const Index = () => {
     flex flex-col
     items-start
     gap-3 
-               border-2 border-neutral-900
+               
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={heroPill}>product designer</span>
+                  <span className={`${heroPill} border-2 border-neutral-900 `}>product designer</span>
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
