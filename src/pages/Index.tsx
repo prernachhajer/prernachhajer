@@ -337,24 +337,13 @@ const Index = () => {
     z-10
   "
               >
-                <div className="relative w-full md:min-w-[200px] h-full overflow-visible">
-                  {photoComp.items.map((it, i) => (
-                    <img
-                      key={`${it.photo}-${i}`}
-                      src={heroPhotos[it.photo].src}
-                      alt={heroPhotos[it.photo].alt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      className="absolute block object-cover rounded-[8px]"
-                      style={{
-                        top: it.top,
-                        left: it.left,
-                        width: it.width,
-                        height: it.height,
-                        zIndex: it.z,
-                        transform: `rotate(${it.rotate}deg)`,
-                      }}
-                    />
-                  ))}
+                <div className="relative w-full h-full overflow-hidden rounded-[8px]">
+                  <img
+                    src={heroPhotos.src}
+                    alt={heroPhotos.alt}
+                    loading="eager"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </HeroDrop>
 
