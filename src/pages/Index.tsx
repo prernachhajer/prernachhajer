@@ -7,7 +7,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight, Download } from "lucide-react";
-import { NavHome } from "@/components/ds";
+//import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
 import { heroCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
@@ -281,7 +281,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <NavHome />
+      {/*   <NavHome /> */}
       ───────────────────────────────────────── HERO ─────────────────────────────────────────
       <section id="hero" className=" border-b border-border overflow-hidden">
         <div className={`${wrapCls}  md:pt-4 pb-4 md:pb-8 w-full`}>
@@ -302,14 +302,14 @@ const Index = () => {
                 </p>
               </div>
 
-              {/*   <a
+              <a
                 href="/prerna_chhajer_resume.pdf"
                 download
                 className="flex items-center gap-1.5 text-[0.75rem] md:text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors shrink-0"
               >
                 <Download className="h-3.5 w-3.5" />
                 Download Resume
-              </a> */}
+              </a>
             </motion.div>
 
             {/* Photo collage + pills — collision-safe composition */}
