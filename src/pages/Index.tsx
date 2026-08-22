@@ -433,13 +433,13 @@ const Index = () => {
                 animate="visible"
                 variants={fade}
                 custom={3}
-                className="px-8 lowercase font-normal leading-[0.9] tracking-[-0.01em] whitespace-nowrap justify-center"
+                className="px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
                 style={{
-                  fontFamily: t.displayFont,
-                  fontSize: "calc(14.5vw - 16px)",
+                  fontFamily: "'Fraunces', serif",
+                  fontSize: "clamp(90px, 15vw, 220px)",
                 }}
               >
-                prerna chhajer
+                prerna ch<span className="italic font-medium">h</span>ajer
               </motion.h1>
             </div>
 
