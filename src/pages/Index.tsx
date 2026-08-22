@@ -402,8 +402,8 @@ const Index = () => {
                       onClick={() => scrollTo("work")}
                       aria-label="View my work"
                       className="
-          h-[72px]
-          w-[72px]
+          h-[92px]
+          w-[92px]
           shrink-0
           rounded-full
           bg-primary
@@ -415,7 +415,7 @@ const Index = () => {
           transition-opacity
         "
                     >
-                      <ArrowRight className="h-8 w-8 rotate-90" />
+                      <ArrowRight className="h-10 w-10 rotate-90" />
                     </button>
                   </HeroDrop>
                 </div>
