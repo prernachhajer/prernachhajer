@@ -437,7 +437,7 @@ const Index = () => {
                 className="px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
                 style={{
                   fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(90px, 15vw, 220px)",
+                  fontSize: "clamp(90px, 14vw, 200px)",
                 }}
               >
                 prerna c<span className="italic font-medium">h</span>hajer
