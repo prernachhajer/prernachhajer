@@ -51,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center bg-background border border-foreground/15 rounded-full px-6 py-3 text-[clamp(16px,3.4vw,36px)] font-light text-foreground whitespace-nowrap leading-none";
+  "inline-flex items-center bg-background border border-foreground/15 rounded-full text-[clamp(12px,3.2vw,36px)] font-light text-foreground whitespace-nowrap leading-none";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -318,7 +318,7 @@ const Index = () => {
 
             {/* Photo collage + pills — collision-safe composition */}
 
-            <div className="relative  w-full md:min-w-[232px] min-h-[500px] mt-[0px] md:min-h-[380px]">
+            <div className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-w-[232px] md:min-h-[380px] mt-[0px]">
               <HeroDrop
                 variant="photos"
                 target={comp.photos}
@@ -330,8 +330,9 @@ const Index = () => {
     left-1/2
     top-0
     -translate-x-1/2
-    w-[232px]
-    h-[380px]
+    w-[140px] h-[230px]
+    sm:w-[180px] sm:h-[300px]
+    md:w-[232px] md:h-[380px]
     shrink-0
     z-10
   "
@@ -355,7 +356,8 @@ const Index = () => {
                 className="
     absolute
     left-0
-    top-[180px]
+    top-[150px]
+    sm:top-[190px]
     md:left-[3%]
     md:top-[180px]
     z-20
@@ -366,11 +368,11 @@ const Index = () => {
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={`${heroPill} border-1 border-neutral-600 px-8 py-5 `}>product designer</span>
+                  <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>product designer</span>
                 </HeroDrop>
 
-                <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-8 py-5`}>lead, 12 yrs</span>
+                <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-6 md:ml-20">
+                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>lead, 12 yrs</span>
                 </HeroDrop>
               </div>
 
@@ -383,18 +385,19 @@ const Index = () => {
                 className="
     absolute
     right-0
-    top-[180px]
+    top-[150px]
+    sm:top-[190px]
     md:right-[3%]
     md:top-[180px]
     z-20
     flex flex-col
     items-start
-    gap-3 
+    gap-2 md:gap-3
   "
               >
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} border-1 border-neutral-600 px-8 py-5 `}>traveler</span>
+                    <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>traveler</span>
                   </HeroDrop>
 
                   <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
@@ -402,8 +405,9 @@ const Index = () => {
                       onClick={() => scrollTo("work")}
                       aria-label="View my work"
                       className="
-          h-[92px]
-          w-[92px]
+          h-14 w-14
+          md:h-[92px]
+          md:w-[92px]
           shrink-0
           rounded-full
           bg-primary
@@ -415,13 +419,13 @@ const Index = () => {
           transition-opacity
         "
                     >
-                      <ArrowRight className="h-12 w-12 rotate-90" />
+                      <ArrowRight className="h-6 w-6 md:h-12 md:w-12 rotate-90" />
                     </button>
                   </HeroDrop>
                 </div>
 
-                <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-8 py-5 `}>adventurer</span>
+                <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-6 md:ml-20">
+                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>adventurer</span>
                 </HeroDrop>
               </div>
             </div>
@@ -434,10 +438,10 @@ const Index = () => {
                 animate="visible"
                 variants={fade}
                 custom={3}
-                className="px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
+                className="px-2 md:px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
                 style={{
                   fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(90px, 14vw, 200px)",
+                  fontSize: "clamp(44px, 13vw, 200px)",
                 }}
               >
                 prerna c<span className="italic font-medium">h</span>hajer
@@ -446,14 +450,14 @@ const Index = () => {
 
             <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
-              <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 w-full max-w-[1024px] mx-auto">
+              <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 w-full max-w-[1024px] mx-auto">
                 <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
                   <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
                     Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive,
                     user-centered experiences through design, systems, and cross-functional leadership.
                   </p>
 
-                  <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+                  <div className="mt-8 flex flex-wrap gap-3 items-start">
                     <Button
                       onClick={() => scrollTo("work")}
                       className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
