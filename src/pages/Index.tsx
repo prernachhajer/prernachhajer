@@ -51,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center bg-background border border-foreground/15 rounded-full px-6 py-3 text-[clamp(16px,3.4vw,36px)] font-light text-foreground whitespace-nowrap leading-none";
+  "inline-flex items-center bg-background border border-foreground/15 rounded-full px-4 py-2.5 md:px-6 md:py-3 text-[clamp(12px,3.2vw,36px)] font-light text-foreground whitespace-nowrap leading-none";
 
 // ─────────────────────────────────────────────
 // TOOLS
