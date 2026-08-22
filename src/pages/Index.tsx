@@ -415,7 +415,7 @@ const Index = () => {
           transition-opacity
         "
                     >
-                      <ArrowRight className="h-10 w-10 rotate-90" />
+                      <ArrowRight className="h-12 w-12 rotate-90" />
                     </button>
                   </HeroDrop>
                 </div>
