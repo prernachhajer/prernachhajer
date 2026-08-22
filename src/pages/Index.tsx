@@ -428,7 +428,7 @@ const Index = () => {
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-6 md:ml-20">
                   <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
-                    adventurer
+                    0→1 products
                   </span>
                 </HeroDrop>
               </div>
