@@ -318,7 +318,7 @@ const Index = () => {
 
             {/* Photo collage + pills — collision-safe composition */}
 
-            <div className="relative  w-full md:min-w-[232px] min-h-[500px] mt-[0px] md:min-h-[380px]">
+            <div className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-w-[232px] md:min-h-[380px] mt-[0px]">
               <HeroDrop
                 variant="photos"
                 target={comp.photos}
@@ -330,8 +330,9 @@ const Index = () => {
     left-1/2
     top-0
     -translate-x-1/2
-    w-[232px]
-    h-[380px]
+    w-[140px] h-[230px]
+    sm:w-[180px] sm:h-[300px]
+    md:w-[232px] md:h-[380px]
     shrink-0
     z-10
   "
