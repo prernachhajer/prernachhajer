@@ -585,7 +585,7 @@ export type PhotoComposition = {
 // PHOTO SETTINGS
 // ─────────────────────────────────────────────
 
-const PHOTO_SIZE = 200;
+const PHOTO_SIZE = 232;
 
 const PHOTO_SIZE1 = 140;
 
