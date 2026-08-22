@@ -302,14 +302,14 @@ const Index = () => {
                 </p>
               </div>
 
-              <a
+              {/*   <a
                 href="/prerna_chhajer_resume.pdf"
                 download
                 className="flex items-center gap-1.5 text-[0.75rem] md:text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors shrink-0"
               >
                 <Download className="h-3.5 w-3.5" />
                 Download Resume
-              </a>
+              </a> */}
             </motion.div>
 
             {/* Photo collage + pills — collision-safe composition */}
