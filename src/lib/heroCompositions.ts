@@ -587,7 +587,7 @@ export type PhotoComposition = {
 
 const PHOTO_SIZE = 232;
 
-const PHOTO_SIZE1 = 140;
+const PHOTO_SIZE1 = 120;
 
 const GAP_PX = 8;
 
