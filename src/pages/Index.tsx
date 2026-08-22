@@ -450,14 +450,14 @@ const Index = () => {
 
             <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
-              <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 w-full max-w-[1024px] mx-auto">
+              <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 w-full max-w-[1024px] mx-auto">
                 <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
                   <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
                     Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive,
                     user-centered experiences through design, systems, and cross-functional leadership.
                   </p>
 
-                  <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+                  <div className="mt-8 flex flex-wrap gap-3 items-start">
                     <Button
                       onClick={() => scrollTo("work")}
                       className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
