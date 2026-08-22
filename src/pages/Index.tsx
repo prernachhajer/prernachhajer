@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight, Download } from "lucide-react";
 //import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
-import { heroCompositions, photoCompositions, pickOne } from "@/lib/heroCompositions";
+import { heroCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
 import { animation, layout, type as t, surface } from "@/lib/tokens";
 import "@/styles/thumbnail-animations.css";
@@ -20,9 +20,7 @@ import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/match-page-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
-import heroPhoto1 from "@/assets/hero/hero-1.png";
-import heroPhoto2 from "@/assets/hero/hero-2.png";
-import heroPhoto3 from "@/assets/hero/hero-3.png";
+import heroStack from "@/assets/hero/hero-stack.png.asset.json";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
@@ -53,7 +51,7 @@ import zeroheightLogo from "@/assets/tool-logos/zeroheight.png";
 const fade = animation.fade;
 
 const heroPill =
-  "inline-flex items-center bg-background border border-border rounded-full px-6 py-3 text-[clamp(0.9375rem,1.4vw,1.25rem)] text-foreground whitespace-nowrap";
+  "inline-flex items-center bg-background border border-foreground/15 rounded-full px-6 py-3 text-[clamp(16px,3.4vw,36px)] font-light text-foreground whitespace-nowrap leading-none";
 
 // ─────────────────────────────────────────────
 // TOOLS
@@ -272,14 +270,12 @@ const Index = () => {
 
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
-  // Curated hero + photo-collage composition, chosen once per page load
+  // Curated hero composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
-  const photoComp = useMemo(() => pickOne(photoCompositions), []);
-  const heroPhotos = [
-    { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
-    { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
-    { src: heroPhoto3, alt: "Geothermal landscape at sunrise" },
-  ];
+  const heroPhotos = {
+    src: heroStack.url,
+    alt: "Prerna — product designer, traveler, adventurer",
+  };
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
 
@@ -340,24 +336,13 @@ const Index = () => {
     z-10
   "
               >
-                <div className="relative w-full md:min-w-[200px] h-full overflow-visible">
-                  {photoComp.items.map((it, i) => (
-                    <img
-                      key={`${it.photo}-${i}`}
-                      src={heroPhotos[it.photo].src}
-                      alt={heroPhotos[it.photo].alt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      className="absolute block object-cover rounded-[8px]"
-                      style={{
-                        top: it.top,
-                        left: it.left,
-                        width: it.width,
-                        height: it.height,
-                        zIndex: it.z,
-                        transform: `rotate(${it.rotate}deg)`,
-                      }}
-                    />
-                  ))}
+                <div className="relative w-full h-full overflow-hidden rounded-[8px]">
+                  <img
+                    src={heroPhotos.src}
+                    alt={heroPhotos.alt}
+                    loading="eager"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </HeroDrop>
 
@@ -380,13 +365,11 @@ const Index = () => {
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={`${heroPill} rounded-full font-[200] text-[clamp(1.125rem,2.2vw,1.8rem)]`}>
-                    product designer
-                  </span>
+                  <span className={heroPill}>product designer</span>
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} font-[200] text-[clamp(1.125rem,2.2vw,1.8rem)]`}>lead, 12 yrs</span>
+                  <span className={`${heroPill} rounded-xl`}>lead, 12 yrs</span>
                 </HeroDrop>
               </div>
 
@@ -410,7 +393,7 @@ const Index = () => {
               >
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} font-[200] text-[clamp(1.125rem,2.2vw,1.8rem)]`}>traveler</span>
+                    <span className={heroPill}>traveler</span>
                   </HeroDrop>
 
                   <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
@@ -418,8 +401,8 @@ const Index = () => {
                       onClick={() => scrollTo("work")}
                       aria-label="View my work"
                       className="
-          h-12
-          w-12
+          h-[72px]
+          w-[72px]
           shrink-0
           rounded-full
           bg-primary
@@ -431,15 +414,13 @@ const Index = () => {
           transition-opacity
         "
                     >
-                      <ArrowRight className="h-5 w-5 rotate-90" />
+                      <ArrowRight className="h-8 w-8 rotate-90" />
                     </button>
                   </HeroDrop>
                 </div>
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} font-[200] rounded-full text-[clamp(1.125rem,2.2vw,1.8rem)]`}>
-                    adventurer
-                  </span>
+                  <span className={`${heroPill} rounded-xl`}>adventurer</span>
                 </HeroDrop>
               </div>
             </div>
