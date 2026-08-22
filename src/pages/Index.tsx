@@ -362,6 +362,7 @@ const Index = () => {
     flex flex-col
     items-start
     gap-3 
+               border-2 border-neutral-900
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
