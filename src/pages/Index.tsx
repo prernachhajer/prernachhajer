@@ -368,11 +368,15 @@ const Index = () => {
   "
               >
                 <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>product designer</span>
+                  <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
+                    product designer
+                  </span>
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-6 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>lead, 12 yrs</span>
+                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>
+                    lead, 12 yrs
+                  </span>
                 </HeroDrop>
               </div>
 
@@ -397,7 +401,9 @@ const Index = () => {
               >
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>traveler</span>
+                    <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
+                      traveler
+                    </span>
                   </HeroDrop>
 
                   <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
@@ -425,7 +431,9 @@ const Index = () => {
                 </div>
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-6 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>adventurer</span>
+                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
+                    adventurer
+                  </span>
                 </HeroDrop>
               </div>
             </div>
@@ -441,7 +449,7 @@ const Index = () => {
                 className="px-2 md:px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
                 style={{
                   fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(44px, 13vw, 200px)",
+                  fontSize: "clamp(44px, 14vw, 200px)",
                 }}
               >
                 prerna c<span className="italic font-medium">h</span>hajer
