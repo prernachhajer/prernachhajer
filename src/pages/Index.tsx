@@ -273,11 +273,10 @@ const Index = () => {
   // Curated hero + photo-collage composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
   const photoComp = useMemo(() => pickOne(photoCompositions), []);
-  const heroPhotos = [
-    { src: heroPhoto1, alt: "Danakil Depression sulfur pools, Ethiopia" },
-    { src: heroPhoto2, alt: "Working remotely on a laptop from a wooden deck" },
-    { src: heroPhoto3, alt: "Geothermal landscape at sunrise" },
-  ];
+  const heroPhotos = {
+    src: heroStack.url,
+    alt: "Prerna — product designer, traveler, adventurer",
+  };
 
   const wrapCls = `${layout.containerWide} mx-auto ${layout.px}`;
 
