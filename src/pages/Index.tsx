@@ -355,9 +355,9 @@ const Index = () => {
                 className="
     absolute
     left-0
-    top-[200px]
+    top-[180px]
     md:left-[3%]
-    md:top-[200px]
+    md:top-[180px]
     z-20
     flex flex-col
     items-start
@@ -383,9 +383,9 @@ const Index = () => {
                 className="
     absolute
     right-0
-    top-[200px]
+    top-[180px]
     md:right-[3%]
-    md:top-[200px]
+    md:top-[180px]
     z-20
     flex flex-col
     items-start
@@ -428,7 +428,7 @@ const Index = () => {
 
             {/* Giant wordmark — aligned with content */}
 
-            <div className="w-full overflow-visible flex pt-12 justify-center">
+            <div className="w-full overflow-visible flex pt-8 justify-center">
               <motion.h1
                 initial="hidden"
                 animate="visible"
