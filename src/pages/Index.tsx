@@ -355,7 +355,7 @@ const Index = () => {
                 className="
     absolute
     left-0
-    top-[250px]
+    top-[200px]
     md:left-[3%]
     md:top-[200px]
     z-20
@@ -383,9 +383,9 @@ const Index = () => {
                 className="
     absolute
     right-0
-    top-[280px]
+    top-[200px]
     md:right-[3%]
-    md:top-[240px]
+    md:top-[200px]
     z-20
     flex flex-col
     items-start
