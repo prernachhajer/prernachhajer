@@ -7,7 +7,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Users, Target, Rocket, Wand2, ArrowUpRight, CornerDownRight, Download } from "lucide-react";
-//import { NavHome } from "@/components/ds";
+import { NavHome } from "@/components/ds";
 import HeroDrop from "@/components/HeroDrop";
 import { heroCompositions, pickOne } from "@/lib/heroCompositions";
 import { Button } from "@/components/ui/button";
@@ -281,12 +281,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/*    <NavHome />
-
-      ─────────────────────────────────────────
-          HERO
-      ───────────────────────────────────────── */}
-
+      <NavHome />
+      ───────────────────────────────────────── HERO ─────────────────────────────────────────
       <section id="hero" className=" border-b border-border overflow-hidden">
         <div className={`${wrapCls}  md:pt-4 pb-4 md:pb-8 w-full`}>
           {/* Eyebrow + photo stack + pills */}
@@ -505,11 +501,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           COMPANIES
       ───────────────────────────────────────── */}
-
       <section
         aria-label="Companies I've worked with"
         className="companies-section border-b border-border bg-secondary/30 py-11 overflow-hidden"
@@ -536,11 +530,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           CASE STUDIES
       ───────────────────────────────────────── */}
-
       <section id="work" className="border-t border-border">
         <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(50px,6vw,80px)]`}>
           <motion.div
@@ -681,11 +673,9 @@ const Index = () => {
           })}
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           ABOUT
       ───────────────────────────────────────── */}
-
       <section id="about" className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)]`}>
         <span
           className="absolute -right-[4%] -bottom-[8%] text-[48vw] font-bold italic leading-[0.8] tracking-[-0.04em] select-none pointer-events-none"
@@ -770,11 +760,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           HOW I WORK
       ───────────────────────────────────────── */}
-
       <section id="how-i-work" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={`${layout.containerWide} px-6 md:px-14`}>
           <motion.div
@@ -849,11 +837,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           WRITING
       ───────────────────────────────────────── */}
-
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
           <motion.div
@@ -943,11 +929,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           CONTACT + FOOTER
       ───────────────────────────────────────── */}
-
       <section id="contact" className={`${surface.dark} relative overflow-hidden pt-[clamp(80px,10vw,140px)]`}>
         <div className={`${wrapCls} mb-[clamp(48px,6vw,80px)]`}>
           <motion.h2
@@ -1081,11 +1065,9 @@ const Index = () => {
           </nav>
         </div>
       </section>
-
       {/* ─────────────────────────────────────────
           WORD CYCLE ANIMATION
       ───────────────────────────────────────── */}
-
       <style>{`
         @keyframes wordFlip {
           0% {
