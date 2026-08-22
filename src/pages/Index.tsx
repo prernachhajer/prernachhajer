@@ -370,7 +370,7 @@ const Index = () => {
                 </HeroDrop>
 
                 <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} font-[200] text-[clamp(1.125rem,2.2vw,1.8rem)]`}>lead, 12 yrs</span>
+                  <span className={`${heroPill} rounded-xl`}>lead, 12 yrs</span>
                 </HeroDrop>
               </div>
 
@@ -394,7 +394,7 @@ const Index = () => {
               >
                 <div className="flex items-center gap-3">
                   <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} font-[200] text-[clamp(1.125rem,2.2vw,1.8rem)]`}>traveler</span>
+                    <span className={heroPill}>traveler</span>
                   </HeroDrop>
 
                   <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
@@ -402,8 +402,8 @@ const Index = () => {
                       onClick={() => scrollTo("work")}
                       aria-label="View my work"
                       className="
-          h-12
-          w-12
+          h-[72px]
+          w-[72px]
           shrink-0
           rounded-full
           bg-primary
@@ -415,15 +415,13 @@ const Index = () => {
           transition-opacity
         "
                     >
-                      <ArrowRight className="h-5 w-5 rotate-90" />
+                      <ArrowRight className="h-8 w-8 rotate-90" />
                     </button>
                   </HeroDrop>
                 </div>
 
                 <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-12 md:ml-20">
-                  <span className={`${heroPill} font-[200] rounded-full text-[clamp(1.125rem,2.2vw,1.8rem)]`}>
-                    adventurer
-                  </span>
+                  <span className={`${heroPill} rounded-xl`}>adventurer</span>
                 </HeroDrop>
               </div>
             </div>
