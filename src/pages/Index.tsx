@@ -427,7 +427,7 @@ const Index = () => {
 
             {/* Giant wordmark — aligned with content */}
 
-            <div className="w-full overflow-visible flex justify-center">
+            <div className="w-full overflow-visible flex pt-12 justify-center">
               <motion.h1
                 initial="hidden"
                 animate="visible"
@@ -439,7 +439,7 @@ const Index = () => {
                   fontSize: "clamp(90px, 15vw, 220px)",
                 }}
               >
-                prerna ch<span className="italic font-medium">h</span>ajer
+                prerna c<span className="italic font-medium">h</span>hajer
               </motion.h1>
             </div>
 
