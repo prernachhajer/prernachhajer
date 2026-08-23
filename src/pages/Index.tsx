@@ -376,18 +376,28 @@ const Index = () => {
                 </div>
               </HeroDrop>
 
-              {(["left", "right"] as const).map((side) => (
+              {(["left", "right"] as const).map((side) => {
+                const items = scatter.floats.filter((f) => f.side === side).sort((a, b) => a.row - b.row);
+                // taller columns start higher so nothing spills past the photo stack
+                const topCls =
+                  items.length >= 4
+                    ? "top-[10px] sm:top-[20px] md:top-[10px]"
+                    : items.length === 3
+                      ? "top-[80px] sm:top-[110px] md:top-[90px]"
+                      : "top-[150px] sm:top-[190px] md:top-[180px]";
+                return (
                 <div
                   key={side}
                   className={`
     absolute
     ${side === "left" ? "left-0 items-start md:left-[3%]" : "right-0 items-end md:right-[3%]"}
-    top-[150px] sm:top-[190px] md:top-[180px]
+    ${topCls}
     z-20
     flex flex-col
     gap-2 md:gap-3
   `}
                 >
+
                   {scatter.floats
                     .filter((f) => f.side === side)
                     .sort((a, b) => a.row - b.row)
