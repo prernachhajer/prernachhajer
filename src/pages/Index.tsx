@@ -397,23 +397,21 @@ const Index = () => {
     gap-2 md:gap-3
   `}
                 >
-
-                  {scatter.floats
-                    .filter((f) => f.side === side)
-                    .sort((a, b) => a.row - b.row)
-                    .map((f) => (
-                      <HeroDrop
-                        key={f.key}
-                        variant={f.key}
-                        target={{ x: side === "left" ? f.nudge : -f.nudge, y: 0, rotate: f.rotate }}
-                        delay={f.delay}
-                        from={f.key === "arrow" ? 260 : 340}
-                      >
-                        {heroFloatContent[f.key]}
-                      </HeroDrop>
-                    ))}
+                  {items.map((f) => (
+                    <HeroDrop
+                      key={f.key}
+                      variant={f.key}
+                      target={{ x: side === "left" ? f.nudge : -f.nudge, y: 0, rotate: f.rotate }}
+                      delay={f.delay}
+                      from={f.key === "arrow" ? 260 : 340}
+                    >
+                      {heroFloatContent[f.key]}
+                    </HeroDrop>
+                  ))}
                 </div>
-              ))}
+                );
+              })}
+
             </div>
 
 
