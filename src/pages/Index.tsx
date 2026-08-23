@@ -270,8 +270,35 @@ const Index = () => {
 
   const { word: cycleWord, cycling } = useWordCycle(["build", "create", "design"]);
 
-  // Curated hero composition, chosen once per page load
-  const comp = useMemo(() => pickOne(heroCompositions), []);
+  // Randomized hero drop composition, rolled once per page load
+  const scatter = useMemo(() => buildHeroScatter(), []);
+
+  const heroFloatContent: Record<FloatKey, React.ReactNode> = {
+    pillA: (
+      <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>product designer</span>
+    ),
+    pillB: (
+      <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>
+        lead, 12 yrs
+      </span>
+    ),
+    pillC: <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>traveler</span>,
+    pillD: (
+      <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>
+        0→1 products
+      </span>
+    ),
+    arrow: (
+      <button
+        onClick={() => scrollTo("work")}
+        aria-label="View my work"
+        className="h-14 w-14 md:h-[92px] md:w-[92px] shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+      >
+        <ArrowRight className="h-6 w-6 md:h-12 md:w-12 rotate-90" />
+      </button>
+    ),
+  };
+
   const heroPhotos = {
     src: heroStack.url,
     alt: "Prerna — product designer, traveler, adventurer",
