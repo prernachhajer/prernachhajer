@@ -59,8 +59,6 @@ type Props = {
   target?: DropVariation;
   /** heavier objects (photos) land with a slower, denser spring */
   heavy?: boolean;
-  /** plain vertical fall: no horizontal drift, no wobble (photo stack) */
-  straight?: boolean;
   /** stagger delay in seconds (keep total sequence <= ~2s) */
   delay?: number;
   /** how far above the final position it starts (px) */
@@ -70,28 +68,14 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const HeroDrop = ({
-  variant,
-  target: targetProp,
-  heavy,
-  straight,
-  delay = 0,
-  from = 320,
-  className,
-  style,
-  children,
-}: Props) => {
+export const HeroDrop = ({ variant, target: targetProp, heavy, delay = 0, from = 320, className, style, children }: Props) => {
   const reduce = useReducedMotion();
   const fallback = useMemo<DropVariation>(
     () => pick(DROP_VARIATIONS[variant] ?? [{ x: 0, y: 0, rotate: 0 }]),
     [variant],
   );
   const target = targetProp ?? fallback;
-  const drift = useMemo(
-    () => (straight ? 0 : (Math.random() > 0.5 ? 1 : -1) * (10 + Math.random() * 20)),
-    [straight],
-  );
-  const wobble = useMemo(() => (straight ? 0 : (Math.random() > 0.5 ? 1 : -1) * (6 + Math.random() * 8)), [straight]);
+  const drift = useMemo(() => (Math.random() > 0.5 ? 1 : -1) * (10 + Math.random() * 20), []);
 
   if (reduce)
     return (
@@ -103,29 +87,15 @@ export const HeroDrop = ({
       </div>
     );
 
+
   return (
     <motion.div
       className={className}
       style={{ ...style, willChange: "transform" }}
-      initial={{
-        y: -from,
-        x: straight ? target.x : target.x + drift,
-        rotate: straight ? target.rotate : target.rotate - wobble,
-        opacity: 0,
-      }}
-      animate={{
-        y: target.y,
-        x: target.x,
-        rotate: straight
-          ? target.rotate
-          : [target.rotate - wobble, target.rotate + wobble * 0.7, target.rotate - wobble * 0.35, target.rotate],
-        opacity: 1,
-      }}
+      initial={{ y: -from, x: target.x + drift, rotate: target.rotate - drift * 0.4, opacity: 0 }}
+      animate={{ y: target.y, x: target.x, rotate: target.rotate, opacity: 1 }}
       transition={{
         opacity: { duration: 0.12, delay },
-        rotate: straight
-          ? { type: "spring", stiffness: 300, damping: 18, delay }
-          : { duration: 0.85, ease: "easeOut", delay, times: [0, 0.4, 0.7, 1] },
         default: {
           type: "spring",
           stiffness: heavy ? 240 : 320,
@@ -134,12 +104,12 @@ export const HeroDrop = ({
           restDelta: 0.2,
           delay,
         },
+
       }}
     >
       {children}
     </motion.div>
   );
 };
-
 
 export default HeroDrop;
