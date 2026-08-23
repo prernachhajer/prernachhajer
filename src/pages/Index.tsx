@@ -312,26 +312,32 @@ const Index = () => {
               </a>
             </motion.div>
 
-            {/* Photo collage + pills — collision-safe composition */}
+            {/* Photo collage + pills — randomized, collision-safe composition */}
 
             <div className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-w-[232px] md:min-h-[380px] mt-[0px]">
               <HeroDrop
                 variant="photos"
-                target={comp.photos}
+                target={{ x: 0, y: 0, rotate: 0 }}
+                straight
                 heavy
-                delay={0}
-                from={380}
-                className="
+                delay={scatter.stackDelay}
+                from={420}
+                className={`
     absolute
-    left-1/2
     top-0
-    -translate-x-1/2
+    ${
+      scatter.stackSide === "left"
+        ? "left-0"
+        : scatter.stackSide === "right"
+          ? "right-0"
+          : "left-1/2 -translate-x-1/2"
+    }
     w-[140px] h-[230px]
     sm:w-[180px] sm:h-[300px]
     md:w-[232px] md:h-[380px]
     shrink-0
     z-10
-  "
+  `}
               >
                 <div className="relative w-full h-full overflow-hidden rounded-[0px]">
                   <img
@@ -343,96 +349,36 @@ const Index = () => {
                 </div>
               </HeroDrop>
 
-              {/* ─────────────────────────────────────────
-    CLUSTER A
-    Product designer + Lead
-    Dedicated left landing zone
-────────────────────────────────────────── */}
-              <div
-                className="
+              {(["left", "right"] as const).map((side) => (
+                <div
+                  key={side}
+                  className={`
     absolute
-    left-0
-    top-[150px]
-    sm:top-[190px]
-    md:left-[3%]
-    md:top-[180px]
+    ${side === "left" ? "left-0 items-start md:left-[3%]" : "right-0 items-end md:right-[3%]"}
+    top-[150px] sm:top-[190px] md:top-[180px]
     z-20
     flex flex-col
-    items-start
-    gap-3 
-               
-  "
-              >
-                <HeroDrop variant="pillA" target={comp.tag1} delay={0.18}>
-                  <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
-                    product designer
-                  </span>
-                </HeroDrop>
-
-                <HeroDrop variant="pillB" target={comp.tag2} delay={0.34} className="ml-6 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5`}>
-                    lead, 12 yrs
-                  </span>
-                </HeroDrop>
-              </div>
-
-              {/* ─────────────────────────────────────────
-    CLUSTER B
-    Traveler + Arrow + Adventurer
-    Dedicated right landing zone
-────────────────────────────────────────── */}
-              <div
-                className="
-    absolute
-    right-0
-    top-[150px]
-    sm:top-[190px]
-    md:right-[3%]
-    md:top-[180px]
-    z-20
-    flex flex-col
-    items-start
     gap-2 md:gap-3
-  "
-              >
-                <div className="flex items-center gap-3">
-                  <HeroDrop variant="pillC" target={comp.tag3} delay={0.5}>
-                    <span className={`${heroPill} border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
-                      traveler
-                    </span>
-                  </HeroDrop>
-
-                  <HeroDrop variant="arrow" target={comp.icon} delay={0.62} from={240}>
-                    <button
-                      onClick={() => scrollTo("work")}
-                      aria-label="View my work"
-                      className="
-          h-14 w-14
-          md:h-[92px]
-          md:w-[92px]
-          shrink-0
-          rounded-full
-          bg-primary
-          text-primary-foreground
-          flex
-          items-center
-          justify-center
-          hover:opacity-90
-          transition-opacity
-        "
-                    >
-                      <ArrowRight className="h-6 w-6 md:h-12 md:w-12 rotate-90" />
-                    </button>
-                  </HeroDrop>
+  `}
+                >
+                  {scatter.floats
+                    .filter((f) => f.side === side)
+                    .sort((a, b) => a.row - b.row)
+                    .map((f) => (
+                      <HeroDrop
+                        key={f.key}
+                        variant={f.key}
+                        target={{ x: side === "left" ? f.nudge : -f.nudge, y: 0, rotate: f.rotate }}
+                        delay={f.delay}
+                        from={f.key === "arrow" ? 260 : 340}
+                      >
+                        {heroFloatContent[f.key]}
+                      </HeroDrop>
+                    ))}
                 </div>
-
-                <HeroDrop variant="pillD" target={comp.tag4} delay={0.74} className="ml-6 md:ml-20">
-                  <span className={`${heroPill} rounded-xl border-1 border-neutral-600 px-4 py-3 md:px-8 md:py-5 `}>
-                    0→1 products
-                  </span>
-                </HeroDrop>
-              </div>
+              ))}
             </div>
+
 
             {/* Giant wordmark — aligned with content */}
 
