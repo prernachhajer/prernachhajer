@@ -55,8 +55,8 @@ const CaseStudyMatchPage = () => {
             className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
-            <span className="block">The Match Page Had 14 Tabs.</span>
-            <span className="block text-primary italic font-medium mt-2">Users Couldn't Find Anything.</span>
+             <span className="block">Match Page: </span>
+             <span className="block text-primary italic font-medium mt-2">IA Shift</span>
           </motion.h1>
 
           <motion.dl
