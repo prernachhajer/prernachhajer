@@ -96,7 +96,7 @@ const CaseStudyDesignSystem = () => {
                 label: "Impact / Timeline",
                 value: (
                   <>
-                    100 Figma files
+                    100+ Figma files
                     <br />
                     2021–2025
                   </>
