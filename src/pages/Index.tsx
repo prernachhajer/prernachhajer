@@ -114,7 +114,7 @@ const caseStudies = [
     thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
-    year: "2021–26",
+    year: "2022–26",
     link: "/case-study/homepage",
   },
   {
