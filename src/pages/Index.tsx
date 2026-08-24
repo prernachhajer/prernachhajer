@@ -114,6 +114,7 @@ const caseStudies = [
     thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
+    year: "2021–26",
     link: "/case-study/homepage",
   },
   {
@@ -125,6 +126,7 @@ const caseStudies = [
     thumbImage: thumbDesignSystem,
     statNum: "170+",
     statLabel: "files in system",
+    year: "2021–26",
     link: "/case-study/design-system",
   },
   {
@@ -136,6 +138,7 @@ const caseStudies = [
     thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
+    year: "2023",
     link: "/case-study/match-page",
   },
   {
@@ -147,6 +150,7 @@ const caseStudies = [
     thumbImage: thumbQuickReads,
     statNum: "↑",
     statLabel: "engagement",
+    year: "2024",
     link: "/case-study/quick-reads",
   },
 ];
@@ -613,7 +617,7 @@ const Index = () => {
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
 
-                    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">2021–26</span>
+                    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">{cs.year}</span>
                   </div>
 
                   <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
