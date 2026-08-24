@@ -56,7 +56,7 @@ const CaseStudyMatchPage = () => {
             style={{ fontFamily: t.displayFont }}
           >
              <span className="block">Match Page: </span>
-             <span className="block text-primary italic font-medium mt-2">IA Shift</span>
+             <span className="block text-primary italic font-medium mt-2">IA Redesign</span>
           </motion.h1>
 
           <motion.dl
