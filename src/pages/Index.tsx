@@ -617,7 +617,7 @@ const Index = () => {
                       <em className="italic text-muted-foreground">{cs.titleEm}</em>
                     </h3>
 
-                    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">2021–26</span>
+                    <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">{cs.year}</span>
                   </div>
 
                   <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
