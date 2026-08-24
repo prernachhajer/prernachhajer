@@ -8,93 +8,176 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#141a15;
-    --ink-soft:#4a5750;
-    --paper:#efe9d8;
-    --paper-raised:#f7f3e7;
-    --pitch:#2f4b3c;
-    --pitch-deep:#1d2f26;
-    --ball:#a8362a;
-    --gold:#c99a3e;
-    --line:#d5cdb2;
-    --line-soft:#e2dbc4;
+    --ink:#17181a;
+    --ink-soft:#6d6d68;
+    --ink-faint:#a9a9a2;
+    --paper:#eeece6;
+    --paper-raised:#f8f7f3;
+    --pitch:#3d7a56;
+    --pitch-deep:#17181a;
+    --ball:#c2492f;
+    --gold:#c2492f;
+    --line:#dbd9d1;
+    --line-soft:#e5e3db;
+    --label-gray:#c9c7bd;
     --radius:10px;
-    --maxw:1040px;
+    --maxw:1080px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
   h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
   .mono{font-family:'IBM Plex Mono',monospace;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
   p{margin:12px 0;}
   a{color:var(--pitch);}
   a:focus-visible, button:focus-visible{outline:2px solid var(--ball);outline-offset:3px;}
+  strong{color:var(--ink);}
+  ::selection{background:var(--gold);color:var(--pitch-deep);}
 
-  /* ---------- HERO ---------- */
-  .hero{background:var(--pitch-deep);color:var(--paper-raised);padding:56px 0 40px;position:relative;overflow:hidden;}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 85% -10%, rgba(201,154,62,0.16), transparent 60%);pointer-events:none;}
-  .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-  .hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.1;max-width:16ch;color:#fdfaf1;}
-  .hero-sub{margin-top:14px;font-size:15px;color:#c9d2c8;max-width:56ch;}
-  .role-tag{margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#a9b6ad;}
-  .metrics-strip{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.14);}
-  .metric .num{font-family:'Fraunces',serif;font-size:23px;color:#fdfaf1;}
-  .metric .label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8fa094;}
+  /* ---------- HERO — centered editorial report style ---------- */
+  .hero{background:var(--paper);color:var(--ink);padding:80px 0 56px;position:relative;overflow:hidden;text-align:center;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:22px;justify-content:center;}
+  .kicker::before, .kicker::after{display:none;}
+  .hero h1{font-size:clamp(38px,6.4vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:600;max-width:15ch;color:var(--ink);margin:0 auto;}
+  .hero h1 em{font-style:italic;color:var(--ball);font-weight:500;}
+  .hero-sub{margin:20px auto 0;font-size:16px;line-height:1.65;color:var(--ink-soft);max-width:54ch;}
+  .hero-sub--lower{margin-top:40px;font-size:17px;max-width:58ch;}
 
-  /* ---------- SCROLL LENGTH BANNER ---------- */
-  .length-banner{
-    background:var(--gold);
-    color:var(--pitch-deep);
-    text-align:center;
-    padding:10px 16px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:0.03em;
+  /* meta pills */
+  .meta-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px;}
+  .meta-pill{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);background:var(--paper-raised);border:1px solid var(--line);border-radius:6px;padding:6px 12px;}
+
+  /* stat row — labeled deltas, Tata-Neu style */
+  .stat-row{display:flex;gap:56px;justify-content:center;flex-wrap:wrap;margin-top:52px;padding-top:36px;border-top:1px solid var(--line);}
+  .stat-row .stat{text-align:center;}
+  .stat-row .stat-label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-faint);margin-bottom:8px;}
+  .stat-row .stat-val{font-family:'Fraunces',serif;font-weight:600;font-size:26px;letter-spacing:-0.01em;color:var(--pitch);}
+  .stat-row .stat-val.down{color:var(--ball);}
+  .stat-row .stat-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);margin-top:4px;}
+
+  /* hero before/after visual */
+  .hero-visual{margin-top:44px;position:relative;z-index:1;}
+  .hero-visual-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:24px;text-align:center;}
+  .hero-phones{display:flex;gap:0;align-items:center;justify-content:center;padding-bottom:8px;}
+  .hero-arrow{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--ink-faint);margin:0 26px;flex-shrink:0;}
+  .phone-frame.phone-frame--hero{width:min(33vw,340px);}
+  @media (max-width:700px){
+    .hero-phones{flex-direction:column;gap:18px;}
+    .hero-arrow{transform:rotate(90deg);margin:0;}
+    .phone-frame.phone-frame--hero{width:68vw;max-width:320px;}
   }
+
+  /* project-overview label/rule/value blocks */
+  .overview{padding:56px 0;border-top:1px solid var(--line);}
+  .overview .wrap{display:flex !important;flex-direction:column;align-items:center;text-align:center;gap:32px;}
+  .overview-title{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,3.2vw,38px);color:var(--label-gray);line-height:1.1;}
+  .overview-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;justify-items:center;max-width:760px;}
+  @media (max-width:640px){.overview-facts{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:420px){.overview-facts{grid-template-columns:1fr;}}
+  .fact-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-faint);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:8px;text-align:center;}
+  .fact-val{font-family:'Fraunces',serif;font-size:17px;color:var(--ink);text-align:center;}
+
+  /* ---------- TL;DR STRIP ---------- */
+  .tldr{background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .tldr .wrap{padding:28px 24px;}
+  .tldr-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
+  .tldr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  @media (max-width:800px){.tldr-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:480px){.tldr-grid{grid-template-columns:1fr;}}
+  .tldr-item{border-top:1px solid var(--line);padding-top:10px;}
+  .tldr-item .tldr-k{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:5px;}
+  .tldr-item .tldr-v{font-family:'Inter',sans-serif;font-weight:600;font-size:14.5px;color:var(--ink);line-height:1.4;}
+
+  /* ---------- SECTION DIVIDERS — big muted label / content, two columns ---------- */
+  .section-divider{padding:60px 0 8px;border-top:1px solid var(--line);}
+  .section-divider .wrap{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
+  .section-label{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,4.6vw,54px);line-height:0.98;letter-spacing:-0.02em;color:var(--label-gray);}
+  .section-hook{font-family:'Inter',sans-serif;font-weight:600;font-size:19px;color:var(--ink);margin-top:0;max-width:56ch;line-height:1.4;}
+  .section-divider .dek{font-size:14.5px;line-height:1.65;color:var(--ink-soft);max-width:58ch;margin-top:2px;}
+  .section-rule{display:none;}
 
   /* ---------- ROW STRUCTURE (content left / screenshots right) ---------- */
-  section.rows{padding:8px 0 40px;}
+  section.rows{padding:4px 0 8px;}
   .row{
     display:grid;
-    grid-template-columns:1.15fr 1fr;
-    gap:30px;
+    grid-template-columns:1.2fr 1fr;
+    gap:28px;
     align-items:start;
-    padding:34px 0;
+    padding:32px 0;
     border-top:1px solid var(--line);
   }
-  .row:first-child{border-top:none;}
+  .row:first-of-type{border-top:none;}
+  .row.no-visual{grid-template-columns:1fr;}
+  .row > div:first-child:not(.visual-col){max-width:520px;}
   @media (max-width:760px){
     .row{grid-template-columns:1fr;}
+    .visual-col{margin-top:20px;}
   }
-  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--ball);margin-bottom:8px;}
-  .row h2{font-size:21px;margin-bottom:4px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;font-weight:600;}
+  .row h3{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;line-height:1.3;letter-spacing:-0.01em;margin-bottom:8px;color:var(--ink);}
   .row-index{
     font-family:'IBM Plex Mono',monospace;
     font-size:10px;
-    color:var(--ink-soft);
-    background:var(--paper-raised);
-    border:1px solid var(--line-soft);
-    border-radius:20px;
-    padding:2px 9px;
+    letter-spacing:0.04em;
+    color:var(--ink-faint);
     display:inline-block;
     margin-bottom:10px;
   }
-  blockquote{margin:14px 0;padding:11px 14px;background:var(--paper-raised);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-family:'Fraunces',serif;font-style:italic;font-size:14px;}
+  .row p{font-size:15px;line-height:1.7;color:var(--ink-soft);}
+  .row p strong{color:var(--ink);}
+  blockquote{margin:14px 0;padding:11px 14px;background:var(--paper-raised);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink);}
   blockquote cite{display:block;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:11px;color:var(--ink-soft);}
-  .tradeoff{margin:14px 0;padding:11px 14px;border:1px dashed var(--ball);border-radius:8px;background:rgba(168,54,42,0.05);font-size:13px;}
+  .tradeoff{margin:14px 0;padding:11px 14px;border:1px dashed var(--ball);border-radius:8px;background:rgba(226,96,63,0.05);font-size:13px;color:var(--ink);}
   .tradeoff .tt-label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ball);display:block;margin-bottom:5px;}
+  .rule-callout{margin:14px 0;padding:11px 14px;border-left:3px solid var(--pitch);background:rgba(31,61,46,0.06);border-radius:0 6px 6px 0;font-size:13px;}
+  .rule-callout .rc-label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:var(--pitch);display:block;margin-bottom:5px;}
+  ul.plain{margin:12px 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft);}
+  ul.plain li{margin-bottom:6px;}
+  ul.plain li strong{color:var(--ink);}
 
-  /* ---------- PHONE PLACEHOLDER FRAMES ---------- */
+  /* pointer list — for dense label:value paragraphs */
+  ul.field-points{list-style:none;margin:14px 0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  ul.field-points li{font-size:14.5px;line-height:1.6;color:var(--ink-soft);padding-left:16px;position:relative;}
+  ul.field-points li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--ball);}
+  ul.field-points li strong{color:var(--ink);font-weight:600;}
+
+  /* two-column supporting cards, used where a row has spare right-side space */
+  .twocol-cards{display:flex;flex-direction:column;gap:12px;}
+  .twocol-card{background:var(--paper-raised);border:1px solid var(--line-soft);border-radius:10px;padding:16px 18px;}
+  .twocol-card .tc-k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ball);margin-bottom:6px;}
+  .twocol-card .tc-v{font-size:13.5px;line-height:1.55;color:var(--ink-soft);}
+
+  /* comparison table */
+  table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;}
+  table.compare th, table.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  table.compare th{background:var(--paper-raised);font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink-soft);}
+  table.compare td:first-child{font-weight:600;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);white-space:nowrap;}
+
+  /* results strip */
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0;}
+  @media (max-width:700px){.results-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:460px){.results-grid{grid-template-columns:1fr;}}
+  .result-card{background:var(--paper-raised);border:1px solid var(--line-soft);border-radius:10px;padding:14px 16px;}
+  .result-card .rnum{font-family:'Fraunces',serif;font-size:21px;color:var(--pitch);}
+  .result-card .rlabel{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--ink-soft);margin-top:4px;}
+
+  /* close pull quote */
+  .close-quote{background:var(--pitch-deep);color:#f4efe0;padding:64px 0;margin-top:12px;}
+  .close-label{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8579;margin-bottom:24px;}
+  .close-quote blockquote{background:transparent;border:none;padding:0;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:22px;line-height:1.5;max-width:62ch;color:#f4efe0;}
+  .close-quote blockquote cite{display:block;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:11px;color:#8a8579;margin-top:20px;}
+
+  /* ---------- SCREENSHOT PLACEHOLDER FRAMES ---------- */
   .visual-col{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
   @media (max-width:760px){.visual-col{align-items:flex-start;}}
-  .phone-group{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+  .phone-group{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
   @media (max-width:760px){.phone-group{justify-content:flex-start;}}
   .phone-frame{
-    width:118px;
+    width:clamp(120px,15vw,168px);
     aspect-ratio:9/19.5;
-    border:2.5px solid var(--ink);
-    border-radius:18px;
+    border:1px solid var(--line);
+    border-radius:8px;
     background:repeating-linear-gradient(45deg, var(--line-soft), var(--line-soft) 6px, var(--paper-raised) 6px, var(--paper-raised) 12px);
     position:relative;
     display:flex;
@@ -102,249 +185,158 @@
     justify-content:center;
     padding-bottom:10px;
     flex-shrink:0;
+    box-shadow:0 1px 2px rgba(20,23,26,0.04);
   }
-  .phone-frame::before{
-    content:"";
-    position:absolute;
-    top:7px;
-    width:30px;
-    height:4px;
-    border-radius:3px;
-    background:var(--ink);
-    opacity:0.45;
-  }
+  .hero-phones .phone-frame{box-shadow:0 10px 28px -12px rgba(20,23,26,0.18);}
   .phone-label{
     font-family:'IBM Plex Mono',monospace;
-    font-size:8.5px;
+    font-size:9px;
     text-align:center;
-    color:var(--ink-soft);
-    background:var(--paper);
-    padding:2px 5px;
-    border-radius:4px;
-    border:1px solid var(--line);
+    color:var(--ink-faint);
+    background:transparent;
+    padding:0;
+    border:none;
     line-height:1.3;
-    max-width:96px;
+    max-width:90%;
   }
+  .hero-phones .phone-label{color:var(--ink-soft);}
   .shot-tag{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ball);margin-bottom:2px;}
 
-  footer{padding:32px 0 56px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);}
+  /* zoom button */
+  .zoom-btn{
+    position:absolute;
+    top:8px; right:8px;
+    width:24px; height:24px;
+    border-radius:50%;
+    background:rgba(20,23,26,0.78);
+    border:1px solid rgba(255,255,255,0.3);
+    color:#fdfaf1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    padding:0;
+    z-index:2;
+  }
+  .zoom-btn:hover{background:var(--ball);}
+  .zoom-btn svg{width:13px;height:13px;}
+  .hero-phones .phone-frame .zoom-btn{top:12px;right:12px;}
+
+  /* zoom modal */
+  .zoom-modal{position:fixed;inset:0;background:rgba(20,23,26,0.88);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;}
+  .zoom-modal.active{display:flex;}
+  .zoom-modal-inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .zoom-modal .phone-frame{width:min(70vw,320px);border-color:rgba(255,255,255,0.25);background:repeating-linear-gradient(45deg, rgba(253,250,241,0.1), rgba(253,250,241,0.1) 6px, rgba(253,250,241,0.04) 6px, rgba(253,250,241,0.04) 12px);}
+  .zoom-modal .phone-label{background:var(--pitch-deep);color:#bdb8ab;border-color:rgba(253,250,241,0.25);font-size:13px;padding:6px 12px;}
+  .zoom-close{
+    position:absolute;
+    top:-18px; right:-18px;
+    width:34px; height:34px;
+    border-radius:50%;
+    background:#fdfaf1;
+    border:none;
+    color:var(--pitch-deep);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:16px;
+    cursor:pointer;
+  }
+
+  footer{padding:32px 0 56px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:8px;}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <div class="wrap">
-    <div class="kicker">Case study · Product Design</div>
-    <h1>The most important screen in the product, rebuilt from the inside out.</h1>
-    <p class="hero-sub">Match Page Redesign — Cricinfo. The highest-traffic surface in the product had grown to 15 tabs, one feature at a time.</p>
-    <div class="role-tag">Lead Product Designer · ESPNCricinfo · ~6 months, phased rollout</div>
-    <div class="metrics-strip">
-      <div class="metric"><div class="num">8–15 → 3–8</div><div class="label">tabs</div></div>
-      <div class="metric"><div class="num">3.4 → 4.5</div><div class="label">app rating</div></div>
-      <div class="metric"><div class="num">+50%</div><div class="label">time on page</div></div>
+    <div class="kicker">ESPNCricinfo</div>
+    <h1>Match Page <em>Redesign</em></h1>
+
+    <div class="meta-pills">
+      <div class="meta-pill">Lead Product Designer</div>
+      <div class="meta-pill">~6 months</div>
+      <div class="meta-pill">iOS &amp; Android</div>
+      <div class="meta-pill">22 screenshots</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="stat-label">tabs</div><div class="stat-val down">8–15 → 3–8</div><div class="stat-note">nearly halved</div></div>
+      <div class="stat"><div class="stat-label">app rating</div><div class="stat-val">3.4 → 4.5</div><div class="stat-note">Play Store + App Store</div></div>
+      <div class="stat"><div class="stat-label">time on page</div><div class="stat-val">+50%</div><div class="stat-note">~1min → 1min 30s</div></div>
+    </div>
+
+    <p class="hero-sub hero-sub--lower">The highest-traffic surface in the product had absorbed feature after feature for years, without ever being re-architected — until it reached 8–15 tabs with minimal discoverability.</p>
+
+    <div class="hero-visual">
+      <div class="hero-visual-label">The whole story, before any reading</div>
+      <div class="hero-phones">
+        <div class="phone-frame phone-frame--hero"><button class="zoom-btn" type="button" aria-label="Zoom BEFORE — old match page" onclick="openZoom(this, 'BEFORE — old match page')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">BEFORE<br>old match page</div></div>
+        <div class="hero-arrow">→</div>
+        <div class="phone-frame phone-frame--hero"><button class="zoom-btn" type="button" aria-label="Zoom AFTER — new match page" onclick="openZoom(this, 'AFTER — new match page')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">AFTER<br>new match page</div></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="length-banner">22 screenshot slots below · scroll to see how long the full case study runs</div>
+<div class="overview">
+  <div class="wrap">
+    <div class="overview-title">Project overview</div>
+    <div class="overview-facts">
+      <div><div class="fact-label">my role</div><div class="fact-val">Lead Product Designer</div></div>
+      <div><div class="fact-label">worked with</div><div class="fact-val">Product Manager, Engineering</div></div>
+      <div><div class="fact-label">platform</div><div class="fact-val">iOS &amp; Android</div></div>
+      <div><div class="fact-label">timeframe</div><div class="fact-val">~6 months, phased rollout</div></div>
+      <div><div class="fact-label">tabs, before → after</div><div class="fact-val">8–15 → 3–8</div></div>
+      <div><div class="fact-label">app rating</div><div class="fact-val">3.4 → 4.5</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="tldr">
+  <div class="wrap">
+    <div class="tldr-label">Two-minute version</div>
+    <div class="tldr-grid">
+      <div class="tldr-item"><div class="tldr-k">Problem</div><div class="tldr-v">Years of one-at-a-time feature additions left the page at 8–15 tabs, an IA problem disguised as a feature problem.</div></div>
+      <div class="tldr-item"><div class="tldr-k">Approach</div><div class="tldr-v">Keep the depth — Cricinfo's real advantage — and rebuild the structure holding it, for three distinct fan behaviors at once.</div></div>
+      <div class="tldr-item"><div class="tldr-k">Hardest call</div><div class="tldr-v">Killed a fully-designed compact layout the whole team wanted, after an internal audit reproduced the exact complaint it was meant to fix.</div></div>
+      <div class="tldr-item"><div class="tldr-k">Outcome</div><div class="tldr-v">App rating 3.4 → 4.5, time on page +50%, tabs cut roughly in half — without removing a single feature.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<div id="problem" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">Problem</h2></div>
+    <div class="sec-content-col"><p class="section-hook">Too much, added one piece at a time.</p>
+    <p class="dek">A feature problem in appearance, an information-architecture problem underneath — nobody owned the structure, so every addition made local sense and the total kept growing.</p></div>
+  </div>
+</div>
 
 <section class="rows">
   <div class="wrap">
 
-    <div class="row">
+    <div class="row no-visual">
       <div>
-        <div class="row-index">Shots 1–2</div>
-        <div class="eyebrow">Fold 1 — Hero</div>
-        <h2>Before / After, up top</h2>
-        <p>The whole story in one glance before any reading is required: the old, cluttered match page next to the new one.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">BEFORE<br>old match page</div></div>
-          <div class="phone-frame"><div class="phone-label">AFTER<br>new match page</div></div>
-        </div>
+        <div class="eyebrow">Business problem → root cause → band-aid</div>
+        <p>The match page is the highest-traffic surface in the product — nearly every session starts and ends here. Over years it had absorbed feature after feature — fantasy, points tables, MVP stats, richer commentary filters, polls, media — without ever being re-architected.</p>
+        <p><strong>Root cause:</strong> nobody was doing too much on purpose, and nobody owned the structure. Every addition made sense in isolation; the pressure was only ever to add, never to cut. By the time that became visible, the page had grown to 8–15 tabs with minimal discoverability.</p>
+        <p><strong>The band-aid:</strong> features kept landing as new tabs — the fastest way to ship something without disturbing what already existed. It solved each individual request and quietly compounded the larger problem.</p>
+        <p><strong>Strategy:</strong> reframe this from a feature problem into an IA problem — keep the depth (Cricinfo's real competitive advantage), rebuild the structure holding it.</p>
       </div>
     </div>
 
     <div class="row">
       <div>
-        <div class="row-index">Shots 3–4</div>
-        <div class="eyebrow">The Problem</div>
-        <h2>Too much, added one piece at a time</h2>
-        <p>Cropped tight on the tab bar alone — the count carries the whole argument.</p>
+        <div class="eyebrow">Evidence</div>
+        <h3>Users said it directly, unprompted</h3>
         <blockquote>"On CricInfo it is like huge information is dumped… when we require only few things."<cite>Web user, 25–34, Hyderabad</cite></blockquote>
+        <blockquote>"What I meant by too much information is that the page is not organized well... too much text and its not properly organized."<cite>Web user, 15–24, Bangalore</cite></blockquote>
+        <p>A test match scorecard alone could mean four full innings tables stacked on one page — the clutter wasn't a perception problem, it was structurally true.</p>
       </div>
       <div class="visual-col">
         <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">BEFORE<br>15-tab bar</div></div>
-          <div class="phone-frame"><div class="phone-label">AFTER<br>reduced tab bar</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shot 5</div>
-        <div class="eyebrow">Competitive Comparison</div>
-        <h2>Depth vs. simplicity, side by side</h2>
-        <p>One real screenshot standing in for the comparison table — Cricinfo's density next to Cricbuzz's scan-ability.</p>
-        <blockquote>"CricInfo has a sleek look but tries to show too much at a time."<cite>Aditya (@s_adityashukla), Jun 28, 2024</cite></blockquote>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Cricinfo match page<br>real example</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shot 6</div>
-        <div class="eyebrow">Strategy — Casual fans</div>
-        <h2>Move sideways without losing your place</h2>
-        <p>Recent-matches dropdown and prev/next navigation for fast lateral movement between concurrent games.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Dropdown open<br>+ prev/next</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shot 7</div>
-        <div class="eyebrow">Strategy — Hardcore fans</div>
-        <h2>Nothing cut, only reorganized</h2>
-        <p>Full, uncut commentary preserved in its own tab.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Full commentary<br>tab, uncut</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 8–9</div>
-        <div class="eyebrow">Strategy — Middle ground</div>
-        <h2>Reveal, not remove</h2>
-        <p>The clearest example in the whole redesign: a short excerpt on the summary page, with a tap-through into the full tab for anyone who wants more.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Summary page<br>commentary excerpt</div></div>
-          <div class="phone-frame"><div class="phone-label">Tap-through into<br>full commentary</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 10–11</div>
-        <div class="eyebrow">Strategy — Younger audience</div>
-        <h2>A lighter layer, alongside the deep stats</h2>
-        <p>Low-effort participation that doesn't compete with the core commentary/scorecard experience.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">The fold<br>polls/light engagement</div></div>
-          <div class="phone-frame"><div class="phone-label">Fan rating<br>screen</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 12–13</div>
-        <div class="eyebrow">Where We Disagreed</div>
-        <h2>The compact layout everyone wanted</h2>
-        <p>Fully designed, evidenced against, and deliberately never shipped.</p>
-        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Killed real design and engineering time already sunk into a fully built layout.</div>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Compact mockup<br>never shipped</div></div>
-          <div class="phone-frame"><div class="phone-label">Shipped version<br>what's live</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 14–15</div>
-        <div class="eyebrow">Where We Disagreed</div>
-        <h2>Points table vs. MVP: letting usage decide</h2>
-        <p>Points table kept separate (~60–70% traffic). MVP merged into "Stats & Fantasy" (~20% traffic).</p>
-        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>The "Stats & Fantasy" label doesn't fully describe MVP — usage data justified the structure, not the label.</div>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Points Table<br>own tab</div></div>
-          <div class="phone-frame"><div class="phone-label">MVP inside<br>Stats & Fantasy</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 16–18</div>
-        <div class="eyebrow">What We Shipped</div>
-        <h2>Reveal, don't dump</h2>
-        <p>Scorecard, match news, and match flow — all collapsed to accordions, opening to the currently relevant state.</p>
-        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Comparing two innings side by side now takes more taps than before.</div>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Scorecard<br>accordion</div></div>
-          <div class="phone-frame"><div class="phone-label">Match News<br>accordion</div></div>
-          <div class="phone-frame"><div class="phone-label">Match Flow<br>accordion</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shots 19–20</div>
-        <div class="eyebrow">What We Shipped</div>
-        <h2>Surface content where it's earned</h2>
-        <p>A wicket in commentary surfaces its photo/video inline; the same media now lives on more than one tab.</p>
-        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>More moving pieces per tab means more surface area for something to break.</div>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Scorecard<br>wicket photo inline</div></div>
-          <div class="phone-frame"><div class="phone-label">Commentary<br>photo/video embed</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shot 21</div>
-        <div class="eyebrow">What We Shipped</div>
-        <h2>Move sideways, not just deeper</h2>
-        <p>Dropdown and prev/next together in the same header, for lateral movement across concurrent games.</p>
-        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>App bar ended up holding four controls — a small recreation of the clutter problem, still unresolved.</div>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Header:<br>dropdown + prev/next</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <div class="row-index">Shot 22</div>
-        <div class="eyebrow">What We Shipped</div>
-        <h2>Making room for monetization without breaking the principle</h2>
-        <p>Two placements only — one below the scorecard, one sticky — nothing interrupting the experience in between.</p>
-      </div>
-      <div class="visual-col">
-        <div class="phone-group">
-          <div class="phone-frame"><div class="phone-label">Match page<br>ad positioning</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom BEFORE — 15-tab bar" onclick="openZoom(this, 'BEFORE — 15-tab bar')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">BEFORE<br>15-tab bar</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom AFTER — reduced tab bar" onclick="openZoom(this, 'AFTER — reduced tab bar')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">AFTER<br>reduced tab bar</div></div>
         </div>
       </div>
     </div>
@@ -352,9 +344,350 @@
   </div>
 </section>
 
+<!-- ============ COMPETITIVE COMPARISON ============ -->
+<div id="comparison" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">Comparison</h2></div>
+    <div class="sec-content-col"><p class="section-hook">Depth and speed had split into two habits.</p>
+    <p class="dek">Competitive signal backed up what users said: Cricbuzz and Google's cricket experience were doing "simple" better, even with less depth.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Cricinfo vs. Cricbuzz</div>
+        <table class="compare">
+          <tr><th></th><th>Cricinfo</th><th>Cricbuzz</th></tr>
+          <tr><td>Live Scores</td><td>Rich commentary, but slower</td><td>Real-time, super-fast updates</td></tr>
+          <tr><td>Stats & Analysis</td><td>Best-in-class, detailed, StatsGuru</td><td>Basic stats, lacks depth</td></tr>
+          <tr><td>Video</td><td>Weak multimedia offerings</td><td>Strong analysis & highlight videos</td></tr>
+          <tr><td>User Experience</td><td>Clunky, dated interface</td><td>Sleek, intuitive, especially mobile</td></tr>
+          <tr><td>Global Coverage</td><td>Skewed toward Indian cricket news</td><td>Very India-centric coverage</td></tr>
+        </table>
+        <blockquote>"CricInfo has a sleek look but tries to show too much at a time."<cite>Aditya (@s_adityashukla), Jun 28, 2024</cite></blockquote>
+        <p>What users told each other to do about it: use Cricbuzz for quick updates and video, use Cricinfo — often specifically on desktop — for deep dives, stats, and historical content.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Cricinfo match page — real example" onclick="openZoom(this, 'Cricinfo match page — real example')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Cricinfo match page<br>real example</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ STRATEGY & SETUP ============ -->
+<div id="strategy" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">Strategy</h2></div>
+    <div class="sec-content-col"><p class="section-hook">My role, and the reframe that shaped everything after.</p>
+    <p class="dek">The instinct was to cut features to reduce clutter. That wasn't the move — depth was the product's advantage, and users said so too.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row no-visual">
+      <div>
+        <div class="eyebrow">Role, team, scope, timeline</div>
+        <ul class="field-points">
+          <li><strong>Role</strong> — project lead</li>
+          <li><strong>Team</strong> — worked closely with the product manager and the broader product team</li>
+          <li><strong>Scope</strong> — structure the IA for a better overall UX on the match page</li>
+          <li><strong>Timeline</strong> — roughly six months, shipped in phases rather than as one release: tabs consolidated first, then accordions, then the recent-matches dropdown, then prev/next navigation — each landing separately over the course of the rollout</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <p>The harder, more honest question: how do you make the deepest cricket product on the market feel as simple as the simplest one, without removing what makes it deep? That question split into two coordinated efforts, run as one page with one throughline.</p>
+      </div>
+      <div class="visual-col">
+        <div class="twocol-cards">
+          <div class="twocol-card"><div class="tc-k">Organize</div><div class="tc-v">What already existed — accordions, merged tabs, relabeling.</div></div>
+          <div class="twocol-card"><div class="tc-k">Open up</div><div class="tc-v">The page to fans it wasn't reaching — polls, ratings, a lighter layer.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row no-visual">
+      <div>
+        <div class="eyebrow">Proving the clutter, not just feeling it</div>
+        <p>An "accretion timeline" made the drift visible — three core things at launch (live table, scorecard, commentary) had become 8–15 tabs with no single owner tracking the total. Combined with direct user quotes and competitive signal, the clutter stopped being a subjective complaint and became a structural, provable fact.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS BY FAN TYPE ============ -->
+<div id="solutions" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">The Solutions</h2></div>
+    <div class="sec-content-col"><p class="section-hook">One page, built for three kinds of fans.</p>
+    <p class="dek">Rather than one generic redesign, four decisions — each one targeted at a specific behavior, all revealing the same underlying page differently.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Solution 1 — For casual fans</div>
+        <h3>Move sideways without losing your place</h3>
+        <p>Recent-matches dropdown and prev/next navigation for fast lateral movement between concurrent games, plus deep links.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>The app bar ended up holding four controls — prev/next, follow, and more — a small version of the exact clutter problem being solved everywhere else on the page. It shipped this way and it's still this way today.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Dropdown open — + prev/next" onclick="openZoom(this, 'Dropdown open — + prev/next')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Dropdown open<br>+ prev/next</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Solution 2 — For hardcore fans</div>
+        <h3>Nothing cut, only reorganized</h3>
+        <p>Full, uncut commentary preserved in its own tab, for the fans who came for exactly that.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Full commentary — tab, uncut" onclick="openZoom(this, 'Full commentary — tab, uncut')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Full commentary<br>tab, uncut</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Solution 3 — For the middle ground</div>
+        <h3>Reveal, not remove</h3>
+        <p>The clearest example in the whole redesign: a short commentary excerpt on the summary page so casual users get the gist without leaving, while hardcore users still have the full tab.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Summary page — commentary excerpt" onclick="openZoom(this, 'Summary page — commentary excerpt')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Summary page<br>commentary excerpt</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Tap-through into — full commentary" onclick="openZoom(this, 'Tap-through into — full commentary')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Tap-through into<br>full commentary</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Solution 4 — For the younger audience</div>
+        <h3>A lighter layer, alongside the deep stats</h3>
+        <p>Polls and fan ratings give a low-effort way to participate without competing with the core commentary/scorecard experience.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>This is the one area with no real cost to report — polls and ratings saw strong engagement and complemented the core page rather than pulling attention away from it. Worth stating plainly rather than manufacturing a downside that wasn't there.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom The fold — polls/light engagement" onclick="openZoom(this, 'The fold — polls/light engagement')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">The fold<br>polls/light engagement</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Fan rating — screen" onclick="openZoom(this, 'Fan rating — screen')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Fan rating<br>screen</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ WHERE WE DISAGREED ============ -->
+<div id="disagreed" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">Where We Disagreed</h2></div>
+    <div class="sec-content-col"><p class="section-hook">Two calls that didn't go the way the room expected.</p>
+    <p class="dek">Not resolved by seniority or by feel — resolved by putting the belief in front of evidence and letting it hold or break.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">The compact layout everyone wanted</div>
+        <h3>Fully designed, evidenced against, never shipped</h3>
+        <p>This wasn't a two-team disagreement — it was a shared belief across editorial, product, and stakeholders: people read at speed and want to compare everything in one glance, so the page should be as compact and above-the-fold as possible. It got fully designed. It was deliberately never shipped.</p>
+        <p>That belief ran directly against the research — users consistently preferred scanning minimal, digestible information over dense, complete-at-a-glance screens. Shipping compactness on top of an already-dense page would have recreated the exact "information dump" complaint, just more concentrated.</p>
+        <p>What actually shifted the room was an internal audit — running the compact design past the team itself, not just external users. The same feeling users had originally complained about showed up again, this time from people inside the room: too much data, too compact, hard to read, hard to navigate.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Killing this cost real design and engineering time that had already gone into a fully built layout. That sunk cost is exactly what makes not shipping it a harder call than it looks in hindsight.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Compact mockup — never shipped" onclick="openZoom(this, 'Compact mockup — never shipped')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Compact mockup<br>never shipped</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Shipped version — what's live" onclick="openZoom(this, 'Shipped version — what's live')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Shipped version<br>what's live</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Points table vs. MVP</div>
+        <h3>Letting usage decide</h3>
+        <p><strong>Points table</strong> — kept as its own tab. Usage data settled this one directly: roughly 60–70% of users visited the points table, versus around 20% for MVP. During a tournament, "how many points did my team gain" is urgent, high-frequency information; folding it into a shared tab would have buried the exact thing most people came back for.</p>
+        <p><strong>MVP</strong> — merged into a combined "Stats & Fantasy" tab, against the team's push to keep it standalone with its own "full picture." At roughly a third of points table's traffic, MVP didn't justify the same dedicated real estate.</p>
+        <div class="rule-callout"><span class="rc-label">The rule, stated once</span>Dedicated visibility should scale with how central something is to <em>this specific moment</em> — not with how much space it visually takes up.</div>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>The "Stats & Fantasy" label doesn't fully describe MVP — the labeling isn't fully intuitive, and we know it. Usage data can justify a structural decision without making the resulting label good.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Points Table — own tab" onclick="openZoom(this, 'Points Table — own tab')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Points Table<br>own tab</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom MVP inside — Stats & Fantasy" onclick="openZoom(this, 'MVP inside — Stats & Fantasy')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">MVP inside<br>Stats & Fantasy</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ WHAT WE SHIPPED ============ -->
+<div id="shipped" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">What We Shipped</h2></div>
+    <div class="sec-content-col"><p class="section-hook">Reveal, don't dump.</p>
+    <p class="dek">Every shipped piece follows the same principle the architecture was built on — including engineering and monetization.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Collapse, then reveal the relevant state</div>
+        <h3>Accordions that open where it matters</h3>
+        <p>Scorecards, match flow, and news moved into accordions, collapsed by default, opening to the currently relevant state — live 2nd innings, not day one.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Comparing two innings side by side now takes more taps than before, and collapsed content can go undiscovered by someone moving fast. Accepted in exchange for a page that doesn't dump five days of cricket on you at once.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Scorecard — accordion" onclick="openZoom(this, 'Scorecard — accordion')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Scorecard<br>accordion</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Match News — accordion" onclick="openZoom(this, 'Match News — accordion')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Match News<br>accordion</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Match Flow — accordion" onclick="openZoom(this, 'Match Flow — accordion')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Match Flow<br>accordion</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Surface content where it's earned</div>
+        <h3>Media, in context, not tucked away</h3>
+        <p>A wicket in commentary now surfaces its photo/video inline; a ball-by-ball scroller of the last three overs sits in the summary with a shortcut into the full overs tab; a tappable report card links into the full match report.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>The same media can now live on more than one tab, and more moving pieces per tab means more surface area for something to break.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Scorecard — wicket photo inline" onclick="openZoom(this, 'Scorecard — wicket photo inline')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Scorecard<br>wicket photo inline</div></div>
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Commentary — photo/video embed" onclick="openZoom(this, 'Commentary — photo/video embed')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Commentary<br>photo/video embed</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row no-visual">
+      <div>
+        <div class="eyebrow">Getting engineering on board</div>
+        <h3>The architecture reinforces the same principle</h3>
+        <p>Tabs load one at a time, on tap — not all at once on page load. This kept the page light and fast despite the depth it was holding, meaning the engineering itself reinforced "don't load everything at once, reveal it as it's needed." The phased rollout followed the same logic — tabs first, then accordions, then the dropdown, then prev/next — each piece shipped and stabilized before the next landed, rather than launching the full IA change in one risky release.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">Making room for monetization without breaking the principle</div>
+        <h3>Two placements, and a line held</h3>
+        <p>The redesign could easily have become an argument for more ad surface — more tabs, more scroll, more inventory. Instead, the team agreed to hold the line: two placements only, one below the scorecard, one sticky, with nothing interrupting the experience in between.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Match page — ad positioning" onclick="openZoom(this, 'Match page — ad positioning')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Match page<br>ad positioning</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<div id="results" class="section-divider">
+  <div class="wrap">
+    <div class="sec-label-col"><h2 class="section-label">Results</h2></div>
+    <div class="sec-content-col"><p class="section-hook">Watching the new paths get used, not just the tab count drop.</p>
+    <p class="dek">People tapped the ball-scroller into the full overs tab. People tapped "full commentary" from the summary into the dedicated tab. People tapped the report card into the full match report — cross-tab snacking, working as designed.</p></div>
+  </div>
+</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="eyebrow">The numbers</div>
+        <div class="results-grid">
+          <div class="result-card"><div class="rnum">3.4 → 4.5</div><div class="rlabel">App rating</div></div>
+          <div class="result-card"><div class="rnum">+50%</div><div class="rlabel">Time on match page (~1min → 1min 30s)</div></div>
+          <div class="result-card"><div class="rnum">8–15 → 3–8</div><div class="rlabel">Tab-taps-to-content</div></div>
+          <div class="result-card"><div class="rnum">Strong</div><div class="rlabel">Polls & fan-rating engagement, no cannibalization</div></div>
+          <div class="result-card"><div class="rnum">~50% down</div><div class="rlabel">Match-page-specific complaint sentiment, pre/post</div></div>
+        </div>
+        <p>Discoverability was the clearest shift: people started enjoying photos and videos surfaced <em>with</em> the scorecard and commentary, rather than tucked away in a separate media tab — reading commentary and watching video in the same place, more contextual, which came through directly in user feedback.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><button class="zoom-btn" type="button" aria-label="Zoom Before/after strip — reviews & sentiment" onclick="openZoom(this, 'Before/after strip — reviews & sentiment')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg></button><div class="phone-label">Before/after strip<br>reviews & sentiment</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<div id="close" class="close-quote">
+  <div class="wrap">
+    <p class="close-label">Close</p>
+    <blockquote>
+      The obvious fix was to show more, faster — and for a while, that's what almost everyone in the room believed, myself included, until the evidence said otherwise. The real fix was building a structure that could hold everything the product needed to say, and having the discipline to know — and defend, with data when needed — which pieces deserved their own space and which didn't.
+    </blockquote>
+  </div>
+</div>
+
 <footer>
-  <div class="wrap">Match Page Redesign — Cricinfo · Prerna Chhajer · 22-slot screenshot scaffold for visual build reference</div>
+  <div class="wrap">Match Page Redesign — Cricinfo · Prerna Chhajer · Lead Product Designer · full case study mockup for visual build</div>
 </footer>
+
+<div class="zoom-modal" id="zoomModal" onclick="if(event.target===this) closeZoom()">
+  <div class="zoom-modal-inner">
+    <button class="zoom-close" type="button" aria-label="Close" onclick="closeZoom()">&times;</button>
+    <div class="phone-frame">
+      <div class="phone-label" id="zoomModalLabel"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openZoom(btn, label){
+    var modal = document.getElementById('zoomModal');
+    var modalLabel = document.getElementById('zoomModalLabel');
+    modalLabel.textContent = label;
+    var isHero = btn.closest('.hero-phones') !== null;
+    modal.querySelector('.phone-frame').classList.toggle('phone-frame--hero', false);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeZoom(){
+    document.getElementById('zoomModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeZoom();
+  });
+</script>
 
 </body>
 </html>
