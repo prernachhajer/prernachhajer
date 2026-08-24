@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Match Page Redesign — Cricinfo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141a15;
+    --ink-soft:#4a5750;
+    --paper:#efe9d8;
+    --paper-raised:#f7f3e7;
+    --pitch:#2f4b3c;
+    --pitch-deep:#1d2f26;
+    --ball:#a8362a;
+    --gold:#c99a3e;
+    --line:#d5cdb2;
+    --line-soft:#e2dbc4;
+    --radius:10px;
+    --maxw:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  p{margin:12px 0;}
+  a{color:var(--pitch);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--ball);outline-offset:3px;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--pitch-deep);color:var(--paper-raised);padding:56px 0 40px;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 85% -10%, rgba(201,154,62,0.16), transparent 60%);pointer-events:none;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.1;max-width:16ch;color:#fdfaf1;}
+  .hero-sub{margin-top:14px;font-size:15px;color:#c9d2c8;max-width:56ch;}
+  .role-tag{margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#a9b6ad;}
+  .metrics-strip{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.14);}
+  .metric .num{font-family:'Fraunces',serif;font-size:23px;color:#fdfaf1;}
+  .metric .label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8fa094;}
+
+  /* ---------- SCROLL LENGTH BANNER ---------- */
+  .length-banner{
+    background:var(--gold);
+    color:var(--pitch-deep);
+    text-align:center;
+    padding:10px 16px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- ROW STRUCTURE (content left / screenshots right) ---------- */
+  section.rows{padding:8px 0 40px;}
+  .row{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:30px;
+    align-items:start;
+    padding:34px 0;
+    border-top:1px solid var(--line);
+  }
+  .row:first-child{border-top:none;}
+  @media (max-width:760px){
+    .row{grid-template-columns:1fr;}
+  }
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--ball);margin-bottom:8px;}
+  .row h2{font-size:21px;margin-bottom:4px;}
+  .row-index{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    color:var(--ink-soft);
+    background:var(--paper-raised);
+    border:1px solid var(--line-soft);
+    border-radius:20px;
+    padding:2px 9px;
+    display:inline-block;
+    margin-bottom:10px;
+  }
+  blockquote{margin:14px 0;padding:11px 14px;background:var(--paper-raised);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-family:'Fraunces',serif;font-style:italic;font-size:14px;}
+  blockquote cite{display:block;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:11px;color:var(--ink-soft);}
+  .tradeoff{margin:14px 0;padding:11px 14px;border:1px dashed var(--ball);border-radius:8px;background:rgba(168,54,42,0.05);font-size:13px;}
+  .tradeoff .tt-label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ball);display:block;margin-bottom:5px;}
+
+  /* ---------- PHONE PLACEHOLDER FRAMES ---------- */
+  .visual-col{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+  @media (max-width:760px){.visual-col{align-items:flex-start;}}
+  .phone-group{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+  @media (max-width:760px){.phone-group{justify-content:flex-start;}}
+  .phone-frame{
+    width:118px;
+    aspect-ratio:9/19.5;
+    border:2.5px solid var(--ink);
+    border-radius:18px;
+    background:repeating-linear-gradient(45deg, var(--line-soft), var(--line-soft) 6px, var(--paper-raised) 6px, var(--paper-raised) 12px);
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:10px;
+    flex-shrink:0;
+  }
+  .phone-frame::before{
+    content:"";
+    position:absolute;
+    top:7px;
+    width:30px;
+    height:4px;
+    border-radius:3px;
+    background:var(--ink);
+    opacity:0.45;
+  }
+  .phone-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:8.5px;
+    text-align:center;
+    color:var(--ink-soft);
+    background:var(--paper);
+    padding:2px 5px;
+    border-radius:4px;
+    border:1px solid var(--line);
+    line-height:1.3;
+    max-width:96px;
+  }
+  .shot-tag{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ball);margin-bottom:2px;}
+
+  footer{padding:32px 0 56px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Case study · Product Design</div>
+    <h1>The most important screen in the product, rebuilt from the inside out.</h1>
+    <p class="hero-sub">Match Page Redesign — Cricinfo. The highest-traffic surface in the product had grown to 15 tabs, one feature at a time.</p>
+    <div class="role-tag">Lead Product Designer · ESPNCricinfo · ~6 months, phased rollout</div>
+    <div class="metrics-strip">
+      <div class="metric"><div class="num">8–15 → 3–8</div><div class="label">tabs</div></div>
+      <div class="metric"><div class="num">3.4 → 4.5</div><div class="label">app rating</div></div>
+      <div class="metric"><div class="num">+50%</div><div class="label">time on page</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="length-banner">22 screenshot slots below · scroll to see how long the full case study runs</div>
+
+<section class="rows">
+  <div class="wrap">
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 1–2</div>
+        <div class="eyebrow">Fold 1 — Hero</div>
+        <h2>Before / After, up top</h2>
+        <p>The whole story in one glance before any reading is required: the old, cluttered match page next to the new one.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">BEFORE<br>old match page</div></div>
+          <div class="phone-frame"><div class="phone-label">AFTER<br>new match page</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 3–4</div>
+        <div class="eyebrow">The Problem</div>
+        <h2>Too much, added one piece at a time</h2>
+        <p>Cropped tight on the tab bar alone — the count carries the whole argument.</p>
+        <blockquote>"On CricInfo it is like huge information is dumped… when we require only few things."<cite>Web user, 25–34, Hyderabad</cite></blockquote>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">BEFORE<br>15-tab bar</div></div>
+          <div class="phone-frame"><div class="phone-label">AFTER<br>reduced tab bar</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shot 5</div>
+        <div class="eyebrow">Competitive Comparison</div>
+        <h2>Depth vs. simplicity, side by side</h2>
+        <p>One real screenshot standing in for the comparison table — Cricinfo's density next to Cricbuzz's scan-ability.</p>
+        <blockquote>"CricInfo has a sleek look but tries to show too much at a time."<cite>Aditya (@s_adityashukla), Jun 28, 2024</cite></blockquote>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Cricinfo match page<br>real example</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shot 6</div>
+        <div class="eyebrow">Strategy — Casual fans</div>
+        <h2>Move sideways without losing your place</h2>
+        <p>Recent-matches dropdown and prev/next navigation for fast lateral movement between concurrent games.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Dropdown open<br>+ prev/next</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shot 7</div>
+        <div class="eyebrow">Strategy — Hardcore fans</div>
+        <h2>Nothing cut, only reorganized</h2>
+        <p>Full, uncut commentary preserved in its own tab.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Full commentary<br>tab, uncut</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 8–9</div>
+        <div class="eyebrow">Strategy — Middle ground</div>
+        <h2>Reveal, not remove</h2>
+        <p>The clearest example in the whole redesign: a short excerpt on the summary page, with a tap-through into the full tab for anyone who wants more.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Summary page<br>commentary excerpt</div></div>
+          <div class="phone-frame"><div class="phone-label">Tap-through into<br>full commentary</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 10–11</div>
+        <div class="eyebrow">Strategy — Younger audience</div>
+        <h2>A lighter layer, alongside the deep stats</h2>
+        <p>Low-effort participation that doesn't compete with the core commentary/scorecard experience.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">The fold<br>polls/light engagement</div></div>
+          <div class="phone-frame"><div class="phone-label">Fan rating<br>screen</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 12–13</div>
+        <div class="eyebrow">Where We Disagreed</div>
+        <h2>The compact layout everyone wanted</h2>
+        <p>Fully designed, evidenced against, and deliberately never shipped.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Killed real design and engineering time already sunk into a fully built layout.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Compact mockup<br>never shipped</div></div>
+          <div class="phone-frame"><div class="phone-label">Shipped version<br>what's live</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 14–15</div>
+        <div class="eyebrow">Where We Disagreed</div>
+        <h2>Points table vs. MVP: letting usage decide</h2>
+        <p>Points table kept separate (~60–70% traffic). MVP merged into "Stats & Fantasy" (~20% traffic).</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>The "Stats & Fantasy" label doesn't fully describe MVP — usage data justified the structure, not the label.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Points Table<br>own tab</div></div>
+          <div class="phone-frame"><div class="phone-label">MVP inside<br>Stats & Fantasy</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 16–18</div>
+        <div class="eyebrow">What We Shipped</div>
+        <h2>Reveal, don't dump</h2>
+        <p>Scorecard, match news, and match flow — all collapsed to accordions, opening to the currently relevant state.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>Comparing two innings side by side now takes more taps than before.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Scorecard<br>accordion</div></div>
+          <div class="phone-frame"><div class="phone-label">Match News<br>accordion</div></div>
+          <div class="phone-frame"><div class="phone-label">Match Flow<br>accordion</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shots 19–20</div>
+        <div class="eyebrow">What We Shipped</div>
+        <h2>Surface content where it's earned</h2>
+        <p>A wicket in commentary surfaces its photo/video inline; the same media now lives on more than one tab.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>More moving pieces per tab means more surface area for something to break.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Scorecard<br>wicket photo inline</div></div>
+          <div class="phone-frame"><div class="phone-label">Commentary<br>photo/video embed</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shot 21</div>
+        <div class="eyebrow">What We Shipped</div>
+        <h2>Move sideways, not just deeper</h2>
+        <p>Dropdown and prev/next together in the same header, for lateral movement across concurrent games.</p>
+        <div class="tradeoff"><span class="tt-label">Trade-off, named honestly</span>App bar ended up holding four controls — a small recreation of the clutter problem, still unresolved.</div>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Header:<br>dropdown + prev/next</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="row-index">Shot 22</div>
+        <div class="eyebrow">What We Shipped</div>
+        <h2>Making room for monetization without breaking the principle</h2>
+        <p>Two placements only — one below the scorecard, one sticky — nothing interrupting the experience in between.</p>
+      </div>
+      <div class="visual-col">
+        <div class="phone-group">
+          <div class="phone-frame"><div class="phone-label">Match page<br>ad positioning</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Match Page Redesign — Cricinfo · Prerna Chhajer · 22-slot screenshot scaffold for visual build reference</div>
+</footer>
+
+</body>
+</html>
