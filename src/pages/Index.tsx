@@ -108,7 +108,7 @@ const caseStudies = [
   {
     num: "01 / 04",
     company: "ESPN Cricinfo",
-    title: "Redesigning Cricket's Most-Visited Homepage for 10M+ Fans",
+    title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbHomepage,
@@ -120,7 +120,7 @@ const caseStudies = [
   {
     num: "02 / 04",
     company: "ESPN Cricinfo",
-    title: "Scaling a Design System for a global cricket platform",
+    title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbDesignSystem,
@@ -132,7 +132,7 @@ const caseStudies = [
   {
     num: "03 / 04",
     company: "ESPN Cricinfo",
-    title: "Simplifying an Overloaded Page for 10M+ Fans",
+    title: "3x Better Findability: Simplifying an Overloaded Page",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbMatchPage,
@@ -144,7 +144,7 @@ const caseStudies = [
   {
     num: "04 / 04",
     company: "ESPN Cricinfo",
-    title: "Bite-sized cricket content designed to increase reader engagement",
+    title: "50% More Time Spent: Bite-Sized Cricket Content",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbQuickReads,
