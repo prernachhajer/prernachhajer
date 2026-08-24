@@ -114,6 +114,7 @@ const caseStudies = [
     thumbImage: thumbHomepage,
     statNum: "5 yrs",
     statLabel: "of evolution",
+    year: "2021–26",
     link: "/case-study/homepage",
   },
   {
@@ -125,6 +126,7 @@ const caseStudies = [
     thumbImage: thumbDesignSystem,
     statNum: "170+",
     statLabel: "files in system",
+    year: "2021–26",
     link: "/case-study/design-system",
   },
   {
@@ -136,6 +138,7 @@ const caseStudies = [
     thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
+    year: "2023",
     link: "/case-study/match-page",
   },
   {
@@ -147,6 +150,7 @@ const caseStudies = [
     thumbImage: thumbQuickReads,
     statNum: "↑",
     statLabel: "engagement",
+    year: "2024",
     link: "/case-study/quick-reads",
   },
 ];
