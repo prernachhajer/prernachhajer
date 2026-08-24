@@ -48,8 +48,8 @@ const CaseStudyQuickReads = () => {
             className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
-            <span className="block">Quick Reads</span>
-            <span className="block text-primary italic font-medium mt-2">Getting 80% of Casual Users Into Long-form Writing</span>
+            <span className="block">From Quick Reads to Long-Form:0</span>
+            <span className="block text-primary italic font-medium mt-2">An 80% Conversion</span>
           </motion.h1>
 
           <motion.dl
