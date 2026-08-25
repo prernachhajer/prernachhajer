@@ -503,7 +503,6 @@ const Index = () => {
                 </motion.div>
               </div>
             </div>
-          </div>
         </div>
       </section>
       {/* ─────────────────────────────────────────
