@@ -10,6 +10,7 @@ import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
 import CaseStudyMatchPage from "./pages/CaseStudyMatchPage";
 import CaseStudyMatchPageRedesign from "./pages/CaseStudyMatchPageRedesign";
+import CaseStudyMatchPageScaffold from "./pages/CaseStudyMatchPageScaffold";
 
 import BlogDesignSystem from "./pages/BlogDesignSystem";
 import BlogAIPortfolio from "./pages/BlogAIPortfolio";
@@ -59,6 +60,12 @@ const App = () => (
             path="/case-study/match-page-redesign"
             element={<CaseStudyMatchPageRedesign />}
           />
+
+          <Route
+            path="/case-study/match-page-scaffold"
+            element={<CaseStudyMatchPageScaffold />}
+          />
+
 
           {/* Blog */}
           <Route
