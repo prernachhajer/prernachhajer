@@ -627,51 +627,6 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/*   <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs tracking-[0.06em] uppercase text-muted-foreground">{cs.num}</span>
-
-                      <span className="text-xs tracking-[0.06em] uppercase text-primary">{cs.company}</span>
-                    </div>
-
-                    <h3
-                      className="text-[clamp(1.225rem,2.2vw,1.65rem)] font-normal leading-[1.12] tracking-[0.015em] mb-3"
-                      style={{ fontFamily: t.displayFont }}
-                    >
-                      {cs.title}
-
-                      <em className="italic text-muted-foreground">{cs.titleEm}</em>
-                    </h3>
-                  </div>
-
-                  
-
-                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4 pt-5 border-t border-border">
-                    <div>
-                      <span
-                        className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[0.015em] leading-none block"
-                        style={{ fontFamily: t.displayFont }}
-                      >
-                        {cs.statNum}
-                      </span>
-
-                      <span className="text-xs text-muted-foreground italic">{cs.statLabel}</span>
-                    </div>
-
-                    {!isComingSoon && (
-                      <button
-                        className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-background border-[1.5px] border-border rounded-full px-6 py-3 shrink-0 group-hover:bg-foreground group-hover:text-background group-hover:border-foreground transition-all"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          navigate(cs.link);
-                        }}
-                      >
-                        Read case study
-                        <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
-                      </button>
-                    )}
-                  </div>   */}
               </motion.div>
             );
           })}
