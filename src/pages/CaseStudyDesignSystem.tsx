@@ -711,7 +711,7 @@ const CaseStudyDesignSystem = () => {
               label: "TYPOGRAPHY",
               title: "Complete font overhaul",
               items: [
-                "Custom font files were adding weight the app didn't need",
+                "- Custom font files were adding weight the app didn't need",
                 "Switched to a system font — no font file to ship, smaller app size",
                 "Faster rendering on every device, no download required",
                 "Updated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
