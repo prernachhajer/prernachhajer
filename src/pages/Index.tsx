@@ -124,7 +124,7 @@ const caseStudies = [
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbDesignSystem,
-    statNum: "170+",
+    statNum: "100+",
     statLabel: "files in system",
     year: "2021–24",
     link: "/case-study/design-system",
