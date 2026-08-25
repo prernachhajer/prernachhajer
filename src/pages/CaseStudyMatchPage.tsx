@@ -68,7 +68,7 @@ const CaseStudyMatchPage = () => {
           >
             {[
               { label: "Client / Scope", value: <>Cricinfo —<br />Match Page Optimization</> },
-              { label: "Role / Worked With", value: <>Senior Designer, with Product<br />Designer + Product Manager</> },
+              { label: "Role / Worked With", value: <>Lead Designer, with<br />Product Manager</> },
               { label: "Platform / Timeline", value: <>Android + iOS<br />2024–2025</> },
             ].map((item, index) => (
               <div key={item.label} className={`px-5 py-5 md:py-6 ${index > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
