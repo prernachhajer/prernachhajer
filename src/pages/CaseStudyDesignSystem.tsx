@@ -830,13 +830,13 @@ const CaseStudyDesignSystem = () => {
               },
               {
                 label: "FIGMA FILES COVERAGE",
-                num: "170+",
+                num: "17\\0+",
 
                 desc: "170+ files across the product now pull from one shared foundation — up from one inconsistent library.",
               },
               {
                 label: "Component coverage",
-                num: "100+",
+                num: "50+",
 
                 desc: "Dark mode, modular widgets, and the native mobile app launch — all built on the system, without slowing shipping velocity.",
               },
