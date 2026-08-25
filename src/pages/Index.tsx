@@ -290,12 +290,12 @@ const Index = () => {
       <section id="hero" className=" border-b border-border overflow-hidden">
         <div className={`${wrapCls}  md:pt-4 pb-4 md:pb-8 w-full`}>
           {/* Eyebrow + photo stack + pills */}
-          <div className="relative">
+          <div className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-h-[380px]">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fade}
-              className="flex items-start justify-between gap-3 pt-3 md:pl-6 xl:pl-[0px]"
+              className="relative z-30 flex items-start justify-between gap-3 pt-3 md:pl-6 xl:pl-[0px]"
             >
               <div className="flex items-start gap-3">
                 <CornerDownRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
@@ -316,9 +316,9 @@ const Index = () => {
               </a>
             </motion.div>
 
-            {/* Photo collage + pills — collision-safe composition */}
+            {/* Photo collage + pills — aligned top with eyebrow */}
 
-            <div className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-w-[232px] md:min-h-[380px] mt-[0px]">
+            <div className="absolute inset-x-0 top-3 z-10">
               <HeroDrop
                 variant="photos"
                 target={comp.photos}
@@ -437,24 +437,25 @@ const Index = () => {
                 </HeroDrop>
               </div>
             </div>
+          </div>
 
-            {/* Giant wordmark — aligned with content */}
+          {/* Giant wordmark — aligned with content */}
 
-            <div className="w-full overflow-visible flex pt-8 justify-center">
-              <motion.h1
-                initial="hidden"
-                animate="visible"
-                variants={fade}
-                custom={3}
-                className="px-2 md:px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
-                style={{
-                  fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(44px, 14vw, 200px)",
-                }}
-              >
-                prerna c<span className="italic font-medium">h</span>hajer
-              </motion.h1>
-            </div>
+          <div className="w-full overflow-visible flex pt-8 justify-center">
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={fade}
+              custom={3}
+              className="px-2 md:px-8 lowercase font-medium leading-[0.9] tracking-[-0.02em] whitespace-nowrap justify-center"
+              style={{
+                fontFamily: "'Fraunces', serif",
+                fontSize: "clamp(44px, 14vw, 200px)",
+              }}
+            >
+              prerna c<span className="italic font-medium">h</span>hajer
+            </motion.h1>
+          </div>
 
             <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
               {/* Two-column intro */}
@@ -502,7 +503,6 @@ const Index = () => {
                 </motion.div>
               </div>
             </div>
-          </div>
         </div>
       </section>
       {/* ─────────────────────────────────────────
