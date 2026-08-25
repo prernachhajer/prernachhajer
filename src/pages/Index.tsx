@@ -342,7 +342,7 @@ const Index = () => {
                     src={heroPhotos.src}
                     alt={heroPhotos.alt}
                     loading="eager"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-bottom scale-125 origin-bottom"
                   />
                 </div>
               </HeroDrop>
