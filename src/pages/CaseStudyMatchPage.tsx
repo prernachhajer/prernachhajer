@@ -154,7 +154,7 @@ const CaseStudyMatchPage = () => {
             animate="visible"
             variants={fade}
             custom={4}
-            className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-14`}
+            className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-6 md:mt-6`}
           >
             Cricinfo's match page is the core of the mobile experience, absorbing years of organic feature creep. This
             overhaul delivered structural improvements without removing the tools hardcore fans depend on daily.
@@ -201,30 +201,6 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
-      {/* ── PROJECT OVERVIEW ───────────────── */}
-      <section className={`${layout.px} border-t border-border pt-10 pb-10 bg-secondary/40`}>
-        <div className={` mx-auto  max-w-5xl`}>
-          <SectionLabel>Project overview</SectionLabel>
-          <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {[
-              { label: "My role", value: "Lead Product Designer, project lead" },
-              { label: "Worked with", value: "Product Manager, Engineering" },
-              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
-              { label: "Platform", value: "iOS & Android" },
-              { label: "Timeframe", value: "~6 months, phased rollout" },
-              { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
-            ].map((item) => (
-              <div key={item.label}>
-                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
-                <dd className="mt-3 text-lg md:text-lg leading-snug" style={{ fontFamily: t.displayFont }}>
-                  {item.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
       {/* ── TWO-MINUTE VERSION ─────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
@@ -254,6 +230,30 @@ const CaseStudyMatchPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── PROJECT OVERVIEW ───────────────── */}
+      <section className={`${layout.px} border-t border-border pt-10 pb-10 bg-secondary/40`}>
+        <div className={` mx-auto  max-w-5xl`}>
+          <SectionLabel>Project overview</SectionLabel>
+          <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
+            {[
+              { label: "My role", value: "Lead Product Designer, project lead" },
+              { label: "Worked with", value: "Product Manager, Engineering" },
+              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
+              { label: "Platform", value: "iOS & Android" },
+              { label: "Timeframe", value: "~6 months, phased rollout" },
+              { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
+            ].map((item) => (
+              <div key={item.label}>
+                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
+                <dd className="mt-3 text-lg md:text-lg leading-snug" style={{ fontFamily: t.displayFont }}>
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
