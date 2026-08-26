@@ -57,7 +57,17 @@ const TradeOff = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const Block = ({ eyebrow, title, isFirst, children }: { eyebrow: string; title: string; isFirst?: boolean; children: React.ReactNode }) => (
+const Block = ({
+  eyebrow,
+  title,
+  isFirst,
+  children,
+}: {
+  eyebrow: string;
+  title: string;
+  isFirst?: boolean;
+  children: React.ReactNode;
+}) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
@@ -474,7 +484,7 @@ const CaseStudyMatchPage = () => {
         <div className={`${layout.container} mx-auto`}>
           <div className="max-w-5xl pb-0 mb-0">
             {" "}
-            <SectionLabel>The decisions</SectionLabel>{" "}
+            <SectionLabel className="!mb-0">The decisions</SectionLabel>{" "}
           </div>
           <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
