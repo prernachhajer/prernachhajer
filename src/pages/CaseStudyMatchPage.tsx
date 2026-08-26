@@ -348,7 +348,54 @@ const CaseStudyMatchPage = () => {
                 </p>
               </div>
             </div>
+
+
+  {/* Users */}
+          <div className="mt-16 md:mt-20 pt-12 border-t border-border">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3">Feature</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Cricinfo</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Cricbuzz</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Active tab count", "8 – 15", "4 – 6", true],
+                      ["Ball-by-ball details", "Deep / nested", "Compact flat", false],
+                      ["Overwise summaries", "Hidden tab", "Always visible", false],
+                      ["Layout density options", "None (one size)", "User selectable", true],
+                    ].map(([feature, a, b, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
+                  </p>
+                </blockquote>
+                <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
+                  Competing products carried comparable data volume, but our lack of a clean parent hierarchy forced
+                  users to hunt for key indicators.
+                </p>
+              </div>
+            </div>
+
+
+            
           </div>
+          
         </div>
       </section>
 
