@@ -471,7 +471,7 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className="flex flex-col ">
+        <div className={`${layout.container} mx-auto`}>
           <div className="max-w-5xl">
             {" "}
             <SectionLabel>The decisions</SectionLabel>{" "}
