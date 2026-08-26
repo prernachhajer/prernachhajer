@@ -477,7 +477,6 @@ const CaseStudyMatchPage = () => {
               <SectionLabel>The decisions</SectionLabel>{" "}
             </div>
             <Block
-              className="border-0"
               eyebrow="Decision 1 — Reduce the tab count"
               title="Fewer tabs, chosen by usage, not habit"
             >
@@ -697,8 +696,8 @@ const CaseStudyMatchPage = () => {
               </div>
             </Block>
           </div>
-        </div>
       </section>
+
 
       {/* ── RESULTS ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
