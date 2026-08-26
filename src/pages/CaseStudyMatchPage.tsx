@@ -505,7 +505,7 @@ const CaseStudyMatchPage = () => {
               <ul className="flex flex-col gap-4">
                 <Bullet>Scorecards structured in lazy-loading accordions, keeping the first fold light.</Bullet>
                 <Bullet>Automatic prioritisation opens the live innings on load, others stay accessible.</Bullet>
-                <Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet>
+                {/*<Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet> */}
               </ul>
               <TradeOff>
                 Multi-innings comparison requires an extra tap to open parallel accordions, slightly shifting
