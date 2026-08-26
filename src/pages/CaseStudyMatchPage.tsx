@@ -276,22 +276,22 @@ const CaseStudyMatchPage = () => {
                 </ul>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-4 md:gap-5">
-              {[
-                { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
-                { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
-                { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
-                { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
-              ].map((img) => (
-                <img
-                  key={img.src}
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-auto border border-border rounded-lg"
-                  loading="lazy"
-                />
-              ))}
-            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-4 md:gap-5">
+            {[
+              { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
+              { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
+              { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
+              { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
+            ].map((img) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto border border-border rounded-lg"
+                loading="lazy"
+              />
+            ))}
           </div>
 
           {/* Evidence */}
