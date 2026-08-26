@@ -196,7 +196,7 @@ const CaseStudyMatchPage = () => {
             {[
               {
                 label: "Problem",
-                body: "One problem, not five: years of feature-by-feature additions left the page at 8–15 tabs with no structure.",
+                body: "One problem, not five: years of feature-by-feature additions, compounded by a team bias toward compactness, left the page dense, cluttered, and hard to read.",
               },
               {
                 label: "Approach",
