@@ -104,7 +104,7 @@ const CaseStudyMatchPage = () => {
             <span className="px-2 text-primary italic font-medium">Redesign</span>
           </motion.h1>
 
-          {/*   <motion.div
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fade}
@@ -119,7 +119,7 @@ const CaseStudyMatchPage = () => {
                 {chip}
               </span>
             ))}
-          </motion.div> */}
+          </motion.div>
 
           <motion.dl
             initial="hidden"
