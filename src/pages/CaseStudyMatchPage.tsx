@@ -365,15 +365,15 @@ const CaseStudyMatchPage = () => {
                     </thead>
                     <tbody>
                       {[
-                        ["Live Match Follower ", "Visits repeatedly during live games", "4 – 6", "4 – 6", true],
-                        ["Ball-by-ball details", "Deep / nested", "Compact flat", "4 – 6", false],
-                        ["Overwise summaries", "Hidden tab", "Always visible", "4 – 6", false],
+                        ["Live Match Follower ", "Visits repeatedly during live games", "Too much information to process quickly", "Surface what matters most", true],
+                        ["Content consumer", "Reads previews and analysis", "Relevant content is hard to discover", "Improve recommendations", false],
+                        ["Casual fan", "Visits during major events", "Experience can feel overwhelming", "Simplify and guide", false],
                         ["Layout density options", "None (one size)", "User selectable", "4 – 6", true],
-                      ].map(([feature, a, b, accent]) => (
+                      ].map(([feature, a, b, opportunity, accent]) => (
                         <tr key={feature as string} className="border-t border-border">
                           <td className="p-3 text-foreground">{feature}</td>
                           <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
-                          <td className="p-3 text-muted-foreground">{b}</td>
+                          <td className="p-3 text-muted-foreground">{opportunity}</td>
                           <td className="p-3 text-muted-foreground">{b}</td>
                         </tr>
                       ))}
