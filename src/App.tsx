@@ -57,8 +57,9 @@ const App = () => (
 
           <Route
             path="/case-study/match-page-redesign"
-            element={<CaseStudyMatchPageRedesign />}
+            element={<Navigate to="/case-study/match-page" replace />}
           />
+
 
           <Route
             path="/case-study/match-page-scaffold"
