@@ -179,7 +179,7 @@ const CaseStudyMatchPage = () => {
             ].map((item) => (
               <div key={item.label}>
                 <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
-                <dd className="mt-3 text-xl md:text-xl leading-snug" style={{ fontFamily: t.displayFont }}>
+                <dd className="mt-3 text-lg md:text-lg leading-snug" style={{ fontFamily: t.displayFont }}>
                   {item.value}
                 </dd>
               </div>
