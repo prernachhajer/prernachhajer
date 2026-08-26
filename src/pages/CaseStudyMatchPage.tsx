@@ -468,7 +468,9 @@ const CaseStudyMatchPage = () => {
               </p>
             </div>
           </motion.div>
-
+        </div>
+      </section>
+          <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
           <div className="flex flex-col gap-16 md:gap-20 mt-16 md:mt-20">
             <div className="max-w-5xl">
               {" "}
@@ -490,6 +492,7 @@ const CaseStudyMatchPage = () => {
                   entries before adapting.
                 </TradeOff>
               </div>
+              
 
               {/* Tab comparison */}
               <div className="max-w-3xl mt-16 md:mt-8 pt-4">
