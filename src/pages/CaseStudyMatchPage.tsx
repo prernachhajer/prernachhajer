@@ -166,7 +166,7 @@ const CaseStudyMatchPage = () => {
 
       {/* ── PROJECT OVERVIEW ───────────────── */}
       <section className={`${layout.px} border-t border-border pt-10 pb-10 bg-secondary/40`}>
-        <div className={` mx-auto  max-w-3xl`}>
+        <div className={` mx-auto  max-w-5xl`}>
           <SectionLabel>Project overview</SectionLabel>
           <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
