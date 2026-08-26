@@ -470,234 +470,224 @@ const CaseStudyMatchPage = () => {
           </motion.div>
         </div>
       </section>
-          <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-          <div className="flex flex-col gap-16 md:gap-20 mt-16 md:mt-20">
-            <div className="max-w-5xl">
-              {" "}
-              <SectionLabel>The decisions</SectionLabel>{" "}
-            </div>
-            <Block
-              eyebrow="Decision 1 — Reduce the tab count"
-              title="Fewer tabs, chosen by usage, not habit"
-            >
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
-                <ul className="flex flex-col gap-4">
-                  <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
-                  <Bullet>Points table retained a high-level entry but merged detailed stats into single hubs.</Bullet>
-                  <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
-                </ul>
-                <TradeOff>
-                  Moving specialised content inside parents meant some loyal users filed tickets looking for vanished
-                  entries before adapting.
-                </TradeOff>
-              </div>
-              
-
-              {/* Tab comparison */}
-              <div className="max-w-3xl mt-16 md:mt-8 pt-4">
-                <img
-                  src={tabComparisonAsset.url}
-                  alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-                <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
-              </div>
-            </Block>
-
-            <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open where it matters">
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
-                <ul className="flex flex-col gap-4">
-                  <Bullet>Scorecards structured in lazy-loading accordions, keeping the first fold light.</Bullet>
-                  <Bullet>Automatic prioritisation opens the live innings on load, others stay accessible.</Bullet>
-                  <Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet>
-                </ul>
-                <TradeOff>
-                  Multi-innings comparison requires an extra tap to open parallel accordions, slightly shifting
-                  cross-innings tracking paths.
-                </TradeOff>
-              </div>
-              <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
-                <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} />
-              </div>
-            </Block>
-
-            <Block
-              eyebrow="Decision 3 — Surface a preview"
-              title="You shouldn't have to leave a page to know it's there"
-            >
-              <ul className="flex flex-col gap-4 max-w-3xl">
-                <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
-                <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
-              </ul>
-              <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <img
-                  src={liveContentAsset.url}
-                  alt="Live tab surfacing recent commentary preview"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-                <img
-                  src={summaryContentAsset.url}
-                  alt="Summary tab surfacing videos and report previews"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            </Block>
-
-            <Block eyebrow="Decision 4 — Surface content where it's earned" title="Media, in context, not tucked away">
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
-                <ul className="flex flex-col gap-4">
-                  <Bullet>Inline wicket photos appear directly inside ball-by-ball commentary.</Bullet>
-                  <Bullet>Horizontal media scrollers bring reports into the active scorecard context.</Bullet>
-                  <Bullet>Tappable report cards open highlights without leaving the primary hub.</Bullet>
-                </ul>
-                <TradeOff>
-                  Heavier inline media required custom lazy-loading structures to protect performance.
-                </TradeOff>
-              </div>
-              <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <img
-                  src={scorecardMediaAsset.url}
-                  alt="Scorecard tab with inline videos and photos"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-                <img
-                  src={commsMediaAsset.url}
-                  alt="Commentary tab with inline videos and photos"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            </Block>
-
-            <Block eyebrow="Decision 5 — Make it easy to move sideways" title="A dropdown and two buttons, not a maze">
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
-                <ul className="flex flex-col gap-4">
-                  <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
-                  <Bullet>Prev/next shortcuts map adjacent game days smoothly.</Bullet>
-                  <Bullet>Reduced cognitive overload by removing deep-navigation drawers.</Bullet>
-                </ul>
-                <TradeOff>
-                  Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off on the home feed
-                  in analytics.
-                </TradeOff>
-              </div>
-              <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 items-start">
-                <Figure
-                  src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
-                  caption="Before"
-                />
-
-                <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 gap-6">
-                    <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
-                    <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
-                  </div>
-                  <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
-                </div>
-                <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 gap-6">
-                    <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
-                    <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
-                  </div>
-                  <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
-                    Solution 2 — Optimising the app bar
-                  </p>
-                </div>
-              </div>
-            </Block>
-
-            <Block
-              eyebrow="Decision 6 — Say no to the popular idea"
-              title="Fully designed, evidenced against, never shipped"
-            >
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
-                <div>
-                  <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
-                  <ul className="flex flex-col gap-4">
-                    <Bullet>
-                      <strong className="text-foreground font-semibold">Belief: </strong>
-                      Editorial, product and stakeholders shared one instinct — people read at speed and want everything
-                      comparable at a glance, so the page should be as compact as possible.
-                    </Bullet>
-                    <Bullet>
-                      <strong className="text-foreground font-semibold">Built: </strong>
-                      It got fully designed, ready to ship.
-                    </Bullet>
-                    <Bullet>
-                      <strong className="text-foreground font-semibold">Evidence against: </strong>
-                      Research said users preferred scanning minimal, digestible information over dense screens —
-                      shipping this would have recreated the "information dump" complaint, more concentrated.
-                    </Bullet>
-                    <Bullet>
-                      <strong className="text-foreground font-semibold">Killed: </strong>
-                      An internal audit sealed it: running the compact design past the team surfaced the same complaint
-                      users had made, this time from the people who'd pushed for it.
-                    </Bullet>
-                  </ul>
-                  <div className="mt-8">
-                    <TradeOff>
-                      Killing this cost real design and engineering time already sunk into a fully built layout. That
-                      sunk cost is exactly what makes not shipping it a harder call than it looks in hindsight.
-                    </TradeOff>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-8">
-                  <Figure
-                    src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`}
-                    caption="Compact"
-                  />
-                  <Figure
-                    src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`}
-                    caption="Approved — live"
-                  />
-                </div>
-              </div>
-            </Block>
-
-            <Block
-              eyebrow="Decision 7 — Add participation without re-cluttering"
-              title="Polls and ratings, sitting beside the depth"
-            >
-              <ul className="flex flex-col gap-4 max-w-3xl">
-                <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
-                <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
-                <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
-              </ul>
-              <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
-                <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} />
-              </div>
-            </Block>
-
-            <Block eyebrow="Decision 8 — Hold the same line" title="The principle didn't stop at the design file">
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  {
-                    label: "Engineering",
-                    body: "Tabs defer data loading until clicked rather than requesting heavy parallel loads on initial render.",
-                  },
-                  {
-                    label: "Monetization",
-                    body: "Held the line at two clean ad banners per viewport block, protecting content integrity.",
-                  },
-                ].map((item) => (
-                  <div key={item.label} className={`${radius.cardSm} ${surface.card} p-6`}>
-                    <p className={`${t.labelSm} text-muted-foreground`}>{item.label}</p>
-                    <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
-                  </div>
-                ))}
-              </div>
-            </Block>
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className="flex flex-col ">
+          <div className="max-w-5xl">
+            {" "}
+            <SectionLabel>The decisions</SectionLabel>{" "}
           </div>
-      </section>
+          <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <ul className="flex flex-col gap-4">
+                <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
+                <Bullet>Points table retained a high-level entry but merged detailed stats into single hubs.</Bullet>
+                <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
+              </ul>
+              <TradeOff>
+                Moving specialised content inside parents meant some loyal users filed tickets looking for vanished
+                entries before adapting.
+              </TradeOff>
+            </div>
 
+            {/* Tab comparison */}
+            <div className="max-w-3xl mt-16 md:mt-8 pt-4">
+              <img
+                src={tabComparisonAsset.url}
+                alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
+            </div>
+          </Block>
+
+          <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open where it matters">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <ul className="flex flex-col gap-4">
+                <Bullet>Scorecards structured in lazy-loading accordions, keeping the first fold light.</Bullet>
+                <Bullet>Automatic prioritisation opens the live innings on load, others stay accessible.</Bullet>
+                <Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet>
+              </ul>
+              <TradeOff>
+                Multi-innings comparison requires an extra tap to open parallel accordions, slightly shifting
+                cross-innings tracking paths.
+              </TradeOff>
+            </div>
+            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
+              <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} />
+              <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} />
+              <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} />
+            </div>
+          </Block>
+
+          <Block eyebrow="Decision 3 — Surface a preview" title="You shouldn't have to leave a page to know it's there">
+            <ul className="flex flex-col gap-4 max-w-3xl">
+              <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
+              <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
+            </ul>
+            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+              <img
+                src={liveContentAsset.url}
+                alt="Live tab surfacing recent commentary preview"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <img
+                src={summaryContentAsset.url}
+                alt="Summary tab surfacing videos and report previews"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </Block>
+
+          <Block eyebrow="Decision 4 — Surface content where it's earned" title="Media, in context, not tucked away">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <ul className="flex flex-col gap-4">
+                <Bullet>Inline wicket photos appear directly inside ball-by-ball commentary.</Bullet>
+                <Bullet>Horizontal media scrollers bring reports into the active scorecard context.</Bullet>
+                <Bullet>Tappable report cards open highlights without leaving the primary hub.</Bullet>
+              </ul>
+              <TradeOff>Heavier inline media required custom lazy-loading structures to protect performance.</TradeOff>
+            </div>
+            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+              <img
+                src={scorecardMediaAsset.url}
+                alt="Scorecard tab with inline videos and photos"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <img
+                src={commsMediaAsset.url}
+                alt="Commentary tab with inline videos and photos"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </Block>
+
+          <Block eyebrow="Decision 5 — Make it easy to move sideways" title="A dropdown and two buttons, not a maze">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <ul className="flex flex-col gap-4">
+                <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
+                <Bullet>Prev/next shortcuts map adjacent game days smoothly.</Bullet>
+                <Bullet>Reduced cognitive overload by removing deep-navigation drawers.</Bullet>
+              </ul>
+              <TradeOff>
+                Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off on the home feed in
+                analytics.
+              </TradeOff>
+            </div>
+            <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 items-start">
+              <Figure
+                src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
+                caption="Before"
+              />
+
+              <div className="md:col-span-2">
+                <div className="grid grid-cols-2 gap-6">
+                  <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
+                  <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
+                </div>
+                <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
+              </div>
+              <div className="md:col-span-2">
+                <div className="grid grid-cols-2 gap-6">
+                  <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
+                  <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
+                </div>
+                <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
+                  Solution 2 — Optimising the app bar
+                </p>
+              </div>
+            </div>
+          </Block>
+
+          <Block
+            eyebrow="Decision 6 — Say no to the popular idea"
+            title="Fully designed, evidenced against, never shipped"
+          >
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
+                <ul className="flex flex-col gap-4">
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Belief: </strong>
+                    Editorial, product and stakeholders shared one instinct — people read at speed and want everything
+                    comparable at a glance, so the page should be as compact as possible.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Built: </strong>
+                    It got fully designed, ready to ship.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Evidence against: </strong>
+                    Research said users preferred scanning minimal, digestible information over dense screens — shipping
+                    this would have recreated the "information dump" complaint, more concentrated.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Killed: </strong>
+                    An internal audit sealed it: running the compact design past the team surfaced the same complaint
+                    users had made, this time from the people who'd pushed for it.
+                  </Bullet>
+                </ul>
+                <div className="mt-8">
+                  <TradeOff>
+                    Killing this cost real design and engineering time already sunk into a fully built layout. That sunk
+                    cost is exactly what makes not shipping it a harder call than it looks in hindsight.
+                  </TradeOff>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-8">
+                <Figure
+                  src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`}
+                  caption="Compact"
+                />
+                <Figure
+                  src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`}
+                  caption="Approved — live"
+                />
+              </div>
+            </div>
+          </Block>
+
+          <Block
+            eyebrow="Decision 7 — Add participation without re-cluttering"
+            title="Polls and ratings, sitting beside the depth"
+          >
+            <ul className="flex flex-col gap-4 max-w-3xl">
+              <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
+              <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
+              <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
+            </ul>
+            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
+              <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
+              <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} />
+              <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} />
+            </div>
+          </Block>
+
+          <Block eyebrow="Decision 8 — Hold the same line" title="The principle didn't stop at the design file">
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  label: "Engineering",
+                  body: "Tabs defer data loading until clicked rather than requesting heavy parallel loads on initial render.",
+                },
+                {
+                  label: "Monetization",
+                  body: "Held the line at two clean ad banners per viewport block, protecting content integrity.",
+                },
+              ].map((item) => (
+                <div key={item.label} className={`${radius.cardSm} ${surface.card} p-6`}>
+                  <p className={`${t.labelSm} text-muted-foreground`}>{item.label}</p>
+                  <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </Block>
+        </div>
+      </section>
 
       {/* ── RESULTS ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
