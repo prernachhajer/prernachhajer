@@ -120,7 +120,7 @@ const caseStudies = [
   {
     num: "02 / 04",
     company: "ESPN Cricinfo",
-    title: "3x Better Findability: Simplifying an Overloaded Match Page",
+    title: "2x the Speed, 1/2 the Clutter: Redesigning the Cricket Match Page",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbMatchPage,
