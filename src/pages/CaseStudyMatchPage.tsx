@@ -608,7 +608,7 @@ const CaseStudyMatchPage = () => {
                 <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
               </div>
               <div className="md:col-span-2">
-                <div className="grid grid-cols-2 gap-6 mb-20 ">
+                <div className="grid grid-cols-2 gap-6 ">
                   <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
                   <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
                 </div>
