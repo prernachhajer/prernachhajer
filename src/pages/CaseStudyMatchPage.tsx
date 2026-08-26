@@ -460,10 +460,13 @@ const CaseStudyMatchPage = () => {
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
               <p className={`${t.labelSm} text-muted-foreground`}>The rule, stated once</p>
               <p className="mt-3 text-base leading-relaxed">
-                Show previews, not everything at once — tap to go deeper.
+                - Show previews, not everything at once; tap to go deeper
                 <br />
                 <br />
-                &quot;Combine what belongs together, and surface what matters instead of burying it.&quot;
+                - Combine what belongs together
+                <br />
+                <br />
+                - Surface what matters instead of burying it
               </p>
             </div>
           </motion.div>
