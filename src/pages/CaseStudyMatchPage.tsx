@@ -15,6 +15,15 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import matchTabsImg from "@/assets/match-page-tabs.png";
+import compact01Asset from "@/assets/Match_compact01.png.asset.json";
+import compact02Asset from "@/assets/Match_compact02.png.asset.json";
+import compact03Asset from "@/assets/Match_compact03.png.asset.json";
+import compact04Asset from "@/assets/Match_compact04.png.asset.json";
+import tabComparisonAsset from "@/assets/Tab_comparison.png.asset.json";
+import scorecardMediaAsset from "@/assets/Scorecard-media.png.asset.json";
+import commsMediaAsset from "@/assets/Comms-media.png.asset.json";
+import liveContentAsset from "@/assets/Live-content.png.asset.json";
+import summaryContentAsset from "@/assets/Summary-content.png.asset.json";
 
 const fade = animation.fade;
 
