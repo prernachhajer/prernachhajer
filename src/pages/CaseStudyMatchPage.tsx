@@ -297,7 +297,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Evidence */}
-          <div className="max-w-4xl mt-16 md:mt-20 pt-12 border-t border-border">
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
               Users Feedback
@@ -332,7 +332,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Competitive */}
-          <div className="max-w-4xl mt-16 md:mt-20 pt-12 border-t border-border">
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
@@ -374,7 +374,7 @@ const CaseStudyMatchPage = () => {
             </div>
 
             {/* Users */}
-            <div className="max-w-4xl mt-16 md:mt-20 pt-12 border-t border-border">
+            <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
               <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
               <div className="grid lg:grid-cols-1 gap-10 items-start">
                 <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
