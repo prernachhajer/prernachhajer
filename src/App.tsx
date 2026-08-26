@@ -2,14 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Index from "./pages/Index";
 import CaseStudyHomepage from "./pages/CaseStudyHomepage";
 import CaseStudyDesignSystem from "./pages/CaseStudyDesignSystem";
 import CaseStudyQuickReads from "./pages/CaseStudyQuickReads";
 import CaseStudyMatchPage from "./pages/CaseStudyMatchPage";
-import CaseStudyMatchPageRedesign from "./pages/CaseStudyMatchPageRedesign";
 import CaseStudyMatchPageScaffold from "./pages/CaseStudyMatchPageScaffold";
 
 import BlogDesignSystem from "./pages/BlogDesignSystem";
