@@ -465,14 +465,14 @@ const CaseStudyMatchPage = () => {
                 />
 
                 <div>
-                  <div className="grid grid-cols-4 gap-6">
+                  <div className="grid gap-6">
                     <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
                     <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
                   </div>
                   <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
                 </div>
                 <div>
-                  <div className="grid grid-cols-4 gap-6">
+                  <div className="grid  gap-6">
                     <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
                     <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
                   </div>
