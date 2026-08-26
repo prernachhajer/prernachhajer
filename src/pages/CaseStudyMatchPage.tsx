@@ -365,7 +365,7 @@ const CaseStudyMatchPage = () => {
                     </thead>
                     <tbody>
                       {[
-                        ["Active tab count", "8 – 15", "4 – 6", "4 – 6", true],
+                        ["Live Match Follower ", "Visits repeatedly during live games", "4 – 6", "4 – 6", true],
                         ["Ball-by-ball details", "Deep / nested", "Compact flat", "4 – 6", false],
                         ["Overwise summaries", "Hidden tab", "Always visible", "4 – 6", false],
                         ["Layout density options", "None (one size)", "User selectable", "4 – 6", true],
