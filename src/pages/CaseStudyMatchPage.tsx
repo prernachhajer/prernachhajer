@@ -246,9 +246,8 @@ const CaseStudyMatchPage = () => {
                 Too much, and no order to it.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Over time, individual feature releases bloated the match page both wider and denser, compounded by a
-                team that kept valuing compactness over clarity, until the page stopped feeling like a guide and started
-                feeling like a dump.
+                Over time, individual feature releases piled onto the match page - more tabs added, more content packed
+                into each screen- until it stopped feeling like a guide and started feeling like a dump
               </p>
             </motion.div>
 
