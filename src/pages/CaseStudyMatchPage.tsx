@@ -121,7 +121,7 @@ const CaseStudyMatchPage = () => {
             {[
               { label: "Tabs", value: "8–15 → 3–8", note: "Nearly halved", accent: true },
               { label: "App rating", value: "3.4 → 4.5", note: "Play Store + App Store" },
-              { label: "Time on page", value: "+50%", note: "~1min → 1min 30s" },
+              { label: "Time on page", value: "+50%", note: "Improved" },
             ].map((item, i) => (
               <div
                 key={item.label}
