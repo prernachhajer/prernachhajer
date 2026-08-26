@@ -572,7 +572,7 @@ const CaseStudyMatchPage = () => {
               <ul className="flex flex-col gap-4">
                 <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
                 <Bullet>First try: prev/next arrows to move between adjacent matches. But that added to the app-bar clutter we were trying to fix.</Bullet>
-                <Bullet>Reduced cognitive overload by removing deep-navigation drawers.</Bullet>
+                <Bullet>So we replaced it with a more dropdown with team or tournament-specific match listing.</Bullet>
               </ul>
               <TradeOff>
                 Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off on the home feed in
