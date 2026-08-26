@@ -522,7 +522,9 @@ const CaseStudyMatchPage = () => {
           <Block eyebrow="Decision 3 — Surface a preview" title="You shouldn't have to leave a page to know it's there">
             <ul className="flex flex-col gap-4 max-w-3xl">
               <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
-              <Bullet>Each preview taps straight through to the full content, so nothing feels lost along the way.</Bullet>
+              <Bullet>
+                Each preview taps straight through to the full content, so nothing feels lost along the way.
+              </Bullet>
             </ul>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
@@ -544,7 +546,7 @@ const CaseStudyMatchPage = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Inline wicket photos appear directly inside ball-by-ball commentary.</Bullet>
-                <Bullet>Horizontal media scrollers bring reports into the active scorecard context.</Bullet>
+
                 <Bullet>Tappable media cards open highlights without leaving the primary hub.</Bullet>
               </ul>
               <TradeOff>Heavier inline media required custom lazy-loading structures to protect performance.</TradeOff>
