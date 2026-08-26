@@ -490,7 +490,7 @@ const CaseStudyMatchPage = () => {
             </div>
 
             {/* Tab comparison */}
-            <div className="max-w-3xl mt-16 md:mt-8 mb-8 pt-4">
+            <div className="max-w-3xl mt-16 md:mt-8 mb-20 pt-4">
               <img
                 src={tabComparisonAsset.url}
                 alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
@@ -513,7 +513,7 @@ const CaseStudyMatchPage = () => {
                 cross-innings tracking paths.
               </TradeOff>
             </div>
-            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
+            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mb-20 mt-12">
               <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} />
               <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} />
               <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} />
@@ -525,7 +525,7 @@ const CaseStudyMatchPage = () => {
               <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
               <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
             </ul>
-            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
                 src={liveContentAsset.url}
                 alt="Live tab surfacing recent commentary preview"
@@ -550,7 +550,7 @@ const CaseStudyMatchPage = () => {
               </ul>
               <TradeOff>Heavier inline media required custom lazy-loading structures to protect performance.</TradeOff>
             </div>
-            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+            <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
                 src={scorecardMediaAsset.url}
                 alt="Scorecard tab with inline videos and photos"
@@ -578,7 +578,7 @@ const CaseStudyMatchPage = () => {
                 analytics.
               </TradeOff>
             </div>
-            <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 items-start">
+            <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 mb-20 items-start">
               <Figure
                 src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
                 caption="Before"
@@ -592,7 +592,7 @@ const CaseStudyMatchPage = () => {
                 <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
               </div>
               <div className="md:col-span-2">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-6 mb-20 ">
                   <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
                   <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
                 </div>
@@ -638,7 +638,7 @@ const CaseStudyMatchPage = () => {
                   </TradeOff>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-8 mb-20">
                 <Figure
                   src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`}
                   caption="Compact"
@@ -660,7 +660,7 @@ const CaseStudyMatchPage = () => {
               <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
               <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
             </ul>
-            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
+            <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12 mb-20">
               <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
               <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} />
               <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} />
