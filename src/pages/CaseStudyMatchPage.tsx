@@ -397,6 +397,7 @@ const CaseStudyMatchPage = () => {
           </div>
           
         </div>
+        </div>
       </section>
 
       {/* ── DECISIONS ──────────────────────── */}
