@@ -231,65 +231,67 @@ const CaseStudyMatchPage = () => {
 
       {/* ── PROBLEM ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`max-w-3xl mx-auto`}>
-          <SectionLabel>Problem</SectionLabel>
+        <div className={`${layout.container} max-w-3xl mx-auto`}>
+          <div className={`max-w-3xl mx-auto`}>
+            <SectionLabel>Problem</SectionLabel>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="max-w-3xl"
-          >
-            <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-              Too much, and no order to it.
-            </h2>
-            <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-              Over time, individual feature releases bloated the match page with no structure to hold them, compounded
-              by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and
-              started feeling like a dump.
-            </p>
-          </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="max-w-3xl"
+            >
+              <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
+                Too much, and no order to it.
+              </h2>
+              <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
+                Over time, individual feature releases bloated the match page with no structure to hold them, compounded
+                by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and
+                started feeling like a dump.
+              </p>
+            </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start mt-16 md:mt-8 pt-4">
-            <div className="mb-6">
-              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
-              <ul className="flex flex-col gap-4">
-                <Bullet>
-                  <strong className="text-foreground font-semibold">Business problem: </strong>
-                  Organic features added under pressure without holistic IA oversight.
-                </Bullet>
-                <Bullet>
-                  <strong className="text-foreground font-semibold">Root cause: </strong>
-                  Tabs became the default way to ship any standalone feature quickly.
-                </Bullet>
-                <Bullet>
-                  <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                  Features kept landing as new tabs — the fastest way to ship something without disturbing what already
-                  existed.
-                </Bullet>
-                <Bullet>
-                  <strong className="text-foreground font-semibold">Strategy: </strong>
-                  Consolidate structure around core tasks rather than departmental ownership.
-                </Bullet>
-              </ul>
+            <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start mt-16 md:mt-8 pt-4">
+              <div className="mb-6">
+                <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
+                <ul className="flex flex-col gap-4">
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Business problem: </strong>
+                    Organic features added under pressure without holistic IA oversight.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Root cause: </strong>
+                    Tabs became the default way to ship any standalone feature quickly.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
+                    Features kept landing as new tabs — the fastest way to ship something without disturbing what
+                    already existed.
+                  </Bullet>
+                  <Bullet>
+                    <strong className="text-foreground font-semibold">Strategy: </strong>
+                    Consolidate structure around core tasks rather than departmental ownership.
+                  </Bullet>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-4 gap-4 md:gap-5">
-            {[
-              { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
-              { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
-              { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
-              { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
-            ].map((img) => (
-              <img
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-auto border border-border rounded-lg"
-                loading="lazy"
-              />
-            ))}
+            <div className="grid grid-cols-4 gap-4 md:gap-5">
+              {[
+                { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
+                { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
+                { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
+                { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
+              ].map((img) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto border border-border rounded-lg"
+                  loading="lazy"
+                />
+              ))}
+            </div>
           </div>
 
           {/* Evidence */}
