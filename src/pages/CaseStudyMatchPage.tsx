@@ -396,6 +396,13 @@ const CaseStudyMatchPage = () => {
               </div>
             </Block>
 
+            <img
+              src={matchTabsImg}
+              alt="Old match page showing 12 tabs during live match and 14 tabs post match"
+              className="w-full"
+              loading="lazy"
+            />
+
             <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open where it matters">
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <ul className="flex flex-col gap-4">
