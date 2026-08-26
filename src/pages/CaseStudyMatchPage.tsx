@@ -15,6 +15,15 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import matchTabsImg from "@/assets/match-page-tabs.png";
+import compact01Asset from "@/assets/Match_compact01.png.asset.json";
+import compact02Asset from "@/assets/Match_compact02.png.asset.json";
+import compact03Asset from "@/assets/Match_compact03.png.asset.json";
+import compact04Asset from "@/assets/Match_compact04.png.asset.json";
+import tabComparisonAsset from "@/assets/Tab_comparison.png.asset.json";
+import scorecardMediaAsset from "@/assets/Scorecard-media.png.asset.json";
+import commsMediaAsset from "@/assets/Comms-media.png.asset.json";
+import liveContentAsset from "@/assets/Live-content.png.asset.json";
+import summaryContentAsset from "@/assets/Summary-content.png.asset.json";
 
 const fade = animation.fade;
 
@@ -262,7 +271,16 @@ const CaseStudyMatchPage = () => {
                 </Bullet>
               </ul>
             </div>
-            <Figure src={`${IMG}/1ea5eda494673915524c930ad9d1c8a3a3b72629?placeholderIfAbsent=true`} />
+            <div className="grid grid-cols-2 gap-4 md:gap-5">
+              {[
+                { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
+                { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
+                { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
+                { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
+              ].map((img) => (
+                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-auto border border-border rounded-lg" loading="lazy" />
+              ))}
+            </div>
           </div>
 
           {/* Evidence */}
@@ -400,6 +418,17 @@ const CaseStudyMatchPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Tab comparison */}
+            <div className="mt-16 md:mt-20 pt-12 border-t border-border">
+              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
+              <img
+                src={tabComparisonAsset.url}
+                alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -485,8 +514,8 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
               </ul>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/dabc0f84b86b3f7a6372f5c8b3eb286470c3e683?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/9890235235900e221512fe127bc88d25d40cb863?placeholderIfAbsent=true`} />
+                <img src={liveContentAsset.url} alt="Live tab surfacing recent commentary preview" className="w-full h-auto" loading="lazy" />
+                <img src={summaryContentAsset.url} alt="Summary tab surfacing videos and report previews" className="w-full h-auto" loading="lazy" />
               </div>
             </Block>
 
@@ -502,8 +531,8 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/a3c5476b9287012a78e9cb0092d6f155b053fa31?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/d0252cdbbeae475b93bddad511be8fbed6d2bb8f?placeholderIfAbsent=true`} />
+                <img src={scorecardMediaAsset.url} alt="Scorecard tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
+                <img src={commsMediaAsset.url} alt="Commentary tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
               </div>
             </Block>
 
