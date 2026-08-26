@@ -352,7 +352,7 @@ const CaseStudyMatchPage = () => {
             {/* Users */}
             <div className="mt-16 md:mt-20 pt-12 border-t border-border">
               <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-              <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div className="grid lg:grid-cols-1 gap-10 items-start">
                 <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                   <table className="w-full text-sm">
                     <thead>
@@ -365,9 +365,27 @@ const CaseStudyMatchPage = () => {
                     </thead>
                     <tbody>
                       {[
-                        ["Live Match Follower ", "Visits repeatedly during live games", "Too much information to process quickly", "Surface what matters most", true],
-                        ["Content consumer", "Reads previews and analysis", "Relevant content is hard to discover", "Improve recommendations", false],
-                        ["Casual fan", "Visits during major events", "Experience can feel overwhelming", "Simplify and guide", false],
+                        [
+                          "Live Match Follower ",
+                          "Visits repeatedly during live games",
+                          "Too much information to process quickly",
+                          "Surface what matters most",
+                          true,
+                        ],
+                        [
+                          "Content consumer",
+                          "Reads previews and analysis",
+                          "Relevant content is hard to discover",
+                          "Improve recommendations",
+                          false,
+                        ],
+                        [
+                          "Casual fan",
+                          "Visits during major events",
+                          "Experience can feel overwhelming",
+                          "Simplify and guide",
+                          false,
+                        ],
                         ["Layout density options", "None (one size)", "User selectable", "4 – 6", true],
                       ].map(([feature, a, b, opportunity, accent]) => (
                         <tr key={feature as string} className="border-t border-border">
