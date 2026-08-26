@@ -299,7 +299,7 @@ const CaseStudyMatchPage = () => {
           <div className="mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
-              Users didn't separate cluttered from slow
+              Users Feedback
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
