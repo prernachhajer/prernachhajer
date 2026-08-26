@@ -458,7 +458,7 @@ const CaseStudyMatchPage = () => {
                   in analytics.
                 </TradeOff>
               </div>
-              <div className="grid md:grid-cols-5 gap-8 md:gap-10 mt-12 items-start">
+              <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 items-start">
                 <Figure
                   src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
                   caption="Before — old match page"
