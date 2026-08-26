@@ -483,8 +483,14 @@ const CaseStudyMatchPage = () => {
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <div className="max-w-5xl pb-0 mb-0">
-            {" "}
-            <SectionLabel className="!mb-0">The decisions</SectionLabel>{" "}
+            {/*   <SectionLabel className="!mb-0">The decisions</SectionLabel> */}
+
+            <div
+              class="flex items-center gap-3 font-mono text-[0.6875rem] tracking-[0.12em] uppercase mb-0 md:mb-0 max-w-5xl mx-auto mx-auto text-primary"
+              style="opacity: 1; transform: none;"
+            >
+              <span class="w-5 h-px bg-primary"></span>The decisions
+            </div>
           </div>
           <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
