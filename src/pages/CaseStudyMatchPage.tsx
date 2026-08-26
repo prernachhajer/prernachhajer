@@ -668,7 +668,7 @@ const CaseStudyMatchPage = () => {
             <ul className="flex flex-col gap-4 max-w-3xl">
               <Bullet>Added to increase engagement. </Bullet>
               <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
-              <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
+              <Bullet>Fan rating tools sit beside traditional news &amp; media without bloating layouts.</Bullet>
               <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
             </ul>
             <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12 mb-20">
