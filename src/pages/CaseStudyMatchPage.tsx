@@ -245,7 +245,9 @@ const CaseStudyMatchPage = () => {
               Too much, and no order to it.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-              Over time, individual feature releases bloated the match page with no structure to hold them, compounded by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and started feeling like a dump.
+              Over time, individual feature releases bloated the match page with no structure to hold them, compounded
+              by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and
+              started feeling like a dump.
             </p>
           </motion.div>
 
@@ -263,7 +265,8 @@ const CaseStudyMatchPage = () => {
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                  Features kept landing as new tabs — the fastest way to ship something without disturbing what already existed.
+                  Features kept landing as new tabs — the fastest way to ship something without disturbing what already
+                  existed.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Strategy: </strong>
@@ -271,14 +274,20 @@ const CaseStudyMatchPage = () => {
                 </Bullet>
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4 md:gap-5">
+            <div className="grid grid-cols-1 gap-4 md:gap-5">
               {[
                 { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
                 { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
                 { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
                 { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
               ].map((img) => (
-                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-auto border border-border rounded-lg" loading="lazy" />
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto border border-border rounded-lg"
+                  loading="lazy"
+                />
               ))}
             </div>
           </div>
@@ -514,8 +523,18 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
               </ul>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <img src={liveContentAsset.url} alt="Live tab surfacing recent commentary preview" className="w-full h-auto" loading="lazy" />
-                <img src={summaryContentAsset.url} alt="Summary tab surfacing videos and report previews" className="w-full h-auto" loading="lazy" />
+                <img
+                  src={liveContentAsset.url}
+                  alt="Live tab surfacing recent commentary preview"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                <img
+                  src={summaryContentAsset.url}
+                  alt="Summary tab surfacing videos and report previews"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
               </div>
             </Block>
 
@@ -531,8 +550,18 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <img src={scorecardMediaAsset.url} alt="Scorecard tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
-                <img src={commsMediaAsset.url} alt="Commentary tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
+                <img
+                  src={scorecardMediaAsset.url}
+                  alt="Scorecard tab with inline videos and photos"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                <img
+                  src={commsMediaAsset.url}
+                  alt="Commentary tab with inline videos and photos"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
               </div>
             </Block>
 
