@@ -217,7 +217,7 @@ const CaseStudyMatchPage = () => {
               },
               {
                 label: "Outcome",
-                body: "Cognitive load down, IA rebuilt, and the numbers moved with it: app rating 3.4 → 4.5, time on page +50%, tabs halved, without removing a feature.",
+                body: "Cognitive load down, IA rebuilt — and the numbers moved with it: app rating 3.4 → 4.5, time on page +50%, tabs halved, without removing a feature.",
               },
             ].map((item) => (
               <div key={item.label} className="pt-4 border-t border-border">
@@ -243,11 +243,12 @@ const CaseStudyMatchPage = () => {
               className="max-w-3xl"
             >
               <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-                More tabs. More clutter. No structure to hold it.
+                Too much, and no order to it.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Over time, individual feature releases piled onto the match page - more tabs added, more content packed
-                into each screen- until it stopped feeling like a guide and started feeling like a dump
+                Over time, individual feature releases bloated the match page with no structure to hold them, compounded
+                by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and
+                started feeling like a dump.
               </p>
             </motion.div>
 
@@ -257,19 +258,23 @@ const CaseStudyMatchPage = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                    Organic features added under pressure without holistic IA oversight; the page grew both wider (more tabs) and denser (more packed into each screen)
+                    Organic features added under pressure without holistic IA oversight — the page grew both wider (more
+                    tabs) and denser (more packed into each screen)
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Root cause:&nbsp;</strong>
-                    Without a shared structure, every new feature had two options: a new tab, or more crammed onto an existing one. Both became default.
+                    Without a shared structure, every new feature had two options — a new tab, or more crammed onto an
+                    existing one. Both became default.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what already existed.
+                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what
+                    already existed.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Strategy:&nbsp;</strong>
-                    Consolidate structure around core tasks rather than departmental ownership; reducing both tab count and on-screen density.
+                    Consolidate structure around core tasks rather than departmental ownership; reducing both tab count
+                    and on-screen density.
                   </Bullet>
                 </ul>
               </div>
@@ -296,7 +301,7 @@ const CaseStudyMatchPage = () => {
           <div className="mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
-              Users feedback
+              Users didn't separate cluttered from slow
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
@@ -397,14 +402,14 @@ const CaseStudyMatchPage = () => {
                           "Reads previews and analysis",
                           "Relevant content is hard to discover",
                           "Improve recommendations",
-                          false,
+                          true,
                         ],
                         [
                           "Casual fan",
                           "Visits during major events",
                           "Experience can feel overwhelming",
                           "Simplify and guide",
-                          false,
+                          true,
                         ],
                       ].map(([feature, a, b, opportunity, accent]) => (
                         <tr key={feature as string} className="border-t border-border">
