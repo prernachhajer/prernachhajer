@@ -485,8 +485,8 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
               </ul>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/dabc0f84b86b3f7a6372f5c8b3eb286470c3e683?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/9890235235900e221512fe127bc88d25d40cb863?placeholderIfAbsent=true`} />
+                <img src={liveContentAsset.url} alt="Live tab surfacing recent commentary preview" className="w-full h-auto" loading="lazy" />
+                <img src={summaryContentAsset.url} alt="Summary tab surfacing videos and report previews" className="w-full h-auto" loading="lazy" />
               </div>
             </Block>
 
