@@ -651,6 +651,7 @@ const CaseStudyMatchPage = () => {
             title="Polls and ratings, sitting beside the depth"
           >
             <ul className="flex flex-col gap-4 max-w-3xl">
+              <Bullet>Added to increase engagement. </Bullet>
               <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
               <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
               <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
