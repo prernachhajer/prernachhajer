@@ -400,14 +400,10 @@ const CaseStudyMatchPage = () => {
                 <div>
                   <blockquote className={`pl-5 ${surface.accentLine}`}>
                     <p className="text-lg leading-relaxed">
-                      Success outcome: more exploration, deeper engagement, and higher content consumption — across all
-                      four segments, not just the ones the redesign was named after.
+                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption —
+                      across all four segments, not just the ones the redesign was named after.
                     </p>
                   </blockquote>
-                  <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                    Competing products carried comparable data volume, but our lack of a clean parent hierarchy forced
-                    users to hunt for key indicators.
-                  </p>
                 </div>
               </div>
             </div>
