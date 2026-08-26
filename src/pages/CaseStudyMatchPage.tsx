@@ -104,7 +104,7 @@ const CaseStudyMatchPage = () => {
             <span className="px-2 text-primary italic font-medium">Redesign</span>
           </motion.h1>
 
-          <motion.div
+          {/*   <motion.div
             initial="hidden"
             animate="visible"
             variants={fade}
@@ -119,6 +119,56 @@ const CaseStudyMatchPage = () => {
                 {chip}
               </span>
             ))}
+          </motion.div> 
+
+          <motion.dl
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={3}
+            className="grid md:grid-cols-3 border-y border-border mt-12 md:mt-14 text-center max-w-5xl mx-auto"
+          >
+            {[
+              { label: "PAGE LOAD", value: "~2x Faster", note: "Nearly halved", accent: true },
+              { label: "App rating", value: "3.4 → 4.5", note: "Play Store + App Store" },
+              { label: "Time on page", value: "+50%", note: "Improved" },
+            ].map((item, i) => (
+              <div
+                key={item.label}
+                className={`px-5 py-6 ${i > 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}
+              >
+                <dt className={`${t.labelSm} text-muted-foreground mb-2.5`}>{item.label}</dt>
+                <dd
+                  className={`text-3xl md:text-4xl leading-none ${item.accent ? "text-primary" : "text-foreground"}`}
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  {item.value}
+                </dd>
+                <p className="text-xs text-muted-foreground mt-2.5">{item.note}</p>
+              </div>
+            ))}
+          </motion.dl> */}
+
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={fade}
+            custom={4}
+            className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-14`}
+          >
+            Cricinfo's match page is the core of the mobile experience, absorbing years of organic feature creep. This
+            overhaul delivered structural improvements without removing the tools hardcore fans depend on daily.
+          </motion.p>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-2xl mx-auto mt-16 md:mt-20"
+          >
+            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before" />
+            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After" />
           </motion.div>
 
           <motion.dl
@@ -148,28 +198,6 @@ const CaseStudyMatchPage = () => {
               </div>
             ))}
           </motion.dl>
-
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={fade}
-            custom={4}
-            className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-14`}
-          >
-            Cricinfo's match page is the core of the mobile experience, absorbing years of organic feature creep. This
-            overhaul delivered structural improvements without removing the tools hardcore fans depend on daily.
-          </motion.p>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-2xl mx-auto mt-16 md:mt-20"
-          >
-            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before" />
-            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After" />
-          </motion.div>
         </div>
       </section>
 
