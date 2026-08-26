@@ -120,7 +120,7 @@ const caseStudies = [
   {
     num: "02 / 04",
     company: "ESPN Cricinfo",
-    title: "2x the Speed, 1/2 the Clutter: Redesigning the Cricket Match Page",
+    title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbMatchPage,
