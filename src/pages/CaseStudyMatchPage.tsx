@@ -57,7 +57,7 @@ const TradeOff = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const Block = ({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) => (
+const Block = ({ eyebrow, title, isFirst, children }: { eyebrow: string; title: string; isFirst?: boolean; children: React.ReactNode }) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
