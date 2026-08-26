@@ -575,8 +575,7 @@ const CaseStudyMatchPage = () => {
                 <Bullet>So we replaced it with a more dropdown with team or tournament-specific match listing.</Bullet>
               </ul>
               <TradeOff>
-                Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off on the home feed in
-                analytics.
+                Easy match-to-match jumping risks pulling traffic away from Home and Schedule
               </TradeOff>
             </div>
             <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 mb-20 items-start">
