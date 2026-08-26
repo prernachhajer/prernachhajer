@@ -275,7 +275,7 @@ const CaseStudyMatchPage = () => {
               </ul>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:gap-5">
+          <div className="grid grid-cols-4 gap-4 md:gap-5">
             {[
               { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
               { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
