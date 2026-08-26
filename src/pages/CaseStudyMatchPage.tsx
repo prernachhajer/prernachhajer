@@ -63,7 +63,7 @@ const Block = ({ eyebrow, title, children }: { eyebrow: string; title: string; c
     whileInView="visible"
     viewport={{ once: true, amount: 0.15 }}
     variants={fade}
-    className="pt-12 md:pt-14 border-t border-border"
+    className="pt-12 md:pt-14 border-b border-border"
   >
     <p className={`${t.labelSm} text-muted-foreground`}>{eyebrow}</p>
     <h3 className={`${t.h3} mt-3`} style={{ fontFamily: t.displayFont }}>
