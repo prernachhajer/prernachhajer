@@ -217,7 +217,7 @@ const CaseStudyMatchPage = () => {
               },
               {
                 label: "Outcome",
-                body: "Cognitive load down, IA rebuilt — and the numbers moved with it: app rating 3.4 → 4.5, time on page +50%, tabs halved, without removing a feature.",
+                body: "Cognitive load down, IA rebuilt, and the numbers moved with it: app rating 3.4 → 4.5, time on page +50%, tabs halved, without removing a feature.",
               },
             ].map((item) => (
               <div key={item.label} className="pt-4 border-t border-border">
@@ -257,11 +257,11 @@ const CaseStudyMatchPage = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                    Organic features added under pressure without holistic IA oversight — the page grew both wider (more tabs) and denser (more packed into each screen)
+                    Organic features added under pressure without holistic IA oversight; the page grew both wider (more tabs) and denser (more packed into each screen)
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Root cause:&nbsp;</strong>
-                    Without a shared structure, every new feature had two options — a new tab, or more crammed onto an existing one. Both became default.
+                    Without a shared structure, every new feature had two options: a new tab, or more crammed onto an existing one. Both became default.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
