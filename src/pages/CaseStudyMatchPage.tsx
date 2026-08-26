@@ -172,7 +172,7 @@ const CaseStudyMatchPage = () => {
             {[
               { label: "My role", value: "Lead Product Designer, project lead" },
               { label: "Worked with", value: "Product Manager, Engineering" },
-              { label: "Scope", value: "IA for the match page UX" },
+              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
               { label: "Platform", value: "iOS & Android" },
               { label: "Timeframe", value: "~6 months, phased rollout" },
               { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
