@@ -180,8 +180,8 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto mt-16 md:mt-20"
           >
-            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before — old match page" ratio={2.475} />
-            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After — new match page" ratio={2.464} />
+            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before — old match page" />
+            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After — new match page" />
           </motion.div>
         </div>
       </section>
@@ -291,7 +291,7 @@ const CaseStudyMatchPage = () => {
                 </Bullet>
               </ul>
             </div>
-            <Figure src={`${IMG}/1ea5eda494673915524c930ad9d1c8a3a3b72629?placeholderIfAbsent=true`} ratio={1.004} />
+            <Figure src={`${IMG}/1ea5eda494673915524c930ad9d1c8a3a3b72629?placeholderIfAbsent=true`} />
           </div>
 
           {/* Evidence */}
@@ -328,8 +328,8 @@ const CaseStudyMatchPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-16 md:mt-20">
-            <Figure src={`${IMG}/25afa1319339dd84885754dc0ca87f26559c3a99?placeholderIfAbsent=true`} ratio={0.485} />
-            <Figure src={`${IMG}/da5c3a6c38198d9c29287724e06c29310bdd9121?placeholderIfAbsent=true`} ratio={0.462} />
+            <Figure src={`${IMG}/25afa1319339dd84885754dc0ca87f26559c3a99?placeholderIfAbsent=true`} />
+            <Figure src={`${IMG}/da5c3a6c38198d9c29287724e06c29310bdd9121?placeholderIfAbsent=true`} />
           </div>
 
           {/* Competitive */}
@@ -436,9 +436,9 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} ratio={1.981} />
-                <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} ratio={1.989} />
-                <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} ratio={1.667} />
+                <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} />
               </div>
             </Block>
 
@@ -448,8 +448,8 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
               </ul>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/dabc0f84b86b3f7a6372f5c8b3eb286470c3e683?placeholderIfAbsent=true`} ratio={1.542} />
-                <Figure src={`${IMG}/9890235235900e221512fe127bc88d25d40cb863?placeholderIfAbsent=true`} ratio={1.538} />
+                <Figure src={`${IMG}/dabc0f84b86b3f7a6372f5c8b3eb286470c3e683?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/9890235235900e221512fe127bc88d25d40cb863?placeholderIfAbsent=true`} />
               </div>
             </Block>
 
@@ -465,8 +465,8 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/a3c5476b9287012a78e9cb0092d6f155b053fa31?placeholderIfAbsent=true`} ratio={1.394} />
-                <Figure src={`${IMG}/d0252cdbbeae475b93bddad511be8fbed6d2bb8f?placeholderIfAbsent=true`} ratio={1.392} />
+                <Figure src={`${IMG}/a3c5476b9287012a78e9cb0092d6f155b053fa31?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/d0252cdbbeae475b93bddad511be8fbed6d2bb8f?placeholderIfAbsent=true`} />
               </div>
             </Block>
 
@@ -483,11 +483,11 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-12 items-start">
-                <Figure src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`} caption="Before — old match page" ratio={2} />
+                <Figure src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`} caption="Before — old match page" />
                 <div>
                   <div className="grid grid-cols-2 gap-6">
-                    <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} ratio={2} />
-                    <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} ratio={2} />
+                    <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
+                    <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
                   </div>
                   <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
                     Solution 1 — Dropdown
@@ -495,8 +495,8 @@ const CaseStudyMatchPage = () => {
                 </div>
                 <div>
                   <div className="grid grid-cols-2 gap-6">
-                    <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} ratio={2} />
-                    <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} ratio={2} />
+                    <Figure src={`${IMG}/c1bfffa138b8a4e08c731274c2b743a6c720f60a?placeholderIfAbsent=true`} />
+                    <Figure src={`${IMG}/6e44f8eb0f1c3c2b8590f26ff58f7689506c00e2?placeholderIfAbsent=true`} />
                   </div>
                   <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
                     Solution 2 — Optimising the app bar
@@ -541,8 +541,8 @@ const CaseStudyMatchPage = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-8">
-                  <Figure src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`} caption="Compact" ratio={2.055} />
-                  <Figure src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`} caption="Approved — live" ratio={2.055} />
+                  <Figure src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`} caption="Compact" />
+                  <Figure src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`} caption="Approved — live" />
                 </div>
               </div>
             </Block>
@@ -554,9 +554,9 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
               </ul>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} ratio={1.889} />
-                <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} ratio={1.889} />
-                <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} ratio={1.889} />
+                <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} />
+                <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} />
               </div>
             </Block>
 
