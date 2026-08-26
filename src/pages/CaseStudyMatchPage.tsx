@@ -571,7 +571,7 @@ const CaseStudyMatchPage = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
-                <Bullet>Prev/next shortcuts map adjacent game days smoothly.</Bullet>
+                <Bullet>Prev/next shortcuts map adjacent game days smoothly (deprecated)</Bullet>
                 <Bullet>Reduced cognitive overload by removing deep-navigation drawers.</Bullet>
               </ul>
               <TradeOff>
