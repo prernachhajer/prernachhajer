@@ -697,8 +697,8 @@ const CaseStudyMatchPage = () => {
               </div>
             </Block>
           </div>
-        </div>
       </section>
+
 
       {/* ── RESULTS ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
