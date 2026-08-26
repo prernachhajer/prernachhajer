@@ -158,14 +158,8 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-2xl mx-auto mt-16 md:mt-20"
           >
-            <Figure
-              src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`}
-              caption="Before — old match page"
-            />
-            <Figure
-              src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`}
-              caption="After — new match page"
-            />
+            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before" />
+            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After" />
           </motion.div>
         </div>
       </section>
@@ -400,8 +394,8 @@ const CaseStudyMatchPage = () => {
                 <div>
                   <blockquote className={`pl-5 ${surface.accentLine}`}>
                     <p className="text-lg leading-relaxed">
-                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption
-                      across all segments.
+                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
+                      all segments.
                     </p>
                   </blockquote>
                 </div>
@@ -529,7 +523,7 @@ const CaseStudyMatchPage = () => {
               <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 items-start">
                 <Figure
                   src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
-                  caption="Before — old match page"
+                  caption="Before"
                 />
 
                 <div className="md:col-span-2">
