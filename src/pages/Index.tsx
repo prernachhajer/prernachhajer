@@ -120,18 +120,6 @@ const caseStudies = [
   {
     num: "02 / 04",
     company: "ESPN Cricinfo",
-    title: "50% Faster Handoffs: Building a Design System at Scale",
-    titleEm: "",
-    thumbType: "photo" as const,
-    thumbImage: thumbDesignSystem,
-    statNum: "100+",
-    statLabel: "files in system",
-    year: "2021–24",
-    link: "/case-study/design-system",
-  },
-  {
-    num: "03 / 04",
-    company: "ESPN Cricinfo",
     title: "3x Better Findability: Simplifying an Overloaded Page",
     titleEm: "",
     thumbType: "photo" as const,
@@ -141,6 +129,19 @@ const caseStudies = [
     year: "2023",
     link: "/case-study/match-page",
   },
+  {
+    num: "03 / 04",
+    company: "ESPN Cricinfo",
+    title: "50% Faster Handoffs: Building a Design System at Scale",
+    titleEm: "",
+    thumbType: "photo" as const,
+    thumbImage: thumbDesignSystem,
+    statNum: "100+",
+    statLabel: "files in system",
+    year: "2021–24",
+    link: "/case-study/design-system",
+  },
+
   {
     num: "04 / 04",
     company: "ESPN Cricinfo",
@@ -457,52 +458,52 @@ const Index = () => {
             </motion.h1>
           </div>
 
-            <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
-              {/* Two-column intro */}
-              <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 w-full max-w-[1024px] mx-auto">
-                <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
-                  <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
-                    Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive,
-                    user-centered experiences through design, systems, and cross-functional leadership.
-                  </p>
+          <div className={`${wrapCls} pb-12 pt-12 md:pb-16 w-full`}>
+            {/* Two-column intro */}
+            <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 w-full max-w-[1024px] mx-auto">
+              <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
+                <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
+                  Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive,
+                  user-centered experiences through design, systems, and cross-functional leadership.
+                </p>
 
-                  <div className="mt-8 flex flex-wrap gap-3 items-start">
-                    <Button
-                      onClick={() => scrollTo("work")}
-                      className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
-                    >
-                      View my work →
-                    </Button>
-
-                    <Button
-                      variant="outline"
-                      onClick={() => navigate("/resume")}
-                      className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
-                    >
-                      View resume
-                    </Button>
-                  </div>
-                </motion.div>
-
-                <motion.div initial="hidden" animate="visible" variants={fade} custom={5} className="relative">
-                  <span
-                    aria-hidden
-                    className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
-                    style={{ fontFamily: t.displayFont }}
+                <div className="mt-8 flex flex-wrap gap-3 items-start">
+                  <Button
+                    onClick={() => scrollTo("work")}
+                    className="h-auto bg-foreground text-background px-8 py-3.5 rounded-full text-sm font-medium hover:bg-primary hover:-translate-y-0.5 transition-all"
                   >
-                    “
-                  </span>
-                  <p
-                    className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
-                    style={{ fontFamily: t.displayFont }}
+                    View my work →
+                  </Button>
+
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate("/resume")}
+                    className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
                   >
-                    From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
-                    designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that
-                    same rigor to AI-assisted design.
-                  </p>
-                </motion.div>
-              </div>
+                    View resume
+                  </Button>
+                </div>
+              </motion.div>
+
+              <motion.div initial="hidden" animate="visible" variants={fade} custom={5} className="relative">
+                <span
+                  aria-hidden
+                  className="absolute -top-4 -left-1 text-primary/50 text-3xl leading-none"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  “
+                </span>
+                <p
+                  className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
+                  style={{ fontFamily: t.displayFont }}
+                >
+                  From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
+                  designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that same
+                  rigor to AI-assisted design.
+                </p>
+              </motion.div>
             </div>
+          </div>
         </div>
       </section>
       {/* ─────────────────────────────────────────
@@ -626,7 +627,6 @@ const Index = () => {
                     <span className="gap-5 px-1.5">{cs.statLabel}</span>
                   </div>
                 </div>
-
               </motion.div>
             );
           })}
