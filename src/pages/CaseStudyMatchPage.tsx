@@ -20,15 +20,7 @@ const fade = animation.fade;
 const IMG = "https://api.builder.io/api/v1/image/assets/6a614af2da2f4e509e633c1014b6b75b";
 
 // ── Small building blocks (tokens only) ───────
-const Figure = ({
-  src,
-  caption,
-  ratio,
-}: {
-  src: string;
-  caption?: string;
-  ratio?: number;
-}) => (
+const Figure = ({ src, caption, ratio }: { src: string; caption?: string; ratio?: number }) => (
   <figure className="w-full">
     <img
       src={src}
@@ -37,20 +29,14 @@ const Figure = ({
       className={`w-full h-auto object-contain ${radius.cardSm}`}
       style={ratio ? { aspectRatio: ratio } : undefined}
     />
-    {caption && (
-      <figcaption className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
-        {caption}
-      </figcaption>
-    )}
+    {caption && <figcaption className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>{caption}</figcaption>}
   </figure>
 );
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <li className="flex gap-3 items-start">
     <span className="text-primary font-medium leading-relaxed">—</span>
-    <span className="flex-1 text-sm md:text-base leading-relaxed text-muted-foreground">
-      {children}
-    </span>
+    <span className="flex-1 text-sm md:text-base leading-relaxed text-muted-foreground">{children}</span>
   </li>
 );
 
@@ -61,15 +47,7 @@ const TradeOff = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const Block = ({
-  eyebrow,
-  title,
-  children,
-}: {
-  eyebrow: string;
-  title: string;
-  children: React.ReactNode;
-}) => (
+const Block = ({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
@@ -123,7 +101,7 @@ const CaseStudyMatchPage = () => {
             custom={2}
             className="flex flex-wrap gap-3 justify-center mt-10 md:mt-12"
           >
-            {["Lead Product Designer", "~6 months", "iOS & Android", "22 screens"].map((chip) => (
+            {["Lead Product Designer", "~6 months", "iOS & Android"].map((chip) => (
               <span
                 key={chip}
                 className={`${t.labelSm} px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
@@ -168,9 +146,8 @@ const CaseStudyMatchPage = () => {
             custom={4}
             className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-14`}
           >
-            Cricinfo's match page is the core of the mobile experience, absorbing years of organic
-            feature creep. This overhaul delivered structural improvements without removing the
-            tools hardcore fans depend on daily.
+            Cricinfo's match page is the core of the mobile experience, absorbing years of organic feature creep. This
+            overhaul delivered structural improvements without removing the tools hardcore fans depend on daily.
           </motion.p>
 
           <motion.div
@@ -180,8 +157,14 @@ const CaseStudyMatchPage = () => {
             variants={fade}
             className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto mt-16 md:mt-20"
           >
-            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before — old match page" />
-            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After — new match page" />
+            <Figure
+              src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`}
+              caption="Before — old match page"
+            />
+            <Figure
+              src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`}
+              caption="After — new match page"
+            />
           </motion.div>
         </div>
       </section>
@@ -200,13 +183,8 @@ const CaseStudyMatchPage = () => {
               { label: "Rollout order", value: "Tabs → accordions → dropdown → prev/next" },
             ].map((item) => (
               <div key={item.label}>
-                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>
-                  {item.label}
-                </dt>
-                <dd
-                  className="mt-3 text-xl md:text-2xl leading-snug"
-                  style={{ fontFamily: t.displayFont }}
-                >
+                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
+                <dd className="mt-3 text-xl md:text-2xl leading-snug" style={{ fontFamily: t.displayFont }}>
                   {item.value}
                 </dd>
               </div>
@@ -263,9 +241,8 @@ const CaseStudyMatchPage = () => {
               Too much, and no order to it.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-              Over time, individual feature releases bloated the match centre with secondary
-              metrics. Mobile real estate was saturated with redundant navigation paths, creating
-              constant friction.
+              Over time, individual feature releases bloated the match centre with secondary metrics. Mobile real estate
+              was saturated with redundant navigation paths, creating constant friction.
             </p>
           </motion.div>
 
@@ -303,8 +280,7 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
                 {
-                  quote:
-                    "It takes forever to open the scorecard page, there's just too much stuff in my way.",
+                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
                   source: "— User audit #4",
                 },
                 {
@@ -315,15 +291,13 @@ const CaseStudyMatchPage = () => {
               ].map((q) => (
                 <blockquote key={q.source} className={`pl-5 ${surface.accentLine}`}>
                   <p className="text-lg leading-relaxed">{q.quote}</p>
-                  <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>
-                    {q.source}
-                  </cite>
+                  <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>{q.source}</cite>
                 </blockquote>
               ))}
             </div>
             <p className={`${t.bodyLg} text-muted-foreground mt-8 max-w-3xl`}>
-              Test match scorecards are complex data layers. When users hit navigation delays and
-              redundant filters, they perceive the page as sluggish even when load metrics are fine.
+              Test match scorecards are complex data layers. When users hit navigation delays and redundant filters,
+              they perceive the page as sluggish even when load metrics are fine.
             </p>
           </div>
 
@@ -364,13 +338,12 @@ const CaseStudyMatchPage = () => {
               <div>
                 <blockquote className={`pl-5 ${surface.accentLine}`}>
                   <p className="text-lg leading-relaxed">
-                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors'
-                    perception of speed."
+                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
                   </p>
                 </blockquote>
                 <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                  Competing products carried comparable data volume, but our lack of a clean parent
-                  hierarchy forced users to hunt for key indicators.
+                  Competing products carried comparable data volume, but our lack of a clean parent hierarchy forced
+                  users to hunt for key indicators.
                 </p>
               </div>
             </div>
@@ -395,15 +368,15 @@ const CaseStudyMatchPage = () => {
                 Depth wasn't the problem. The absence of structure was.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Hardcore fans expect every statistic, commentary string and wagon wheel. So we
-                targeted navigation hygiene and information priority instead of dropping features.
+                Hardcore fans expect every statistic, commentary string and wagon wheel. So we targeted navigation
+                hygiene and information priority instead of dropping features.
               </p>
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
               <p className={`${t.labelSm} text-muted-foreground`}>The rule, stated once</p>
               <p className="mt-3 text-base leading-relaxed">
-                Dedicated visibility should scale with how central something is to this specific
-                moment — not with how much space it visually takes up.
+                Dedicated visibility should scale with how central something is to this specific moment — not with how
+                much space it visually takes up.
               </p>
             </div>
           </motion.div>
@@ -417,8 +390,8 @@ const CaseStudyMatchPage = () => {
                   <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
                 </ul>
                 <TradeOff>
-                  Moving specialised content inside parents meant some loyal users filed tickets
-                  looking for vanished entries before adapting.
+                  Moving specialised content inside parents meant some loyal users filed tickets looking for vanished
+                  entries before adapting.
                 </TradeOff>
               </div>
             </Block>
@@ -431,8 +404,8 @@ const CaseStudyMatchPage = () => {
                   <Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet>
                 </ul>
                 <TradeOff>
-                  Multi-innings comparison requires an extra tap to open parallel accordions, slightly
-                  shifting cross-innings tracking paths.
+                  Multi-innings comparison requires an extra tap to open parallel accordions, slightly shifting
+                  cross-innings tracking paths.
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -442,7 +415,10 @@ const CaseStudyMatchPage = () => {
               </div>
             </Block>
 
-            <Block eyebrow="Decision 3 — Surface a preview" title="You shouldn't have to leave a page to know it's there">
+            <Block
+              eyebrow="Decision 3 — Surface a preview"
+              title="You shouldn't have to leave a page to know it's there"
+            >
               <ul className="flex flex-col gap-4 max-w-3xl">
                 <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
@@ -478,20 +454,21 @@ const CaseStudyMatchPage = () => {
                   <Bullet>Reduced cognitive overload by removing deep-navigation drawers.</Bullet>
                 </ul>
                 <TradeOff>
-                  Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off
-                  on the home feed in analytics.
+                  Aggressive cross-navigation bypasses traditional portal hubs, so we monitor drop-off on the home feed
+                  in analytics.
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-12 items-start">
-                <Figure src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`} caption="Before — old match page" />
+                <Figure
+                  src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
+                  caption="Before — old match page"
+                />
                 <div>
                   <div className="grid grid-cols-2 gap-6">
                     <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
                     <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
                   </div>
-                  <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>
-                    Solution 1 — Dropdown
-                  </p>
+                  <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
                 </div>
                 <div>
                   <div className="grid grid-cols-2 gap-6">
@@ -505,16 +482,18 @@ const CaseStudyMatchPage = () => {
               </div>
             </Block>
 
-            <Block eyebrow="Decision 6 — Say no to the popular idea" title="Fully designed, evidenced against, never shipped">
+            <Block
+              eyebrow="Decision 6 — Say no to the popular idea"
+              title="Fully designed, evidenced against, never shipped"
+            >
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <div>
                   <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
                   <ul className="flex flex-col gap-4">
                     <Bullet>
                       <strong className="text-foreground font-semibold">Belief: </strong>
-                      Editorial, product and stakeholders shared one instinct — people read at speed
-                      and want everything comparable at a glance, so the page should be as compact as
-                      possible.
+                      Editorial, product and stakeholders shared one instinct — people read at speed and want everything
+                      comparable at a glance, so the page should be as compact as possible.
                     </Bullet>
                     <Bullet>
                       <strong className="text-foreground font-semibold">Built: </strong>
@@ -522,32 +501,39 @@ const CaseStudyMatchPage = () => {
                     </Bullet>
                     <Bullet>
                       <strong className="text-foreground font-semibold">Evidence against: </strong>
-                      Research said users preferred scanning minimal, digestible information over
-                      dense screens — shipping this would have recreated the "information dump"
-                      complaint, more concentrated.
+                      Research said users preferred scanning minimal, digestible information over dense screens —
+                      shipping this would have recreated the "information dump" complaint, more concentrated.
                     </Bullet>
                     <Bullet>
                       <strong className="text-foreground font-semibold">Killed: </strong>
-                      An internal audit sealed it: running the compact design past the team surfaced
-                      the same complaint users had made, this time from the people who'd pushed for it.
+                      An internal audit sealed it: running the compact design past the team surfaced the same complaint
+                      users had made, this time from the people who'd pushed for it.
                     </Bullet>
                   </ul>
                   <div className="mt-8">
                     <TradeOff>
-                      Killing this cost real design and engineering time already sunk into a fully
-                      built layout. That sunk cost is exactly what makes not shipping it a harder call
-                      than it looks in hindsight.
+                      Killing this cost real design and engineering time already sunk into a fully built layout. That
+                      sunk cost is exactly what makes not shipping it a harder call than it looks in hindsight.
                     </TradeOff>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-8">
-                  <Figure src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`} caption="Compact" />
-                  <Figure src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`} caption="Approved — live" />
+                  <Figure
+                    src={`${IMG}/20ea59141deb456b7f0c0e3c876fc0e621ccc83c?placeholderIfAbsent=true`}
+                    caption="Compact"
+                  />
+                  <Figure
+                    src={`${IMG}/fb92aa37ca79742ee50465222724dda48f4092e3?placeholderIfAbsent=true`}
+                    caption="Approved — live"
+                  />
                 </div>
               </div>
             </Block>
 
-            <Block eyebrow="Decision 7 — Add participation without re-cluttering" title="Polls and ratings, sitting beside the depth">
+            <Block
+              eyebrow="Decision 7 — Add participation without re-cluttering"
+              title="Polls and ratings, sitting beside the depth"
+            >
               <ul className="flex flex-col gap-4 max-w-3xl">
                 <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
                 <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
@@ -572,10 +558,7 @@ const CaseStudyMatchPage = () => {
                     body: "Held the line at two clean ad banners per viewport block, protecting content integrity.",
                   },
                 ].map((item) => (
-                  <div
-                    key={item.label}
-                    className={`${radius.cardSm} ${surface.card} p-6`}
-                  >
+                  <div key={item.label} className={`${radius.cardSm} ${surface.card} p-6`}>
                     <p className={`${t.labelSm} text-muted-foreground`}>{item.label}</p>
                     <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
                   </div>
@@ -626,8 +609,8 @@ const CaseStudyMatchPage = () => {
           </ImpactPanel>
 
           <p className={`${t.bodyLg} text-muted-foreground max-w-3xl`}>
-            With the statistics in order, users reached the data they wanted in half the taps. The
-            interface stopped generating friction, and store ratings followed.
+            With the statistics in order, users reached the data they wanted in half the taps. The interface stopped
+            generating friction, and store ratings followed.
           </p>
         </div>
       </section>
