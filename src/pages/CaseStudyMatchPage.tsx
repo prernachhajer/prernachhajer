@@ -386,7 +386,6 @@ const CaseStudyMatchPage = () => {
                           "Simplify and guide",
                           false,
                         ],
-                        ["Layout density options", "None (one size)", "User selectable", "4 – 6", true],
                       ].map(([feature, a, b, opportunity, accent]) => (
                         <tr key={feature as string} className="border-t border-border">
                           <td className="p-3 text-foreground">{feature}</td>
