@@ -623,7 +623,7 @@ const CaseStudyMatchPage = () => {
             eyebrow="Decision 6 — Say no to the popular idea"
             title="Fully designed, evidenced against, never shipped"
           >
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="grid lg:grid-cols-2 gap-20 items-start">
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
                 <ul className="flex flex-col gap-4">
