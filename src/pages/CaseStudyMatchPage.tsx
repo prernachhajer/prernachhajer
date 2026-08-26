@@ -571,12 +571,13 @@ const CaseStudyMatchPage = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
-                <Bullet>First try: prev/next arrows to move between adjacent matches. But that added to the app-bar clutter we were trying to fix.</Bullet>
+                <Bullet>
+                  First try: prev/next arrows to move between adjacent matches. But that added to the app-bar clutter we
+                  were trying to fix.
+                </Bullet>
                 <Bullet>So we replaced it with a more dropdown with team or tournament-specific match listing.</Bullet>
               </ul>
-              <TradeOff>
-                Easy match-to-match jumping risks pulling traffic away from Home and Schedule
-              </TradeOff>
+              <TradeOff>Easy match-to-match jumping risks pulling traffic away from Home and Schedule</TradeOff>
             </div>
             <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 mb-20 items-start">
               <Figure
@@ -631,12 +632,6 @@ const CaseStudyMatchPage = () => {
                     users had made, this time from the people who'd pushed for it.
                   </Bullet>
                 </ul>
-                <div className="mt-8">
-                  <TradeOff>
-                    Killing this cost real design and engineering time already sunk into a fully built layout. That sunk
-                    cost is exactly what makes not shipping it a harder call than it looks in hindsight.
-                  </TradeOff>
-                </div>
               </div>
               <div className="grid grid-cols-2 gap-8 mb-20">
                 <Figure
