@@ -502,8 +502,8 @@ const CaseStudyMatchPage = () => {
                 </TradeOff>
               </div>
               <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
-                <Figure src={`${IMG}/a3c5476b9287012a78e9cb0092d6f155b053fa31?placeholderIfAbsent=true`} />
-                <Figure src={`${IMG}/d0252cdbbeae475b93bddad511be8fbed6d2bb8f?placeholderIfAbsent=true`} />
+                <img src={scorecardMediaAsset.url} alt="Scorecard tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
+                <img src={commsMediaAsset.url} alt="Commentary tab with inline videos and photos" className="w-full h-auto" loading="lazy" />
               </div>
             </Block>
 
