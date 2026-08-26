@@ -155,7 +155,7 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto mt-16 md:mt-20"
+            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-3xl mx-auto mt-16 md:mt-20"
           >
             <Figure
               src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`}
