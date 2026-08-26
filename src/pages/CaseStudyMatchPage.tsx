@@ -474,7 +474,7 @@ const CaseStudyMatchPage = () => {
                   entries before adapting.
                 </TradeOff>
               </div>
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="grid md:grid-cols-1 gap-8 mt-12">
                 {/* Tab comparison */}
                 <div className="mt-16 md:mt-20 pt-12 border-t border-border">
                   <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
