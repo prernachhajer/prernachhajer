@@ -129,7 +129,7 @@ const CaseStudyMatchPage = () => {
             className="grid md:grid-cols-3 border-y border-border mt-12 md:mt-14 text-center max-w-5xl mx-auto"
           >
             {[
-              { label: "Tabs", value: "8–15 → 3–8", note: "Nearly halved", accent: true },
+              { label: "PAGE LOAD", value: "~2x Faster", note: "Nearly halved", accent: true },
               { label: "App rating", value: "3.4 → 4.5", note: "Play Store + App Store" },
               { label: "Time on page", value: "+50%", note: "Improved" },
             ].map((item, i) => (
