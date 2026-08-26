@@ -14,6 +14,7 @@ import {
   impactCell,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
+import matchTabsImg from "@/assets/match-page-tabs.png";
 
 const fade = animation.fade;
 
