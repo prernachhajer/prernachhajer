@@ -545,7 +545,7 @@ const CaseStudyMatchPage = () => {
               <ul className="flex flex-col gap-4">
                 <Bullet>Inline wicket photos appear directly inside ball-by-ball commentary.</Bullet>
                 <Bullet>Horizontal media scrollers bring reports into the active scorecard context.</Bullet>
-                <Bullet>Tappable report cards open highlights without leaving the primary hub.</Bullet>
+                <Bullet>Tappable media cards open highlights without leaving the primary hub.</Bullet>
               </ul>
               <TradeOff>Heavier inline media required custom lazy-loading structures to protect performance.</TradeOff>
             </div>
