@@ -522,7 +522,7 @@ const CaseStudyMatchPage = () => {
           <Block eyebrow="Decision 3 — Surface a preview" title="You shouldn't have to leave a page to know it's there">
             <ul className="flex flex-col gap-4 max-w-3xl">
               <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
-              <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
+              <Bullet>Each preview taps straight through to the full content, so nothing feels lost along the way.</Bullet>
             </ul>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
