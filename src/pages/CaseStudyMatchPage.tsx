@@ -236,8 +236,7 @@ const CaseStudyMatchPage = () => {
               Too much, and no order to it.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-              Over time, individual feature releases bloated the match centre with secondary metrics. Mobile real estate
-              was saturated with redundant navigation paths, creating constant friction.
+              Over time, individual feature releases bloated the match centre&nbsp;with no structure to hold them, compounded by a team that kept valuing compactness over clarity, until the page stopped feeling like a guide and started feeling like a dump.
             </p>
           </motion.div>
 
