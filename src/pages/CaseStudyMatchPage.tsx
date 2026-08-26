@@ -252,7 +252,7 @@ const CaseStudyMatchPage = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start mt-16 md:mt-8 pt-4">
+            <div className="grid md:grid-cols-1 gap-10 md:gap-14 items-start mt-16 md:mt-8 pt-4">
               <div className="mb-6">
                 <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
                 <ul className="flex flex-col gap-4">
