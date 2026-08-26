@@ -708,8 +708,8 @@ const CaseStudyMatchPage = () => {
                 { value: "+50%", label: "Time on match page" },
                 { value: "8–15 → 3–8", label: "Tab-taps-to-content" },
                 { value: "Strong", label: "Polls & fan engagement" },
-                { value: "~50% down", label: "Complaint sentiment" },
-                { value: "0", label: "Features removed" },
+                { value: "~2x faster", label: "PAGE LOAD" },
+                { value: "+30%", label: "PAGE VIEWS" },
               ].map((s) => (
                 <div key={s.label} className={`${impactCell} p-6 md:p-8`}>
                   <p
