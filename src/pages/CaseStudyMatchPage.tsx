@@ -567,7 +567,7 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 5 — Make it easy to move sideways" title="A dropdown and two buttons, not a maze">
+          <Block eyebrow="Decision 5 — Make it easy to move sideways" title="Two dropdowns replace the maze of actions">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
