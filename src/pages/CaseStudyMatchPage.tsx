@@ -400,6 +400,17 @@ const CaseStudyMatchPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Tab comparison */}
+            <div className="mt-16 md:mt-20 pt-12 border-t border-border">
+              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
+              <img
+                src={tabComparisonAsset.url}
+                alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
