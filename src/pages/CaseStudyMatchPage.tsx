@@ -484,8 +484,7 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
               </ul>
               <TradeOff>
-                Moving specialised content inside parents meant some loyal users filed tickets looking for vanished
-                entries before adapting.
+                A few loyal users filed tickets when their usual tabs disappeared — before adapting to the new layout.
               </TradeOff>
             </div>
 
