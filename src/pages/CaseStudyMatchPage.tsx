@@ -470,7 +470,10 @@ const CaseStudyMatchPage = () => {
           </motion.div>
 
           <div className="flex flex-col gap-16 md:gap-20 mt-16 md:mt-20">
-            <div className="max-w-5xl">The decisions</div>
+            <div className="max-w-5xl">
+              {" "}
+              <SectionLabel>The decisions</SectionLabel>{" "}
+            </div>
             <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <ul className="flex flex-col gap-4">
