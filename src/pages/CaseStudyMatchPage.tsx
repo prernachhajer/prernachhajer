@@ -208,7 +208,7 @@ const CaseStudyMatchPage = () => {
               },
               {
                 label: "Outcome",
-                body: "App rating 3.4 → 4.5, time on page +50%, tabs halved — without removing a feature.",
+                body: "Cognitive load down, IA rebuilt — and the numbers moved with it: app rating 3.4 → 4.5, time on page +50%, tabs halved, without removing a feature.",
               },
             ].map((item) => (
               <div key={item.label} className="pt-4 border-t border-border">
