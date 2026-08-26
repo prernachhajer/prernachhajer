@@ -126,7 +126,7 @@ const caseStudies = [
     thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
-    year: "2023",
+    year: "2024",
     link: "/case-study/match-page",
   },
   {
