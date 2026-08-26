@@ -253,8 +253,8 @@ const CaseStudyMatchPage = () => {
                   Tabs became the default way to ship any standalone feature quickly.
                 </Bullet>
                 <Bullet>
-                  <strong className="text-foreground font-semibold">Band-aid: </strong>
-                  Hiding excess tabs inside overflow drawers that behaviour data showed users ignored.
+                  <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
+                  Features kept landing as new tabs — the fastest way to ship something without disturbing what already existed.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Strategy: </strong>
