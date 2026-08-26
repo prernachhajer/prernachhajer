@@ -463,12 +463,12 @@ const CaseStudyMatchPage = () => {
                   src={`${IMG}/84ade12a4cf127b2449f33fb67278fa4fc671e8a?placeholderIfAbsent=true`}
                   caption="Before — old match page"
                 />
-                <div className="grid grid-cols-2 gap-6">
-                  <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
-                  <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
-                </div>
 
                 <div>
+                  <div className="grid grid-cols-2 gap-6">
+                    <Figure src={`${IMG}/1adbf27d3a093c6c0ca9a7d33835d732947a0b5a?placeholderIfAbsent=true`} />
+                    <Figure src={`${IMG}/fdc414a10f42a429829cef0c9651ba860156ba2f?placeholderIfAbsent=true`} />
+                  </div>
                   <p className={`${t.labelSm} text-muted-foreground mt-4 text-center`}>Solution 1 — Dropdown</p>
                 </div>
                 <div>
