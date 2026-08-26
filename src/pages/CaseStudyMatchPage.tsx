@@ -512,7 +512,6 @@ const CaseStudyMatchPage = () => {
                 className="w-full h-auto"
                 loading="lazy"
               />
-              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Tab count, before and after</p>
             </div>
           </Block>
 
