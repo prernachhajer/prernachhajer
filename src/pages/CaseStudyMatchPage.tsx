@@ -474,7 +474,11 @@ const CaseStudyMatchPage = () => {
               {" "}
               <SectionLabel>The decisions</SectionLabel>{" "}
             </div>
-            <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
+            <Block
+              className="border-0"
+              eyebrow="Decision 1 — Reduce the tab count"
+              title="Fewer tabs, chosen by usage, not habit"
+            >
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <ul className="flex flex-col gap-4">
                   <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
