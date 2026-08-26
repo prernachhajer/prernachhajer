@@ -501,7 +501,7 @@ const CaseStudyMatchPage = () => {
                   cross-innings tracking paths.
                 </TradeOff>
               </div>
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
                 <Figure src={`${IMG}/b4a70557db90af206cae295c594d2b7920134710?placeholderIfAbsent=true`} />
                 <Figure src={`${IMG}/a0066809a8c80d59cbe8bb7fd31f13ba4ebc71b8?placeholderIfAbsent=true`} />
                 <Figure src={`${IMG}/0198e4f44d0417348d80fa0364e535fd8eec2fd8?placeholderIfAbsent=true`} />
