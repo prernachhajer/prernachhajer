@@ -516,7 +516,7 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Live summary screen displays a contextual commentary excerpt in real time.</Bullet>
                 <Bullet>Tap-through pathways lead cleanly to full text logs without disorientation.</Bullet>
               </ul>
-              <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+              <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
                 <img
                   src={liveContentAsset.url}
                   alt="Live tab surfacing recent commentary preview"
@@ -543,7 +543,7 @@ const CaseStudyMatchPage = () => {
                   Heavier inline media required custom lazy-loading structures to protect performance.
                 </TradeOff>
               </div>
-              <div className="grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
+              <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mt-12">
                 <img
                   src={scorecardMediaAsset.url}
                   alt="Scorecard tab with inline videos and photos"
@@ -653,7 +653,7 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Fan rating tools sit beside traditional stats without bloating layouts.</Bullet>
                 <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
               </ul>
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12">
                 <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
                 <Figure src={`${IMG}/ce0bad3c97dc9b8d83fbd1add40c5124c7ed7b92?placeholderIfAbsent=true`} />
                 <Figure src={`${IMG}/2bdf528c1d0ce5fc2fd5792e6f94879b4f5c95b5?placeholderIfAbsent=true`} />
