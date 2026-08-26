@@ -101,7 +101,7 @@ const CaseStudyMatchPage = () => {
             style={{ fontFamily: t.displayFont }}
           >
             <span className="py-4">Match Page</span>
-            <span className=" text-primary italic font-medium mt-2">Redesign</span>
+            <span className="px-2 text-primary italic font-medium">Redesign</span>
           </motion.h1>
 
           <motion.div
