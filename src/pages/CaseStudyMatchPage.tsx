@@ -231,7 +231,7 @@ const CaseStudyMatchPage = () => {
 
       {/* ── PROBLEM ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`max-w-3xl mx-auto`}>
           <SectionLabel>Problem</SectionLabel>
 
           <motion.div
