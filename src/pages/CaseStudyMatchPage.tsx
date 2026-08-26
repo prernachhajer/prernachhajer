@@ -257,21 +257,20 @@ const CaseStudyMatchPage = () => {
                 <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
                 <ul className="flex flex-col gap-4">
                   <Bullet>
-                    <strong className="text-foreground font-semibold">Business problem: </strong>
-                    Organic features added under pressure without holistic IA oversight.
+                    <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
+                    Organic features added under pressure without holistic IA oversight — the page grew both wider (more tabs) and denser (more packed into each screen)
                   </Bullet>
                   <Bullet>
-                    <strong className="text-foreground font-semibold">Root cause: </strong>
-                    Tabs became the default way to ship any standalone feature quickly.
+                    <strong className="text-foreground font-semibold">Root cause:&nbsp;</strong>
+                    Without a shared structure, every new feature had two options — a new tab, or more crammed onto an existing one. Both became default.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                    Features kept landing as new tabs — the fastest way to ship something without disturbing what
-                    already existed.
+                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what already existed.
                   </Bullet>
                   <Bullet>
-                    <strong className="text-foreground font-semibold">Strategy: </strong>
-                    Consolidate structure around core tasks rather than departmental ownership.
+                    <strong className="text-foreground font-semibold">Strategy:&nbsp;</strong>
+                    Consolidate structure around core tasks rather than departmental ownership; reducing both tab count and on-screen density.
                   </Bullet>
                 </ul>
               </div>
