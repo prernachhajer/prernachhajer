@@ -119,7 +119,7 @@ const CaseStudyMatchPage = () => {
                 {chip}
               </span>
             ))}
-          </motion.div> 
+          </motion.div> */}
 
           <motion.dl
             initial="hidden"
@@ -147,7 +147,7 @@ const CaseStudyMatchPage = () => {
                 <p className="text-xs text-muted-foreground mt-2.5">{item.note}</p>
               </div>
             ))}
-          </motion.dl> */}
+          </motion.dl>
 
           <motion.p
             initial="hidden"
@@ -201,6 +201,30 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
+      {/* ── PROJECT OVERVIEW ───────────────── */}
+      <section className={`${layout.px} border-t border-border pt-10 pb-10 bg-secondary/40`}>
+        <div className={` mx-auto  max-w-5xl`}>
+          <SectionLabel>Project overview</SectionLabel>
+          <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
+            {[
+              { label: "My role", value: "Lead Product Designer, project lead" },
+              { label: "Worked with", value: "Product Manager, Engineering" },
+              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
+              { label: "Platform", value: "iOS & Android" },
+              { label: "Timeframe", value: "~6 months, phased rollout" },
+              { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
+            ].map((item) => (
+              <div key={item.label}>
+                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
+                <dd className="mt-3 text-lg md:text-lg leading-snug" style={{ fontFamily: t.displayFont }}>
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* ── TWO-MINUTE VERSION ─────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
@@ -230,30 +254,6 @@ const CaseStudyMatchPage = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── PROJECT OVERVIEW ───────────────── */}
-      <section className={`${layout.px} border-t border-border pt-10 pb-10 bg-secondary/40`}>
-        <div className={` mx-auto  max-w-5xl`}>
-          <SectionLabel>Project overview</SectionLabel>
-          <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {[
-              { label: "My role", value: "Lead Product Designer, project lead" },
-              { label: "Worked with", value: "Product Manager, Engineering" },
-              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
-              { label: "Platform", value: "iOS & Android" },
-              { label: "Timeframe", value: "~6 months, phased rollout" },
-              { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
-            ].map((item) => (
-              <div key={item.label}>
-                <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
-                <dd className="mt-3 text-lg md:text-lg leading-snug" style={{ fontFamily: t.displayFont }}>
-                  {item.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
