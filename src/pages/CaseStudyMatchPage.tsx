@@ -180,7 +180,7 @@ const CaseStudyMatchPage = () => {
               { label: "Scope", value: "IA for the match page UX" },
               { label: "Platform", value: "iOS & Android" },
               { label: "Timeframe", value: "~6 months, phased rollout" },
-              { label: "Rollout order", value: "Tabs → accordions → dropdown → prev/next" },
+              { label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " },
             ].map((item) => (
               <div key={item.label}>
                 <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
