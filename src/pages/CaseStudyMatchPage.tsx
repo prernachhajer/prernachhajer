@@ -400,8 +400,8 @@ const CaseStudyMatchPage = () => {
                 <div>
                   <blockquote className={`pl-5 ${surface.accentLine}`}>
                     <p className="text-lg leading-relaxed">
-                      "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of
-                      speed."
+                      Success outcome: more exploration, deeper engagement, and higher content consumption — across all
+                      four segments, not just the ones the redesign was named after.
                     </p>
                   </blockquote>
                   <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
