@@ -486,10 +486,10 @@ const CaseStudyMatchPage = () => {
             {/*   <SectionLabel className="!mb-0">The decisions</SectionLabel> */}
 
             <div
-              class="flex items-center gap-3 font-mono text-[0.6875rem] tracking-[0.12em] uppercase mb-0 md:mb-0 max-w-5xl mx-auto mx-auto text-primary"
-              style="opacity: 1; transform: none;"
+              className="flex items-center gap-3 font-mono text-[0.6875rem] tracking-[0.12em] uppercase mb-0 md:mb-0 max-w-5xl mx-auto text-primary"
+              style={{ opacity: 1, transform: "none" }}
             >
-              <span class="w-5 h-px bg-primary"> The decisions </span>
+              <span className="w-5 h-px bg-primary"> The decisions </span>
             </div>
           </div>
           <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
