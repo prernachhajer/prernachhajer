@@ -400,8 +400,8 @@ const CaseStudyMatchPage = () => {
                 <div>
                   <blockquote className={`pl-5 ${surface.accentLine}`}>
                     <p className="text-lg leading-relaxed">
-                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption —
-                      across all four segments, not just the ones the redesign was named after.
+                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption
+                      across all segments.
                     </p>
                   </blockquote>
                 </div>
