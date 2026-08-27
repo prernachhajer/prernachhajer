@@ -123,7 +123,7 @@ const caseStudies = [
     title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbMatchPage,
+    thumbImage: thumbMatchPage.url,
     statNum: "10M+",
     statLabel: "daily users",
     year: "2024",
