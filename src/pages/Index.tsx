@@ -108,6 +108,19 @@ const caseStudies = [
   {
     num: "01 / 04",
     company: "ESPN Cricinfo",
+    title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
+    titleEm: "",
+    thumbType: "photo" as const,
+    thumbImage: thumbMatchPage.url,
+    statNum: "10M+",
+    statLabel: "daily users",
+    year: "2024-25",
+    link: "/case-study/match-page",
+  },
+
+  {
+    num: "02 / 04",
+    company: "ESPN Cricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
     thumbType: "photo" as const,
@@ -117,18 +130,7 @@ const caseStudies = [
     year: "2022–26",
     link: "/case-study/homepage",
   },
-  {
-    num: "02 / 04",
-    company: "ESPN Cricinfo",
-    title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
-    titleEm: "",
-    thumbType: "photo" as const,
-    thumbImage: thumbMatchPage.url,
-    statNum: "10M+",
-    statLabel: "daily users",
-    year: "2024",
-    link: "/case-study/match-page",
-  },
+
   {
     num: "03 / 04",
     company: "ESPN Cricinfo",
