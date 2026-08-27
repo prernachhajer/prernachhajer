@@ -472,20 +472,11 @@ const CaseStudyMatchPage = () => {
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
               <p className={`${t.labelSm} text-muted-foreground`}>THE PRINCIPALS</p>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4 mt-12">
                 <Bullet>Show previews, not everything at once; tap to go deeper</Bullet>
                 <Bullet>Combine what belongs together</Bullet>
                 <Bullet>Surface what matters instead of burying it</Bullet>
               </ul>
-
-              <p className="mt-3 text-base leading-relaxed">
-                - Show previews, not everything at once; tap to go deeper
-                <br />
-                <br />
-                - Combine what belongs together
-                <br />
-                <br />- Surface what matters instead of burying it
-              </p>
             </div>
           </motion.div>
         </div>
