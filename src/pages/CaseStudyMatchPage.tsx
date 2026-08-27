@@ -447,7 +447,7 @@ const CaseStudyMatchPage = () => {
       {/* ── DECISIONS ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>The Principals</SectionLabel>
+          <SectionLabel>DESIGN STRATEGY</SectionLabel>
 
           <motion.div
             initial="hidden"
