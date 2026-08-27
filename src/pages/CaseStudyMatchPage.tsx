@@ -311,7 +311,7 @@ const CaseStudyMatchPage = () => {
           <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
-              Users Feedback
+              Users Reviews
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
