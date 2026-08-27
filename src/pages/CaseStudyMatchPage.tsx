@@ -462,7 +462,7 @@ const CaseStudyMatchPage = () => {
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Hardcore fans expect every statistic, commentary string and wagon wheel. So we targeted navigation
-                hygiene and information priority instead of dropping features.
+                hygiene and information priority instead of feature removal.
               </p>
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
