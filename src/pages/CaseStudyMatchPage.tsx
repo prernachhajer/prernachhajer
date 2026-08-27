@@ -267,7 +267,8 @@ const CaseStudyMatchPage = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                    We were losing clients to competitors - Crex, Cricbuzz, and Google who offered faster, lighter alternatives to the same information.
+                    We were losing clients to competitors - Crex, Cricbuzz, and Google who offered faster, lighter
+                    alternatives to the same information.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
@@ -275,14 +276,15 @@ const CaseStudyMatchPage = () => {
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Design problem:&nbsp;</strong>
-                    Stakeholder pressure kept pushing features and data points onto the page, with no structure to hold them and no time to rethink usability. As they accumulated, the volume itself became overwhelming, cluttering the page and confusing users.
+                    Stakeholder pressure kept pushing features and data points onto the page, with no structure to hold
+                    them and no time to rethink usability. As they accumulated, the volume itself became overwhelming,
+                    cluttering the page and confusing users.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what already existed.
-
-
-                    Consolidate structure around core tasks rather than departmental ownership; reducing both tab count and on-screen density.
+                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what
+                    already existed. Consolidate structure around core tasks rather than departmental ownership;
+                    reducing both tab count and on-screen density.
                   </Bullet>
                 </ul>
               </div>
@@ -467,6 +469,12 @@ const CaseStudyMatchPage = () => {
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
               <p className={`${t.labelSm} text-muted-foreground`}>THE PRINCIPALS</p>
+              <ul className="flex flex-col gap-4">
+                <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
+                <Bullet>Points table retained a high-level entry but merged detailed stats into single hubs.</Bullet>
+                <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
+              </ul>
+
               <p className="mt-3 text-base leading-relaxed">
                 - Show previews, not everything at once; tap to go deeper
                 <br />
