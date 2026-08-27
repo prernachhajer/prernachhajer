@@ -450,7 +450,9 @@ const CaseStudyMatchPage = () => {
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>DESIGN STRATEGY</SectionLabel>
-
+          <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
+            Depth wasn't the problem. The absence of structure was.
+          </h2>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -459,9 +461,6 @@ const CaseStudyMatchPage = () => {
             className="grid lg:grid-cols-2 gap-10 items-start"
           >
             <div>
-              <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-                Depth wasn't the problem. The absence of structure was.
-              </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Hardcore fans expect every statistic, commentary string and wagon wheel. So we targeted navigation
                 hygiene and information priority instead of feature removal.
