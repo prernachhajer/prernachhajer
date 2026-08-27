@@ -465,14 +465,17 @@ const CaseStudyMatchPage = () => {
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Hardcore fans expect every statistic, commentary string and wagon wheel. So we targeted navigation
                 hygiene and information priority instead of feature removal.
+                <br />
+                <br />
+                The goal wasn't to trim content; it was to rework the IA until the page was usable again.
               </p>
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
               <p className={`${t.labelSm} text-muted-foreground`}>THE PRINCIPALS</p>
               <ul className="flex flex-col gap-4">
-                <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
-                <Bullet>Points table retained a high-level entry but merged detailed stats into single hubs.</Bullet>
-                <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
+                <Bullet>Show previews, not everything at once; tap to go deeper</Bullet>
+                <Bullet>Combine what belongs together</Bullet>
+                <Bullet>Surface what matters instead of burying it</Bullet>
               </ul>
 
               <p className="mt-3 text-base leading-relaxed">
