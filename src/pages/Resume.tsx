@@ -29,15 +29,24 @@ const contactItems = [
   { label: "Instagram", value: "_justatraveler", href: "https://www.instagram.com/_justatraveler/" },
 ];
 
+const summary =
+  "I'm a product design leader with 12 years of experience, bringing clarity to ambiguity. From 0-to-1 startups to a 100M+ user platform at ESPN/Disney, the job has always been the same: turn a messy problem into something a team can build against. I ship design that moves numbers — bounce rate, app ratings, funnel conversion — not just decks.";
+
+const responsibilities = [
+  "Set product design vision and multi-quarter roadmap for a 100M+ MAU platform, aligning product, engineering, editorial, and business stakeholders.",
+  "Lead and mentor a design team: 1:1s, career ladders, performance reviews, day-to-day craft standards.",
+  "Own design system governance across web, iOS, and Android — components, tokens, documentation.",
+  "Run design ops end-to-end: stakeholder reporting and cross-team alignment across the org.",
+  "Establish and scale AI-assisted design workflows for the team.",
+  "Drive strategic product decisions (e.g. reach vs. depth trade-offs) in partnership with product and engineering leadership.",
+];
+
 const skillCategories = [
   {
     heading: "Leadership",
     items: [
       "Design Leadership",
-      "Cross-functional Collaboration",
       "Team Building",
-      "Career Development",
-      "Performance Reviews",
       "Design Reviews / Critique",
       "Mentorship",
       "Stakeholder Alignment",
@@ -47,15 +56,9 @@ const skillCategories = [
   {
     heading: "Execution & Strategy",
     items: [
-      "UX Research",
       "Design Systems",
-      "Prototyping",
-      "Information Architecture",
-      "Heuristic Evaluation",
       "Design Ops",
       "AI-Augmented Workflows",
-      "Design Tokens, Patterns & Documentation",
-      "Component Architecture",
       "Design System Governance",
       "Product Strategy",
       "Design Vision",
@@ -75,54 +78,57 @@ const skillCategories = [
 const toolCategories = [
   {
     heading: "Design",
-    items: ["Figma", "Miro / FigJam", "ZeroHeight"],
-  },
-  {
-    heading: "Research & Analytics",
-    items: ["Hotjar", "Google Analytics", "VWO", "UserTesting", "UX Pilot"],
+    items: ["Figma", "Framer", "GitHub"],
   },
   {
     heading: "AI",
-    items: ["Claude", "ChatGPT", "Gemini", "Lovable", "Figma AI", "Figma Make", "Pencil"],
+    items: ["Figma AI", "Claude", "ChatGPT", "Gemini", "Lovable", "Granola"],
+  },
+  {
+    heading: "Research & Analytics",
+    items: ["Google Analytics", "VWO", "UserTesting", "UX Pilot"],
   },
 ];
 
 const experienceData = [
   {
-    company: "Proximity Works · Remote",
-    role: "Lead Product Designer — ESPNCricinfo",
+    company: "Proximity Works · Client: ESPNcricinfo",
+    role: "Lead Product Designer",
     years: "2021 – Present · 5+ yrs",
     current: true,
     bullets: [
       <>
-        Built ESPNCricinfo's design system to{" "}
-        <span className="text-primary font-medium">
-          200+ Figma files, 100+ components
-        </span>{" "}
-        (web, iOS, Android, dark mode, multilingual) — reduced design-to-dev
-        handoff by <span className="text-primary font-medium">50%</span>,
-        enabling the team to ship <span className="text-primary font-medium">3x</span>{" "}
-        more features per quarter and standardizing UI consistency across 100M+ users.
+        Prioritized casual-user experience over power-user density in the homepage
+        redesign (casual users drove 80% of traffic); validated by a{" "}
+        <span className="text-primary font-medium">30%</span> bounce-rate reduction
+        and <span className="text-primary font-medium">15%</span> lift in returning
+        sessions.
       </>,
       <>
-        Led homepage redesign championing casual users (80% of traffic); reduced
-        bounce rates <span className="text-primary font-medium">~30%</span> and
-        improved returning sessions <span className="text-primary font-medium">~15%</span>.
+        Redesigned the match page IA (8–15 → 3–8 tabs, match-state-based structure
+        with progressive disclosure) — time on page up{" "}
+        <span className="text-primary font-medium">50%</span>, page load{" "}
+        <span className="text-primary font-medium">2x faster</span>, page views up{" "}
+        <span className="text-primary font-medium">30%</span>.
       </>,
       <>
-        Drove native app launch on iOS and Android (hybrid to native transition),
-        including Dynamic Island and pinning features — contributed to app rating
-        improving from <span className="text-primary font-medium">3.4 to 4.5</span>.
+        Built ESPNcricinfo's design system to{" "}
+        <span className="text-primary font-medium">100+ Figma files, 50+ components</span>;
+        reduced design-to-dev handoff by{" "}
+        <span className="text-primary font-medium">50%</span>, enabling{" "}
+        <span className="text-primary font-medium">3x</span> more features shipped per
+        quarter across 100M+ users.
       </>,
-      "Own design ops end-to-end: ZeroHeight documentation, stakeholder reporting, and cross-team alignment across the ESPN/Disney org.",
-      "Lead and grew a 2-person IC team; conducted bi-weekly 1:1s, defined career ladders, and delivered performance reviews.",
       <>
-        Established AI-assisted workflows (Figma AI, Claude) for the design team;
-        ran 4 workshops that reduced concept-to-prototype time by{" "}
-        <span className="text-primary font-medium">35%</span> and became the team's
-        default practice, freeing 10 hrs/week for strategic work.
+        Drove native app launch on iOS and Android (hybrid to native); contributed to
+        app rating improving from{" "}
+        <span className="text-primary font-medium">3.4 to 4.5</span>.
       </>,
-      "Set the product design vision and multi-quarter roadmap for ESPNcricinfo (100M+ MAU, 10M DAU), aligning product, engineering, editorial, and business teams on strategic priorities across the homepage, match experience, content, and platform design system.",
+      <>
+        Ran AI-workflow workshops for the design team; reduced concept-to-prototype
+        time by <span className="text-primary font-medium">35%</span>, freeing 10
+        hrs/week for strategic work.
+      </>,
     ],
   },
   {
@@ -152,8 +158,7 @@ const experienceData = [
         and conversion; reduced booking funnel drop-offs{" "}
         <span className="text-primary font-medium">~15–20%</span>.
       </>,
-      "Led usability testing and user research end-to-end, including on-road user interviews, heatmapping, and session recording analysis to pinpoint funnel breakdowns, synthesized into insight reports that shaped design decisions.",
-      "Contributed to FabHotels' first design system, initiated by the design manager.",
+      "Led end-to-end user research — on-road interviews, heatmapping, and session recordings — synthesized into insight reports that directly shaped design decisions.",
     ],
   },
   {
@@ -162,10 +167,8 @@ const experienceData = [
     years: "2014 – 2018",
     current: false,
     bullets: [
-      "Designed AI, AR, data science, and iBeacon-driven solutions for American Express, Telstra, Prudential, and Singtel Optus.",
       "Built PocketDash, a campaign dashboard, and a chatbot for American Express — B2B tools for tracking offers, conversions, and performance.",
-      "Led research-driven design for Papa John's (heuristic evaluation, working-hours estimation, concept pitch), plus employee/patient management tools and an in-house event app.",
-      "Established core UX practice — research, wireframing, journey mapping, UI execution — marking the shift from front-end dev to product design.",
+      "Worked across emerging tech (AI, AR, iBeacon, data science) for global enterprise clients — built my UX foundation here: user interviews, persona mapping, journey mapping, heuristic evaluations, and end-to-end interaction design across complex B2B products.",
     ],
   },
   {
@@ -178,6 +181,7 @@ const experienceData = [
     ],
   },
 ];
+
 
 // ── COMPONENTS ────────────────────────────────
 
@@ -392,6 +396,31 @@ const Resume = () => {
 
           {/* ── MAIN ─────────────────────────────── */}
           <main className="min-w-0">
+
+            {/* Summary */}
+            <section className="mb-[clamp(64px,8vw,96px)]">
+              <SectionHeading id="summary-h">Summary</SectionHeading>
+              <p className="text-[1.0625rem] leading-[1.8] text-foreground/80">
+                {summary}
+              </p>
+            </section>
+
+            {/* Roles & Responsibilities */}
+            <section className="mb-[clamp(64px,8vw,96px)]">
+              <SectionHeading id="roles-h">Roles &amp; Responsibilities</SectionHeading>
+              <ul className="flex flex-col gap-3.5 list-none">
+                {responsibilities.map((item) => (
+                  <li
+                    key={item}
+                    className="text-[0.9375rem] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+
 
             {/* Experience */}
             <section className="mb-[clamp(64px,8vw,96px)]">
