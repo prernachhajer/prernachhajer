@@ -397,6 +397,31 @@ const Resume = () => {
           {/* ── MAIN ─────────────────────────────── */}
           <main className="min-w-0">
 
+            {/* Summary */}
+            <section className="mb-[clamp(64px,8vw,96px)]">
+              <SectionHeading id="summary-h">Summary</SectionHeading>
+              <p className="text-[1.0625rem] leading-[1.8] text-foreground/80">
+                {summary}
+              </p>
+            </section>
+
+            {/* Roles & Responsibilities */}
+            <section className="mb-[clamp(64px,8vw,96px)]">
+              <SectionHeading id="roles-h">Roles &amp; Responsibilities</SectionHeading>
+              <ul className="flex flex-col gap-3.5 list-none">
+                {responsibilities.map((item) => (
+                  <li
+                    key={item}
+                    className="text-[0.9375rem] leading-[1.78] text-foreground/80 pl-[22px] relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-[1.5px] before:bg-primary"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+
+
             {/* Experience */}
             <section className="mb-[clamp(64px,8vw,96px)]">
               <SectionHeading id="exp-h">Experience</SectionHeading>
