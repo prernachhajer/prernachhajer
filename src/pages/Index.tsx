@@ -106,7 +106,7 @@ const strengths = [
 
 const caseStudies = [
   {
-    num: "01 / 04",
+    num: "01 / 05",
     company: "ESPN Cricinfo",
     title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
@@ -119,7 +119,7 @@ const caseStudies = [
   },
 
   {
-    num: "02 / 04",
+    num: "02 / 05",
     company: "ESPN Cricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
@@ -132,7 +132,7 @@ const caseStudies = [
   },
 
   {
-    num: "03 / 04",
+    num: "03 / 05",
     company: "ESPN Cricinfo",
     title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
@@ -145,7 +145,7 @@ const caseStudies = [
   },
 
   {
-    num: "04 / 04",
+    num: "04 / 05",
     company: "ESPN Cricinfo",
     title: "50% More Time Spent: Bite-Sized Cricket Content",
     titleEm: "",
@@ -155,6 +155,20 @@ const caseStudies = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
+  },
+
+  {
+    num: "05 / 05",
+    company: "ESPN Cricinfo",
+    title: "App Rating Redesign",
+    titleEm: "",
+    thumbType: "placeholder" as const,
+    thumbImage: "",
+    statNum: "",
+    statLabel: "",
+    year: "2025",
+    link: "/case-study/app-rating",
+    wip: true,
   },
 ];
 
