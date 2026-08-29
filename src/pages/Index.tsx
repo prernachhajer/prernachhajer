@@ -579,6 +579,7 @@ const Index = () => {
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
+            const isWip = cs.wip;
 
             return (
               <motion.div
@@ -598,12 +599,24 @@ const Index = () => {
                 {/* Visual */}
 
                 <div className="relative overflow-hidden aspect-[16/10] w-full rounded-[14px] bg-secondary">
-                  {cs.thumbImage && cs.thumbType === "photo" && (
+                  {cs.thumbType === "photo" && cs.thumbImage && (
                     <img
                       src={cs.thumbImage}
                       alt={`${cs.company} preview`}
                       className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
                     />
+                  )}
+
+                  {cs.thumbType === "placeholder" && (
+                    <div className="absolute inset-0 bg-background z-[1]" />
+                  )}
+
+                  {isWip && (
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-4 py-1.5 bg-background/80 backdrop-blur-[4px]">
+                        [WIP]
+                      </span>
+                    </div>
                   )}
 
                   {isComingSoon && (
@@ -637,11 +650,13 @@ const Index = () => {
                     <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">{cs.year}</span>
                   </div>
 
-                  <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
-                    <span>{cs.statNum}</span>
+                  {cs.statNum && (
+                    <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
+                      <span>{cs.statNum}</span>
 
-                    <span className="gap-5 px-1.5">{cs.statLabel}</span>
-                  </div>
+                      <span className="gap-5 px-1.5">{cs.statLabel}</span>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
