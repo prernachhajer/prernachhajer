@@ -106,7 +106,7 @@ const strengths = [
 
 const caseStudies = [
   {
-    num: "01 / 04",
+    num: "01 / 05",
     company: "ESPN Cricinfo",
     title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
@@ -119,7 +119,7 @@ const caseStudies = [
   },
 
   {
-    num: "02 / 04",
+    num: "02 / 05",
     company: "ESPN Cricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
@@ -132,7 +132,7 @@ const caseStudies = [
   },
 
   {
-    num: "03 / 04",
+    num: "03 / 05",
     company: "ESPN Cricinfo",
     title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
@@ -145,7 +145,7 @@ const caseStudies = [
   },
 
   {
-    num: "04 / 04",
+    num: "04 / 05",
     company: "ESPN Cricinfo",
     title: "50% More Time Spent: Bite-Sized Cricket Content",
     titleEm: "",
@@ -155,6 +155,20 @@ const caseStudies = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
+  },
+
+  {
+    num: "05 / 05",
+    company: "ESPN Cricinfo",
+    title: "App Rating Redesign",
+    titleEm: "",
+    thumbType: "placeholder" as const,
+    thumbImage: "",
+    statNum: "",
+    statLabel: "",
+    year: "2025",
+    link: "/case-study/app-rating",
+    wip: true,
   },
 ];
 
@@ -565,6 +579,7 @@ const Index = () => {
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
+            const isWip = cs.wip;
 
             return (
               <motion.div
@@ -584,12 +599,24 @@ const Index = () => {
                 {/* Visual */}
 
                 <div className="relative overflow-hidden aspect-[16/10] w-full rounded-[14px] bg-secondary">
-                  {cs.thumbImage && cs.thumbType === "photo" && (
+                  {cs.thumbType === "photo" && cs.thumbImage && (
                     <img
                       src={cs.thumbImage}
                       alt={`${cs.company} preview`}
                       className="absolute inset-0 w-full h-full object-cover z-[2] thumb-kenburns-center"
                     />
+                  )}
+
+                  {cs.thumbType === "placeholder" && (
+                    <div className="absolute inset-0 bg-background z-[1]" />
+                  )}
+
+                  {isWip && (
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-4 py-1.5 bg-background/80 backdrop-blur-[4px]">
+                        [WIP]
+                      </span>
+                    </div>
                   )}
 
                   {isComingSoon && (
@@ -623,11 +650,13 @@ const Index = () => {
                     <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">{cs.year}</span>
                   </div>
 
-                  <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
-                    <span>{cs.statNum}</span>
+                  {cs.statNum && (
+                    <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
+                      <span>{cs.statNum}</span>
 
-                    <span className="gap-5 px-1.5">{cs.statLabel}</span>
-                  </div>
+                      <span className="gap-5 px-1.5">{cs.statLabel}</span>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
