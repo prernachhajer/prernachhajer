@@ -63,6 +63,13 @@ const App = () => (
             element={<CaseStudyMatchPageScaffold />}
           />
 
+          <Route
+            path="/case-study/app-rating"
+            element={<CaseStudyAppRating />}
+          />
+
+
+
 
           {/* Blog */}
           <Route
