@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>App Rating Turnaround — Case Study Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1a17;
+    --ink-soft:#5c574f;
+    --paper:#faf8f4;
+    --paper-raised:#ffffff;
+    --line:#e6e1d8;
+    --accent:#e85530;
+    --accent-soft:#fbe4da;
+    --tag-bg:#f1ede4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px;}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;margin:0;}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:11px;
+    font-weight:600;color:var(--accent);margin-bottom:18px;
+  }
+  .mockup-banner{
+    background:var(--ink);color:#fff;text-align:center;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    padding:9px 0;font-weight:600;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:96px 0 64px;border-bottom:1px solid var(--line);}
+  .hero .eyebrow{text-align:center;}
+  .hero h1{
+    font-size:88px;line-height:1;text-align:center;
+    color:var(--ink);
+  }
+  .hero h1 span{color:var(--accent);}
+  .hero-sub{
+    text-align:center;font-size:19px;color:var(--ink-soft);
+    max-width:560px;margin:22px auto 0;
+  }
+  .stat-row{
+    display:grid;grid-template-columns:repeat(5,1fr);
+    gap:1px;background:var(--line);
+    margin-top:56px;border:1px solid var(--line);
+  }
+  .stat{background:var(--paper-raised);padding:26px 20px;text-align:center;}
+  .stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--accent);}
+  .stat .label{font-size:12px;color:var(--ink-soft);margin-top:6px;letter-spacing:.02em;}
+
+  .meta-strip{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    margin-top:36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .meta-col{padding:18px 20px;border-left:1px solid var(--line);}
+  .meta-col:first-child{border-left:none;}
+  .meta-col .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:4px;}
+  .meta-col .v{font-size:14px;font-weight:500;}
+  .meta-col .v + .k{margin-top:10px;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:80px 0;border-bottom:1px solid var(--line);}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 48px;}
+  .section-head .tag{
+    display:inline-block;font-size:11px;text-transform:uppercase;
+    letter-spacing:.12em;font-weight:600;color:var(--accent);margin-bottom:14px;
+  }
+  .section-head h2{font-size:34px;}
+  .section-head p{color:var(--ink-soft);font-size:15px;margin-top:14px;line-height:1.6;}
+
+  /* ---------- VIZ PLACEHOLDER ---------- */
+  .viz-placeholder{
+    border:1.5px dashed #c9c2b4;
+    background:repeating-linear-gradient(135deg,#f3efe6,#f3efe6 10px,#eee9de 10px,#eee9de 20px);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    color:#a39a86;font-size:12px;font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;text-align:center;padding:16px;
+  }
+
+  /* ---------- PROBLEM GRID ---------- */
+  .problem-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:40px;
+  }
+  .problem-card{background:var(--paper-raised);border:1px solid var(--line);border-radius:10px;padding:24px;}
+  .problem-card .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:10px;}
+  .problem-card p{font-size:14px;line-height:1.55;color:var(--ink-soft);margin:0;}
+
+  .problem-viz{height:260px;margin-bottom:40px;}
+  .problem-viz .viz-placeholder{height:100%;}
+
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .pain-tag{
+    background:var(--tag-bg);border-radius:20px;padding:7px 16px;
+    font-size:13px;color:var(--ink-soft);border:1px solid var(--line);
+  }
+
+  /* ---------- QUOTE GRID ---------- */
+  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
+  .quote-card{
+    background:var(--paper-raised);border:1px solid var(--line);border-radius:10px;
+    padding:26px;position:relative;
+  }
+  .quote-card::before{
+    content:"\201C";font-family:'DM Serif Display',serif;font-size:46px;
+    color:var(--accent-soft);position:absolute;top:6px;left:16px;line-height:1;
+  }
+  .quote-card p{font-size:14.5px;line-height:1.6;margin:20px 0 14px;position:relative;z-index:1;}
+  .quote-card cite{font-size:12px;color:var(--ink-soft);font-style:normal;}
+
+  .theme-counts{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);margin-top:36px;
+  }
+  .theme-counts div{background:var(--paper-raised);text-align:center;padding:20px;}
+  .theme-counts .n{font-family:'DM Serif Display',serif;font-size:26px;color:var(--accent);}
+  .theme-counts .l{font-size:12px;color:var(--ink-soft);margin-top:4px;}
+
+  /* ---------- PRINCIPLE CALLOUT ---------- */
+  .principle{
+    background:var(--ink);color:#fff;border-radius:14px;
+    padding:56px 64px;text-align:center;
+  }
+  .principle .tag{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;}
+  .principle h3{font-size:28px;line-height:1.4;margin:16px auto 0;max-width:760px;}
+  .principle h3 em{color:var(--accent);font-style:normal;}
+
+  /* ---------- DECISION ROWS ---------- */
+  .decision{
+    display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+    padding:56px 0;border-bottom:1px solid var(--line);
+  }
+  .decision:last-child{border-bottom:none;}
+  .decision.reverse .decision-copy{order:2;}
+  .decision.reverse .decision-viz{order:1;}
+  .decision-copy .num{
+    font-family:'DM Serif Display',serif;color:var(--accent-soft);
+    font-size:60px;line-height:1;margin-bottom:6px;
+    -webkit-text-stroke:1.5px var(--accent);color:transparent;
+  }
+  .decision-copy h3{font-size:26px;margin-bottom:6px;}
+  .decision-copy .why{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:16px;}
+  .decision-copy ul{margin:0;padding-left:18px;}
+  .decision-copy li{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:8px;}
+  .tradeoff{
+    margin-top:18px;background:var(--accent-soft);border-left:3px solid var(--accent);
+    padding:12px 16px;border-radius:0 8px 8px 0;font-size:13px;color:#7a3216;
+  }
+  .tradeoff b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+  .decision-viz{height:320px;}
+  .decision-viz .viz-placeholder{height:100%;}
+
+  /* ---------- SUPPORTING / ENGINEERING CARDS ---------- */
+  .support-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .support-card{
+    background:var(--paper-raised);border:1px solid var(--line);border-radius:10px;padding:32px;
+  }
+  .support-card .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:12px;}
+  .support-card h4{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;margin:0 0 10px;}
+  .support-card ul{margin:0;padding-left:18px;}
+  .support-card li{font-size:14px;line-height:1.6;color:var(--ink-soft);margin-bottom:6px;}
+  .support-note{font-size:13px;color:var(--ink-soft);margin-top:24px;font-style:italic;text-align:center;}
+
+  /* ---------- RESULT ---------- */
+  .result{text-align:center;padding-bottom:40px;}
+  .result .num{font-family:'DM Serif Display',serif;font-size:110px;color:var(--accent);line-height:1;}
+  .result p{font-size:16px;color:var(--ink-soft);max-width:600px;margin:20px auto 0;line-height:1.7;}
+  .result-viz{height:220px;margin-top:48px;}
+  .result-viz .viz-placeholder{height:100%;}
+
+  .cs-link{
+    text-align:center;padding:60px 0;
+  }
+  .cs-link a{
+    display:inline-block;border:1px solid var(--ink);border-radius:30px;
+    padding:14px 30px;font-size:14px;font-weight:600;color:var(--ink);
+    text-decoration:none;
+  }
+  .cs-link p{color:var(--ink-soft);font-size:13px;margin-bottom:14px;}
+
+  @media (max-width:900px){
+    .wrap{padding:0 22px;}
+    .hero h1{font-size:52px;}
+    .stat-row,.meta-strip,.problem-grid,.quote-grid,.theme-counts,.support-pair{grid-template-columns:1fr;}
+    .decision,.decision.reverse{grid-template-columns:1fr;}
+    .decision.reverse .decision-copy,.decision.reverse .decision-viz{order:initial;}
+    .principle{padding:36px 28px;}
+    .result .num{font-size:64px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">Mockup — visual placeholders mark every slot a screenshot still needs to fill</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Design Systems · Performance · Product Strategy</div>
+    <h1>3.4 <span>→</span> 4.5</h1>
+    <p class="hero-sub">Our app rating had dropped to 3.4 — bad enough that it became the team's single priority. This is the story of turning that number around.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">3.4 → 4.5</div><div class="label">App Store rating</div></div>
+      <div class="stat"><div class="num">10M+</div><div class="label">Users on the platform</div></div>
+      <div class="stat"><div class="num">↑</div><div class="label">Downloads increased</div></div>
+      <div class="stat"><div class="num">−30%</div><div class="label">App size</div></div>
+      <div class="stat"><div class="num">+50%</div><div class="label">Time spent on app</div></div>
+    </div>
+
+    <div class="meta-strip">
+      <div class="meta-col">
+        <div class="k">Client</div><div class="v">ESPNCricinfo</div>
+        <div class="k">Scope</div><div class="v">Android &amp; iOS · full app</div>
+      </div>
+      <div class="meta-col">
+        <div class="k">Role</div><div class="v">Lead Product Designer — individual design leadership</div>
+        <div class="k">Worked With</div><div class="v">Product, Engineering</div>
+      </div>
+      <div class="meta-col">
+        <div class="k">Impact</div><div class="v">Rating turnaround at 10M+ user scale</div>
+        <div class="k">Timeline</div><div class="v">Sustained rollout over several months</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROBLEM ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">The Problem</div>
+      <h2>We had the depth. We didn't have the clarity.</h2>
+    </div>
+
+    <div class="problem-viz">
+      <div class="viz-placeholder">Visual — review quote strip / word cloud<br>(Play Store · App Store · Twitter · Reddit)</div>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="k">Business problem</div>
+        <p>Rating slipped to 3.4 and became the team's top priority — not one broken feature, but the app failing in dozens of small ways that added up.</p>
+      </div>
+      <div class="problem-card">
+        <div class="k">Root cause</div>
+        <p>Clutter, sluggish performance, and buggy video/notifications compounded — real strengths like StatsGuru and predictors existed but were buried and invisible.</p>
+      </div>
+      <div class="problem-card">
+        <div class="k">Band-aid</div>
+        <p>Individual fixes kept landing in isolation — a nav tweak here, a bug patch there — without a shared read on what was actually driving the drop.</p>
+      </div>
+      <div class="problem-card">
+        <div class="k">Strategy</div>
+        <p>Diagnose from real user signal first, then let design — not instinct — decide what stays, what goes, and what gets rebuilt.</p>
+      </div>
+    </div>
+
+    <div class="tag-row">
+      <span class="pain-tag">Overwhelming / cluttered</span>
+      <span class="pain-tag">Buggy video playback</span>
+      <span class="pain-tag">Inflexible notifications</span>
+      <span class="pain-tag">Cluttered bottom nav</span>
+      <span class="pain-tag">Slow, laggy performance</span>
+      <span class="pain-tag">Live scores lag competitors</span>
+      <span class="pain-tag">High data consumption</span>
+      <span class="pain-tag">Losing younger audience</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVIDENCE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Discovery</div>
+      <h2>What users were telling us</h2>
+      <p>Every negative review across Play Store, App Store, and Twitter. A dedicated in-app feedback form for first-party data. A competitive study against Cricbuzz and Google Cricket Scores.</p>
+    </div>
+
+    <div class="quote-grid">
+      <div class="quote-card">
+        <p>On Cricinfo it is like huge information is dumped… when we require only few things.</p>
+        <cite>— User research participant, Hyderabad</cite>
+      </div>
+      <div class="quote-card">
+        <p>If Cricinfo sorts out their mobile app UI, Cricbuzz will probably be out of business.</p>
+        <cite>— @TheStatsKid1523, Twitter</cite>
+      </div>
+      <div class="quote-card">
+        <p>What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.</p>
+        <cite>— r/IndiaCricket</cite>
+      </div>
+    </div>
+
+    <div class="theme-counts">
+      <div><div class="n">116</div><div class="l">Performance / Load mentions</div></div>
+      <div><div class="n">34</div><div class="l">Cognitive Load mentions</div></div>
+      <div><div class="n">20</div><div class="l">UI mentions</div></div>
+      <div><div class="n">6</div><div class="l">Clutter mentions</div></div>
+    </div>
+
+    <div class="problem-viz" style="margin-top:40px;">
+      <div class="viz-placeholder">Visual — Cricinfo vs. Cricbuzz vs. Google Cricket Scores<br>comparison chart (depth · speed · access)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLE ============ -->
+<section style="border-bottom:none;padding-bottom:0;">
+  <div class="wrap">
+    <div class="principle">
+      <div class="tag">The Reframe</div>
+      <h3>The rating wasn't the design problem. It was <em>the signal</em>. My role was to turn that complexity into a product that felt simpler — without making it less powerful.</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DECISIONS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">The Decisions</div>
+      <h2>What we changed — and why</h2>
+      <p>Each of these is a real trade-off, made on purpose — told as what we gave up and why, not as a features list.</p>
+    </div>
+
+    <div class="decision">
+      <div class="decision-copy">
+        <div class="num">01</div>
+        <h3>Home page decluttering</h3>
+        <div class="why">Same information, less noise</div>
+        <ul>
+          <li>Featured articles cut from 7 to 5</li>
+          <li>Removed a redundant "In-Depth Stories" section — the same ~40 stories were repeating across three modules for one match</li>
+          <li>Removed the filler "Top Players / Top Tournaments" section</li>
+          <li>Rule: one featured-story module visible at a time</li>
+          <li>Added a lightweight match-prediction game for engagement</li>
+        </ul>
+        <div class="tradeoff"><b>Trade-off</b>We didn't rebuild the home page — a full redesign would have cost more time than the clutter actually warranted, so this stayed a decluttering pass, not a rethink.</div>
+      </div>
+      <div class="decision-viz"><div class="viz-placeholder">Screenshot — home page<br>before / after</div></div>
+    </div>
+
+    <div class="decision reverse">
+      <div class="decision-copy">
+        <div class="num">02</div>
+        <h3>Match page structure</h3>
+        <div class="why">Same clutter problem, one level deeper</div>
+        <ul>
+          <li>Match pages had grown to 8–15 tabs with no governing structure</li>
+          <li>Full IA breakdown — match-state relevance, content snacking, navigation — lives in the Match Page Experience case study</li>
+        </ul>
+        <div class="tradeoff"><b>Trade-off</b>This got its own case study rather than a summary here — the material was too deep to compress without losing what made it work.</div>
+      </div>
+      <div class="decision-viz"><div class="viz-placeholder">Screenshot — match page tab count<br>before / after (link-out card)</div></div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-copy">
+        <div class="num">03</div>
+        <h3>Video &amp; short-form content</h3>
+        <div class="why">Fit the format to the content, not the other way around</div>
+        <ul>
+          <li>Fixed buggy long-form playback; muted autoplay audio by default</li>
+          <li>Added a playlist for continuous viewing</li>
+          <li>Introduced Quick Reads, short videos, and Stories — for the ~80% of users who weren't reading full articles at all</li>
+        </ul>
+        <div class="tradeoff"><b>Trade-off</b>Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing them into a long-form frame was the actual mismatch.</div>
+      </div>
+      <div class="decision-viz"><div class="viz-placeholder">Screenshot — video playlist &amp;<br>Quick Reads / Stories UI</div></div>
+    </div>
+
+    <div class="decision reverse">
+      <div class="decision-copy">
+        <div class="num">04</div>
+        <h3>Notifications &amp; navigation</h3>
+        <div class="why">Reliability first, then flexibility</div>
+        <ul>
+          <li>Stabilized notification reliability</li>
+          <li>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts</li>
+          <li>Simplified bottom navigation to cut down on competing entry points</li>
+        </ul>
+      </div>
+      <div class="decision-viz"><div class="viz-placeholder">Screenshot — notification settings &amp;<br>bottom nav, before / after</div></div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-copy">
+        <div class="num">05</div>
+        <h3>Lightweight engagement</h3>
+        <div class="why">A lower-effort way to feel part of a match</div>
+        <ul>
+          <li>Live polls, fan ratings, in-app games, share — sitting alongside deep stats, not replacing them</li>
+          <li>Reduced ad clutter and standardized ad sizes for visual cohesion</li>
+        </ul>
+        <div class="tradeoff"><b>Trade-off</b>The goal was never to dumb the product down — it was to give casual fans a way in that didn't require expertise, without asking core fans to give up any depth.</div>
+      </div>
+      <div class="decision-viz"><div class="viz-placeholder">Screenshot — polls, fan ratings,<br>in-app game UI</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUPPORTING ENGINEERING ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Alongside the Design Work</div>
+      <h2>What engineering fixed in parallel</h2>
+      <p>Not the headline — but they mattered enough to name honestly, and they're the reason the app size and speed numbers moved too.</p>
+    </div>
+
+    <div class="support-pair">
+      <div class="support-card">
+        <div class="k">Performance</div>
+        <h4>Font &amp; layout architecture</h4>
+        <ul>
+          <li>Custom downloadable font → native system fonts</li>
+          <li>Nested layout → flat, linear rendering structure</li>
+          <li>Live-score load-speed fix to close the gap with faster competitors</li>
+        </ul>
+      </div>
+      <div class="support-card">
+        <div class="k">Outcome</div>
+        <h4>What it bought us</h4>
+        <ul>
+          <li>App size down 30%, tied directly to the font and layout changes</li>
+          <li>A lighter, less cluttered feel as a side effect of a performance fix — not a design decision on its own</li>
+        </ul>
+      </div>
+    </div>
+    <p class="support-note">The interesting part of this story isn't that the app got faster — it's the judgment calls that decided what the faster app should actually look and behave like.</p>
+  </div>
+</section>
+
+<!-- ============ RESULT ============ -->
+<section style="border-bottom:none;">
+  <div class="wrap result">
+    <div class="tag" style="color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:600;">The Result</div>
+    <div class="num">3.4 → 4.5</div>
+    <p>Across 10M+ users — downloads up, app size down 30%, time spent on the app up 50%. Not a one-time fix — we kept watching app behavior for weeks after launch and iterated as new signal came in. Clarity is a design responsibility, not a subtraction exercise.</p>
+    <div class="result-viz"><div class="viz-placeholder">Visual — rating trajectory over the turnaround period</div></div>
+  </div>
+</section>
+
+<div class="cs-link">
+  <p>Continue reading</p>
+  <a href="#">Match Page Experience — the full IA redesign →</a>
+</div>
+
+</body>
+</html>
