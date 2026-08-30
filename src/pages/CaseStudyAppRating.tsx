@@ -379,7 +379,7 @@ const CaseStudyAppRating = () => {
 
           <Block
             eyebrow="Decision 3 — Fit the format to the content"
-            title="Video &amp; short-form content"
+            title="Video & short-form content"
           >
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
