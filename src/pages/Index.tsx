@@ -105,7 +105,21 @@ const strengths = [
 // CASE STUDIES
 // ─────────────────────────────────────────────
 
-const caseStudies = [
+type CaseStudy = {
+  num: string;
+  company: string;
+  title: string;
+  titleEm: string;
+  thumbType: "photo" | "placeholder";
+  thumbImage: string;
+  statNum: string;
+  statLabel: string;
+  year: string;
+  link: string;
+  wip?: boolean;
+};
+
+const caseStudies: CaseStudy[] = [
   {
     num: "01 / 05",
     company: "ESPN Cricinfo",
@@ -610,7 +624,6 @@ const Index = () => {
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
-            const isWip = cs.wip;
 
             return (
               <motion.div
