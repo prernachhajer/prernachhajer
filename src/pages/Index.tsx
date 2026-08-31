@@ -636,12 +636,8 @@ const Index = () => {
                   )}
 
                   {cs.thumbType === "placeholder" && (
-                    <div className="absolute inset-0 bg-background z-[1]" />
-                  )}
-
-                  {isWip && (
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-4 py-1.5 bg-background/80 backdrop-blur-[4px]">
+                    <div className="absolute inset-0 bg-secondary z-[1] flex items-center justify-center border border-dashed border-border">
+                      <span className="text-[0.6875rem] tracking-[0.1em] uppercase text-muted-foreground border border-border rounded-full px-5 py-2 bg-background/80 backdrop-blur-[4px]">
                         [WIP]
                       </span>
                     </div>
