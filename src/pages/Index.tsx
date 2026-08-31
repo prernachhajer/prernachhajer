@@ -19,6 +19,7 @@ import thumbHomepage from "@/assets/thumb-homepage-laptop.png";
 import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/Match_thumb1.png.asset.json";
+import thumbAppRating from "@/assets/app-rating-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
 import heroStack from "@/assets/hero/hero-stack.png.asset.json";
 
@@ -104,7 +105,21 @@ const strengths = [
 // CASE STUDIES
 // ─────────────────────────────────────────────
 
-const caseStudies = [
+type CaseStudy = {
+  num: string;
+  company: string;
+  title: string;
+  titleEm: string;
+  thumbType: "photo" | "placeholder";
+  thumbImage: string;
+  statNum: string;
+  statLabel: string;
+  year: string;
+  link: string;
+  wip?: boolean;
+};
+
+const caseStudies: CaseStudy[] = [
   {
     num: "01 / 05",
     company: "ESPN Cricinfo",
@@ -162,13 +177,12 @@ const caseStudies = [
     company: "ESPN Cricinfo",
     title: "3.4 → 4.5: The App Rating Turnaround",
     titleEm: "",
-    thumbType: "placeholder" as const,
-    thumbImage: "",
-    statNum: "",
-    statLabel: "",
+    thumbType: "photo" as const,
+    thumbImage: thumbAppRating,
+    statNum: "10M+",
+    statLabel: "users",
     year: "2025",
     link: "/case-study/app-rating",
-    wip: true,
   },
 ];
 
@@ -610,7 +624,6 @@ const Index = () => {
         <div className={`${wrapCls} grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-16 pb-[clamp(80px,10vw,140px)]`}>
           {caseStudies.map((cs, idx) => {
             const isComingSoon = !cs.link;
-            const isWip = cs.wip;
 
             return (
               <motion.div
