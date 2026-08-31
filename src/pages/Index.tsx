@@ -173,6 +173,34 @@ const caseStudies = [
 ];
 
 // ─────────────────────────────────────────────
+// QUICK STORIES
+// ─────────────────────────────────────────────
+
+const quickStories = [
+  {
+    title: "StatsGuru: migrating a legacy tool to NewStack",
+    tag: "Legacy → Modern",
+    status: "read",
+    link: "#",
+  },
+  {
+    title: "Push notifications: rethinking match-day alerts",
+    tag: "Product + design",
+    status: "coming-soon",
+  },
+  {
+    title: "Dynamic Island: live scores on the lock screen",
+    tag: "Native-only",
+    status: "coming-soon",
+  },
+  {
+    title: "Stats dashboard: publishable cricket data at scale",
+    tag: "B2B",
+    status: "coming-soon",
+  },
+];
+
+// ─────────────────────────────────────────────
 // COMPANIES
 // ─────────────────────────────────────────────
 
