@@ -692,6 +692,81 @@ const Index = () => {
         </div>
       </section>
       {/* ─────────────────────────────────────────
+          QUICK STORIES
+      ───────────────────────────────────────── */}
+      <section id="quick-stories" className="border-t border-border">
+        <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(80px,10vw,140px)]`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`flex items-center gap-3 ${t.label} text-primary mb-14`}
+          >
+            <span className="w-[22px] h-px bg-primary" />
+            Quick stories
+          </motion.div>
+
+          <div className="space-y-0">
+            {quickStories.map((story, idx) => {
+              const isRead = story.status === "read";
+
+              return (
+                <motion.div
+                  key={story.title}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={idx}
+                  className="group border-b border-border last:border-b-0"
+                >
+                  <a
+                    href={story.link || "#"}
+                    onClick={(e) => {
+                      if (!story.link || story.status === "coming-soon") {
+                        e.preventDefault();
+                      }
+                    }}
+                    className={`flex items-center justify-between gap-6 py-6 md:py-7 transition-colors ${
+                      story.status === "coming-soon" ? "cursor-default" : "hover:bg-secondary/30"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4 md:gap-6 flex-wrap">
+                      <h3
+                        className="text-[clamp(1.05rem,1.5vw,1.35rem)] font-normal leading-[1.25] tracking-[-0.01em] text-foreground"
+                        style={{ fontFamily: t.displayFont }}
+                      >
+                        {story.title}
+                      </h3>
+
+                      <span className="inline-flex items-center text-[0.6875rem] tracking-[0.04em] text-muted-foreground border border-border rounded-full px-3 py-1">
+                        {story.tag}
+                      </span>
+                    </div>
+
+                    <span
+                      className={`shrink-0 flex items-center gap-1.5 text-[0.8125rem] tracking-[0.02em] ${
+                        isRead ? "text-foreground" : "text-muted-foreground"
+                      }`}
+                    >
+                      {isRead ? (
+                        <>
+                          Read
+                          <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </>
+                      ) : (
+                        "Coming soon"
+                      )}
+                    </span>
+                  </a>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* ─────────────────────────────────────────
           ABOUT
       ───────────────────────────────────────── */}
       <section id="about" className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)]`}>
