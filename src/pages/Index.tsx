@@ -704,7 +704,7 @@ const Index = () => {
             className={`flex items-center gap-3 ${t.label} text-primary mb-14`}
           >
             <span className="w-[22px] h-px bg-primary" />
-            Quick stories
+            SHORT STORIES
           </motion.div>
 
           <div className="space-y-0">
