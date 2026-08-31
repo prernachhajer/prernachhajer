@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stats Dashboard — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pitch: #16302A;
+    --pitch-deep: #0E211C;
+    --paper: #F1EEE4;
+    --paper-dim: #E7E2D3;
+    --ink: #1B1F1D;
+    --ink-soft: #52584F;
+    --amber: #B8862E;
+    --line: rgba(27,31,29,0.14);
+    --line-strong: rgba(27,31,29,0.28);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:'Newsreader', serif;font-weight:500;margin:0;color:var(--ink);}
+
+  /* HERO */
+  .hero{
+    background:var(--pitch);
+    color:var(--paper);
+    padding:88px 0 64px;
+  }
+  .hero .kicker{
+    font-size:14px;
+    color:var(--amber);
+    letter-spacing:0.02em;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+  .hero h1{
+    font-size:46px;
+    line-height:1.12;
+    max-width:11.5em;
+    color:var(--paper);
+  }
+  .hero .dek{
+    margin-top:22px;
+    font-size:18px;
+    color:rgba(241,238,228,0.82);
+    max-width:640px;
+    font-weight:400;
+  }
+  .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    column-gap:24px;
+    margin-top:56px;
+    border-top:1px solid rgba(241,238,228,0.2);
+    padding-top:24px;
+  }
+  .hero-stats div{padding-left:24px;border-left:1px solid rgba(241,238,228,0.15);}
+  .hero-stats div:first-child{padding-left:0;border-left:none;}
+  .hero-stats .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--paper);}
+  .hero-stats .lbl{font-size:12.5px;color:rgba(241,238,228,0.6);margin-top:4px;}
+
+  /* STATUS BANNER */
+  .status-banner{
+    background:var(--paper-dim);
+    border-bottom:1px solid var(--line-strong);
+    padding:16px 0;
+  }
+  .status-banner .wrap{display:flex;align-items:center;gap:12px;}
+  .status-banner .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+  .status-banner p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .status-banner strong{color:var(--ink);font-weight:600;}
+
+  /* SECTIONS */
+  section{padding:56px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .eyebrow{font-size:13px;color:var(--amber);font-weight:600;margin-bottom:10px;}
+  .section-title{font-size:28px;max-width:16em;}
+  .section-body{margin-top:16px;max-width:64ch;color:var(--ink-soft);font-size:16px;}
+
+  /* WHY IT MATTERS */
+  .why-list{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .why-list li{
+    list-style:none;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:20px;
+    font-size:16px;
+  }
+  .why-list li:last-child{border-bottom:1px solid var(--line);}
+  .why-list .mark{color:var(--amber);font-family:'Newsreader',serif;font-style:italic;font-size:18px;flex-shrink:0;width:1.2em;}
+
+  /* PROBLEM GRID */
+  .problem-grid{
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid var(--line-strong);
+  }
+  .problem-cell{
+    padding:24px 0;
+    border-bottom:1px solid var(--line-strong);
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+    align-items:baseline;
+  }
+  .problem-cell .cell-label{font-size:13px;color:var(--amber);font-weight:600;letter-spacing:0.01em;}
+  .problem-cell p{margin:0;font-size:15px;color:var(--ink-soft);max-width:52ch;}
+
+  /* PRINCIPLE */
+  .principle{
+    background:var(--pitch);
+    color:var(--paper);
+    padding:64px 0;
+    border-bottom:none;
+  }
+  .principle .wrap{text-align:left;}
+  .principle blockquote{
+    margin:0;
+    font-family:'Newsreader',serif;
+    font-style:italic;
+    font-size:28px;
+    line-height:1.45;
+    max-width:15em;
+    color:var(--paper);
+  }
+  .principle .attribution{margin-top:20px;font-size:14px;color:rgba(241,238,228,0.55);font-family:'IBM Plex Sans',sans-serif;font-style:normal;}
+
+  /* PHASE HEADER */
+  .phase-header{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .phase-tag{
+    font-size:13px;
+    font-weight:600;
+    color:var(--paper);
+    background:var(--pitch);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+  .phase-who{margin-top:18px;font-size:15px;color:var(--ink-soft);}
+  .phase-who strong{color:var(--ink);font-weight:600;}
+
+  /* DECISIONS LIST */
+  .decision{
+    padding:22px 0;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:32px 1fr;
+    gap:18px;
+  }
+  .decision .n{font-family:'Newsreader',serif;font-size:16px;color:var(--amber);}
+  .decision h4{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:16px;margin:0 0 6px;}
+  .decision p{margin:0;font-size:15px;color:var(--ink-soft);}
+  .decision .tradeoff{
+    margin-top:10px;
+    padding-left:14px;
+    border-left:2px solid var(--amber);
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .decision .tradeoff em{font-style:normal;color:var(--amber);font-weight:600;}
+
+  /* SEGMENT TABLE */
+  .segment-table{
+    margin:24px 0 8px;
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  .segment-table + .decision{border-top:none;margin-top:28px;padding-top:0;}
+  .segment-table th{
+    text-align:left;
+    font-weight:600;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding:10px 14px 10px 0;
+    border-bottom:1px solid var(--line-strong);
+  }
+  .segment-table td{
+    padding:14px 14px 14px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    color:var(--ink-soft);
+  }
+  .segment-table td:first-child{color:var(--ink);font-weight:500;}
+  .choice-pill{
+    display:inline-block;
+    font-size:12px;
+    padding:2px 8px;
+    border-radius:2px;
+    font-weight:600;
+  }
+  .pill-chosen{background:rgba(184,134,46,0.16);color:var(--amber);}
+  .pill-explored{background:rgba(27,31,29,0.08);color:var(--ink-soft);}
+
+  /* IMPACT */
+  .impact-row{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    column-gap:32px;
+    border-top:1px solid var(--line-strong);
+  }
+  .impact-cell{
+    padding:22px 0 0 32px;
+    border-left:1px solid var(--line-strong);
+  }
+  .impact-cell:first-child{padding-left:0;border-left:none;}
+  .impact-cell .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--pitch);}
+  .impact-cell .desc{margin-top:6px;font-size:14px;color:var(--ink-soft);}
+
+  .placeholder-shot{
+    margin-top:32px;
+    background:var(--paper-dim);
+    border:1px dashed var(--line-strong);
+    border-radius:2px;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  footer{padding:40px 0;text-align:left;}
+  footer p{font-size:13px;color:var(--ink-soft);}
+
+  @media(max-width:640px){
+    .hero h1{font-size:32px;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);row-gap:24px;}
+    .hero-stats div:nth-child(2n){border-left:none;padding-left:0;}
+    .problem-cell{grid-template-columns:1fr;gap:6px;}
+    .impact-row{grid-template-columns:1fr;row-gap:20px;}
+    .impact-cell{border-left:none;padding-left:0;}
+    .principle blockquote{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Case Study — Star Sports × Cricinfo</div>
+    <h1>Stats Dashboard: One Source, Every Format</h1>
+    <p class="dek">Star Sports was paying an outside vendor for cricket stats it already owned through Cricinfo. Stats Dashboard was built to close that gap — one tool to browse, generate, and publish stat modules straight to broadcast, apps, and social, without the licensing cost.</p>
+    <div class="hero-stats">
+      <div><div class="num">3–6 months</div><div class="lbl">designed and built</div></div>
+      <div><div class="num">5 formats</div><div class="lbl">API, iframe, image, text, social</div></div>
+      <div><div class="num">2 approaches tested</div><div class="lbl">open query vs. guided filters</div></div>
+      <div><div class="num">Built, not launched</div><div class="lbl">shelved before rollout</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="status-banner">
+  <div class="wrap">
+    <span class="dot"></span>
+    <p><strong>Status —</strong> Fully designed and built over 3–6 months. Not launched. <em>[Reason for deprioritization to be added.]</em></p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why this project mattered</div>
+    <ul class="why-list">
+      <li><span class="mark">—</span> Star Sports, Cricinfo, and other properties sit under the same umbrella, but Star Sports was licensing stats from an external vendor at extra cost</li>
+      <li><span class="mark">—</span> That same data already existed, ready to use, inside Cricinfo</li>
+      <li><span class="mark">—</span> No self-serve way existed to pull it and publish it across broadcast, app, and social in one flow</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2 class="section-title">Paying twice for data already in-house</h2>
+    <div class="problem-grid">
+      <div class="problem-cell">
+        <div class="cell-label">Business problem</div>
+        <p>Star Sports paid an external API vendor for cricket stats, adding recurring licensing cost for data that Cricinfo, a sibling property, already had.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Root cause</div>
+        <p>There was no bridge between Cricinfo's data and Star Sports' publishing needs — no tool let a user browse Cricinfo modules and push them straight to broadcast, app, or social.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Cost of inaction</div>
+        <p>Every live match meant either paying the external vendor again, or manually sourcing and formatting stats under time pressure — neither of which scaled.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Strategy</div>
+        <p>Build one dashboard on top of Cricinfo's own data: browse modules, customize them, and publish in whatever format the destination needed — closing the vendor dependency at the source.</p>
+      </div>
+    </div>
+    <div class="placeholder-shot">module browser + publish-format picker — screenshot</div>
+  </div>
+</section>
+
+<div class="principle">
+  <div class="wrap">
+    <blockquote>Why pay for data we already have?</blockquote>
+    <div class="attribution">The insight that shaped the whole system — Cricinfo's stats didn't need to be licensed from outside, they needed a way out to where they were needed.</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="phase-header">
+      <span class="phase-tag">Core system</span>
+      <h2 class="section-title" style="font-size:24px;">Browse, customize, publish anywhere</h2>
+    </div>
+    <p class="phase-who"><strong>Who this was for:</strong> broadcast producers and digital editors at partner platforms, working against live or near-live matches with little time to spare.</p>
+
+    <div class="decision">
+      <div class="n">1</div>
+      <div>
+        <h4>Source directly from Cricinfo, not a third-party feed</h4>
+        <p>Every stat module in the dashboard pulled from data Star Sports already had access to, removing the need for a separately licensed vendor.</p>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">2</div>
+      <div>
+        <h4>One module, five output formats</h4>
+        <p>API, embeddable iframe, plain text, static image, or social graphic — the same module could serve a TV overlay, an app embed, and a social post without redoing the work per platform.</p>
+        <div class="tradeoff"><em>Trade-off —</em> designing one module to render correctly across five very different surfaces meant the UI had to stay platform-agnostic from the start, not adapted after the fact.</div>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">3</div>
+      <div>
+        <h4>Modular, reusable components</h4>
+        <p>Built so future partners beyond Star Sports could be onboarded onto the same system without rebuilding it from scratch.</p>
+      </div>
+    </div>
+    <div class="placeholder-shot">publish flow — select module → choose format → publish</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="phase-header">
+      <span class="phase-tag">Sub-tool</span>
+      <h2 class="section-title" style="font-size:24px;">Generate Stats — open query vs. guided filters</h2>
+    </div>
+    <p class="phase-who"><strong>Who this was for:</strong> the same producers and editors, now needing a custom module — a player journey, tournament summary, or match highlight — that didn't already exist as a pre-built option.</p>
+
+    <div class="eyebrow" style="margin-top:32px;">Two approaches explored</div>
+    <table class="segment-table">
+      <thead>
+        <tr><th>Approach</th><th>How it worked</th><th>Outcome</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Guided filters</td>
+          <td>Predefined fields — team, tournament, stat type — narrowed the query before the user typed anything</td>
+          <td><span class="choice-pill pill-chosen">Chosen</span></td>
+        </tr>
+        <tr>
+          <td>Open query</td>
+          <td>Free text, chatbot-style — broad results across formats and tournaments, plus related matches, photos, and videos</td>
+          <td><span class="choice-pill pill-explored">Explored</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="decision">
+      <div class="n">4</div>
+      <div>
+        <h4>Chose speed and precision over flexibility</h4>
+        <p>Users were almost always working against a live match, with little time to explore or refine an open-ended query. Guided filters got them to the exact stat in fewer steps — which mattered more than the novelty of conversational search.</p>
+        <div class="tradeoff"><em>Trade-off —</em> gave up the flexibility and broader discovery the open-query approach offered, in exchange for reliably fast, precise results under time pressure.</div>
+      </div>
+    </div>
+    <div class="placeholder-shot">Generate Stats — guided filter interface</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="phase-header">
+      <span class="phase-tag">Integration</span>
+      <h2 class="section-title" style="font-size:24px;">Getting a dashboard selection on air</h2>
+    </div>
+    <p class="phase-who"><strong>Who this was for:</strong> broadcast operators, who needed a dashboard selection — match, module, player — to arrive as a ready TV graphic, not just a design mockup.</p>
+
+    <div class="decision">
+      <div class="n">5</div>
+      <div>
+        <h4>Designed the field-mapping architecture</h4>
+        <p>Defined how each piece of dashboard data — player name, stat value, image — mapped to the corresponding field in the broadcast graphics template, so a dashboard selection could render correctly on air.</p>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">6</div>
+      <div>
+        <h4>Built in multi-language handling</h4>
+        <p>The same module could generate in different languages without a separate manual setup per language.</p>
+      </div>
+    </div>
+    <div class="placeholder-shot">dashboard selection → broadcast graphic output</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Intended impact</div>
+    <h2 class="section-title">What it was designed to deliver</h2>
+    <p class="section-body">The project wasn't launched, so these are outcomes it was built for rather than measured results.</p>
+    <div class="impact-row">
+      <div class="impact-cell">
+        <div class="num">Lower licensing cost</div>
+        <div class="desc">Reduced Star Sports' dependency on a paid third-party stats vendor by using data already available in-house</div>
+      </div>
+      <div class="impact-cell">
+        <div class="num">Faster live turnaround</div>
+        <div class="desc">Cut the time to get a stat from Cricinfo's data to a broadcast graphic or social post during a live match</div>
+      </div>
+      <div class="impact-cell">
+        <div class="num">A reusable foundation</div>
+        <div class="desc">Modular components meant future partners could be onboarded without rebuilding the system each time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Mockup — placeholder layout for review. Screenshots, deprioritization reason, and challenge detail to be finalized before this goes into the portfolio.</p>
+  </div>
+</footer>
+
+</body>
+</html>

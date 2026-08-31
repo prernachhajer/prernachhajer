@@ -184,6 +184,12 @@ const quickStories = [
     link: "/statsguru-case-study.html",
   },
   {
+    title: "Stats dashboard: publishable cricket data at scale",
+    tag: "B2B",
+    status: "read",
+    link: "/stats-dashboard-case-study.html",
+  },
+  {
     title: "Push notifications: rethinking match-day alerts",
     tag: "Product + design",
     status: "coming-soon",
@@ -191,11 +197,6 @@ const quickStories = [
   {
     title: "Dynamic Island: live scores on the lock screen",
     tag: "Native-only",
-    status: "coming-soon",
-  },
-  {
-    title: "Stats dashboard: publishable cricket data at scale",
-    tag: "B2B",
     status: "coming-soon",
   },
 ];
