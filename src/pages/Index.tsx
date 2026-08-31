@@ -160,7 +160,7 @@ const caseStudies = [
   {
     num: "05 / 05",
     company: "ESPN Cricinfo",
-    title: "App Rating Turnaround",
+    title: "3.4 → 4.5: The App Rating Turnaround",
     titleEm: "",
     thumbType: "placeholder" as const,
     thumbImage: "",
