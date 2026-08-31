@@ -181,7 +181,7 @@ const quickStories = [
     title: "StatsGuru: migrating a legacy tool to NewStack",
     tag: "Legacy → Modern",
     status: "read",
-    link: "#",
+    link: "/statsguru-case-study.html",
   },
   {
     title: "Push notifications: rethinking match-day alerts",

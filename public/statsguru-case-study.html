@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StatsGuru + CricGPT — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pitch: #16302A;
+    --pitch-deep: #0E211C;
+    --paper: #F1EEE4;
+    --paper-dim: #E7E2D3;
+    --ink: #1B1F1D;
+    --ink-soft: #52584F;
+    --amber: #B8862E;
+    --line: rgba(27,31,29,0.14);
+    --line-strong: rgba(27,31,29,0.28);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:'Newsreader', serif;font-weight:500;margin:0;color:var(--ink);}
+
+  /* HERO */
+  .hero{
+    background:var(--pitch);
+    color:var(--paper);
+    padding:88px 0 64px;
+  }
+  .hero .kicker{
+    font-size:14px;
+    color:var(--amber);
+    letter-spacing:0.02em;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+  .hero h1{
+    font-size:46px;
+    line-height:1.12;
+    max-width:11.5em;
+    color:var(--paper);
+  }
+  .hero .dek{
+    margin-top:22px;
+    font-size:18px;
+    color:rgba(241,238,228,0.82);
+    max-width:640px;
+    font-weight:400;
+  }
+  .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    column-gap:24px;
+    margin-top:56px;
+    border-top:1px solid rgba(241,238,228,0.2);
+    padding-top:24px;
+  }
+  .hero-stats div{padding-left:24px;border-left:1px solid rgba(241,238,228,0.15);}
+  .hero-stats div:first-child{padding-left:0;border-left:none;}
+  .hero-stats .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--paper);}
+  .hero-stats .lbl{font-size:12.5px;color:rgba(241,238,228,0.6);margin-top:4px;}
+
+  /* SECTIONS */
+  section{padding:56px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .eyebrow{font-size:13px;color:var(--amber);font-weight:600;margin-bottom:10px;}
+  .section-title{font-size:28px;max-width:16em;}
+  .section-body{margin-top:16px;max-width:64ch;color:var(--ink-soft);font-size:16px;}
+
+  /* WHY IT MATTERS */
+  .why-list{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .why-list li{
+    list-style:none;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:20px;
+    font-size:16px;
+  }
+  .why-list li:last-child{border-bottom:1px solid var(--line);}
+  .why-list .mark{color:var(--amber);font-family:'Newsreader',serif;font-style:italic;font-size:18px;flex-shrink:0;width:1.2em;}
+
+  /* PROBLEM GRID */
+  .problem-grid{
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid var(--line-strong);
+  }
+  .problem-cell{
+    padding:24px 0;
+    border-bottom:1px solid var(--line-strong);
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+    align-items:baseline;
+  }
+  .problem-cell .cell-label{font-size:13px;color:var(--amber);font-weight:600;letter-spacing:0.01em;}
+  .problem-cell p{margin:0;font-size:15px;color:var(--ink-soft);max-width:52ch;}
+
+  /* PRINCIPLE */
+  .principle{
+    background:var(--pitch);
+    color:var(--paper);
+    padding:64px 0;
+    border-bottom:none;
+  }
+  .principle .wrap{text-align:left;}
+  .principle blockquote{
+    margin:0;
+    font-family:'Newsreader',serif;
+    font-style:italic;
+    font-size:28px;
+    line-height:1.45;
+    max-width:15em;
+    color:var(--paper);
+  }
+  .principle .attribution{margin-top:20px;font-size:14px;color:rgba(241,238,228,0.55);font-family:'IBM Plex Sans',sans-serif;font-style:normal;}
+
+  /* PHASE HEADER */
+  .phase-header{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .phase-tag{
+    font-size:13px;
+    font-weight:600;
+    color:var(--paper);
+    background:var(--pitch);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+  .phase-who{margin-top:18px;font-size:15px;color:var(--ink-soft);}
+  .phase-who strong{color:var(--ink);font-weight:600;}
+
+  /* DECISIONS LIST */
+  .decision{
+    padding:22px 0;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:32px 1fr;
+    gap:18px;
+  }
+  .decision .n{font-family:'Newsreader',serif;font-size:16px;color:var(--amber);}
+  .decision h4{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:16px;margin:0 0 6px;}
+  .decision p{margin:0;font-size:15px;color:var(--ink-soft);}
+  .decision .tradeoff{
+    margin-top:10px;
+    padding-left:14px;
+    border-left:2px solid var(--amber);
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .decision .tradeoff em{font-style:normal;color:var(--amber);font-weight:600;}
+
+  /* SEGMENT TABLE */
+  .segment-table{
+    margin:24px 0 8px;
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  .segment-table + .decision{border-top:none;margin-top:28px;padding-top:0;}
+  .segment-table th{
+    text-align:left;
+    font-weight:600;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding:10px 14px 10px 0;
+    border-bottom:1px solid var(--line-strong);
+  }
+  .segment-table td{
+    padding:14px 14px 14px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    color:var(--ink-soft);
+  }
+  .segment-table td:first-child{color:var(--ink);font-weight:500;}
+  .subscription{
+    display:inline-block;
+    font-size:12px;
+    padding:2px 8px;
+    border-radius:2px;
+    font-weight:600;
+  }
+  .sub-high{background:rgba(184,134,46,0.16);color:var(--amber);}
+  .sub-med{background:rgba(27,31,29,0.08);color:var(--ink-soft);}
+
+  /* IMPACT */
+  .impact-row{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    column-gap:32px;
+    border-top:1px solid var(--line-strong);
+  }
+  .impact-cell{
+    padding:22px 0 0 32px;
+    border-left:1px solid var(--line-strong);
+  }
+  .impact-cell:first-child{padding-left:0;border-left:none;}
+  .impact-cell .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--pitch);}
+  .impact-cell .desc{margin-top:6px;font-size:14px;color:var(--ink-soft);}
+
+  .placeholder-shot{
+    margin-top:32px;
+    background:var(--paper-dim);
+    border:1px dashed var(--line-strong);
+    border-radius:2px;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  footer{padding:40px 0;text-align:left;}
+  footer p{font-size:13px;color:var(--ink-soft);}
+
+  @media(max-width:640px){
+    .hero h1{font-size:32px;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);row-gap:24px;}
+    .hero-stats div:nth-child(2n){border-left:none;padding-left:0;}
+    .problem-cell{grid-template-columns:1fr;gap:6px;}
+    .impact-row{grid-template-columns:1fr;row-gap:20px;}
+    .impact-cell{border-left:none;padding-left:0;}
+    .principle blockquote{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Case Study — ESPNCricinfo</div>
+    <h1>StatsGuru + CricGPT: From Filters to Conversation</h1>
+    <p class="dek">Cricket knowledge is difficult to access. Fans know the score, but not the context. StatsGuru could close that gap — but it sat desktop-only, on a legacy stack, known to almost no one outside a small loyal base.</p>
+    <div class="hero-stats">
+      <div><div class="num">Desktop → Mobile</div><div class="lbl">where the tool actually lives now</div></div>
+      <div><div class="num">Filters → Conversation</div><div class="lbl">how users get to an answer</div></div>
+      <div><div class="num">Power users → Everyone</div><div class="lbl">who the tool now reaches</div></div>
+      <div><div class="num">Reach, then access</div><div class="lbl">two phases, one foundation</div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why StatsGuru matters</div>
+    <ul class="why-list">
+      <li><span class="mark">—</span> Core tool for pro cricket fans to generate stat tables</li>
+      <li><span class="mark">—</span> Supports analysis, predictions, and fantasy strategy</li>
+      <li><span class="mark">—</span> Built to ensure high usability and reliability for Cricinfo's most advanced users</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2 class="section-title">A legacy tool that couldn't be found — or queried</h2>
+    <div class="problem-grid">
+      <div class="problem-cell">
+        <div class="cell-label">Business problem</div>
+        <p>Cricinfo's richest data product reached only a sliver of its potential audience — usage skewed almost entirely to a small base of repeat, power users.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Root cause</div>
+        <p>Built for desktop on a legacy stack, StatsGuru's data wasn't built to be queried — only filtered and displayed. It couldn't utilize the depth of data Cricinfo actually had.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Band-aid</div>
+        <p>AskCricinfo worked around this by reading StatsGuru's HTML output directly rather than querying real data — a workaround that couldn't scale into a proper AI experience.</p>
+      </div>
+      <div class="problem-cell">
+        <div class="cell-label">Strategy</div>
+        <p>Two phases. First, rebuild the foundation — new stack, mobile, better UX. Then, once the data was actually queryable, build a conversational layer on top.</p>
+      </div>
+    </div>
+    <div class="placeholder-shot">before / after — density &amp; tab comparison</div>
+  </div>
+</section>
+
+<div class="principle">
+  <div class="wrap">
+    <blockquote>Depth wasn't the problem — access was.</blockquote>
+    <div class="attribution">The goal was to make StatsGuru's power usable by people who'd never build a filter query, without diluting it for the people who already had.</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="phase-header">
+      <span class="phase-tag">Phase 1</span>
+      <h2 class="section-title" style="font-size:24px;">Foundation — new stack, mobile, UX overhaul</h2>
+    </div>
+    <p class="phase-who"><strong>Who this phase was for:</strong> Cricket researcher, Analyst, Creator/Journalist — people who already knew what they were looking for, but were blocked by platform and interface.</p>
+
+    <div class="eyebrow" style="margin-top:32px;">Built for</div>
+    <table class="segment-table">
+      <thead>
+        <tr><th>Segment</th><th>Pain point</th><th>Job to be done</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cricket researcher</td><td>Research is time-consuming and complex</td><td>Help me find answers faster</td></tr>
+        <tr><td>Analyst</td><td>Info fragmented across products</td><td>Help me make better decisions</td></tr>
+        <tr><td>Creator / Journalist</td><td>Manual research across multiple sources</td><td>Help me discover insights quickly</td></tr>
+      </tbody>
+    </table>
+
+    <div class="decision">
+      <div class="n">1</div>
+      <div>
+        <h4>Migrate to a new stack, with an API built for real data access</h4>
+        <p>Reduced tech debt, made StatsGuru's data queryable for the first time — not just displayable.</p>
+        <div class="tradeoff"><em>Trade-off —</em> slower and riskier than a surface redesign, but nothing downstream was possible without it.</div>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">2</div>
+      <div>
+        <h4>Build for mobile, not just port the desktop UI</h4>
+        <p>Reached the 80%+ of users who never touched StatsGuru because it lived on desktop only.</p>
+        <div class="tradeoff"><em>Trade-off —</em> the dense filter UI power users relied on had to be redesigned, not resized.</div>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">3</div>
+      <div>
+        <h4>Add search alongside filters</h4>
+        <p>Type a player name instead of building a query from scratch.</p>
+        <div class="tradeoff"><em>Trade-off —</em> needed to feel additive, not like a dilution of the tool's depth.</div>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">4</div>
+      <div>
+        <h4>Advanced search, cross-vertical</h4>
+        <p>One keyword search across teams, players, tournaments, matches — previously desktop-only, now on mobile too.</p>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">5</div>
+      <div>
+        <h4>Overhaul filter-building for power users</h4>
+        <p>Multi-team selection replacing one-at-a-time, simpler date-range selection, smoother query editing for those applying 10–20 filters.</p>
+        <div class="tradeoff"><em>Trade-off —</em> depth for the loyal base couldn't be sacrificed while building for a broader audience.</div>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">6</div>
+      <div>
+        <h4>Rework the results experience</h4>
+        <p>Editable filters in place, flexible output types, adjustable results-per-page, better pagination, progressive disclosure.</p>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="n">7</div>
+      <div>
+        <h4>Drive discovery, not just build it</h4>
+        <p>A floating CTA and dedicated block added to the homepage.</p>
+      </div>
+    </div>
+    <div class="placeholder-shot">mobile filter builder + search — before / after</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="phase-header">
+      <span class="phase-tag">Phase 2</span>
+      <h2 class="section-title" style="font-size:24px;">CricGPT — an AI layer for everyone</h2>
+    </div>
+    <p class="phase-who"><strong>Who this phase was for:</strong> the same Cricket researcher, Analyst, and Creator/Journalist Phase 1 was built for — plus three new audiences the AI layer made possible for the first time.</p>
+
+    <div class="eyebrow" style="margin-top:32px;">Newly added</div>
+    <table class="segment-table">
+      <thead>
+        <tr><th>Segment</th><th>Pain point</th><th>Job to be done</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Casual fan</td><td>Struggles to catch up quickly</td><td>Tell me what happened and why it matters</td></tr>
+        <tr><td>Team loyalist</td><td>Important updates require active searching</td><td>Keep me informed about my teams and players</td></tr>
+        <tr><td>Returning user</td><td>Experience feels similar every visit</td><td>Make Cricinfo more relevant to me over time</td></tr>
+      </tbody>
+    </table>
+
+    <div class="decision">
+      <div class="n">8</div>
+      <div>
+        <h4>Layer CricGPT on top of the now-queryable data</h4>
+        <p>Led/designed by Prerna — letting users ask cricket questions in plain language instead of building a query at all.</p>
+        <div class="tradeoff"><em>Trade-off —</em> depended entirely on Phase 1's stack/API work having happened first. The two phases weren't parallel — one was the foundation for the other.</div>
+      </div>
+    </div>
+    <div class="placeholder-shot">CricGPT conversational interface — mobile</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Impact</div>
+    <h2 class="section-title">Reaching cricket fans who never touched StatsGuru</h2>
+    <p class="section-body">The clearest result: CricGPT is reaching people StatsGuru never did. Casual fans, team loyalists, and returning users — who'd never have opened a filter-heavy stats tool — now get the same underlying depth just by asking a question.</p>
+    <div class="impact-row">
+      <div class="impact-cell">
+        <div class="num">New audiences</div>
+        <div class="desc">Casual fans, team loyalists, and returning users now use StatsGuru's data for the first time — via CricGPT, not filters</div>
+      </div>
+      <div class="impact-cell">
+        <div class="num">Same depth, new entry point</div>
+        <div class="desc">The power-user base keeps its full filtering toolkit; nothing was simplified away to reach the new audience</div>
+      </div>
+      <div class="impact-cell">
+        <div class="num">One foundation, two outcomes</div>
+        <div class="desc">Phase 2 was only possible because Phase 1 made the data queryable in the first place</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Mockup — placeholder layout for review. Screenshots, exact metrics, and phase attribution (mobile/UX vs. CricGPT) to be finalized.</p>
+  </div>
+</footer>
+
+</body>
+</html>
