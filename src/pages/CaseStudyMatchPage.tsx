@@ -676,16 +676,16 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 8 — Hold the same line" title="The principle didn't stop at the design file">
+          <Block eyebrow="DECISION 8 — KEEP THE SAME PRINCIPLES IN BUILD" title="The design principles carried through to launch">
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   label: "Engineering",
-                  body: "Tabs defer data loading until clicked rather than requesting heavy parallel loads on initial render.",
+                  body: "Tabs load their data only when opened, avoiding unnecessary loading on the initial screen.",
                 },
                 {
                   label: "Monetization",
-                  body: "Held the line at two clean ad banners per viewport block, protecting content integrity.",
+                  body: "Kept ads to two clean banners per viewport, so they didn’t overwhelm the content.",
                 },
               ].map((item) => (
                 <div key={item.label} className={`${radius.cardSm} ${surface.card} p-6`}>
@@ -710,7 +710,7 @@ const CaseStudyMatchPage = () => {
             className={`${t.h2} max-w-3xl`}
             style={{ fontFamily: t.displayFont }}
           >
-            Watching the new paths get used, not just the tab count drop.
+            Measuring how people used the new structure
           </motion.h2>
 
           <ImpactPanel>
@@ -738,8 +738,8 @@ const CaseStudyMatchPage = () => {
           </ImpactPanel>
 
           <p className={`${t.bodyLg} text-muted-foreground max-w-3xl`}>
-            With the statistics in order, users reached the data they wanted in half the taps. The interface stopped
-            generating friction, and store ratings followed.
+            With the new structure, users reached the data they wanted in half the taps. The experience became easier
+            to use, and store ratings improved.
           </p>
         </div>
       </section>
