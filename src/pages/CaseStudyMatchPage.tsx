@@ -190,9 +190,9 @@ const CaseStudyMatchPage = () => {
           <SectionLabel>Project overview</SectionLabel>
           <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
-              { label: "My role", value: "Lead Product Designer, project lead" },
-              { label: "Worked with", value: "Product Manager, Engineering" },
-              { label: "Scope", value: "Reduce cognitive load, improve discovery, habit formation" },
+              { label: "My role", value: "Lead Product Designer, Project lead" },
+              { label: "Worked with", value: "Product, Engineering" },
+              { label: "Scope", value: "Reduce cognitive load, Improve discovery, Habit formation" },
               { label: "Platform", value: "iOS & Android" },
               { label: "Timeframe", value: "~6 months, phased rollout" },
               {
