@@ -332,8 +332,9 @@ const CaseStudyMatchPage = () => {
               ))}
             </div>
             <p className={`${t.bodyLg} text-muted-foreground mt-8 max-w-3xl`}>
-              Test match scorecards are complex data layers. When users hit navigation delays and redundant filters,
-              they perceive the page as sluggish even when load metrics are fine.
+              A Test match scorecard could mean four full innings tables stacked on one page. The clutter wasn’t just a perception problem; it was built into the structure.
+              <br /><br />
+              Competitors like Cricbuzz and Google offered a simpler experience, even with less depth.
             </p>
           </div>
 
