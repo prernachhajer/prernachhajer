@@ -309,7 +309,7 @@ const CaseStudyMatchPage = () => {
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
               Users Reviews
             </h3>
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="grid md:grid-cols-3 gap-8 mt-8">
               {[
                 {
                   quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
