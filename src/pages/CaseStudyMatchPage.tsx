@@ -498,9 +498,9 @@ const CaseStudyMatchPage = () => {
           <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
-                <Bullet>Rigorous usage audit trimmed tab presence down to core tasks only.</Bullet>
-                <Bullet>Points table retained a high-level entry but merged detailed stats into single hubs.</Bullet>
-                <Bullet>Stats & Fantasy merged into structured modules, removing departmental silos.</Bullet>
+                <Bullet>Usage audit: Kept only the tabs tied to core user tasks.</Bullet>
+                <Bullet>Points table: Kept as a top-level entry, while other stats like MVP, Overs moved into dedicated stats tab.</Bullet>
+                <Bullet>Stats & Fantasy: Brought into structured modules instead of separate sections.</Bullet>
               </ul>
               <TradeOff>
                 A few loyal users filed tickets when their usual tabs disappeared — before adapting to the new layout.
