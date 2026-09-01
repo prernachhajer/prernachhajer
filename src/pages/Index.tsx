@@ -122,7 +122,7 @@ type CaseStudy = {
 const caseStudies: CaseStudy[] = [
   {
     num: "01 / 05",
-    company: "ESPNcricinfo",
+    company: "ESPN cricinfo",
     title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
     thumbType: "photo" as const,
@@ -135,7 +135,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "02 / 05",
-    company: "ESPNcricinfo",
+    company: "ESPN cricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
     thumbType: "photo" as const,
@@ -148,7 +148,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "03 / 05",
-    company: "ESPNcricinfo",
+    company: "ESPN cricinfo",
     title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
     thumbType: "photo" as const,
@@ -161,7 +161,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "04 / 05",
-    company: "ESPNcricinfo",
+    company: "ESPN cricinfo",
     title: "50% More Time Spent: Quick Reads",
     titleEm: "",
     thumbType: "photo" as const,
@@ -174,7 +174,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "05 / 05",
-    company: "ESPNcricinfo",
+    company: "ESPN cricinfo",
     title: "3.4 → 4.5: The App Rating Turnaround",
     titleEm: "",
     thumbType: "photo" as const,
