@@ -196,14 +196,12 @@ const quickStories = [
     tag: "Legacy → Modern",
     status: "read",
     link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
-    
   },
   {
     title: "Stats dashboard: publishable cricket data at scale",
     tag: "B2B",
     status: "read",
     link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
-    
   },
   {
     title: "Push notifications: rethinking match-day alerts",
@@ -247,21 +245,9 @@ const companies = [
     logo: fabHotelsLogo,
     slug: "fabhotels",
   },
-  {
-    name: "Telstra",
-    logo: telstraLogo,
-    slug: "telstra",
-  },
-  {
-    name: "Prudential",
-    logo: prudentialLogo,
-    slug: "prudential",
-  },
-  {
-    name: "Singtel Optus",
-    logo: singtelOptusLogo,
-    slug: "singtel-optus",
-  },
+  // {name: "Telstra",logo: telstraLogo,slug: "telstra",},
+  //{name: "Prudential",logo: prudentialLogo,slug: "prudential", },
+  //{name: "Singtel Optus",logo: singtelOptusLogo,slug: "singtel-optus",},
   {
     name: "Decimal",
     logo: decimalLogo,
