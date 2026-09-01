@@ -312,12 +312,12 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
                 {
-                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                  source: "— User audit #4",
+                  quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
+                  source: "— TWITTER",
                 },
                 {
-                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                  source: "— User audit #4",
+                  quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
+                  source: "— TWITTER",
                 },
                 {
                   quote:
