@@ -349,8 +349,8 @@ const CaseStudyMatchPage = () => {
                   <tbody>
                     {[
                       ["Active tab count", "8 – 15", "4 – 6", true],
-                      ["Ball-by-ball details", "Deep / nested", "Compact flat", false],
-                      ["Overwise summaries", "Hidden tab", "Always visible", false],
+                      ["Ball-by-ball details", "Rich commentary, but slower", "Real-time, super-fast updates", false],
+                      ["User Experience", "Clunky, dated interface", "Sleek, intuitive, especially mobile", false],
                       ["Layout density options", "None (one size)", "User selectable", true],
                     ].map(([feature, a, b, accent]) => (
                       <tr key={feature as string} className="border-t border-border">
