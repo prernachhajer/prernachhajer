@@ -99,6 +99,7 @@ const CaseStudyMatchPage = () => {
           >
             <span className="w-5 h-px bg-muted-foreground/70" />
             <span>ESPNcricinfo · Case Study</span>
+            <span className="py-4">2x Speed, 1/2 the Clutter:&nbsp;</span>
             <span className="w-5 h-px bg-muted-foreground/70" />
           </motion.div>
 
@@ -110,7 +111,6 @@ const CaseStudyMatchPage = () => {
             className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
-            <span className="py-4">2x Speed, 1/2 the Clutter:&nbsp;</span>
             <span className="px-2 text-primary italic font-medium">Simplifying the Cricket Match Page</span>
           </motion.h1>
 
