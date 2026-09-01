@@ -259,8 +259,7 @@ const CaseStudyMatchPage = () => {
                 More tabs. More clutter. No structure to hold it.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Over time, individual feature releases piled onto the match page; more tabs added, more content packed
-                into each screen - until it stopped feeling like a guide and started feeling like a dump.
+                Over time, more and more features were added to the match page. This led to more tabs, more content, and a page that became harder to navigate and understand.
               </p>
             </motion.div>
 
