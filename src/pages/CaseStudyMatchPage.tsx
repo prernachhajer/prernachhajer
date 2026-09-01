@@ -413,14 +413,14 @@ const CaseStudyMatchPage = () => {
                           "Content consumer",
                           "Reads previews and analysis",
                           "Relevant content is hard to discover",
-                          "Improve recommendations",
+                          "Improve discovery",
                           true,
                         ],
                         [
                           "Casual fan",
                           "Visits during major events",
                           "Experience can feel overwhelming",
-                          "Simplify and guide",
+                          "Simplify and Habit forming",
                           true,
                         ],
                       ].map(([feature, a, b, opportunity, accent]) => (
