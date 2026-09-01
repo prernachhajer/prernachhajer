@@ -178,10 +178,14 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-2xl mx-auto mt-16 md:mt-20"
+            className="max-w-5xl mx-auto mt-16 md:mt-20"
           >
-            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before" />
-            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After" />
+            <img
+              src={beforeAfterAsset}
+              alt="Match page before and after redesign, annotated with cognitive load issues and improvements"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
           </motion.div>
         </div>
       </section>
