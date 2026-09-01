@@ -462,11 +462,11 @@ const CaseStudyMatchPage = () => {
           >
             <div>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Hardcore fans expect every statistic, commentary string and wagon wheel. So we targeted navigation
-                hygiene and information priority instead of feature removal.
+                Hardcore fans still wanted the depth, so we focused on better navigation and clearer priorities rather
+                than removing features.
                 <br />
                 <br />
-                The goal wasn't to trim content; it was to rework the IA until the page was usable again.
+                The goal was to make the page easier to use without cutting content.
               </p>
             </div>
             <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
