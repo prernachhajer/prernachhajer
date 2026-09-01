@@ -17,10 +17,6 @@ import { animation, layout, spacing, type as t, surface, radius } from "@/lib/to
 import matchTabsImg from "@/assets/match-page-tabs.png";
 import beforeAfterAsset from "@/assets/match-before-after.png";
 import problemOverviewAsset from "@/assets/match-problem.png";
-import compact01Asset from "@/assets/Match_compact01.png";
-import compact02Asset from "@/assets/Match_compact02.png";
-import compact03Asset from "@/assets/Match_compact03.png";
-import compact04Asset from "@/assets/Match_compact04.png";
 import tabComparisonAsset from "@/assets/Tab_comparison.png";
 import scorecardMediaAsset from "@/assets/Scorecard-media.png";
 import commsMediaAsset from "@/assets/Comms-media.png";
