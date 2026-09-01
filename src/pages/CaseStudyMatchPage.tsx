@@ -15,15 +15,15 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import matchTabsImg from "@/assets/match-page-tabs.png";
-import compact01Asset from "@/assets/Match_compact01.png.asset.json";
-import compact02Asset from "@/assets/Match_compact02.png.asset.json";
-import compact03Asset from "@/assets/Match_compact03.png.asset.json";
-import compact04Asset from "@/assets/Match_compact04.png.asset.json";
-import tabComparisonAsset from "@/assets/Tab_comparison.png.asset.json";
-import scorecardMediaAsset from "@/assets/Scorecard-media.png.asset.json";
-import commsMediaAsset from "@/assets/Comms-media.png.asset.json";
-import liveContentAsset from "@/assets/Live-content.png.asset.json";
-import summaryContentAsset from "@/assets/Summary-content.png.asset.json";
+import compact01Asset from "@/assets/Match_compact01.png";
+import compact02Asset from "@/assets/Match_compact02.png";
+import compact03Asset from "@/assets/Match_compact03.png";
+import compact04Asset from "@/assets/Match_compact04.png";
+import tabComparisonAsset from "@/assets/Tab_comparison.png";
+import scorecardMediaAsset from "@/assets/Scorecard-media.png";
+import commsMediaAsset from "@/assets/Comms-media.png";
+import liveContentAsset from "@/assets/Live-content.png";
+import summaryContentAsset from "@/assets/Summary-content.png";
 
 const fade = animation.fade;
 
@@ -293,10 +293,10 @@ const CaseStudyMatchPage = () => {
           </div>
           <div className="grid grid-cols-4 gap-4 md:gap-5">
             {[
-              { src: compact01Asset.url, alt: "Compact scorecard with dense innings rows" },
-              { src: compact02Asset.url, alt: "Compact scorecard with crowded bowling table" },
-              { src: compact03Asset.url, alt: "Compact live tab with stacked match metadata" },
-              { src: compact04Asset.url, alt: "Compact live tab with dense score summary" },
+              { src: compact01Asset, alt: "Compact scorecard with dense innings rows" },
+              { src: compact02Asset, alt: "Compact scorecard with crowded bowling table" },
+              { src: compact03Asset, alt: "Compact live tab with stacked match metadata" },
+              { src: compact04Asset, alt: "Compact live tab with dense score summary" },
             ].map((img) => (
               <img
                 key={img.src}
@@ -508,7 +508,7 @@ const CaseStudyMatchPage = () => {
             {/* Tab comparison */}
             <div className="max-w-3xl mt-16 md:mt-8 mb-20 pt-4">
               <img
-                src={tabComparisonAsset.url}
+                src={tabComparisonAsset}
                 alt="Tab bar comparison: 14 tabs before, reduced to 8 after"
                 className="w-full h-auto"
                 loading="lazy"
@@ -544,13 +544,13 @@ const CaseStudyMatchPage = () => {
             </ul>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
-                src={liveContentAsset.url}
+                src={liveContentAsset}
                 alt="Live tab surfacing recent commentary preview"
                 className="w-full h-auto"
                 loading="lazy"
               />
               <img
-                src={summaryContentAsset.url}
+                src={summaryContentAsset}
                 alt="Summary tab surfacing videos and report previews"
                 className="w-full h-auto"
                 loading="lazy"
@@ -569,13 +569,13 @@ const CaseStudyMatchPage = () => {
             </div>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
-                src={scorecardMediaAsset.url}
+                src={scorecardMediaAsset}
                 alt="Scorecard tab with inline videos and photos"
                 className="w-full h-auto"
                 loading="lazy"
               />
               <img
-                src={commsMediaAsset.url}
+                src={commsMediaAsset}
                 alt="Commentary tab with inline videos and photos"
                 className="w-full h-auto"
                 loading="lazy"
