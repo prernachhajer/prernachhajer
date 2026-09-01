@@ -95,7 +95,7 @@ const CaseStudyMatchPage = () => {
             initial="hidden"
             animate="visible"
             variants={fade}
-            className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-10 md:mb-12`}
+            className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-6 md:mb-6`}
           >
             <span className="w-5 h-px bg-muted-foreground/70" />
             {/*  <span>ESPNcricinfo · Case Study</span> */}
