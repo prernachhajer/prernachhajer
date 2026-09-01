@@ -379,8 +379,9 @@ const CaseStudyMatchPage = () => {
                   </p>
                 </blockquote>
                 <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                  Competing products carried comparable data volume, but our lack of a clean parent hierarchy forced
-                  users to hunt for key indicators.
+                  Users had started choosing different products for different needs: Cricbuzz for quick updates and video, and Cricinfo, often on desktop, for stats and deeper content.
+                  <br /><br />
+                  Speed and depth had effectively become two separate experiences.
                 </p>
               </div>
             </div>
