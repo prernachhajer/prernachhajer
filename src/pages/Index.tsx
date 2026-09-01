@@ -664,7 +664,7 @@ const Index = () => {
                 {/* Info */}
 
                 <div className="pt-4">
-                  <div className="text-xs tracking-[0.06em]  text-primary mb-1.5">{cs.company}</div>
+                  <div className="text-xs tracking-[0.06em]  uppercase text-primary mb-1.5">{cs.company}</div>
                   <div className="flex items-start justify-between gap-6">
                     <h3
                       className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
