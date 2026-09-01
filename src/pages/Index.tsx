@@ -18,10 +18,11 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png";
 import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
-import thumbMatchPage from "@/assets/Match_thumb1.png";
+import thumbMatchPage from "@/assets/Match_thumb1.png.asset.json";
 import thumbAppRating from "@/assets/app-rating-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
-import heroStack from "@/assets/hero/hero-stack.png";
+import heroStack from "@/assets/hero/hero-stack.png.asset.json";
+console.log("HERO STACK:", heroStack);
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
