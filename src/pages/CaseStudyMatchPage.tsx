@@ -306,10 +306,9 @@ const CaseStudyMatchPage = () => {
                 alt={img.alt}
                 className="w-full h-auto border border-border rounded-lg"
                 loading="lazy"
-                
               />
-                  (caption = "Before"),
             ))}
+
           </div>
 
           {/* Evidence */}
