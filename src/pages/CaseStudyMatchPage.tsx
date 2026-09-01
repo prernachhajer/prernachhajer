@@ -298,22 +298,13 @@ const CaseStudyMatchPage = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 md:gap-5">
-            {[
-              { src: compact01Asset, alt: "Compact scorecard with dense innings rows" },
-              { src: compact02Asset, alt: "Compact scorecard with crowded bowling table" },
-              { src: compact03Asset, alt: "Compact live tab with stacked match metadata" },
-              { src: compact04Asset, alt: "Compact live tab with dense score summary" },
-          
-            ].map((img) => (
-              <img
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-auto border border-border rounded-lg"
-                loading="lazy"
-              />
-            ))}
+          <div>
+            <img
+              src={problemOverviewAsset}
+              alt="Four match page screens annotated with information overload, data overload, hard to discover and difficult to scan issues"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
 
           </div>
 
