@@ -135,7 +135,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "02 / 05",
-    company: "ESPN Cricinfo",
+    company: "ESPNcricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
     thumbType: "photo" as const,
@@ -148,7 +148,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "03 / 05",
-    company: "ESPN Cricinfo",
+    company: "ESPNcricinfo",
     title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
     thumbType: "photo" as const,
@@ -161,7 +161,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "04 / 05",
-    company: "ESPN Cricinfo",
+    company: "ESPNcricinfo",
     title: "50% More Time Spent: Bite-Sized Cricket Content",
     titleEm: "",
     thumbType: "photo" as const,
@@ -174,7 +174,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     num: "05 / 05",
-    company: "ESPN Cricinfo",
+    company: "ESPNcricinfo",
     title: "3.4 → 4.5: The App Rating Turnaround",
     titleEm: "",
     thumbType: "photo" as const,
@@ -664,7 +664,7 @@ const Index = () => {
                 {/* Info */}
 
                 <div className="pt-4">
-                  <div className="text-xs tracking-[0.06em]  text-primary mb-1">{cs.company}</div>
+                  <div className="text-xs tracking-[0.06em]  text-primary mb-1.5">{cs.company}</div>
                   <div className="flex items-start justify-between gap-6">
                     <h3
                       className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
