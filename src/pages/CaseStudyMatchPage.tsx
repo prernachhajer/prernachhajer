@@ -257,7 +257,7 @@ const CaseStudyMatchPage = () => {
               className="max-w-3xl"
             >
               <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-                More tabs. More clutter. No structure to hold it.
+                More tabs. More clutter. No hierarchy.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Over time, more and more features were added to the match page. This led to more tabs, more content, and
