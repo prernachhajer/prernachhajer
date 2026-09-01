@@ -165,7 +165,8 @@ const CaseStudyMatchPage = () => {
             custom={4}
             className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-12`}
           >
-            Cricinfo's match page is the core of the mobile experience, but over time it became cluttered with too many features. This redesign simplified the structure while keeping the modules hardcore fans use daily.
+            Cricinfo's match page is the core of the mobile experience, but over time it became cluttered with too many
+            features. This redesign simplified the structure while keeping the modules hardcore fans use daily.
           </motion.p>
 
           <motion.div
@@ -259,7 +260,8 @@ const CaseStudyMatchPage = () => {
                 More tabs. More clutter. No structure to hold it.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Over time, more and more features were added to the match page. This led to more tabs, more content, and a page that became harder to navigate and understand.
+                Over time, more and more features were added to the match page. This led to more tabs, more content, and
+                a page that became harder to navigate and understand.
               </p>
             </motion.div>
 
@@ -274,15 +276,19 @@ const CaseStudyMatchPage = () => {
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
-                     Too much information, packed with no clear hierarchy. Too much information, packed with no clear hierarchy. The page was difficult to scan and navigate.
+                    Too much information, packed with no clear hierarchy. Too much information, packed with no clear
+                    hierarchy. The page was difficult to scan and navigate.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Design problem:&nbsp;</strong>
-                    New features and data kept getting added without rethinking the overall structure. Stakeholder requests often meant adding another tab or module, which made the page increasingly dense and harder to use.
+                    New features and data kept getting added without rethinking the overall structure. Stakeholder
+                    requests often meant adding another tab or module, which made the page increasingly dense and harder
+                    to use.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                    Adding new tabs and squeezing content into existing modules was the quickest way to ship new features without disrupting what was already there. Over time, this only added to the clutter.
+                    Adding new tabs and squeezing content into existing modules was the quickest way to ship new
+                    features without disrupting what was already there. Over time, this only added to the clutter.
                   </Bullet>
                 </ul>
               </div>
@@ -295,7 +301,6 @@ const CaseStudyMatchPage = () => {
               className="w-full h-auto rounded-lg"
               loading="lazy"
             />
-
           </div>
 
           {/* Evidence */}
@@ -306,6 +311,10 @@ const CaseStudyMatchPage = () => {
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               {[
+                {
+                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
+                  source: "— User audit #4",
+                },
                 {
                   quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
                   source: "— User audit #4",
