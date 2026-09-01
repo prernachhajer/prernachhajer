@@ -495,7 +495,7 @@ const CaseStudyMatchPage = () => {
               <span className="w-5 h-px bg-primary"></span> The decisions
             </div>
           </div>
-          <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, chosen by usage, not habit">
+          <Block eyebrow="Decision 1 — Reduce the tab count" title="Fewer tabs, based on usage, not habit">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Usage audit: Kept only the tabs tied to core user tasks.</Bullet>
