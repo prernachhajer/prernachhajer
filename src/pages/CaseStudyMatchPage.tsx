@@ -15,10 +15,8 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import matchTabsImg from "@/assets/match-page-tabs.png";
-import compact01Asset from "@/assets/Match_compact01.png";
-import compact02Asset from "@/assets/Match_compact02.png";
-import compact03Asset from "@/assets/Match_compact03.png";
-import compact04Asset from "@/assets/Match_compact04.png";
+import beforeAfterAsset from "@/assets/match-before-after.png";
+import problemOverviewAsset from "@/assets/match-problem.png";
 import tabComparisonAsset from "@/assets/Tab_comparison.png";
 import scorecardMediaAsset from "@/assets/Scorecard-media.png";
 import commsMediaAsset from "@/assets/Comms-media.png";
@@ -176,10 +174,14 @@ const CaseStudyMatchPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-2xl mx-auto mt-16 md:mt-20"
+            className="max-w-5xl mx-auto mt-16 md:mt-20"
           >
-            <Figure src={`${IMG}/b33cd8dcbe619d4733b9b4438a9ece0eb5beebbc?placeholderIfAbsent=true`} caption="Before" />
-            <Figure src={`${IMG}/9d4279da4da104fc3f87a258137aaaf20456ddab?placeholderIfAbsent=true`} caption="After" />
+            <img
+              src={beforeAfterAsset}
+              alt="Match page before and after redesign, annotated with cognitive load issues and improvements"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
           </motion.div>
         </div>
       </section>
@@ -292,22 +294,13 @@ const CaseStudyMatchPage = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 md:gap-5">
-            {[
-              { src: compact01Asset, alt: "Compact scorecard with dense innings rows" },
-              { src: compact02Asset, alt: "Compact scorecard with crowded bowling table" },
-              { src: compact03Asset, alt: "Compact live tab with stacked match metadata" },
-              { src: compact04Asset, alt: "Compact live tab with dense score summary" },
-          
-            ].map((img) => (
-              <img
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-auto border border-border rounded-lg"
-                loading="lazy"
-              />
-            ))}
+          <div>
+            <img
+              src={problemOverviewAsset}
+              alt="Four match page screens annotated with information overload, data overload, hard to discover and difficult to scan issues"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
 
           </div>
 
