@@ -98,7 +98,7 @@ const CaseStudyMatchPage = () => {
             className={`flex items-center justify-center gap-4 ${t.labelSm} text-muted-foreground mb-10 md:mb-12`}
           >
             <span className="w-5 h-px bg-muted-foreground/70" />
-            <span>ESPNcricinfo · Case Study</span>
+            {/*  <span>ESPNcricinfo · Case Study</span> */}
             <span className="py-4">2x Speed, 1/2 the Clutter:&nbsp;</span>
             <span className="w-5 h-px bg-muted-foreground/70" />
           </motion.div>
@@ -111,7 +111,7 @@ const CaseStudyMatchPage = () => {
             className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
-            <span className="px-2 text-primary italic font-medium">Simplifying the Cricket Match Page</span>
+            <span className="px-2 font-medium">Simplifying the Cricket Match Page</span>
           </motion.h1>
 
           <motion.div
