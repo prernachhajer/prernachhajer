@@ -325,7 +325,7 @@ const Index = () => {
   // Curated hero composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
   const heroPhotos = {
-    src: `${import.meta.env.BASE_URL}hero-stack.png`,
+    src: heroStack.url,
     alt: "Prerna — product designer, traveler, adventurer",
   };
 
