@@ -521,8 +521,8 @@ const CaseStudyMatchPage = () => {
           <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open where it matters">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
-                <Bullet>Scorecards structured in lazy-loading accordions, keeping the first fold light.</Bullet>
-                <Bullet>Automatic prioritisation opens the live innings on load, others stay accessible.</Bullet>
+                <Bullet>Scorecards: Used lazy-loading accordions to keep the first screen lighter.</Bullet>
+                <Bullet>Live innings: Opened automatically, while other innings stayed accessible.</Bullet>
                 {/*<Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet> */}
               </ul>
               <TradeOff>
