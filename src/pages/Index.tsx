@@ -162,7 +162,7 @@ const caseStudies: CaseStudy[] = [
   {
     num: "04 / 05",
     company: "ESPNcricinfo",
-    title: "50% More Time Spent: Bite-Sized Cricket Content",
+    title: "50% More Time Spent: Quick Reads",
     titleEm: "",
     thumbType: "photo" as const,
     thumbImage: thumbQuickReads,
