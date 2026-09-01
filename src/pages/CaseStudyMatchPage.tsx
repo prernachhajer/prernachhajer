@@ -209,7 +209,7 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
-      {/* ── TWO-MINUTE VERSION ─────────────── */}
+      {/* ── TWO-MINUTE VERSION ─────────────── 
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>Two-minute version</SectionLabel>
@@ -239,7 +239,7 @@ const CaseStudyMatchPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── PROBLEM ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
