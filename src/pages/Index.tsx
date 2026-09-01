@@ -18,10 +18,10 @@ import "@/styles/thumbnail-animations.css";
 import thumbHomepage from "@/assets/thumb-homepage-laptop.png";
 import thumbDesignSystem from "@/assets/thumb-ds-docs.png";
 import thumbQuickReads from "@/assets/thumb-quick-reads.png";
-import thumbMatchPage from "@/assets/Match_thumb1.png.asset.json";
+import thumbMatchPage from "@/assets/Match_thumb1.png";
 import thumbAppRating from "@/assets/app-rating-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
-import heroStack from "@/assets/hero/hero-stack.png.asset.json";
+import heroStack from "@/assets/hero/hero-stack.png";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
@@ -126,7 +126,7 @@ const caseStudies: CaseStudy[] = [
     title: "2x Speed, 1/2 the Clutter:\u00a0Simplifying the Cricket Match Page",
     titleEm: "",
     thumbType: "photo" as const,
-    thumbImage: thumbMatchPage.url,
+    thumbImage: thumbMatchPage,
     statNum: "10M+",
     statLabel: "daily users",
     year: "2024-25",
@@ -325,7 +325,7 @@ const Index = () => {
   // Curated hero composition, chosen once per page load
   const comp = useMemo(() => pickOne(heroCompositions), []);
   const heroPhotos = {
-    src: heroStack.url,
+    src: heroStack,
     alt: "Prerna — product designer, traveler, adventurer",
   };
 
