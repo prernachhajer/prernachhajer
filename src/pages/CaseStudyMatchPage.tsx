@@ -278,7 +278,7 @@ const CaseStudyMatchPage = () => {
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Design problem:&nbsp;</strong>
-                    New features and data kept getting added without rethinking the overall structure. Stakeholder requests often meant adding another tab or row, which made the page increasingly dense and harder to use.
+                    New features and data kept getting added without rethinking the overall structure. Stakeholder requests often meant adding another tab or module, which made the page increasingly dense and harder to use.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
