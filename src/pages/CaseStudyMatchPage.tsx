@@ -396,8 +396,8 @@ const CaseStudyMatchPage = () => {
                       <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
                         <th className="text-left font-medium p-3">User segment</th>
                         <th className="text-left font-medium p-3 w-[28%]">Current behaviour</th>
-                        <th className="text-left font-medium p-3 w-[28%]"> Pain point</th>
-                        <th className="text-left font-medium p-3 w-[28%]">Opportunity</th>
+                        <th className="text-left font-medium p-3 w-[28%]">OPPORTUNITY&nbsp;&nbsp;</th>
+                        <th className="text-left font-medium p-3 w-[28%]">PAIN POINT</th>
                       </tr>
                     </thead>
                     <tbody>
