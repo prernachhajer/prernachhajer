@@ -60,8 +60,8 @@ const CaseStudyHomepage = () => {
             className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.08] tracking-[0.015em]"
             style={{ fontFamily: t.displayFont }}
           >
-            <span className="block">Homepage Evolution</span>
-            <span className="block text-primary italic font-medium mt-2">2022-26</span>
+            <span className="block">Redesigning Cricket</span>
+            <span className="block text-primary italic font-medium mt-2">Homepage</span>
           </motion.h1>
 
           <motion.dl
