@@ -503,7 +503,7 @@ const CaseStudyMatchPage = () => {
                 <Bullet>Stats & Fantasy: Brought into structured modules instead of separate sections.</Bullet>
               </ul>
               <TradeOff>
-                A few loyal users filed tickets when their usual tabs disappeared — before adapting to the new layout.
+                Some loyal users initially missed their usual tabs and raised tickets, but most adapted to the new structure.
               </TradeOff>
             </div>
 
