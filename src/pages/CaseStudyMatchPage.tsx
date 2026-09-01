@@ -518,7 +518,7 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open where it matters">
+          <Block eyebrow="Decision 2 — Reveal, don't dump" title="Accordions that open what matters first">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Scorecards: Used lazy-loading accordions to keep the first screen lighter.</Bullet>
