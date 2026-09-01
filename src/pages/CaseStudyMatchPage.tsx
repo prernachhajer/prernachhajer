@@ -298,6 +298,7 @@ const CaseStudyMatchPage = () => {
               { src: compact02Asset, alt: "Compact scorecard with crowded bowling table" },
               { src: compact03Asset, alt: "Compact live tab with stacked match metadata" },
               { src: compact04Asset, alt: "Compact live tab with dense score summary" },
+              (caption = "Before"),
             ].map((img) => (
               <img
                 key={img.src}
