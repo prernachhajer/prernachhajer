@@ -536,7 +536,7 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 3 — Surface a preview" title="You shouldn't have to leave a page to know it's there">
+          <Block eyebrow="Decision 3 — Surface a preview" title="See what’s available without leaving the page">
             <ul className="flex flex-col gap-4 max-w-3xl">
               <Bullet>The live summary shows a short, contextual commentary preview.</Bullet>
               <Bullet>
