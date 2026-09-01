@@ -21,7 +21,7 @@ import thumbQuickReads from "@/assets/thumb-quick-reads.png";
 import thumbMatchPage from "@/assets/Match_thumb1.png.asset.json";
 import thumbAppRating from "@/assets/app-rating-thumb.png";
 import aboutPhoto from "@/assets/about-prerna.png";
-import heroStack from "@/assets/hero/hero-stack.png";
+import heroStack from "@/assets/hero/hero-stack.png.asset.json";
 
 // Company logos
 import proximityLogo from "@/assets/company-logos/proximity.svg";
