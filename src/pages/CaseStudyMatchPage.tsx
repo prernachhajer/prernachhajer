@@ -746,8 +746,7 @@ const CaseStudyMatchPage = () => {
 
       {/* ── CLOSE ──────────────────────────── */}
       <ClosingSection
-        quote="The faster fix was showing more, adding more, but the evidence, the users, and the metrics all said otherwise. The real fix was "
-        quoteAccent={'structure: something that could hold it all."'}
+        quote="The easy fix was to add more. But the users and the data pointed to a different solution: structure that could handle everything."
         meta="Match Page Redesign — Cricinfo · Prerna Chhajer, Lead Product Designer"
       />
 
