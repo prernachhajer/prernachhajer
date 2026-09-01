@@ -584,17 +584,16 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 5 — Make it easy to move sideways" title="Two dropdowns replace the maze of actions">
+          <Block eyebrow="DECISION 5 — MAKE IT EASY TO MOVE BETWEEN MATCHES" title="Two dropdowns replace multiple actions">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
-                <Bullet>An integrated dropdown jumps between active matches without leaving the scorecard.</Bullet>
+                <Bullet>An integrated dropdown lets users switch between active matches without leaving the scorecard.</Bullet>
                 <Bullet>
-                  First try: prev/next arrows to move between adjacent matches. But that added to the app-bar clutter we
-                  were trying to fix.
+                  We first tried prev/next arrows for nearby matches, but they added more clutter to the app bar.
                 </Bullet>
-                <Bullet>So we replaced it with a more dropdown with team or tournament-specific match listing.</Bullet>
+                <Bullet>We replaced them with dropdowns showing matches by team or tournament.</Bullet>
               </ul>
-              <TradeOff>Easy match-to-match jumping risks pulling traffic away from Home and Schedule</TradeOff>
+              <TradeOff>Easy match-to-match navigation could reduce traffic to Home and Schedule.</TradeOff>
             </div>
             <div className="grid md:grid-cols-5 gap-8 md:gap-6 mt-12 mb-20 items-start">
               <Figure
