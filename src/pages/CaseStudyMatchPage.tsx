@@ -249,13 +249,7 @@ const CaseStudyMatchPage = () => {
           <div className={`max-w-3xl mx-auto`}>
             <SectionLabel>Problem</SectionLabel>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              className="max-w-3xl"
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="">
               <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
                 More tabs. More clutter. No hierarchy.
               </h2>
@@ -332,8 +326,10 @@ const CaseStudyMatchPage = () => {
               ))}
             </div>
             <p className={`${t.bodyLg} text-muted-foreground mt-8 max-w-3xl`}>
-              A Test match scorecard could mean four full innings tables stacked on one page. The clutter wasn’t just a perception problem; it was built into the structure.
-              <br /><br />
+              A Test match scorecard could mean four full innings tables stacked on one page. The clutter wasn’t just a
+              perception problem; it was built into the structure.
+              <br />
+              <br />
               Competitors like Cricbuzz and Google offered a simpler experience, even with less depth.
             </p>
           </div>
@@ -379,8 +375,10 @@ const CaseStudyMatchPage = () => {
                   </p>
                 </blockquote>
                 <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                  Users had started choosing different products for different needs: Cricbuzz for quick updates and video, and Cricinfo, often on desktop, for stats and deeper content.
-                  <br /><br />
+                  Users had started choosing different products for different needs: Cricbuzz for quick updates and
+                  video, and Cricinfo, often on desktop, for stats and deeper content.
+                  <br />
+                  <br />
                   Speed and depth had effectively become two separate experiences.
                 </p>
               </div>
@@ -466,7 +464,7 @@ const CaseStudyMatchPage = () => {
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Hardcore fans still wanted the depth, so we focused on better navigation and clearer priorities rather
                 than removing features.
-                {'\n\n'}
+                {"\n\n"}
                 <br />
                 <br />
                 The goal was to make the page easier to use without cutting content.
@@ -499,11 +497,15 @@ const CaseStudyMatchPage = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Usage audit: Kept only the tabs tied to core user tasks.</Bullet>
-                <Bullet>Points table: Kept as a top-level entry, while other stats like MVP, Overs moved into dedicated stats tab.</Bullet>
+                <Bullet>
+                  Points table: Kept as a top-level entry, while other stats like MVP, Overs moved into dedicated stats
+                  tab.
+                </Bullet>
                 <Bullet>Stats & Fantasy: Brought into structured modules instead of separate sections.</Bullet>
               </ul>
               <TradeOff>
-                Some loyal users initially missed their usual tabs and raised tickets, but most adapted to the new structure.
+                Some loyal users initially missed their usual tabs and raised tickets, but most adapted to the new
+                structure.
               </TradeOff>
             </div>
 
@@ -526,7 +528,8 @@ const CaseStudyMatchPage = () => {
                 {/*<Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet> */}
               </ul>
               <TradeOff>
-                Comparing multiple innings takes an extra tap, making it harder to quickly scan and track players across innings.
+                Comparing multiple innings takes an extra tap, making it harder to quickly scan and track players across
+                innings.
               </TradeOff>
             </div>
             <div className="max-w-3xl grid md:grid-cols-3 gap-8 mb-20 mt-12">
@@ -566,7 +569,9 @@ const CaseStudyMatchPage = () => {
 
                 <Bullet>Tappable media cards let users watch highlights without leaving the page</Bullet>
               </ul>
-              <TradeOff>Inline media added page weight, so we needed custom lazy loading to keep performance fast.</TradeOff>
+              <TradeOff>
+                Inline media added page weight, so we needed custom lazy loading to keep performance fast.
+              </TradeOff>
             </div>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
@@ -584,10 +589,15 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="DECISION 5 — MAKE IT EASY TO MOVE BETWEEN MATCHES" title="Two dropdowns replace multiple actions">
+          <Block
+            eyebrow="DECISION 5 — MAKE IT EASY TO MOVE BETWEEN MATCHES"
+            title="Two dropdowns replace multiple actions"
+          >
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
-                <Bullet>An integrated dropdown lets users switch between active matches without leaving the scorecard.</Bullet>
+                <Bullet>
+                  An integrated dropdown lets users switch between active matches without leaving the scorecard.
+                </Bullet>
                 <Bullet>
                   We first tried prev/next arrows for nearby matches, but they added more clutter to the app bar.
                 </Bullet>
@@ -620,17 +630,15 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block
-            eyebrow="Decision 6 — Say no to the popular idea"
-            title="Designed, tested, and ultimately dropped"
-          >
+          <Block eyebrow="Decision 6 — Say no to the popular idea" title="Designed, tested, and ultimately dropped">
             <div className="grid lg:grid-cols-2 gap-28 items-start">
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-6`}>Problem, broken down</p>
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Belief: </strong>
-                    Editorial, product, and stakeholders believed users wanted to compare more information at a glance, so the page should be more compact.
+                    Editorial, product, and stakeholders believed users wanted to compare more information at a glance,
+                    so the page should be more compact.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Built: </strong>
@@ -638,11 +646,13 @@ const CaseStudyMatchPage = () => {
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Evidence against:&nbsp;</strong>
-                    Secondary research showed users preferred smaller, easier-to-scan pieces of information over dense screens.
+                    Secondary research showed users preferred smaller, easier-to-scan pieces of information over dense
+                    screens.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Killed:&nbsp;</strong>
-                    An internal review surfaced the same concerns users had raised. The compact design would have made the information overload worse, so we didn’t ship it.
+                    An internal review surfaced the same concerns users had raised. The compact design would have made
+                    the information overload worse, so we didn’t ship it.
                   </Bullet>
                 </ul>
               </div>
@@ -676,7 +686,10 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="DECISION 8 — KEEP THE SAME PRINCIPLES IN BUILD" title="The design principles carried through to launch">
+          <Block
+            eyebrow="DECISION 8 — KEEP THE SAME PRINCIPLES IN BUILD"
+            title="The design principles carried through to launch"
+          >
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
@@ -738,8 +751,8 @@ const CaseStudyMatchPage = () => {
           </ImpactPanel>
 
           <p className={`${t.bodyLg} text-muted-foreground max-w-3xl`}>
-            With the new structure, users reached the data they wanted in half the taps. The experience became easier
-            to use, and store ratings improved.
+            With the new structure, users reached the data they wanted in half the taps. The experience became easier to
+            use, and store ratings improved.
           </p>
         </div>
       </section>
