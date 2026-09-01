@@ -165,8 +165,7 @@ const CaseStudyMatchPage = () => {
             custom={4}
             className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12 md:mt-12`}
           >
-            Cricinfo's match page is the core of the mobile experience, absorbing years of organic feature creep. This
-            overhaul delivered structural improvements without removing the tools hardcore fans depend on daily.
+            Cricinfo's match page is the core of the mobile experience, but over time it became cluttered with too many features. This redesign simplified the structure while keeping the modules hardcore fans use daily.
           </motion.p>
 
           <motion.div
