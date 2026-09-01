@@ -63,7 +63,7 @@ const CaseStudyDesignSystem = () => {
             style={{ fontFamily: t.displayFont }}
           >
             <span className="block">Building a</span>
-            <span className="block text-primary italic font-medium mt-2">Design System at scale</span>
+            <span className="block text-primary italic font-medium mt-2">Design System</span>
           </motion.h1>
 
           <motion.dl
