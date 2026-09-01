@@ -660,14 +660,14 @@ const CaseStudyMatchPage = () => {
           </Block>
 
           <Block
-            eyebrow="Decision 7 — Add participation without re-cluttering"
-            title="Polls and ratings, sitting beside the depth"
+            eyebrow="DECISION 7 — ADD PARTICIPATION WITHOUT ADDING CLUTTER"
+            title="Added Polls and ratings, without disrupting the experience"
           >
             <ul className="flex flex-col gap-4 max-w-3xl">
-              <Bullet>Added to increase engagement. </Bullet>
-              <Bullet>Active poll widgets integrated at logical pauses in commentary flows.</Bullet>
-              <Bullet>Fan rating tools sit beside traditional news &amp; media without bloating layouts.</Bullet>
-              <Bullet>Poll cards fold into summary zones cleanly.</Bullet>
+              <Bullet>Added polls and ratings to increase engagement.</Bullet>
+              <Bullet>Placed active polls at natural breaks in the commentary.</Bullet>
+              <Bullet>Kept fan ratings alongside news and media without adding visual clutter.</Bullet>
+              <Bullet>Added poll cards into summary before and after match completion to keep the layout clean.</Bullet>
             </ul>
             <div className="max-w-3xl grid md:grid-cols-3 gap-8 mt-12 mb-20">
               <Figure src={`${IMG}/4147a826e6b48a8ab02d34aded8c2e5ccfbb1cf6?placeholderIfAbsent=true`} />
