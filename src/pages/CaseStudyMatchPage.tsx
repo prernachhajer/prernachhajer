@@ -622,7 +622,7 @@ const CaseStudyMatchPage = () => {
 
           <Block
             eyebrow="Decision 6 — Say no to the popular idea"
-            title="Fully designed, evidenced against, never shipped"
+            title="Designed, tested, and ultimately dropped"
           >
             <div className="grid lg:grid-cols-2 gap-28 items-start">
               <div>
@@ -630,22 +630,19 @@ const CaseStudyMatchPage = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Belief: </strong>
-                    Editorial, product and stakeholders shared one instinct — people read at speed and want everything
-                    comparable at a glance, so the page should be as compact as possible.
+                    Editorial, product, and stakeholders believed users wanted to compare more information at a glance, so the page should be more compact.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Built: </strong>
                     It got fully designed, ready to ship.
                   </Bullet>
                   <Bullet>
-                    <strong className="text-foreground font-semibold">Evidence against: </strong>
-                    Research said users preferred scanning minimal, digestible information over dense screens — shipping
-                    this would have recreated the "information dump" complaint, more concentrated.
+                    <strong className="text-foreground font-semibold">Evidence against:&nbsp;</strong>
+                    Secondary research showed users preferred smaller, easier-to-scan pieces of information over dense screens.
                   </Bullet>
                   <Bullet>
-                    <strong className="text-foreground font-semibold">Killed: </strong>
-                    An internal audit sealed it: running the compact design past the team surfaced the same complaint
-                    users had made, this time from the people who'd pushed for it.
+                    <strong className="text-foreground font-semibold">Killed:&nbsp;</strong>
+                    An internal review surfaced the same concerns users had raised. The compact design would have made the information overload worse, so we didn’t ship it.
                   </Bullet>
                 </ul>
               </div>
