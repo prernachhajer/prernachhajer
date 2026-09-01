@@ -50,7 +50,7 @@ const Bullet = ({ children }: { children: React.ReactNode }) => (
 
 const TradeOff = ({ children }: { children: React.ReactNode }) => (
   <div className={`${radius.cardSm} border border-dashed border-primary/60 p-5 md:p-6`}>
-    <p className={`${t.labelSm} text-primary mb-2.5`}>Trade-off, named honestly</p>
+    <p className={`${t.labelSm} text-primary mb-2.5`}>TRADE-OFF</p>
     <p className="text-sm leading-relaxed text-foreground">{children}</p>
   </div>
 );
@@ -559,14 +559,14 @@ const CaseStudyMatchPage = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 4 — Surface content where it's earned" title="Media, in context, not tucked away">
+          <Block eyebrow="DECISION 4 — SURFACE CONTENT WHERE IT MATTERS" title="Media, right where you need it">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <ul className="flex flex-col gap-4">
-                <Bullet>Inline wicket photos appear directly inside ball-by-ball commentary.</Bullet>
+                <Bullet>Wicket photos appear directly in the scorecard and&nbsp; ball-by-ball commentary.</Bullet>
 
-                <Bullet>Tappable media cards open highlights without leaving the primary hub.</Bullet>
+                <Bullet>Tappable media cards let users watch highlights without leaving the page</Bullet>
               </ul>
-              <TradeOff>Heavier inline media required custom lazy-loading structures to protect performance.</TradeOff>
+              <TradeOff>Inline media added page weight, so we needed custom lazy loading to keep performance fast.</TradeOff>
             </div>
             <div className="max-w-3xl grid md:grid-cols-2 gap-8 md:gap-10 mb-20 mt-12">
               <img
