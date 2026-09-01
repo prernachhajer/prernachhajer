@@ -269,24 +269,20 @@ const CaseStudyMatchPage = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>
                     <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                    We were losing clients to competitors - Crex, Cricbuzz, and Google who offered faster, lighter
+                    We were losing clients to competitors like Crex, Cricbuzz, and Google who offered faster, lighter
                     alternatives to the same information.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
-                     Too much information, packed with no clear hierarchy. The page was difficult to scan and navigate.
+                     Too much information, packed with no clear hierarchy. Too much information, packed with no clear hierarchy. The page was difficult to scan and navigate.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Design problem:&nbsp;</strong>
-                    Stakeholder pressure kept pushing features and data points onto the page, with no structure to hold
-                    them and no time to rethink usability. As they accumulated, the volume itself became overwhelming,
-                    cluttering the page and confusing users.
+                    New features and data kept getting added without rethinking the overall structure. Stakeholder requests often meant adding another tab or module, which made the page increasingly dense and harder to use.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                    Features kept landing as new tabs or squeezed rows; the fastest way to ship without disturbing what
-                    already existed. Consolidate structure around core tasks rather than departmental ownership;
-                    reducing both tab count and on-screen density.
+                    Adding new tabs and squeezing content into existing modules was the quickest way to ship new features without disrupting what was already there. Over time, this only added to the clutter.
                   </Bullet>
                 </ul>
               </div>
