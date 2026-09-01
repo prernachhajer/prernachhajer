@@ -664,8 +664,8 @@ const Index = () => {
                 {/* Info */}
 
                 <div className="pt-6">
+                  <span>{cs.company}</span>
                   <div className="flex items-start justify-between gap-6">
-                    <span>{cs.company}</span>
                     <h3
                       className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
                       style={{ fontFamily: t.displayFont }}
