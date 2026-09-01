@@ -464,6 +464,7 @@ const CaseStudyMatchPage = () => {
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 Hardcore fans still wanted the depth, so we focused on better navigation and clearer priorities rather
                 than removing features.
+                {'\n\n'}
                 <br />
                 <br />
                 The goal was to make the page easier to use without cutting content.
