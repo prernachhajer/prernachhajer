@@ -195,9 +195,8 @@ const CaseStudyMatchPage = () => {
               { label: "Scope", value: "Reduce cognitive load, Improve discovery, Habit formation" },
               { label: "Platform", value: "iOS & Android" },
               { label: "Timeframe", value: "~6 months, phased rollout" },
-              {
-                /*{ label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " }, */
-              },
+
+              /*{ label: "Rollout order", value: "Tabs → accordions → dropdown → surface preview → polls " }, */
             ].map((item) => (
               <div key={item.label}>
                 <dt className={`${t.labelSm} text-muted-foreground pb-2 border-b border-border`}>{item.label}</dt>
