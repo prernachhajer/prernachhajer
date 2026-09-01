@@ -526,8 +526,7 @@ const CaseStudyMatchPage = () => {
                 {/*<Bullet>Full commentary retains its dedicated tab without interfering with score aggregates.</Bullet> */}
               </ul>
               <TradeOff>
-                Multi-innings comparison requires an extra tap to open parallel accordions, slightly shifting
-                cross-innings tracking paths.
+                Comparing multiple innings takes an extra tap, making it harder to quickly scan and track players across innings.
               </TradeOff>
             </div>
             <div className="max-w-3xl grid md:grid-cols-3 gap-8 mb-20 mt-12">
