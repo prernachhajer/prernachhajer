@@ -665,6 +665,7 @@ const Index = () => {
 
                 <div className="pt-6">
                   <div className="flex items-start justify-between gap-6">
+                    <span>{cs.company}</span>
                     <h3
                       className="max-w-[85%] text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.015em]"
                       style={{ fontFamily: t.displayFont }}
@@ -680,7 +681,6 @@ const Index = () => {
                     <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
                       <span>{cs.statNum}</span>
 
-                      <span>{cs.company}</span>
                       <span className="gap-5 px-1.5">{cs.statLabel}</span>
                     </div>
                   )}
