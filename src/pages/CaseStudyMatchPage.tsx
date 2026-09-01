@@ -90,7 +90,7 @@ const CaseStudyMatchPage = () => {
 
       {/* ── HERO ───────────────────────────── */}
       <section className={`pt-24 md:pt-28 pb-8 ${layout.px}`}>
-        <div className={`max-w-3xl w-full mx-auto text-center`}>
+        <div className={`max-w-4xl w-full mx-auto text-center`}>
           <motion.div
             initial="hidden"
             animate="visible"
