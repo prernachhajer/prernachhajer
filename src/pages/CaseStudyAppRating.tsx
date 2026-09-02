@@ -186,8 +186,8 @@ const CaseStudyAppRating = () => {
               <ul className="flex flex-col gap-4">
                 <Bullet>
                   <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                  Rating slipped to 3.4 and became the team's top priority — not one broken feature, but the app
-                  failing in dozens of small ways that added up.
+                  Rating slipped to 3.4 and became the team's top priority — not one broken feature, but the app failing
+                  in dozens of small ways that added up.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
@@ -209,6 +209,10 @@ const CaseStudyAppRating = () => {
           </div>
 
           <div className="mt-14 md:mt-16">
+            USER FEEDBACK NAVIGATION Too many destinations · Cluttered hierarchy · Hard to find things PERFORMANCE Slow
+            · Heavy · Alternatives feel faster INTERACTION Commentary scrolling · Match status · Mobile interactions
+            CONTENT ★ Best journalism · Deep analysis · Statsguru · Rich cricket coverage INTERRUPTIONS Ads · Autoplay
+            video · Promotions · Notifications
             <Placeholder
               label="Visual — review quote strip / word cloud (Play Store · App Store · Twitter · Reddit)"
               className="h-56 md:h-64"
@@ -369,18 +373,15 @@ const CaseStudyAppRating = () => {
                   </Bullet>
                 </ul>
                 <TradeOff>
-                  This got its own case study rather than a summary here — the material was too deep to compress
-                  without losing what made it work.
+                  This got its own case study rather than a summary here — the material was too deep to compress without
+                  losing what made it work.
                 </TradeOff>
               </div>
               <Placeholder label="Screenshot — match page tab count, before / after" className="h-72 lg:h-80" />
             </div>
           </Block>
 
-          <Block
-            eyebrow="Decision 3 — Fit the format to the content"
-            title="Video & short-form content"
-          >
+          <Block eyebrow="Decision 3 — Fit the format to the content" title="Video & short-form content">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
                 <ul className="flex flex-col gap-4">
@@ -392,8 +393,8 @@ const CaseStudyAppRating = () => {
                   </Bullet>
                 </ul>
                 <TradeOff>
-                  Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing
-                  them into a long-form frame was the actual mismatch.
+                  Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing them
+                  into a long-form frame was the actual mismatch.
                 </TradeOff>
               </div>
               <Placeholder label="Screenshot — video playlist & Quick Reads / Stories UI" className="h-72 lg:h-80" />
@@ -404,9 +405,7 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Stabilized notification reliability.</Bullet>
-                <Bullet>
-                  Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.
-                </Bullet>
+                <Bullet>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.</Bullet>
                 <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
               </ul>
               <Placeholder
