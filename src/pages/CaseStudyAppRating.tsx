@@ -167,7 +167,7 @@ const CaseStudyAppRating = () => {
       </section>
 
       {/* ── PROBLEM ────────────────────────── */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+      <section className={`${spacing.sectionGap} ${layout.px} `}>
         <div className={`${layout.container} mx-auto`}>
           <div className="max-w-3xl mx-auto">
             <SectionLabel>Problem</SectionLabel>
