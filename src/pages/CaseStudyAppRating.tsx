@@ -209,10 +209,6 @@ const CaseStudyAppRating = () => {
           </div>
 
           <div className="mt-14 md:mt-16">
-            USER FEEDBACK NAVIGATION Too many destinations · Cluttered hierarchy · Hard to find things PERFORMANCE Slow
-            · Heavy · Alternatives feel faster INTERACTION Commentary scrolling · Match status · Mobile interactions
-            CONTENT ★ Best journalism · Deep analysis · Statsguru · Rich cricket coverage INTERRUPTIONS Ads · Autoplay
-            video · Promotions · Notifications
             <Placeholder
               label="Visual — review quote strip / word cloud (Play Store · App Store · Twitter · Reddit)"
               className="h-56 md:h-64"
