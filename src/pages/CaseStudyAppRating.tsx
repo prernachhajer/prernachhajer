@@ -14,6 +14,7 @@ import {
   impactCell,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
+import UserFeedbackSummary from "@/components/UserFeedbackSummary";
 
 const fade = animation.fade;
 
