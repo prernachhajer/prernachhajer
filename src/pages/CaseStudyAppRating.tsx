@@ -361,23 +361,23 @@ const CaseStudyAppRating = () => {
                       ],
                       [
                         "Explore cricket",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
-                        true,
-                      ],
-                      [
-                        "Video & updates",
                         "Strongest depth — journalism, analysis, Statsguru",
                         "More lightweight content experience",
                         "Limited depth",
                         true,
                       ],
                       [
-                        "Ads & interruptions",
+                        "Video & updates",
                         "Rich library, but autoplay / playback issues",
                         "Better perceived video experience",
                         "Minimal interruptions",
+                        true,
+                      ],
+                      [
+                        "Ads & interruptions",
+                        "High friction — ads, promotions, autoplay",
+                        "Less intrusive",
+                        "Minimal",
                         true,
                       ],
                       [
