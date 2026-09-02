@@ -40,7 +40,7 @@ export default function UserFeedbackSummary({
   categories?: Category[];
 }) {
   return (
-    <section className="w-full max-w-xl bg-secondary px-8 py-8">
+    <section className="w-full max-w-xl px-8 py-8">
       <h2 className="text-lg font-bold tracking-tight text-foreground mb-6">{title.toUpperCase()}</h2>
 
       <div className="flex flex-col gap-6">
