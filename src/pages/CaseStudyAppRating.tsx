@@ -348,15 +348,15 @@ const CaseStudyAppRating = () => {
                       [
                         "Find & navigate",
                         "Rich, but cluttered and hard to navigate",
-                        "Too much information to process quickly",
-                        "Surface what matters most",
+                        "Simpler, easier to scan",
+                        "Frictionless, minimal",
                         true,
                       ],
                       [
                         "Check scores quickly",
                         "Detailed, but feels slow",
-                        "Relevant content is hard to discover",
-                        "Improve discovery",
+                        "Fast & lightweight",
+                        "Fastest / lowest friction",
                         true,
                       ],
                       [
@@ -368,6 +368,13 @@ const CaseStudyAppRating = () => {
                       ],
                       [
                         "Explore cricket",
+                        "Strongest depth — journalism, analysis, Statsguru",
+                        "More lightweight content experience",
+                        "Limited depth",
+                        true,
+                      ],
+                      [
+                        "Video & updates ",
                         "Rich library, but autoplay / playback issues",
                         "Better perceived video experience",
                         "Minimal interruptions",
@@ -380,18 +387,12 @@ const CaseStudyAppRating = () => {
                         "Minimal",
                         true,
                       ],
-                      [
-                        "Video & updates",
-                        "Strongest depth — journalism, analysis, Statsguru",
-                        "Fast & simple",
-                        "Fastest & most frictionless",
-                        true,
-                      ],
+
                       [
                         "Overall experience\n\n",
                         "Deepest, but overwhelming",
-                        "Fast & lightweight",
-                        "Fastest / lowest friction",
+                        "Fast & simple",
+                        "Fastest & most frictionless",
                         true,
                       ],
                     ].map(([feature, a, b, opportunity, accent]) => (
