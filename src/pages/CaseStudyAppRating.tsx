@@ -239,8 +239,7 @@ const CaseStudyAppRating = () => {
               What users were telling us
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              Every negative review across Play Store, App Store and Twitter. A dedicated in-app feedback form for
-              first-party data. A competitive study against Cricbuzz and Google Cricket Scores.
+              We looked across Play Store, App Store and Twitter, collected first-party feedback through a dedicated in-app survey, and benchmarked the experience against Cricbuzz and Google Cricket Scores.
             </p>
           </motion.div>
 
