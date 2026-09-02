@@ -186,23 +186,19 @@ const CaseStudyAppRating = () => {
               <ul className="flex flex-col gap-4">
                 <Bullet>
                   <strong className="text-foreground font-semibold">Business problem:&nbsp;</strong>
-                  Rating slipped to 3.4 and became the team's top priority — not one broken feature, but the app failing
-                  in dozens of small ways that added up.
+                  Rating dropped to 3.4. The app wasn't failing in one place, small issues were adding up.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
-                  Clutter, sluggish performance and buggy video and notifications compounded, so even loyal fans felt
-                  the app was slower and heavier than the alternatives.
+                  Clutter, slow performance, buggy video and poor notifications made the app feel heavier than the alternatives.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
-                  Individual fixes kept landing in isolation — a nav tweak here, a bug patch there — without a shared
-                  read on what was actually driving the drop.
+                  We kept fixing individual issues without a clear view of the bigger problem.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Strategy:&nbsp;</strong>
-                  Diagnose from real user signal first, then let design — not instinct — decide what stays, what goes,
-                  and what gets rebuilt.
+                  Start with real user signals, then use design to decide what to fix, remove or rebuild.
                 </Bullet>
               </ul>
             </div>
