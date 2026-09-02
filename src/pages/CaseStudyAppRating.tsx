@@ -370,7 +370,7 @@ const CaseStudyAppRating = () => {
                 </blockquote>
               </div>
 
-              <div>
+              {/*       <div>
                 <blockquote className={`pl-5 ${surface.accentLine}`}>
                   <p className="text-lg leading-relaxed">
                     "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
@@ -383,7 +383,7 @@ const CaseStudyAppRating = () => {
                   <br />
                   Speed and depth had effectively become two separate experiences.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
