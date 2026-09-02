@@ -347,14 +347,14 @@ const CaseStudyAppRating = () => {
                     {[
                       [
                         "Find & navigate",
-                        "Visits repeatedly during live games",
+                        "Rich, but cluttered and hard to navigate",
                         "Too much information to process quickly",
                         "Surface what matters most",
                         true,
                       ],
                       [
                         "Check scores quickly",
-                        "Reads previews and analysis",
+                        "Detailed, but feels slow",
                         "Relevant content is hard to discover",
                         "Improve discovery",
                         true,
@@ -367,7 +367,7 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Video & updates",
+                        "Overall experience",
                         "Rich library, but autoplay / playback issues",
                         "Better perceived video experience",
                         "Minimal interruptions",
@@ -382,14 +382,14 @@ const CaseStudyAppRating = () => {
                       ],
                       [
                         "Overall experience",
-                        "Deepest, but overwhelming",
+                        "Strongest depth — journalism, analysis, Statsguru",
                         "Fast & simple",
                         "Fastest & most frictionless",
                         true,
                       ],
                       [
                         "Video & updates",
-                        "Detailed, but feels slow",
+                        "Deepest, but overwhelming",
                         "Fast & lightweight",
                         "Fastest / lowest friction",
                         true,
