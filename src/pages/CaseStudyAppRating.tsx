@@ -329,13 +329,6 @@ const CaseStudyAppRating = () => {
                 </p>
               </div>
             </div>
-
-            <div className="mt-14">
-              <Placeholder
-                label="Visual — Cricinfo vs. Cricbuzz vs. Google Cricket Scores (depth · speed · access)"
-                className="h-56 md:h-64"
-              />
-            </div>
           </div>
 
           <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
