@@ -360,13 +360,6 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
-                        true,
-                      ],
-                      [
                         "Explore cricket",
                         "Strongest depth — journalism, analysis, Statsguru",
                         "More lightweight content experience",
@@ -388,17 +381,17 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Overall experience",
+                        "Explore cricket",
                         "Deepest, but overwhelming",
                         "Fast & simple",
                         "Fastest & most frictionless",
                         true,
                       ],
                       [
-                        "Overall experience",
-                        "High friction — ads, promotions, autoplay",
-                        "Less intrusive",
-                        "Minimal",
+                        "Video & updates",
+                        "Detailed, but feels slow",
+                        "Fast & lightweight",
+                        "Fastest / lowest friction",
                         true,
                       ],
                     ].map(([feature, a, b, opportunity, accent]) => (
