@@ -360,6 +360,13 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
+                        "Follow a match",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
+                        true,
+                      ],
+                      [
                         "Explore cricket",
                         "Strongest depth — journalism, analysis, Statsguru",
                         "More lightweight content experience",
@@ -388,7 +395,7 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Follow a match",
+                        "Overall experience",
                         "High friction — ads, promotions, autoplay",
                         "Less intrusive",
                         "Minimal",
