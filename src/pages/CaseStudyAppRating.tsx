@@ -300,18 +300,8 @@ const CaseStudyAppRating = () => {
                   <tbody>
                     {[
                       ["Active tab count", "8 – 15", "4 – 6", true],
-                      [
-                        "Ball-by-ball details",
-                        "Rich commentary, but slower",
-                        "Real-time, super-fast updates",
-                        false,
-                      ],
-                      [
-                        "User Experience",
-                        "Clunky, dated interface",
-                        "Sleek, intuitive, especially mobile",
-                        false,
-                      ],
+                      ["Ball-by-ball details", "Rich commentary, but slower", "Real-time, super-fast updates", false],
+                      ["User Experience", "Clunky, dated interface", "Sleek, intuitive, especially mobile", false],
                       ["Layout density options", "None (one size)", "User selectable", true],
                     ].map(([feature, a, b, accent]) => (
                       <tr key={feature as string} className="border-t border-border">
@@ -320,7 +310,6 @@ const CaseStudyAppRating = () => {
                         <td className="p-3 text-muted-foreground">{b}</td>
                       </tr>
                     ))}
-
                   </tbody>
                 </table>
               </div>
@@ -349,9 +338,7 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          {/* Users */}
-          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
-            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
@@ -377,6 +364,34 @@ const CaseStudyAppRating = () => {
                         "Reads previews and analysis",
                         "Relevant content is hard to discover",
                         "Improve discovery",
+                        true,
+                      ],
+                      [
+                        "Follow a match",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
+                        true,
+                      ],
+                      [
+                        "Follow a match",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
+                        true,
+                      ],
+                      [
+                        "Follow a match",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
+                        true,
+                      ],
+                      [
+                        "Follow a match",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
                         true,
                       ],
                       [
