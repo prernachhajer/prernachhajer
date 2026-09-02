@@ -381,14 +381,14 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Overall experience",
+                        "Video & updates",
                         "Strongest depth — journalism, analysis, Statsguru",
                         "Fast & simple",
                         "Fastest & most frictionless",
                         true,
                       ],
                       [
-                        "Video & updates",
+                        "Overall experience\n\n",
                         "Deepest, but overwhelming",
                         "Fast & lightweight",
                         "Fastest / lowest friction",
