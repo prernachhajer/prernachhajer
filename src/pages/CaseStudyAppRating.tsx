@@ -115,7 +115,7 @@ const CaseStudyAppRating = () => {
             ))}
           </motion.div>
 
-          <motion.dl
+          {/*       <motion.dl
             initial="hidden"
             animate="visible"
             variants={fade}
@@ -141,7 +141,7 @@ const CaseStudyAppRating = () => {
                 <p className="text-xs text-muted-foreground mt-2.5">{item.note}</p>
               </div>
             ))}
-          </motion.dl>
+          </motion.dl> */}
 
           <motion.p
             initial="hidden"
