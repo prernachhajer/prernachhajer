@@ -162,9 +162,9 @@ const CaseStudyAppRating = () => {
             className="mt-16 md:mt-20"
           >
             <Placeholder label="Visual — rating trajectory over the turnaround period" className="h-56 md:h-72" />
-          </motion.div>
+          </motion.div> */}
         </div>
-      </section> */}
+      </section>
 
       {/* ── PROBLEM ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
