@@ -367,7 +367,7 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Overall experience",
+                        "Explore cricket",
                         "Rich library, but autoplay / playback issues",
                         "Better perceived video experience",
                         "Minimal interruptions",
