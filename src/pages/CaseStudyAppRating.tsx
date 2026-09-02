@@ -213,7 +213,7 @@ const CaseStudyAppRating = () => {
             <div className="grid md:grid-cols-2 items-start ">
               <UserFeedbackSummary />
 
-              <div className="self-start flex flex-wrap gap-1.5 ">
+              <div className="self-start flex flex-wrap gap-2 ">
                 {[
                   "Overwhelming / cluttered",
                   "Buggy video playback",
