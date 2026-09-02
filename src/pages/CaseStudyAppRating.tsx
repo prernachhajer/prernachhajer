@@ -336,8 +336,10 @@ const CaseStudyAppRating = () => {
               className="h-56 md:h-64"
             />
           </div>
+          </div>
         </div>
       </section>
+
 
       {/* ── REFRAME ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
