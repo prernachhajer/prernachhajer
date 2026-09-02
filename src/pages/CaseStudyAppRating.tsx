@@ -338,9 +338,9 @@ const CaseStudyAppRating = () => {
                   <thead>
                     <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
                       <th className="text-left font-medium p-3">USER NEED</th>
-                      <th className="text-left font-medium p-3 w-[28%]">Current behaviour</th>
-                      <th className="text-left font-medium p-3 w-[28%]">OPPORTUNITY&nbsp;&nbsp;</th>
-                      <th className="text-left font-medium p-3 w-[28%]">PAIN POINT</th>
+                      <th className="text-left font-medium p-3 w-[28%]">CRICINFO</th>
+                      <th className="text-left font-medium p-3 w-[28%]">CRICBUZZ&nbsp;&nbsp;</th>
+                      <th className="text-left font-medium p-3 w-[28%]">GOOGLE</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -361,37 +361,37 @@ const CaseStudyAppRating = () => {
                       ],
                       [
                         "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
+                        "Deep commentary & data, but interaction can be frustrating",
+                        "Simple, quick live updates",
+                        "Clear, glanceable score",
                         true,
                       ],
                       [
-                        "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
+                        "Video & updates",
+                        "Rich library, but autoplay / playback issues",
+                        "Better perceived video experience",
+                        "Minimal interruptions",
                         true,
                       ],
                       [
-                        "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
+                        "Ads & interruptions",
+                        "High friction — ads, promotions, autoplay",
+                        "Less intrusive",
+                        "Minimal",
                         true,
                       ],
                       [
-                        "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
+                        "Overall experience",
+                        "Deepest, but overwhelming",
+                        "Fast & simple",
+                        "Fastest & most frictionless",
                         true,
                       ],
                       [
-                        "Follow a match",
-                        "Visits during major events",
-                        "Experience can feel overwhelming",
-                        "Simplify and Habit forming",
+                        "Video & updates",
+                        "Detailed, but feels slow",
+                        "Fast & lightweight",
+                        "Fastest / lowest friction",
                         true,
                       ],
                     ].map(([feature, a, b, opportunity, accent]) => (
