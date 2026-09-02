@@ -225,7 +225,7 @@ const CaseStudyAppRating = () => {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className={`${t.labelSm} h-8.5 px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
+                  className={`${t.labelSm} h-9 px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
                 >
                   {tag}
                 </span>

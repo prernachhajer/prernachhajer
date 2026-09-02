@@ -32,17 +32,18 @@ function StarIcon({ className = "" }: { className?: string }) {
   );
 }
 
+{
+  /*title = "User feedback",
+title?: string;
+  <h2 className="text-lg font-bold tracking-tight text-foreground mb-6">{title.toUpperCase()}</h2> */
+}
 export default function UserFeedbackSummary({
-  title = "User feedback",
   categories = FEEDBACK_CATEGORIES as Category[],
 }: {
-  title?: string;
   categories?: Category[];
 }) {
   return (
     <section className="w-full max-w-xl px-8 py-8">
-      <h2 className="text-lg font-bold tracking-tight text-foreground mb-6">{title.toUpperCase()}</h2>
-
       <div className="flex flex-col gap-6">
         {categories.map((category) => (
           <div key={category.label}>
