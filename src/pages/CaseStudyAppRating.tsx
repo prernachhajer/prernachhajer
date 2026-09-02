@@ -392,7 +392,7 @@ const CaseStudyAppRating = () => {
       {/* ── REFRAME ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`max-w-3xl mx-auto  bg-[#15130f] p-8 rounded-xl`}>
-          <Label>The Reframe</Label>
+          <SectionLabel>The Reframe</SectionLabel>
           <motion.h3
             initial="hidden"
             whileInView="visible"
