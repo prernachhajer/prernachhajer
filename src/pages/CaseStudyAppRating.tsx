@@ -209,7 +209,7 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border rounded-xl">
+          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border border-dashed rounded-xl">
             <UserFeedbackSummary />
 
             <div className="self-start flex flex-wrap gap-2 border-t mt-8 md:mt-8 px-8 py-8 pb-8">
