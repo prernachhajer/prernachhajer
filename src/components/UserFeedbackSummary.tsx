@@ -33,6 +33,7 @@ function StarIcon({ className = "" }: { className?: string }) {
 }
 
 export default function UserFeedbackSummary({
+  title = "User feedback",
   categories = FEEDBACK_CATEGORIES as Category[],
 }: {
   title?: string;
