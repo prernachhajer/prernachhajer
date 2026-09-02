@@ -360,10 +360,10 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Explore cricket",
-                        "Strongest depth — journalism, analysis, Statsguru",
-                        "More lightweight content experience",
-                        "Limited depth",
+                        "Follow a match",
+                        "Deep commentary & data, but interaction can be frustrating",
+                        "Simple, quick live updates",
+                        "Clear, glanceable score",
                         true,
                       ],
                       [
@@ -381,7 +381,7 @@ const CaseStudyAppRating = () => {
                         true,
                       ],
                       [
-                        "Explore cricket",
+                        "Overall experience",
                         "Deepest, but overwhelming",
                         "Fast & simple",
                         "Fastest & most frictionless",
