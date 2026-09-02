@@ -393,17 +393,17 @@ const CaseStudyAppRating = () => {
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`max-w-3xl mx-auto  bg-[#15130f] p-8 rounded-xl`}>
           <SectionLabel>The Reframe</SectionLabel>
-          <motion.h2
+          <motion.h3
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className={`${t.h2} max-w-4xl  text-[#f4f1ea]`}
+            className={`${t.h3}   text-[#f4f1ea]`}
             style={{ fontFamily: t.displayFont }}
           >
             The rating wasn't the design problem. It was <span className="text-primary italic">the signal</span>. My
             role was to turn that complexity into a product that felt simpler — without making it less powerful.
-          </motion.h2>
+          </motion.h3>
         </div>
       </section>
 
