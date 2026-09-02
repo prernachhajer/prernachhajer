@@ -295,19 +295,33 @@ const CaseStudyAppRating = () => {
                       <th className="text-left font-medium p-3">Feature</th>
                       <th className="text-left font-medium p-3 w-[28%]">Cricinfo</th>
                       <th className="text-left font-medium p-3 w-[28%]">Cricbuzz</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Cricbuzz</th>
                     </tr>
                   </thead>
                   <tbody>
                     {[
-                      ["Active tab count", "8 – 15", "4 – 6", true],
-                      ["Ball-by-ball details", "Rich commentary, but slower", "Real-time, super-fast updates", false],
-                      ["User Experience", "Clunky, dated interface", "Sleek, intuitive, especially mobile", false],
-                      ["Layout density options", "None (one size)", "User selectable", true],
+                      ["Active tab count", "8 – 15", "4 – 6", "4 – 6", true],
+                      [
+                        "Ball-by-ball details",
+                        "Rich commentary, but slower",
+                        "Real-time, super-fast updates",
+                        "4 – 6",
+                        false,
+                      ],
+                      [
+                        "User Experience",
+                        "Clunky, dated interface",
+                        "Sleek, intuitive, especially mobile",
+                        "4 – 6",
+                        false,
+                      ],
+                      ["Layout density options", "None (one size)", "User selectable", "4 – 6", true],
                     ].map(([feature, a, b, accent]) => (
                       <tr key={feature as string} className="border-t border-border">
                         <td className="p-3 text-foreground">{feature}</td>
                         <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
                         <td className="p-3 text-muted-foreground">{b}</td>
+                        <td className="p-3 text-muted-foreground">{c}</td>
                       </tr>
                     ))}
                   </tbody>
