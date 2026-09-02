@@ -268,7 +268,7 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 border border-border mt-14 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 border border-border rounded-xl mt-14 text-center">
             {[
               { n: "116", l: "Performance / load mentions" },
               { n: "34", l: "Cognitive load mentions" },
