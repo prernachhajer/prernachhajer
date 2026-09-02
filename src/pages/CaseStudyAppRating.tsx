@@ -281,6 +281,55 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
+
+
+           {/* Competitive */}
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3">Feature</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Cricinfo</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Cricbuzz</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Active tab count", "8 – 15", "4 – 6", true],
+                      ["Ball-by-ball details", "Rich commentary, but slower", "Real-time, super-fast updates", false],
+                      ["User Experience", "Clunky, dated interface", "Sleek, intuitive, especially mobile", false],
+                      ["Layout density options", "None (one size)", "User selectable", true],
+                    ].map(([feature, a, b, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
+                  </p>
+                </blockquote>
+                <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
+                  Users had started choosing different products for different needs: Cricbuzz for quick updates and
+                  video, and Cricinfo, often on desktop, for stats and deeper content.
+                  <br />
+                  <br />
+                  Speed and depth had effectively become two separate experiences.
+                </p>
+              </div>
+            </div>
+
+
+            
           <div className="mt-14">
             <Placeholder
               label="Visual — Cricinfo vs. Cricbuzz vs. Google Cricket Scores (depth · speed · access)"
