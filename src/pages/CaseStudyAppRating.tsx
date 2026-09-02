@@ -325,69 +325,6 @@ const CaseStudyAppRating = () => {
                 </table>
               </div>
 
-               {/* Users */}
-            <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
-              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-              <div className="grid lg:grid-cols-1 gap-10 items-start">
-                <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
-                        <th className="text-left font-medium p-3">User segment</th>
-                        <th className="text-left font-medium p-3 w-[28%]">Current behaviour</th>
-                        <th className="text-left font-medium p-3 w-[28%]">OPPORTUNITY&nbsp;&nbsp;</th>
-                        <th className="text-left font-medium p-3 w-[28%]">PAIN POINT</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        [
-                          "Live Match Follower ",
-                          "Visits repeatedly during live games",
-                          "Too much information to process quickly",
-                          "Surface what matters most",
-                          true,
-                        ],
-                        [
-                          "Content consumer",
-                          "Reads previews and analysis",
-                          "Relevant content is hard to discover",
-                          "Improve discovery",
-                          true,
-                        ],
-                        [
-                          "Casual fan",
-                          "Visits during major events",
-                          "Experience can feel overwhelming",
-                          "Simplify and Habit forming",
-                          true,
-                        ],
-                      ].map(([feature, a, b, opportunity, accent]) => (
-                        <tr key={feature as string} className="border-t border-border">
-                          <td className="p-3 text-foreground">{feature}</td>
-                          <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
-                          <td className="p-3 text-muted-foreground">{opportunity}</td>
-                          <td className="p-3 text-muted-foreground">{b}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <blockquote className={`pl-5 ${surface.accentLine}`}>
-                    <p className="text-lg leading-relaxed">
-                      <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
-                      all segments.
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        
               <div>
                 <blockquote className={`pl-5 ${surface.accentLine}`}>
                   <p className="text-lg leading-relaxed">
@@ -411,8 +348,68 @@ const CaseStudyAppRating = () => {
               />
             </div>
           </div>
+
+          {/* Users */}
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
+            <div className="grid lg:grid-cols-1 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3">User segment</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Current behaviour</th>
+                      <th className="text-left font-medium p-3 w-[28%]">OPPORTUNITY&nbsp;&nbsp;</th>
+                      <th className="text-left font-medium p-3 w-[28%]">PAIN POINT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      [
+                        "Live Match Follower ",
+                        "Visits repeatedly during live games",
+                        "Too much information to process quickly",
+                        "Surface what matters most",
+                        true,
+                      ],
+                      [
+                        "Content consumer",
+                        "Reads previews and analysis",
+                        "Relevant content is hard to discover",
+                        "Improve discovery",
+                        true,
+                      ],
+                      [
+                        "Casual fan",
+                        "Visits during major events",
+                        "Experience can feel overwhelming",
+                        "Simplify and Habit forming",
+                        true,
+                      ],
+                    ].map(([feature, a, b, opportunity, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{opportunity}</td>
+                        <td className="p-3 text-muted-foreground">{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
+                    all segments.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* ── REFRAME ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
