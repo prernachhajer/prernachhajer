@@ -209,34 +209,28 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className="mt-14 md:mt-16">
-
+          <div className="grid md:grid-cols-2 mt-14 md:mt-16">
             <UserFeedbackSummary />
 
-            <Placeholder
-              label="Visual — review quote strip / word cloud (Play Store · App Store · Twitter · Reddit)"
-              className="h-56 md:h-64"
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-2.5 justify-center mt-10">
-            {[
-              "Overwhelming / cluttered",
-              "Buggy video playback",
-              "Inflexible notifications",
-              "Cluttered bottom nav",
-              "Slow, laggy performance",
-              "Live scores lag competitors",
-              "High data consumption",
-              "Losing younger audience",
-            ].map((tag) => (
-              <span
-                key={tag}
-                className={`${t.labelSm} px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
-              >
-                {tag}
-              </span>
-            ))}
+            <div className="flex flex-wrap gap-2.5 justify-center mt-10">
+              {[
+                "Overwhelming / cluttered",
+                "Buggy video playback",
+                "Inflexible notifications",
+                "Cluttered bottom nav",
+                "Slow, laggy performance",
+                "Live scores lag competitors",
+                "High data consumption",
+                "Losing younger audience",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className={`${t.labelSm} px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
