@@ -209,29 +209,27 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-8 md:mt-8">
-            <div className="grid md:grid-cols-2 items-start ">
-              <UserFeedbackSummary />
+          <div className="grid md:grid-cols-2 items-center max-w-4xl mx-auto mt-8 md:mt-8 ">
+            <UserFeedbackSummary />
 
-              <div className="self-start flex flex-wrap gap-2 mt-8 md:mt-8">
-                {[
-                  "Overwhelming / cluttered",
-                  "Buggy video playback",
-                  "Inflexible notifications",
-                  "Cluttered bottom nav",
-                  "Slow, laggy performance",
-                  "Live scores lag competitors",
-                  "High data consumption",
-                  "Losing younger audience",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className={`${t.labelSm} h-7 px-4 py-2 leading-none rounded-full border border-border bg-secondary text-muted-foreground`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+            <div className="self-start flex flex-wrap gap-2 mt-8 md:mt-8">
+              {[
+                "Overwhelming / cluttered",
+                "Buggy video playback",
+                "Inflexible notifications",
+                "Cluttered bottom nav",
+                "Slow, laggy performance",
+                "Live scores lag competitors",
+                "High data consumption",
+                "Losing younger audience",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className={`${t.labelSm} h-7 px-4 py-2 leading-none rounded-full border border-border bg-secondary text-muted-foreground`}
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
