@@ -212,7 +212,7 @@ const CaseStudyAppRating = () => {
           <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border ">
             <UserFeedbackSummary />
 
-            <div className="self-start flex flex-wrap gap-2 border-t mt-8 md:mt-8 px-8 py-8 pb-8">
+            <div className="self-start flex flex-wrap gap-2 border-t rounded-xl mt-8 md:mt-8 px-8 py-8 pb-8">
               {[
                 "Overwhelming / cluttered",
                 "Buggy video playback",
