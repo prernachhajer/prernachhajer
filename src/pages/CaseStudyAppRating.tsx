@@ -174,11 +174,10 @@ const CaseStudyAppRating = () => {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
               <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-                We had the depth. We didn't have the clarity.
+                We had the content. We were losing on the experience.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Real strengths like StatsGuru and predictors existed, but they were buried under clutter, sluggish
-                performance and buggy video — invisible to the people who came looking for them.
+                As Cricinfo grew, the experience accumulated friction: cluttered screens, slow performance, buggy video, intrusive ads, and difficult navigation.
               </p>
             </motion.div>
 
