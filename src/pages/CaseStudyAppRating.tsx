@@ -174,7 +174,7 @@ const CaseStudyAppRating = () => {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
               <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-                We had the content. We were losing on the experience.
+                The app had become harder to use than it needed to be.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
                 As Cricinfo grew, the experience accumulated friction: cluttered screens, slow performance, buggy video, intrusive ads, and difficult navigation.
