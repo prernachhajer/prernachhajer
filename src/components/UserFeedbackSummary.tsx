@@ -44,7 +44,7 @@ export default function UserFeedbackSummary({
 }) {
   return (
     <section className="w-full max-w-xl px-8 py-8">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 grid md:grid-cols-2">
         {categories.map((category) => (
           <div key={category.label}>
             <div className="flex items-center gap-2 mb-2">
