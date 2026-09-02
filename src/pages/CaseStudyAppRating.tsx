@@ -209,11 +209,11 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-2 items-start mt-14 md:mt-16">
+          <div className="max-w-4xl mx-auto mt-8 md:mt-8">
+            <div className="grid md:grid-cols-2 items-start ">
               <UserFeedbackSummary />
 
-              <div className="self-start flex flex-wrap gap-1.5 justify-center mt-10">
+              <div className="self-start flex flex-wrap gap-1.5 ">
                 {[
                   "Overwhelming / cluttered",
                   "Buggy video playback",
