@@ -154,7 +154,7 @@ const CaseStudyAppRating = () => {
             of turning that number around: not one broken feature, but dozens of small failures that added up.
           </motion.p>
 
-          <motion.div
+          {/*   <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -164,7 +164,7 @@ const CaseStudyAppRating = () => {
             <Placeholder label="Visual — rating trajectory over the turnaround period" className="h-56 md:h-72" />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── PROBLEM ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
