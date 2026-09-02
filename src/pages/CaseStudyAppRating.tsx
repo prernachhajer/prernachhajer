@@ -209,7 +209,7 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 items-center max-w-4xl mx-auto mt-8 md:mt-8 ">
+          <div className=" items-center max-w-4xl mx-auto mt-8 md:mt-8 ">
             <UserFeedbackSummary />
 
             <div className="self-start flex flex-wrap gap-2 mt-8 md:mt-8">
