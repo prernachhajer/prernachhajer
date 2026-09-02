@@ -177,7 +177,8 @@ const CaseStudyAppRating = () => {
                 The app had become harder to use than it needed to be.
               </h2>
               <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                As Cricinfo grew, the experience accumulated friction: cluttered screens, slow performance, buggy video, intrusive ads, and difficult navigation.
+                As Cricinfo grew, the experience accumulated friction: cluttered screens, slow performance, buggy video,
+                intrusive ads, and difficult navigation.
               </p>
             </motion.div>
 
@@ -190,7 +191,8 @@ const CaseStudyAppRating = () => {
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
-                  Clutter, slow performance, buggy video and poor notifications made the app feel heavier than the alternatives.
+                  Clutter, slow performance, buggy video and poor notifications made the app feel heavier than the
+                  alternatives.
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Band-aid:&nbsp;</strong>
@@ -239,7 +241,8 @@ const CaseStudyAppRating = () => {
               What users were telling us
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              We looked across Play Store, App Store and Twitter, collected first-party feedback through a dedicated in-app survey, and benchmarked the experience against Cricbuzz and Google Cricket Scores.
+              We looked across Play Store, App Store and Twitter, collected first-party feedback through a dedicated
+              in-app survey, and benchmarked the experience against Cricbuzz and Google Cricket Scores.
             </p>
           </motion.div>
 
@@ -281,12 +284,10 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
-
-
-           {/* Competitive */}
+          {/* Competitive */}
           <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className=" gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
                   <thead>
@@ -328,18 +329,15 @@ const CaseStudyAppRating = () => {
               </div>
             </div>
 
-
-            
-          <div className="mt-14">
-            <Placeholder
-              label="Visual — Cricinfo vs. Cricbuzz vs. Google Cricket Scores (depth · speed · access)"
-              className="h-56 md:h-64"
-            />
-          </div>
+            <div className="mt-14">
+              <Placeholder
+                label="Visual — Cricinfo vs. Cricbuzz vs. Google Cricket Scores (depth · speed · access)"
+                className="h-56 md:h-64"
+              />
+            </div>
           </div>
         </div>
       </section>
-
 
       {/* ── REFRAME ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
