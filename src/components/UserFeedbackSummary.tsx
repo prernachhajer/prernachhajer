@@ -43,7 +43,7 @@ export default function UserFeedbackSummary({
   categories?: Category[];
 }) {
   return (
-    <section className="w-full max-w-xl px-8 py-8">
+    <section className=" px-8 py-8">
       <div className=" grid grid-cols-2 gap-x-8 gap-y-6 ">
         {categories.map((category) => (
           <div key={category.label}>
