@@ -391,14 +391,14 @@ const CaseStudyAppRating = () => {
 
       {/* ── REFRAME ────────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`${layout.container} mx-auto  bg-[#15130f]`}>
           <SectionLabel>The Reframe</SectionLabel>
           <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className={`${t.h2} max-w-4xl`}
+            className={`${t.h2} max-w-4xl  text-[#f4f1ea]`}
             style={{ fontFamily: t.displayFont }}
           >
             The rating wasn't the design problem. It was <span className="text-primary italic">the signal</span>. My
