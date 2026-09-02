@@ -357,7 +357,7 @@ const CaseStudyAppRating = () => {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
-                      <th className="text-left font-medium p-3">User segment</th>
+                      <th className="text-left font-medium p-3">USER NEED</th>
                       <th className="text-left font-medium p-3 w-[28%]">Current behaviour</th>
                       <th className="text-left font-medium p-3 w-[28%]">OPPORTUNITY&nbsp;&nbsp;</th>
                       <th className="text-left font-medium p-3 w-[28%]">PAIN POINT</th>
@@ -366,21 +366,21 @@ const CaseStudyAppRating = () => {
                   <tbody>
                     {[
                       [
-                        "Live Match Follower ",
+                        "Find & navigate",
                         "Visits repeatedly during live games",
                         "Too much information to process quickly",
                         "Surface what matters most",
                         true,
                       ],
                       [
-                        "Content consumer",
+                        "Check scores quickly",
                         "Reads previews and analysis",
                         "Relevant content is hard to discover",
                         "Improve discovery",
                         true,
                       ],
                       [
-                        "Casual fan",
+                        "Follow a match",
                         "Visits during major events",
                         "Experience can feel overwhelming",
                         "Simplify and Habit forming",
