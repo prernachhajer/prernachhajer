@@ -567,8 +567,7 @@ const CaseStudyAppRating = () => {
                 </ul>
               </div>
               <TradeOff>
-                This got its own case study rather than a summary here — the material was too deep to compress without
-                losing what made it work.
+                Users had formed habits around the existing layout. Simplifying it meant we might disrupt those habits.
               </TradeOff>
             </div>
             <div className="mt-10">
