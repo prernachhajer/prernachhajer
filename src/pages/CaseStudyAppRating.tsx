@@ -246,6 +246,37 @@ const CaseStudyAppRating = () => {
             </p>
           </motion.div>
 
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            {[
+              {
+                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
+                source: "User research participant",
+                context: "Hyderabad",
+              },
+              {
+                quote: "If Cricinfo sorts out their mobile app UI, Cricbuzz will probably be out of business.",
+                source: "@TheStatsKid1523",
+                context: "Twitter",
+              },
+              {
+                quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
+                source: "r/IndiaCricket",
+                context: "Reddit",
+              },
+            ].map((q) => (
+              <div key={q.source} className="relative rounded-xl border border-border bg-secondary/40 p-6 pt-8">
+                <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
+                  "
+                </span>
+                <p className="text-lg leading-relaxed text-foreground relative z-10">{q.quote}</p>
+                <div className="mt-4 pt-3 border-t border-border">
+                  <p className="text-sm font-medium text-foreground">{q.source}</p>
+                  <p className={`${t.labelSm} text-muted-foreground`}>{q.context}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
               {
