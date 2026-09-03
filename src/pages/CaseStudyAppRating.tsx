@@ -597,7 +597,7 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Stabilized notification reliability.</Bullet>
-                <Bullet>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.</Bullet>
+                <Bullet>Gave users control over what they want to be notified about, with the flexibility to turn individual alerts on or off.</Bullet>
                 <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
               </ul>
             </div>
