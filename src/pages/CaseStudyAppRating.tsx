@@ -317,7 +317,7 @@ const CaseStudyAppRating = () => {
 
           {/* Competitive */}
 
-          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 ">
+          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs Cricbuzz vs Google</p>
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
@@ -438,7 +438,7 @@ const CaseStudyAppRating = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 ">
+          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs Cricbuzz vs Google</p>
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
