@@ -504,8 +504,7 @@ const CaseStudyMatchPage = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
-            <p className={`${t.labelSm} text-muted-foreground mb-6`}>HOW MIGHT WE</p>
+          <div className="max-w-5xl mx-auto pt-12 ">
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
