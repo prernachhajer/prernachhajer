@@ -530,8 +530,7 @@ const CaseStudyAppRating = () => {
                   <Bullet>Rule: one featured-story module visible at a time.</Bullet>
                 </ul>
                 <TradeOff>
-                  We didn't rebuild the home page — a full redesign would have cost more time than the clutter actually
-                  warranted, so this stayed a decluttering pass, not a rethink.
+                  We didn’t rebuild the homepage. We focused on decluttering what was already there.
                 </TradeOff>
               </div>
               <Placeholder label="Screenshot — home page, before / after" className="h-72 lg:h-80" />
