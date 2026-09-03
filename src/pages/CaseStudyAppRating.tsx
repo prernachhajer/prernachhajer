@@ -317,7 +317,7 @@ const CaseStudyAppRating = () => {
 
           {/* Competitive */}
 
-          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
+          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 ">
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
@@ -425,14 +425,15 @@ const CaseStudyAppRating = () => {
 
       {/* ── HOW WE DECIDED ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`max-w-4xl mx-auto`}>
+        <div className={`max-w-5xl mx-auto`}>
           <SectionLabel>HOW WE DECIDED</SectionLabel>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
               Each problem led to a question that shaped the solution.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              We grouped the eight pain points into four areas, using one key question for each to decide what needed to change.
+              We grouped the eight pain points into four areas, using one key question for each to decide what needed to
+              change.
             </p>
           </motion.div>
 
