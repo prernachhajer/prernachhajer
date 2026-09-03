@@ -150,7 +150,9 @@ const CaseStudyAppRating = () => {
             custom={4}
             className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12`}
           >
-            Our app rating had dropped to 3.4, and it became the team’s biggest priority to turn it around. As we dug deeper, we realised there wasn’t one major problem causing it. It was a collection of small frustrations across the app that had slowly added up to a poor overall experience.
+            Our app rating had dropped to 3.4, and it became the team’s biggest priority to turn it around. As we dug
+            deeper, we realised there wasn’t one major problem causing it. It was a collection of small frustrations
+            across the app that had slowly added up to a poor overall experience.
           </motion.p>
 
           {/*   <motion.div
@@ -317,7 +319,9 @@ const CaseStudyAppRating = () => {
           {/* Competitive */}
 
           <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
-            <p className={`${t.labelSm} text-muted-foreground mb-6`}>LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE</p>
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>
+              LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE
+            </p>
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
@@ -520,11 +524,11 @@ const CaseStudyAppRating = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>Featured/Match coverage articles cut from 7 to 5.</Bullet>
                   <Bullet>
-                    Removed a redundant "In-Depth Stories" section, the few&nbsp; stories were repeating and overwhelming the page with too much data across&nbsp;
+                    Removed a redundant "In-Depth Stories" section, the few&nbsp; stories were repeating and
+                    overwhelming the page with too much data across&nbsp;
                   </Bullet>
                   <Bullet>Removed the filler sections for eg -&nbsp;&nbsp;Top Tournaments.</Bullet>
                   <Bullet>Rule: one featured-story module visible at a time.</Bullet>
-                  <Bullet>Added a lightweight match-prediction game for engagement.</Bullet>
                 </ul>
                 <TradeOff>
                   We didn't rebuild the home page — a full redesign would have cost more time than the clutter actually
