@@ -499,8 +499,7 @@ const CaseStudyMatchPage = () => {
               Each problem led to a question that shaped the solution.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              We grouped the eight pain points into four areas, using one key question for each to decide what needed to
-              change.
+              The two problems from the Insight — relevance and discoverability — broke down into five sharper questions. Each decision in the next section answers one of them directly.
             </p>
           </motion.div>
 
@@ -519,30 +518,30 @@ const CaseStudyMatchPage = () => {
                   <tbody>
                     {[
                       [
+                        "Structure",
+                        "How might we show only what's relevant to this exact moment in the match?",
+                        "Reduced the tab count using usage data (points table vs. MVP); accordions that open to the currently relevant state, not day one",
+
+                        true,
+                      ],
+                      [
+                        "Discoverability",
+                        "How might we surface the right content to people who don't know to look for it?",
+                        "Commentary excerpt on the summary page with a tap-through to the full tab; content surfaced inline where it's earned — wicket photos, ball-scroller, report card",
+
+                        true,
+                      ],
+                      [
                         "Navigation",
-                        "How might we cut destinations down to only what's relevant right now?",
-                        "Home page decluttering, match page tab structure, bottom nav cleanup",
+                        "How might we let people move sideways across matches without losing their place?",
+                        "Recent-matches dropdown + prev/next, later consolidated into a \"more\" menu once the app bar itself got overloaded",
 
                         true,
                       ],
                       [
-                        "Performance",
-                        "How might we strip weight without stripping value?",
-                        "Font system overhaul, FlatUI/layout architecture, load-on-tap",
-
-                        true,
-                      ],
-                      [
-                        "Interruptions",
-                        "How might we stop the app from getting in its own way?g",
-                        "Autoplay muted by default, ad clutter reduced, notifications made flexible",
-
-                        true,
-                      ],
-                      [
-                        "Interaction",
-                        "How might we fix friction at the exact moment someone hits it?",
-                        "Video playback fixes; commentary/match-status friction (lives in the Match Page case study)",
+                        "Engagement",
+                        "How might we open the page to more fans without re-cluttering it?",
+                        "Polls and fan ratings as a lighter layer sitting beside the depth, not inside it",
 
                         true,
                       ],
