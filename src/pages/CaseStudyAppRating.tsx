@@ -407,6 +407,148 @@ const CaseStudyAppRating = () => {
         </div>
       </section>
 
+      {/* ── DISCOVERY ──────────────────────── */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel>Discovery</SectionLabel>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
+              What users were telling us
+            </h2>
+            <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
+              We looked across Play Store, App Store and Twitter, collected first-party feedback through a dedicated
+              in-app survey, and benchmarked the experience against Cricbuzz and Google Cricket Scores.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            {[
+              {
+                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
+                source: "— User research participant, Hyderabad",
+              },
+              {
+                quote: "If Cricinfo sorts out their mobile app UI, Cricbuzz will probably be out of business.",
+                source: "— @TheStatsKid1523, Twitter",
+              },
+              {
+                quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
+                source: "— r/IndiaCricket",
+              },
+            ].map((q) => (
+              <blockquote key={q.source} className={`pl-5 ${surface.accentLine}`}>
+                <p className="text-lg leading-relaxed">{q.quote}</p>
+                <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>{q.source}</cite>
+              </blockquote>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 border border-border rounded-xl mt-14 text-center">
+            {[
+              { n: "116", l: "Performance / load mentions" },
+              { n: "34", l: "Cognitive load mentions" },
+              { n: "20", l: "UI mentions" },
+              { n: "6", l: "Clutter mentions" },
+            ].map((item, i) => (
+              <div key={item.l} className={`px-5 py-7 ${i > 0 ? "border-l border-border" : ""}`}>
+                <p className="text-3xl md:text-4xl leading-none text-primary" style={{ fontFamily: t.displayFont }}>
+                  {item.n}
+                </p>
+                <p className={`${t.labelSm} text-muted-foreground mt-3`}>{item.l}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Competitive */}
+
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
+            <div className="grid lg:grid-cols-1 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3">USER NEED</th>
+                      <th className="text-left font-medium p-3 w-[28%]">CRICINFO</th>
+                      <th className="text-left font-medium p-3 w-[28%]">CRICBUZZ&nbsp;&nbsp;</th>
+                      <th className="text-left font-medium p-3 w-[28%]">GOOGLE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      [
+                        "Find & navigate",
+                        "Rich, but cluttered and hard to navigate",
+                        "Simpler, easier to scan",
+                        "Frictionless, minimal",
+                        true,
+                      ],
+                      [
+                        "Check scores quickly",
+                        "Detailed, but feels slow",
+                        "Fast & lightweight",
+                        "Fastest / lowest friction",
+                        true,
+                      ],
+                      [
+                        "Follow a match",
+                        "Deep commentary & data, but interaction can be frustrating",
+                        "Simple, quick live updates",
+                        "Clear, glanceable score",
+                        true,
+                      ],
+                      [
+                        "Explore cricket",
+                        "Strongest depth — journalism, analysis, Statsguru",
+                        "More lightweight content experience",
+                        "Limited depth",
+                        true,
+                      ],
+                      [
+                        "Video & updates ",
+                        "Rich library, but autoplay / playback issues",
+                        "Better perceived video experience",
+                        "Minimal interruptions",
+                        true,
+                      ],
+                      [
+                        "Ads & interruptions",
+                        "High friction — ads, promotions, autoplay",
+                        "Less intrusive",
+                        "Minimal",
+                        true,
+                      ],
+
+                      [
+                        "Overall experience\n\n",
+                        "Deepest, but overwhelming",
+                        "Fast & simple",
+                        "Fastest & most frictionless",
+                        true,
+                      ],
+                    ].map(([feature, a, b, opportunity, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{opportunity}</td>
+                        <td className="p-3 text-muted-foreground">{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
+                    all segments.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── DECISIONS ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
