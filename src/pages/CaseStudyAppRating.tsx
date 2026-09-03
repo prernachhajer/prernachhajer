@@ -241,145 +241,9 @@ const CaseStudyAppRating = () => {
               One question per problem, not one big redesign
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a single
-              question that decided what got built. Engagement features sit outside this table; they answer a different
-              problem — reaching a younger audience — not the clutter problem below.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              {
-                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
-                source: "— User research participant, Hyderabad",
-              },
-              {
-                quote: "If Cricinfo sorts out their mobile app UI, Cricbuzz will probably be out of business.",
-                source: "— @TheStatsKid1523, Twitter",
-              },
-              {
-                quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
-                source: "— r/IndiaCricket",
-              },
-            ].map((q) => (
-              <blockquote key={q.source} className={`pl-5 ${surface.accentLine}`}>
-                <p className="text-lg leading-relaxed">{q.quote}</p>
-                <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>{q.source}</cite>
-              </blockquote>
-            ))}
-          </div>
-
-          {/* Competitive */}
-
-          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
-            <div className="grid lg:grid-cols-1 gap-10 items-start">
-              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
-                      <th className="text-left font-medium p-3">Category</th>
-                      <th className="text-left font-medium p-3 w-[28%]">The question we asked</th>
-                      <th className="text-left font-medium p-3 w-[28%]">Decisions that answer it &nbsp;&nbsp;</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      [
-                        "Navigation",
-                        "How might we cut destinations down to only what's relevant right now?",
-                        "Home page decluttering, match page tab structure, bottom nav cleanup",
-
-                        true,
-                      ],
-                      [
-                        "Performance",
-                        "How might we strip weight without stripping value?",
-                        "Font system overhaul, FlatUI/layout architecture, load-on-tap",
-
-                        true,
-                      ],
-                      [
-                        "Interruptions",
-                        "How might we stop the app from getting in its own way?g",
-                        "Autoplay muted by default, ad clutter reduced, notifications made flexible",
-
-                        true,
-                      ],
-                      [
-                        "Interaction",
-                        "How might we fix friction at the exact moment someone hits it?",
-                        "Video playback fixes; commentary/match-status friction (lives in the Match Page case study)",
-
-                        true,
-                      ],
-                    ].map(([feature, a, b, opportunity, accent]) => (
-                      <tr key={feature as string} className="border-t border-border">
-                        <td className="p-3 text-foreground">{feature}</td>
-                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
-                        <td className="p-3 text-muted-foreground">{opportunity}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div>
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
-                    all segments.
-                  </p>
-                </blockquote>
-              </div>
-
-              {/*       <div>
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
-                  </p>
-                </blockquote>
-                <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                  Users had started choosing different products for different needs: Cricbuzz for quick updates and
-                  video, and Cricinfo, often on desktop, for stats and deeper content.
-                  <br />
-                  <br />
-                  Speed and depth had effectively become two separate experiences.
-                </p>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── REFRAME ────────────────────────── */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`max-w-3xl mx-auto  bg-[#15130f] p-8 rounded-xl`}>
-          <SectionLabel>The Reframe</SectionLabel>
-          <motion.h3
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className={`${t.h3}   text-[#f4f1ea]`}
-            style={{ fontFamily: t.displayFont }}
-          >
-            The rating wasn't the design problem. It was <span className="text-primary italic">the signal</span>. My
-            role was to turn that complexity into a product that felt simpler — without making it less powerful.
-          </motion.h3>
-        </div>
-      </section>
-
-      {/* ── DISCOVERY ──────────────────────── */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>HOW WE DECIDED</SectionLabel>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
-              One question per problem, not one big redesign
-            </h2>
-            <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a single
-              question that decided what got built. Engagement features sit outside this table; they answer a different
-              problem — reaching a younger audience — not the clutter problem below.
+              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a
+              single question that decided what got built. Engagement features sit outside this table; they answer a
+              different problem — reaching a younger audience — not the clutter problem below.
             </p>
           </motion.div>
 
@@ -506,6 +370,118 @@ const CaseStudyAppRating = () => {
                   </p>
                 </blockquote>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── REFRAME ────────────────────────── */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`max-w-3xl mx-auto  bg-[#15130f] p-8 rounded-xl`}>
+          <SectionLabel>The Reframe</SectionLabel>
+          <motion.h3
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`${t.h3}   text-[#f4f1ea]`}
+            style={{ fontFamily: t.displayFont }}
+          >
+            The rating wasn't the design problem. It was <span className="text-primary italic">the signal</span>. My
+            role was to turn that complexity into a product that felt simpler — without making it less powerful.
+          </motion.h3>
+        </div>
+      </section>
+
+      {/* ── HOW WE DECIDED ──────────────────────── */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel>HOW WE DECIDED</SectionLabel>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
+              One question per problem, not one big redesign
+            </h2>
+            <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
+              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a
+              single question that decided what got built. Engagement features sit outside this table; they answer a
+              different problem — reaching a younger audience — not the clutter problem below.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
+            <div className="grid lg:grid-cols-1 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3">Category</th>
+                      <th className="text-left font-medium p-3 w-[28%]">The question we asked</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Decisions that answer it &nbsp;&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      [
+                        "Navigation",
+                        "How might we cut destinations down to only what's relevant right now?",
+                        "Home page decluttering, match page tab structure, bottom nav cleanup",
+
+                        true,
+                      ],
+                      [
+                        "Performance",
+                        "How might we strip weight without stripping value?",
+                        "Font system overhaul, FlatUI/layout architecture, load-on-tap",
+
+                        true,
+                      ],
+                      [
+                        "Interruptions",
+                        "How might we stop the app from getting in its own way?g",
+                        "Autoplay muted by default, ad clutter reduced, notifications made flexible",
+
+                        true,
+                      ],
+                      [
+                        "Interaction",
+                        "How might we fix friction at the exact moment someone hits it?",
+                        "Video playback fixes; commentary/match-status friction (lives in the Match Page case study)",
+
+                        true,
+                      ],
+                    ].map(([feature, a, b, opportunity, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{opportunity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
+                    all segments.
+                  </p>
+                </blockquote>
+              </div>
+
+              {/*       <div>
+                <blockquote className={`pl-5 ${surface.accentLine}`}>
+                  <p className="text-lg leading-relaxed">
+                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
+                  </p>
+                </blockquote>
+                <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
+                  Users had started choosing different products for different needs: Cricbuzz for quick updates and
+                  video, and Cricinfo, often on desktop, for stats and deeper content.
+                  <br />
+                  <br />
+                  Speed and depth had effectively become two separate experiences.
+                </p>
+              </div> */}
             </div>
           </div>
         </div>
