@@ -242,7 +242,10 @@ const CaseStudyAppRating = () => {
           </div>
 
           <div className="max-w-5xl mx-auto mt-10 md:mt-12">
-            <SectionImage src={problemImg} alt="Annotated screens showing clutter, cognitive overload and redundant content" />
+            <SectionImage
+              src={problemImg}
+              alt="Annotated screens showing clutter, cognitive overload and redundant content"
+            />
           </div>
         </div>
       </section>
@@ -538,17 +541,16 @@ const CaseStudyAppRating = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>Featured/Match coverage articles cut from 7 to 5.</Bullet>
                   <Bullet>
-                    Removed the “In-Depth Stories” section, where a few of stories repeated existing content and added to the page’s information overload.
+                    Removed the “In-Depth Stories” section, where a few of stories repeated existing content and added
+                    to the page’s information overload.
                   </Bullet>
                   <Bullet>Removed the filler sections for eg -&nbsp;&nbsp;Top Tournaments.</Bullet>
                   <Bullet>Rule: one featured-story module visible at a time.</Bullet>
                 </ul>
-                <TradeOff>
-                  We didn’t rebuild the homepage. We focused on decluttering what was already there.
-                </TradeOff>
               </div>
-              <SectionImage src={homeImg} alt="Home page before and after decluttering" />
+              <TradeOff>We didn’t rebuild the homepage. We focused on decluttering what was already there.</TradeOff>
             </div>
+            <SectionImage src={homeImg} alt="Home page before and after decluttering" />
           </Block>
 
           <Block eyebrow="Decision 2 — Same clutter, one level deeper" title="Match page structure">
@@ -597,10 +599,7 @@ const CaseStudyAppRating = () => {
                 <Bullet>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.</Bullet>
                 <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
               </ul>
-              <SectionImage
-                src={notificationImg}
-                alt="Notification settings and navigation, before and after"
-              />
+              <SectionImage src={notificationImg} alt="Notification settings and navigation, before and after" />
             </div>
           </Block>
 
