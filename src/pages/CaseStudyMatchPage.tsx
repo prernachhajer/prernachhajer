@@ -499,7 +499,7 @@ const CaseStudyMatchPage = () => {
               Each problem led to a question that shaped the solution.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              The two problems from the Insight- relevance and discoverability- broke down into four sharper questions. Each decision in the next section answers one of them directly.
+              The two problems from the Insight- relevance and discoverability- broke down into four sharper questions, each guiding a solution.
             </p>
           </motion.div>
 
