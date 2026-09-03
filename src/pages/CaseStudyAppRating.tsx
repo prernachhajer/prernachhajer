@@ -617,9 +617,8 @@ const CaseStudyAppRating = () => {
               <div>
                 <ul className="flex flex-col gap-4">
                   <Bullet>
-                    Added live polls, fan ratings, in-app games to make engagement easier, alongside deep stats.
+                    Live polls, fan ratings, in-app games and share — sitting alongside deep stats, not replacing them.
                   </Bullet>
-                  <Bullet>Reduced ad clutter and standardized ad sizes for visual cohesion.</Bullet>
                 </ul>
               </div>
               <TradeOff>
