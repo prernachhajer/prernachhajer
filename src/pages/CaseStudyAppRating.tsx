@@ -600,7 +600,6 @@ const CaseStudyAppRating = () => {
               <SectionImage
                 src={notificationImg}
                 alt="Notification settings and navigation, before and after"
-                className="h-72 lg:h-80"
               />
             </div>
           </Block>
