@@ -15,6 +15,16 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import UserFeedbackSummary from "@/components/UserFeedbackSummary";
+import problemImg from "@/assets/app-rating/Problem-2.png";
+import homeImg from "@/assets/app-rating/Home-problem.png";
+import matchImg from "@/assets/app-rating/Match-problem.png";
+import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
+import notificationImg from "@/assets/app-rating/Notification.png";
+import engagementImg from "@/assets/app-rating/Lightweight_engagement.png";
+
+const SectionImage = ({ src, alt }: { src: string; alt: string }) => (
+  <img src={src} alt={alt} loading="lazy" className="w-full h-auto rounded-xl border border-border" />
+);
 
 const fade = animation.fade;
 
