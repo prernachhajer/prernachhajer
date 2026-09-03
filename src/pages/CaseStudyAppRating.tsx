@@ -277,7 +277,7 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          {/* <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
               {
                 quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
@@ -297,7 +297,7 @@ const CaseStudyAppRating = () => {
                 <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>{q.source}</cite>
               </blockquote>
             ))}
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 border border-border rounded-xl mt-14 text-center">
             {[
