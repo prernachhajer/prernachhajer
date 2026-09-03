@@ -524,8 +524,7 @@ const CaseStudyAppRating = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>Featured/Match coverage articles cut from 7 to 5.</Bullet>
                   <Bullet>
-                    Removed a redundant "In-Depth Stories" section, the few&nbsp; stories were repeating and
-                    overwhelming the page with too much data across&nbsp;
+                    Removed the “In-Depth Stories” section, where a few of stories repeated existing content and added to the page’s information overload.
                   </Bullet>
                   <Bullet>Removed the filler sections for eg -&nbsp;&nbsp;Top Tournaments.</Bullet>
                   <Bullet>Rule: one featured-story module visible at a time.</Bullet>
