@@ -454,6 +454,42 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
+      {/* ── Strategy ──────────────────────── */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`${layout.container} mx-auto`}>
+          <SectionLabel>DESIGN STRATEGY</SectionLabel>
+          <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
+            Depth wasn't the problem. The absence of structure was.
+          </h2>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="grid lg:grid-cols-2 gap-10 items-start"
+          >
+            <div>
+              <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
+                Hardcore fans still wanted the depth, so we focused on better navigation and clearer priorities rather
+                than removing features.
+                {"\n\n"}
+                <br />
+                <br />
+                The goal was to make the page easier to use without cutting content.
+              </p>
+            </div>
+            <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
+              <p className={`${t.labelSm} text-muted-foreground`}>THE PRINCIPALS</p>
+              <ul className="flex flex-col gap-4 mt-4">
+                <Bullet>Show previews, not everything at once; tap to go deeper</Bullet>
+                <Bullet>Combine what belongs together</Bullet>
+                <Bullet>Surface what matters instead of burying it</Bullet>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── HOW WE DECIDED ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`max-w-5xl mx-auto`}>
@@ -526,40 +562,6 @@ const CaseStudyMatchPage = () => {
       </section>
 
       {/* ── DECISIONS ──────────────────────── */}
-      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>DESIGN STRATEGY</SectionLabel>
-          <h2 className={t.h2} style={{ fontFamily: t.displayFont }}>
-            Depth wasn't the problem. The absence of structure was.
-          </h2>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="grid lg:grid-cols-2 gap-10 items-start"
-          >
-            <div>
-              <p className={`${t.bodyLg} text-muted-foreground mt-5`}>
-                Hardcore fans still wanted the depth, so we focused on better navigation and clearer priorities rather
-                than removing features.
-                {"\n\n"}
-                <br />
-                <br />
-                The goal was to make the page easier to use without cutting content.
-              </p>
-            </div>
-            <div className={`${radius.cardSm} border border-border ${surface.card} p-6 md:p-7`}>
-              <p className={`${t.labelSm} text-muted-foreground`}>THE PRINCIPALS</p>
-              <ul className="flex flex-col gap-4 mt-4">
-                <Bullet>Show previews, not everything at once; tap to go deeper</Bullet>
-                <Bullet>Combine what belongs together</Bullet>
-                <Bullet>Surface what matters instead of burying it</Bullet>
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-      </section>
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <div className="max-w-5xl pb-0 mb-0">
