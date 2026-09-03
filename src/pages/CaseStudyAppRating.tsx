@@ -489,29 +489,6 @@ const CaseStudyAppRating = () => {
                   </tbody>
                 </table>
               </div>
-              <div>
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
-                    all segments.
-                  </p>
-                </blockquote>
-              </div>
-
-              {/*       <div>
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    "We didn't just have to make Cricinfo cleaner, we had to beat the competitors' perception of speed."
-                  </p>
-                </blockquote>
-                <p className={`${t.bodyLg} text-muted-foreground mt-6`}>
-                  Users had started choosing different products for different needs: Cricbuzz for quick updates and
-                  video, and Cricinfo, often on desktop, for stats and deeper content.
-                  <br />
-                  <br />
-                  Speed and depth had effectively become two separate experiences.
-                </p>
-              </div> */}
             </div>
           </div>
         </div>
