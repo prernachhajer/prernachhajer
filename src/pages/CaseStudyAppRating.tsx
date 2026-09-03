@@ -584,8 +584,8 @@ const CaseStudyAppRating = () => {
                 </ul>
               </div>
               <TradeOff>
-                Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing them
-                into a long-form frame was the actual mismatch.
+                Short-form wasn’t about chasing a trend. Video highlights and reactions were naturally bite-sized, but we
+                were treating them like long-form content.
               </TradeOff>
             </div>
             <div className="mt-10">
