@@ -15,6 +15,16 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import UserFeedbackSummary from "@/components/UserFeedbackSummary";
+import problemImg from "@/assets/app-rating/Problem-2.png";
+import homeImg from "@/assets/app-rating/Home-problem.png";
+import matchImg from "@/assets/app-rating/Match-problem.png";
+import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
+import notificationImg from "@/assets/app-rating/Notification.png";
+import engagementImg from "@/assets/app-rating/Lightweight_engagement.png";
+
+const SectionImage = ({ src, alt }: { src: string; alt: string }) => (
+  <img src={src} alt={alt} loading="lazy" className="w-full h-auto rounded-xl border border-border" />
+);
 
 const fade = animation.fade;
 
@@ -229,6 +239,10 @@ const CaseStudyAppRating = () => {
                 </span>
               ))}
             </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto mt-10 md:mt-12">
+            <SectionImage src={problemImg} alt="Annotated screens showing clutter, cognitive overload and redundant content" />
           </div>
         </div>
       </section>
@@ -533,7 +547,7 @@ const CaseStudyAppRating = () => {
                   We didn’t rebuild the homepage. We focused on decluttering what was already there.
                 </TradeOff>
               </div>
-              <Placeholder label="Screenshot — home page, before / after" className="h-72 lg:h-80" />
+              <SectionImage src={homeImg} alt="Home page before and after decluttering" />
             </div>
           </Block>
 
@@ -552,7 +566,7 @@ const CaseStudyAppRating = () => {
                   losing what made it work.
                 </TradeOff>
               </div>
-              <Placeholder label="Screenshot — match page tab count, before / after" className="h-72 lg:h-80" />
+              <SectionImage src={matchImg} alt="Match page before and after tab reduction" />
             </div>
           </Block>
 
@@ -572,7 +586,7 @@ const CaseStudyAppRating = () => {
                   into a long-form frame was the actual mismatch.
                 </TradeOff>
               </div>
-              <Placeholder label="Screenshot — video playlist & Quick Reads / Stories UI" className="h-72 lg:h-80" />
+              <SectionImage src={shortFormImg} alt="Video playlist, short-form video and Quick Reads screens" />
             </div>
           </Block>
 
@@ -583,9 +597,9 @@ const CaseStudyAppRating = () => {
                 <Bullet>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.</Bullet>
                 <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
               </ul>
-              <Placeholder
-                label="Screenshot — notification settings & bottom nav, before / after"
-                className="h-72 lg:h-80"
+              <SectionImage
+                src={notificationImg}
+                alt="Notification settings and navigation, before and after"
               />
             </div>
           </Block>
@@ -604,7 +618,7 @@ const CaseStudyAppRating = () => {
                   expertise, without asking core fans to give up any depth.
                 </TradeOff>
               </div>
-              <Placeholder label="Screenshot — polls, fan ratings, in-app game UI" className="h-72 lg:h-80" />
+              <SectionImage src={engagementImg} alt="Polls, fan ratings and in-app games" />
             </div>
           </Block>
 
