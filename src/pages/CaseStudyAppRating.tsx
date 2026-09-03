@@ -632,16 +632,27 @@ const CaseStudyAppRating = () => {
               {[
                 {
                   label: "Performance",
-                  body: "Custom downloadable font swapped for native system fonts; nested layouts flattened into a linear rendering structure; live-score load speed fixed to close the gap with faster competitors.",
+                  bullets: [
+                    "Custom downloadable font swapped for native system fonts.",
+                    "Nested layouts flattened into a linear rendering structure.",
+                    "Live-score load speed fixed to close the gap with faster competitors.",
+                  ],
                 },
                 {
                   label: "Outcome",
-                  body: "App size down 30%, tied directly to the font and layout changes — and a lighter, less cluttered feel as a side effect of a performance fix, not a design decision on its own.",
+                  bullets: [
+                    "App size down 30%, tied directly to the font and layout changes.",
+                    "A lighter, less cluttered feel as a side effect of the performance fix, not a design decision on its own.",
+                  ],
                 },
               ].map((item) => (
                 <div key={item.label} className={`${radius.cardSm} ${surface.card} p-6`}>
                   <p className={`${t.labelSm} text-muted-foreground`}>{item.label}</p>
-                  <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {item.bullets.map((b) => (
+                      <Bullet key={b}>{b}</Bullet>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
