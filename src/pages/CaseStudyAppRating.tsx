@@ -394,7 +394,7 @@ const CaseStudyAppRating = () => {
 
       {/* ── HOW WE DECIDED ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`max-w-4xl mx-auto`}>
           <SectionLabel>HOW WE DECIDED</SectionLabel>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
