@@ -437,7 +437,7 @@ const CaseStudyAppRating = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
+          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 ">
             <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
