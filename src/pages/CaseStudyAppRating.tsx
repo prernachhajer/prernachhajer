@@ -550,7 +550,9 @@ const CaseStudyAppRating = () => {
               </div>
               <TradeOff>We didn’t rebuild the homepage. We focused on decluttering what was already there.</TradeOff>
             </div>
-            <SectionImage src={homeImg} alt="Home page before and after decluttering" />
+            <div className="mt-10">
+              <SectionImage src={homeImg} alt="Home page before and after decluttering" />
+            </div>
           </Block>
 
           <Block eyebrow="Decision 2 — Same clutter, one level deeper" title="Match page structure">
@@ -563,11 +565,13 @@ const CaseStudyAppRating = () => {
                     Page Experience case study.
                   </Bullet>
                 </ul>
-                <TradeOff>
-                  This got its own case study rather than a summary here — the material was too deep to compress without
-                  losing what made it work.
-                </TradeOff>
               </div>
+              <TradeOff>
+                This got its own case study rather than a summary here — the material was too deep to compress without
+                losing what made it work.
+              </TradeOff>
+            </div>
+            <div className="mt-10">
               <SectionImage src={matchImg} alt="Match page before and after tab reduction" />
             </div>
           </Block>
@@ -583,11 +587,13 @@ const CaseStudyAppRating = () => {
                     articles at all.
                   </Bullet>
                 </ul>
-                <TradeOff>
-                  Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing them
-                  into a long-form frame was the actual mismatch.
-                </TradeOff>
               </div>
+              <TradeOff>
+                Short-form wasn't a trend chase — highlights and reactions are inherently bite-sized, and forcing them
+                into a long-form frame was the actual mismatch.
+              </TradeOff>
+            </div>
+            <div className="mt-10">
               <SectionImage src={shortFormImg} alt="Video playlist, short-form video and Quick Reads screens" />
             </div>
           </Block>
@@ -599,6 +605,8 @@ const CaseStudyAppRating = () => {
                 <Bullet>Moved away from a one-size-fits-all model toward more flexible, less intrusive alerts.</Bullet>
                 <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
               </ul>
+            </div>
+            <div className="mt-10">
               <SectionImage src={notificationImg} alt="Notification settings and navigation, before and after" />
             </div>
           </Block>
@@ -612,11 +620,13 @@ const CaseStudyAppRating = () => {
                   </Bullet>
                   <Bullet>Reduced ad clutter and standardized ad sizes for visual cohesion.</Bullet>
                 </ul>
-                <TradeOff>
-                  The goal was never to dumb the product down — it was to give casual fans a way in that didn't require
-                  expertise, without asking core fans to give up any depth.
-                </TradeOff>
               </div>
+              <TradeOff>
+                The goal was never to dumb the product down — it was to give casual fans a way in that didn't require
+                expertise, without asking core fans to give up any depth.
+              </TradeOff>
+            </div>
+            <div className="mt-10">
               <SectionImage src={engagementImg} alt="Polls, fan ratings and in-app games" />
             </div>
           </Block>
