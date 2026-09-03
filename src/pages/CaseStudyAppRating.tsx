@@ -621,10 +621,6 @@ const CaseStudyAppRating = () => {
                   </Bullet>
                 </ul>
               </div>
-              <TradeOff>
-                The goal was never to dumb the product down — it was to give casual fans a way in that didn't require
-                expertise, without asking core fans to give up any depth.
-              </TradeOff>
             </div>
             <div className="mt-10">
               <SectionImage src={engagementImg} alt="Polls, fan ratings and in-app games" />
