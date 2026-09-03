@@ -498,10 +498,10 @@ const CaseStudyAppRating = () => {
             className="mb-14 md:mb-16"
           >
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
-              What we changed — and why
+              What we changed and why
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              Each of these is a real trade-off, made on purpose — told as what we gave up and why, not as a features
+              Each of these is a real trade-off, made on purpose, told as what we gave up and why, not as a features
               list.
             </p>
           </motion.div>
