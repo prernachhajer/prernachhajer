@@ -264,7 +264,7 @@ const CaseStudyAppRating = () => {
                 context: "Reddit",
               },
             ].map((q) => (
-              <div key={q.source} className="relative rounded-xl border border-border bg-secondary/40 p-6 pt-8">
+              <div key={q.source} className="relative rounded-xl border border-border  bg-white p-6 pt-8">
                 <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
                   "
                 </span>
