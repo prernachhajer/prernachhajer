@@ -150,8 +150,7 @@ const CaseStudyAppRating = () => {
             custom={4}
             className={`${t.bodyLg} text-muted-foreground max-w-2xl mx-auto mt-12`}
           >
-            Our app rating had dropped to 3.4 — bad enough that it became the team's single priority. This is the story
-            of turning that number around: not one broken feature, but dozens of small failures that added up.
+            Our app rating had dropped to 3.4, and it became the team’s biggest priority to turn it around. As we dug deeper, we realised there wasn’t one major problem causing it. It was a collection of small frustrations across the app that had slowly added up to a poor overall experience.
           </motion.p>
 
           {/*   <motion.div
