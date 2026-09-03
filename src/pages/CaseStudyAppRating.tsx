@@ -429,12 +429,10 @@ const CaseStudyAppRating = () => {
           <SectionLabel>HOW WE DECIDED</SectionLabel>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
-              One question per problem, not one big redesign
+              Each problem led to a question that shaped the solution.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a
-              single question that decided what got built. Engagement features sit outside this table; they answer a
-              different problem — reaching a younger audience — not the clutter problem below.
+              We grouped the eight pain points into four areas, using one key question for each to decide what needed to change.
             </p>
           </motion.div>
 
