@@ -583,8 +583,7 @@ const CaseStudyAppRating = () => {
                   <Bullet>Fixed buggy long-form playback; muted autoplay audio by default.</Bullet>
                   <Bullet>Added a playlist for continuous viewing.</Bullet>
                   <Bullet>
-                    Introduced Quick Reads, short videos and Stories — for the ~80% of users who weren't reading full
-                    articles at all.
+                    Introduced Quick reads and short videos for the ~80% of casual users. 
                   </Bullet>
                 </ul>
               </div>
