@@ -690,9 +690,10 @@ const Index = () => {
           })}
         </div>
       </section>
+
       {/* ─────────────────────────────────────────
-          QUICK STORIES
-      ───────────────────────────────────────── */}
+          Short STORIES
+      ───────────────────────────────────────── 
       <section id="quick-stories" className="border-t border-border">
         <div className={`${wrapCls} pt-[clamp(80px,10vw,140px)] pb-[clamp(80px,10vw,140px)]`}>
           <motion.div
@@ -764,7 +765,8 @@ const Index = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
+
       {/* ─────────────────────────────────────────
           ABOUT
       ───────────────────────────────────────── */}
