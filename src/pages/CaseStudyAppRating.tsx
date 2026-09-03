@@ -268,22 +268,6 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 border border-border rounded-xl mt-14 text-center">
-            {[
-              { n: "116", l: "Performance / load mentions" },
-              { n: "34", l: "Cognitive load mentions" },
-              { n: "20", l: "UI mentions" },
-              { n: "6", l: "Clutter mentions" },
-            ].map((item, i) => (
-              <div key={item.l} className={`px-5 py-7 ${i > 0 ? "border-l border-border" : ""}`}>
-                <p className="text-3xl md:text-4xl leading-none text-primary" style={{ fontFamily: t.displayFont }}>
-                  {item.n}
-                </p>
-                <p className={`${t.labelSm} text-muted-foreground mt-3`}>{item.l}</p>
-              </div>
-            ))}
-          </div>
-
           {/* Competitive */}
 
           <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 ">
@@ -292,62 +276,39 @@ const CaseStudyAppRating = () => {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
-                      <th className="text-left font-medium p-3">USER NEED</th>
-                      <th className="text-left font-medium p-3 w-[28%]">CRICINFO</th>
-                      <th className="text-left font-medium p-3 w-[28%]">CRICBUZZ&nbsp;&nbsp;</th>
-                      <th className="text-left font-medium p-3 w-[28%]">GOOGLE</th>
+                      <th className="text-left font-medium p-3">Category</th>
+                      <th className="text-left font-medium p-3 w-[28%]">The question we asked</th>
+                      <th className="text-left font-medium p-3 w-[28%]">Decisions that answer it &nbsp;&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
                     {[
                       [
-                        "Find & navigate",
-                        "Rich, but cluttered and hard to navigate",
-                        "Simpler, easier to scan",
-                        "Frictionless, minimal",
-                        true,
-                      ],
-                      [
-                        "Check scores quickly",
-                        "Detailed, but feels slow",
-                        "Fast & lightweight",
-                        "Fastest / lowest friction",
-                        true,
-                      ],
-                      [
-                        "Follow a match",
-                        "Deep commentary & data, but interaction can be frustrating",
-                        "Simple, quick live updates",
-                        "Clear, glanceable score",
-                        true,
-                      ],
-                      [
-                        "Explore cricket",
-                        "Strongest depth — journalism, analysis, Statsguru",
-                        "More lightweight content experience",
-                        "Limited depth",
-                        true,
-                      ],
-                      [
-                        "Video & updates ",
-                        "Rich library, but autoplay / playback issues",
-                        "Better perceived video experience",
-                        "Minimal interruptions",
-                        true,
-                      ],
-                      [
-                        "Ads & interruptions",
-                        "High friction — ads, promotions, autoplay",
-                        "Less intrusive",
-                        "Minimal",
-                        true,
-                      ],
+                        "Navigation",
+                        "How might we cut destinations down to only what's relevant right now?",
+                        "Home page decluttering, match page tab structure, bottom nav cleanup",
 
+                        true,
+                      ],
                       [
-                        "Overall experience\n\n",
-                        "Deepest, but overwhelming",
-                        "Fast & simple",
-                        "Fastest & most frictionless",
+                        "Performance",
+                        "How might we strip weight without stripping value?",
+                        "Font system overhaul, FlatUI/layout architecture, load-on-tap",
+
+                        true,
+                      ],
+                      [
+                        "Interruptions",
+                        "How might we stop the app from getting in its own way?g",
+                        "Autoplay muted by default, ad clutter reduced, notifications made flexible",
+
+                        true,
+                      ],
+                      [
+                        "Interaction",
+                        "How might we fix friction at the exact moment someone hits it?",
+                        "Video playback fixes; commentary/match-status friction (lives in the Match Page case study)",
+
                         true,
                       ],
                     ].map(([feature, a, b, opportunity, accent]) => (
@@ -355,7 +316,6 @@ const CaseStudyAppRating = () => {
                         <td className="p-3 text-foreground">{feature}</td>
                         <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
                         <td className="p-3 text-muted-foreground">{opportunity}</td>
-                        <td className="p-3 text-muted-foreground">{b}</td>
                       </tr>
                     ))}
                   </tbody>
