@@ -454,6 +454,77 @@ const CaseStudyMatchPage = () => {
         </div>
       </section>
 
+      {/* ── HOW WE DECIDED ──────────────────────── */}
+      <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
+        <div className={`max-w-5xl mx-auto`}>
+          <SectionLabel>HOW WE DECIDED</SectionLabel>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
+            <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
+              Each problem led to a question that shaped the solution.
+            </h2>
+            <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
+              We grouped the eight pain points into four areas, using one key question for each to decide what needed to
+              change.
+            </p>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>HOW MIGHT WE</p>
+            <div className="grid lg:grid-cols-1 gap-10 items-start">
+              <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
+                      <th className="text-left font-medium p-3 ">Category</th>
+                      <th className="text-left font-medium p-3 w-[42%]">The question we asked</th>
+                      <th className="text-left font-medium p-3 w-[42%]">Decisions that answer it &nbsp;&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      [
+                        "Navigation",
+                        "How might we cut destinations down to only what's relevant right now?",
+                        "Home page decluttering, match page tab structure, bottom nav cleanup",
+
+                        true,
+                      ],
+                      [
+                        "Performance",
+                        "How might we strip weight without stripping value?",
+                        "Font system overhaul, FlatUI/layout architecture, load-on-tap",
+
+                        true,
+                      ],
+                      [
+                        "Interruptions",
+                        "How might we stop the app from getting in its own way?g",
+                        "Autoplay muted by default, ad clutter reduced, notifications made flexible",
+
+                        true,
+                      ],
+                      [
+                        "Interaction",
+                        "How might we fix friction at the exact moment someone hits it?",
+                        "Video playback fixes; commentary/match-status friction (lives in the Match Page case study)",
+
+                        true,
+                      ],
+                    ].map(([feature, a, b, accent]) => (
+                      <tr key={feature as string} className="border-t border-border">
+                        <td className="p-3 text-foreground">{feature}</td>
+                        <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
+                        <td className="p-3 text-muted-foreground">{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── DECISIONS ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
