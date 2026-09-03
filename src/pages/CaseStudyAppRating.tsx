@@ -518,12 +518,11 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <Bullet>Featured articles cut from 7 to 5.</Bullet>
+                  <Bullet>Featured/Match coverage articles cut from 7 to 5.</Bullet>
                   <Bullet>
-                    Removed a redundant "In-Depth Stories" section — the same ~40 stories were repeating across three
-                    modules for one match.
+                    Removed a redundant "In-Depth Stories" section, the few&nbsp; stories were repeating and overwhelming the page with too much data across&nbsp;
                   </Bullet>
-                  <Bullet>Removed the filler "Top Players / Top Tournaments" section.</Bullet>
+                  <Bullet>Removed the filler sections for eg -&nbsp;&nbsp;Top Tournaments.</Bullet>
                   <Bullet>Rule: one featured-story module visible at a time.</Bullet>
                   <Bullet>Added a lightweight match-prediction game for engagement.</Bullet>
                 </ul>
