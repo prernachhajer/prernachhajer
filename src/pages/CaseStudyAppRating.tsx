@@ -199,7 +199,7 @@ const CaseStudyAppRating = () => {
                 </Bullet>
                 <Bullet>
                   <strong className="text-foreground font-semibold">Strategy:&nbsp;</strong>
-                  Start with real user signals, then use design to decide what to fix, remove or rebuild.
+                  Start with real user signals, then use research insights to decide what to fix, remove or rebuild.
                 </Bullet>
               </ul>
             </div>
