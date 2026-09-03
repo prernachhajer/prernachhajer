@@ -559,8 +559,14 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <Bullet>8–15 tabs had grown without a clear structure. We consolidated them using usage data and used accordions to surface what’s relevant now.</Bullet>
-                  <Bullet>Important content was getting buried. Cross-tab previews and contextual media made it easier to discover what users were missing.</Bullet>
+                  <Bullet>
+                    8–15 tabs had grown without a clear structure. We consolidated them using usage data and used
+                    accordions to surface what’s relevant now.
+                  </Bullet>
+                  <Bullet>
+                    Important content was getting buried. Cross-tab previews and contextual media made it easier to
+                    discover what users were missing.
+                  </Bullet>
                 </ul>
               </div>
               <TradeOff>
@@ -578,14 +584,12 @@ const CaseStudyAppRating = () => {
                 <ul className="flex flex-col gap-4">
                   <Bullet>Fixed buggy long-form playback; muted autoplay audio by default.</Bullet>
                   <Bullet>Added a playlist for continuous viewing.</Bullet>
-                  <Bullet>
-                    Introduced Quick reads and short videos for the ~80% of casual users. 
-                  </Bullet>
+                  <Bullet>Introduced Quick reads and short videos for the ~80% of casual users. </Bullet>
                 </ul>
               </div>
               <TradeOff>
-                Short-form wasn’t about chasing a trend. Video highlights and reactions were naturally bite-sized, but we
-                were treating them like long-form content.
+                Short-form wasn’t about chasing a trend. Video highlights and reactions were naturally bite-sized, but
+                we were treating them like long-form content.
               </TradeOff>
             </div>
             <div className="mt-10">
@@ -593,12 +597,14 @@ const CaseStudyAppRating = () => {
             </div>
           </Block>
 
-          <Block eyebrow="Decision 4 — Reliability first, then flexibility" title="Notifications & navigation">
+          <Block eyebrow="Decision 4 — Reliability first, then flexibility" title="Notifications">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <ul className="flex flex-col gap-4">
                 <Bullet>Stabilized notification reliability.</Bullet>
-                <Bullet>Gave users control over what they want to be notified about, with the flexibility to turn individual alerts on or off.</Bullet>
-                <Bullet>Simplified bottom navigation to cut down on competing entry points.</Bullet>
+                <Bullet>
+                  Gave users control over what they want to be notified about, with the flexibility to turn individual
+                  alerts on or off.
+                </Bullet>
               </ul>
             </div>
             <div className="mt-10">
