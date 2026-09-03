@@ -559,11 +559,8 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <Bullet>Match pages had grown to 8–15 tabs with no governing structure.</Bullet>
-                  <Bullet>
-                    The full IA breakdown — match-state relevance, content snacking, navigation — lives in the Match
-                    Page Experience case study.
-                  </Bullet>
+                  <Bullet>Match pages had grown to 8–15 tabs with no governing structure, tabs consolidated using usage data, accordions revealing only what's currently relevant.</Bullet>
+                  <Bullet>Closed the discoverability gap with cross-tab content previews and contextual media, so valuable content stopped going unnoticed.</Bullet>
                 </ul>
               </div>
               <TradeOff>
