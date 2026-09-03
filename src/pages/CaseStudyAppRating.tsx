@@ -23,7 +23,7 @@ import notificationImg from "@/assets/app-rating/Notification.png";
 import engagementImg from "@/assets/app-rating/Lightweight_engagement.png";
 
 const SectionImage = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} loading="lazy" className="w-full h-auto rounded-xl border border-border" />
+  <img src={src} alt={alt} loading="lazy" className="w-full h-auto" />
 );
 
 const fade = animation.fade;
