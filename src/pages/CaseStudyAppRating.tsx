@@ -414,8 +414,8 @@ const CaseStudyAppRating = () => {
                   <thead>
                     <tr className={`bg-secondary ${t.labelSm} text-muted-foreground`}>
                       <th className="text-left font-medium p-3 ">Category</th>
-                      <th className="text-left font-medium p-3 w-[40%]">The question we asked</th>
-                      <th className="text-left font-medium p-3 w-[40%]">Decisions that answer it &nbsp;&nbsp;</th>
+                      <th className="text-left font-medium p-3 w-[42%]">The question we asked</th>
+                      <th className="text-left font-medium p-3 w-[42%]">Decisions that answer it &nbsp;&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
