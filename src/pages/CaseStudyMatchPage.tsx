@@ -303,28 +303,36 @@ const CaseStudyMatchPage = () => {
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
               Users Reviews
             </h3>
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
               {[
                 {
                   quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
-                  source: "— TWITTER",
+                  source: "Twitter",
                 },
                 {
                   quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                  source: "— User audit #4",
+                  source: "User audit #4",
                 },
                 {
                   quote:
                     "Cricinfo used to be simple. Now I have to scroll through 12 options just to find who is bowling.",
-                  source: "— App Store review",
+                  source: "App Store review",
                 },
               ].map((q) => (
-                <blockquote key={q.source} className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">{q.quote}</p>
-                  <cite className={`${t.labelSm} text-muted-foreground mt-3 block not-italic`}>{q.source}</cite>
-                </blockquote>
+                <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
+                  <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
+                    "
+                  </span>
+                  <p className="text-lg leading-relaxed text-foreground relative z-10">{q.quote}</p>
+                  <cite
+                    className={`${t.labelSm} text-muted-foreground mt-4 pt-3 border-t border-border block not-italic`}
+                  >
+                    {q.source}
+                  </cite>
+                </div>
               ))}
             </div>
+
             <p className={`${t.bodyLg} text-muted-foreground mt-8 max-w-3xl`}>
               A Test match scorecard could mean four full innings tables stacked on one page. The clutter wasn’t just a
               perception problem; it was built into the structure.
