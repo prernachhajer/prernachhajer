@@ -559,8 +559,8 @@ const CaseStudyAppRating = () => {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <Bullet>Match pages had grown to 8–15 tabs with no governing structure, tabs consolidated using usage data, accordions revealing only what's currently relevant.</Bullet>
-                  <Bullet>Closed the discoverability gap with cross-tab content previews and contextual media, so valuable content stopped going unnoticed.</Bullet>
+                  <Bullet>8–15 tabs had grown without a clear structure. We consolidated them using usage data and used accordions to surface what’s relevant now.</Bullet>
+                  <Bullet>Important content was getting buried. Cross-tab previews and contextual media made it easier to discover what users were missing.</Bullet>
                 </ul>
               </div>
               <TradeOff>
