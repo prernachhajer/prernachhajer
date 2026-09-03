@@ -448,11 +448,11 @@ const CaseStudyAppRating = () => {
 
                         true,
                       ],
-                    ].map(([feature, a, b, opportunity, accent]) => (
+                    ].map(([feature, a, b, c, accent]) => (
                       <tr key={feature as string} className="border-t border-border">
                         <td className="p-3 text-foreground">{feature}</td>
                         <td className={`p-3 ${accent ? "text-primary" : "text-muted-foreground"}`}>{a}</td>
-                        <td className="p-3 text-muted-foreground">{opportunity}</td>
+                        <td className="p-3 text-muted-foreground">{c}</td>
                       </tr>
                     ))}
                   </tbody>
