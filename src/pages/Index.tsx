@@ -136,6 +136,18 @@ const caseStudies: CaseStudy[] = [
   {
     num: "02 / 05",
     company: "ESPN cricinfo",
+    title: "3.4 → 4.5: The App Rating Turnaround",
+    titleEm: "",
+    thumbType: "photo" as const,
+    thumbImage: thumbAppRating,
+    statNum: "10M+",
+    statLabel: "users",
+    year: "2025",
+    link: "/case-study/app-rating",
+  },
+  {
+    num: "03 / 05",
+    company: "ESPN cricinfo",
     title: "30% Fewer Drop-Offs: Redesigning Cricket's Homepage",
     titleEm: "",
     thumbType: "photo" as const,
@@ -147,7 +159,7 @@ const caseStudies: CaseStudy[] = [
   },
 
   {
-    num: "03 / 05",
+    num: "04 / 05",
     company: "ESPN cricinfo",
     title: "50% Faster Handoffs: Building a Design System at Scale",
     titleEm: "",
@@ -160,7 +172,7 @@ const caseStudies: CaseStudy[] = [
   },
 
   {
-    num: "04 / 05",
+    num: "05 / 05",
     company: "ESPN cricinfo",
     title: "50% More Time Spent: Quick Reads",
     titleEm: "",
@@ -170,19 +182,6 @@ const caseStudies: CaseStudy[] = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
-  },
-
-  {
-    num: "05 / 05",
-    company: "ESPN cricinfo",
-    title: "3.4 → 4.5: The App Rating Turnaround",
-    titleEm: "",
-    thumbType: "photo" as const,
-    thumbImage: thumbAppRating,
-    statNum: "10M+",
-    statLabel: "users",
-    year: "2025",
-    link: "/case-study/app-rating",
   },
 ];
 
