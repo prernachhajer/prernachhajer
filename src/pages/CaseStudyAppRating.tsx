@@ -235,15 +235,14 @@ const CaseStudyAppRating = () => {
       {/* ── DISCOVERY ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
-          <SectionLabel>HOW WE DECIDED</SectionLabel>
+          <SectionLabel>DISCOVERY</SectionLabel>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
-              One question per problem, not one big redesign
+              What users were telling us
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
-              The eight pain points didn't need eight different fixes — they collapsed into four categories, each with a
-              single question that decided what got built. Engagement features sit outside this table; they answer a
-              different problem — reaching a younger audience — not the clutter problem below.
+              We looked across Play Store, App Store and Twitter, collected first-party feedback through a dedicated
+              in-app survey, and benchmarked the experience against Cricbuzz and Google Cricket Scores.
             </p>
           </motion.div>
 
