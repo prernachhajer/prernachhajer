@@ -350,6 +350,19 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
+          <div className="mt-14 md:mt-20">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
+            <PersonaCard
+              name="Arjun Mehta"
+              role="Software Engineer"
+              meta="27 · Bengaluru, India"
+              behaviour="Repeat visits, live games"
+              pain="Too much, too fast"
+              opportunity="Surface what matters"
+              imageUrl={userPersonaAsset.url}
+            />
+          </div>
+
           {/* <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
               {
