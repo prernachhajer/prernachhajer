@@ -22,6 +22,7 @@ import scorecardMediaAsset from "@/assets/Scorecard-media.png";
 import commsMediaAsset from "@/assets/Comms-media.png";
 import liveContentAsset from "@/assets/Live-content.png";
 import summaryContentAsset from "@/assets/Summary-content.png";
+import userPersonaAsset from "@/assets/user-persona.png.asset.json";
 
 const fade = animation.fade;
 
