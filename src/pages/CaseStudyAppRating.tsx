@@ -353,7 +353,7 @@ const CaseStudyAppRating = () => {
           <div className="mt-14 md:mt-20">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-2 gap-6 mt-14 md:mt-20">
+          <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6 mt-14 md:mt-20">
             <PersonaCard
               name="Arjun Mehta"
               role="Software Engineer"
