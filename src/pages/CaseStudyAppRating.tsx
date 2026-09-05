@@ -21,6 +21,7 @@ import matchImg from "@/assets/app-rating/Match-problem.png";
 import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
 import notificationImg from "@/assets/app-rating/Notification.png";
 import engagementImg from "@/assets/app-rating/Lightweight_engagement.png";
+import userPersonaAsset from "@/assets/user-persona.png.asset.json";
 
 const SectionImage = ({ src, alt }: { src: string; alt: string }) => (
   <img src={src} alt={alt} loading="lazy" className="w-full h-auto" />
@@ -49,6 +50,60 @@ const TradeOff = ({ children }: { children: React.ReactNode }) => (
     <p className={`${t.labelSm} text-primary mb-2.5`}>Trade-off, named honestly</p>
     <p className="text-sm leading-relaxed text-foreground">{children}</p>
   </div>
+);
+
+const PersonaCard = ({
+  name,
+  role,
+  meta,
+  behaviour,
+  pain,
+  opportunity,
+  imageUrl,
+}: {
+  name: string;
+  role: string;
+  meta: string;
+  behaviour: string;
+  pain: string;
+  opportunity: string;
+  imageUrl: string;
+}) => (
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fade}
+    className={`${radius.cardSm} border border-border bg-card p-6 md:p-8 max-w-md`}
+  >
+    <div className="flex items-center gap-5 mb-6">
+      <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 border border-border/50">
+        <img src={imageUrl} alt={name} className="h-full w-full object-cover" />
+      </div>
+      <div>
+        <h3 className="text-2xl font-normal tracking-[0.01em]" style={{ fontFamily: t.displayFont }}>
+          {name}
+        </h3>
+        <p className={`${t.labelSm} text-muted-foreground mt-1`}>
+          {role} · {meta}
+        </p>
+      </div>
+    </div>
+    <div className="flex flex-col gap-3">
+      <div className="flex items-baseline gap-4">
+        <span className={`${t.labelSm} text-muted-foreground w-28 shrink-0`}>Behaviour</span>
+        <span className="text-foreground leading-relaxed">{behaviour}</span>
+      </div>
+      <div className="flex items-baseline gap-4 bg-primary/10 rounded-lg px-4 py-3 -mx-4">
+        <span className={`${t.labelSm} text-primary w-28 shrink-0`}>Pain</span>
+        <span className="text-primary font-medium leading-relaxed">{pain}</span>
+      </div>
+      <div className="flex items-baseline gap-4">
+        <span className={`${t.labelSm} text-muted-foreground w-28 shrink-0`}>Opportunity</span>
+        <span className="text-foreground leading-relaxed">{opportunity}</span>
+      </div>
+    </div>
+  </motion.div>
 );
 
 const Block = ({
@@ -293,6 +348,19 @@ const CaseStudyAppRating = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-14 md:mt-20">
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
+            <PersonaCard
+              name="Arjun Mehta"
+              role="Software Engineer"
+              meta="27 · Bengaluru, India"
+              behaviour="Repeat visits, live games"
+              pain="Too much, too fast"
+              opportunity="Surface what matters"
+              imageUrl={userPersonaAsset.url}
+            />
           </div>
 
           {/* <div className="grid md:grid-cols-3 gap-8 mt-12">
