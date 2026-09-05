@@ -526,7 +526,7 @@ const Index = () => {
                     onClick={() => navigate("/resume")}
                     className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
                   >
-                    View resume
+                    Download resume
                   </Button>
                 </div>
               </motion.div>
