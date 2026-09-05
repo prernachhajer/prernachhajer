@@ -523,10 +523,12 @@ const Index = () => {
 
                   <Button
                     variant="outline"
-                    onClick={() => navigate("/resume")}
+                    asChild
                     className="h-auto text-muted-foreground px-8 py-3.5 rounded-full text-sm hover:border-foreground hover:text-foreground hover:bg-background hover:-translate-y-0.5 transition-all"
                   >
-                    Download resume
+                    <a href="/prerna_chhajer_resume.pdf" download>
+                      Download resume
+                    </a>
                   </Button>
                 </div>
               </motion.div>
