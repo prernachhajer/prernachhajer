@@ -355,42 +355,33 @@ const CaseStudyAppRating = () => {
           <div className="mt-14 md:mt-20">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
           </div>
-          <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6 mt-14 md:mt-20">
+          <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-4 mt-14 md:mt-20">
             <PersonaCard
-              name="Arjun Mehta"
-              role="Software Engineer"
-              meta="27 · Bengaluru, India"
-              behaviour="Repeat visits, live games"
-              pain="Too much, too fast"
-              opportunity="Surface what matters"
+              name="Farukh Ibrahim"
+              role="Live Match Follower"
+              meta="29 · Mumbai, India"
+              behaviour="Visits repeatedly during live games"
+              pain="Too much information to process quickly"
+              opportunity="Surface what matters most"
+              imageUrl={rohanPersonaAsset.url}
+            />
+            <PersonaCard
+              name="Mittul Desai"
+              role="Content Consumer"
+              meta="32 · Delhi, India"
+              behaviour="Reads previews and analysis"
+              pain="Relevant content is hard to discover"
+              opportunity="Improve discovery"
               imageUrl={userPersonaAsset.url}
             />
             <PersonaCard
-              name="Arjun Mehta"
-              role="Software Engineer"
-              meta="27 · Bengaluru, India"
-              behaviour="Repeat visits, live games"
-              pain="Too much, too fast"
-              opportunity="Surface what matters"
-              imageUrl={userPersonaAsset.url}
-            />
-            <PersonaCard
-              name="Arjun Mehta"
-              role="Software Engineer"
-              meta="27 · Bengaluru, India"
-              behaviour="Repeat visits, live games"
-              pain="Too much, too fast"
-              opportunity="Surface what matters"
-              imageUrl={userPersonaAsset.url}
-            />
-            <PersonaCard
-              name="Arjun Mehta"
-              role="Software Engineer"
-              meta="27 · Bengaluru, India"
-              behaviour="Repeat visits, live games"
-              pain="Too much, too fast"
-              opportunity="Surface what matters"
-              imageUrl={userPersonaAsset.url}
+              name="Sana Khan"
+              role="Casual Fan"
+              meta="24 · Bengaluru, India"
+              behaviour="Visits during major events"
+              pain="Experience can feel overwhelming"
+              opportunity="Simplify and habit forming"
+              imageUrl={karanPersonaAsset.url}
             />
           </div>
 
