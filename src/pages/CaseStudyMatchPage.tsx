@@ -365,7 +365,7 @@ const CaseStudyMatchPage = () => {
                 {
                   quote:
                     "“On Cricinfo, its like huge information is dumped...when we require only few things.”",
-                  source: "ARAVIND A, Play Store",
+                  source: "ARAVIND, PLAY STORE",
                 },
                 {
                   quote:
