@@ -614,9 +614,8 @@ const CaseStudyAppRating = () => {
                   </p>
                 </blockquote>
               </div>
-            </div>
-          </div>
         </div>
+
       </section>
 
       {/* ── REFRAME ────────────────────────── */}
