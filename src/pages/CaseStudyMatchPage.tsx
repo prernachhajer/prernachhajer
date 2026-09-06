@@ -355,7 +355,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Evidence */}
-          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
               Users Reviews
@@ -363,18 +363,15 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               {[
                 {
-                  quote:
-                    "“On Cricinfo, its like huge information is dumped...when we require only few things.”",
+                  quote: "“On Cricinfo, its like huge information is dumped...when we require only few things.”",
                   source: "ARAVIND, PLAY STORE",
                 },
                 {
-                  quote:
-                    "CricInfo has a sleek look but tries to show too much at a time.",
+                  quote: "CricInfo has a sleek look but tries to show too much at a time.",
                   source: "Aditya (@s_adityashukla), Twitter",
                 },
                 {
-                  quote:
-                    "Cricinfo is clunky, with a poor UI, whereas Cricbuzz is pretty fast",
+                  quote: "Cricinfo is clunky, with a poor UI, whereas Cricbuzz is pretty fast",
                   source: "Reddit",
                 },
               ].map((q) => (
