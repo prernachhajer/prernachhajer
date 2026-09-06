@@ -327,15 +327,21 @@ const CaseStudyAppRating = () => {
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {[
               {
-                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
-                source: "User research participant",
-                context: "Hyderabad",
+                quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
+                source: "r/IndiaCricket",
+                context: "Reddit",
               },
               {
                 quote: "If Cricinfo sorts out their mobile app UI, Cricbuzz will probably be out of business.",
                 source: "@TheStatsKid1523",
                 context: "Twitter",
               },
+              {
+                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
+                source: "User research participant",
+                context: "Hyderabad",
+              },
+
               {
                 quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
                 source: "r/IndiaCricket",
