@@ -82,7 +82,7 @@ const PersonaCard = ({
     variants={fade}
     className={`${radius.cardSm} border border-border bg-card p-4 md:p-4 max-w-md`}
   >
-    <div className="flex items-center gap-3 mb-6">
+    <div className="flex items-center gap-5 mb-6">
       <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 border border-border/50">
         <img src={imageUrl} alt={name} className="h-full w-full object-cover" />
       </div>
@@ -455,7 +455,7 @@ const CaseStudyMatchPage = () => {
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container}`}>
           <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-          <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
+          <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-4">
             <PersonaCard
               name="Farukh Ibrahim"
               role="Live Match Follower"
