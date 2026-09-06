@@ -427,12 +427,10 @@ const CaseStudyAppRating = () => {
               </div>
             ))}
           </div>
- <p className={`${t.labelSm} text-muted-foreground mb-6`}>
-              LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE
-            </p>
+
           {/* Competitive */}
 
-        {/*   <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
+          {/*   <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 ">
            
              <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
@@ -509,113 +507,118 @@ const CaseStudyAppRating = () => {
                 </table>
               </div> */}
 
-              {/* Scannable comparison grid */}
-              <div className="max-w-5xl mx-auto mt-10 md:mt-10 bg-white p-4 border rounded-xl">
-                <div className="overflow-x-auto">
-                  <h2 className="sr-only">
-                    Scannable comparison grid of Cricinfo, Cricbuzz, and Google across seven cricket-app user needs,
-                    color-coded by strength or weakness
-                  </h2>
-                  <div className="grid gap-4 min-w-[640px]" style={{ gridTemplateColumns: "150px repeat(3, 1fr)" }}>
-                    <div />
-                    <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricinfo</div>
-                    <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricbuzz</div>
-                    <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Google</div>
+          {/* Scannable comparison grid */}
+          <div className="max-w-5xl">
+            {" "}
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>
+              LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto mt-10 md:mt-10 bg-white p-4 border rounded-xl">
+            <div className="overflow-x-auto">
+              <h2 className="sr-only">
+                Scannable comparison grid of Cricinfo, Cricbuzz, and Google across seven cricket-app user needs,
+                color-coded by strength or weakness
+              </h2>
+              <div className="grid gap-4 min-w-[640px]" style={{ gridTemplateColumns: "150px repeat(3, 1fr)" }}>
+                <div />
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricinfo</div>
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricbuzz</div>
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Google</div>
 
-                    {[
-                      {
-                        need: "Find & navigate",
-                        cells: [
-                          ["Cluttered", "bad"],
-                          ["Frictionless", "good"],
-                          ["Easy to scan", "good"],
-                        ],
-                      },
-                      {
-                        need: "Check scores",
-                        cells: [
-                          ["Feels slow", "mid"],
-                          ["Fastest", "good"],
-                          ["Lightweight", "good"],
-                        ],
-                      },
-                      {
-                        need: "Follow a match",
-                        cells: [
-                          ["Frustrating", "mid"],
-                          ["Glanceable", "good"],
-                          ["Quick updates", "good"],
-                        ],
-                      },
-                      {
-                        need: "Explore cricket",
-                        cells: [
-                          ["Strongest depth", "good"],
-                          ["Limited depth", "bad"],
-                          ["Lightweight only", "mid"],
-                        ],
-                      },
-                      {
-                        need: "Video & updates",
-                        cells: [
-                          ["Autoplay issues", "bad"],
-                          ["Minimal interrupt", "good"],
-                          ["Better perceived", "good"],
-                        ],
-                      },
-                      {
-                        need: "Ads & interruptions",
-                        cells: [
-                          ["High friction", "bad"],
-                          ["Minimal", "good"],
-                          ["Less intrusive", "good"],
-                        ],
-                      },
-                      {
-                        need: "Overall",
-                        cells: [
-                          ["Deep, overwhelming", "mid"],
-                          ["Frictionless", "good"],
-                          ["Fast & simple", "good"],
-                        ],
-                      },
-                    ].map((row) => {
-                      const toneStyles = {
-                        good: "bg-emerald-50 text-emerald-800",
-                        mid: "bg-amber-50 text-amber-800",
-                        bad: "bg-rose-50 text-rose-800",
-                      };
-                      return (
-                        <Fragment key={row.need}>
-                          <div className="text-[13px] text-muted-foreground flex items-center">{row.need}</div>
-                          {row.cells.map(([text, tone]) => {
-                            const Icon = { good: Check, mid: AlertTriangle, bad: X }[tone as "good" | "mid" | "bad"];
-                            return (
-                              <div
-                                key={text}
-                                className={`flex items-center gap-1.5 text-[13px] font-medium px-2.5 py-2 rounded-md ${toneStyles[tone as "good" | "mid" | "bad"]}`}
-                              >
-                                <Icon className="h-4 w-4 shrink-0" /> {text}
-                              </div>
-                            );
-                          })}
-                        </Fragment>
-                      );
-                    })}
-                  </div>
-                </div>
+                {[
+                  {
+                    need: "Find & navigate",
+                    cells: [
+                      ["Cluttered", "bad"],
+                      ["Frictionless", "good"],
+                      ["Easy to scan", "good"],
+                    ],
+                  },
+                  {
+                    need: "Check scores",
+                    cells: [
+                      ["Feels slow", "mid"],
+                      ["Fastest", "good"],
+                      ["Lightweight", "good"],
+                    ],
+                  },
+                  {
+                    need: "Follow a match",
+                    cells: [
+                      ["Frustrating", "mid"],
+                      ["Glanceable", "good"],
+                      ["Quick updates", "good"],
+                    ],
+                  },
+                  {
+                    need: "Explore cricket",
+                    cells: [
+                      ["Strongest depth", "good"],
+                      ["Limited depth", "bad"],
+                      ["Lightweight only", "mid"],
+                    ],
+                  },
+                  {
+                    need: "Video & updates",
+                    cells: [
+                      ["Autoplay issues", "bad"],
+                      ["Minimal interrupt", "good"],
+                      ["Better perceived", "good"],
+                    ],
+                  },
+                  {
+                    need: "Ads & interruptions",
+                    cells: [
+                      ["High friction", "bad"],
+                      ["Minimal", "good"],
+                      ["Less intrusive", "good"],
+                    ],
+                  },
+                  {
+                    need: "Overall",
+                    cells: [
+                      ["Deep, overwhelming", "mid"],
+                      ["Frictionless", "good"],
+                      ["Fast & simple", "good"],
+                    ],
+                  },
+                ].map((row) => {
+                  const toneStyles = {
+                    good: "bg-emerald-50 text-emerald-800",
+                    mid: "bg-amber-50 text-amber-800",
+                    bad: "bg-rose-50 text-rose-800",
+                  };
+                  return (
+                    <Fragment key={row.need}>
+                      <div className="text-[13px] text-muted-foreground flex items-center">{row.need}</div>
+                      {row.cells.map(([text, tone]) => {
+                        const Icon = { good: Check, mid: AlertTriangle, bad: X }[tone as "good" | "mid" | "bad"];
+                        return (
+                          <div
+                            key={text}
+                            className={`flex items-center gap-1.5 text-[13px] font-medium px-2.5 py-2 rounded-md ${toneStyles[tone as "good" | "mid" | "bad"]}`}
+                          >
+                            <Icon className="h-4 w-4 shrink-0" /> {text}
+                          </div>
+                        );
+                      })}
+                    </Fragment>
+                  );
+                })}
               </div>
+            </div>
+          </div>
 
-              <div>
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
-                    all segments.
-                  </p>
-                </blockquote>
-              </div>
+          <div>
+            <blockquote className={`pl-5 ${surface.accentLine}`}>
+              <p className="text-lg leading-relaxed">
+                <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across all
+                segments.
+              </p>
+            </blockquote>
+          </div>
         </div>
-
       </section>
 
       {/* ── REFRAME ────────────────────────── */}
