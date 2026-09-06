@@ -405,7 +405,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Competitive */}
-          <div className={`${layout.container} max-w-3xl mx-automt-16 md:mt-20 pt-12 border-t border-border`}>
+          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
@@ -452,7 +452,7 @@ const CaseStudyMatchPage = () => {
             {/* Users */}
             <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
               <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-              <div className="max-w-5xl mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
+              <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6">
                 <PersonaCard
                   name="Rohan Sharma"
                   role="Live Match Follower"
@@ -460,7 +460,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Visits repeatedly during live games"
                   pain="Too much information to process quickly"
                   opportunity="Surface what matters most"
-                  imageUrl={userPersonaAsset.url}
+                  imageUrl={rohanPersonaAsset.url}
                 />
                 <PersonaCard
                   name="Karan Patel"
@@ -469,7 +469,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Reads previews and analysis"
                   pain="Relevant content is hard to discover"
                   opportunity="Improve discovery"
-                  imageUrl={userPersonaAsset.url}
+                  imageUrl={karanPersonaAsset.url}
                 />
                 <PersonaCard
                   name="Aryan Iyer"
