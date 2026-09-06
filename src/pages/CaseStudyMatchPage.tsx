@@ -101,7 +101,7 @@ const PersonaCard = ({
       </div>
       <div className="flex items-baseline gap-4 rounded-lg px-4 py-2 -mx-4">
         <span className={`${t.labelSm} text-primary w-20 shrink-0`}>Pain</span>
-        <span className="text-primary font-medium leading-relaxed">{pain}</span>
+        <span className="text-primary leading-relaxed">{pain}</span>
       </div>
       <div className="flex items-baseline gap-4">
         <span className={`${t.labelSm} text-muted-foreground w-20 shrink-0`}>Opportunity</span>
