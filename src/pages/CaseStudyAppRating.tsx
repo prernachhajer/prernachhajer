@@ -76,7 +76,7 @@ const PersonaCard = ({
     whileInView="visible"
     viewport={{ once: true }}
     variants={fade}
-    className={`${radius.cardSm} border border-border bg-card p-6 md:p-8 max-w-md`}
+    className={`${radius.cardSm} border border-border bg-card p-4 md:p-4 max-w-md`}
   >
     <div className="flex items-center gap-5 mb-6">
       <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 border border-border/50">
@@ -86,28 +86,27 @@ const PersonaCard = ({
         <h3 className="text-2xl font-normal tracking-[0.01em]" style={{ fontFamily: t.displayFont }}>
           {name}
         </h3>
-        <p className={`${t.labelSm} text-muted-foreground mt-1`}>
-          {role} · {meta}
-        </p>
+
+        <p className={`${t.labelSm} text-muted-foreground mt-2`}>{meta}</p>
       </div>
     </div>
-    <div className="flex flex-col gap-3">
-      <div className="flex items-baseline gap-4">
-        <span className={`${t.labelSm} text-muted-foreground w-28 shrink-0`}>Behaviour</span>
+    <p className={` text-muted-foreground `}>{role}</p>
+    <div className="flex flex-col gap-3  border-t pt-3 mt-3 ">
+      <div className="flex items-baseline gap-6">
+        <span className={`${t.labelSm} text-muted-foreground w-20 shrink-0`}>Behaviour</span>
         <span className="text-foreground leading-relaxed">{behaviour}</span>
       </div>
-      <div className="flex items-baseline gap-4 rounded-lg px-4 py-3 -mx-4">
-        <span className={`${t.labelSm} text-primary w-28 shrink-0`}>Pain</span>
-        <span className="text-primary font-medium leading-relaxed">{pain}</span>
+      <div className="flex items-baseline gap-6 rounded-lg px-4 py-3 -mx-4">
+        <span className={`${t.labelSm} text-primary w-20 shrink-0`}>Pain</span>
+        <span className="text-primary leading-relaxed">{pain}</span>
       </div>
-      <div className="flex items-baseline gap-4">
-        <span className={`${t.labelSm} text-muted-foreground w-28 shrink-0`}>Opportunity</span>
+      <div className="flex items-baseline gap-6">
+        <span className={`${t.labelSm} text-muted-foreground w-20 shrink-0`}>Opportunity</span>
         <span className="text-foreground leading-relaxed">{opportunity}</span>
       </div>
     </div>
   </motion.div>
 );
-
 const Block = ({
   eyebrow,
   title,
@@ -337,7 +336,8 @@ const CaseStudyAppRating = () => {
                 context: "Twitter",
               },
               {
-                quote: "Why is there so much useless clutter? … Who's bright idea was it to autoplay a video with sound whenever I reload the page?",
+                quote:
+                  "Why is there so much useless clutter? … Who's bright idea was it to autoplay a video with sound whenever I reload the page?",
                 source: "Highly-upvoted Reddit thread",
                 context: "Reddit",
               },
