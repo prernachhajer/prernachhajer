@@ -16,6 +16,7 @@ import {
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import UserFeedbackSummary from "@/components/UserFeedbackSummary";
 import problemImg from "@/assets/app-rating/Problem-2.png";
+import problemChartAsset from "@/assets/app-rating/app-rating-problem-chart.png.asset.json";
 import homeImg from "@/assets/app-rating/Home-problem.png";
 import matchImg from "@/assets/app-rating/Match-problem.png";
 import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
