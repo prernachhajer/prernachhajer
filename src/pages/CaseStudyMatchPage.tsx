@@ -363,16 +363,18 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               {[
                 {
-                  quote: "I’ve been using Cricinfo for a long time, and it’s been a great experience. The app is easy to use, and all the important match details, scores, and stats are clearly organized",
+                  quote:
+                    "I’ve been using Cricinfo for a long time, and it’s been a great experience. The app is easy to use, and all the important match details, scores, and stats are clearly organized",
                   source: "ARAVIND A, Play Store",
                 },
                 {
-                  quote: "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post analytics",
+                  quote:
+                    "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post analytics",
                   source: "Sanjay Pandhare, Play Store",
                 },
                 {
                   quote:
-                    "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket. I would like to say this app a\"wonder cricket app\".",
+                    'it is very nice app , which we can use to see the score\'s in cricket and it gives us nearbout all information of the leagues and international matches of cricket. I would like to say this app a"wonder cricket app".',
                   source: "Brajesh RAI,  APP STORE",
                 },
               ].map((q) => (
@@ -848,40 +850,34 @@ const CaseStudyMatchPage = () => {
             Measuring how people used the new structure
           </motion.h2>
 
-            <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
-            <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
-            <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
-              Users Reviews
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              {[
-                {
-                  quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
-                  source: "Twitter",
-                },
-                {
-                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                  source: "User audit #4",
-                },
-                {
-                  quote:
-                    "Cricinfo used to be simple. Now I have to scroll through 12 options just to find who is bowling.",
-                  source: "App Store review",
-                },
-              ].map((q) => (
-                <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
-                  <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
-                    "
-                  </span>
-                  <p className="text-lg leading-relaxed text-foreground relative z-10">{q.quote}</p>
-                  <cite
-                    className={`${t.labelSm} text-muted-foreground mt-4 pt-3 border-t border-border block not-italic`}
-                  >
-                    {q.source}
-                  </cite>
-                </div>
-              ))}
-            </div>
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            {[
+              {
+                quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
+                source: "Twitter",
+              },
+              {
+                quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
+                source: "User audit #4",
+              },
+              {
+                quote:
+                  "Cricinfo used to be simple. Now I have to scroll through 12 options just to find who is bowling.",
+                source: "App Store review",
+              },
+            ].map((q) => (
+              <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
+                <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
+                  "
+                </span>
+                <p className="text-lg leading-relaxed text-foreground relative z-10">{q.quote}</p>
+                <cite
+                  className={`${t.labelSm} text-muted-foreground mt-4 pt-3 border-t border-border block not-italic`}
+                >
+                  {q.source}
+                </cite>
+              </div>
+            ))}
           </div>
 
           <ImpactPanel>
