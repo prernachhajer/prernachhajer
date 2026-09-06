@@ -882,6 +882,7 @@ const CaseStudyMatchPage = () => {
                 </div>
               ))}
             </div>
+          </div>
 
           <ImpactPanel>
             <p className={`${t.labelSm} text-background/65 mb-6`}>The numbers</p>
