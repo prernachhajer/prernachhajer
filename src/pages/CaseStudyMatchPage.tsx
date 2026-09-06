@@ -369,8 +369,8 @@ const CaseStudyMatchPage = () => {
                 },
                 {
                   quote:
-                    "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post analytics",
-                  source: "Sanjay Pandhare, Play Store",
+                    "CricInfo has a sleek look but tries to show too much at a time.",
+                  source: "Aditya (@s_adityashukla), Twitter",
                 },
                 {
                   quote:
