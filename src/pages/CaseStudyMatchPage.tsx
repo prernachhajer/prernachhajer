@@ -451,13 +451,14 @@ const CaseStudyMatchPage = () => {
           </div>
         </div>
       </section>
+    </div>
 
       {/* Users */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
-        <div className={`${layout.container} mx-auto`}>
+        <div className={`${layout.container}`}>
           <div className={`mt-16 md:mt-20 pt-12 border-t border-border`}>
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-            <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6">
+            <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
               <PersonaCard
                 name="Farukh Ibrahim"
                 role="Live Match Follower"
