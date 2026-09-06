@@ -434,7 +434,7 @@ const CaseStudyAppRating = () => {
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>
               LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE
             </p>
-            <div className="grid lg:grid-cols-1 gap-10 items-start">
+            {/*  <div className="grid lg:grid-cols-1 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
                 <table className="w-full text-sm">
                   <thead>
@@ -507,7 +507,7 @@ const CaseStudyAppRating = () => {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </div> */}
 
               {/* Scannable comparison grid */}
               <div className="max-w-5xl mx-auto mt-10 md:mt-10 bg-white p-4 border rounded-xl">
