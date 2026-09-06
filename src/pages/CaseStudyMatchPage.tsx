@@ -455,7 +455,7 @@ const CaseStudyMatchPage = () => {
       {/* Users */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container}`}>
-          <div className={`mt-16 md:mt-20 pt-12 border-t border-border`}>
+          <div className={`mt-16 md:mt-20 pt-12 `}>
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
             <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
               <PersonaCard
