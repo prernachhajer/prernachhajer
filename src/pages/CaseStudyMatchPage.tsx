@@ -853,8 +853,8 @@ const CaseStudyMatchPage = () => {
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             {[
               {
-                quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
-                source: "Twitter",
+                quote: "Great app. All the info you need on County, national, and international matches. Recommended.",
+                source: "Stephen Green",
               },
               {
                  quote: "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post-match analytics",
