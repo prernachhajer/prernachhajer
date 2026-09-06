@@ -23,6 +23,8 @@ import commsMediaAsset from "@/assets/Comms-media.png";
 import liveContentAsset from "@/assets/Live-content.png";
 import summaryContentAsset from "@/assets/Summary-content.png";
 import userPersonaAsset from "@/assets/user-persona.png.asset.json";
+import rohanPersonaAsset from "@/assets/rohan-persona.png.asset.json";
+import karanPersonaAsset from "@/assets/karan-persona.png.asset.json";
 
 const fade = animation.fade;
 
@@ -458,7 +460,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Visits repeatedly during live games"
                   pain="Too much information to process quickly"
                   opportunity="Surface what matters most"
-                  imageUrl={userPersonaAsset.url}
+                  imageUrl={rohanPersonaAsset.url}
                 />
                 <PersonaCard
                   name="Karan Patel"
@@ -467,7 +469,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Reads previews and analysis"
                   pain="Relevant content is hard to discover"
                   opportunity="Improve discovery"
-                  imageUrl={userPersonaAsset.url}
+                  imageUrl={karanPersonaAsset.url}
                 />
                 <PersonaCard
                   name="Aryan Iyer"
