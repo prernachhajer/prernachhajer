@@ -80,7 +80,7 @@ const PersonaCard = ({
     whileInView="visible"
     viewport={{ once: true }}
     variants={fade}
-    className={`${radius.cardSm} border border-border bg-card p-6 md:p-6 max-w-md`}
+    className={`${radius.cardSm} border border-border bg-card p-5 md:p-5 max-w-md`}
   >
     <div className="flex items-center gap-5 mb-6">
       <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 border border-border/50">
