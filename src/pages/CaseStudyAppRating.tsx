@@ -14,8 +14,8 @@ import {
   impactCell,
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
-import UserFeedbackSummary from "@/components/UserFeedbackSummary";
 import problemImg from "@/assets/app-rating/Problem-2.png";
+import problemChartAsset from "@/assets/app-rating/app-rating-problem-chart.png.asset.json";
 import homeImg from "@/assets/app-rating/Home-problem.png";
 import matchImg from "@/assets/app-rating/Match-problem.png";
 import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
@@ -274,10 +274,13 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border border-dashed rounded-xl">
-            <UserFeedbackSummary />
+          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border border-dashed rounded-xl overflow-hidden">
+            <SectionImage
+              src={problemChartAsset.url}
+              alt="Chart showing app rating drop drivers: Content, Performance, Navigation, Interaction, Interruptions"
+            />
 
-            <div className="self-start flex flex-wrap gap-2 border-t mt-8 md:mt-8 px-8 py-8 pb-8">
+            <div className="self-start flex flex-wrap gap-2 border-t px-8 py-8 pb-8">
               {[
                 "Overwhelming / cluttered",
                 "Buggy video playback",
