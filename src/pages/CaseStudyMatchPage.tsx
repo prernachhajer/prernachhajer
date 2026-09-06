@@ -448,53 +448,51 @@ const CaseStudyMatchPage = () => {
                 </p>
               </div>
             </div>
-            </div>
+          </div>
 
-            {/* Users */}
-            <div className={`max-w-3xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border`}>
-
-              <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-              <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6">
-                <PersonaCard
-                  name="Farukh Ibrahim"
-                  role="Live Match Follower"
-                  meta="29 · Mumbai, India"
-                  behaviour="Visits repeatedly during live games"
-                  pain="Too much information to process quickly"
-                  opportunity="Surface what matters most"
-                  imageUrl={rohanPersonaAsset.url}
-                />
-                <PersonaCard
-                  name="Mittul Desai"
-                  role="Content Consumer"
-                  meta="32 · Delhi, India"
-                  behaviour="Reads previews and analysis"
-                  pain="Relevant content is hard to discover"
-                  opportunity="Improve discovery"
-                  imageUrl={userPersonaAsset.url}
-                />
-                <PersonaCard
-                  name="Sana Khan"
-                  role="Casual Fan"
-                  meta="24 · Bengaluru, India"
-                  behaviour="Visits during major events"
-                  pain="Experience can feel overwhelming"
-                  opportunity="Simplify and habit forming"
-                  imageUrl={karanPersonaAsset.url}
-                />
-              </div>
-              <div className="mt-10">
-                <blockquote className={`pl-5 ${surface.accentLine}`}>
-                  <p className="text-lg leading-relaxed">
-                    <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across
-                    all segments.
-                  </p>
-                </blockquote>
-              </div>
+          {/* Users */}
+          <div className={`max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border`}>
+            <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
+            <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6">
+              <PersonaCard
+                name="Farukh Ibrahim"
+                role="Live Match Follower"
+                meta="29 · Mumbai, India"
+                behaviour="Visits repeatedly during live games"
+                pain="Too much information to process quickly"
+                opportunity="Surface what matters most"
+                imageUrl={rohanPersonaAsset.url}
+              />
+              <PersonaCard
+                name="Mittul Desai"
+                role="Content Consumer"
+                meta="32 · Delhi, India"
+                behaviour="Reads previews and analysis"
+                pain="Relevant content is hard to discover"
+                opportunity="Improve discovery"
+                imageUrl={userPersonaAsset.url}
+              />
+              <PersonaCard
+                name="Sana Khan"
+                role="Casual Fan"
+                meta="24 · Bengaluru, India"
+                behaviour="Visits during major events"
+                pain="Experience can feel overwhelming"
+                opportunity="Simplify and habit forming"
+                imageUrl={karanPersonaAsset.url}
+              />
             </div>
+            <div className="mt-10">
+              <blockquote className={`pl-5 ${surface.accentLine}`}>
+                <p className="text-lg leading-relaxed">
+                  <b>Success outcome:</b> more exploration, deeper engagement, and higher content consumption across all
+                  segments.
+                </p>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </section>
-      
 
       {/* ── Strategy ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
