@@ -520,7 +520,7 @@ const CaseStudyAppRating = () => {
           </div>
 
           {/* Scannable comparison grid */}
-          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 bg-white/60">
+          <div className="max-w-5xl mx-auto mt-10 md:mt-10 pt-12 bg-white/60 p-4 border rounded-xl">
             <div className="overflow-x-auto">
               <h2 className="sr-only">
                 Scannable comparison grid of Cricinfo, Cricbuzz, and Google across seven cricket-app user needs,
