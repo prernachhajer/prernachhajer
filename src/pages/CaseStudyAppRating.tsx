@@ -275,10 +275,13 @@ const CaseStudyAppRating = () => {
             </div>
           </div>
 
-          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border border-dashed rounded-xl">
-            <UserFeedbackSummary />
+          <div className=" items-center max-w-3xl mx-auto mt-8 md:mt-8 border border-dashed rounded-xl overflow-hidden">
+            <SectionImage
+              src={problemChartAsset.url}
+              alt="Chart showing app rating drop drivers: Content, Performance, Navigation, Interaction, Interruptions"
+            />
 
-            <div className="self-start flex flex-wrap gap-2 border-t mt-8 md:mt-8 px-8 py-8 pb-8">
+            <div className="self-start flex flex-wrap gap-2 border-t px-8 py-8 pb-8">
               {[
                 "Overwhelming / cluttered",
                 "Buggy video playback",
