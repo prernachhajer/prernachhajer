@@ -526,11 +526,11 @@ const CaseStudyAppRating = () => {
                 Scannable comparison grid of Cricinfo, Cricbuzz, and Google across seven cricket-app user needs,
                 color-coded by strength or weakness
               </h2>
-              <div className="grid gap-2 min-w-[640px]" style={{ gridTemplateColumns: "150px repeat(3, 1fr)" }}>
+              <div className="grid gap-4 min-w-[640px]" style={{ gridTemplateColumns: "150px repeat(3, 1fr)" }}>
                 <div />
-                <div className="text-sm font-medium text-center py-1.5 text-muted-foreground">Cricinfo</div>
-                <div className="text-sm font-medium text-center py-1.5 text-muted-foreground">Cricbuzz</div>
-                <div className="text-sm font-medium text-center py-1.5 text-muted-foreground">Google</div>
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricinfo</div>
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Cricbuzz</div>
+                <div className="text-sm font-medium text-center py-2.5 text-muted-foreground">Google</div>
 
                 {[
                   {
