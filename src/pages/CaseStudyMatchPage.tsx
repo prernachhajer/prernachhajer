@@ -469,7 +469,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Reads previews and analysis"
                   pain="Relevant content is hard to discover"
                   opportunity="Improve discovery"
-                  imageUrl={karanPersonaAsset.url}
+                  imageUrl={userPersonaAsset.url}
                 />
                 <PersonaCard
                   name="Aryan Iyer"
@@ -478,7 +478,7 @@ const CaseStudyMatchPage = () => {
                   behaviour="Visits during major events"
                   pain="Experience can feel overwhelming"
                   opportunity="Simplify and habit forming"
-                  imageUrl={userPersonaAsset.url}
+                  imageUrl={karanPersonaAsset.url}
                 />
               </div>
               <div className="mt-10">
