@@ -863,7 +863,7 @@ const CaseStudyMatchPage = () => {
               {
                 quote:
                   "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
-                source: "App Store review",
+                 source: "Brajesh RAI, Play STORE REVIEW",
               },
             ].map((q) => (
               <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
