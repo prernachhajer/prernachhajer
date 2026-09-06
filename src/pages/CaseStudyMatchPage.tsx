@@ -493,7 +493,6 @@ const CaseStudyMatchPage = () => {
               </div>
             </div>
           </div>
-        </div>
       </section>
       
 
