@@ -3,6 +3,7 @@
 // Uses shared design system: @/lib/tokens + @/components/ds
 // ─────────────────────────────────────────────
 
+import React from "react";
 import { motion } from "framer-motion";
 import { X, Check, AlertTriangle } from "lucide-react";
 import {
