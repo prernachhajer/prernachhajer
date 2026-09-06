@@ -405,7 +405,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Competitive */}
-          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
+          <div className="${layout.container} mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Cricinfo vs. Cricbuzz</p>
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <div className={`overflow-hidden border border-border ${radius.cardSm}`}>
