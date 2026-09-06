@@ -644,7 +644,7 @@ const CaseStudyAppRating = () => {
           <SectionLabel>HOW WE DECIDED</SectionLabel>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
             <h2 className={`${t.h2} max-w-3xl`} style={{ fontFamily: t.displayFont }}>
-              Each problem led to a question that shaped the solution.
+              We identified the key problems and turned each one into a question.
             </h2>
             <p className={`${t.bodyLg} text-muted-foreground mt-5 max-w-3xl`}>
               We grouped the eight pain points into four areas, using one key question for each to decide what needed to
