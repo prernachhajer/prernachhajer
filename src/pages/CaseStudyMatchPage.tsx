@@ -90,9 +90,10 @@ const PersonaCard = ({
         <h3 className="text-2xl font-normal tracking-[0.01em]" style={{ fontFamily: t.displayFont }}>
           {name}
         </h3>
-        <p className={`${t.labelSm} text-muted-foreground mt-0 text-primary`}>{role}</p>
+
         <p className={`${t.labelSm} text-muted-foreground mt-2`}>{meta}</p>
       </div>
+      <p className={`${t.labelSm} text-muted-foreground mt-0 text-primary`}>{role}</p>
     </div>
     <div className="flex flex-col gap-3  border-t pt-3 ">
       <div className="flex items-baseline gap-6">
