@@ -337,9 +337,9 @@ const CaseStudyAppRating = () => {
                 context: "Twitter",
               },
               {
-                quote: "On Cricinfo it is like huge information is dumped… when we require only few things.",
-                source: "User research participant",
-                context: "Hyderabad",
+                quote: "Why is there so much useless clutter? … Who's bright idea was it to autoplay a video with sound whenever I reload the page?",
+                source: "Highly-upvoted Reddit thread",
+                context: "Reddit",
               },
             ].map((q) => (
               <div key={q.source} className="relative rounded-xl border border-border  bg-white/60 p-6 pt-8">
