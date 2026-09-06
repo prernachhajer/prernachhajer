@@ -82,7 +82,7 @@ const PersonaCard = ({
     variants={fade}
     className={`${radius.cardSm} border border-border bg-card p-4 md:p-4 max-w-md`}
   >
-    <div className="flex items-center gap-5 mb-6">
+    <div className="flex items-center gap-3 mb-6">
       <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 border border-border/50">
         <img src={imageUrl} alt={name} className="h-full w-full object-cover" />
       </div>
