@@ -189,7 +189,7 @@ const caseStudies: CaseStudy[] = [
 // QUICK STORIES
 // ─────────────────────────────────────────────
 
-const quickStories = [
+const quickStories: { title: string; tag: string; status: string; link?: string }[] = [
   {
     title: "StatsGuru: migrating a legacy tool to NewStack",
     tag: "Legacy → Modern",
