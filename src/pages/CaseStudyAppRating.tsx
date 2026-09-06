@@ -3,7 +3,7 @@
 // Uses shared design system: @/lib/tokens + @/components/ds
 // ─────────────────────────────────────────────
 
-import React from "react";
+import { Fragment, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { X, Check, AlertTriangle } from "lucide-react";
 import {
@@ -42,14 +42,14 @@ const Placeholder = ({ label, className = "" }: { label: string; className?: str
   </div>
 );
 
-const Bullet = ({ children }: { children: React.ReactNode }) => (
+const Bullet = ({ children }: { children: ReactNode }) => (
   <li className="flex gap-3 items-start">
     <span className="text-primary font-medium leading-relaxed">—</span>
     <span className="flex-1 text-sm md:text-base leading-relaxed text-muted-foreground">{children}</span>
   </li>
 );
 
-const TradeOff = ({ children }: { children: React.ReactNode }) => (
+const TradeOff = ({ children }: { children: ReactNode }) => (
   <div className={`${radius.cardSm} border border-dashed border-primary/60 p-5 md:p-6 mt-6`}>
     <p className={`${t.labelSm} text-primary mb-2.5`}>Trade-off, named honestly</p>
     <p className="text-sm leading-relaxed text-foreground">{children}</p>
@@ -118,7 +118,7 @@ const Block = ({
   eyebrow: string;
   title: string;
   isFirst?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
 }) => (
   <motion.div
     initial="hidden"
@@ -549,7 +549,7 @@ const CaseStudyAppRating = () => {
                     bad: "bg-rose-50 text-rose-800",
                   };
                   return (
-                    <React.Fragment key={row.need}>
+                    <Fragment key={row.need}>
                       <div className="text-[13px] text-muted-foreground flex items-center">{row.need}</div>
                       {row.cells.map(([text, tone]) => {
                         const Icon = { good: Check, mid: AlertTriangle, bad: X }[tone as "good" | "mid" | "bad"];
@@ -562,7 +562,7 @@ const CaseStudyAppRating = () => {
                           </div>
                         );
                       })}
-                    </React.Fragment>
+                    </Fragment>
                   );
                 })}
               </div>
