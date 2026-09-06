@@ -193,14 +193,16 @@ const quickStories = [
   {
     title: "StatsGuru: migrating a legacy tool to NewStack",
     tag: "Legacy → Modern",
-    status: "read",
-    link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
+    status: "coming-soon",
+    // status: "read",
+    //   link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
   },
   {
     title: "Stats dashboard: publishable cricket data at scale",
     tag: "B2B",
-    status: "read",
-    link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
+    status: "coming-soon",
+    // status: "read",
+    // link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
   },
   {
     title: "Push notifications: rethinking match-day alerts",
