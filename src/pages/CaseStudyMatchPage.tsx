@@ -451,7 +451,6 @@ const CaseStudyMatchPage = () => {
           </div>
         </div>
       </section>
-    </div>
 
       {/* Users */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
