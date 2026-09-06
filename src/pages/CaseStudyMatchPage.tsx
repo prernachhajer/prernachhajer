@@ -862,7 +862,7 @@ const CaseStudyMatchPage = () => {
               },
               {
                 quote:
-                  "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
+                  "It is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
                   source: "BRAJESH RAI, PLAY STORE",
               },
             ].map((q) => (
