@@ -22,6 +22,8 @@ import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
 import notificationImg from "@/assets/app-rating/Notification.png";
 import engagementImg from "@/assets/app-rating/Lightweight_engagement.png";
 import userPersonaAsset from "@/assets/user-persona.png.asset.json";
+import rohanPersonaAsset from "@/assets/rohan-persona.png.asset.json";
+import karanPersonaAsset from "@/assets/karan-persona.png.asset.json";
 
 const SectionImage = ({ src, alt }: { src: string; alt: string }) => (
   <img src={src} alt={alt} loading="lazy" className="w-full h-auto" />
