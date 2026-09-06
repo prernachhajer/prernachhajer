@@ -862,7 +862,7 @@ const CaseStudyMatchPage = () => {
               },
               {
                 quote:
-                  "Cricinfo used to be simple. Now I have to scroll through 12 options just to find who is bowling.",
+                  "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
                 source: "App Store review",
               },
             ].map((q) => (
