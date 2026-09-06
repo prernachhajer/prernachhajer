@@ -508,8 +508,7 @@ const CaseStudyAppRating = () => {
               </div> */}
 
           {/* Scannable comparison grid */}
-          <div className="max-w-5xl">
-            {" "}
+          <div className="max-w-5xl  mx-auto mt-10 md:mt-10">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>
               LEARNING FROM USER FEEDBACK ACROSS CRICINFO, CRICBUZZ AND GOOGLE
             </p>
