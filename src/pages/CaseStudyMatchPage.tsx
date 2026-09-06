@@ -454,7 +454,7 @@ const CaseStudyMatchPage = () => {
               <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
               <div className="max-w-3xl mx-auto grid md:grid-cols-2 grid-cols-2 gap-6">
                 <PersonaCard
-                  name="Rohan Sharma"
+                  name="Farukh Ibrahim"
                   role="Live Match Follower"
                   meta="29 · Mumbai, India"
                   behaviour="Visits repeatedly during live games"
@@ -463,7 +463,7 @@ const CaseStudyMatchPage = () => {
                   imageUrl={rohanPersonaAsset.url}
                 />
                 <PersonaCard
-                  name="Karan Patel"
+                  name="Mittul Desai"
                   role="Content Consumer"
                   meta="32 · Delhi, India"
                   behaviour="Reads previews and analysis"
@@ -472,7 +472,7 @@ const CaseStudyMatchPage = () => {
                   imageUrl={userPersonaAsset.url}
                 />
                 <PersonaCard
-                  name="Aryan Iyer"
+                  name="Sana Khan"
                   role="Casual Fan"
                   meta="24 · Bengaluru, India"
                   behaviour="Visits during major events"
