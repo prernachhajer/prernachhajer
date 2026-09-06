@@ -857,13 +857,13 @@ const CaseStudyMatchPage = () => {
                 source: "Twitter",
               },
               {
-                quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                source: "User audit #4",
+                 quote: "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post-match analytics",
+                 source: "Sanjay Pandhare,  PLAY STORE",
               },
               {
                 quote:
                   "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
-                 source: "Brajesh RAI, Play STORE REVIEW",
+                  source: "BRAJESH RAI, PLAY STORE",
               },
             ].map((q) => (
               <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
