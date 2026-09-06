@@ -341,12 +341,6 @@ const CaseStudyAppRating = () => {
                 source: "User research participant",
                 context: "Hyderabad",
               },
-
-              {
-                quote: "What is this cluttered shit from ESPNcricinfo? So cluttered, don't even feel like using it.",
-                source: "r/IndiaCricket",
-                context: "Reddit",
-              },
             ].map((q) => (
               <div key={q.source} className="relative rounded-xl border border-border  bg-white/60 p-6 pt-8">
                 <span className="absolute top-3 left-4 text-5xl leading-none text-primary/30 font-serif select-none">
