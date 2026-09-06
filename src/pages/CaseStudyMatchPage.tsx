@@ -94,12 +94,12 @@ const PersonaCard = ({
         <p className={`${t.labelSm} text-muted-foreground mt-2`}>{meta}</p>
       </div>
     </div>
-    <div className="flex flex-col gap-3 border border-t py-3 ">
+    <div className="flex flex-col gap-3 border border-t pt-3 ">
       <div className="flex items-baseline gap-4">
         <span className={`${t.labelSm} text-muted-foreground w-20 shrink-0`}>Behaviour</span>
         <span className="text-foreground leading-relaxed">{behaviour}</span>
       </div>
-      <div className="flex items-baseline gap-4 rounded-lg px-4 py-0 -mx-4">
+      <div className="flex items-baseline gap-4 rounded-lg px-4 py-3 -mx-4">
         <span className={`${t.labelSm} text-primary w-20 shrink-0`}>Pain</span>
         <span className="text-primary leading-relaxed">{pain}</span>
       </div>
