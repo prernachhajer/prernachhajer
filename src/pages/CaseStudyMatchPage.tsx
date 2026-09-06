@@ -355,7 +355,7 @@ const CaseStudyMatchPage = () => {
           </div>
 
           {/* Evidence */}
-          <div className="max-w-4xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
+          <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
             <p className={`${t.labelSm} text-muted-foreground`}>Evidence, in their own words</p>
             <h3 className={`${t.h3} mt-4`} style={{ fontFamily: t.displayFont }}>
               Users Reviews
@@ -857,13 +857,14 @@ const CaseStudyMatchPage = () => {
                 source: "Stephen Green",
               },
               {
-                 quote: "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post-match analytics",
-                 source: "Sanjay Pandhare,  PLAY STORE",
+                quote:
+                  "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post-match analytics",
+                source: "Sanjay Pandhare,  PLAY STORE",
               },
               {
                 quote:
                   "It is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket.",
-                  source: "BRAJESH RAI, PLAY STORE",
+                source: "BRAJESH RAI, PLAY STORE",
               },
             ].map((q) => (
               <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
