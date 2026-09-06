@@ -374,7 +374,7 @@ const CaseStudyMatchPage = () => {
                 },
                 {
                   quote:
-                    "Cricinfo was clunky, with a poor UI whereas CB was pretty fast",
+                    "Cricinfo is clunky, with a poor UI, whereas Cricbuzz is pretty fast",
                   source: "Reddit",
                 },
               ].map((q) => (
