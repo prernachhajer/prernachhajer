@@ -363,17 +363,17 @@ const CaseStudyMatchPage = () => {
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               {[
                 {
-                  quote: "On Cricinfo it is like huge information is dumped… when we require only few things",
-                  source: "Twitter",
+                  quote: "I’ve been using Cricinfo for a long time, and it’s been a great experience. The app is easy to use, and all the important match details, scores, and stats are clearly organized",
+                  source: "ARAVIND A, Play Store",
                 },
                 {
-                  quote: "It takes forever to open the scorecard page, there's just too much stuff in my way.",
-                  source: "User audit #4",
+                  quote: "Superb analysis is always great to see the commentary match coverage here👍🏻. The Best app for Cricket Live and post analytics",
+                  source: "Sanjay Pandhare, Play Store",
                 },
                 {
                   quote:
-                    "Cricinfo used to be simple. Now I have to scroll through 12 options just to find who is bowling.",
-                  source: "App Store review",
+                    "it is very nice app , which we can use to see the score's in cricket and it gives us nearbout all information of the leagues and international matches of cricket. I would like to say this app a\"wonder cricket app\".",
+                  source: "Brajesh RAI,  APP STORE",
                 },
               ].map((q) => (
                 <div key={q.source} className="relative rounded-xl border border-border/60 bg-white p-6 pt-8 shadow-sm">
