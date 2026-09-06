@@ -448,6 +448,7 @@ const CaseStudyMatchPage = () => {
                 </p>
               </div>
             </div>
+            </section>
 
             {/* Users */}
             <section className={`${layout.container} max-w-3xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border`}>
@@ -493,7 +494,7 @@ const CaseStudyMatchPage = () => {
           </div>
         </div>
       </section>
-      </section>
+      
 
       {/* ── Strategy ──────────────────────── */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
