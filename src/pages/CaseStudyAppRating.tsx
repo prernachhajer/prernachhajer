@@ -360,7 +360,7 @@ const CaseStudyAppRating = () => {
           <div className="mt-14 md:mt-20">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
           </div>
-          <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-4 mt-14 md:mt-20">
+          <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-4 mt-4 md:mt-4">
             <PersonaCard
               name="Farukh Ibrahim"
               role="Live Match Follower"
