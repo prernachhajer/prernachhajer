@@ -492,6 +492,7 @@ const CaseStudyMatchPage = () => {
                 </blockquote>
               </div>
             </div>
+        </div>
       </section>
       
 
