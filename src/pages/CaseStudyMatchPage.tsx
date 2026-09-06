@@ -364,7 +364,7 @@ const CaseStudyMatchPage = () => {
               {[
                 {
                   quote:
-                    "I’ve been using Cricinfo for a long time, and it’s been a great experience. The app is easy to use, and all the important match details, scores, and stats are clearly organized",
+                    "“On Cricinfo, its like huge information is dumped...when we require only few things.”",
                   source: "ARAVIND A, Play Store",
                 },
                 {
