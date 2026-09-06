@@ -452,7 +452,7 @@ const CaseStudyMatchPage = () => {
             {/* Users */}
             <div className="max-w-5xl mx-auto mt-16 md:mt-20 pt-12 border-t border-border">
               <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
-              <div className="max-w-3xl mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
+              <div className="max-w-5xl mx-auto grid md:grid-cols-3 grid-cols-3 gap-6">
                 <PersonaCard
                   name="Rohan Sharma"
                   role="Live Match Follower"
