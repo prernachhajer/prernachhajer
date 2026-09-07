@@ -174,7 +174,7 @@ const CaseStudyAppRating = () => {
             custom={2}
             className="flex flex-wrap gap-3 justify-center mt-10 md:mt-12"
           >
-            {["Lead Product Designer", "Several months", "iOS & Android", "10M+ users"].map((chip) => (
+            {["Lead Product Designer", "~ 1YEAR", "iOS & Android", "10M+ users"].map((chip) => (
               <span
                 key={chip}
                 className={`${t.labelSm} px-4 py-2 rounded-full border border-border bg-secondary text-muted-foreground`}
