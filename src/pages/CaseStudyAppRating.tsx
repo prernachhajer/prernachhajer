@@ -17,7 +17,7 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import problemImg from "@/assets/app-rating/Problem-2.png";
-import problemChartAsset from "@/assets/app-rating/app-rating-problem-chart.png.asset.json";
+import problemChartAsset from "@/assets/app-rating/content_strength_vs_problem_areas_v3.svg.asset.json";
 import { RatingChart } from "@/components/RatingChart";
 import homeImg from "@/assets/app-rating/Home-problem.png";
 import matchImg from "@/assets/app-rating/Match-problem.png";
