@@ -223,15 +223,20 @@ const CaseStudyAppRating = () => {
             across the app that had slowly added up to a poor overall experience.
           </motion.p>
 
-          {/*   <motion.div
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className="mt-16 md:mt-20"
+            className="mt-16 md:mt-20 max-w-5xl mx-auto"
           >
-            <Placeholder label="Visual — rating trajectory over the turnaround period" className="h-56 md:h-72" />
-          </motion.div> */}
+            <img
+              src={ratingTrendImg}
+              alt="App store rating trajectory from 4.0 in 2022, down to 3.4 in 2024, recovering to 4.6 in 2025"
+              className="w-full h-auto"
+            />
+          </motion.div>
+
         </div>
       </section>
 
