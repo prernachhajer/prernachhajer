@@ -683,7 +683,7 @@ const CaseStudyAppRating = () => {
                       ],
                       [
                         "Interruptions",
-                        "How might we stop the app from getting in its own way?g",
+                        "How might we stop the app from getting in its own way?",
                         "Autoplay muted by default, ad clutter reduced, notifications made flexible",
 
                         true,
