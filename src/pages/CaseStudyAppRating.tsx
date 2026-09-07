@@ -139,7 +139,7 @@ const Block = ({
 const CaseStudyAppRating = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <NavCaseStudy period="2023 — 2024" />
+      <NavCaseStudy period="2024 — 2025" />
 
       {/* ── HERO ───────────────────────────── */}
       <section className={`pt-24 md:pt-28 pb-8 ${layout.px}`}>
