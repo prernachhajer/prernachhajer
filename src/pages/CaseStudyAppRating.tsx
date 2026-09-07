@@ -233,7 +233,6 @@ const CaseStudyAppRating = () => {
           >
             <RatingChart />
           </motion.div>
-
         </div>
       </section>
 
@@ -359,7 +358,7 @@ const CaseStudyAppRating = () => {
             ))}
           </div>
 
-          <div className="mt-14 md:mt-20">
+          {/*    <div className="mt-14 md:mt-20">
             <p className={`${t.labelSm} text-muted-foreground mb-6`}>Who We Designed For</p>
           </div>
           <div className="mx-auto grid md:grid-cols-3 grid-cols-3 gap-4 mt-4 md:mt-4">
@@ -390,7 +389,7 @@ const CaseStudyAppRating = () => {
               opportunity="Simplify and habit forming"
               imageUrl={karanPersonaAsset.url}
             />
-          </div>
+          </div> */}
 
           {/* <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
