@@ -17,8 +17,8 @@ import {
 } from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import problemImg from "@/assets/app-rating/Problem-2.png";
-import ratingTrendImg from "@/assets/app-rating/rating-trend.png";
 import problemChartAsset from "@/assets/app-rating/app-rating-problem-chart.png.asset.json";
+import { RatingChart } from "@/components/RatingChart";
 import homeImg from "@/assets/app-rating/Home-problem.png";
 import matchImg from "@/assets/app-rating/Match-problem.png";
 import shortFormImg from "@/assets/app-rating/Short-form-problem.png";
@@ -231,11 +231,7 @@ const CaseStudyAppRating = () => {
             variants={fade}
             className="mt-16 md:mt-20 max-w-5xl mx-auto"
           >
-            <img
-              src={ratingTrendImg}
-              alt="App store rating trajectory from 4.0 in 2022, down to 3.4 in 2024, recovering to 4.6 in 2025"
-              className="w-full h-auto"
-            />
+            <RatingChart />
           </motion.div>
 
         </div>
