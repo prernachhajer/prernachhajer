@@ -870,6 +870,12 @@ const CaseStudyAppRating = () => {
             Clarity is a design responsibility, not a subtraction exercise.
           </motion.h2>
 
+          <blockquote>
+            “During the period surrounding the app's rating recovery from approximately 3.4–3.5 to 4.6+, ESPNcricinfo's
+            Android install base continued to grow substantially. The app was already above 10M installs, and later
+            third-party Google Play telemetry puts cumulative installs at approximately 24.4M by September 2026.”
+          </blockquote>
+
           <ImpactPanel>
             <p className={`${t.labelSm} text-background/65 mb-6`}>The numbers</p>
             <div className={impactGrid}>
