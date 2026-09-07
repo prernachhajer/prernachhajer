@@ -872,10 +872,9 @@ const CaseStudyAppRating = () => {
 
           <blockquote className={`pl-5 mt-10 ${surface.accentLine}`}>
             <p className="text-lg leading-relaxed">
-              “During the period surrounding the app's rating recovery from approximately 3.4–3.5 to 4.6+,
-              ESPNcricinfo's Android install base continued to grow substantially. The app was already above 10M
-              installs, and later third-party Google Play telemetry puts cumulative installs at approximately 24.4M by
-              September 2026.”
+              During the app’s rating recovery from 3.4–3.5 to 4.6+, ESPNcricinfo’s Android installs continued to grow.
+              The app had already crossed 10M installs, reaching approximately 24.4M installs by September 2026,
+              according to third-party Google Play data.
             </p>
           </blockquote>
 
