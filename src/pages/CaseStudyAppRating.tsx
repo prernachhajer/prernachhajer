@@ -870,7 +870,7 @@ const CaseStudyAppRating = () => {
             Clarity is a design responsibility, not a subtraction exercise.
           </motion.h2>
 
-          <blockquote className={`pl-5 ${surface.accentLine}`}>
+          <blockquote className={`pl-5 mt-10 ${surface.accentLine}`}>
             <p className="text-lg leading-relaxed">
               “During the period surrounding the app's rating recovery from approximately 3.4–3.5 to 4.6+,
               ESPNcricinfo's Android install base continued to grow substantially. The app was already above 10M
