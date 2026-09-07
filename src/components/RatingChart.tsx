@@ -21,7 +21,7 @@ Chart.register(
   Tooltip,
   Legend,
   Title,
-  ChartDataLabels
+  ChartDataLabels,
 );
 
 const RED = "#e34948";
@@ -36,12 +36,11 @@ export function RatingChart() {
     if (!canvasRef.current) return;
 
     const labels = ["2022", "2023", "2024", "2024 (late)", "2025 (early)", "2025"];
-    const data = [4, 3.7, 3.4, 4, 4.2, 4.6];
+    const data = [4, 3.7, 3.4, 4, 4.2, 4.5];
     const lowIndex = 2;
     const turnIndex = 3;
 
-    const colorFor = (i: number) =>
-      i <= lowIndex ? RED : i === turnIndex ? AMBER : GREEN;
+    const colorFor = (i: number) => (i <= lowIndex ? RED : i === turnIndex ? AMBER : GREEN);
 
     chartRef.current = new Chart(canvasRef.current, {
       type: "line",
@@ -60,15 +59,12 @@ export function RatingChart() {
                 if (ctx.p0DataIndex === lowIndex) return AMBER;
                 return GREEN;
               },
-              borderDash: (ctx) =>
-                ctx.p0DataIndex < lowIndex ? [6, 4] : undefined,
+              borderDash: (ctx) => (ctx.p0DataIndex < lowIndex ? [6, 4] : undefined),
             },
-            pointBackgroundColor: (ctx) =>
-              colorFor(ctx.dataIndex),
+            pointBackgroundColor: (ctx) => colorFor(ctx.dataIndex),
             pointBorderColor: "#fcfcfb",
             pointBorderWidth: 2,
-            pointRadius: (ctx) =>
-              ctx.dataIndex === lowIndex ? 9 : 6,
+            pointRadius: (ctx) => (ctx.dataIndex === lowIndex ? 9 : 6),
           },
         ],
       },
@@ -124,7 +120,7 @@ export function RatingChart() {
       <canvas
         ref={canvasRef}
         role="img"
-        aria-label="Line chart of app rating from 2022 to 2025: red dashed decline to a low of 3.4 in 2024, amber for the first recovery step to 4.0, then green for the continued climb to 4.6"
+        aria-label="Line chart of app rating from 2022 to 2025: red dashed decline to a low of 3.4 in 2024, amber for the first recovery step to 4.0, then green for the continued climb to 4.5"
       />
     </div>
   );
