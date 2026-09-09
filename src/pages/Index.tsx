@@ -686,17 +686,6 @@ const Index = () => {
                     <span className="shrink-0 text-[clamp(0.9rem,1.1vw,1.1rem)] text-muted-foreground">{cs.year}</span>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4 mt-3">
-                    {cs.tags?.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {cs.statNum && (
                     <>
                       <div className="mt-2 text-[clamp(0.95rem,1.15vw,1.1rem)] text-muted-foreground">
@@ -706,6 +695,17 @@ const Index = () => {
                       </div>
                     </>
                   )}
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4 mt-3">
+                  {cs.tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             );
