@@ -132,7 +132,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "daily users",
     year: "2024-25",
     link: "/case-study/match-page",
-    tags: ["IA", "Navigation", "Redesign"],
+    tags: ["IA", "PERFORMANCE", "Redesign"],
   },
 
   {
@@ -146,7 +146,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "users",
     year: "2025",
     link: "/case-study/app-rating",
-    tags: ["IA", "Navigation", "Redesign"],
+    tags: ["REDUCE CLUTTER", "PERFORMANCE", "Redesign"],
   },
   {
     num: "03 / 05",
@@ -159,7 +159,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "of evolution",
     year: "2022–26",
     link: "/case-study/homepage",
-    tags: ["IA", "Navigation", "Redesign"],
+    tags: ["HOME", "Navigation", "Redesign"],
   },
 
   {
@@ -187,7 +187,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
-    tags: ["IA", "Navigation", "Redesign"],
+    tags: ["IA", "SHORT FORM", "Redesign"],
   },
 ];
 
