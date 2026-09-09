@@ -187,7 +187,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
-    tags: ["IA", "SHORT FORM", "Redesign"],
+    tags: ["Casual Fan", "SHORT FORM"],
   },
 ];
 
