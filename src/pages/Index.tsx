@@ -116,7 +116,7 @@ type CaseStudy = {
   statLabel: string;
   year: string;
   link: string;
-  tags?: string;
+  tags?: string[];
   wip?: boolean;
 };
 
@@ -691,7 +691,7 @@ const Index = () => {
                       </div>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {cs.tags.map((tag) => (
+                        {cs.tags?.map((tag) => (
                           <span
                             key={tag}
                             className="text-xs tracking-[0.05em] uppercase text-muted-foreground py-[5px] px-3 border border-border rounded-full group-hover:text-primary group-hover:border-primary/25 transition-colors"
