@@ -146,7 +146,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "app downloads",
     year: "2025",
     link: "/case-study/app-rating",
-    tags: ["UX", "PERFORMANCE"],
+    tags: ["UX ENHANCEMENT", "APP RATING"],
   },
   {
     num: "03 / 05",
