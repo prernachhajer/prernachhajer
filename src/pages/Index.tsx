@@ -173,7 +173,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "files in system",
     year: "2021–24",
     link: "/case-study/design-system",
-    tags: ["IA", "Navigation", "Redesign"],
+    tags: ["DESIGN SYSTEM", "SYSTEM THINKING", "Redesign"],
   },
 
   {
