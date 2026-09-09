@@ -116,6 +116,7 @@ type CaseStudy = {
   statLabel: string;
   year: string;
   link: string;
+  tags?: string;
   wip?: boolean;
 };
 
