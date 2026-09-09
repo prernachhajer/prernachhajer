@@ -22,9 +22,9 @@ import scorecardMediaAsset from "@/assets/Scorecard-media.png";
 import commsMediaAsset from "@/assets/Comms-media.png";
 import liveContentAsset from "@/assets/Live-content.png";
 import summaryContentAsset from "@/assets/Summary-content.png";
-import userPersonaAsset from "@/assets/user-persona.png.asset.json";
-import rohanPersonaAsset from "@/assets/rohan-persona.png.asset.json";
-import karanPersonaAsset from "@/assets/karan-persona.png.asset.json";
+import userPersonaImg from "@/assets/user-persona.png";
+import rohanPersonaImg from "@/assets/rohan-persona.png";
+import karanPersonaImg from "@/assets/karan-persona.png";
 
 const fade = animation.fade;
 
@@ -463,7 +463,7 @@ const CaseStudyMatchPage = () => {
               behaviour="Visits repeatedly during live games"
               pain="Too much information to process quickly"
               opportunity="Surface what matters most"
-              imageUrl={rohanPersonaAsset.url}
+              imageUrl={rohanPersonaImg}
             />
             <PersonaCard
               name="Mittul Desai"
@@ -472,7 +472,7 @@ const CaseStudyMatchPage = () => {
               behaviour="Reads previews and analysis"
               pain="Relevant content is hard to discover"
               opportunity="Improve discovery"
-              imageUrl={userPersonaAsset.url}
+              imageUrl={userPersonaImg}
             />
             <PersonaCard
               name="Sana Khan"
@@ -481,7 +481,7 @@ const CaseStudyMatchPage = () => {
               behaviour="Visits during major events"
               pain="Experience can feel overwhelming"
               opportunity="Simplify and habit forming"
-              imageUrl={karanPersonaAsset.url}
+              imageUrl={karanPersonaImg}
             />
           </div>
           <div className="mt-10">
