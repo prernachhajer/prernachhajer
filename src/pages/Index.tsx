@@ -694,7 +694,7 @@ const Index = () => {
                         <span className="gap-5 px-1.5">{cs.statLabel}</span>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 mb-4 mt-6">
+                      <div className="flex flex-wrap gap-2 mb-4 mt-3">
                         {cs.tags?.map((tag) => (
                           <span
                             key={tag}
