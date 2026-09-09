@@ -197,7 +197,7 @@ const caseStudies: CaseStudy[] = [
 
 const quickStories: { title: string; tag: string; status: string; link?: string }[] = [
   {
-    title: "StatsGuru: migrating a legacy tool to NewStack",
+    title: "StatsGuru + CricGPT: from filters to conversation",
     tag: "Legacy → Modern",
     //status: "coming-soon",
     status: "read",
