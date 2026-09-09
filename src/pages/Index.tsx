@@ -132,7 +132,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "daily users",
     year: "2024-25",
     link: "/case-study/match-page",
-    tags: ["Information Architecture", "Navigation", "Redesign"],
+    tags: ["IA", "Navigation", "Redesign"],
   },
 
   {
@@ -146,6 +146,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "users",
     year: "2025",
     link: "/case-study/app-rating",
+    tags: ["IA", "Navigation", "Redesign"],
   },
   {
     num: "03 / 05",
@@ -158,6 +159,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "of evolution",
     year: "2022–26",
     link: "/case-study/homepage",
+    tags: ["IA", "Navigation", "Redesign"],
   },
 
   {
@@ -171,6 +173,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "files in system",
     year: "2021–24",
     link: "/case-study/design-system",
+    tags: ["IA", "Navigation", "Redesign"],
   },
 
   {
@@ -184,6 +187,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "engagement",
     year: "2024",
     link: "/case-study/quick-reads",
+    tags: ["IA", "Navigation", "Redesign"],
   },
 ];
 
@@ -690,7 +694,7 @@ const Index = () => {
                         <span className="gap-5 px-1.5">{cs.statLabel}</span>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="flex flex-wrap gap-2 mb-4 mt-6">
                         {cs.tags?.map((tag) => (
                           <span
                             key={tag}
