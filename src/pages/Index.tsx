@@ -193,9 +193,9 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
   {
     title: "StatsGuru: migrating a legacy tool to NewStack",
     tag: "Legacy → Modern",
-    status: "coming-soon",
-    //status: "read",
-    //link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
+    //status: "coming-soon",
+    status: "read",
+    link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
   },
   {
     title: "Stats dashboard: publishable cricket data at scale",
