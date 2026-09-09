@@ -131,6 +131,7 @@ const caseStudies: CaseStudy[] = [
     statLabel: "daily users",
     year: "2024-25",
     link: "/case-study/match-page",
+    tags: ["Information Architecture", "Navigation", "Redesign"],
   },
 
   {
