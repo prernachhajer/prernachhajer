@@ -3,267 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StatsGuru + CricGPT — Case Study</title>
+<title>StatsGuru + CricGPT — From Filters to Conversation | Prerna Chhajer</title>
+<meta name="description" content="Case study: rebuilding ESPNcricinfo's StatsGuru for mobile and layering CricGPT on top — turning filter-heavy queries into plain-language conversation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --pitch: #16302A;
-    --pitch-deep: #0E211C;
-    --paper: #F1EEE4;
-    --paper-dim: #E7E2D3;
-    --ink: #1B1F1D;
-    --ink-soft: #52584F;
-    --amber: #B8862E;
-    --line: rgba(27,31,29,0.14);
-    --line-strong: rgba(27,31,29,0.28);
+    --background:#F9F7F3;
+    --foreground:#14171F;
+    --card:#F4F1EB;
+    --muted-fg:#67707E;
+    --border:#DCD9D2;
+    --primary:#E8552B;
+    --dark:#0F1219;
+    --dark-fg:#EDEAE3;
+    --font-display:"Source Serif 4", Georgia, serif;
+    --font-body:"Geist", system-ui, sans-serif;
+    --font-mono:"JetBrains Mono", ui-monospace, monospace;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    line-height:1.55;
+    background:var(--background);
+    color:var(--foreground);
+    font-family:var(--font-body);
+    font-size:1.0625rem;
+    line-height:1.7;
+    letter-spacing:0.01em;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
-  h1,h2,h3{font-family:'Newsreader', serif;font-weight:500;margin:0;color:var(--ink);}
+  .wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem;}
+  @media(min-width:768px){.wrap{padding:0 3.5rem;}}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:0.015em;margin:0;}
+
+  .label{
+    font-family:var(--font-mono);
+    font-size:0.6875rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--primary);
+  }
 
   /* HERO */
-  .hero{
-    background:var(--pitch);
-    color:var(--paper);
-    padding:88px 0 64px;
-  }
-  .hero .kicker{
-    font-size:14px;
-    color:var(--amber);
-    letter-spacing:0.02em;
-    margin-bottom:18px;
-    font-weight:500;
-  }
+  .hero{padding:7rem 0 4rem;border-bottom:1px solid var(--border);}
   .hero h1{
-    font-size:46px;
-    line-height:1.12;
-    max-width:11.5em;
-    color:var(--paper);
+    font-size:clamp(2.5rem,5.5vw,4.75rem);
+    line-height:1.05;
+    margin-top:1.5rem;
+    max-width:14ch;
   }
+  .hero h1 em{font-style:italic;color:var(--primary);}
   .hero .dek{
-    margin-top:22px;
-    font-size:18px;
-    color:rgba(241,238,228,0.82);
-    max-width:640px;
-    font-weight:400;
+    margin-top:1.75rem;
+    font-size:1.125rem;
+    color:var(--muted-fg);
+    max-width:60ch;
   }
   .hero-stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    column-gap:24px;
-    margin-top:56px;
-    border-top:1px solid rgba(241,238,228,0.2);
-    padding-top:24px;
+    gap:1.5rem;
+    margin-top:4rem;
+    padding-top:1.75rem;
+    border-top:1px solid var(--border);
   }
-  .hero-stats div{padding-left:24px;border-left:1px solid rgba(241,238,228,0.15);}
-  .hero-stats div:first-child{padding-left:0;border-left:none;}
-  .hero-stats .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--paper);}
-  .hero-stats .lbl{font-size:12.5px;color:rgba(241,238,228,0.6);margin-top:4px;}
+  .hero-stats .num{font-family:var(--font-display);font-size:1.125rem;line-height:1.35;}
+  .hero-stats .lbl{font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted-fg);margin-top:0.5rem;}
 
-  /* SECTIONS */
-  section{padding:56px 0;}
-  section + section{border-top:1px solid var(--line);}
-  .eyebrow{font-size:13px;color:var(--amber);font-weight:600;margin-bottom:10px;}
-  .section-title{font-size:28px;max-width:16em;}
-  .section-body{margin-top:16px;max-width:64ch;color:var(--ink-soft);font-size:16px;}
+  section{padding:5rem 0;}
+  section + section{border-top:1px solid var(--border);}
+  .section-title{font-size:clamp(1.75rem,3.5vw,2.75rem);line-height:1.1;max-width:18ch;margin-top:0.75rem;}
+  .section-body{margin-top:1.25rem;max-width:64ch;color:var(--muted-fg);}
 
-  /* WHY IT MATTERS */
-  .why-list{
-    margin-top:24px;
-    display:flex;
-    flex-direction:column;
-    gap:0;
-  }
+  /* LISTS */
+  .why-list{margin:2rem 0 0;padding:0;}
   .why-list li{
     list-style:none;
-    padding:16px 0;
-    border-top:1px solid var(--line);
+    padding:1.125rem 0;
+    border-top:1px solid var(--border);
     display:flex;
-    gap:20px;
-    font-size:16px;
+    gap:1.25rem;
   }
-  .why-list li:last-child{border-bottom:1px solid var(--line);}
-  .why-list .mark{color:var(--amber);font-family:'Newsreader',serif;font-style:italic;font-size:18px;flex-shrink:0;width:1.2em;}
+  .why-list li:last-child{border-bottom:1px solid var(--border);}
+  .why-list .mark{color:var(--primary);font-family:var(--font-display);font-style:italic;flex-shrink:0;}
 
   /* PROBLEM GRID */
-  .problem-grid{
-    margin-top:28px;
-    display:flex;
-    flex-direction:column;
-    border-top:1px solid var(--line-strong);
-  }
+  .problem-grid{margin-top:2rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
   .problem-cell{
-    padding:24px 0;
-    border-bottom:1px solid var(--line-strong);
-    display:grid;
-    grid-template-columns:170px 1fr;
-    gap:28px;
-    align-items:baseline;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:1rem;
+    padding:1.75rem;
   }
-  .problem-cell .cell-label{font-size:13px;color:var(--amber);font-weight:600;letter-spacing:0.01em;}
-  .problem-cell p{margin:0;font-size:15px;color:var(--ink-soft);max-width:52ch;}
+  .problem-cell .cell-label{font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);}
+  .problem-cell p{margin:0.75rem 0 0;font-size:0.9375rem;color:var(--muted-fg);}
 
   /* PRINCIPLE */
-  .principle{
-    background:var(--pitch);
-    color:var(--paper);
-    padding:64px 0;
-    border-bottom:none;
-  }
-  .principle .wrap{text-align:left;}
+  .principle{background:var(--dark);color:var(--dark-fg);padding:5rem 0;}
   .principle blockquote{
     margin:0;
-    font-family:'Newsreader',serif;
+    font-family:var(--font-display);
     font-style:italic;
-    font-size:28px;
-    line-height:1.45;
-    max-width:15em;
-    color:var(--paper);
+    font-size:clamp(1.75rem,3.5vw,2.75rem);
+    line-height:1.25;
+    max-width:16ch;
   }
-  .principle .attribution{margin-top:20px;font-size:14px;color:rgba(241,238,228,0.55);font-family:'IBM Plex Sans',sans-serif;font-style:normal;}
+  .principle .attribution{margin-top:1.5rem;font-size:1rem;color:rgba(237,234,227,0.6);max-width:60ch;}
 
-  /* PHASE HEADER */
-  .phase-header{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin-bottom:6px;
-  }
+  /* PHASE */
+  .phase-header{display:flex;align-items:center;gap:0.875rem;flex-wrap:wrap;}
   .phase-tag{
-    font-size:13px;
-    font-weight:600;
-    color:var(--paper);
-    background:var(--pitch);
-    padding:4px 10px;
-    border-radius:2px;
+    font-family:var(--font-mono);
+    font-size:0.6875rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--primary);
+    border:1px solid var(--primary);
+    border-radius:999px;
+    padding:0.25rem 0.75rem;
   }
-  .phase-who{margin-top:18px;font-size:15px;color:var(--ink-soft);}
-  .phase-who strong{color:var(--ink);font-weight:600;}
+  .phase-who{margin-top:1.5rem;color:var(--muted-fg);max-width:64ch;}
+  .phase-who strong{color:var(--foreground);font-weight:500;}
 
-  /* DECISIONS LIST */
+  /* DECISIONS */
   .decision{
-    padding:22px 0;
-    border-top:1px solid var(--line);
+    padding:1.5rem 0;
+    border-top:1px solid var(--border);
     display:grid;
-    grid-template-columns:32px 1fr;
-    gap:18px;
+    grid-template-columns:2.5rem 1fr;
+    gap:1rem;
   }
-  .decision .n{font-family:'Newsreader',serif;font-size:16px;color:var(--amber);}
-  .decision h4{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:16px;margin:0 0 6px;}
-  .decision p{margin:0;font-size:15px;color:var(--ink-soft);}
+  .decision .n{font-family:var(--font-mono);font-size:0.75rem;color:var(--primary);padding-top:0.35rem;}
+  .decision h4{font-family:var(--font-display);font-size:1.25rem;margin:0 0 0.4rem;}
+  .decision p{margin:0;font-size:0.9375rem;color:var(--muted-fg);max-width:62ch;}
   .decision .tradeoff{
-    margin-top:10px;
-    padding-left:14px;
-    border-left:2px solid var(--amber);
-    font-size:14px;
-    color:var(--ink-soft);
+    margin-top:0.875rem;
+    padding-left:0.875rem;
+    border-left:2px solid var(--primary);
+    font-size:0.875rem;
+    color:var(--muted-fg);
+    max-width:60ch;
   }
-  .decision .tradeoff em{font-style:normal;color:var(--amber);font-weight:600;}
+  .decision .tradeoff em{font-style:normal;color:var(--primary);font-weight:500;}
 
-  /* SEGMENT TABLE */
-  .segment-table{
-    margin:24px 0 8px;
-    width:100%;
-    border-collapse:collapse;
-    font-size:14.5px;
-  }
-  .segment-table + .decision{border-top:none;margin-top:28px;padding-top:0;}
+  /* TABLE */
+  .segment-table{margin:1.5rem 0 0.5rem;width:100%;border-collapse:collapse;font-size:0.9375rem;}
   .segment-table th{
     text-align:left;
-    font-weight:600;
-    font-size:12.5px;
-    color:var(--ink-soft);
-    padding:10px 14px 10px 0;
-    border-bottom:1px solid var(--line-strong);
+    font-family:var(--font-mono);
+    font-weight:500;
+    font-size:0.6875rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted-fg);
+    padding:0.625rem 1rem 0.625rem 0;
+    border-bottom:1px solid var(--border);
   }
   .segment-table td{
-    padding:14px 14px 14px 0;
-    border-bottom:1px solid var(--line);
+    padding:1rem 1rem 1rem 0;
+    border-bottom:1px solid var(--border);
     vertical-align:top;
-    color:var(--ink-soft);
+    color:var(--muted-fg);
   }
-  .segment-table td:first-child{color:var(--ink);font-weight:500;}
-  .subscription{
-    display:inline-block;
-    font-size:12px;
-    padding:2px 8px;
-    border-radius:2px;
-    font-weight:600;
-  }
-  .sub-high{background:rgba(184,134,46,0.16);color:var(--amber);}
-  .sub-med{background:rgba(27,31,29,0.08);color:var(--ink-soft);}
+  .segment-table td:first-child{color:var(--foreground);font-weight:500;}
 
   /* IMPACT */
-  .impact-row{
-    margin-top:24px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    column-gap:32px;
-    border-top:1px solid var(--line-strong);
-  }
-  .impact-cell{
-    padding:22px 0 0 32px;
-    border-left:1px solid var(--line-strong);
-  }
-  .impact-cell:first-child{padding-left:0;border-left:none;}
-  .impact-cell .num{font-family:'Newsreader',serif;font-size:19px;line-height:1.3;color:var(--pitch);}
-  .impact-cell .desc{margin-top:6px;font-size:14px;color:var(--ink-soft);}
+  .impact-row{margin-top:2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .impact-cell{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.75rem;}
+  .impact-cell .num{font-family:var(--font-display);font-size:1.25rem;line-height:1.3;}
+  .impact-cell .desc{margin-top:0.625rem;font-size:0.9375rem;color:var(--muted-fg);}
 
   .placeholder-shot{
-    margin-top:32px;
-    background:var(--paper-dim);
-    border:1px dashed var(--line-strong);
-    border-radius:2px;
-    height:220px;
+    margin-top:2.5rem;
+    background:var(--card);
+    border:1px dashed var(--border);
+    border-radius:1rem;
+    height:15rem;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:13px;
-    color:var(--ink-soft);
+    font-family:var(--font-mono);
+    font-size:0.6875rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted-fg);
   }
 
-  footer{padding:40px 0;text-align:left;}
-  footer p{font-size:13px;color:var(--ink-soft);}
+  footer{padding:3rem 0;border-top:1px solid var(--border);}
+  footer p{font-size:0.875rem;color:var(--muted-fg);margin:0;}
 
   @media(max-width:640px){
-    .hero h1{font-size:32px;}
-    .hero-stats{grid-template-columns:repeat(2,1fr);row-gap:24px;}
-    .hero-stats div:nth-child(2n){border-left:none;padding-left:0;}
-    .problem-cell{grid-template-columns:1fr;gap:6px;}
-    .impact-row{grid-template-columns:1fr;row-gap:20px;}
-    .impact-cell{border-left:none;padding-left:0;}
-    .principle blockquote{font-size:22px;}
+    .hero{padding:5rem 0 3rem;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);row-gap:1.5rem;}
+    .problem-grid,.impact-row{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
 
-<div class="hero">
+<header class="hero">
   <div class="wrap">
-    <div class="kicker">Case Study — ESPNCricinfo</div>
-    <h1>StatsGuru + CricGPT: From Filters to Conversation</h1>
+    <div class="label">Case Study — ESPNcricinfo</div>
+    <h1>StatsGuru + CricGPT: from filters to <em>conversation</em></h1>
     <p class="dek">Cricket knowledge is difficult to access. Fans know the score, but not the context. StatsGuru could close that gap — but it sat desktop-only, on a legacy stack, known to almost no one outside a small loyal base.</p>
     <div class="hero-stats">
-      <div><div class="num">Desktop → Mobile</div><div class="lbl">where the tool actually lives now</div></div>
-      <div><div class="num">Filters → Conversation</div><div class="lbl">how users get to an answer</div></div>
-      <div><div class="num">Power users → Everyone</div><div class="lbl">who the tool now reaches</div></div>
+      <div><div class="num">Desktop → Mobile</div><div class="lbl">where the tool lives now</div></div>
+      <div><div class="num">Filters → Conversation</div><div class="lbl">how users get an answer</div></div>
+      <div><div class="num">Power users → Everyone</div><div class="lbl">who the tool reaches</div></div>
       <div><div class="num">Reach, then access</div><div class="lbl">two phases, one foundation</div></div>
     </div>
   </div>
-</div>
+</header>
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">Why StatsGuru matters</div>
+    <div class="label">Why StatsGuru matters</div>
     <ul class="why-list">
       <li><span class="mark">—</span> Core tool for pro cricket fans to generate stat tables</li>
       <li><span class="mark">—</span> Supports analysis, predictions, and fantasy strategy</li>
@@ -274,7 +229,7 @@
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">The problem</div>
+    <div class="label">The problem</div>
     <h2 class="section-title">A legacy tool that couldn't be found — or queried</h2>
     <div class="problem-grid">
       <div class="problem-cell">
@@ -309,11 +264,12 @@
   <div class="wrap">
     <div class="phase-header">
       <span class="phase-tag">Phase 1</span>
-      <h2 class="section-title" style="font-size:24px;">Foundation — new stack, mobile, UX overhaul</h2>
+      <div class="label">Foundation</div>
     </div>
+    <h2 class="section-title">New stack, mobile, UX overhaul</h2>
     <p class="phase-who"><strong>Who this phase was for:</strong> Cricket researcher, Analyst, Creator/Journalist — people who already knew what they were looking for, but were blocked by platform and interface.</p>
 
-    <div class="eyebrow" style="margin-top:32px;">Built for</div>
+    <div class="label" style="margin-top:2.5rem;">Built for</div>
     <table class="segment-table">
       <thead>
         <tr><th>Segment</th><th>Pain point</th><th>Job to be done</th></tr>
@@ -326,7 +282,7 @@
     </table>
 
     <div class="decision">
-      <div class="n">1</div>
+      <div class="n">01</div>
       <div>
         <h4>Migrate to a new stack, with an API built for real data access</h4>
         <p>Reduced tech debt, made StatsGuru's data queryable for the first time — not just displayable.</p>
@@ -334,7 +290,7 @@
       </div>
     </div>
     <div class="decision">
-      <div class="n">2</div>
+      <div class="n">02</div>
       <div>
         <h4>Build for mobile, not just port the desktop UI</h4>
         <p>Reached the 80%+ of users who never touched StatsGuru because it lived on desktop only.</p>
@@ -342,7 +298,7 @@
       </div>
     </div>
     <div class="decision">
-      <div class="n">3</div>
+      <div class="n">03</div>
       <div>
         <h4>Add search alongside filters</h4>
         <p>Type a player name instead of building a query from scratch.</p>
@@ -350,14 +306,14 @@
       </div>
     </div>
     <div class="decision">
-      <div class="n">4</div>
+      <div class="n">04</div>
       <div>
         <h4>Advanced search, cross-vertical</h4>
         <p>One keyword search across teams, players, tournaments, matches — previously desktop-only, now on mobile too.</p>
       </div>
     </div>
     <div class="decision">
-      <div class="n">5</div>
+      <div class="n">05</div>
       <div>
         <h4>Overhaul filter-building for power users</h4>
         <p>Multi-team selection replacing one-at-a-time, simpler date-range selection, smoother query editing for those applying 10–20 filters.</p>
@@ -365,14 +321,14 @@
       </div>
     </div>
     <div class="decision">
-      <div class="n">6</div>
+      <div class="n">06</div>
       <div>
         <h4>Rework the results experience</h4>
         <p>Editable filters in place, flexible output types, adjustable results-per-page, better pagination, progressive disclosure.</p>
       </div>
     </div>
     <div class="decision">
-      <div class="n">7</div>
+      <div class="n">07</div>
       <div>
         <h4>Drive discovery, not just build it</h4>
         <p>A floating CTA and dedicated block added to the homepage.</p>
@@ -386,11 +342,12 @@
   <div class="wrap">
     <div class="phase-header">
       <span class="phase-tag">Phase 2</span>
-      <h2 class="section-title" style="font-size:24px;">CricGPT — an AI layer for everyone</h2>
+      <div class="label">CricGPT</div>
     </div>
+    <h2 class="section-title">An AI layer for everyone</h2>
     <p class="phase-who"><strong>Who this phase was for:</strong> the same Cricket researcher, Analyst, and Creator/Journalist Phase 1 was built for — plus three new audiences the AI layer made possible for the first time.</p>
 
-    <div class="eyebrow" style="margin-top:32px;">Newly added</div>
+    <div class="label" style="margin-top:2.5rem;">Newly added</div>
     <table class="segment-table">
       <thead>
         <tr><th>Segment</th><th>Pain point</th><th>Job to be done</th></tr>
@@ -403,7 +360,7 @@
     </table>
 
     <div class="decision">
-      <div class="n">8</div>
+      <div class="n">08</div>
       <div>
         <h4>Layer CricGPT on top of the now-queryable data</h4>
         <p>Led/designed by Prerna — letting users ask cricket questions in plain language instead of building a query at all.</p>
@@ -416,7 +373,7 @@
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">Impact</div>
+    <div class="label">Impact</div>
     <h2 class="section-title">Reaching cricket fans who never touched StatsGuru</h2>
     <p class="section-body">The clearest result: CricGPT is reaching people StatsGuru never did. Casual fans, team loyalists, and returning users — who'd never have opened a filter-heavy stats tool — now get the same underlying depth just by asking a question.</p>
     <div class="impact-row">
