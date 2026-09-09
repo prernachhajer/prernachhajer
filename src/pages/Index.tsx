@@ -198,7 +198,7 @@ const caseStudies: CaseStudy[] = [
 const quickStories: { title: string; tag: string; status: string; link?: string }[] = [
   {
     title: "StatsGuru + CricGPT: from filters to conversation",
-    tag: "Legacy → Modern",
+    tag: "AI layer",
     //status: "coming-soon",
     status: "read",
     link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
