@@ -236,25 +236,35 @@ const CaseStudyDesignSystem = () => {
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
           >
             {[
-              { num: "01", year: "2021–22", title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
-              { num: "02", year: "2022", title: "System restructure", desc: "Fewer variants, more power" },
+              {
+                num: "01",
+                year: "2021–22",
+                title: "Convince, align, launch",
+                desc: "Built the case, then launched the design system",
+              },
+              {
+                num: "02",
+                year: "2022",
+                title: "System restructure",
+                desc: "Restructured the existing design system into fewer, more powerful components",
+              },
               {
                 num: "03",
                 year: "2023",
                 title: "Make it self-sufficient",
-                desc: "Documented so it worked without a designer in the room",
+                desc: "Documented the design system so it worked without a designer in the room",
               },
               {
                 num: "04",
                 year: "2022–24",
                 title: "Remove, simplify, sustain",
-                desc: "Cut what wasn't earning its place",
+                desc: "Simplified the design system by cutting what wasn't earning its place",
               },
               {
                 num: "05",
                 year: "2024–25",
                 title: "The overhaul",
-                desc: "Three years later, new fonts and icons on the same foundation",
+                desc: "Three years later, overhauled the design system's fonts and icons",
               },
             ].map((phase, i, arr) => {
               const isLast = i === arr.length - 1;
