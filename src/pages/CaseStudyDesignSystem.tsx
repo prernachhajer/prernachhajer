@@ -228,8 +228,8 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* ROADMAP — five-phase overview */}
-      <Section label="ROADMAP: Five-phase overview" classname={""}>
-        <div className={`${layout.container} mx-auto border-b border border`}>
+      <Section label="ROADMAP: Five-phase overview">
+        <div className={`${layout.container} mx-auto border-b border-border`}>
           <h2 className="sr-only">A five-step roadmap of the design system case study phases</h2>
           <div className="flex flex-wrap py-4">
             {[
