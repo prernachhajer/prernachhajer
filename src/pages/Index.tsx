@@ -215,13 +215,11 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     tag: "AI layer",
     status: "read",
     link: "#/story/cricgpt",
-    //link: `${import.meta.env.BASE_URL}cricgpt-case-study.html`,
   },
   {
     title: "From zero to shipped: how I built my entire portfolio with AI",
-    tag: "Design System",
+    tag: "AI",
     status: "read",
-
     link: "#/blog/ai-portfolio",
   },
 
@@ -233,11 +231,8 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     // status: "read",
     // link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
   },
-  //{
-  //  title: "Push notifications: rethinking match-day alerts",
-  //  tag: "Product + design",
-  //   status: "coming-soon",
-  //},
+  
+
   {
     title: "Dynamic Island: live scores on the lock screen",
     tag: "Native-only",
