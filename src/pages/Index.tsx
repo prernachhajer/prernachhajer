@@ -560,7 +560,7 @@ const Index = () => {
                   className="text-[clamp(1.125rem,1.9vw,1.5rem)] leading-[1.45] text-foreground"
                   style={{ fontFamily: t.displayFont }}
                 >
-                  From 0-to-1 startups to platforms at 100M+ scale — I've built design systems from scratch, mentored
+                  From 0-to-1 startups to platforms at 100M+ scale: I've built design systems from scratch, mentored
                   designers into leads, and shipped work that moved app ratings from 3.4 to 4.5. Now applying that same
                   rigor to AI-assisted design.
                 </p>
