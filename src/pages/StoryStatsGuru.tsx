@@ -8,7 +8,7 @@ const fade = animation.fade;
 
 const situation = [
   "It was Cricinfo's deepest stats tool. Type in a player, a team, a date range, and it handed you exactly the record you were after; the kind of precision that fantasy cricket players, analysts, and cricket researchers relied on constantly. The people who knew about it loved it. The problem was almost nobody knew about it. StatsGuru lived on desktop, running on a stack that hadn't been touched in years, at a time when most of Cricinfo's audience had already moved to mobile. A tool this good was reaching a sliver of the people it could have helped.",
-  "The deeper issue wasn't just visibility — it was structural. The old stack meant StatsGuru's data could be filtered and displayed, but never really queried. It was a one-way street: pick your filters, get your table, done. Nothing more could be built on top of it.",
+  "The deeper issue wasn't just visibility: it was structural. The old stack meant StatsGuru's data could be filtered and displayed, but never really queried. It was a one-way street: pick your filters, get your table, done. Nothing more could be built on top of it.",
 ];
 
 const before = [
@@ -63,7 +63,7 @@ const StoryStatsGuru = () => {
             className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.35] mb-8"
             style={{ fontFamily: t.displayFont }}
           >
-            There's a strange kind of problem in product design where the thing you build is genuinely excellent — and
+            There's a strange kind of problem in product design where the thing you build is genuinely excellent, and
             almost nobody uses it, not because it's bad, but because it's invisible. That was StatsGuru.
           </p>
           <div className="space-y-4 text-[0.9375rem] text-foreground/85 leading-[1.85]">
@@ -89,7 +89,7 @@ const StoryStatsGuru = () => {
             Rebuilding where no one would see it
           </h2>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            The rebuild started underneath, where no one would see it — a new stack, and an API designed from the ground
+            The rebuild started underneath, where no one would see it: a new stack and an API designed from the ground
             up to make the data properly accessible. Only once that was solid did the visible work begin.
           </p>
 
@@ -138,11 +138,11 @@ const StoryStatsGuru = () => {
 
           <p className="mt-10 text-[0.9375rem] text-foreground/85 leading-[1.85]">
             A mobile-first redesign, search added alongside the filters so a name alone was enough to start, and
-            advanced search that let one keyword pull results across teams, players, tournaments, and matches at once —
-            a capability that had only ever existed on desktop. For the power users still building twenty-filter
-            queries, multi-team selection replaced the old one-team-at-a-time limit, and the whole process of building
-            and editing a query got noticeably smoother. And because a rebuilt tool no one finds is still an invisible
-            tool, a homepage callout gave StatsGuru a real shot at being discovered.
+            advanced search that let one keyword pull results across teams, players, tournaments, and matches at once, a
+            capability that had only ever existed on desktop. For the power users still building twenty-filter queries,
+            multi-team selection replaced the old one-team-at-a-time limit, and the whole process of building and
+            editing a query got noticeably smoother. And because a rebuilt tool no one finds is still an invisible tool,
+            a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
 
           <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
