@@ -496,7 +496,7 @@ const CaseStudyDesignSystem = () => {
             className="text-3xl md:text-4xl font-normal mb-6 tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
-            Fewer variants, more power
+            Fewer components, more flexibility
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -506,8 +506,8 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            We used to have a different component for every use case. Now, because of figma properties, a few components
-            can handle all the use cases.
+            Our design system had a different component for almost every use case. With Figma properties, we
+            consolidated them into flexible components that could support multiple use cases.
           </motion.p>
         </div>
 
@@ -515,18 +515,18 @@ const CaseStudyDesignSystem = () => {
         <div className={impactGrid}>
           {[
             {
-              title: "Leaner system",
-              desc: "Multi-component structures collapsed into single, well-configured components.",
+              title: "Leaner design system",
+              desc: "Multiple component variants became fewer, more flexible components.",
               corner: "md:rounded-l-xl",
             },
             {
               title: "Faster Figma",
-              desc: "Better performance — less file bloat, faster loading, smoother handoffs.",
+              desc: "Less design-system bloat meant faster loading, smoother files, and easier handoffs.",
               corner: "",
             },
             {
               title: "Less cognitive load",
-              desc: "Less time spent choosing where to start. Easier to maintain and hand off.",
+              desc: "Fewer components to choose from made the design system easier to use and maintain.",
               corner: "md:rounded-r-xl",
             },
           ].map((card, i) => (
