@@ -222,22 +222,19 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     link: "#/blog/ai-portfolio",
   },
 
-    {
-    title: "Stats dashboard: publishable cricket data at scale
-",
+  {
+    title: "Stats dashboard: publishable cricket data at scale",
     tag: "B2B",
     status: "coming-soon",
     // status: "read",
     // link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
   },
-  
 
   {
     title: "Dynamic Island: live scores on the lock screen",
     tag: "Native-only",
     status: "coming-soon",
   },
-  
 ];
 
 // ─────────────────────────────────────────────
