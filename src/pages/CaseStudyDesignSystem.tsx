@@ -580,10 +580,9 @@ const CaseStudyDesignSystem = () => {
       {/* 05 — DOCUMENTATION: PHASE 3 */}
       <Section label="Phase 3: Document: Make it Self-sufficient">
         <Prose>
-          <h2>Documentation wasn't optional — the system needed to work without a designer in the room.</h2>
+          <h2>Documentation made the design system usable without a designer</h2>
           <p>
-            After the rebuild, we documented everything in ZeroHeight — usage, tokens, interaction states, and
-            guidelines for product and engineering.
+            After the rebuild, we documented the design system in ZeroHeight. Covering usage, tokens, interaction states, and guidelines for product and engineering.
           </p>
         </Prose>
 
@@ -674,7 +673,7 @@ const CaseStudyDesignSystem = () => {
             className="text-3xl md:text-4xl font-normal mb-6 tracking-[0.015em] text-background/90"
             style={{ fontFamily: t.displayFont }}
           >
-            Maintenance is part of the system
+            Keeping the design system lean over time
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -684,8 +683,7 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            Once a system is in active use, edge cases appear and unused variants accumulate. A component that worked
-            for three use cases doesn't quite work for a fourth.
+            As the design system evolved, unused variants, edge cases, and unnecessary complexity started to accumulate. We regularly cleaned it up to keep the system useful and consistent.
           </motion.p>
         </div>
 
@@ -694,26 +692,28 @@ const CaseStudyDesignSystem = () => {
             {[
               {
                 num: "01",
-                title: "Unused variants were quietly piling up",
+                title: "Removed unused variants",
                 desc: "Variants that weren't earning their place were cut, keeping the library lean.",
                 tag: "REMOVE",
               },
               {
                 num: "02",
-                title: "Simplified drifted components",
-                desc: "Components that had grown complex over time — like the table component — were brought back to clarity.",
+                title: "Simplified complex components",
+                desc: "Reduced complexity in components that had evolved over time, like tables.",
                 tag: "SIMPLIFY",
               },
               {
                 num: "03",
                 title: "Adjusted spacing & sizing\u00a0",
-                desc: "Where the system had more options than it needed, we reduced. Fewer choices, more consistency.",
+                desc: "Trimmed spacing and sizing options to improve consistency and reduce decisions.
+
+",
                 tag: "REDUCE",
               },
               {
                 num: "04",
-                title: "A system still needs attention after launch",
-                desc: "A system that isn't maintained becomes a system people work around. We gave it the same critical eye after launch as before.",
+                title: "Continued maintenance after launch",
+                desc: "Regular reviews kept the design system healthy and prevented teams from working around it.",
                 tag: "SUSTAIN",
               },
             ].map((insight, i) => (
