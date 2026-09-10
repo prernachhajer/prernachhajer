@@ -197,11 +197,16 @@ const caseStudies: CaseStudy[] = [
 
 const quickStories: { title: string; tag: string; status: string; link?: string }[] = [
   {
-    title: "StatsGuru + CricGPT: from filters to conversation",
-    tag: "AI layer",
-    //status: "coming-soon",
+    title: "StatsGuru: the tool everyone needed but almost no one found",
+    tag: "Foundation + mobile",
     status: "read",
     link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
+  },
+  {
+    title: "CricGPT: when the answer stops needing a form",
+    tag: "AI layer",
+    status: "read",
+    link: `${import.meta.env.BASE_URL}cricgpt-case-study.html`,
   },
   {
     title: "Stats dashboard: publishable cricket data at scale",
