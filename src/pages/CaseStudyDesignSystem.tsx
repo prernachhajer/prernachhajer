@@ -582,7 +582,8 @@ const CaseStudyDesignSystem = () => {
         <Prose>
           <h2>Documentation made the design system usable without a designer</h2>
           <p>
-            After the rebuild, we documented the design system in ZeroHeight. Covering usage, tokens, interaction states, and guidelines for product and engineering.
+            After the rebuild, we documented the design system in ZeroHeight. Covering usage, tokens, interaction
+            states, and guidelines for product and engineering.
           </p>
         </Prose>
 
@@ -683,7 +684,8 @@ const CaseStudyDesignSystem = () => {
             custom={1}
             className="text-background/80 leading-relaxed"
           >
-            As the design system evolved, unused variants, edge cases, and unnecessary complexity started to accumulate. We regularly cleaned it up to keep the system useful and consistent.
+            As the design system evolved, unused variants, edge cases, and unnecessary complexity started to accumulate.
+            We regularly cleaned it up to keep the system useful and consistent.
           </motion.p>
         </div>
 
@@ -705,9 +707,7 @@ const CaseStudyDesignSystem = () => {
               {
                 num: "03",
                 title: "Adjusted spacing & sizing",
-                desc: "Trimmed spacing and sizing options to improve consistency and reduce decisions.
-
-",
+                desc: "Trimmed spacing and sizing options to improve consistency and reduce decisions.",
                 tag: "REDUCE",
               },
               {
