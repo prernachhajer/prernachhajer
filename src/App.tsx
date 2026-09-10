@@ -14,6 +14,9 @@ import CaseStudyAppRating from "./pages/CaseStudyAppRating";
 import BlogDesignSystem from "./pages/BlogDesignSystem";
 import BlogAIPortfolio from "./pages/BlogAIPortfolio";
 
+import StoryCricGPT from "./pages/StoryCricGPT";
+import StoryStatsGuru from "./pages/StoryStatsGuru";
+
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
@@ -28,65 +31,38 @@ const App = () => (
       <ScrollToTop />
 
       <Routes>
-          {/* Homepage */}
-          <Route path="/" element={<Index />} />
+        {/* Homepage */}
+        <Route path="/" element={<Index />} />
 
-          {/* Case Studies */}
-          <Route
-            path="/case-study/homepage"
-            element={<CaseStudyHomepage />}
-          />
+        {/* Case Studies */}
+        <Route path="/case-study/homepage" element={<CaseStudyHomepage />} />
 
-          <Route
-            path="/case-study/design-system"
-            element={<CaseStudyDesignSystem />}
-          />
+        <Route path="/case-study/design-system" element={<CaseStudyDesignSystem />} />
 
-          <Route
-            path="/case-study/quick-reads"
-            element={<CaseStudyQuickReads />}
-          />
+        <Route path="/case-study/quick-reads" element={<CaseStudyQuickReads />} />
 
-          <Route
-            path="/case-study/match-page"
-            element={<CaseStudyMatchPage />}
-          />
+        <Route path="/case-study/match-page" element={<CaseStudyMatchPage />} />
 
-          <Route
-            path="/case-study/match-page-redesign"
-            element={<Navigate to="/case-study/match-page" replace />}
-          />
+        <Route path="/case-study/match-page-redesign" element={<Navigate to="/case-study/match-page" replace />} />
 
+        <Route path="/case-study/match-page-scaffold" element={<CaseStudyMatchPageScaffold />} />
 
-          <Route
-            path="/case-study/match-page-scaffold"
-            element={<CaseStudyMatchPageScaffold />}
-          />
+        <Route path="/case-study/app-rating" element={<CaseStudyAppRating />} />
 
-          <Route
-            path="/case-study/app-rating"
-            element={<CaseStudyAppRating />}
-          />
+        {/* Short Sroties */}
+        <Route path="/story/cricgpt" element={<StoryCricGPT />} />
+        <Route path="/story/statsguru" element={<StoryStatsGuru />} />
 
+        {/* Blog */}
+        <Route path="/blog/design-system" element={<BlogDesignSystem />} />
 
+        <Route path="/blog/ai-portfolio" element={<BlogAIPortfolio />} />
 
+        {/* Resume */}
+        <Route path="/resume" element={<Resume />} />
 
-          {/* Blog */}
-          <Route
-            path="/blog/design-system"
-            element={<BlogDesignSystem />}
-          />
-
-          <Route
-            path="/blog/ai-portfolio"
-            element={<BlogAIPortfolio />}
-          />
-
-          {/* Resume */}
-          <Route path="/resume" element={<Resume />} />
-
-          {/* Anything else */}
-          <Route path="*" element={<NotFound />} />
+        {/* Anything else */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   </TooltipProvider>
