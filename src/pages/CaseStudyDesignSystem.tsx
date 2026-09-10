@@ -553,8 +553,8 @@ const CaseStudyDesignSystem = () => {
           </div>
 
           <div className="mt-10">
-            <h2 className="mt-4">Result</h2>
-            <p>
+            <h2>Result</h2>
+            <p className="mt-4">
               Within weeks of launch, teams were assembling screens from the system instead of building components from
               zero — and several had started extending it with their own patterns on top, which is exactly what "shared
               infrastructure" was supposed to make possible.
