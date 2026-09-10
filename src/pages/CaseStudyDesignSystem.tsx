@@ -360,10 +360,7 @@ const CaseStudyDesignSystem = () => {
             variants={fade}
             className={`${layout.container} mx-auto mt-8`}
           >
-            <div
-              className="rounded-xl border border-border/30 overflow-hidden"
-              style={{ minHeight: "580px", maxHeight: "580px", overflowY: "auto" }}
-            >
+            <div className="rounded-xl border border-border/30 overflow-hidden">
               <img
                 src={dsNew}
                 alt="ZeroHeight documentation · component reference"
