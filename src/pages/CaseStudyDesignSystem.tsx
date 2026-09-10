@@ -144,9 +144,9 @@ const CaseStudyDesignSystem = () => {
               This is what we inherited.
             </h2>
             <p className="text-muted-foreground max-w-2xl mb-12">
-              In 2021, ESPN Cricinfo was scaling in every direction at once. We had a Figma component library — but it
-              was undocumented, and not built for what was coming. Dark mode, native mobile, Tailwind migration.
-              Incremental fixes wouldn't hold.
+              In 2021, ESPNcricinfo was scaling in every direction. We had a Figma component library, but it was
+              undocumented and not built for what was coming: dark mode, native mobile, and the Tailwind migration.
+              Incremental fixes wouldn’t be enough.
             </p>
           </motion.div>
 
