@@ -230,7 +230,7 @@ const CaseStudyDesignSystem = () => {
       {/* ROADMAP — five-phase overview */}
 
       <Section label=" ROADMAP: five-phase overview">
-        <div className={`${layout.container} !max-w-3xl mx-auto`} style={{ marginTop: "140px" }}>
+        <div className={`${layout.container} !max-w-4xl mx-auto`} style={{ marginTop: "140px" }}>
           <div
             className="grid gap-x-10"
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
