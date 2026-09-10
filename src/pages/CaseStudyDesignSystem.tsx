@@ -811,9 +811,7 @@ const CaseStudyDesignSystem = () => {
           >
             Three years later, we overhauled the system’s visual foundation.
           </motion.h2>
-  </div>
-         
-      
+        </div>
 
         {/* Typography + Iconography side by side */}
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-4`}>
@@ -832,8 +830,8 @@ const CaseStudyDesignSystem = () => {
               title: "Full icon library overhaul",
               items: [
                 "Rebuilt heavy icons with lighter, rounded forms.",
-                "Standardized stroke weights and grid alignment.,
-                "Replaced icons across components and states.", 
+                "Standardized stroke weights and grid alignment.",
+                "Replaced icons across components and states.",
               ],
             },
           ].map((card, i) => (
