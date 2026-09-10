@@ -811,7 +811,7 @@ const CaseStudyDesignSystem = () => {
           >
             Three years later, we overhauled the system’s visual foundation.
           </motion.h2>
-
+  </div>
           {/*    <div className="grid md:grid-cols-2 gap-4 mb-12">
             {[
               {
@@ -837,7 +837,7 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div> */}
-        </div>
+      
 
         {/* Typography + Iconography side by side */}
         <div className={`${layout.container} mx-auto mt-12 grid md:grid-cols-2 gap-4`}>
@@ -849,7 +849,6 @@ const CaseStudyDesignSystem = () => {
                 "Replaced heavy custom fonts with system fonts.",
                 "Reduced app weight and improved rendering.",
                 "Updated typography tokens, line heights, spacing, and hierarchy.",
-              
               ],
             },
             {
