@@ -519,7 +519,7 @@ const CaseStudyDesignSystem = () => {
                         <span className={`${t.labelSm} text-muted-foreground/70 pt-1 tabular-nums shrink-0`}>
                           {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <span className="text-muted-foreground leading-relaxed">{item}</span>
+                        <span className="text-muted-foreground leading-relaxed">{insight.item}</span>
                       </li>
                     ))}
                   </ul>
