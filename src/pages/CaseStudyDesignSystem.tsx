@@ -812,31 +812,7 @@ const CaseStudyDesignSystem = () => {
             Three years later, we overhauled the system’s visual foundation.
           </motion.h2>
   </div>
-          {/*    <div className="grid md:grid-cols-2 gap-4 mb-12">
-            {[
-              {
-                label: "THE TRIGGER",
-                text: "Reducing app size meant we could no longer ship a downloadable font family — so we needed a new typography approach that didn't rely on custom font files.",
-              },
-              {
-                label: "THE PROCESS",
-                text: "Competitive analysis across major news and sports platforms. Every option tested across four real page types — homepage, match page, commentary, article — not just previewed in isolation.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`bg-card border border-border/50 ${radius.cardSm} ${spacing.cardPad}`}
-              >
-                <h3 className={`${t.label} text-primary mb-4`}>{item.label}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.text}</p>
-              </motion.div>
-            ))}
-          </div> */}
+         
       
 
         {/* Typography + Iconography side by side */}
