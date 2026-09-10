@@ -231,10 +231,8 @@ const CaseStudyDesignSystem = () => {
 
       <Section label=" ROADMAP: five-phase overview">
         <div className={`${layout.container} mx-auto mt-30`}>
-          <h2 className="sr-only">A five-step timeline of the design system case study phases</h2>
-
           <div
-            className="grid gap-x-6 "
+            className="grid gap-x-6  mt-30"
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
           >
             {[
