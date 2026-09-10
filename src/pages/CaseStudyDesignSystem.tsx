@@ -176,7 +176,8 @@ const CaseStudyDesignSystem = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/80"
               style={{ fontFamily: t.displayFont }}
             >
-              One component library. No documentation. No responsiveness. Web and app teams were rebuilding the same patterns independently, with nothing shared underneath.
+              One component library. No documentation. No responsiveness. Web and app teams were rebuilding the same
+              patterns independently, with nothing shared underneath.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["No Scalable components", "No documentation", "Duplicated work"].map((tag) => (
@@ -206,7 +207,12 @@ const CaseStudyDesignSystem = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90"
               style={{ fontFamily: t.displayFont }}
             >
-              Build <em className="text-primary italic"> Build shared infrastructure; not just a component library; to make every team faster, every platform more consistent, and every feature easier to ship.
+              Build{" "}
+              <em className="text-primary italic">
+                {" "}
+                Build shared infrastructure; not just a component library; to make every team faster, every platform
+                more consistent, and every feature easier to ship.
+              </em>
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Independent teams", "Shared documentation", "Faster design velocity"].map((tag) => (
