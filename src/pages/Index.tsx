@@ -958,18 +958,20 @@ const Index = () => {
                 ))}
               </div>
             </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-              <div className="mb-10 rounded-xl overflow-hidden">
-                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
       {/* ─────────────────────────────────────────
           WRITING
-      ───────────────────────────────────────── */}
+      ───────────────────────────────────────── 
+      
+         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+              <div className="mb-10 rounded-xl overflow-hidden">
+                <img src={aboutPhoto} alt="Prerna Chhajer" className="w-full h-auto object-cover rounded-xl" />
+              </div>
+            </motion.div>
+      
+      */}
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
           <motion.div
