@@ -351,29 +351,28 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Launch screenshot placeholder */}
-          <div className={`${layout.container} mx-auto mt-24 !max-w-5xl`}>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fade}
-              className={`${layout.container} mx-auto mt-8`}
-            >
-              <div className="rounded-xl border border-border/30 overflow-hidden">
-                <img
-                  src={dsNew}
-                  alt="ZeroHeight documentation · component reference"
-                  className="w-full"
-                  draggable={false}
-                />
-              </div>
-              <p className="text-center text-s text-muted-foreground/80 mt-4 tracking-wide">
-                Phase 1: Design System · 2022 · Launch{" "}
-              </p>
-            </motion.div>
-          </div>
+        </div>
+        {/* Launch screenshot placeholder */}
+        <div className={`${layout.container} mx-auto mt-24 !max-w-5xl`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className={`${layout.container} mx-auto mt-8`}
+          >
+            <div className="rounded-xl border border-border/30 overflow-hidden">
+              <img
+                src={dsNew}
+                alt="ZeroHeight documentation · component reference"
+                className="w-full"
+                draggable={false}
+              />
+            </div>
+            <p className="text-center text-s text-muted-foreground/80 mt-4 tracking-wide">
+              Phase 1: Design System · 2022 · Launch{" "}
+            </p>
+          </motion.div>
         </div>
       </Section>
 
