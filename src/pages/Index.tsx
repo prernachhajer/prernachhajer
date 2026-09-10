@@ -200,9 +200,9 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     title: "What building a design system over the years really taught me",
     tag: "Design System",
     status: "read",
-    //link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
     link: "#/blog/design-system",
   },
+
   {
     title: "StatsGuru: the tool everyone needed but almost no one found",
     tag: "Foundation + mobile",
@@ -218,17 +218,25 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     //link: `${import.meta.env.BASE_URL}cricgpt-case-study.html`,
   },
   {
-    title: "Stats dashboard: publishable cricket data at scale",
+    title: "What building a design system over the years really taught me",
+    tag: "Design System",
+    status: "read",
+
+    link: "#/blog/ai-portfolio",
+  },
+
+  {
+    title: "From zero to shipped: how I built my entire portfolio with AI",
     tag: "B2B",
     status: "coming-soon",
     // status: "read",
     // link: `${import.meta.env.BASE_URL}stats-dashboard-case-study.html`,
   },
-  {
-    title: "Push notifications: rethinking match-day alerts",
-    tag: "Product + design",
-    status: "coming-soon",
-  },
+  //{
+  //  title: "Push notifications: rethinking match-day alerts",
+  //  tag: "Product + design",
+  //   status: "coming-soon",
+  //},
   {
     title: "Dynamic Island: live scores on the lock screen",
     tag: "Native-only",
