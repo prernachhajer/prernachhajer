@@ -991,9 +991,9 @@ const Index = () => {
               Design <em className="italic text-muted-foreground">thinking</em>
             </h2>
           </motion.div>
-
+          {/*
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-border rounded-[14px] overflow-hidden">
-            {/* Design System */}
+          
 
             <motion.div
               initial="hidden"
@@ -1025,9 +1025,9 @@ const Index = () => {
               </span>
             </motion.div>
 
-            {/* AI Portfolio */}
+            
 
-            <motion.div
+          <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -1056,7 +1056,7 @@ const Index = () => {
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
               </span>
             </motion.div>
-          </div>
+          </div>  */}
         </div>
       </section>
       {/* ─────────────────────────────────────────
