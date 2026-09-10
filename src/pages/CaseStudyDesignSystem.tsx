@@ -799,7 +799,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 07 — OVERHAUL: PHASE 5 */}
-      <Section label="Phase 5: The Overhaul">
+      <Section label="Phase 5: DESIGN SYSTEM OVERHAUL">
         <div className={`${layout.container} mx-auto`}>
           <motion.h2
             initial="hidden"
@@ -809,7 +809,7 @@ const CaseStudyDesignSystem = () => {
             className={`${t.h2} max-w-3xl mb-12`}
             style={{ fontFamily: t.displayFont }}
           >
-            Three years later, we changed the visual identity of the entire system.
+            Three years later, we overhauled the system’s visual foundation.
           </motion.h2>
 
           {/*    <div className="grid md:grid-cols-2 gap-4 mb-12">
@@ -846,20 +846,20 @@ const CaseStudyDesignSystem = () => {
               label: "TYPOGRAPHY",
               title: "Complete font overhaul",
               items: [
-                "- Custom font files were adding weight the app didn't need",
-                "Switched to a system font — no font file to ship, smaller app size",
-                "Faster rendering on every device, no download required",
-                "Updated every token it touched: line heights, character spacing, font sizes, typographic hierarchy",
+                "Replaced heavy custom fonts with system fonts.",
+                "Reduced app weight and improved rendering.",
+                "Updated typography tokens, line heights, spacing, and hierarchy.",
+              
               ],
             },
             {
               label: "ICONOGRAPHY",
               title: "Full icon library overhaul",
               items: [
-                "Existing icons were heavier than they needed to be — thick strokes, visually loud at small sizes",
-                "Rebuilt lighter and more rounded, easier on the eye",
-                "Unified stroke weights and standardized grid alignment",
-                "Every instance replaced across every component, every interactive state checked",
+                "Rebuilt heavy icons with lighter, rounded forms.",
+                "Standardized stroke weights and grid alignment.,
+                "Replaced icons across components and states.",
+              
               ],
             },
           ].map((card, i) => (
