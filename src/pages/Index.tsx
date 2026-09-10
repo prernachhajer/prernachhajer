@@ -218,7 +218,7 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     //link: `${import.meta.env.BASE_URL}cricgpt-case-study.html`,
   },
   {
-    title: "What building a design system over the years really taught me",
+    title: "From zero to shipped: how I built my entire portfolio with AI",
     tag: "Design System",
     status: "read",
 
@@ -226,7 +226,8 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
   },
 
   {
-    title: "From zero to shipped: how I built my entire portfolio with AI",
+    title: "Stats dashboard: publishable cricket data at scale
+",
     tag: "B2B",
     status: "coming-soon",
     // status: "read",
