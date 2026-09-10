@@ -460,6 +460,62 @@ const CaseStudyDesignSystem = () => {
             ))}
           </div>
         </div>
+
+        {/* Findings — separate sub-section */}
+        <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+            className="flex items-end justify-between gap-8 mb-10 pb-6 border-b border-border"
+          >
+            <div>
+              <h3
+                className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.15]"
+                style={{ fontFamily: t.displayFont }}
+              >
+                What shipped
+              </h3>
+            </div>
+          </motion.div>
+
+          <div className="flex flex-col">
+            {[
+              {
+                title: "A complete system",
+                desc: "We launched a full design system with shared color and typography tokens, built-in dark mode, and native mobile components alongside the web library. Multilingual support was built in from day one, with core and page-level components covering the full product surface — giving every platform the same foundation.",
+              },
+              {
+                title: "What included",
+                desc: "One challenge was aligning with engineering on naming conventions and spacing logic. Their pushback exposed downstream issues and ultimately made the system stronger.",
+
+                point: "Full token set — color and text tokens across every surface",
+              },
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+              >
+                <div>
+                  <h4
+                    className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
+                    style={{ fontFamily: t.displayFont }}
+                  >
+                    {insight.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Launch screenshot placeholder */}
         <div className={`${layout.container} mx-auto mt-24 !max-w-5xl`}>
           <motion.div
