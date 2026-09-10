@@ -246,13 +246,13 @@ const CaseStudyDesignSystem = () => {
                 num: "02",
                 year: "2022",
                 title: "System restructure",
-                desc: "Restructured the existing design system into fewer, more powerful components",
+                desc: "Restructured the existing system into fewer, more powerful components",
               },
               {
                 num: "03",
                 year: "2023",
                 title: "Make it self-sufficient",
-                desc: "Documented the design system so it worked without a designer in the room",
+                desc: "Documented the system so it worked without a designer in the room",
               },
               {
                 num: "04",
@@ -314,11 +314,11 @@ const CaseStudyDesignSystem = () => {
               { title: "Convince, align, launch", desc: "Built the case, then launched the design system" },
               {
                 title: "System restructure",
-                desc: "Restructured the existing design system into fewer, more powerful components",
+                desc: "Restructured the existing system into fewer, more powerful components",
               },
               {
                 title: "Make it self-sufficient",
-                desc: "Documented the design system so it worked without a designer in the room",
+                desc: "Documented the system so it worked without a designer in the room",
               },
               {
                 title: "Remove, simplify, sustain",
