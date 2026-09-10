@@ -371,7 +371,9 @@ const CaseStudyDesignSystem = () => {
                 draggable={false}
               />
             </div>
-            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Design System · 2022</p>
+            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
+              Phase 1: Design System · 2022 · Launch{" "}
+            </p>
           </motion.div>
         </div>
       </Section>
