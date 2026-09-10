@@ -578,7 +578,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* 05 — DOCUMENTATION: PHASE 3 */}
-      <Section label="Phase 3: Make it Self-sufficient">
+      <Section label="Phase 3: Document: Make it Self-sufficient">
         <Prose>
           <h2>Documentation wasn't optional — the system needed to work without a designer in the room.</h2>
           <p>
@@ -664,7 +664,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* REMOVE, SIMPLIFY, REDUCE, SUSTAIN */}
-      <DarkSection label="PHASE 4: REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
+      <DarkSection label="PHASE 4: Declutter: REMOVE, SIMPLIFY, REDUCE, SUSTAIN">
         <div className="max-w-3xl mx-auto mb-12">
           <motion.h2
             initial="hidden"
