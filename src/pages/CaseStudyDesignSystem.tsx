@@ -361,6 +361,10 @@ const CaseStudyDesignSystem = () => {
             variants={fade}
             className={`${layout.container} mx-auto mt-8`}
           >
+            <p className=" text-s text-muted-foreground/80 mt-4 tracking-wide">
+              Phase 1: Design System · 2022 · Launch{" "}
+            </p>
+
             <div className="rounded-xl border border-border/30 overflow-hidden">
               <img
                 src={dsNew}
@@ -369,9 +373,6 @@ const CaseStudyDesignSystem = () => {
                 draggable={false}
               />
             </div>
-            <p className="text-center text-s text-muted-foreground/80 mt-4 tracking-wide">
-              Phase 1: Design System · 2022 · Launch{" "}
-            </p>
           </motion.div>
         </div>
       </Section>
