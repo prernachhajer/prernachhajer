@@ -319,7 +319,10 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
+      <Section
+        label="PHASE 1: CONVINCE, ALIGN, LAUNCH"
+        className={`${layout.container} mx-auto border-t border-border`}
+      >
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
