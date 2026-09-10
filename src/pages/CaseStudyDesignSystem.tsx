@@ -228,10 +228,97 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
       {/* ROADMAP — five-phase overview */}
-      <Section
-        label="ROADMAP: Five-phase overview"
-        className={`${layout.container} mx-auto border-b border-border pb-10`}
-      >
+
+      <Section>
+        <div className={`${layout.container} mx-auto`}>
+          <h2 className="sr-only">A five-step timeline of the design system case study phases</h2>
+
+          <div
+            className="grid gap-x-4"
+            style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
+          >
+            {[
+              { num: "01", year: "2021–22", title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
+              { num: "02", year: "2022", title: "System restructure", desc: "Fewer variants, more power" },
+              {
+                num: "03",
+                year: "2023",
+                title: "Make it self-sufficient",
+                desc: "Documented so it worked without a designer in the room",
+              },
+              {
+                num: "04",
+                year: "2022–24",
+                title: "Remove, simplify, sustain",
+                desc: "Cut what wasn't earning its place",
+              },
+              {
+                num: "05",
+                year: "2024–25",
+                title: "The overhaul",
+                desc: "Three years later, new fonts and icons on the same foundation",
+              },
+            ].map((phase, i, arr) => {
+              const isLast = i === arr.length - 1;
+              return (
+                <motion.div
+                  key={phase.num}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  style={{ gridColumn: i + 1, gridRow: 1 }}
+                  className="self-end pb-2.5 text-left text-[11px] font-medium text-muted-foreground"
+                >
+                  {phase.year}
+                </motion.div>
+              );
+            })}
+
+            {/* connecting line — spans all columns, centered in the node row */}
+            <div style={{ gridColumn: "1 / -1", gridRow: 2 }} className="self-center h-0.5 bg-primary/35" />
+
+            {[{ num: "01" }, { num: "02" }, { num: "03" }, { num: "04" }, { num: "05" }].map((phase, i, arr) => {
+              const isLast = i === arr.length - 1;
+              return (
+                <div
+                  key={phase.num}
+                  style={{ gridColumn: i + 1, gridRow: 2 }}
+                  className="flex items-center justify-start"
+                >
+                  <div
+                    className={`relative z-10 rounded-full flex items-center justify-center ${
+                      isLast ? "w-9 h-9 bg-primary" : "w-7 h-7 bg-background border-[1.5px] border-primary"
+                    }`}
+                  >
+                    <span
+                      className={`font-medium ${isLast ? "text-xs text-primary-foreground" : "text-[11px] text-primary"}`}
+                    >
+                      {phase.num}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+
+            {[
+              { title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
+              { title: "System restructure", desc: "Fewer variants, more power" },
+              { title: "Make it self-sufficient", desc: "Documented so it worked without a designer in the room" },
+              { title: "Remove, simplify, sustain", desc: "Cut what wasn't earning its place" },
+              { title: "The overhaul", desc: "Three years later, new fonts and icons on the same foundation" },
+            ].map((phase, i) => (
+              <div key={phase.title} style={{ gridColumn: i + 1, gridRow: 3 }} className="pt-3.5 text-left">
+                <p className="font-medium text-sm mb-1.5">{phase.title}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{phase.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section label="ROADMAP: Five-phase overview">
         <div className={`${layout.container} mx-auto  pb-10`}>
           <h2 className="sr-only">A five-step roadmap of the design system case study phases</h2>
           <div className="flex flex-wrap py-4">
