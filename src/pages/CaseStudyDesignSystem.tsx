@@ -937,7 +937,7 @@ const CaseStudyDesignSystem = () => {
           ))}
         </div>
 
-        {/* Font exploration placeholder */}
+        {/* Font exploration placeholder 
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -951,7 +951,7 @@ const CaseStudyDesignSystem = () => {
             className="w-full my-0 mx-0 px-[20px] py-[20px] border border-solid rounded-lg bg-[#2b2b2b]/[0.91]"
           />
           <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Font evaluation process</p>
-        </motion.div>
+        </motion.div> */}
 
         {/* The test this proved */}
         <motion.div
