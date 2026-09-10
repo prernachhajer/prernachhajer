@@ -699,12 +699,12 @@ const CaseStudyDesignSystem = () => {
               {
                 num: "02",
                 title: "Simplified complex components",
-                desc: "Reduced complexity in components that had evolved over time, like tables.",
+                desc: "Reduced complexity in components that had evolved, like tables.",
                 tag: "SIMPLIFY",
               },
               {
                 num: "03",
-                title: "Adjusted spacing & sizing\u00a0",
+                title: "Adjusted spacing & sizing",
                 desc: "Trimmed spacing and sizing options to improve consistency and reduce decisions.
 
 ",
