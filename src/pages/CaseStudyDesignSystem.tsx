@@ -239,31 +239,31 @@ const CaseStudyDesignSystem = () => {
               {
                 num: "01",
                 year: "2021–22",
-                title: "Convince, align, launch",
+                title: "Build, align, launch",
                 desc: "Built the case, then launched the design system",
               },
               {
                 num: "02",
                 year: "2022",
-                title: "System restructure",
+                title: "System Revamp",
                 desc: "Restructured the existing system into fewer, more powerful components",
               },
               {
                 num: "03",
                 year: "2023",
-                title: "Make it self-sufficient",
+                title: "Document",
                 desc: "Documented the system so it worked without a designer in the room",
               },
               {
                 num: "04",
                 year: "2022–24",
-                title: "Remove, simplify, sustain",
+                title: "Declutter",
                 desc: "Simplified the design system by cutting what wasn't earning its place",
               },
               {
                 num: "05",
                 year: "2024–25",
-                title: "The overhaul",
+                title: "Overhaul",
                 desc: "Three years later, overhauled the design system's fonts and icons",
               },
             ].map((phase, i, arr) => {
@@ -311,20 +311,20 @@ const CaseStudyDesignSystem = () => {
             })}
 
             {[
-              { title: "Convince, align, launch", desc: "Built the case, then launched the design system" },
+              { title: "Build, align, launch", desc: "Built the case, then launched the design system" },
               {
-                title: "System restructure",
+                title: "System revamp",
                 desc: "Restructured the existing system into fewer, more powerful components",
               },
               {
-                title: "Make it self-sufficient",
+                title: "Document",
                 desc: "Documented the system so it worked without a designer in the room",
               },
               {
-                title: "Remove, simplify, sustain",
+                title: "Declutter",
                 desc: "Simplified the design system by cutting what wasn't earning its place",
               },
-              { title: "The overhaul", desc: "Three years later, Overhauled the design system's fonts and icons" },
+              { title: "Overhaul", desc: "Three years later, Overhauled the design system's fonts and icons" },
             ].map((phase, i) => (
               <div key={phase.title} style={{ gridColumn: i + 1, gridRow: 3 }} className="pt-3.5 text-left">
                 <p className="font-medium text-sm mb-1.5">{phase.title}</p>
