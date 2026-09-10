@@ -207,12 +207,8 @@ const CaseStudyDesignSystem = () => {
               className="text-xl md:text-2xl font-normal leading-[1.1] text-background/90"
               style={{ fontFamily: t.displayFont }}
             >
-              Build{" "}
-              <em className="text-primary italic">
-                {" "}
-                Build shared infrastructure; not just a component library; to make every team faster, every platform
-                more consistent, and every feature easier to ship.
-              </em>
+              Build <em className="text-primary italic"> shared infrastructure; </em> not just a component library; to
+              make every team faster, every platform more consistent, and every feature easier to ship.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["Independent teams", "Shared documentation", "Faster design velocity"].map((tag) => (
