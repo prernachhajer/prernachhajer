@@ -524,7 +524,7 @@ const Index = () => {
             <div className="mt-12 md:mt-16 mb-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 w-full max-w-[1024px] mx-auto">
               <motion.div initial="hidden" animate="visible" variants={fade} custom={4}>
                 <p className="text-[0.9375rem] leading-[1.7] text-muted-foreground max-w-[34ch]">
-                  Hi, I'm Prerna — a product design leader who brings clarity to ambiguity. I build cohesive,
+                  Hi, I'm Prerna. A product design leader who brings clarity to ambiguity. I build cohesive,
                   user-centered experiences through design, systems, and cross-functional leadership.
                 </p>
 
