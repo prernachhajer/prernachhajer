@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const fade = animation.fade;
 
 const situation = [
-  "It was Cricinfo's deepest stats tool. Type in a player, a team, a date range, and it handed you exactly the record you were after — the kind of precision that fantasy cricket players, analysts, and cricket researchers relied on constantly. The people who knew about it loved it. The problem was almost nobody knew about it. StatsGuru lived on desktop, running on a stack that hadn't been touched in years, at a time when most of Cricinfo's audience had already moved to mobile. A tool this good was reaching a sliver of the people it could have helped.",
+  "It was Cricinfo's deepest stats tool. Type in a player, a team, a date range, and it handed you exactly the record you were after; the kind of precision that fantasy cricket players, analysts, and cricket researchers relied on constantly. The people who knew about it loved it. The problem was almost nobody knew about it. StatsGuru lived on desktop, running on a stack that hadn't been touched in years, at a time when most of Cricinfo's audience had already moved to mobile. A tool this good was reaching a sliver of the people it could have helped.",
   "The deeper issue wasn't just visibility — it was structural. The old stack meant StatsGuru's data could be filtered and displayed, but never really queried. It was a one-way street: pick your filters, get your table, done. Nothing more could be built on top of it.",
 ];
 
@@ -37,8 +37,7 @@ const StoryStatsGuru = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Cricinfo · Product design</p>
           <h1 className={`${t.h2Hero} max-w-[14ch] mb-8`} style={{ fontFamily: t.displayFont }}>
-            The tool everyone needed{" "}
-            <span className="text-primary italic">but almost no one found</span>
+            The tool everyone needed <span className="text-primary italic">but almost no one found</span>
           </h1>
           <p className="text-muted-foreground text-[0.9375rem] leading-[1.8]">
             Product design lead · Foundation and mobile rebuild · StatsGuru
@@ -64,9 +63,8 @@ const StoryStatsGuru = () => {
             className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.35] mb-8"
             style={{ fontFamily: t.displayFont }}
           >
-            There's a strange kind of problem in product design where the thing you build is
-            genuinely excellent — and almost nobody uses it, not because it's bad, but because it's
-            invisible. That was StatsGuru.
+            There's a strange kind of problem in product design where the thing you build is genuinely excellent — and
+            almost nobody uses it, not because it's bad, but because it's invisible. That was StatsGuru.
           </p>
           <div className="space-y-4 text-[0.9375rem] text-foreground/85 leading-[1.85]">
             {situation.map((p, i) => (
@@ -91,16 +89,13 @@ const StoryStatsGuru = () => {
             Rebuilding where no one would see it
           </h2>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            The rebuild started underneath, where no one would see it — a new stack, and an API
-            designed from the ground up to make the data properly accessible. Only once that was
-            solid did the visible work begin.
+            The rebuild started underneath, where no one would see it — a new stack, and an API designed from the ground
+            up to make the data properly accessible. Only once that was solid did the visible work begin.
           </p>
 
           {/* Before / After */}
           <div className={`mt-10 ${surface.card} ${radius.card} p-6 sm:p-8 md:p-10`}>
-            <p className={`${t.labelSm} text-muted-foreground mb-8`}>
-              What changed, once the foundation held
-            </p>
+            <p className={`${t.labelSm} text-muted-foreground mb-8`}>What changed, once the foundation held</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p className="text-[0.75rem] font-semibold tracking-[0.05em] uppercase text-muted-foreground mb-4">
@@ -142,12 +137,11 @@ const StoryStatsGuru = () => {
           </div>
 
           <p className="mt-10 text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            A mobile-first redesign, search added alongside the filters so a name alone was enough to
-            start, and advanced search that let one keyword pull results across teams, players,
-            tournaments, and matches at once — a capability that had only ever existed on desktop.
-            For the power users still building twenty-filter queries, multi-team selection replaced
-            the old one-team-at-a-time limit, and the whole process of building and editing a query
-            got noticeably smoother. And because a rebuilt tool no one finds is still an invisible
+            A mobile-first redesign, search added alongside the filters so a name alone was enough to start, and
+            advanced search that let one keyword pull results across teams, players, tournaments, and matches at once —
+            a capability that had only ever existed on desktop. For the power users still building twenty-filter
+            queries, multi-team selection replaced the old one-team-at-a-time limit, and the whole process of building
+            and editing a query got noticeably smoother. And because a rebuilt tool no one finds is still an invisible
             tool, a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
 
