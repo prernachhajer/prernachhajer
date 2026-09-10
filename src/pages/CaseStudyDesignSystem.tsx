@@ -311,11 +311,20 @@ const CaseStudyDesignSystem = () => {
             })}
 
             {[
-              { title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
-              { title: "System restructure", desc: "Fewer variants, more power" },
-              { title: "Make it self-sufficient", desc: "Documented so it worked without a designer in the room" },
-              { title: "Remove, simplify, sustain", desc: "Cut what wasn't earning its place" },
-              { title: "The overhaul", desc: "Three years later, new fonts and icons on the same foundation" },
+              { title: "Convince, align, launch", desc: "Built the case, then launched the design system" },
+              {
+                title: "System restructure",
+                desc: "Restructured the existing design system into fewer, more powerful components",
+              },
+              {
+                title: "Make it self-sufficient",
+                desc: "Documented the design system so it worked without a designer in the room",
+              },
+              {
+                title: "Remove, simplify, sustain",
+                desc: "Simplified the design system by cutting what wasn't earning its place",
+              },
+              { title: "The overhaul", desc: "Three years later, Overhauled the design system's fonts and icons" },
             ].map((phase, i) => (
               <div key={phase.title} style={{ gridColumn: i + 1, gridRow: 3 }} className="pt-3.5 text-left">
                 <p className="font-medium text-sm mb-1.5">{phase.title}</p>
