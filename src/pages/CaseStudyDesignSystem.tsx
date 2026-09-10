@@ -228,7 +228,7 @@ const CaseStudyDesignSystem = () => {
       </DarkSection>
 
      
-     <Section>
+
      const phases = [
   {
     number: "01",
@@ -299,8 +299,8 @@ function PhaseRoadmap() {
   );
 }
 
-
-     </Section>
+export default PhaseRoadmap;
+     
 
       
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
