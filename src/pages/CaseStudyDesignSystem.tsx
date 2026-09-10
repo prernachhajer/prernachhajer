@@ -17,7 +17,11 @@ import {
   LearningCard,
   ClosingSection,
   ImagePlaceholder,
-  ExploreMore, ImpactPanel, impactGrid, impactCell } from "@/components/ds";
+  ExploreMore,
+  ImpactPanel,
+  impactGrid,
+  impactCell,
+} from "@/components/ds";
 import { animation, layout, spacing, type as t, surface, radius } from "@/lib/tokens";
 import { ExternalLink } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -347,6 +351,14 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Cricinfo Figma Library before/after */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
+            <BeforeAfterSlider beforeImage={dsOld} afterImage={dsNew} beforeLabel="Before" afterLabel="After" />
+            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
+              Cricinfo Figma Library · 2021
+            </p>
+          </motion.div>
         </div>
       </Section>
 
@@ -810,63 +822,63 @@ const CaseStudyDesignSystem = () => {
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
         <div className={`${layout.container} mx-auto`}>
           <ImpactPanel>
-          <SectionLabel dark>IMPACT & DECISION</SectionLabel>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className="text-sm text-background/75 leading-relaxed mb-8"
-          >
-            Five years of building. The outcomes were felt across the entire product organisation.
-          </motion.p>
-          <div className="grid md:grid-cols-3 gap-0.5">
-            {[
-              {
-                label: "Design cycle speed",
-                num: "50%",
+            <SectionLabel dark>IMPACT & DECISION</SectionLabel>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="text-sm text-background/75 leading-relaxed mb-8"
+            >
+              Five years of building. The outcomes were felt across the entire product organisation.
+            </motion.p>
+            <div className="grid md:grid-cols-3 gap-0.5">
+              {[
+                {
+                  label: "Design cycle speed",
+                  num: "50%",
 
-                desc: "Teams assembled instead of rebuilding from scratch — a shift measurable within months of adoption.",
-              },
-              {
-                label: "FIGMA FILES COVERAGE",
-                num: "17\\0+",
+                  desc: "Teams assembled instead of rebuilding from scratch — a shift measurable within months of adoption.",
+                },
+                {
+                  label: "FIGMA FILES COVERAGE",
+                  num: "17\\0+",
 
-                desc: "170+ files across the product now pull from one shared foundation — up from one inconsistent library.",
-              },
-              {
-                label: "Component coverage",
-                num: "50+",
+                  desc: "170+ files across the product now pull from one shared foundation — up from one inconsistent library.",
+                },
+                {
+                  label: "Component coverage",
+                  num: "50+",
 
-                desc: "Dark mode, modular widgets, and the native mobile app launch — all built on the system, without slowing shipping velocity.",
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={card.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`${impactCell} p-6 sm:p-8 md:p-10 flex flex-col`}
-              >
-                <div>
-                  <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/70 mb-3">
-                    {card.label}
-                  </p>
-                  <p
-                    className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
-                    style={{ fontFamily: t.displayFont }}
-                  >
-                    {card.num}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs text-background/50 leading-relaxed">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                  desc: "Dark mode, modular widgets, and the native mobile app launch — all built on the system, without slowing shipping velocity.",
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={card.num}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fade}
+                  custom={i}
+                  className={`${impactCell} p-6 sm:p-8 md:p-10 flex flex-col`}
+                >
+                  <div>
+                    <p className="text-[0.625rem] tracking-widest uppercase font-medium text-background/70 mb-3">
+                      {card.label}
+                    </p>
+                    <p
+                      className="text-5xl md:text-6xl font-bold text-primary leading-none mb-4"
+                      style={{ fontFamily: t.displayFont }}
+                    >
+                      {card.num}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-background/50 leading-relaxed">{card.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </ImpactPanel>
         </div>
       </section>
