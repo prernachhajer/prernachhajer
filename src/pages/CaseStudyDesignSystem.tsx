@@ -885,13 +885,13 @@ const CaseStudyDesignSystem = () => {
           className={`${layout.container} mx-auto mt-8`}
         >
           <PullQuote>
-            The real test of a design system isn't launch day. It's whether it can absorb a complete identity change
-            three years later and keep working. Ours did.
+            The real test of a design system isn’t launch day. It’s whether it can adapt to a completely new visual
+            identity three years later without breaking. Ours did.
           </PullQuote>
         </motion.div>
       </Section>
 
-      {/* 08 — TIMELINE 
+      {/* 08 — TIMELINE */}
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>08 — Timeline</SectionLabel>
@@ -903,15 +903,24 @@ const CaseStudyDesignSystem = () => {
               { year: "2024", label: "Refinement" },
               { year: "2025", label: "Overhaul & Maturity" },
             ].map((item, i) => (
-              <motion.div key={item.year} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={i}
-                className={`bg-card p-6 text-center ${i === 0 ? "rounded-l-xl" : ""} ${i === 4 ? "rounded-r-xl" : ""}`}>
-                <p className="text-2xl md:text-3xl font-bold text-primary mb-2" style={{ fontFamily: t.displayFont }}>{item.year}</p>
+              <motion.div
+                key={item.year}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`bg-card p-6 text-center ${i === 0 ? "rounded-l-xl" : ""} ${i === 4 ? "rounded-r-xl" : ""}`}
+              >
+                <p className="text-2xl md:text-3xl font-bold text-primary mb-2" style={{ fontFamily: t.displayFont }}>
+                  {item.year}
+                </p>
                 <p className="text-xs text-muted-foreground">{item.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
