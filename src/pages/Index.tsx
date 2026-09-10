@@ -885,7 +885,7 @@ const Index = () => {
       ───────────────────────────────────────── */}
       <section
         id="about"
-        className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)] border border-b`}
+        className={`${surface.dark} relative overflow-hidden py-[clamp(96px,11vw,160px)] border border-b/40`}
       >
         <span
           className="absolute -right-[4%] -bottom-[8%] text-[48vw] font-bold italic leading-[0.8] tracking-[-0.04em] select-none pointer-events-none"
