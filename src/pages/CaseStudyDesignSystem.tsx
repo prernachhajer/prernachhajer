@@ -227,82 +227,48 @@ const CaseStudyDesignSystem = () => {
         </div>
       </DarkSection>
 
-     
-
-     const phases = [
-  {
-    number: "01",
-    title: "Convince, align, launch",
-    description: "Built the case, then shipped v1",
-  },
-  {
-    number: "02",
-    title: "System restructure",
-    description: "Fewer variants, more power",
-  },
-  {
-    number: "03",
-    title: "Make it self-sufficient",
-    description: "Documented so it worked without a designer in the room",
-  },
-  {
-    number: "04",
-    title: "Remove, simplify, sustain",
-    description: "Cut what wasn't earning its place",
-  },
-  {
-    number: "05",
-    title: "The overhaul",
-    description: "Three years later, new fonts and icons on the same foundation",
-  },
-];
-
-function PhaseRoadmap() {
-  return (
-    <Section>
-      <div>
-        <h2 className="sr-only">
-          A five-step roadmap of the design system case study phases
-        </h2>
-        <div style={{ display: "flex", flexWrap: "wrap", padding: "1rem 0" }}>
-          {phases.map((phase, index) => (
-            <div
-              key={phase.number}
-              style={{
-                flex: "1 1 120px",
-                padding: index === 0 ? "0 16px 16px 0" : index === phases.length - 1 ? "0 0 16px" : "0 16px 16px",
-                borderRight: index === phases.length - 1 ? "none" : "0.5px solid var(--border)",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "var(--font-voice)",
-                  fontSize: "22px",
-                  color: "#D85A30",
-                  fontWeight: 500,
-                  marginBottom: "6px",
-                }}
+      {/* ROADMAP — five-phase overview */}
+      <Section>
+        <div className={`${layout.container} mx-auto`}>
+          <h2 className="sr-only">A five-step roadmap of the design system case study phases</h2>
+          <div className="flex flex-wrap py-4">
+            {[
+              { num: "01", title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
+              { num: "02", title: "System restructure", desc: "Fewer variants, more power" },
+              {
+                num: "03",
+                title: "Make it self-sufficient",
+                desc: "Documented so it worked without a designer in the room",
+              },
+              { num: "04", title: "Remove, simplify, sustain", desc: "Cut what wasn't earning its place" },
+              {
+                num: "05",
+                title: "The overhaul",
+                desc: "Three years later, new fonts and icons on the same foundation",
+              },
+            ].map((phase, i, arr) => (
+              <motion.div
+                key={phase.num}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fade}
+                custom={i}
+                className={`flex-1 min-w-[120px] px-4 py-4 ${i === 0 ? "pl-0" : ""} ${
+                  i === arr.length - 1 ? "pr-0" : "border-r border-border"
+                }`}
               >
-                {phase.number}
-              </div>
-              <div style={{ fontWeight: 500, fontSize: "14px", marginBottom: "6px" }}>
-                {phase.title}
-              </div>
-              <div style={{ fontSize: "12px", color: "var(--text-secondary)", lineHeight: 1.5 }}>
-                {phase.description}
-              </div>
-            </div>
-          ))}
+                <p className="text-2xl font-normal text-primary mb-1.5" style={{ fontFamily: t.displayFont }}>
+                  {phase.num}
+                </p>
+                <p className="font-medium text-sm mb-1.5">{phase.title}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{phase.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </Section>
-  );
-}
+      </Section>
 
-export default PhaseRoadmap;
-     
-
-      
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
       <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
         <Prose>
