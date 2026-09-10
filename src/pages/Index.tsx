@@ -207,7 +207,6 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     title: "StatsGuru: the tool everyone needed but almost no one found",
     tag: "Foundation + mobile",
     status: "read",
-    //link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
     link: "#/story/statsguru",
   },
   {
