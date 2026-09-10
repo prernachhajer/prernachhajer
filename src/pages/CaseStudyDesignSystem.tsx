@@ -857,8 +857,7 @@ const CaseStudyDesignSystem = () => {
               items: [
                 "Rebuilt heavy icons with lighter, rounded forms.",
                 "Standardized stroke weights and grid alignment.,
-                "Replaced icons across components and states.",
-              
+                "Replaced icons across components and states.", 
               ],
             },
           ].map((card, i) => (
