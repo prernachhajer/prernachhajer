@@ -232,7 +232,7 @@ const CaseStudyDesignSystem = () => {
       <Section label=" ROADMAP: five-phase overview">
         <div className={`${layout.container} mx-auto mt-30`}>
           <div
-            className="grid gap-x-6 gap-8 mt-30"
+            className="grid gap-x-10 mt-30"
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
           >
             {[
