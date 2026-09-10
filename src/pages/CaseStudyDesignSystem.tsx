@@ -229,10 +229,7 @@ const CaseStudyDesignSystem = () => {
 
       {/* ROADMAP — five-phase overview */}
 
-      <Section
-        label=" ROADMAP: five-phase overview"
-        className={`${spacing.sectionGap} ${layout.px} border-b border-border`}
-      >
+      <Section label=" ROADMAP: five-phase overview">
         <div className={`${layout.container} mx-auto`}>
           <h2 className="sr-only">A five-step timeline of the design system case study phases</h2>
 
