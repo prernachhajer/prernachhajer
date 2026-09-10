@@ -227,48 +227,6 @@ const CaseStudyDesignSystem = () => {
         </div>
       </DarkSection>
 
-      {/* ROADMAP — five-phase overview */}
-      <Section>
-        <div className={`${layout.container} mx-auto`}>
-          <h2 className="sr-only">A five-step roadmap of the design system case study phases</h2>
-          <div className="flex flex-wrap py-4">
-            {[
-              { num: "01", title: "Convince, align, launch", desc: "Built the case, then shipped v1" },
-              { num: "02", title: "System restructure", desc: "Fewer variants, more power" },
-              {
-                num: "03",
-                title: "Make it self-sufficient",
-                desc: "Documented so it worked without a designer in the room",
-              },
-              { num: "04", title: "Remove, simplify, sustain", desc: "Cut what wasn't earning its place" },
-              {
-                num: "05",
-                title: "The overhaul",
-                desc: "Three years later, new fonts and icons on the same foundation",
-              },
-            ].map((phase, i, arr) => (
-              <motion.div
-                key={phase.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fade}
-                custom={i}
-                className={`flex-1 min-w-[120px] px-4 py-4 ${i === 0 ? "pl-0" : ""} ${
-                  i === arr.length - 1 ? "pr-0" : "border-r border-border"
-                }`}
-              >
-                <p className="text-2xl font-normal text-primary mb-1.5" style={{ fontFamily: t.displayFont }}>
-                  {phase.num}
-                </p>
-                <p className="font-medium text-sm mb-1.5">{phase.title}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{phase.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
       <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
         <Prose>
