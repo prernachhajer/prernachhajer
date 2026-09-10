@@ -469,8 +469,8 @@ const CaseStudyDesignSystem = () => {
             variants={fade}
             className={`${layout.container} mx-auto mt-8`}
           >
-            <p className="text-centre text-s text-muted-foreground/80 mb-4 tracking-wide">
-              Phase 1: Design system launched · 2022{" "}
+            <p className="text-center text-s text-muted-foreground/80 mb-4 tracking-wide">
+              Design system launched · 2022{" "}
             </p>
 
             <div className="rounded-xl border border-border/30 overflow-hidden">
