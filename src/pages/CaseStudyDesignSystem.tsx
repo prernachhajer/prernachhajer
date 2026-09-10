@@ -393,7 +393,7 @@ const CaseStudyDesignSystem = () => {
                 className="text-2xl md:text-3xl font-normal tracking-[0.015em] leading-[1.15]"
                 style={{ fontFamily: t.displayFont }}
               >
-                The friction, and what it took to launch
+                Challenges we faced while launching the design system
               </h3>
             </div>
           </motion.div>
