@@ -335,8 +335,8 @@ const CaseStudyDesignSystem = () => {
         </div>
       </Section>
 
-      {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
+      {/* 03 — PROCESS: Build, ALIGN, LAUNCH */}
+      <Section label="PHASE 1: Build, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
