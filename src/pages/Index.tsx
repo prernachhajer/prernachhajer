@@ -197,6 +197,13 @@ const caseStudies: CaseStudy[] = [
 
 const quickStories: { title: string; tag: string; status: string; link?: string }[] = [
   {
+    title: "What building a design system over the years really taught me",
+    tag: "Design System",
+    status: "read",
+    //link: `${import.meta.env.BASE_URL}statsguru-case-study.html`,
+    link: "#/blog/design-system",
+  },
+  {
     title: "StatsGuru: the tool everyone needed but almost no one found",
     tag: "Foundation + mobile",
     status: "read",
