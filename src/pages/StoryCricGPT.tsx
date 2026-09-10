@@ -18,8 +18,7 @@ const StoryCricGPT = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Cricinfo · Product design</p>
           <h1 className={`${t.h2Hero} max-w-[14ch] mb-8`} style={{ fontFamily: t.displayFont }}>
-            When the answer{" "}
-            <span className="text-primary italic">stops needing a form</span>
+            When the answer <span className="text-primary italic">stops needing a form</span>
           </h1>
           <p className="text-muted-foreground text-[0.9375rem] leading-[1.8]">
             Product design · AI layer over StatsGuru's data · Led and designed by Prerna
@@ -45,15 +44,14 @@ const StoryCricGPT = () => {
             className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.35] mb-8"
             style={{ fontFamily: t.displayFont }}
           >
-            Even after StatsGuru could be found and searched, one wall was still standing: you had to
-            know what to ask for, and how to ask for it. That's a fair trade for a researcher. It's a
-            dead end for a casual fan who just wants to know what happened in today's match and why
-            it mattered.
+            Even after StatsGuru could be found and searched, one wall was still standing: you had to know what to ask
+            for, and how to ask for it. That's a fair trade for a researcher. It's a dead end for a casual fan who just
+            wants to know what happened in today's match and why it mattered.
           </p>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            CricGPT was built to take that wall down. Instead of filters, a plain-language question.
-            Instead of knowing which fields to select, just asking — the same way you'd ask a friend
-            who happened to know everything about cricket.
+            CricGPT was built to take that wall down. Instead of filters, a plain-language question. Instead of knowing
+            which fields to select, just ask, the same way you'd ask a friend who happened to know everything about
+            cricket.
           </p>
         </motion.section>
 
@@ -73,10 +71,9 @@ const StoryCricGPT = () => {
             Standing on ground already built
           </h2>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            Underneath, CricGPT drew on the exact same data StatsGuru had spent its rebuild making
-            queryable. That wasn't a coincidence — CricGPT couldn't have existed without it. The data
-            had to be queryable before it could be conversational. The two phases were never parallel
-            tracks. One was the ground the other stood on.
+            Underneath, CricGPT drew on the same data StatsGuru had spent its rebuild making queryable. That wasn't a
+            coincidence; CricGPT couldn't have existed without it. The data had to be queryable before it could be
+            conversational. The two phases were never parallel tracks. One was the ground the other stood on.
           </p>
 
           {/* Exchange */}
@@ -88,8 +85,7 @@ const StoryCricGPT = () => {
               <div>
                 <p className={`${t.labelSm} text-muted-foreground mb-2`}>Filter query</p>
                 <p className="font-mono text-[0.8125rem] leading-[1.8] text-foreground/70">
-                  Team: India · Opponent: Australia · Format: ODI · Date range: 2015–2025 · Sort:
-                  Runs
+                  Team: India · Opponent: Australia · Format: ODI · Date range: 2015–2025 · Sort: Runs
                 </p>
               </div>
               <div className="border-t border-border/50 pt-6">
@@ -106,11 +102,10 @@ const StoryCricGPT = () => {
           </div>
 
           <p className="mt-10 text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            What made this project interesting wasn't the AI layer itself — it was watching who it
-            actually reached. A casual fan checking in during a big match. A team loyalist who wanted
-            updates without hunting for them. A returning visitor for whom Cricinfo had started to
-            feel the same on every visit. None of these people were ever going to open a
-            twenty-filter query screen. All of them could ask a question.
+            What made this project interesting wasn't the AI layer itself; it was watching who it actually reached. A
+            casual fan checking in during a big match. A team loyalist who wanted updates without hunting for them. A
+            returning visitor for whom Cricinfo had started to feel the same on every visit. None of these people were
+            ever going to open a twenty-filter query screen. All of them could ask a question.
           </p>
 
           <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
