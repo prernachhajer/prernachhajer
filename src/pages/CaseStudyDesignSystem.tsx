@@ -490,9 +490,11 @@ const CaseStudyDesignSystem = () => {
                 title: "What's included",
 
                 items: [
-                  "Replaced heavy custom fonts with system fonts.",
-                  "Reduced app weight and improved rendering.",
-                  "Updated typography tokens, line heights, spacing, and hierarchy.",
+                  "Full token set, color and text tokens across every surface",
+                  "Dark mode via a dedicated plugin",
+                  "Native components for mobile, alongside the web library",
+                  "Multilingual support built in from the start",
+                  "Every core component and every page-level component, ready to use",
                 ],
               },
             ].map((card, i) => (
@@ -505,14 +507,14 @@ const CaseStudyDesignSystem = () => {
                 className="grid gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
               >
                 <div>
-                  <h4
+                  <h3
                     className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
                     {card.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{card.desc}</p>
-                  <ul className="divide-y divide-border/40">
+                  </h3>
+                  <p className="text-md text-muted-foreground leading-relaxed max-w-2xl">{card.desc}</p>
+                  <ul className="divide-y divide-border/40 pt-6">
                     {(card.items ?? []).map((item, idx) => (
                       <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
                         <span className={`${t.labelSm} text-muted-foreground/70 pt-1 tabular-nums shrink-0`}>
