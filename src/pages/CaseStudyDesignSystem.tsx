@@ -336,12 +336,12 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 03 — PROCESS: Build, ALIGN, LAUNCH */}
-      <Section label="PHASE 1: Design system: Build, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
+      <Section label="PHASE 1: Design system - Build, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
         <Prose>
-          <h2>Before we designed anything, we had to have hard conversations.</h2>
+          <h2>Before we designed anything, we had to align the teams.</h2>
           <p>
             Product didn't immediately see the value. Engineering pushed back on naming conventions. Making the case
-            required demonstrating value in small, concrete increments — not promises about long-term payoff.
+            required demonstrating value in small, concrete wins rather than long-term payoff.
           </p>
         </Prose>
 
