@@ -495,9 +495,8 @@ const CaseStudyDesignSystem = () => {
                   "Updated typography tokens, line heights, spacing, and hierarchy.",
                 ],
               },
-            ].map((insight, i) => (
+            ].map((card, i) => (
               <motion.div
-                key={insight.num}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -510,16 +509,16 @@ const CaseStudyDesignSystem = () => {
                     className="text-lg md:text-xl font-normal tracking-[0.01em] mb-2 leading-snug"
                     style={{ fontFamily: t.displayFont }}
                   >
-                    {insight.title}
+                    {card.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{card.desc}</p>
                   <ul className="divide-y divide-border/40">
                     {card.items.map((item, idx) => (
                       <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
                         <span className={`${t.labelSm} text-muted-foreground/70 pt-1 tabular-nums shrink-0`}>
                           {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <span className="text-muted-foreground leading-relaxed">{insight.item}</span>
+                        <span className="text-muted-foreground leading-relaxed">{card.item}</span>
                       </li>
                     ))}
                   </ul>
