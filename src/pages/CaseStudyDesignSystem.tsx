@@ -487,10 +487,13 @@ const CaseStudyDesignSystem = () => {
                 desc: "We launched a full design system with shared color and typography tokens, built-in dark mode, and native mobile components alongside the web library. Multilingual support was built in from day one, with core and page-level components covering the full product surface — giving every platform the same foundation.",
               },
               {
-                title: "What included",
-                desc: "One challenge was aligning with engineering on naming conventions and spacing logic. Their pushback exposed downstream issues and ultimately made the system stronger.",
+                title: "What's included",
 
-                point: "Full token set — color and text tokens across every surface",
+                items: [
+                  "Replaced heavy custom fonts with system fonts.",
+                  "Reduced app weight and improved rendering.",
+                  "Updated typography tokens, line heights, spacing, and hierarchy.",
+                ],
               },
             ].map((insight, i) => (
               <motion.div
@@ -510,6 +513,16 @@ const CaseStudyDesignSystem = () => {
                     {insight.title}
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{insight.desc}</p>
+                  <ul className="divide-y divide-border/40">
+                    {card.items.map((item, idx) => (
+                      <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
+                        <span className={`${t.labelSm} text-muted-foreground/70 pt-1 tabular-nums shrink-0`}>
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-muted-foreground leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}
