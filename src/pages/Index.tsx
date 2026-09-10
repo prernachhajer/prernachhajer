@@ -751,7 +751,7 @@ const Index = () => {
                   className="group border-b border-border last:border-b-0"
                 >
                   <a
-                    href={story.link || "#"}
+                    href={story.link || "#/story"}
                     onClick={(e) => {
                       if (!story.link || story.status === "coming-soon") {
                         e.preventDefault();
