@@ -927,7 +927,7 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <div className="grid ">
+            <div className=" ">
               <p className="text-[0.625rem] tracking-[0.06em] uppercase text-background/65 mb-4">Specialties</p>
 
               <div className="flex flex-wrap gap-2">
