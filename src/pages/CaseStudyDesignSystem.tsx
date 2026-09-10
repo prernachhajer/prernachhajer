@@ -500,7 +500,7 @@ const CaseStudyDesignSystem = () => {
                 viewport={{ once: true }}
                 variants={fade}
                 custom={i}
-                className="grid grid-cols-[auto_1fr] md:grid-cols-[70px_1fr_220px] gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
+                className="grid gap-x-8 gap-y-3 items-baseline py-8 border-b border-border/60 last:border-b-0 group"
               >
                 <div>
                   <h4
