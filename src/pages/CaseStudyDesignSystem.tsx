@@ -234,7 +234,7 @@ const CaseStudyDesignSystem = () => {
           <h2 className="sr-only">A five-step timeline of the design system case study phases</h2>
 
           <div
-            className="grid gap-x-6 mt-10"
+            className="grid gap-x-6 mt-20"
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
           >
             {[
