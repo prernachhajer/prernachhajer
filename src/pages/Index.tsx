@@ -973,7 +973,7 @@ const Index = () => {
               </div>
             </motion.div>
       
-      */}
+      
       <section id="writing" className="border-t border-border py-[clamp(96px,11vw,160px)]">
         <div className={wrapCls}>
           <motion.div
@@ -1060,9 +1060,9 @@ const Index = () => {
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-[3px] transition-transform" />
               </span>
             </motion.div>
-          </div>  */}
+          </div>  
         </div>
-      </section>
+      </section> */}
       {/* ─────────────────────────────────────────
           CONTACT + FOOTER
       ───────────────────────────────────────── */}
