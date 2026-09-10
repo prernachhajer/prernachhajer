@@ -891,7 +891,7 @@ const CaseStudyDesignSystem = () => {
         </motion.div>
       </Section>
 
-      {/* 08 — TIMELINE */}
+      {/* 08 — TIMELINE 
       <section className={`${spacing.sectionGap} ${layout.px} border-t border-border`}>
         <div className={`${layout.container} mx-auto`}>
           <SectionLabel>08 — Timeline</SectionLabel>
@@ -920,7 +920,7 @@ const CaseStudyDesignSystem = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 02 — IMPACT */}
       <section className={`${spacing.sectionGap} ${layout.px} ${surface.dark} border-t border-background/10`}>
