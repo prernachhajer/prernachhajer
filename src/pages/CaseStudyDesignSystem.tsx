@@ -229,7 +229,7 @@ const CaseStudyDesignSystem = () => {
 
       {/* ROADMAP — five-phase overview */}
 
-      <Section label=" ROADMAP: five-phase overview">
+      <Section label=" ROADMAP: five-phase of Design system">
         <div className={`${layout.container} !max-w-4xl mx-auto`} style={{ marginTop: "140px" }}>
           <div
             className="grid gap-x-10"
