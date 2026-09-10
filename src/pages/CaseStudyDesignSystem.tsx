@@ -528,30 +528,38 @@ const CaseStudyDesignSystem = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+          {/* Launch screenshot placeholder */}
+          <div className={`${layout.container} mx-auto mt-24 !max-w-5xl`}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className={`${layout.container} mx-auto mt-8`}
+            >
+              <p className="text-center text-s text-muted-foreground/80 mb-4 tracking-wide">
+                Design system launched · 2022{" "}
+              </p>
 
-        {/* Launch screenshot placeholder */}
-        <div className={`${layout.container} mx-auto mt-24 !max-w-5xl`}>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fade}
-            className={`${layout.container} mx-auto mt-8`}
-          >
-            <p className="text-center text-s text-muted-foreground/80 mb-4 tracking-wide">
-              Design system launched · 2022{" "}
+              <div className="rounded-xl border border-border/30 overflow-hidden">
+                <img
+                  src={dsNew}
+                  alt="ZeroHeight documentation · component reference"
+                  className="w-full"
+                  draggable={false}
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          <div>
+            <h2>Result</h2>
+            <p>
+              Within weeks of launch, teams were assembling screens from the system instead of building components from
+              zero — and several had started extending it with their own patterns on top, which is exactly what "shared
+              infrastructure" was supposed to make possible.
             </p>
-
-            <div className="rounded-xl border border-border/30 overflow-hidden">
-              <img
-                src={dsNew}
-                alt="ZeroHeight documentation · component reference"
-                className="w-full"
-                draggable={false}
-              />
-            </div>
-          </motion.div>
+          </div>
         </div>
       </Section>
 
