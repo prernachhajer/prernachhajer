@@ -461,7 +461,7 @@ const CaseStudyDesignSystem = () => {
           </div>
         </div>
 
-        {/* Findings — separate sub-section */}
+        {/* Shipped */}
         <div className={`${layout.container} mx-auto mt-24 !max-w-3xl`}>
           <motion.div
             initial="hidden"
@@ -480,7 +480,7 @@ const CaseStudyDesignSystem = () => {
             </div>
           </motion.div>
 
-          <div className="flex flex-col">
+          <div className="">
             {[
               {
                 title: "A complete system",
