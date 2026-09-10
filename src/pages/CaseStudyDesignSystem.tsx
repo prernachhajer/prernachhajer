@@ -371,17 +371,7 @@ const CaseStudyDesignSystem = () => {
                 draggable={false}
               />
             </div>
-            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
-              ZeroHeight documentation · 2023
-            </p>
-          </motion.div>
-
-          {/* Cricinfo Figma Library before/after */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} custom={1}>
-            <BeforeAfterSlider beforeImage={dsOld} afterImage={dsNew} beforeLabel="Before" afterLabel="After" />
-            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">
-              Cricinfo Figma Library · 2021
-            </p>
+            <p className="text-center text-xs text-muted-foreground/80 mt-4 tracking-wide">Design System · 2022</p>
           </motion.div>
         </div>
       </Section>
