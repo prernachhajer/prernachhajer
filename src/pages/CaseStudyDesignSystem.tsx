@@ -513,7 +513,7 @@ const CaseStudyDesignSystem = () => {
                   >
                     {card.title}
                   </h3>
-                  <p className="text-md text-muted-foreground leading-relaxed max-w-2xl">{card.desc}</p>
+                  <p className="text-md text-muted-foreground leading-relaxed max-w-3xl">{card.desc}</p>
                   <ul className="divide-y divide-border/40 pt-6">
                     {(card.items ?? []).map((item, idx) => (
                       <li key={idx} className="flex gap-4 py-3 first:pt-0 last:pb-0">
