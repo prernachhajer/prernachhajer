@@ -338,10 +338,10 @@ const CaseStudyDesignSystem = () => {
       {/* 03 — PROCESS: Build, ALIGN, LAUNCH */}
       <Section label="PHASE 1: Design system - Build, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
         <Prose>
-          <h2>Before we designed anything, we had to align the teams.</h2>
           <p>
-            Product didn't immediately see the value. Engineering pushed back on naming conventions. Making the case
-            required demonstrating value in small, concrete wins rather than long-term payoff.
+            We set out to build a complete design system - dark mode, native mobile components, multilingual support,
+            and a full token set covering color and text across every surface. Every core component and every page-level
+            component would launch together as one system.
           </p>
         </Prose>
 
