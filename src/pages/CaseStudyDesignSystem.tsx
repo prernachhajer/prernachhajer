@@ -227,6 +227,61 @@ const CaseStudyDesignSystem = () => {
         </div>
       </DarkSection>
 
+      <Section>
+        <div>
+          <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;">
+            A five-step roadmap of the design system case study phases
+          </h2>
+          <div style="display:flex; flex-wrap:wrap; padding:1rem 0;">
+            <div style="flex:1 1 120px; padding:0 16px 16px 0; border-right:0.5px solid var(--border);">
+              <div style="font-family:var(--font-voice); font-size:22px; color:#D85A30; font-weight:500; margin-bottom:6px;">
+                01
+              </div>
+              <div style="font-weight:500; font-size:14px; margin-bottom:6px;">Convince, align, launch</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                Built the case, then shipped v1
+              </div>
+            </div>
+            <div style="flex:1 1 120px; padding:0 16px 16px; border-right:0.5px solid var(--border);">
+              <div style="font-family:var(--font-voice); font-size:22px; color:#D85A30; font-weight:500; margin-bottom:6px;">
+                02
+              </div>
+              <div style="font-weight:500; font-size:14px; margin-bottom:6px;">System restructure</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                Fewer variants, more power
+              </div>
+            </div>
+            <div style="flex:1 1 120px; padding:0 16px 16px; border-right:0.5px solid var(--border);">
+              <div style="font-family:var(--font-voice); font-size:22px; color:#D85A30; font-weight:500; margin-bottom:6px;">
+                03
+              </div>
+              <div style="font-weight:500; font-size:14px; margin-bottom:6px;">Make it self-sufficient</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                Documented so it worked without a designer in the room
+              </div>
+            </div>
+            <div style="flex:1 1 120px; padding:0 16px 16px; border-right:0.5px solid var(--border);">
+              <div style="font-family:var(--font-voice); font-size:22px; color:#D85A30; font-weight:500; margin-bottom:6px;">
+                04
+              </div>
+              <div style="font-weight:500; font-size:14px; margin-bottom:6px;">Remove, simplify, sustain</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                Cut what wasn't earning its place
+              </div>
+            </div>
+            <div style="flex:1 1 120px; padding:0 0 16px;">
+              <div style="font-family:var(--font-voice); font-size:22px; color:#D85A30; font-weight:500; margin-bottom:6px;">
+                05
+              </div>
+              <div style="font-weight:500; font-size:14px; margin-bottom:6px;">The overhaul</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                Three years later, new fonts and icons on the same foundation
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
       <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH">
         <Prose>
