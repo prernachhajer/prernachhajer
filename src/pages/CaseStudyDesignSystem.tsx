@@ -234,7 +234,7 @@ const CaseStudyDesignSystem = () => {
           <h2 className="sr-only">A five-step timeline of the design system case study phases</h2>
 
           <div
-            className="grid gap-x-6"
+            className="grid gap-x-6 mt-10"
             style={{ gridTemplateColumns: "repeat(5, 1fr)", gridTemplateRows: "auto 40px auto" }}
           >
             {[
@@ -319,10 +319,7 @@ const CaseStudyDesignSystem = () => {
       </Section>
 
       {/* 03 — PROCESS: CONVINCE, ALIGN, LAUNCH */}
-      <Section
-        label="PHASE 1: CONVINCE, ALIGN, LAUNCH"
-        className={`${layout.container} mx-auto border-t border-border`}
-      >
+      <Section label="PHASE 1: CONVINCE, ALIGN, LAUNCH" className={`${layout.container} mx-auto `}>
         <Prose>
           <h2>Before we designed anything, we had to have hard conversations.</h2>
           <p>
