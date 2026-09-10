@@ -402,26 +402,26 @@ const CaseStudyDesignSystem = () => {
             {[
               {
                 num: "01",
-                title: "Small, visible wins built product trust",
-                desc: "We made the case through small, visible wins — each one built trust. Concrete demos worked better than abstract arguments about long-term payoff.",
+                title: "Building trust ",
+                desc: "A key challenge was convincing the team of the design system’s value. We used small, visible wins to demonstrate its impact and gradually build trust.",
                 tag: "CONVINCE",
               },
               {
                 num: "02",
-                title: "Engineering pushback made the system stronger",
-                desc: "Engineers challenged naming conventions and spacing logic to protect downstream integrity. That pushback improved the foundation.",
+                title: "Engineering pushback",
+                desc: "One challenge was aligning with engineering on naming conventions and spacing logic. Their pushback exposed downstream issues and ultimately made the system stronger.",
                 tag: "ALIGN",
               },
               {
                 num: "03",
-                title: "Mapping tokens to Tailwind aligned design and engineering",
-                desc: "Core tokens for color, typography, and spacing mapped directly to Tailwind variables. After that, design and engineering worked from the same system.",
+                title: "Mapping tokens to Tailwind",
+                desc: "Another challenge was connecting the design tokens for color, typography, and spacing with the engineering codebase. Mapping them directly to Tailwind variables gave both teams a shared system to work from.",
                 tag: "TECHNICAL UNLOCK",
               },
               {
                 num: "04",
-                title: "Launch included direct walkthroughs with each team",
-                desc: "We ran teams through the system directly — live walkthroughs, full documentation, hands-on sessions. Teams started building their own libraries on top of it almost immediately",
+                title: "Getting teams to adopt the system",
+                desc: "We had to help teams understand and use it through live walkthroughs, documentation, and hands-on sessions. Teams began building their own libraries on top of it soon after.",
                 tag: "LAUNCH",
               },
             ].map((insight, i) => (
