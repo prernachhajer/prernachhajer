@@ -202,13 +202,6 @@ import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
 }
 <section className="mt-16 md:mt-20">
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="space-y-10">
-    {/* Desktop */}
-    <img
-      src={StatsguruDesktop}
-      alt="StatsGuru desktop experience"
-      className="w-full rounded-2xl border border-border/50"
-    />
-
     {/* Mobile */}
     <div className="flex justify-center">
       <img
@@ -217,5 +210,12 @@ import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
         className="w-full max-w-[420px] rounded-2xl border border-border/50"
       />
     </div>
+
+    {/* Desktop */}
+    <img
+      src={StatsguruDesktop}
+      alt="StatsGuru desktop experience"
+      className="w-full rounded-2xl border border-border/50"
+    />
   </motion.div>
 </section>;
