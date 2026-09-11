@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { NavCaseStudy } from "@/components/ds";
 import { animation, layout, radius, surface, type as t } from "@/lib/tokens";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import AskCricinfo from "@/assets/Askcricinfo.png";
 
 const fade = animation.fade;
 
@@ -107,6 +108,22 @@ const StoryCricGPT = () => {
             returning visitor for whom Cricinfo had started to feel the same on every visit. None of these people were
             ever going to open a twenty-filter query screen. All of them could ask a question.
           </p>
+
+             <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-150px]">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="space-y-10"
+            >
+              {/* Mobile */}
+              <div className="flex justify-center">
+                <img src={AskCricinfo} alt="StatsGuru mobile experience" className="w-full" />
+              </div>
+
+       
+          </section>
 
           <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
             <p
