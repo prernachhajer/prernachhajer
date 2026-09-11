@@ -154,7 +154,7 @@ const StoryStatsGuru = () => {
               className="space-y-10"
             >
               {/* Mobile */}
-              <div className="flex justify-center">
+              <div className="flex justify-center max-w-5xl max-w-[1040px] mx-auto">
                 <img src={StatsguruMobile} alt="StatsGuru mobile experience" className="w-full" />
               </div>
 
