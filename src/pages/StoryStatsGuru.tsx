@@ -47,7 +47,7 @@ const StoryStatsGuru = () => {
         </motion.div>
       </header>
 
-      <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto justify-center">
+      {/*  <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto justify-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -55,12 +55,12 @@ const StoryStatsGuru = () => {
           variants={fade}
           className="space-y-10"
         >
-          {/* Mobile */}
+          {/* Mobile 
           <div className="flex justify-center">
             <img src={StatsguruMobile} alt="StatsGuru mobile experience" className="w-full" />
           </div>
         </motion.div>
-      </section>
+      </section> */}
 
       <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         <hr className="border-t border-border/50" />
