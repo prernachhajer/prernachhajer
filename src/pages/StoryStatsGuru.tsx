@@ -199,13 +199,13 @@ export default StoryStatsGuru;
 <section className="mt-16 md:mt-20 space-y-8">
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
     <img
-      src="/assets/Statsguru-Desktop.png"
+      src="src/assets/Statsguru-Desktop.png"
       alt="StatsGuru desktop experience"
       className="w-full rounded-2xl border border-border/50"
     />
 
     <img
-      src="/assets/Statsguru-Mobile.png"
+      src="src/assets/Statsguru-Mobile.png"
       alt="StatsGuru mobile experience"
       className="w-full rounded-2xl border border-border/50"
     />
