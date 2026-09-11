@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { NavCaseStudy } from "@/components/ds";
 import { animation, layout, radius, surface, type as t } from "@/lib/tokens";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import StatsguruMobile from "@/assets/Statsguru-Mobile.png";
+import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
 
 const fade = animation.fade;
 
@@ -92,7 +94,6 @@ const StoryStatsGuru = () => {
             The rebuild started underneath, where no one would see it: a new stack and an API designed from the ground
             up to make the data properly accessible. Only once that was solid did the visible work begin.
           </p>
-
           {/* Before / After */}
           <div className={`mt-10 ${surface.card} ${radius.card} p-6 sm:p-8 md:p-10`}>
             <p className={`${t.labelSm} text-muted-foreground mb-8`}>What changed, once the foundation held</p>
@@ -135,7 +136,6 @@ const StoryStatsGuru = () => {
               </div>
             </div>
           </div>
-
           <p className="mt-10 text-[0.9375rem] text-foreground/85 leading-[1.85]">
             A mobile-first redesign, search added alongside the filters so a name alone was enough to start, and
             advanced search that let one keyword pull results across teams, players, tournaments, and matches at once, a
@@ -144,7 +144,6 @@ const StoryStatsGuru = () => {
             editing a query got noticeably smoother. And because a rebuilt tool no one finds is still an invisible tool,
             a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
-
           <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
             <p
               className="text-lg md:text-xl leading-[1.6] text-foreground/85 italic"
@@ -153,6 +152,32 @@ const StoryStatsGuru = () => {
               Nothing about the depth changed. What changed was who could reach it.
             </p>
           </div>
+          <section className="mt-16 md:mt-20">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="space-y-10"
+            >
+              {/* Mobile */}
+              <div className="flex justify-center">
+                <img
+                  src={StatsguruMobile}
+                  alt="StatsGuru mobile experience"
+                  className="w-full max-w-[420px] rounded-2xl border border-border/50"
+                />
+              </div>
+
+              {/* Desktop */}
+              <img
+                src={StatsguruDesktop}
+                alt="StatsGuru desktop experience"
+                className="w-full rounded-2xl border border-border/50"
+              />
+            </motion.div>
+          </section>
+          ;
         </motion.section>
       </main>
 
@@ -192,26 +217,3 @@ const StoryStatsGuru = () => {
 };
 
 export default StoryStatsGuru;
-
-import StatsguruMobile from "@/assets/Statsguru-Mobile.png";
-import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
-
-<section className="mt-16 md:mt-20">
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="space-y-10">
-    {/* Mobile */}
-    <div className="flex justify-center">
-      <img
-        src={StatsguruMobile}
-        alt="StatsGuru mobile experience"
-        className="w-full max-w-[420px] rounded-2xl border border-border/50"
-      />
-    </div>
-
-    {/* Desktop */}
-    <img
-      src={StatsguruDesktop}
-      alt="StatsGuru desktop experience"
-      className="w-full rounded-2xl border border-border/50"
-    />
-  </motion.div>
-</section>;
