@@ -162,19 +162,11 @@ const StoryStatsGuru = () => {
             >
               {/* Mobile */}
               <div className="flex justify-center">
-                <img
-                  src={StatsguruMobile}
-                  alt="StatsGuru mobile experience"
-                  className="w-full max-w-[420px] rounded-2xl border border-border/50"
-                />
+                <img src={StatsguruMobile} alt="StatsGuru mobile experience" className="w-full" />
               </div>
 
               {/* Desktop */}
-              <img
-                src={StatsguruDesktop}
-                alt="StatsGuru desktop experience"
-                className="w-full rounded-2xl border border-border/50"
-              />
+              <img src={StatsguruDesktop} alt="StatsGuru desktop experience" className="w-full " />
             </motion.div>
           </section>
           ;
