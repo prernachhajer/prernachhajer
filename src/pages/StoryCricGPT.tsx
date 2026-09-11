@@ -18,7 +18,7 @@ const StoryCricGPT = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Cricinfo · Product design</p>
           <h1 className={`${t.h2Hero} max-w-[14ch] mb-8`} style={{ fontFamily: t.displayFont }}>
-            When the answer <span className="text-primary italic">stops needing a form</span>
+            Ask Cricinfo: When the answer <span className="text-primary italic">stops needing a form</span>
           </h1>
           <p className="text-muted-foreground text-[0.9375rem] leading-[1.8]">
             Product design · AI layer over StatsGuru's data · Led and designed by Prerna

@@ -39,7 +39,7 @@ const StoryStatsGuru = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <p className={`${t.labelSm} text-muted-foreground mb-8`}>Cricinfo · Product design</p>
           <h1 className={`${t.h2Hero} max-w-[14ch] mb-8`} style={{ fontFamily: t.displayFont }}>
-            The tool everyone needed <span className="text-primary italic">but almost no one found</span>
+            Statsguru: The tool everyone needed <span className="text-primary italic">but almost no one found</span>
           </h1>
           <p className="text-muted-foreground text-[0.9375rem] leading-[1.8]">
             Product design lead · Foundation and mobile rebuild · StatsGuru
