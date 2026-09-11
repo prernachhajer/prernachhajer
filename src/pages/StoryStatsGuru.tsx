@@ -47,6 +47,22 @@ const StoryStatsGuru = () => {
         </motion.div>
       </header>
 
+        <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-150px]">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fade}
+              className="space-y-10"
+            >
+              {/* Mobile */}
+              <div className="flex justify-center">
+                <img src={StatsguruMobile} alt="StatsGuru mobile experience" className="w-full" />
+              </div>
+
+          </section>
+
+      
       <div className={`${layout.containerBlog} mx-auto ${layout.px}`}>
         <hr className="border-t border-border/50" />
       </div>
