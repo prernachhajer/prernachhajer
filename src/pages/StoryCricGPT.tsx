@@ -49,9 +49,9 @@ const StoryCricGPT = () => {
             wants to know what happened in today's match and why it mattered.
           </p>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            CricGPT was built to take that wall down. Instead of filters, a plain-language question. Instead of knowing
-            which fields to select, just ask, the same way you'd ask a friend who happened to know everything about
-            cricket.
+            Ask Cricinfo was built to take that wall down. Instead of filters, a plain-language question. Instead of
+            knowing which fields to select, just ask, the same way you'd ask a friend who happened to know everything
+            about cricket.
           </p>
         </motion.section>
 
@@ -71,9 +71,9 @@ const StoryCricGPT = () => {
             Standing on ground already built
           </h2>
           <p className="text-[0.9375rem] text-foreground/85 leading-[1.85]">
-            Underneath, CricGPT drew on the same data StatsGuru had spent its rebuild making queryable. That wasn't a
-            coincidence; CricGPT couldn't have existed without it. The data had to be queryable before it could be
-            conversational. The two phases were never parallel tracks. One was the ground the other stood on.
+            Underneath, Ask Cricinfo drew on the same data StatsGuru had spent its rebuild making queryable. That wasn't
+            a coincidence; Ask Cricinfo couldn't have existed without it. The data had to be queryable before it could
+            be conversational. The two phases were never parallel tracks. One was the ground the other stood on.
           </p>
 
           {/* Exchange */}

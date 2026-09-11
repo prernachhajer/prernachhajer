@@ -203,7 +203,7 @@ const StoryStatsGuru = () => {
                 className="text-xl md:text-2xl font-normal tracking-[0.015em] leading-[1.2] mb-3"
                 style={{ fontFamily: t.displayFont }}
               >
-                CricGPT: when the answer stops needing a form
+                Ask Cricinfo: when the answer stops needing a form
               </h3>
               <span className="inline-flex items-center gap-2 text-[0.8125rem] text-muted-foreground group-hover:text-foreground transition-colors">
                 Read story <ArrowRight className="h-3 w-3" />
