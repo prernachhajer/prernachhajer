@@ -193,7 +193,6 @@ const StoryStatsGuru = () => {
 
 export default StoryStatsGuru;
 
-/* ── STATS GURU SCREENS ── */
 import StatsguruMobile from "@/assets/Statsguru-Mobile.png";
 import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
 
