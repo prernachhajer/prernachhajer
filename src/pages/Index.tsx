@@ -210,7 +210,7 @@ const quickStories: { title: string; tag: string; status: string; link?: string 
     link: "#/story/statsguru",
   },
   {
-    title: "CricGPT: when the answer stops needing a form",
+    title: "Ask Cricinfo: when the answer stops needing a form",
     tag: "AI layer",
     status: "read",
     link: "#/story/cricgpt",
