@@ -193,19 +193,29 @@ const StoryStatsGuru = () => {
 
 export default StoryStatsGuru;
 
+/* ── STATS GURU SCREENS ── */
+import StatsguruMobile from "@/assets/Statsguru-Mobile.png";
+import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
+
 {
   /* ── STATS GURU SCREENS ── */
 }
-<section className="mt-16 md:mt-20 space-y-8">
-  <img
-    src="src/assets/Statsguru-Desktop.png"
-    alt="StatsGuru desktop experience"
-    className="w-full rounded-2xl border border-border/50"
-  />
+<section className="mt-16 md:mt-20">
+  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="space-y-10">
+    {/* Desktop */}
+    <img
+      src={StatsguruDesktop}
+      alt="StatsGuru desktop experience"
+      className="w-full rounded-2xl border border-border/50"
+    />
 
-  <img
-    src="src/assets/Statsguru-Mobile.png"
-    alt="StatsGuru mobile experience"
-    className="w-full rounded-2xl border border-border/50"
-  />
+    {/* Mobile */}
+    <div className="flex justify-center">
+      <img
+        src={StatsguruMobile}
+        alt="StatsGuru mobile experience"
+        className="w-full max-w-[420px] rounded-2xl border border-border/50"
+      />
+    </div>
+  </motion.div>
 </section>;
