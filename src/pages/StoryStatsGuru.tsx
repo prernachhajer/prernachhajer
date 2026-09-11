@@ -144,14 +144,7 @@ const StoryStatsGuru = () => {
             editing a query got noticeably smoother. And because a rebuilt tool no one finds is still an invisible tool,
             a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
-          <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
-            <p
-              className="text-lg md:text-xl leading-[1.6] text-foreground/85 italic"
-              style={{ fontFamily: t.displayFont }}
-            >
-              Nothing about the depth changed. What changed was who could reach it.
-            </p>
-          </div>
+
           <section className="mt-16 md:mt-20">
             <motion.div
               initial="hidden"
@@ -169,7 +162,15 @@ const StoryStatsGuru = () => {
               <img src={StatsguruDesktop} alt="StatsGuru desktop experience" className="w-full " />
             </motion.div>
           </section>
-          ;
+
+          <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
+            <p
+              className="text-lg md:text-xl leading-[1.6] text-foreground/85 italic"
+              style={{ fontFamily: t.displayFont }}
+            >
+              Nothing about the depth changed. What changed was who could reach it.
+            </p>
+          </div>
         </motion.section>
       </main>
 
