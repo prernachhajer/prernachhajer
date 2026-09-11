@@ -109,7 +109,7 @@ const StoryCricGPT = () => {
             ever going to open a twenty-filter query screen. All of them could ask a question.
           </p>
 
-             <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-150px]">
+          <section className="mt-16 md:mt-20 max-w-[1040px] mx-auto mx-[-150px]">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -121,8 +121,7 @@ const StoryCricGPT = () => {
               <div className="flex justify-center">
                 <img src={AskCricinfo} alt="StatsGuru mobile experience" className="w-full" />
               </div>
-
-       
+            </motion.div>
           </section>
 
           <div className="mt-10 bg-primary/10 rounded-2xl p-8 border border-primary/10">
