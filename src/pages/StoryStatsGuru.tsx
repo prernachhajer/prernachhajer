@@ -197,17 +197,15 @@ export default StoryStatsGuru;
   /* ── STATS GURU SCREENS ── */
 }
 <section className="mt-16 md:mt-20 space-y-8">
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-    <img
-      src="src/assets/Statsguru-Desktop.png"
-      alt="StatsGuru desktop experience"
-      className="w-full rounded-2xl border border-border/50"
-    />
+  <img
+    src="src/assets/Statsguru-Desktop.png"
+    alt="StatsGuru desktop experience"
+    className="w-full rounded-2xl border border-border/50"
+  />
 
-    <img
-      src="src/assets/Statsguru-Mobile.png"
-      alt="StatsGuru mobile experience"
-      className="w-full rounded-2xl border border-border/50"
-    />
-  </motion.div>
+  <img
+    src="src/assets/Statsguru-Mobile.png"
+    alt="StatsGuru mobile experience"
+    className="w-full rounded-2xl border border-border/50"
+  />
 </section>;
