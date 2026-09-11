@@ -145,7 +145,7 @@ const StoryStatsGuru = () => {
             a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
 
-          <section className="mt-16 md:mt-20">
+          <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto px-[-100px]">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -154,7 +154,7 @@ const StoryStatsGuru = () => {
               className="space-y-10"
             >
               {/* Mobile */}
-              <div className="flex justify-center max-w-5xl max-w-[1040px] mx-auto">
+              <div className="flex justify-center">
                 <img src={StatsguruMobile} alt="StatsGuru mobile experience" className="w-full" />
               </div>
 
