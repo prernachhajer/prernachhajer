@@ -197,9 +197,6 @@ export default StoryStatsGuru;
 import StatsguruMobile from "@/assets/Statsguru-Mobile.png";
 import StatsguruDesktop from "@/assets/Statsguru-Desktop.png";
 
-{
-  /* ── STATS GURU SCREENS ── */
-}
 <section className="mt-16 md:mt-20">
   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="space-y-10">
     {/* Mobile */}
