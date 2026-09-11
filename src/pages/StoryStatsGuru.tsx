@@ -145,7 +145,7 @@ const StoryStatsGuru = () => {
             a homepage callout gave StatsGuru a real shot at being discovered.
           </p>
 
-          <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-100px]">
+          <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-150px]">
             <motion.div
               initial="hidden"
               whileInView="visible"
