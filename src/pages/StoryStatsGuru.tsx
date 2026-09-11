@@ -47,7 +47,7 @@ const StoryStatsGuru = () => {
         </motion.div>
       </header>
 
-      <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto mx-[-150px]">
+      <section className="mt-16 md:mt-20  max-w-5xl max-w-[1040px] mx-auto justify-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
