@@ -327,8 +327,7 @@ const CaseStudyMatchPage = () => {
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">User problem:&nbsp;</strong>
-                    Too much information, packed with no clear hierarchy. Too much information, packed with no clear
-                    hierarchy. The page was difficult to scan and navigate.
+                    Too much information, packed with no clear hierarchy. The page was difficult to scan and navigate.
                   </Bullet>
                   <Bullet>
                     <strong className="text-foreground font-semibold">Design problem:&nbsp;</strong>
